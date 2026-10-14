@@ -125,10 +125,11 @@ def make_events(c, hits, items, win):
     return evs, outside
 
 
-def desc_of(hits):
-    for s in ("official", "github_new", "github_trending", "ollama", "hf_papers", "gh_releases"):
+def desc_of(c, hits):
+    """Description from an item whose title is about the entity (not an incidental mention in someone else's text)."""
+    for s in ("official", "gh_releases", "ollama", "hf_papers", "github_new", "github_trending"):
         for it in hits.get(s, []):
-            if it["text"]:
+            if it["text"] and (it["_i"] in c["own"] or any(f" {a} " in B.norm(it["title"]) for a in c["aliases"] if len(a) >= 3)):
                 return it["text"]
     return ""
 
@@ -269,7 +270,7 @@ def build_report(items, status, now, week=None, xposts=None, vel=None, stoplist=
 
     api = gh_api_factory(offline)
     for r in results:
-        r["desc"] = desc_of(r["hits"])
+        r["desc"] = desc_of(r["c"], r["hits"])
         r["events"], r["outside"] = make_events(r["c"], r["hits"], items, win)
     # resolve the project's own GitHub repo (owner/Name mentions) for strong dynamic candidates without an official primary event
     need = sorted((r for r in results if r["c"]["dyn"] and not any(e["source"] in ("official", "gh_releases") and e["published_at"] for e in r["events"])),
@@ -359,6 +360,7 @@ def build_report(items, status, now, week=None, xposts=None, vel=None, stoplist=
 
     B.annotate_why(selected, items)
     trends = [entry(r, n + 1, mx, snapshots_n) for n, r in enumerate(selected)]
+    apply_enrichment(trends, win["label"])
     leads = x_leads(watch_posts or [], selected)
     return {
         "generated_at": now.isoformat(), "last_successful_report_at": now.isoformat(),
@@ -375,6 +377,24 @@ def build_report(items, status, now, week=None, xposts=None, vel=None, stoplist=
         "leads_unverified": leads,
         "candidates_pool": len(results),
     }
+
+
+def apply_enrichment(trends, label):
+    """Merge Phase-2 MCP verification records and slide JSON (both committed under data/reports/<week>/). Others stay 'unverified'."""
+    d = ROOT / "data" / "reports" / label
+    enr = json.loads((d / "enrichment.json").read_text(encoding="utf-8")) if (d / "enrichment.json").exists() else {"entities": {}}
+    slides = json.loads((d / "slides.json").read_text(encoding="utf-8")) if (d / "slides.json").exists() else {}
+    checks = enr.get("url_checks", {})
+    for t in trends:
+        e = enr["entities"].get(t["entity_id"])
+        t["verification"] = {"status": "unverified", "checks": []}
+        if not e:
+            continue
+        t["verification"] = {"status": e["verification_status"], "checks": e["checks"], "selection_reason": e.get("selection_reason")}
+        t["official_urls"] = e["official_urls"]
+        t["official_verified"] = e["verification_status"] in ("verified", "partially_verified")
+        t["url_checks"] = {u: checks.get(u) for u in e["official_urls"]}
+        t["slides"] = slides.get(t["entity_id"], [])
 
 
 def entry(r, rank, mx, snaps):

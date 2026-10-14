@@ -1,0 +1,226 @@
+{
+ "claude-code": [
+  {
+   "title": "Claude Code が新版 v2.1.300 を公開",
+   "diagram_type": "stat",
+   "icon": "terminal",
+   "stat": {
+    "value": "v2.1.300",
+    "label": "2026-10-14 公開"
+   },
+   "bullets": [
+    "Anthropic が提供する、ターミナルで動く AI コーディングエージェント",
+    "今回の版では OpenTelemetry の計測項目や拡張(mod)用フックが増え、多数の不具合が修正された",
+    "想定する人: コードをターミナルで書く開発者・チーム"
+   ],
+   "official_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
+   "source_date": "2026-10-14"
+  },
+  {
+   "title": "仕組み: 頼む → 計画 → 編集 → 確認",
+   "diagram_type": "flow",
+   "icon": "cycle",
+   "steps": [
+    "やりたいことを文章で伝える",
+    "コードを読んで進め方を計画",
+    "複数ファイルをまとめて編集",
+    "動作を確かめて結果を報告"
+   ],
+   "bullets": [
+    "公式ドキュメントでは「計画し、複数ファイルにまたがるコードを書き、動作を検証する」と説明されている",
+    "git と連携し、コミットやプルリクエストの作成も依頼できる"
+   ],
+   "official_url": "https://code.claude.com/docs/en/overview"
+  },
+  {
+   "title": "使い方と広げ方",
+   "diagram_type": "checklist",
+   "icon": "plug",
+   "bullets": [
+    "`claude \"認証モジュールのテストを書いて実行し、失敗を直して\"` のように 1 行で頼める",
+    "プロジェクト直下の CLAUDE.md に規約や好みを書くと毎回読み込まれる",
+    "MCP・スキル・フックで外部ツール連携や自動化を追加できる",
+    "新機能の詳細は v2.1.300 のリリースノートで確認する"
+   ],
+   "official_url": "https://code.claude.com/docs/en/overview"
+  }
+ ],
+ "openai-codex": [
+  {
+   "title": "Codex が企業導入で大規模に: Oracle 事例",
+   "diagram_type": "stat",
+   "icon": "terminal",
+   "stat": {
+    "value": "95K+",
+    "label": "Oracle の Codex 利用者(OpenAI 事例・2026-10-08)"
+   },
+   "bullets": [
+    "OpenAI のコーディングエージェント。公式事例では Oracle で 9.5 万人超が Codex、13 万人が ChatGPT を利用と紹介された(OpenAI 発表の数字)",
+    "採用の市場調査にかかる時間が 98% 減ったとされる(Oracle の事例として紹介)",
+    "開発側も活発で、openai/codex では alpha 版が 2026-10-13〜14 に連日公開された"
+   ],
+   "official_url": "https://openai.com/index/oracle",
+   "source_date": "2026-10-08"
+  },
+  {
+   "title": "仕組み: 1 つの設定を複数の入口で共有",
+   "diagram_type": "flow",
+   "icon": "plug",
+   "steps": [
+    "ターミナルの codex",
+    "IDE 拡張・ChatGPT デスクトップアプリ",
+    "共通の設定 ~/.codex/config.toml",
+    "MCP サーバー(外部ツール)"
+   ],
+   "bullets": ["OpenAI の公式ドキュメントによると、MCP サーバーの設定は CLI と IDE 拡張で共有される", "ローカルのリポジトリに Codex Security を入れるときは、ChatGPT デスクトップアプリか Codex CLI を使う"],
+   "official_url": "https://developers.openai.com/learn/docs-mcp"
+  },
+  {
+   "title": "使い方と注意",
+   "diagram_type": "checklist",
+   "icon": "shield",
+   "bullets": [
+    "リポジトリで `codex` を起動し、`/plugins` から Codex Security を追加するとセキュリティ点検ができる",
+    "AGENTS.md に指示を書いておくと、エージェントが外部ツールを確実に使いやすくなる",
+    "公開中の 0.163.0 は alpha 版。安定版とは限らないので本番利用は慎重に"
+   ],
+   "official_url": "https://developers.openai.com/learn/docs-mcp"
+  }
+ ],
+ "ollama": [
+  {
+   "title": "Ollama Cloud が Fly.io Sprites で使える",
+   "diagram_type": "stat",
+   "icon": "cloud",
+   "stat": {
+    "value": "Sprites × Ollama",
+    "label": "2026-10-13 発表"
+   },
+   "bullets": [
+    "Sprite は、ディスクが残る完全な Linux 仮想マシンのサンドボックス(Fly.io)",
+    "Claude Code・Codex・Gemini CLI が最初から動き、コマンド実行を安全に隔離できる",
+    "新しい「Ollama Connector」で kimi-k3・glm-5.3 などのクラウドモデルを使える"
+   ],
+   "official_url": "https://ollama.com/blog/fly-io-sprites",
+   "source_date": "2026-10-13"
+  },
+  {
+   "title": "仕組み: API キーを Sprite に渡さない",
+   "diagram_type": "flow",
+   "icon": "lock",
+   "steps": [
+    "Sprite 内のエージェント",
+    "Fly.io のゲートウェイ(キーを付与)",
+    "Ollama Cloud のモデル"
+   ],
+   "bullets": [
+    "Sprite が知っているのはゲートウェイの URL と接続 ID だけ",
+    "そのため、エージェントがキーを漏らすことはない"
+   ],
+   "official_url": "https://ollama.com/blog/fly-io-sprites",
+   "source_date": "2026-10-13"
+  },
+  {
+   "title": "使い方と注意",
+   "diagram_type": "checklist",
+   "icon": "check",
+   "bullets": [
+    "Fly.io ダッシュボードの Sprites → Connectors で Ollama コネクタを追加し、API キーを登録",
+    "Access Configuration で使わせる Sprite を選び、Test reachability で疎通確認",
+    "OpenAI SDK の base_url をゲートウェイにすれば、そのまま呼び出せる",
+    "注意: 新しいコネクタは既定で全 Sprite を遮断。呼び出せるのは Sprite の内側だけ"
+   ],
+   "official_url": "https://ollama.com/blog/fly-io-sprites",
+   "source_date": "2026-10-13"
+  }
+ ],
+ "qwen-image-2-1": [
+  {
+   "title": "Qwen-Image-2.1 と高速版 Turbo が登場",
+   "diagram_type": "stat",
+   "icon": "image",
+   "stat": {
+    "value": "8 ステップ",
+    "label": "Turbo の画像生成"
+   },
+   "bullets": [
+    "Alibaba の Qwen チームによる、画像生成と画像編集のモデル",
+    "Turbo は少ない手順(8 ステップ)で生成する高速版で、Hugging Face で 2026-10-09 に公開",
+    "想定する人: 自分の GPU で画像生成を試したい開発者"
+   ],
+   "official_url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+   "source_date": "2026-10-09"
+  },
+  {
+   "title": "仕組み: 同じ 7B の設計を少ない手順で",
+   "diagram_type": "flow",
+   "icon": "chip",
+   "steps": [
+    "文章や参照画像",
+    "7B の生成モデル(8 ステップ)",
+    "画像を出力"
+   ],
+   "bullets": [
+    "元の Qwen-Image-2.1 と同じ 7B の設計を使う高速チェックポイント",
+    "既定の CFG は 1。文章や参照画像の文脈をステップ間で再利用して高速化している"
+   ],
+   "official_url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+   "source_date": "2026-10-09"
+  },
+  {
+   "title": "使い方と注意",
+   "diagram_type": "checklist",
+   "icon": "check",
+   "bullets": [
+    "Diffusers の `QwenImage21Pipeline` で読み込み、`Qwen/Qwen-Image-2.1-Turbo` を指定する",
+    "transformers は 5.17.0 以上が必要",
+    "注意: Diffusers は PR #14950 を含む最新のソース版が必要で、CUDA 対応の PyTorch を先に入れる"
+   ],
+   "official_url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+   "source_date": "2026-10-09"
+  }
+ ],
+ "gemini-4-argon": [
+  {
+   "title": "Gemini 4 Argon が一般提供(GA)",
+   "diagram_type": "stat",
+   "icon": "spark",
+   "stat": {
+    "value": "1,048,576",
+    "label": "入出力あわせたトークン上限"
+   },
+   "bullets": ["Google の Gemini 4 ファミリー最初のモデル。2026年10月13日に GA", "コーディング・金融・法務・サイバーセキュリティ・科学など、深い作業向けと説明されている", "想定する人: Google Cloud の Agent Platform で AI を組み込む開発者"],
+   "official_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+   "source_date": "2026-10-13"
+  },
+  {
+   "title": "仕組み: 考える深さを 3 段階で選ぶ",
+   "diagram_type": "flow",
+   "icon": "layers",
+   "steps": [
+    "入力(長い文書・コード)",
+    "思考レベル LOW / MEDIUM / HIGH",
+    "出力(1 回あたり最大 65,536 トークン)"
+   ],
+   "bullets": [
+    "入力と出力(思考を含む)で 1,048,576 トークンを共有する",
+    "長い出力は continuation_token による継続(long decodes)で最大まで延ばせる"
+   ],
+   "official_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon",
+   "source_date": "2026-10-13"
+  },
+  {
+   "title": "使い方と注意",
+   "diagram_type": "checklist",
+   "icon": "check",
+   "bullets": [
+    "モデル ID は gemini-4-argon。Agent Studio で試すか、Google Gen AI SDK(google-genai 2.30.1 以上)で呼び出す",
+    "注意: temperature などのサンプリング指定は無視される",
+    "注意: 明示的なコンテキストキャッシュは未対応(暗黙キャッシュのみ)",
+    "防御的なサイバー用途の Cyber Permissive 版は、申請して許可された場合のみ使える"
+   ],
+   "official_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon",
+   "source_date": "2026-10-13"
+  }
+ ]
+}

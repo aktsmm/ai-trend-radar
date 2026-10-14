@@ -46,6 +46,14 @@ python -m unittest discover -s tests         # 固定fixtureでの決定性・�
 | 19 | Grok 4.7 | model / model | 32.7 | [announcement](https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/) 2026-10-13 |
 | 20 | AgentCore | dev-tool / product | 32.5 | [announcement](https://aws.amazon.com/blogs/machine-learning/build-self-improving-document-processing-using-amazon-bedrock-agentcore/) 2026-10-14 |
 
+## フェーズ2: MCP調査 + インフォグラフィック(上位5件)
+
+- 選定(`data/reports/2026-W42/enrichment.json` に理由を記録): Claude Code / OpenAI Codex / Ollama / Qwen-Image-2.1 / Gemini 4 Argon(dev-tool 2・local-runtime 1・model 2、発行元は全て別)。
+- 調査記録(`enrichment.json`): `verification_status`・使用MCP/ツール・検索クエリ・取得日時・根拠URL・根拠公開日・`url_checks`(公式URLへのGETが200)。Docs MCP は Claude Code→claudeCodeDocs+github-mcp、OpenAI→openaiDeveloperDocs、Google→google-developer-knowledge を使用。OSS(Ollama/Qwen)はDocs MCP対象外のため公式ブログ/モデルカードを直接取得。
+- スライドの正本は `data/reports/<週>/slides.json`(title/bullets/diagram_type/icon/official_url/source_date)。`site/slides.js` + `slides.css` が描画し、`python -m render.build_png` が Playwright(Chromium)で `build/slides/*.png`(Git管理外)を生成する。画像・フォントは同梱せず、アイコンは自作SVG。
+- `python -m render.verify_urls` で公式URL/根拠URLの到達性を再確認できる。
+- サイト: 各カードにスライド(クリックで拡大)・公式URL・検証状態(未検証も表示)・カテゴリフィルタ。
+
 ## 既知の課題
 
 - 「リリース」系(Claude Code, llama.cpp 等)は常にリリースがあるため上位に来やすい。14日分のスナップショットがたまるまで「上昇」は判定できない(baseline表示)。

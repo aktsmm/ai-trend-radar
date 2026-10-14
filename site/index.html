@@ -8,7 +8,7 @@
   body{font-family:system-ui,"Yu Gothic UI",sans-serif;margin:0;background:#f5f7fb;color:#1c2333}
   header{padding:20px 24px;background:#1c2b4a;color:#fff}
   header p{margin:4px 0 0;opacity:.8;font-size:13px}
-  main{max-width:960px;margin:0 auto;padding:16px}
+  main{max-width:1280px;margin:0 auto;padding:16px}
   #filters button{border:1px solid #9aa7c0;background:#fff;border-radius:16px;padding:4px 12px;margin:0 6px 6px 0;cursor:pointer}
   #filters button.on{background:#2f5fd0;color:#fff;border-color:#2f5fd0}
   .card{background:#fff;border-radius:10px;padding:14px 16px;margin:12px 0;box-shadow:0 1px 3px #0002}
@@ -17,14 +17,19 @@
   .tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;background:#e3eaff;color:#2a45a0;margin-left:6px}
   .score{float:right;font-weight:600}
   .meta{font-size:12px;color:#556;margin:6px 0}
-  .slides{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
-  .slide{flex:1 1 220px;background:linear-gradient(135deg,#eef3ff,#fff6e8);border:1px solid #cfd8ee;border-radius:8px;padding:10px;font-size:13px}
-  .slide b{display:block;margin-bottom:4px}
-  .slide ul{margin:0;padding-left:18px}
+  .slides{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+  .frame{width:400px;height:225px;overflow:hidden;border:1px solid #cfd8ee;border-radius:8px;cursor:zoom-in}
+  .frame .slide{transform:scale(.3125);transform-origin:top left}
+  .lightbox{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:9}
+  .lightbox.on{display:flex}
+  .lightbox .big{width:1280px;height:720px;transform:scale(var(--s,.8));flex:none}
+  .ver{font-size:11px;padding:1px 8px;border-radius:10px;margin-left:6px;font-weight:600}
+  .ver.verified{background:#d9f2e3;color:#157347} .ver.partially_verified{background:#fff0d1;color:#8a5a00} .ver.unverified{background:#fde2e4;color:#b02a37}
   .x{font-size:12px;color:#444;border-left:3px solid #1d9bf0;padding-left:8px;margin-top:6px}
   a{color:#1d4ed8}
   #meta{font-size:12px;color:#556}
 </style>
+<link rel="stylesheet" href="slides.css">
 </head>
 <body>
 <header><h1>AI Trend Radar <small>(mock)</small></h1><p id="period"></p></header>
@@ -33,7 +38,9 @@
   <div id="list"></div>
   <p id="meta"></p>
 </main>
+<div class="lightbox" id="lb"><div class="big" id="big"></div></div>
 <script src="data.js"></script>
+<script src="slides.js"></script>
 <script>
 const D = window.TRENDS, TAGS = ["model","dev-tool","local-runtime","hardware","research","github-trending"];
 let cur = "all";
@@ -50,17 +57,24 @@ function render() {
   document.getElementById("list").innerHTML = D.trends.filter(t => cur === "all" || t.category === cur).map(t => `
     <div class="card">
       <span class="score">${t.score}</span>
-      <h2><span class="rank">#${t.rank}</span>${esc(t.keyword)}<span class="tag">${t.category}</span><span class="tag">${t.kind}</span>${t.tags.map(x => `<span class="tag">${x}</span>`).join("")}</h2>
+      <h2><span class="rank">#${t.rank}</span>${esc(t.keyword)}<span class="tag">${t.category}</span><span class="tag">${t.kind}</span>${t.tags.map(x => `<span class="tag">${x}</span>`).join("")}<span class="ver ${t.verification.status}">${{verified:"検証済み",partially_verified:"一部検証",unverified:"未検証"}[t.verification.status]}</span></h2>
       <div class="meta">${esc(t.summary)}</div>
       <div class="meta">一次ソース(${esc(t.primary.source_type)}・${t.primary.published_at ? t.primary.published_at.slice(0,10) : "観測日基準"}): <a href="${esc(t.primary.url)}" target="_blank" rel="noopener">${esc(t.primary.title.slice(0,70))}</a>${t.related.length ? ` / 同ベンダー統合: ${esc(t.related.join(", "))}` : ""}</div>
       <div class="meta">公式${t.official_verified ? "" : "(未確認・候補)"}: ${t.official_urls.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}</a>`).join(" / ") || "-"}</div>
-      <div class="meta">話題の根拠: ${t.sources.slice(0,4).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(", ")}</div>
+      <div class="meta">話題の根拠: ${t.sources.slice(0,6).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.title)}">${esc(s.name)}: ${esc(s.title.slice(0,28))}</a>`).join(" / ")}</div>
       ${t.x_posts.slice(0,1).map(p => `<div class="x">X補助: <a href="${esc(p.url)}" target="_blank">@${esc(p.author)}</a> ♥${p.likes} ↻${p.reposts} 👁${p.views}<br>${esc(p.text)}</div>`).join("")}
-      ${t.slides.length ? `<div class="slides">${t.slides.map((s,i) => `<div class="slide"><b>${i+1}. ${esc(s.title)}</b><ul>${s.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul></div>`).join("")}</div>` : ""}
+      ${t.slides.length ? `<div class="slides">${t.slides.map((s,i) => `<div class="frame" data-e="${esc(t.entity_id)}" data-n="${i}">${renderSlide(t, i)}</div>`).join("")}</div>` : ""}
     </div>`).join("");
 }
 render();
 const st = D.source_status, ng = Object.keys(st).filter(k => st[k].ok === false);
+const lb = document.getElementById("lb"), big = document.getElementById("big");
+document.getElementById("list").addEventListener("click", e => {
+  const f = e.target.closest(".frame"); if (!f) return;
+  big.innerHTML = renderSlide(D.trends.find(x => x.entity_id === f.dataset.e), +f.dataset.n);
+  big.style.setProperty("--s", Math.min(innerWidth / 1300, innerHeight / 740)); lb.classList.add("on");
+});
+lb.onclick = () => lb.classList.remove("on");
 document.getElementById("meta").textContent = `取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? ` (失敗/スキップ: ${ng.join(", ")})` : "") + ` / 保留(一次ソース日付なし) ${D.pending.length}件 / X検索: ${D.x_integration.search && D.x_integration.search.ok ? "OK" : "利用不可(ウォッチリストで代替)"}`;
 </script>
 </body>

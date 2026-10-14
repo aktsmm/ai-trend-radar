@@ -36,17 +36,50 @@
     },
     "slide": {
       "type": "object",
-      "required": ["title", "bullets"],
+      "required": ["title", "bullets", "diagram_type", "icon", "official_url"],
+      "additionalProperties": false,
       "properties": {
-        "title": { "type": "string", "minLength": 1 },
-        "bullets": { "type": "array", "items": { "type": "string" }, "minItems": 1, "maxItems": 5 },
-        "visual": { "type": "string" }
+        "title": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "bullets": { "type": "array", "items": { "type": "string", "maxLength": 140 }, "minItems": 1, "maxItems": 4 },
+        "diagram_type": { "enum": ["stat", "flow", "checklist"] },
+        "icon": { "enum": ["terminal", "cycle", "plug", "shield", "cloud", "lock", "check", "image", "chip", "spark", "layers"] },
+        "official_url": { "type": "string", "pattern": "^https://" },
+        "source_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "stat": { "type": "object", "required": ["value", "label"], "properties": { "value": { "type": "string" }, "label": { "type": "string" } } },
+        "steps": { "type": "array", "items": { "type": "string" }, "minItems": 2, "maxItems": 4 }
+      },
+      "allOf": [
+        { "if": { "properties": { "diagram_type": { "const": "stat" } } }, "then": { "required": ["stat"] } },
+        { "if": { "properties": { "diagram_type": { "const": "flow" } } }, "then": { "required": ["steps"] } }
+      ]
+    },
+    "verification": {
+      "type": "object",
+      "required": ["status", "checks"],
+      "properties": {
+        "status": { "enum": ["verified", "partially_verified", "unverified"] },
+        "selection_reason": { "type": "string" },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["mcp_name", "query", "evidence_urls", "retrieved_at"],
+            "properties": {
+              "mcp_name": { "type": "string" }, "tool": { "type": "string" }, "query": { "type": "string" },
+              "evidence_urls": { "type": "array", "items": { "type": "string", "pattern": "^https://" }, "minItems": 1 },
+              "evidence_published_at": { "type": ["string", "null"] }, "result": { "type": "string" },
+              "retrieved_at": { "type": "string", "format": "date-time" }
+            }
+          }
+        }
       }
     },
     "trend": {
       "type": "object",
-      "required": ["keyword", "entity_id", "kind", "category", "tags", "score", "primary", "sources", "official_urls", "summary", "slides"],
+      "required": ["keyword", "entity_id", "kind", "category", "tags", "score", "primary", "sources", "official_urls", "summary", "slides", "verification"],
       "properties": {
+        "verification": { "$ref": "#/$defs/verification" },
+        "url_checks": { "type": "object" },
         "rank": { "type": "integer", "minimum": 1 },
         "keyword": { "type": "string", "minLength": 2 },
         "entity_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9\\-]*$" },

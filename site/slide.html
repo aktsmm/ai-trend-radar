@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>slide</title>
+<link rel="stylesheet" href="slides.css">
+<style>body{margin:0;background:#fff}</style>
+</head>
+<body>
+<div id="out"></div>
+<script src="data.js"></script>
+<script src="slides.js"></script>
+<script>
+  // ?e=<entity_id>&n=<0-based slide index>  (used by render/build_png.py)
+  const q = new URLSearchParams(location.search);
+  const t = window.TRENDS.trends.find(x => x.entity_id === q.get("e"));
+  if (t && t.slides.length) { document.getElementById("out").innerHTML = renderSlide(t, +(q.get("n") || 0)); document.body.dataset.ready = "1"; }
+</script>
+</body>
+</html>

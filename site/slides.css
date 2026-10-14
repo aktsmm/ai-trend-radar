@@ -1,0 +1,37 @@
+:root { --navy:#14213d; --ink:#1b2333; --muted:#5b6578; --paper:#f7f4ec; }
+.slide { width:1280px; height:720px; box-sizing:border-box; position:relative; overflow:hidden; background:var(--paper); color:var(--ink);
+  font-family:"Yu Gothic UI","Yu Gothic","Meiryo","Noto Sans JP",sans-serif; display:flex; flex-direction:column; word-break:auto-phrase; line-break:strict; }
+.slide .head { background:var(--navy); color:#fff; padding:26px 48px 22px; }
+.slide .chips { display:flex; gap:10px; align-items:center; margin-bottom:12px; font-size:20px; }
+.slide .chip { padding:3px 14px; border-radius:14px; background:var(--accent); color:#fff; font-weight:700; }
+.slide .chip.alt { background:#2c3e66; font-weight:500; }
+.slide .chip.badge { background:#fca311; color:var(--navy); }
+.slide .pager { margin-left:auto; opacity:.8; font-size:20px; }
+.slide h1 { margin:0; font-size:44px; line-height:1.25; font-weight:800; }
+.slide .body { flex:1; display:grid; grid-template-columns:1.25fr 1fr; gap:36px; padding:30px 48px 14px; min-height:0; align-items:stretch; }
+.slide .body.single { grid-template-columns:1fr; }
+.slide ul.bullets { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:22px; justify-content:center; }
+.slide ul.bullets li { font-size:29px; line-height:1.5; padding-left:34px; position:relative; }
+.slide ul.bullets li::before { content:""; position:absolute; left:0; top:15px; width:14px; height:14px; border-radius:50%; background:var(--accent); }
+.slide ol.cards { margin:0; padding:0; list-style:none; display:grid; gap:18px; grid-template-columns:1fr; align-content:center; height:100%; }
+.slide ol.cards.n4 { grid-template-columns:1fr 1fr; grid-auto-rows:1fr; }
+.slide ol.cards.n3 { grid-auto-rows:1fr; }
+.slide ol.cards li { background:#fff; border:3px solid var(--accent); border-radius:18px; padding:18px 24px; font-size:28px; line-height:1.45; display:flex; gap:18px; align-items:center; }
+.slide ol.cards .num { flex:none; width:48px; height:48px; border-radius:50%; background:var(--accent); color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:26px; }
+.slide code { font-family:Consolas,"Cascadia Mono",monospace; background:#e9e4d6; padding:1px 8px; border-radius:6px; font-size:.82em; word-break:break-all; }
+.slide .panel { background:#fff; border:3px solid var(--accent); border-radius:20px; padding:26px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; min-height:0; }
+.slide .icon { width:92px; height:92px; border-radius:50%; background:var(--accent); display:flex; align-items:center; justify-content:center; }
+.slide .icon svg { width:54px; height:54px; stroke:#fff; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.slide .stat-value { font-size:64px; font-weight:800; color:var(--accent); text-align:center; line-height:1.15; overflow-wrap:normal; word-break:keep-all; }
+.slide .stat-value.sm { font-size:48px; } .slide .stat-value.xs { font-size:38px; }
+.slide .stat-label { font-size:24px; color:var(--muted); text-align:center; line-height:1.35; }
+.slide .steps { display:flex; flex-direction:column; align-items:stretch; width:100%; gap:6px; }
+.slide .step { background:var(--paper); border:2px solid var(--accent); border-radius:14px; padding:12px 16px; font-size:24px; line-height:1.3; text-align:center; font-weight:700; }
+.slide .arrow { text-align:center; color:var(--accent); font-size:24px; line-height:1; }
+.slide .foot { font-size:18px; color:var(--muted); display:flex; gap:16px; align-items:center; border-top:2px solid #e3dcc8; margin:0 48px; padding:10px 0 16px; min-height:64px; }
+.slide .foot .url { color:#1d4ed8; word-break:break-all; line-height:1.25; flex:1; min-width:0; }
+.slide .foot .date, .slide .foot .ver { white-space:nowrap; }
+.slide .foot .ver { font-weight:700; }
+.slide .ver.verified { color:#157347; } .slide .ver.partially_verified { color:#b26a00; } .slide .ver.unverified { color:#b02a37; }
+.cat-model { --accent:#7a3db8; } .cat-dev-tool { --accent:#0b7285; } .cat-local-runtime { --accent:#c2410c; }
+.cat-hardware { --accent:#2f6f3e; } .cat-research { --accent:#a1235b; } .cat-github-trending { --accent:#475569; }

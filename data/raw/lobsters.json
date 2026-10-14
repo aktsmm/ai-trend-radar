@@ -1,0 +1,196 @@
+[
+ {
+  "source": "lobsters",
+  "title": "OpenFatigue™ — Open is the new closed",
+  "url": "https://openfatigue.ai/",
+  "text": "",
+  "metric": 18.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-14T06:24:24.996-05:00",
+  "comments": 2,
+  "comments_url": "https://lobste.rs/s/plbei0/openfatigue_open_is_new_closed",
+  "tags": [
+   "ai",
+   "satire",
+   "vibecoding"
+  ]
+ },
+ {
+  "source": "lobsters",
+  "title": "Running RAG with a (small) language model in the browser",
+  "url": "https://bart.degoe.de/rag-with-a-small-language-model-in-the-browser/",
+  "text": "",
+  "metric": 3.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-13T10:56:29.994-05:00",
+  "comments": 0,
+  "comments_url": "https://lobste.rs/s/nsjjo3/running_rag_with_small_language_model",
+  "tags": [
+   "ai",
+   "javascript",
+   "web"
+  ]
+ },
+ {
+  "source": "lobsters",
+  "title": "Consistency is not a localized property",
+  "url": "https://n-the-loop.com/blog/consistency-is-not-a-localized-property/",
+  "text": "",
+  "metric": 10.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-10T19:51:28.569-05:00",
+  "comments": 6,
+  "comments_url": "https://lobste.rs/s/rhy5zp/consistency_is_not_localized_property",
+  "tags": [
+   "ai",
+   "databases",
+   "programming"
+  ]
+ },
+ {
+  "source": "lobsters",
+  "title": "Byte Language Models: Scaling, Emergent Abstractions, and Information Allocation",
+  "url": "https://arxiv.org/html/2610.05978v1",
+  "text": "The paper challenges the assumption that language models need explicit tokenizers to be efficient demonstrating that standard flat Transformers can process raw byte sequences and actually outperform traditional subword models as parameter sizes scale. The prevailing thought in the field has been that processing raw bytes is computationally inefficient because the sequences are substantially longer. A typical subword contains around four bytes. The authors argue that this extra sequence length is actually a feature that provides useful additional computation under the same parameter budget. By implementing token-superposition training and hash embeddings, the byte models consistently hit lower optimal loss than subword models at matched parameter counts.\r\n\r\nIt's also interesting to see how the byte model handles the lack of explicit text abstractions. We usually rely on tokenizers to group characters into meaningful chunks, but it turns out that byte Transformers implicitly develop their own local abstractions without needing specialized hierarchical architectures. When tested on a copying task, the model attention concentrated heavily on a small set of specific segmentation positions rather than attending uniformly across the text. The researchers proved the strength of these internal structures by freezing up to a quarter of the intermediate layers and forcing them to process only these locally aggregated representations. The model maintained its downstream performance without any additional training, proving that the hierarchy of local abstraction and global reasoning emerges naturally within a standard Transformer.\r\n\r\nAlso, per-byte loss distribution showed massive variance compared to subword models. A huge number of byte positions have near-zero loss showing that the model is highly confident about most bytes in a word and only struggles near the boundaries of its learned local structures where the actual information density lies. This creates a massive opportu",
+  "metric": 8.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-10T17:25:14.935-05:00",
+  "comments": 0,
+  "comments_url": "https://lobste.rs/s/t2fxpt/byte_language_models_scaling_emergent",
+  "tags": [
+   "ai"
+  ]
+ },
+ {
+  "source": "lobsters",
+  "title": "Whistle: Speech to Text in 16.9 MB",
+  "url": "https://cactuscompute.com/blog/whistle",
+  "text": "",
+  "metric": 3.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-09T00:35:51.919-05:00",
+  "comments": 0,
+  "comments_url": "https://lobste.rs/s/lpomuo/whistle_speech_text_16_9_mb",
+  "tags": [
+   "ai"
+  ]
+ },
+ {
+  "source": "lobsters",
+  "title": "Best Books/Courses/Channels to Leapfrog on AI/ML Material",
+  "url": "https://lobste.rs/s/xff77a/best_books_courses_channels_leapfrog_on",
+  "text": "Assuming I have been on hibernation since 2018-19 time frame, which materials - books, MOOC courses and YT channels would be recommended for me to get started with understanding all the current progress on AI/ML. Ideally a resource like [TeachYourselfCS](https://teachyourselfcs.com/) that can give structure and roadmap to navigate all the progress/knowledge on the domain would really help.\r\n\r\nDo we have to take different approaches to understand LLMs vs other type of ML models which have been in large scale deployment/usage from pre-2022/21 time frame?\r\n\r\nThanks a lot in advance.",
+  "metric": 5.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-07T09:12:02.815-05:00",
+  "comments": 4,
+  "comments_url": "https://lobste.rs/s/xff77a/best_books_courses_channels_leapfrog_on",
+  "tags": [
+   "ai",
+   "ask"
+  ]
+ },
+ {
+  "source": "lobsters",
+  "title": "OpenFatigue™ — Open is the new closed",
+  "url": "https://openfatigue.ai/",
+  "text": "",
+  "metric": 18.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-14T06:24:24.996-05:00",
+  "comments": 2,
+  "comments_url": "https://lobste.rs/s/plbei0/openfatigue_open_is_new_closed",
+  "tags": [
+   "ai",
+   "satire",
+   "vibecoding"
+  ]
+ },
+ {
+  "source": "lobsters",
+  "title": "Running RAG with a (small) language model in the browser",
+  "url": "https://bart.degoe.de/rag-with-a-small-language-model-in-the-browser/",
+  "text": "",
+  "metric": 3.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-13T10:56:29.994-05:00",
+  "comments": 0,
+  "comments_url": "https://lobste.rs/s/nsjjo3/running_rag_with_small_language_model",
+  "tags": [
+   "ai",
+   "javascript",
+   "web"
+  ]
+ },
+ {
+  "source": "lobsters",
+  "title": "Consistency is not a localized property",
+  "url": "https://n-the-loop.com/blog/consistency-is-not-a-localized-property/",
+  "text": "",
+  "metric": 10.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-10T19:51:28.569-05:00",
+  "comments": 6,
+  "comments_url": "https://lobste.rs/s/rhy5zp/consistency_is_not_localized_property",
+  "tags": [
+   "ai",
+   "databases",
+   "programming"
+  ]
+ },
+ {
+  "source": "lobsters",
+  "title": "Byte Language Models: Scaling, Emergent Abstractions, and Information Allocation",
+  "url": "https://arxiv.org/html/2610.05978v1",
+  "text": "The paper challenges the assumption that language models need explicit tokenizers to be efficient demonstrating that standard flat Transformers can process raw byte sequences and actually outperform traditional subword models as parameter sizes scale. The prevailing thought in the field has been that processing raw bytes is computationally inefficient because the sequences are substantially longer. A typical subword contains around four bytes. The authors argue that this extra sequence length is actually a feature that provides useful additional computation under the same parameter budget. By implementing token-superposition training and hash embeddings, the byte models consistently hit lower optimal loss than subword models at matched parameter counts.\r\n\r\nIt's also interesting to see how the byte model handles the lack of explicit text abstractions. We usually rely on tokenizers to group characters into meaningful chunks, but it turns out that byte Transformers implicitly develop their own local abstractions without needing specialized hierarchical architectures. When tested on a copying task, the model attention concentrated heavily on a small set of specific segmentation positions rather than attending uniformly across the text. The researchers proved the strength of these internal structures by freezing up to a quarter of the intermediate layers and forcing them to process only these locally aggregated representations. The model maintained its downstream performance without any additional training, proving that the hierarchy of local abstraction and global reasoning emerges naturally within a standard Transformer.\r\n\r\nAlso, per-byte loss distribution showed massive variance compared to subword models. A huge number of byte positions have near-zero loss showing that the model is highly confident about most bytes in a word and only struggles near the boundaries of its learned local structures where the actual information density lies. This creates a massive opportu",
+  "metric": 8.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-10T17:25:14.935-05:00",
+  "comments": 0,
+  "comments_url": "https://lobste.rs/s/t2fxpt/byte_language_models_scaling_emergent",
+  "tags": [
+   "ai"
+  ]
+ },
+ {
+  "source": "lobsters",
+  "title": "Whistle: Speech to Text in 16.9 MB",
+  "url": "https://cactuscompute.com/blog/whistle",
+  "text": "",
+  "metric": 3.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-09T00:35:51.919-05:00",
+  "comments": 0,
+  "comments_url": "https://lobste.rs/s/lpomuo/whistle_speech_text_16_9_mb",
+  "tags": [
+   "ai"
+  ]
+ },
+ {
+  "source": "lobsters",
+  "title": "Best Books/Courses/Channels to Leapfrog on AI/ML Material",
+  "url": "https://lobste.rs/s/xff77a/best_books_courses_channels_leapfrog_on",
+  "text": "Assuming I have been on hibernation since 2018-19 time frame, which materials - books, MOOC courses and YT channels would be recommended for me to get started with understanding all the current progress on AI/ML. Ideally a resource like [TeachYourselfCS](https://teachyourselfcs.com/) that can give structure and roadmap to navigate all the progress/knowledge on the domain would really help.\r\n\r\nDo we have to take different approaches to understand LLMs vs other type of ML models which have been in large scale deployment/usage from pre-2022/21 time frame?\r\n\r\nThanks a lot in advance.",
+  "metric": 5.0,
+  "metric_name": "score",
+  "rank": null,
+  "created": "2026-10-07T09:12:02.815-05:00",
+  "comments": 4,
+  "comments_url": "https://lobste.rs/s/xff77a/best_books_courses_channels_leapfrog_on",
+  "tags": [
+   "ai",
+   "ask"
+  ]
+ }
+]

@@ -1,0 +1,24 @@
+{
+  "Claude Code": {
+    "official_urls": ["https://code.claude.com/docs/en/overview", "https://claude.com/product/claude-code"],
+    "slides": [
+      {"title": "Claude Codeとは?", "bullets": ["Anthropic製のコーディングエージェント", "ターミナルでコードを読み・編集・実行してくれる", "チャットで頼むだけで複数ファイルの修正まで進める"], "visual": "ターミナルとAIが対話するイラスト"},
+      {"title": "なぜ今週話題?", "bullets": ["Hacker Newsで「Claude Codeで発見した」系の投稿が上位", "GitHubではClaude Code向け拡張・メモリツールが急上昇", "AIエージェントを開発現場で使う流れが加速"], "visual": "ソース別の話題量バー"},
+      {"title": "初心者向け一言", "bullets": ["コードを書く“相棒”をターミナルに呼ぶイメージ", "まず公式ドキュメントのOverviewから試す"], "visual": "はじめの3ステップ図"}
+    ]
+  },
+  "OpenAI": {
+    "official_urls": ["https://openai.com/"],
+    "slides": [
+      {"title": "OpenAIとは?", "bullets": ["ChatGPTやGPTシリーズ、Codexを提供するAI企業", "API経由で多くのアプリに組み込まれている"], "visual": "製品ファミリーの相関図"},
+      {"title": "今週の話題", "bullets": ["HNでは数学的成果の取り下げ報道が議論に", "GitHubではOpenAI連携エージェントの新規リポジトリが増加", "ベンダー動向は多分野に波及するため注目度が高い"], "visual": "話題の発生源マップ"}
+    ]
+  },
+  "Qwen3": {
+    "official_urls": ["https://github.com/QwenLM/Qwen3", "https://qwenlm.github.io/blog/qwen3/", "https://huggingface.co/Qwen"],
+    "slides": [
+      {"title": "Qwen3とは?", "bullets": ["Alibaba(Qwenチーム)のオープンウェイトLLMシリーズ", "小型〜大型まで複数サイズがあり手元PCでも動かせる", "公式: GitHub / Hugging Face / ブログ"], "visual": "サイズ別モデルのはしご図"},
+      {"title": "なぜローカルLLM界隈で人気?", "bullets": ["Reddit r/LocalLLaMA・Ollamaで継続的に話題", "量子化(GGUF/MLX)版が豊富でVRAM少なめでも試せる", "派生(Qwen-Image等)も含めHFでトレンド入り"], "visual": "VRAMと動かせるサイズの対応表"}
+    ]
+  }
+}

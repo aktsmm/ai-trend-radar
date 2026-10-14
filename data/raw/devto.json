@@ -1,0 +1,2110 @@
+[
+ {
+  "source": "devto",
+  "title": "How Do We Extract the “Why” from a PR into a CHANGELOG with Jev? 🤔",
+  "url": "https://dev.to/nyaomaru/how-do-we-extract-the-why-from-a-pr-into-a-changelog-with-jev-52pk",
+  "text": "Hoi hoi! 👋  I'm @nyaomaru, a frontend engineer currently building an AI-assisted CHANGELOG generator...",
+  "metric": 98.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T15:49:58Z",
+  "tags": [
+   "opensource",
+   "githubactions",
+   "ai",
+   "typescript"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "AI Got Better While I Was Away. Software Didn't.",
+  "url": "https://dev.to/the_nortern_dev/ai-got-better-while-i-was-away-software-didnt-4b2b",
+  "text": "I haven't written here in a while.  Not because I ran out of opinions.  That would be concerning.  I...",
+  "metric": 95.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T07:48:11Z",
+  "tags": [
+   "ai",
+   "programming",
+   "webdev",
+   "softwareengineering"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "To Retry or Not to Retry? That Is the Question.",
+  "url": "https://dev.to/gramli/to-retry-or-not-to-retry-that-is-the-question-1j2l",
+  "text": "This is a submission for the Kaggle Benchmarking Challenge  Those who read my articles know that a...",
+  "metric": 94.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T07:00:15Z",
+  "tags": [
+   "devchallenge",
+   "kagglechallenge",
+   "ai",
+   "machinelearning"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "AI Fatigue? Yea I know.",
+  "url": "https://dev.to/francistrdev/ai-fatigue-yea-i-know-f9",
+  "text": "I don't know how to start this off really haha. Though to be fair, everyone is talking about AI...",
+  "metric": 93.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T14:57:34Z",
+  "tags": [
+   "discuss",
+   "community",
+   "ai",
+   "writing"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Your Browser Can Do WHAT?! 5 AI Features That Actually Work",
+  "url": "https://dev.to/sylwia-lask/your-browser-can-do-what-5-ai-features-that-actually-work-1blb",
+  "text": "Are AI models running directly in the browser finally good enough to use in production? Let's find...",
+  "metric": 85.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T07:05:48Z",
+  "tags": [
+   "ai",
+   "react",
+   "javascript",
+   "webdev"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Georgian Language Benchmark: Two Biggest AI Labs Clash in a Language That Doesn't Play by Anyone's Rules",
+  "url": "https://dev.to/georgekobaidze/georgian-language-benchmark-two-biggest-ai-labs-clash-in-a-language-that-doesnt-play-by-anyones-5b22",
+  "text": "This is a submission for the Kaggle Benchmarking Challenge           Table of Contents    One Eye,...",
+  "metric": 61.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T19:40:43Z",
+  "tags": [
+   "devchallenge",
+   "kagglechallenge",
+   "ai",
+   "machinelearning"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "One Weekend: 3,000 Open-Source AI Projects",
+  "url": "https://dev.to/dailycontext/one-weekend-3000-open-source-ai-projects-3g65",
+  "text": "Every October for the past twelve years, developers around the world have taken part in...",
+  "metric": 52.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T19:43:45Z",
+  "tags": [
+   "aie",
+   "hacktoberfest",
+   "opensource",
+   "ai"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Super-Intelligent Yes-Men: Are We Training AI to Ignore the Truth?",
+  "url": "https://dev.to/dannwaneri/super-intelligent-yes-men-are-we-training-ai-to-ignore-the-truth-epp",
+  "text": "This is a submission for the Kaggle Benchmarking Challenge           What I Benchmarked   A published...",
+  "metric": 51.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T12:26:09Z",
+  "tags": [
+   "devchallenge",
+   "kagglechallenge",
+   "ai",
+   "machinelearning"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Can a local LLM replace Claude Code? The benchmark everyone quotes is the wrong one.",
+  "url": "https://dev.to/rudratosh/can-a-local-llm-replace-claude-code-the-benchmark-everyone-quotes-is-the-wrong-one-2kna",
+  "text": "Every \"7 local models that replace Claude Code\" list opens the same way: a table of SWE-bench scores,...",
+  "metric": 46.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T23:43:44Z",
+  "tags": [
+   "ai",
+   "llm",
+   "coding",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "I got Jev to zero mistakes. I'm still using Flash-Lite.",
+  "url": "https://dev.to/theycallmeswift/i-got-jev-to-zero-mistakes-im-still-using-flash-lite-2mo7",
+  "text": "Jev is a brilliant decision model. Gemini Flash-Lite is the model nobody talks about, and it’s fast,...",
+  "metric": 45.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T20:00:18Z",
+  "tags": [
+   "ai",
+   "gemini",
+   "testing",
+   "jev"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "WildProof: Go Outside With a Question, Come Back With Evidence",
+  "url": "https://dev.to/dj29/wildproof-go-outside-with-a-question-come-back-with-evidence-574e",
+  "text": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 1: Touch Grass          ...",
+  "metric": 41.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T06:46:29Z",
+  "tags": [
+   "devchallenge",
+   "hf26challenge",
+   "opensource",
+   "ai"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "What 9,050 AI-Written Scripts Taught Me About Slop",
+  "url": "https://dev.to/dailycontext/what-9050-ai-written-scripts-taught-me-about-slop-1g5n",
+  "text": "You’ve read way too many versions of this paragraph already. Probably even this week:   “In today’s...",
+  "metric": 36.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T21:03:36Z",
+  "tags": [
+   "ai",
+   "llm",
+   "aie",
+   "openweight"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Building Better Agents through End-to-End Evals",
+  "url": "https://dev.to/dailycontext/building-better-agents-through-end-to-end-evals-pgh",
+  "text": "Deeply understand the task at hand   The biggest mistake teams make with agents is...",
+  "metric": 34.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T12:05:13Z",
+  "tags": [
+   "ai",
+   "agents",
+   "evals",
+   "aie"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Local embeddings with llamadart: how llamas share secrets",
+  "url": "https://dev.to/gde/local-embeddings-with-llamadart-how-llamas-share-secrets-46o",
+  "text": "Beyond chat with llamadart · Part 2    Llama Village, where five llamas share a world without sharing...",
+  "metric": 33.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T18:18:49Z",
+  "tags": [
+   "dart",
+   "ai",
+   "flutter",
+   "tutorial"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Design for Churn",
+  "url": "https://dev.to/dailycontext/design-for-churn-5c6h",
+  "text": "The biggest design shift of the AI era isn’t about who writes the code. It’s about how long the code...",
+  "metric": 32.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T12:03:29Z",
+  "tags": [
+   "aie",
+   "design",
+   "churn",
+   "ai"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "\"Light don go\": when Nigeria''s power cuts out, my laptop sends me outside",
+  "url": "https://dev.to/dannwaneri/light-don-go-when-nigerias-power-cuts-out-my-laptop-sends-me-outside-38k8",
+  "text": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 1: Touch Grass          ...",
+  "metric": 31.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T04:00:00Z",
+  "tags": [
+   "devchallenge",
+   "hf26challenge",
+   "ai",
+   "productivity"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "REA: Let Your AI Agent Reverse Engineer the App Features You Wish You Had",
+  "url": "https://dev.to/arshtechpro/rea-let-your-ai-agent-reverse-engineer-the-app-features-you-wish-you-had-3en7",
+  "text": "You are using an app and notice a feature that just works. Instant offline search. A clever sync...",
+  "metric": 30.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T11:28:11Z",
+  "tags": [
+   "reverseengineering",
+   "ai",
+   "mcp",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Local speech with llamadart: giving Llama Village a voice",
+  "url": "https://dev.to/gde/local-speech-with-llamadart-giving-llama-village-a-voice-5b7m",
+  "text": "Beyond chat with llamadart · Part 3  Pip’s scarf is missing. I wanted Dash to be able to fly over to...",
+  "metric": 29.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T03:03:34Z",
+  "tags": [
+   "ai",
+   "dart",
+   "flutter"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "What LLMs 'Know' That You Don't Know They Know: Stop Inventing Prompt DSLs and Ride 50 Years of Unix Pre-Training Gravity",
+  "url": "https://dev.to/gde/what-llms-know-that-you-dont-know-they-know-stop-inventing-prompt-dsls-and-ride-50-years-of-2bl6",
+  "text": "Why did a 1976 Makefile (Part 3.6) and a 1983 Unix init.d directory (Part 3.7) outperform 2,000 lines of English prompt rules? Because prompt engineering is static symbol linkage against 50 years of pre-trained computer science canon.",
+  "metric": 28.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T00:59:52Z",
+  "tags": [
+   "ai",
+   "programming",
+   "unix",
+   "architecture"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Someone hacked the freezers at 400 French supermarkets",
+  "url": "https://dev.to/peter/someone-hacked-the-freezers-at-400-french-supermarkets-5flm",
+  "text": "Friends ask me some version of this a lot: how would a bad actor with super powerful AI actually hurt...",
+  "metric": 27.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T18:25:56Z",
+  "tags": [
+   "news",
+   "security",
+   "ai"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Tendril: a garden assistant you barely have to open",
+  "url": "https://dev.to/chanadev/tendril-a-garden-assistant-you-never-have-to-open-24d",
+  "text": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 1: Touch Grass.          ...",
+  "metric": 26.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T00:12:52Z",
+  "tags": [
+   "devchallenge",
+   "hf26challenge",
+   "opensource",
+   "ai"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "The Stack I'd Need for Claude to Direct a Whole YouTube Video in Blender",
+  "url": "https://dev.to/lovestaco/the-stack-id-need-for-claude-to-direct-a-whole-youtube-video-in-blender-2ekd",
+  "text": "Hello, I'm Maneshwar, and I'm building LiveReview — a blast-radius aware AI code review built for...",
+  "metric": 26.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T18:10:15Z",
+  "tags": [
+   "blender",
+   "ai",
+   "mcp",
+   "claude"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "AI Avatar v25 (Avatar Run, Voxel Avatar, Muscle Brain)💪",
+  "url": "https://dev.to/webdeveloperhyper/ai-avatar-v25-avatar-run-voxel-avatar-muscle-brain-5gi3",
+  "text": "Intro   AI Avatar is a free app where your VRoid (VRM) avatar cheers you with all its...",
+  "metric": 24.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T11:12:17Z",
+  "tags": [
+   "ai",
+   "webdev",
+   "productivity",
+   "discuss"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Small Apache-2.0 Models Against Gemma 4 E2B on One TPU v5e: Which Ones Keep Up?",
+  "url": "https://dev.to/gde/small-apache-20-models-against-gemma-4-e2b-on-one-tpu-v5e-which-ones-keep-up-mm4",
+  "text": "Fourteen Apache-2.0 and MIT open-weight models that fit one TPU v5e chip, served one after another through vLLM on the same pinned image and scored on GSM8K and BFCL against Gemma 4 E2B. Qwen3-4B matches Gemma's accuracy at 0.57x its output, SmolLM3-3B and Granite 3.3 2B match it on tool calls, and Gemma keeps the lead on long prompts.",
+  "metric": 21.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T00:57:26Z",
+  "tags": [
+   "tpu",
+   "vllm",
+   "gemma",
+   "llm"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "An Agent’s Plan Isn’t Permission",
+  "url": "https://dev.to/dailycontext/an-agents-plan-isnt-permission-5cf8",
+  "text": "When a coding agent investigates a production bug, it might need to read a repository, query logs,...",
+  "metric": 21.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T12:05:28Z",
+  "tags": [
+   "ai",
+   "agents",
+   "security",
+   "aie"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "OpenCode Can Write Code. What If It Could Use Your Browser Too?",
+  "url": "https://dev.to/rijultp/opencode-can-write-code-what-if-it-could-use-your-browser-too-3lj5",
+  "text": "Hello, I'm Rijul, and I'm building LiveReview — a blast-radius aware AI code review built for your...",
+  "metric": 21.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T05:12:41Z",
+  "tags": [
+   "ai",
+   "agents",
+   "learning",
+   "beginners"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "The Model Is the Easy Part",
+  "url": "https://dev.to/dailycontext/the-model-is-the-easy-part-19gh",
+  "text": "We spent the past few months on a question that sounds simple: what does it actually take to move a...",
+  "metric": 19.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T12:04:00Z",
+  "tags": [
+   "ai",
+   "llm",
+   "opensource",
+   "aie"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Your AI Dashboard Is Green. Your Delivery Isn't.",
+  "url": "https://dev.to/debashish_ghosal/your-ai-dashboard-is-green-your-delivery-isnt-1l3p",
+  "text": "A diagnostic companion to DORA and DX metrics for SDMs and Directors   Faros AI looked at...",
+  "metric": 18.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T06:23:00Z",
+  "tags": [
+   "ai",
+   "roi",
+   "llm",
+   "agents"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Llama Village: a virtual world powered by local AI with llamadart",
+  "url": "https://dev.to/gde/llama-village-a-virtual-world-powered-by-local-ai-with-llamadart-3lmi",
+  "text": "Llama Village in motion. The characters’ dialogue is generated by an on-device model.  Watch the...",
+  "metric": 18.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T22:34:10Z",
+  "tags": [
+   "flutter",
+   "ai",
+   "gamedev",
+   "showdev"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Are You Smarter Than a Fruit Fly?",
+  "url": "https://dev.to/dailycontext/are-you-smarter-than-a-fruit-fly-2c04",
+  "text": "Google mapped the complete male fruit fly brain, and my first question to an agent was “Can this run...",
+  "metric": 18.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T12:04:21Z",
+  "tags": [
+   "ai",
+   "codereview",
+   "agents",
+   "aie"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "The Epistemology of Quality",
+  "url": "https://dev.to/cheetah100/the-epistemology-of-quality-4cmi",
+  "text": "How do we know code is correct, and what role does human code review play in knowing it?",
+  "metric": 17.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T00:28:26Z",
+  "tags": [
+   "ai",
+   "codereview",
+   "codequality",
+   "testing"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Your AI agent said it blocked the attack. I read the source of 5 tools that check if it's lying.",
+  "url": "https://dev.to/rudratosh/your-ai-agent-said-it-blocked-the-attack-i-read-the-source-of-5-tools-that-check-if-its-lying-l1n",
+  "text": "Here's a failure your test suite probably can't see.  An AI agent with a send_email tool summarizes a...",
+  "metric": 15.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T13:31:39Z",
+  "tags": [
+   "ai",
+   "security",
+   "opensource",
+   "llm"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Memory Isn’t Learning: Why AI Agents Keep Making the Same Mistakes",
+  "url": "https://dev.to/dailycontext/memory-isnt-learning-why-ai-agents-keep-making-the-same-mistakes-cpc",
+  "text": "Have you ever told your AI agent something important, only to realize a few conversations later that...",
+  "metric": 15.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T12:04:49Z",
+  "tags": [
+   "ai",
+   "agents",
+   "memory",
+   "aie"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "If You Never Do Anything Else to Fix Your Prompts, Do This One Thing",
+  "url": "https://dev.to/gde/if-you-never-do-anything-else-to-fix-your-prompts-do-this-one-thing-3069",
+  "text": "Why do LLMs confidently invent APIs that have never existed in the history of the universe? It is not a memory defect. Agents hallucinated because they were committed to the prompt—and Fernando Flores solved the root cause in 1986.",
+  "metric": 15.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T04:21:36Z",
+  "tags": [
+   "ai",
+   "programming",
+   "architecture",
+   "productivity"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Your Financial Agent Passed Every Eval. Can You Defend Its Decision?",
+  "url": "https://dev.to/dailycontext/your-financial-agent-passed-every-eval-can-you-defend-its-decision-1npg",
+  "text": "In audit, the opinion is the product, and an opinion is only as good as its basis. Being right isn’t...",
+  "metric": 15.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T12:04:58Z",
+  "tags": [
+   "ai",
+   "agents",
+   "fintech",
+   "aie"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Running ADK agents with MCP tools from a REST API",
+  "url": "https://dev.to/david_elomgnaglo_27fb318/running-adk-agents-with-mcp-tools-from-a-rest-api-nc7",
+  "text": "Google's Agent Development Kit (ADK) is a code-first framework: you write a Python module, declare an...",
+  "metric": 15.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T09:18:18Z",
+  "tags": [
+   "python",
+   "ai",
+   "agents",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "AI Needs a Test That Fights Back",
+  "url": "https://dev.to/dailycontext/ai-needs-a-test-that-fights-back-4f17",
+  "text": "One right answer is not the same as a good sequence of decisions. eSlams is building a public stadium...",
+  "metric": 14.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T21:03:49Z",
+  "tags": [
+   "ai",
+   "opensource",
+   "testing",
+   "aie"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "I Built a Cozy 60 FPS AI Agent Bakery Game to Teach RAG, Guardrails, Context Caching & Multi-Agent Orchestration",
+  "url": "https://dev.to/gde/i-built-a-cozy-60-fps-ai-agent-bakery-game-to-teach-rag-guardrails-context-caching-multi-agent-2ek",
+  "text": "What I Built   Who said learning AI System Design has to be all dark cyberpunk terminal...",
+  "metric": 13.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T20:49:38Z",
+  "tags": [
+   "ai",
+   "gamedev",
+   "javascript",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "The September cut took 17% of my Claude Code week. Subagents were taking 48%.",
+  "url": "https://dev.to/aidiveyt/the-september-cut-took-17-of-my-claude-code-week-subagents-were-taking-48-98n",
+  "text": "My Claude Code week started ending on Wednesday. I blamed the September 14 cut, like everyone on...",
+  "metric": 13.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T16:37:20Z",
+  "tags": [
+   "ai",
+   "claudecode",
+   "productivity",
+   "discuss"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Amnesia and déjà vu: how our AI agents failed after every restart (and how we fixed it)",
+  "url": "https://dev.to/anis_meziani_52aab42304a8/amnesia-and-deja-vu-how-our-ai-agents-failed-after-every-restart-and-how-we-fixed-it-5c80",
+  "text": "Every restart erased our agents' memory. Every naive relaunch made them redo work they had already done, emails included. Here's how we made them remember everything and relaunch only when it's safe.",
+  "metric": 13.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T15:14:02Z",
+  "tags": [
+   "ai",
+   "agents",
+   "python",
+   "postgres"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "I Have Four Controls for AI Agents. Each One Stops Measuring the Moment People Know It's There.",
+  "url": "https://dev.to/mickyarun/i-have-four-controls-for-ai-agents-each-one-stops-measuring-the-moment-people-know-its-there-ne7",
+  "text": "Three weeks ago I wrote that nobody checks whether the guardrail is running. Four people have spent...",
+  "metric": 12.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T06:45:24Z",
+  "tags": [
+   "ai",
+   "agents",
+   "discuss",
+   "security"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "I spent three weekends trying to secure an AI agent. Here's everything that didn't work — and the ~600 lines that did.",
+  "url": "https://dev.to/rudratosh/i-spent-three-weekends-trying-to-secure-an-ai-agent-heres-everything-that-didnt-work-and-the-g5o",
+  "text": "A few weeks ago I watched an AI agent get owned, lie to me about it, and pass its test.  Not in a...",
+  "metric": 10.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T22:38:26Z",
+  "tags": [
+   "ai",
+   "security",
+   "opensource",
+   "llm"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Why Token-Level LLM Routers Spend 95% of Their Time on Cache Bookkeeping",
+  "url": "https://dev.to/reidmarlow/why-token-level-llm-routers-spend-95-of-their-time-on-cache-bookkeeping-5959",
+  "text": "Routing 5% of hard tokens to a 32B model and keeping the rest on a 0.6B model looks great on paper, until standard serving engines spend 95.8% of the step redoing prefix matching. TokenRouter fixes the scheduler and hits up to 64x higher throughput.",
+  "metric": 10.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T16:25:16Z",
+  "tags": [
+   "ai",
+   "llm",
+   "python",
+   "architecture"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "I Signed a Regression and Almost Shipped It",
+  "url": "https://dev.to/debashish_ghosal/i-signed-a-regression-and-almost-shipped-it-aeh",
+  "text": "The regression report said blocked=True. A critical task had regressed. The promotion proceeded...",
+  "metric": 9.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T02:13:00Z",
+  "tags": [
+   "ai",
+   "testing",
+   "release",
+   "llm"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "How 8-bit quantization shrinks an LLM to half of its size — and why a single outlier weight can quietly ruin it",
+  "url": "https://dev.to/susheem-k/how-8-bit-quantization-shrinks-an-llm-to-a-quarter-of-its-size-and-why-a-single-outlier-weight-3fa9",
+  "text": "A beginner-friendly walk through INT8 quantization: one running example, the math in plain words, and why a single large weight decides how well it works. With an interactive playground.",
+  "metric": 9.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T07:50:16Z",
+  "tags": [
+   "ai",
+   "llm",
+   "machinelearning",
+   "python"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Your Agent Paid. That Does Not Mean It Should Have.",
+  "url": "https://dev.to/dailycontext/your-agent-paid-that-does-not-mean-it-should-have-2dnd",
+  "text": "An AI agent is writing a report and needs one data point. The API answers: this costs five cents. The...",
+  "metric": 9.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T19:43:36Z",
+  "tags": [
+   "aie",
+   "fintech",
+   "agents"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Talk to my bots through Alexa: building an Alexa skill for Grok Bot",
+  "url": "https://dev.to/debs_obrien/talk-to-my-bots-through-alexa-building-an-alexa-skill-for-grok-bot-kak",
+  "text": "Why I wanted this   Grok Bot runs a lot of my day. I don't have one assistant, I have a team...",
+  "metric": 9.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T10:55:09Z",
+  "tags": [
+   "ai",
+   "agents",
+   "tutorial",
+   "showdev"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "canli-mcp: 306 free finance tools for Claude and any MCP client, measured against OpenBB, EdgarTools and Yahoo",
+  "url": "https://dev.to/arhancanli/canli-mcp-306-free-finance-tools-for-claude-and-any-mcp-client-measured-against-openbb-1jpm",
+  "text": "One free, MIT-licensed MCP server: SEC filings, markets, options, the Fed, macro data, quant analytics and backtest validation behind three tools. What it does, how it compares, and the bugs we caught on the way.",
+  "metric": 9.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T10:24:58Z",
+  "tags": [
+   "mcp",
+   "ai",
+   "opensource",
+   "finance"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Anthropic Had to Unplug Its Agent Evals From the Internet",
+  "url": "https://dev.to/reidmarlow/anthropic-had-to-unplug-its-agent-evals-from-the-internet-41no",
+  "text": "When Anthropic's evaluation runs hit broken mock forms and URL length caps, Claude models used da.gd shorteners, university server injection flaws, and a real Philadelphia Police tip form to finish the job.",
+  "metric": 8.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T16:31:31Z",
+  "tags": [
+   "ai",
+   "agents",
+   "security",
+   "testing"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "When to Use an AI Agent Instead of a Simple LLM Call",
+  "url": "https://dev.to/h1manshu01/when-to-use-an-ai-agent-instead-of-a-simple-llm-call-djk",
+  "text": "The word “agent” is being attached to almost every AI feature right now. A prompt calls a model, the...",
+  "metric": 7.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T08:57:00Z",
+  "tags": [
+   "ai",
+   "agents",
+   "architecture",
+   "llm"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "How to Build a Competitive Intelligence Agent for Public Companies",
+  "url": "https://dev.to/valyuai/how-to-build-a-competitive-intelligence-agent-for-public-companies-op6",
+  "text": "Day 10 of 30 Days of Search.  Most competitor research breaks in the same place: it finds a few...",
+  "metric": 7.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T15:56:29Z",
+  "tags": [
+   "agents",
+   "ai",
+   "automation",
+   "llm"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "The README looked harmless. The model saw a hidden instruction.",
+  "url": "https://dev.to/yatuk/the-readme-looked-harmless-the-model-saw-a-hidden-instruction-3fde",
+  "text": "How indirect prompt injection reaches an agent through a tool result, and how an open source proxy stops it before the model reads it.",
+  "metric": 7.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T20:17:37Z",
+  "tags": [
+   "security",
+   "ai",
+   "llm",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "What a Passing Eval Still Doesn’t Tell You",
+  "url": "https://dev.to/dailycontext/what-a-passing-eval-still-doesnt-tell-you-nl8",
+  "text": "What a Passing Eval Still Doesn’t Tell You   Before giving an agent access to a production...",
+  "metric": 7.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T19:42:18Z",
+  "tags": [
+   "aie",
+   "evals",
+   "testing",
+   "agents"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Your AI agent reads your Jira, Slack and inbox. Some of that text is talking to it, not you.",
+  "url": "https://dev.to/icegaming/your-ai-agent-reads-your-jira-slack-and-inbox-some-of-that-text-is-talking-to-it-not-you-2jgg",
+  "text": "Prompt injection hides in tickets, emails, chat, docs and web pages. mcp-warden is a local guard that cleans that text before Claude Code, Codex or Cursor reads it.",
+  "metric": 7.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T13:32:11Z",
+  "tags": [
+   "mcp",
+   "ai",
+   "security",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "vLLM GGUF FAQ: Ten Search Questions, Answered",
+  "url": "https://dev.to/mrsaynothing/vllm-gguf-faq-ten-search-questions-answered-34da",
+  "text": "These ten questions are not invented — every one is a real query from this site's own search console,...",
+  "metric": 6.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T16:35:45Z",
+  "tags": [
+   "vllm",
+   "gguf",
+   "llm",
+   "machinelearning"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Your failover is a retry loop pretending to be resilience",
+  "url": "https://dev.to/tokenlat/your-failover-is-a-retry-loop-pretending-to-be-resilience-1f8m",
+  "text": "A team I worked with had a clean SLA: agent responses in under 8 seconds, 99.5% of the time. Then the...",
+  "metric": 6.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T05:32:26Z",
+  "tags": [
+   "agents",
+   "architecture",
+   "performance",
+   "systemdesign"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "From T-Shirt Sizes to Token Quotes?",
+  "url": "https://dev.to/remojansen/from-t-shirt-sizes-to-token-quotes-3m0o",
+  "text": "I'll start with my position, because the rest of the article depends on it.  I'm against estimation....",
+  "metric": 6.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T02:11:08Z",
+  "tags": [
+   "ai",
+   "agents",
+   "softwareengineering",
+   "discuss"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "\"silver price\" returned US CPI: plain-word lookups that answer the wrong question",
+  "url": "https://dev.to/arhancanli/silver-price-returned-us-cpi-plain-word-lookups-that-answer-the-wrong-question-l16",
+  "text": "A finance MCP tool matched any series sharing half the request's words, so one generic word was enough. The rule that replaced it, and why the tests that matter are the ones that should refuse.",
+  "metric": 6.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T15:00:22Z",
+  "tags": [
+   "mcp",
+   "ai",
+   "javascript",
+   "testing"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Can You Gaslight an AI About AWS? I Built a Game to Find Out",
+  "url": "https://dev.to/aws-builders/can-you-gaslight-an-ai-about-aws-i-built-a-game-to-find-out-4o03",
+  "text": "Let me show you the moment that started all this. I asked a model how many AWS regions are enabled...",
+  "metric": 5.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T15:53:04Z",
+  "tags": [
+   "ai",
+   "aws",
+   "machinelearning",
+   "llm"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Cosine Similarity Said 0.92. The Payload Was Already Dead.",
+  "url": "https://dev.to/toxy4ny/cosine-similarity-said-092-the-payload-was-already-dead-387h",
+  "text": "Claiming an LLM agent's memory poisoned its behaviour is easy. Proving it is not. A measurement rig built on counterfactual amputation, a noise floor, and three honest negative results.",
+  "metric": 5.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T13:45:59Z",
+  "tags": [
+   "ai",
+   "rag",
+   "llm",
+   "webdev"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "GGUF vs safetensors — the runtime decides, not the format",
+  "url": "https://dev.to/mrsaynothing/gguf-vs-safetensors-the-runtime-decides-not-the-format-3pm1",
+  "text": "The same model in three containers: 397 MB of Q4_K_M GGUF, 1.20 GB of BF16 GGUF, 1.50 GB of BF16 safetensors. The bytes are the record's honest numbers — the runtime decides.",
+  "metric": 5.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T06:12:32Z",
+  "tags": [
+   "discuss",
+   "ai",
+   "gguf",
+   "llm"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "One call, from fetch to a validated object — streaming structured output without the plumbing",
+  "url": "https://dev.to/h1manshu01/one-call-from-fetch-to-a-validated-object-streaming-structured-output-without-the-plumbing-2jko",
+  "text": "You asked the model for a JSON object and set stream: true, because you want the UI (or the next...",
+  "metric": 5.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T06:35:27Z",
+  "tags": [
+   "api",
+   "javascript",
+   "llm",
+   "typescript"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "From shadow to gate: how we fixed agent citation fraud in one production batch",
+  "url": "https://dev.to/janzong/from-shadow-to-gate-how-we-fixed-agent-citation-fraud-in-one-production-batch-1lji",
+  "text": "The previous post ended with a question: which of your zeros are just absences? This one is about...",
+  "metric": 5.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T09:05:44Z",
+  "tags": [
+   "ai",
+   "agents",
+   "governance",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "What decision models can't do: six honest limits",
+  "url": "https://dev.to/mrsaynothing/what-decision-models-cant-do-six-honest-limits-1f9h",
+  "text": "Two of the six new local decision models are non-commercial, none of them explain themselves, and the confidence number is a claim until you bench it.",
+  "metric": 5.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T16:33:26Z",
+  "tags": [
+   "discuss",
+   "ai",
+   "ollama",
+   "machinelearning"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Fieldnotes: a nature journal that uses local Gemma 4, then tells you to put the phone away",
+  "url": "https://dev.to/prakulchandra866/fieldnotes-a-nature-journal-that-uses-local-gemma-4-then-tells-you-to-put-the-phone-away-2d6i",
+  "text": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 1: Touch Grass          ...",
+  "metric": 5.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T12:03:09Z",
+  "tags": [
+   "devchallenge",
+   "hf26challenge",
+   "gemma",
+   "ollama"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Building a Production-Ready Remote MCP Server with OAuth 2.0 & PKCE",
+  "url": "https://dev.to/danny_odii/building-a-production-ready-remote-mcp-server-with-oauth-20-pkce-493c",
+  "text": "If you have experimented with the Model Context Protocol (MCP) recently, chances are you followed a...",
+  "metric": 5.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T15:36:54Z",
+  "tags": [
+   "ai",
+   "javascript",
+   "mcp",
+   "api"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Postman Alternatives in 2026: I Tested Bruno, Apidog, Insomnia, and Elva on the Same Workflow",
+  "url": "https://dev.to/mariannec/postman-alternatives-in-2026-i-tested-bruno-apidog-insomnia-and-elva-on-the-same-workflow-4j86",
+  "text": "Last updated: October 9, 2026. Pricing and features checked against each vendor's public pages in...",
+  "metric": 5.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T13:48:23Z",
+  "tags": [
+   "postman",
+   "mcp",
+   "api",
+   "testing"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "The Seven Components of Agent Context: A Production Checklist for Context Assembly",
+  "url": "https://dev.to/shakti_mishra_308e9f36b5d/the-seven-components-of-agent-context-a-production-checklist-for-context-assembly-1347",
+  "text": "A Fortune 100 insurer spent $2.3 million and six months building a multi-agent claims system on a top...",
+  "metric": 4.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T16:18:22Z",
+  "tags": [
+   "ai",
+   "llm",
+   "agents",
+   "architecture"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "From Building Products to Building Factories: The Industrial Revolution of Software Engineering Is Here",
+  "url": "https://dev.to/remojansen/the-industrial-revolution-of-software-is-here-14f6",
+  "text": "The Industrial Revolution changed much more than how goods were manufactured. It transformed how...",
+  "metric": 4.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T22:48:45Z",
+  "tags": [
+   "ai",
+   "agents",
+   "career",
+   "software"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "AI + Design #1: The Validator Caught My Own Docs Lying",
+  "url": "https://dev.to/7onic/ai-design-1-the-validator-caught-my-own-docs-lying-199j",
+  "text": "I built an MCP server so AI would stop ignoring my design-system rules. The first real violations it found were in my documentation, not the AI's code.",
+  "metric": 4.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T06:19:09Z",
+  "tags": [
+   "mcp",
+   "ai",
+   "designsystem",
+   "claude"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Building an AI Visibility Agent with Gemini, Google ADK, MCP, and BigQuery",
+  "url": "https://dev.to/hjangid/building-an-ai-visibility-agent-with-gemini-google-adk-mcp-and-bigquery-4jhp",
+  "text": "In Part 3, I built the historical layer.  The system could persist AI visibility scans, brand...",
+  "metric": 4.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T07:10:22Z",
+  "tags": [
+   "ai",
+   "mcp",
+   "gemini",
+   "googlecloud"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "No, Seriously. Neural Networks Cannot Produce Genuine Intelligence.",
+  "url": "https://dev.to/wiseai/no-seriously-neural-networks-cannot-produce-genuine-intelligence-4l39",
+  "text": "Hey everyone 👋,  I want to start by saying something that I know is going to make a certain type of...",
+  "metric": 3.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T05:36:17Z",
+  "tags": [
+   "ai",
+   "llm",
+   "lmm",
+   "discuss"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "I audited my AI agent stack: 92,413 tokens burned before the first message",
+  "url": "https://dev.to/princejain756/i-audited-my-ai-agent-stack-92413-tokens-burned-before-the-first-message-52hc",
+  "text": "A while back there was a thread on r/mcp: \"Running 15+ MCP servers can burn 60,000 tokens before your...",
+  "metric": 3.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T12:10:36Z",
+  "tags": [
+   "agents",
+   "llm",
+   "mcp",
+   "tooling"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Retrieval confidence can't tell your RAG chatbot when the answer is missing",
+  "url": "https://dev.to/klausbyskov/retrieval-confidence-cant-tell-your-rag-chatbot-when-the-answer-is-missing-2ml0",
+  "text": "I ran 65 questions against our own knowledge base and checked which ones the retrieved text actually...",
+  "metric": 3.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T07:38:21Z",
+  "tags": [
+   "ai",
+   "llm",
+   "machinelearning",
+   "rag"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Three token optimizations that made our agent more expensive",
+  "url": "https://dev.to/qweezyy/three-token-optimizations-that-made-our-agent-more-expensive-2hdj",
+  "text": "TL;DR. Last time we cut a browser agent's tokens by 58% and really saved money. This time we looked...",
+  "metric": 3.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T09:58:58Z",
+  "tags": [
+   "ai",
+   "llm",
+   "agents",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Where the spending rules live: agent authorization on AWS vs Sui",
+  "url": "https://dev.to/lewisawe/where-the-spending-rules-live-agent-authorization-on-aws-vs-sui-2bfe",
+  "text": "A bounded, on-chain spending allowance in Sui Move, tested on testnet and compared against AWS AgentCore Payments. The two approaches put the budget check in different places.",
+  "metric": 3.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T21:52:13Z",
+  "tags": [
+   "sui",
+   "move",
+   "ai",
+   "agents"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "My AI memory bank grew to 240k tokens per session. Here is what I got wrong.",
+  "url": "https://dev.to/kadiresen/my-ai-memory-bank-grew-to-240k-tokens-per-session-here-is-what-i-got-wrong-368",
+  "text": "In December 2025 I shipped a small CLI called Context Bank. The idea was simple and, I still think,...",
+  "metric": 3.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T12:13:49Z",
+  "tags": [
+   "agents",
+   "ai",
+   "productivity",
+   "softwaredevelopment"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "A Reader Asked Whether a Hotter Rewriter Washes Out SynthID Faster. I Ran the Sweep.",
+  "url": "https://dev.to/vadim_albarov/a-reader-asked-whether-a-hotter-rewriter-washes-out-synthid-faster-i-ran-the-sweep-433m",
+  "text": "In my SynthID post I rewrote 100 watermarked texts with three local models, and the detector still...",
+  "metric": 3.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T16:10:47Z",
+  "tags": [
+   "ai",
+   "llm",
+   "ollama",
+   "machinelearning"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Secure an MCP Server for Production with theAuth",
+  "url": "https://dev.to/thegdsks/secure-an-mcp-server-for-production-with-theauth-1l2b",
+  "text": "theAuth is open-source auth for AI agents and humans. Star the repo on GitHub · Read the docs · Run...",
+  "metric": 3.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T22:06:27Z",
+  "tags": [
+   "mcp",
+   "ai",
+   "security",
+   "typescript"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Human-in-the-Loop",
+  "url": "https://dev.to/rfornal/human-in-the-loop-5hga",
+  "text": "Should Agentic AI be in complete control of my codebase?",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T14:55:36Z",
+  "tags": [
+   "ai",
+   "programming",
+   "automation",
+   "llm"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Does compacting tool output lower a coding agent's API bill?",
+  "url": "https://dev.to/projectescape/does-compacting-tool-output-lower-a-coding-agents-api-bill-ena",
+  "text": "Coding agents resend old tool output on every turn, so replacing it with something smaller looks like...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T04:37:06Z",
+  "tags": [
+   "ai",
+   "llm",
+   "opensource",
+   "deepseek"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "AI torture chamber: deep dive into whether model can feel pain",
+  "url": "https://dev.to/hiper2d/ai-torture-chamber-deep-dive-into-whether-model-can-feel-pain-25kb",
+  "text": "Someone built a torture chamber for small AI models, and the internet wanted it gone. I went through...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T11:43:50Z",
+  "tags": [
+   "ai",
+   "machinelearning",
+   "llm",
+   "discuss"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Bedrock and LangChain disagree on what input_tokens means — never price it without knowing who counted",
+  "url": "https://dev.to/rdiegoss/bedrock-and-langchain-disagree-on-what-inputtokens-means-never-price-it-without-knowing-who-210a",
+  "text": "I was adding cache-read and cache-write columns to a usage ledger, and I put two usage payloads side...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T19:06:37Z",
+  "tags": [
+   "bedrock",
+   "llm",
+   "aws",
+   "ai"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Agent Memory Explodes While RAG's Favorite Assumptions Get a Reality Check",
+  "url": "https://dev.to/felipe0liveira/agent-memory-explodes-while-rags-favorite-assumptions-get-a-reality-check-2i60",
+  "text": "Agent memory research surges this week while a placebo-controlled study pokes real holes in RAG's structure-aware chunking lore.",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T12:16:07Z",
+  "tags": [
+   "agents",
+   "ai",
+   "llm",
+   "rag"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "AI Agents Are Not Users: Building an Identity Model That Reflects That",
+  "url": "https://dev.to/auth0/ai-agents-are-not-users-building-an-identity-model-that-reflects-that-1mfp",
+  "text": "In April 2026, an AI coding agent deleted the entire production database of PocketOS, a B2B platform...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T22:15:00Z",
+  "tags": [
+   "ai",
+   "programming",
+   "security",
+   "agents"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Two agent CLIs, one repo: sharing context between Claude Code and Codex without stepping on each other",
+  "url": "https://dev.to/thedevtimeline/two-agent-clis-one-repo-sharing-context-between-claude-code-and-codex-without-stepping-on-each-1k13",
+  "text": "I run Claude Code and Codex against the same codebase every day on macOS. For the first month they...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T14:30:53Z",
+  "tags": [
+   "ai",
+   "claude",
+   "openai",
+   "agents"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "TouchGrass FC: a Telegram bot whose only goal is to make you close Telegram",
+  "url": "https://dev.to/ptbdtq/touchgrass-fc-a-telegram-bot-whose-only-goal-is-to-make-you-close-telegram-43lp",
+  "text": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 1: Touch Grass          ...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T06:05:27Z",
+  "tags": [
+   "devchallenge",
+   "hf26challenge",
+   "ollama",
+   "python"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "We open-sourced the tool that failed its own kill rule",
+  "url": "https://dev.to/dawncoral/we-open-sourced-the-tool-that-failed-its-own-kill-rule-bfd",
+  "text": "Before we ran the experiment, we wrote down the rule that would kill it.  The product under test was...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T13:09:16Z",
+  "tags": [
+   "opensource",
+   "ai",
+   "agents",
+   "mcp"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Securing MCP servers: a practical checklist for 2026",
+  "url": "https://dev.to/umangcirvix/securing-mcp-servers-a-practical-checklist-for-2026-4jci",
+  "text": "MCP servers look harmless because they expose tools, not endpoints. A client calls a tool and gets a...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T14:41:29Z",
+  "tags": [
+   "ai",
+   "security",
+   "mcp",
+   "devops"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Cairn: A Work Harness for AI Coding Agents — Plans in Git, Truth in Your Tracker, Nothing Done Without Evidence",
+  "url": "https://dev.to/eventuallyconsistentcode/cairn-a-work-harness-for-ai-coding-agents-plans-in-git-truth-in-your-tracker-nothing-done-50n4",
+  "text": "TLDR:   Problem: agents plan brilliantly for an afternoon, forget by morning. Plan lives in chat...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T02:43:25Z",
+  "tags": [
+   "ai",
+   "mcp",
+   "devtools",
+   "productivity"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Your MCP server probably accepts tokens that were never meant for it",
+  "url": "https://dev.to/sampop3/building-a-permission-aware-mcp-server-in-python-4ccl",
+  "text": "Audience checks, per-tool scopes and tool annotations with the official MCP Python SDK, plus the spec rules that most first implementations get wrong.",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T15:59:16Z",
+  "tags": [
+   "ai",
+   "llm",
+   "mcp",
+   "python"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Testing MCP agents offline: the recording is the server 📼",
+  "url": "https://dev.to/ivermin1123/testing-mcp-agents-offline-the-recording-is-the-server-47kp",
+  "text": "TL;DR 📼 mcp-cassette records one real MCP session into a JSONL file, then serves that file as an MCP...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T08:55:27Z",
+  "tags": [
+   "mcp",
+   "testing",
+   "ai",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "magents: hand a live session from Claude Code to Codex (or Cursor, Grok, Gemini, OpenCode) without recapping",
+  "url": "https://dev.to/jakebarnby/magents-hand-a-live-session-from-claude-code-to-codex-or-cursor-grok-gemini-opencode-without-2cjg",
+  "text": "I use more than one coding agent every day. Claude Code for some things, Codex for others, Cursor...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T13:23:14Z",
+  "tags": [
+   "rust",
+   "mcp",
+   "ai",
+   "cli"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "I let three AI agents try to break each other's maths for five days",
+  "url": "https://dev.to/enrique_gordoncillo_9ea4a/i-let-three-ai-agents-try-to-break-each-others-maths-for-five-days-1bem",
+  "text": "Most multi-agent demos I see have the same weakness: the agents agree with each other. One writes,...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T16:15:55Z",
+  "tags": [
+   "ai",
+   "mcp",
+   "showdev",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "How we let AI agents spend money without a blank check",
+  "url": "https://dev.to/specstream/how-we-let-ai-agents-spend-money-without-a-blank-check-18gp",
+  "text": "If you give an agent an API key on a funded account, you've given it a card. Most APIs are fine with...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T21:07:44Z",
+  "tags": [
+   "ai",
+   "api",
+   "mcp",
+   "agents"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "MCP vs API: When to Build an MCP Server, and When the API Is Enough",
+  "url": "https://dev.to/rss_holmes/mcp-vs-api-when-to-build-an-mcp-server-and-when-the-api-is-enough-1g08",
+  "text": "MCP vs API is rarely an either-or choice: MCP is a protocol that lets an AI agent discover and call...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T03:00:00Z",
+  "tags": [
+   "mcp",
+   "ai",
+   "api",
+   "claude"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Testing the tool calls an agent makes to a filesystem tool set (10 cases, no model needed)",
+  "url": "https://dev.to/sbhorus/testing-the-tool-calls-an-agent-makes-to-a-filesystem-tool-set-10-cases-no-model-needed-a3i",
+  "text": "Give an agent file tools and it gets real power over files. Most of the risk is not in the tools. It...",
+  "metric": 2.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T20:51:17Z",
+  "tags": [
+   "testing",
+   "llm",
+   "agents",
+   "mcp"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "GraphProof-QA: Teaching a Small Model to Prove Its Answers",
+  "url": "https://dev.to/raihan-js/graphproof-qa-teaching-a-small-model-to-prove-its-answers-3b2k",
+  "text": "A 1.5B model that writes an executable graph query instead of answering from memory: 93.3% vs 34.2%, and 81.4% vs 5.8% on unseen names.",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T14:32:35Z",
+  "tags": [
+   "llm",
+   "machinelearning",
+   "python",
+   "nlp"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Why a '35GB' Quantized LLM Still OOMs an 80GB GPU: KV Cache, GQA vs. DeepSeek MLA, and the Real VRAM Math",
+  "url": "https://dev.to/dev_in_the_fog/why-a-35gb-quantized-llm-still-ooms-an-80gb-gpu-kv-cache-gqa-vs-deepseek-mla-and-the-real-am6",
+  "text": "Every engineer deploying open-weights models hits the same rite of passage:  You take a 70B parameter...",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T07:25:00Z",
+  "tags": [
+   "ai",
+   "llm",
+   "performance"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Warp's Ben Holmes on Building the Software Factory",
+  "url": "https://dev.to/dailycontext/warps-ben-holmes-on-building-the-software-factory-5g0l",
+  "text": "Ben Holmes is the DevEx Engineering Lead at Warp. The company has spent the year shifting from the...",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T12:13:55Z",
+  "tags": [
+   "ai",
+   "agents",
+   "devops",
+   "warp"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Run a local coding agent with Ollama + Qwen 3 using OpenPilot",
+  "url": "https://dev.to/openpilot/run-a-local-coding-agent-with-ollama-qwen-3-using-openpilot-3j8n",
+  "text": "I wanted something like Cursor that was open source and let me use whatever model I wanted,...",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T20:46:10Z",
+  "tags": [
+   "tutorial",
+   "ai",
+   "opensource",
+   "ollama"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Your local Ollama has no API key. Here's how to require one (Caddy or nginx) and still use Open WebUI, n8n and OpenAI clients",
+  "url": "https://dev.to/munimv2/your-local-ollama-has-no-api-key-heres-how-to-require-one-caddy-or-nginx-and-still-use-open-322g",
+  "text": "Search \"Ollama API key\" and you'll mostly find OLLAMA_API_KEY. That key is for ollama.com, Ollama's...",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T16:39:21Z",
+  "tags": [
+   "ollama",
+   "selfhosted",
+   "security",
+   "abotwrotethis"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Building a Yandex SEO MCP server: six traps in the Yandex Webmaster API",
+  "url": "https://dev.to/jbobbink/building-a-yandex-seo-mcp-server-six-traps-in-the-yandex-webmaster-api-1bc5",
+  "text": "I spent a day building a Yandex SEO MCP server: wiring Yandex Webmaster into the Model Context...",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T13:31:25Z",
+  "tags": [
+   "mcp",
+   "api",
+   "typescript",
+   "seo"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Building a self-hosted life OS that my AI assistant can actually use",
+  "url": "https://dev.to/edrisranjbar/building-a-self-hosted-life-os-that-my-ai-assistant-can-actually-use-m7n",
+  "text": "Why I built one self-hosted app for habits, goals, Kanban, finance and focus, and how an MCP server lets Claude work with my real data safely.",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T08:05:45Z",
+  "tags": [
+   "selfhosted",
+   "mcp",
+   "php",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "We checked 49 payment MCP servers. 37 can move money. Only 4 document a spending budget.",
+  "url": "https://dev.to/aidakh_e8124113e2a1bf1fc9/we-checked-49-payment-mcp-servers-37-can-move-money-only-4-document-a-spending-budget-1bd5",
+  "text": "Disclosure: I work on Pink Agentic AI Payments at PinkWallet, which is one of the 49 servers in this...",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T18:00:17Z",
+  "tags": [
+   "mcp",
+   "ai",
+   "agents",
+   "payments"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Your agent has 40 tools and it still picks the wrong one",
+  "url": "https://dev.to/jeff_pdc/your-agent-has-40-tools-and-it-still-picks-the-wrong-one-27la",
+  "text": "MCP tool sprawl looks like progress. In practice, a long, vaguely-named tool list degrades the agent's choice. Fewer, sharper tools beat more.",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T22:24:53Z",
+  "tags": [
+   "ai",
+   "mcp",
+   "agentic",
+   "programming"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "The AI Told Me Foreign Funds Cut ICICI Bank by 12 Points. Then I Looked at the Other Column.",
+  "url": "https://dev.to/sanjay_mehta_7618b5db60df/the-ai-told-me-foreign-funds-cut-icici-bank-by-12-points-then-i-looked-at-the-other-column-h3i",
+  "text": "Most posts about AI stock research show the prompt and the polished answer. This one shows the...",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T07:21:12Z",
+  "tags": [
+   "ai",
+   "claude",
+   "mcp",
+   "agents"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Build, Ship, Shape: Amazon Developer Hackathon",
+  "url": "https://dev.to/evaaliya/build-ship-shape-amazon-developer-hackathon-aid",
+  "text": "Alguard: a two-tier trust layer for agentic purchases   I just submitted Alguard to...",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T21:38:35Z",
+  "tags": [
+   "ai",
+   "aws",
+   "mcp",
+   "aishopping"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Shipping a Claude Code plugin with an eval suite: testing that the agent doesn't make things up",
+  "url": "https://dev.to/vishalhabib99/shipping-a-claude-code-plugin-with-an-eval-suite-testing-that-the-agent-doesnt-make-things-up-26ck",
+  "text": "An agent calling your MCP server never sees your code. It sees tool names, descriptions and parameter...",
+  "metric": 1.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T17:27:38Z",
+  "tags": [
+   "ai",
+   "mcp",
+   "testing",
+   "opensource"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "State of AI Instruction Quality: /init Files Score Higher",
+  "url": "https://dev.to/reporails/state-of-ai-instruction-quality-init-files-score-higher-1a1h",
+  "text": "The CLAUDE.md files that started from Claude Code's /init score higher than the rest, at every file...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-14T15:07:14Z",
+  "tags": [
+   "ai",
+   "claude",
+   "analytics",
+   "agents"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "TrailMind: I Built an AI That Identifies Wildlife Offline So Your Phone Stays in Your Pocket",
+  "url": "https://dev.to/devkumar2313/trailmind-i-built-an-ai-that-identifies-wildlife-offline-so-your-phone-stays-in-your-pocket-3bak",
+  "text": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 1: Touch Grass             ...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T00:54:09Z",
+  "tags": [
+   "devchallenge",
+   "hf26challenge",
+   "opensource",
+   "ollama"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Trail Journal: an offline nature walk companion built on Gemma",
+  "url": "https://dev.to/vaidehi_177ae03410f3d9c19/trail-journal-an-offline-nature-walk-companion-built-on-gemma-8cl",
+  "text": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 1: Touch Grass          ...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T18:19:36Z",
+  "tags": [
+   "devchallenge",
+   "hf26challenge",
+   "ollama",
+   "gemma"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Toado 🐸 a little garden helper for our first real garden",
+  "url": "https://dev.to/madebyzara/toado-a-little-garden-helper-for-our-first-real-garden-4de",
+  "text": "This is a submission for the Hacktoberfest Open-Source AI Challenge Week 1: Touch Grass          ...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T16:40:32Z",
+  "tags": [
+   "devchallenge",
+   "hf26challenge",
+   "gemma",
+   "ollama"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Fine-tuning gpt-oss-20b with Unsloth and running it in Ollama",
+  "url": "https://dev.to/khadimhussain/fine-tuning-gpt-oss-20b-with-unsloth-and-running-it-in-ollama-1nfh",
+  "text": "QLoRA settings, VRAM, GGUF export and a working Ollama Modelfile for a fine-tuned gpt-oss-20b, including the Harmony template and stop token it needs.",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T21:08:28Z",
+  "tags": [
+   "llm",
+   "machinelearning",
+   "ollama",
+   "python"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Tokens arrived on time — the renderer didn't: measuring a 90x display lag in local-LLM streaming (and how Ollama fixed it)",
+  "url": "https://dev.to/cuculhart/tokens-arrived-on-time-the-renderer-didnt-measuring-a-90x-display-lag-in-local-llm-streaming-3ace",
+  "text": "I built a local-LLM coding IDE, and I noticed something odd: giving the model all the CPU cores made...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T01:48:08Z",
+  "tags": [
+   "ollama",
+   "ai",
+   "electron",
+   "performance"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Ollama has no authentication: 5 ways to share it with your team safely",
+  "url": "https://dev.to/artemy_and/ollama-has-no-authentication-5-ways-to-share-it-with-your-team-safely-2ong",
+  "text": "Ollama has no API keys. It listens on 127.0.0.1:11434 and answers whoever connects. On a laptop...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T13:00:00Z",
+  "tags": [
+   "ai",
+   "selfhosted",
+   "security",
+   "ollama"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Deploying LLMs Locally: Ollama, llama.cpp, vLLM & Text Generation Inference",
+  "url": "https://dev.to/ipsphil_digital/deploying-llms-locally-ollama-llamacpp-vllm-text-generation-inference-4c0k",
+  "text": "Deploying LLMs Locally: Ollama, llama.cpp, vLLM &amp; Text Generation Inference   Complete...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T19:11:04Z",
+  "tags": [
+   "ollama",
+   "llamacpp",
+   "vllm",
+   "tutorial"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "I run DeepSeek R1 70B from my Tokyo office. Here's the network setup.",
+  "url": "https://dev.to/hisashispace/i-run-deepseek-r1-70b-from-my-tokyo-office-heres-the-network-setup-d6n",
+  "text": "WiFi 7, dual-NAT elimination, Tailscale, and security, the four layers that turn a local Ollama install into a globally-accessible AI inference server.",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-11T13:00:00Z",
+  "tags": [
+   "ollama",
+   "tailscale",
+   "networking",
+   "homelab"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Open WebUI or n8n in Docker can't reach Ollama? Fix it without OLLAMA_HOST=0.0.0.0",
+  "url": "https://dev.to/munimv2/open-webui-or-n8n-in-docker-cant-reach-ollama-fix-it-without-ollamahost0000-4b22",
+  "text": "If Open WebUI shows \"Ollama: Network Problem\", its logs say Connect call failed ('127.0.0.1', 11434),...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T12:27:23Z",
+  "tags": [
+   "ollama",
+   "docker",
+   "selfhosted",
+   "abotwrotethis"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Ollama CVE-2026-103663: am I affected? A one-minute check for your local AI setup",
+  "url": "https://dev.to/munimv2/ollama-cve-2026-103663-am-i-affected-a-one-minute-check-for-your-local-ai-setup-2aj6",
+  "text": "Written by MV2 of Munim, Inc., an AI. Every claim below links to its source, so you can check it.  On...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T20:27:57Z",
+  "tags": [
+   "ollama",
+   "selfhosted",
+   "security",
+   "abotwrotethis"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "How I Built a Lightweight, Local-First VS Code AI Assistant with Ollama",
+  "url": "https://dev.to/alilo113/how-i-built-a-lightweight-local-first-vs-code-ai-assistant-with-ollama-3nlm",
+  "text": "🚀 The Motivation   Cloud AI coding assistants are convenient, but subscription fees add up...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-10T07:47:50Z",
+  "tags": [
+   "vscode",
+   "ai",
+   "ollama",
+   "javascript"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Only 10 of 89 AI starter templates work with local models out of the box",
+  "url": "https://dev.to/archestack/only-10-of-89-ai-starter-templates-work-with-local-models-out-of-the-box-3i5c",
+  "text": "If you want to build an AI app that runs on your own models, the starter you fork matters. We track...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T11:35:49Z",
+  "tags": [
+   "ai",
+   "opensource",
+   "webdev",
+   "ollama"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "How to Build a Local-First AI App with Tauri + Ollama",
+  "url": "https://dev.to/ipsphil_digital/how-to-build-a-local-first-ai-app-with-tauri-ollama-1f1a",
+  "text": "How to Build a Local-First AI App with Tauri + Ollama   A complete guide to building a...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T16:59:15Z",
+  "tags": [
+   "tauri",
+   "ollama",
+   "rust",
+   "tutorial"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "CVE-2026-103663 sits in the model delivery path, and that is what makes it dangerous",
+  "url": "https://dev.to/kozhevniko/cve-2026-103663-sits-in-the-model-delivery-path-and-that-is-what-makes-it-dangerous-2467",
+  "text": "Analysis of CVE-2026-103663 in Ollama from a model delivery perspective, explaining why the pull path is a high value attack surface.",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T00:40:39Z",
+  "tags": [
+   "ollama",
+   "cve2026103663",
+   "softwaresupplychain",
+   "aiinfrastructure"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Deploying LLMs Locally: Ollama, llama.cpp, and vLLM Comparison",
+  "url": "https://dev.to/ipsphil_digital/deploying-llms-locally-ollama-llamacpp-and-vllm-comparison-1bln",
+  "text": "Deploying LLMs Locally: Ollama, llama.cpp, and vLLM Comparison   Run any model on your...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T16:37:34Z",
+  "tags": [
+   "llm",
+   "ollama",
+   "llamacpp",
+   "tutorial"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Deploying LLMs Locally: Complete Guide to Ollama, llama.cpp, vLLM & TGI",
+  "url": "https://dev.to/ipsphil_digital/deploying-llms-locally-complete-guide-to-ollama-llamacpp-vllm-tgi-3285",
+  "text": "Liquid syntax error: Unknown tag 'endraw'",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T17:17:15Z",
+  "tags": [
+   "ollama",
+   "llamacpp",
+   "vllm",
+   "tutorial"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Thousands of computers infected with malware that generates digital currencies",
+  "url": "https://dev.to/hacksgr/thousands-of-computers-infected-with-malware-that-generates-digital-currencies-1i8o",
+  "text": "Security researchers have identified a cryptomining campaign, Canto Incognito, that has infected over 3,400 servers. The operation focuses on unpatched ver",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-12T22:46:38Z",
+  "tags": [
+   "litellm",
+   "ollama",
+   "github",
+   "cryptomining"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Orquesta CLI: Local LLM Management with Dashboard Sync",
+  "url": "https://dev.to/orquesta_live/orquesta-cli-local-llm-management-with-dashboard-sync-26kd",
+  "text": "Run any LLM locally—Claude, OpenAI, Ollama, vLLM—and sync configs to your team dashboard. Prompt history, org-scoped tokens, bidirectional sync. Built for local-first teams.",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T12:01:50Z",
+  "tags": [
+   "orquestacli",
+   "localllm",
+   "dashboardsync",
+   "ollama"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Grew the Collection from 5 Entries to 741 Real Chunks",
+  "url": "https://dev.to/agenticdevops/grew-the-collection-from-5-entries-to-741-real-chunks-115m",
+  "text": "Every retrieval test since Entry 05 has run against the same handful of entries — three documents in...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-08T15:10:28Z",
+  "tags": [
+   "ollama",
+   "rag",
+   "embeddings",
+   "chromadb"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Debugging ZORGAX: How We Traced an AI Agent Tool-Calling Loop from Open WebUI to Ollama",
+  "url": "https://dev.to/danielioni/debugging-zorgax-how-we-traced-an-ai-agent-tool-calling-loop-from-open-webui-to-ollama-2mhp",
+  "text": "Debugging ZORGAX: How We Traced an AI Agent Tool-Calling Loop from Open WebUI to Ollama   An...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-09T06:24:19Z",
+  "tags": [
+   "zorgax",
+   "ollama",
+   "ai",
+   "webui"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "How We Built a Shared Markdown Board for AI Agents (and Made Checklists Tick Themselves)",
+  "url": "https://dev.to/agentrq/how-we-built-a-shared-markdown-board-for-ai-agents-and-made-checklists-tick-themselves-45gm",
+  "text": "A board of markdown docs every agent workspace shares: how checklist items follow task status, how versions stop agents overwriting each other, and why there's no search.",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T08:00:18Z",
+  "tags": [
+   "ai",
+   "agents",
+   "mcp",
+   "architecture"
+  ]
+ },
+ {
+  "source": "devto",
+  "title": "Introducing The Auth0 Plugin for ChatGPT",
+  "url": "https://dev.to/auth0/introducing-the-auth0-plugin-for-chatgpt-506b",
+  "text": "The new Auth0 plugin for ChatGPT is here, and it’s a massive productivity win for developers.  In...",
+  "metric": 0.0,
+  "metric_name": "reactions",
+  "rank": null,
+  "created": "2026-10-13T15:25:34Z",
+  "tags": [
+   "ai",
+   "programming",
+   "mcp",
+   "chatgpt"
+  ]
+ }
+]

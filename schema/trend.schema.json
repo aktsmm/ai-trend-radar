@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aktsmm/ai-trend-radar/schema/trend.schema.json",
+  "title": "AI Trend Radar output",
+  "type": "object",
+  "required": ["generated_at", "window", "trends"],
+  "properties": {
+    "generated_at": { "type": "string", "format": "date-time" },
+    "window": {
+      "type": "object",
+      "required": ["from", "to"],
+      "properties": { "from": { "type": "string" }, "to": { "type": "string" } }
+    },
+    "source_status": { "type": "object" },
+    "x_integration": { "type": "object" },
+    "candidates_pool": { "type": "integer" },
+    "trends": { "type": "array", "items": { "$ref": "#/$defs/trend" } }
+  },
+  "$defs": {
+    "tag": { "enum": ["models", "local-llm", "hardware", "agents", "vendor", "tools", "research"] },
+    "source": {
+      "type": "object",
+      "required": ["name", "title", "url", "metric", "metric_name"],
+      "properties": {
+        "name": { "type": "string" },
+        "title": { "type": "string" },
+        "url": { "type": "string" },
+        "metric": { "type": "number" },
+        "metric_name": { "type": "string" }
+      }
+    },
+    "slide": {
+      "type": "object",
+      "required": ["title", "bullets"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "bullets": { "type": "array", "items": { "type": "string" }, "minItems": 1, "maxItems": 5 },
+        "visual": { "type": "string" }
+      }
+    },
+    "trend": {
+      "type": "object",
+      "required": ["keyword", "tags", "score", "sources", "official_urls", "summary", "slides"],
+      "properties": {
+        "rank": { "type": "integer", "minimum": 1 },
+        "keyword": { "type": "string", "minLength": 2 },
+        "tags": { "type": "array", "items": { "$ref": "#/$defs/tag" }, "minItems": 1, "maxItems": 3, "uniqueItems": true },
+        "score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "vendor": { "type": ["string", "null"] },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/source" }, "minItems": 1 },
+        "official_urls": { "type": "array", "items": { "type": "string", "pattern": "^https://" } },
+        "official_verified": { "type": "boolean" },
+        "summary": { "type": "string", "minLength": 1 },
+        "slides": { "type": "array", "items": { "$ref": "#/$defs/slide" }, "maxItems": 3 },
+        "score_breakdown": { "type": "object", "additionalProperties": { "type": "number" } },
+        "x_posts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["url", "likes", "reposts", "views"],
+            "properties": {
+              "url": { "type": "string" }, "author": { "type": "string" }, "text": { "type": "string" },
+              "likes": { "type": "integer" }, "reposts": { "type": "integer" }, "views": { "type": "integer" },
+              "via": { "enum": ["link", "brave"] }
+            }
+          }
+        }
+      }
+    }
+  }
+}

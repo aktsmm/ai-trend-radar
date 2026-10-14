@@ -1,0 +1,132 @@
+[
+ {
+  "source": "pypi",
+  "title": "vllm",
+  "url": "https://pypi.org/project/vllm/",
+  "text": "",
+  "metric": 463948.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "llama-cpp-python",
+  "url": "https://pypi.org/project/llama-cpp-python/",
+  "text": "",
+  "metric": 165100.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "ollama",
+  "url": "https://pypi.org/project/ollama/",
+  "text": "",
+  "metric": 2940647.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "transformers",
+  "url": "https://pypi.org/project/transformers/",
+  "text": "",
+  "metric": 24081471.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "langchain",
+  "url": "https://pypi.org/project/langchain/",
+  "text": "",
+  "metric": 35493529.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "langgraph",
+  "url": "https://pypi.org/project/langgraph/",
+  "text": "",
+  "metric": 12076018.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "mcp",
+  "url": "https://pypi.org/project/mcp/",
+  "text": "",
+  "metric": 61046390.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "openai-agents",
+  "url": "https://pypi.org/project/openai-agents/",
+  "text": "",
+  "metric": 3053879.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "crewai",
+  "url": "https://pypi.org/project/crewai/",
+  "text": "",
+  "metric": 653114.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "pydantic-ai",
+  "url": "https://pypi.org/project/pydantic-ai/",
+  "text": "",
+  "metric": 1377901.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "mlx-lm",
+  "url": "https://pypi.org/project/mlx-lm/",
+  "text": "",
+  "metric": 137103.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "unsloth",
+  "url": "https://pypi.org/project/unsloth/",
+  "text": "",
+  "metric": 193016.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ },
+ {
+  "source": "pypi",
+  "title": "sglang",
+  "url": "https://pypi.org/project/sglang/",
+  "text": "",
+  "metric": 176630.0,
+  "metric_name": "downloads_week",
+  "rank": null,
+  "created": null
+ }
+]

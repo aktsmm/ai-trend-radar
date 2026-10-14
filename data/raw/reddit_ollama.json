@@ -1,0 +1,678 @@
+[
+ {
+  "source": "reddit_ollama",
+  "title": "Ollama restricted my account after I complained about API issues — $10,000 invested, 6+ projects at risk",
+  "url": "https://www.reddit.com/r/ollama/comments/1x5nk6u/ollama_restricted_my_account_after_i_complained/",
+  "text": "&#x200B; I have spent about $10,000 on Ollama credits and have developed over six projects which use its API. When I got in touch with support to complain about the interruptions to the API, my account was put on restriction. I am not able to prove that the complaint caused the restriction, but the fact that it happened at that time is highly questionable. Ollama didn&#39;t explain the restriction; instead it refunded the balance I still had to the original payment method, with a processing time of 5 to 10 business days. I never asked for a refund since I need the API access that I paid for. I put my funds set aside to keep my business going. At the moment my projects are in danger and the time I have to wait—up to 10 business days—for money which I had never asked to be refunded could seriously affect my operations. I wrote to the support team to find out why my account had been restricted, what is meant by &#39;extra usage balance&#39;, and whether the restriction was connected to my complaint. I have not yet received a substantial reply. I have put a great deal of money into your platform, so I am entitled to a clear explanation and a genuine solution, not an arbitrary restriction and an unwanted refund. Have any other people had something similar when using Ollama? &#32; submitted by &#32; /u/Strange_Issue_8947 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 1,
+  "created": "2026-10-14T10:20:32+00:00",
+  "links": [
+   "https://i.redd.it/2u1ozxtfsevh1.jpeg"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x5nk6u/ollama_restricted_my_account_after_i_complained/\"> <img src=\"https://preview.redd.it/2u1ozxtfsevh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=e9778624c5ef1d005bb0f68b1b713b2503d7a43b\" alt=\"Ollama restricted my account after I complained about API issues — $10,000 invested, 6+ projects at risk\" title=\"Ollama restricted my account after I complained about API issues — $10,000 invested, 6+ projects at risk\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>&#x200B;</p> <p>I have spent about $10,000 on Ollama credits and have developed over six projects which use its API.</p> <p>When I got in touch with support to complain about the interruptions to the API, my account was put on restriction. I am not able to prove that the complaint caused the restriction, but the fact that it happened at that time is highly questionable.</p> <p>Ollama didn&#39;t explain the restriction; instead it refunded the balance I still had to the original payment method, with a processing time of 5 to 10 business days.</p> <p>I never asked for a refund since I need the API access that I paid for.</p> <p>I put my funds set aside to keep my business going. At the moment my projects are in danger and the time I have to wait—up to 10 business days—for money which I had never asked to be refunded could seriously affect my operations.</p> <p>I wrote to the support team to find out why my account had been restricted, what is meant by &#39;extra usage balance&#39;, and whether the restriction was connected to my complaint. I have not yet received a substantial reply.</p> <p>I have put a great deal of money into your platform, so I am entitled to a clear explanation and a genuine solution, not an arbitrary restriction and an unwanted refund.</p> <p>Have any other people had something similar when using Ollama?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Strange_Issue_8947\"> /u/Strange_Issue_8947 </a> <br/> <span><a href=\"https://i.redd.it/2u1ozxtfsevh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5nk6u/ollama_restricted_my_account_after_i_complained/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Open-source alternative to ChatGPT's new Intelligent UI works with any model (local too)",
+  "url": "https://www.reddit.com/r/ollama/comments/1x0duco/opensource_alternative_to_chatgpts_new/",
+  "text": "Update, v0.2.0: answers can now include live 3D and 2D scenes. Ask how something works (&quot;How does a planet&#39;s distance change its year?&quot;) and the model writes a small three.js scene. The answer&#39;s own sliders drive it, and the numbers the scene works out flow back into the text, so the orbit and &quot;years per orbit&quot; change together with no new model call. New demo at the top of the README. How it works, for the curious: The model streams the UI in OpenUI Lang, so the sliders are real app components, not HTML the model draws. Each scene is a sandboxed code island: an iframe with a strict CSP and three.js bundled locally. The generated code can&#39;t reach the app or your key, and can&#39;t fetch or open web pages. A small runtime hands the model a ready scene, camera, lights and render loop, so it writes about 20 lines instead of a whole page. Fewer tokens, fewer mistakes. Sliders and scene are two-way bound over postMessage: values go in as you drag, and results like a pendulum&#39;s period come back into the answer. ChatGPT launched Intelligent UI, where answers come back as charts, forms and small tools instead of text. It only works inside ChatGPT, so I built an open-source alternative that runs with any OpenAI-compatible model: Ollama, LM Studio, Kimi, OpenRouter, Groq or OpenAI. GitHub: https://github.com/0xcro3dile/answerui (demo videos in the README) Answers stream in as real interfaces: sliders, charts, tables, checkboxes, and now live 3D and 2D scenes. The tools keep working after the answer is done. Move a slider and the numbers update in your browser, with no new model call. Simple questions still get plain text. One command: npx answerui-app . It finds Ollama on its own, or asks for a key. There&#39;s also a Docker image. No telemetry, and the API only answers requests from your own machine. The demos run on Kimi K3 (the scene videos are sped up 1.2x). It&#39;s built on OpenUI (MIT), which handles the streaming and the components. ",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 2,
+  "created": "2026-10-08T01:11:45+00:00",
+  "links": [
+   "https://github.com/0xcro3dile/answerui"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x0duco/opensource_alternative_to_chatgpts_new/\"> <img src=\"https://external-preview.redd.it/-Jcz2kjdFjnYy2z3TKGMSwlRUmvnActr6i2u1Y_6HGI.png?width=140&amp;height=70&amp;auto=webp&amp;s=c836063490f0c74d2b11056febe44e8831cf5a91\" alt=\"Open-source alternative to ChatGPT's new Intelligent UI works with any model (local too)\" title=\"Open-source alternative to ChatGPT's new Intelligent UI works with any model (local too)\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><strong>Update, v0.2.0:</strong> answers can now include live 3D and 2D scenes. Ask how something works (&quot;How does a planet&#39;s distance change its year?&quot;) and the model writes a small three.js scene. The answer&#39;s own sliders drive it, and the numbers the scene works out flow back into the text, so the orbit and &quot;years per orbit&quot; change together with no new model call. New demo at the top of the README.</p> <p>How it works, for the curious:</p> <ul> <li>The model streams the UI in OpenUI Lang, so the sliders are real app components, not HTML the model draws.</li> <li>Each scene is a sandboxed code island: an iframe with a strict CSP and three.js bundled locally. The generated code can&#39;t reach the app or your key, and can&#39;t fetch or open web pages.</li> <li>A small runtime hands the model a ready scene, camera, lights and render loop, so it writes about 20 lines instead of a whole page. Fewer tokens, fewer mistakes.</li> <li>Sliders and scene are two-way bound over postMessage: values go in as you drag, and results like a pendulum&#39;s period come back into the answer.</li> </ul> <p>ChatGPT launched Intelligent UI, where answers come back as charts, forms and small tools instead of text. It only works inside ChatGPT, so I built an open-source alternative that runs with any OpenAI-compatible model: Ollama, LM Studio, Kimi, OpenRouter, Groq or OpenAI.</p> <p>GitHub: <a href=\"https://github.com/0xcro3dile/answerui\">https://github.com/0xcro3dile/answerui</a> (demo videos in the README)</p> <ul> <li>Answers stream in as real interfaces: sliders, charts, tables, checkboxes, and now live 3D and 2D scenes.</li> <li>The tools keep working after the answer is done. Move a slider and the numbers update in your browser, with no new model call.</li> <li>Simple questions still get plain text.</li> <li>One command: <code>npx answerui-app</code>. It finds Ollama on its own, or asks for a key. There&#39;s also a Docker image.</li> <li>No telemetry, and the API only answers requests from your own machine.</li> </ul> <p>The demos run on Kimi K3 (the scene videos are sped up 1.2x).</p> <p>It&#39;s built on OpenUI (MIT), which handles the streaming and the components. I added the provider setup, Ollama detection, the CLI, prompt rules that make the tools actually recalculate, the live scenes, and the tests.</p> <p>Honest limits: the instructions are now about 12k tokens, so give Ollama a bigger context window (<code>OLLAMA_CONTEXT_LENGTH=16384</code>), and small models struggle more, especially with scenes.</p> <p>I&#39;m the author. I&#39;d love to hear which models work well for you and love contributions.</p> <p><a href=\"https://reddit.com/link/1x0duco/video/0h8ugl25yauh1/player\">https://reddit.com/link/1x0duco/video/0h8ugl25yauh1/player</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/No_Let6728\"> /u/No_Let6728 </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x0duco/opensource_alternative_to_chatgpts_new/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x0duco/opensource_alternative_to_chatgpts_new/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "GLM-5.3-Flash (320B) on an M5 Ultra Mac Studio with llama.cpp: 61 tok/s, 262K context",
+  "url": "https://www.reddit.com/r/ollama/comments/1x2y2ao/glm53flash_320b_on_an_m5_ultra_mac_studio_with/",
+  "text": "Test machine: M5 ultra. 36/80. 256GB. TL;DR ~61 tok/s generation with GLM’s built-in MTP head (probabilistic drafting, 3 draft tokens), up from 39.7 without it. Prompt reading is the weak spot: ~765 tok/s at 4K tokens and ~630 tok/s at 59K. A 29K-token prompt takes 45 s. The full 262K context fits with ~15 GiB to spare, and long-context recall was correct at 58.8K tokens. The catches: images and MTP can’t be on at the same time, and deep context on Metal needs a fix has yet to be merged. &#32; submitted by &#32; /u/JuanixVentures [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 3,
+  "created": "2026-10-11T03:43:45+00:00",
+  "links": [
+   "https://jvlewis.dev/glm-5-3-flash-320b-on-an-m5-ultra-mac-studio-with-llama-cpp-61-tok-s-262k-context-c184f21f6286"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x2y2ao/glm53flash_320b_on_an_m5_ultra_mac_studio_with/\"> <img src=\"https://external-preview.redd.it/xkf4DFGJJVQAcOm-gRv1XUfT76S6eJbOZ5vCHrldqoM.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=0f656ffd07e1fc84f2c67c820634d95c13752753\" alt=\"GLM-5.3-Flash (320B) on an M5 Ultra Mac Studio with llama.cpp: 61 tok/s, 262K context\" title=\"GLM-5.3-Flash (320B) on an M5 Ultra Mac Studio with llama.cpp: 61 tok/s, 262K context\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Test machine: M5 ultra. 36/80. 256GB.</p> <p><strong>TL;DR</strong></p> <ul> <li><strong>~61 tok/s</strong> generation with GLM’s built-in MTP head (probabilistic drafting, 3 draft tokens), up from <strong>39.7</strong> without it.</li> <li><strong>Prompt reading is the weak spot:</strong> ~765 tok/s at 4K tokens and ~630 tok/s at 59K. A 29K-token prompt takes 45 s.</li> <li><strong>The full 262K context fits</strong> with ~15 GiB to spare, and long-context recall was correct at 58.8K tokens.</li> <li><strong>The catches:</strong> images and MTP can’t be on at the same time, and deep context on Metal needs a fix has yet to be merged.</li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/JuanixVentures\"> /u/JuanixVentures </a> <br/> <span><a href=\"https://jvlewis.dev/glm-5-3-flash-320b-on-an-m5-ultra-mac-studio-with-llama-cpp-61-tok-s-262k-context-c184f21f6286\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x2y2ao/glm53flash_320b_on_an_m5_ultra_mac_studio_with/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "What's the weakest machine you run a local model on every day?",
+  "url": "https://www.reddit.com/r/ollama/comments/1x427a1/whats_the_weakest_machine_you_run_a_local_model/",
+  "text": "Not a benchmark run, the one you actually use. Which model, and what for? &#32; submitted by &#32; /u/Classeve [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 4,
+  "created": "2026-10-12T13:42:02+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>Not a benchmark run, the one you actually use. Which model, and what for?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Classeve\"> /u/Classeve </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x427a1/whats_the_weakest_machine_you_run_a_local_model/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x427a1/whats_the_weakest_machine_you_run_a_local_model/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "I built EpochGo: A 100% offline, local-first multi-agent AutoML platform powered by Ollama (Qwen2.5-Coder:7B) and Scikit-Learn",
+  "url": "https://www.reddit.com/r/ollama/comments/1x3kqu5/i_built_epochgo_a_100_offline_localfirst/",
+  "text": "&#32; submitted by &#32; /u/Grouchy-Excitement28 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 5,
+  "created": "2026-10-11T21:59:03+00:00",
+  "links": [
+   "https://i.redd.it/a173o214uwuh1.gif"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x3kqu5/i_built_epochgo_a_100_offline_localfirst/\"> <img src=\"https://preview.redd.it/a173o214uwuh1.gif?width=640&amp;crop=smart&amp;s=98d57c1cd64e7e8295752b6e6b66e6eef8f3acb0\" alt=\"I built EpochGo: A 100% offline, local-first multi-agent AutoML platform powered by Ollama (Qwen2.5-Coder:7B) and Scikit-Learn\" title=\"I built EpochGo: A 100% offline, local-first multi-agent AutoML platform powered by Ollama (Qwen2.5-Coder:7B) and Scikit-Learn\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Grouchy-Excitement28\"> /u/Grouchy-Excitement28 </a> <br/> <span><a href=\"https://i.redd.it/a173o214uwuh1.gif\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3kqu5/i_built_epochgo_a_100_offline_localfirst/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Web automation with Ollama on a 4 GB GPU: Qwen 3.5 4B plans, a heuristic clicks, and saved tasks replay with no model at all",
+  "url": "https://www.reddit.com/r/ollama/comments/1x1xdrk/web_automation_with_ollama_on_a_4_gb_gpu_qwen_35/",
+  "text": "I&#39;ve been building ANCHOR, a web automation agent that runs entirely on Ollama. You describe a task in plain language (&quot;Register Maria Silva, IT department, contractor, and save&quot;), point it at a site, and it runs the task in the browser with Playwright. Everything runs on a GTX 1050 Ti with 4 GB: no cloud, no API keys. How it uses the models The LLM only plans. Qwen 3.5 (4B or 9B) turns the request into goals and steps, using the names of the elements on the page. A deterministic heuristic finds each element and refuses when it isn&#39;t sure; then the user picks, and the choice is remembered. The model never clicks anything directly. Small context, by design. The model gets a short summary of the page (numbered elements), not the HTML: a plan uses about 3,000 tokens and 2 model calls on average. Vision, from the same model. Qwen 3.5 has the vision capability in Ollama, so ANCHOR uses it as a last check when the other checks doubt that a step worked: at 640 px, a question about a screenshot takes about 5.5 s on the 4B and 9.5 s on the 9B, and got all 6 probe questions right. Model profiles are a small JSON file ( ollama-small for the 4B, ollama-medium for the 9B), with temperature 0. Times on the 1050 Ti a full task with planning: about 30 s with the 4B, 50 s with the 9B; a saved automation, replayed without the model: about 3 s, including one run per row of a spreadsheet. What&#39;s in so far (0.1 to 0.3): the engine with user disambiguation and choice memory, the planner and agent loop with replanning, saved automations with parameters and spreadsheets, recovery when the site changes (with a reviewable, undoable record), checks of each action&#39;s effect, confirmation before sensitive actions, and defenses against prompt injection from page content. A benchmark: on 30 tasks with pages altered in 5 levels (renamed IDs, synonyms, restructured layouts, cookie banners, lookalike decoys and injected instructions), ANCHOR completed 82% (4B) and 84% (9B) o",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 6,
+  "created": "2026-10-09T21:21:19+00:00",
+  "links": [
+   "https://github.com/LucasDantas2701/ANCHOR",
+   "https://i.redd.it/jt290ycldiuh1.gif"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x1xdrk/web_automation_with_ollama_on_a_4_gb_gpu_qwen_35/\"> <img src=\"https://preview.redd.it/jt290ycldiuh1.gif?width=640&amp;crop=smart&amp;s=64c1566a9ba42baf22ae95534660c1341d733dbc\" alt=\"Web automation with Ollama on a 4 GB GPU: Qwen 3.5 4B plans, a heuristic clicks, and saved tasks replay with no model at all\" title=\"Web automation with Ollama on a 4 GB GPU: Qwen 3.5 4B plans, a heuristic clicks, and saved tasks replay with no model at all\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>I&#39;ve been building ANCHOR, a web automation agent that runs entirely on Ollama. You describe a task in plain language (&quot;Register Maria Silva, IT department, contractor, and save&quot;), point it at a site, and it runs the task in the browser with Playwright. Everything runs on a GTX 1050 Ti with 4 GB: no cloud, no API keys.</p> <p><strong>How it uses the models</strong></p> <ul> <li><strong>The LLM only plans.</strong> Qwen 3.5 (4B or 9B) turns the request into goals and steps, using the names of the elements on the page. A deterministic heuristic finds each element and refuses when it isn&#39;t sure; then the user picks, and the choice is remembered. The model never clicks anything directly.</li> <li><strong>Small context, by design.</strong> The model gets a short summary of the page (numbered elements), not the HTML: a plan uses about 3,000 tokens and 2 model calls on average.</li> <li><strong>Vision, from the same model.</strong> Qwen 3.5 has the vision capability in Ollama, so ANCHOR uses it as a last check when the other checks doubt that a step worked: at 640 px, a question about a screenshot takes about 5.5 s on the 4B and 9.5 s on the 9B, and got all 6 probe questions right.</li> <li><strong>Model profiles</strong> are a small JSON file (<code>ollama-small</code> for the 4B, <code>ollama-medium</code> for the 9B), with temperature 0.</li> </ul> <p><strong>Times on the 1050 Ti</strong></p> <ul> <li>a full task with planning: about 30 s with the 4B, 50 s with the 9B;</li> <li>a saved automation, replayed without the model: about 3 s, including one run per row of a spreadsheet.</li> </ul> <p><strong>What&#39;s in so far (0.1 to 0.3):</strong> the engine with user disambiguation and choice memory, the planner and agent loop with replanning, saved automations with parameters and spreadsheets, recovery when the site changes (with a reviewable, undoable record), checks of each action&#39;s effect, confirmation before sensitive actions, and defenses against prompt injection from page content.</p> <p><strong>A benchmark:</strong> on 30 tasks with pages altered in 5 levels (renamed IDs, synonyms, restructured layouts, cookie banners, lookalike decoys and injected instructions), ANCHOR completed 82% (4B) and 84% (9B) of the runs, vs 53% for a fixed-selector script and 68–72% for an agent where the LLM controls everything. It claimed success without doing the task 2 and 1 times in 150 runs, vs 33 and 41 for the LLM-in-control agent. These are development numbers; a closed test set is waiting for the 1.0 run.</p> <p><strong>What&#39;s next:</strong> uploads, downloads, new tabs and data extraction (0.4), then a local web interface with a &quot;Run&quot; button per saved automation (0.5).</p> <p><strong>I&#39;d love people to try it</strong> with their own models and hardware, and tell me what breaks. I&#39;m especially curious how other small models do as planners, and how it runs on CPU only (I haven&#39;t measured that).</p> <p>Repo (source-available, PolyForm Strict): <a href=\"https://github.com/LucasDantas2701/ANCHOR\">https://github.com/LucasDantas2701/ANCHOR</a></p> <hr/> <p><em>Disclosure: this is my own project (a research project at my university in Brazil). I designed the system and the evaluation, and wrote the code with heavy help from an AI assistant (Claude). English isn&#39;t my first language, so I also used it to help write this post.</em></p> </div"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Any recommendations for a coding model?",
+  "url": "https://www.reddit.com/r/ollama/comments/1x57icm/any_recommendations_for_a_coding_model/",
+  "text": "Hello! Can you please suggest a local model for using with OpenCode agent? I have Mac Mini M5 Pro with 48GB RAM and I read about qwen 2.5-coder, qwen 3.8:27b I downloaded them both, tried qwen 3.8 27b, it works, memory pressure is green sometimes, sometimes yellow, ollama says that model is 100% in gpu (I&#39;m not sure whether I should believe it or not). So, it&#39;s not that something went wrong so far, it works. I just wonder may be to try any other models? What would you suggest from your experience? What works the best? (a cloud one, I know ))) ) Thanks! &#32; submitted by &#32; /u/Calm-Set6265 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 7,
+  "created": "2026-10-13T20:16:37+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>Hello!</p> <p>Can you please suggest a local model for using with OpenCode agent?</p> <p>I have Mac Mini M5 Pro with 48GB RAM and I read about qwen 2.5-coder, qwen 3.8:27b </p> <p>I downloaded them both, tried qwen 3.8 27b, it works, memory pressure is green sometimes, sometimes yellow, ollama says that model is 100% in gpu (I&#39;m not sure whether I should believe it or not).</p> <p>So, it&#39;s not that something went wrong so far, it works.</p> <p>I just wonder may be to try any other models?</p> <p>What would you suggest from your experience? What works the best? (a cloud one, I know ))) )</p> <p>Thanks!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Calm-Set6265\"> /u/Calm-Set6265 </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x57icm/any_recommendations_for_a_coding_model/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x57icm/any_recommendations_for_a_coding_model/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Here you go. A VERY basic Open Source Ollama flask app",
+  "url": "https://www.reddit.com/r/ollama/comments/1x2vg85/here_you_go_a_very_basic_open_source_ollama_flask/",
+  "text": "Something you can work with and add things to. I plan to add a simple TTS as well. &#32; submitted by &#32; /u/TutorialDoctor [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 8,
+  "created": "2026-10-11T01:24:38+00:00",
+  "links": [
+   "https://github.com/TutorialDoctor/SimpleFlaskOllamaChat"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x2vg85/here_you_go_a_very_basic_open_source_ollama_flask/\"> <img src=\"https://external-preview.redd.it/LStAPGQ9_Vp5dX9xdQV_L2wy_3B8oWe-hBuuQ4jc33k.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=20a387b7f95b2c28a749bbe86e270bce92b9ac84\" alt=\"Here you go. A VERY basic Open Source Ollama flask app\" title=\"Here you go. A VERY basic Open Source Ollama flask app\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Something you can work with and add things to. I plan to add a simple TTS as well. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/TutorialDoctor\"> /u/TutorialDoctor </a> <br/> <span><a href=\"https://github.com/TutorialDoctor/SimpleFlaskOllamaChat\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x2vg85/here_you_go_a_very_basic_open_source_ollama_flask/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "rate the terminal setup",
+  "url": "https://www.reddit.com/r/ollama/comments/1x19j0z/rate_the_terminal_setup/",
+  "text": "ik ik &quot;another harness D:&quot;. so... i spent the last 6 months of my life building and ironing out every single detail and bug through almost every route with extensive testing across 3 machines, daily, nd imfinally at a stage where happy with how efficient it is and have been using it exclusively for dev on itself n basically use it exclusively now for all my work, deployed products included. built typescript native n works on macos, linux, windows powershell / windows term (tested on all extensively). i use it to work on dev and research for each update / testing (screenshot is beta.29 update of mercury being worked on; helped me push out 29 releases &amp; 7.5k commits in five weeks by one dev (me!) with a fleet of agents, and a friend testing every release, since i published the repo publicly, compared to 7k commits done in private dev over 5 months using codex, cc, opencode n a mix of others) and spent a lot of time n money, sleep n a lil of my sanity on development because i&#39;m really passionate about this project you can run any local model through it (Ollama, LM Studio, vLLM, llama.cpp), fully supported, put any model (opus, gpt sol, fable, openrouter api key, any other routes) as an advisor to that local model, launch mixed crewmates, n manage simultaneous sessions each in different repos all in one terminal window, and like basically have a session with fable for example, if it hits a usage limit, /model switches ya to astra or glm 5.3, so it&#39;s not -just- for tokenmaxxing unlike what the screenshots would suggest haha if anyone w more experience is happy to try it out on a side project, or just look at the code / run it in a container if you&#39;d rather not install it and lmk any feedback and criticism id be really grateful, as that&#39;s the only thing im really missing rn and the main thing im after free to use n its source avail here : https://github.com/Whq02/MercuryCLI https://mercury-cli.ai https://mercury-cli.ai/docs/releases/ &#32; su",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 9,
+  "created": "2026-10-09T02:17:40+00:00",
+  "links": [
+   "https://github.com/Whq02/MercuryCLI",
+   "https://mercury-cli.ai",
+   "https://mercury-cli.ai/docs/releases/"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x19j0z/rate_the_terminal_setup/\"> <img src=\"https://preview.redd.it/2zydbck7k8uh1.png?width=140&amp;height=75&amp;auto=webp&amp;s=c548459d77fa3ffa70eb34206b08b43ff1eacb46\" alt=\"rate the terminal setup\" title=\"rate the terminal setup\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>ik ik &quot;another harness D:&quot;. so... i spent the last 6 months of my life building and ironing out every single detail and bug through almost every route with extensive testing across 3 machines, daily, nd imfinally at a stage where happy with how efficient it is and have been using it exclusively for dev on itself n basically use it exclusively now for all my work, deployed products included. built typescript native n works on macos, linux, windows powershell / windows term (tested on all extensively). </p> <p>i use it to work on dev and research for each update / testing (screenshot is beta.29 update of mercury being worked on; helped me push out 29 releases &amp; 7.5k commits in five weeks by one dev (me!) with a fleet of agents, and a friend testing every release, since i published the repo publicly, compared to 7k commits done in private dev over 5 months using codex, cc, opencode n a mix of others) and spent a lot of time n money, sleep n a lil of my sanity on development because i&#39;m really passionate about this project </p> <p>you can run any local model through it (Ollama, LM Studio, vLLM, llama.cpp), fully supported, put any model (opus, gpt sol, fable, openrouter api key, any other routes) as an advisor to that local model, launch mixed crewmates, n manage simultaneous sessions each in different repos all in one terminal window, and like basically have a session with fable for example, if it hits a usage limit, /model switches ya to astra or glm 5.3, so it&#39;s not -just- for tokenmaxxing unlike what the screenshots would suggest haha </p> <p>if anyone w more experience is happy to try it out on a side project, or just look at the code / run it in a container if you&#39;d rather not install it and lmk any feedback and criticism id be really grateful, as that&#39;s the only thing im really missing rn and the main thing im after </p> <p>free to use n its source avail here : <a href=\"https://github.com/Whq02/MercuryCLI\">https://github.com/Whq02/MercuryCLI</a><br/> <a href=\"https://mercury-cli.ai\">https://mercury-cli.ai</a><br/> <a href=\"https://mercury-cli.ai/docs/releases/\">https://mercury-cli.ai/docs/releases/</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Alive_Snow297\"> /u/Alive_Snow297 </a> <br/> <span><a href=\"https://www.reddit.com/gallery/1x19j0z\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x19j0z/rate_the_terminal_setup/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Recommendations for Local AI Long-Term Memory and User Personalization Modules",
+  "url": "https://www.reddit.com/r/ollama/comments/1x27obv/recommendations_for_local_ai_longterm_memory_and/",
+  "text": "I am developing a Windows-based local AI virtual spouse application that supports adult roleplay. My goal is to run it without a server or external AI APIs. I am looking for existing open-source modules or integrated code that can extract a user&#39;s preferences, personality traits, habits, promises, and shared experiences from conversations, store them as long-term memories, and retrieve and naturally incorporate relevant information into future conversations. Please recommend projects that can connect to Ollama and a local database, and provide repository links and the exact locations of the relevant code. &#32; submitted by &#32; /u/kangteam [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 10,
+  "created": "2026-10-10T06:03:12+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>I am developing a Windows-based local AI virtual spouse application that supports adult roleplay. My goal is to run it without a server or external AI APIs.</p> <p>I am looking for existing open-source modules or integrated code that can extract a user&#39;s preferences, personality traits, habits, promises, and shared experiences from conversations, store them as long-term memories, and retrieve and naturally incorporate relevant information into future conversations.</p> <p>Please recommend projects that can connect to Ollama and a local database, and provide repository links and the exact locations of the relevant code.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/kangteam\"> /u/kangteam </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x27obv/recommendations_for_local_ai_longterm_memory_and/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x27obv/recommendations_for_local_ai_longterm_memory_and/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Local coding assistant for Unity, Godot, and Unreal: what works well with Ollama today?",
+  "url": "https://www.reddit.com/r/ollama/comments/1x3kvuf/local_coding_assistant_for_unity_godot_and_unreal/",
+  "text": "I’m exploring a local coding assistant for game development. My plan would be to run the model on a dedicated machine and connect to it from my main development PC over my home network. I’d like to use it for code explanations, debugging, small feature changes, and project-aware questions. For people who use Ollama with coding tools, which models are dependable enough for real repositories, and which IDE or agent integrations have worked well for you? I’m also trying to decide whether to build this now or wait about six months. Have recent open-weight coding models become noticeably more useful in practice, or do you still rely on hosted models for most substantial coding work? &#32; submitted by &#32; /u/zimmer550king [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 11,
+  "created": "2026-10-11T22:04:54+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>I’m exploring a local coding assistant for game development. My plan would be to run the model on a dedicated machine and connect to it from my main development PC over my home network.</p> <p>I’d like to use it for code explanations, debugging, small feature changes, and project-aware questions. For people who use Ollama with coding tools, which models are dependable enough for real repositories, and which IDE or agent integrations have worked well for you?</p> <p>I’m also trying to decide whether to build this now or wait about six months. Have recent open-weight coding models become noticeably more useful in practice, or do you still rely on hosted models for most substantial coding work?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/zimmer550king\"> /u/zimmer550king </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3kvuf/local_coding_assistant_for_unity_godot_and_unreal/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3kvuf/local_coding_assistant_for_unity_godot_and_unreal/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Anybody else running Ollama on old hardware? Got a 2019 Intel MacBook on llama3.2:1b, what are these tiny models actually good for?",
+  "url": "https://www.reddit.com/r/ollama/comments/1x2xwic/anybody_else_running_ollama_on_old_hardware_got_a/",
+  "text": "Running Ollama on a 2019 Intel MacBook Pro with llama3.2:1b. Just working with what I got. It&#39;s fine for dumb stuff. Rewording, simple questions, little tasks. Soon as I need it to actually think, it falls apart lol. Every local AI thread is some dude with a 4090 arguing about 70B models. Meanwhile I&#39;m trying to squeeze something useful out of 1B on an Intel Mac. Anybody else on old or weak hardware, what are y&#39;all actually using the small ones for? What&#39;s legit useful and what&#39;s cope? &#32; submitted by &#32; /u/SeaPublic6986 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 12,
+  "created": "2026-10-11T03:34:56+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>Running Ollama on a 2019 Intel MacBook Pro with llama3.2:1b. Just working with what I got.</p> <p>It&#39;s fine for dumb stuff. Rewording, simple questions, little tasks. Soon as I need it to actually think, it falls apart lol.</p> <p>Every local AI thread is some dude with a 4090 arguing about 70B models. Meanwhile I&#39;m trying to squeeze something useful out of 1B on an Intel Mac.</p> <p>Anybody else on old or weak hardware, what are y&#39;all actually using the small ones for? What&#39;s legit useful and what&#39;s cope?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/SeaPublic6986\"> /u/SeaPublic6986 </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x2xwic/anybody_else_running_ollama_on_old_hardware_got_a/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x2xwic/anybody_else_running_ollama_on_old_hardware_got_a/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "BigMoeOnEdge+ – an Android chat app fork of BigMoeOnEdge (llama.cpp / GGUF)",
+  "url": "https://www.reddit.com/r/ollama/comments/1x1x60i/bigmoeonedge_an_android_chat_app_fork_of/",
+  "text": "I made BigMoeOnEdge+ (BigMoeOnEdge-plus), a fork of Helldez&#39;s BigMoeOnEdge, the engine that streams MoE experts from flash so models bigger than RAM can run on-device. It adds a full Android chat app on top: GGUF models via llama.cpp, thinking output, persistent chats, image/video input, web search, artifacts, and advanced generation settings.and a MUCH better UI. Disclosure: I built this fork with the help of AI tools. Repo (Apache 2.0): https://github.com/hamodexd217/BigMoeOnEdge-plus Original project: https://github.com/Helldez/BigMoeOnEdge Feedback and issues welcome. &#32; submitted by &#32; /u/Long_Wrap_4802 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 13,
+  "created": "2026-10-09T21:12:13+00:00",
+  "links": [
+   "https://github.com/hamodexd217/BigMoeOnEdge-plus",
+   "https://github.com/Helldez/BigMoeOnEdge"
+  ],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>I made BigMoeOnEdge+ (BigMoeOnEdge-plus), a fork of Helldez&#39;s BigMoeOnEdge, the engine that streams MoE experts from flash so models bigger than RAM can run on-device.</p> <p>It adds a full Android chat app on top: GGUF models via llama.cpp, thinking output, persistent chats, image/video input, web search, artifacts, and advanced generation settings.and a MUCH better UI.</p> <p>Disclosure: I built this fork with the help of AI tools.</p> <p>Repo (Apache 2.0): <a href=\"https://github.com/hamodexd217/BigMoeOnEdge-plus\">https://github.com/hamodexd217/BigMoeOnEdge-plus</a></p> <p>Original project: <a href=\"https://github.com/Helldez/BigMoeOnEdge\">https://github.com/Helldez/BigMoeOnEdge</a></p> <p>Feedback and issues welcome.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Long_Wrap_4802\"> /u/Long_Wrap_4802 </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x1x60i/bigmoeonedge_an_android_chat_app_fork_of/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x1x60i/bigmoeonedge_an_android_chat_app_fork_of/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Anyone tried the new Bonsai 2 27B model?",
+  "url": "https://www.reddit.com/r/ollama/comments/1x0nj7y/anyone_tried_the_new_bonsai_2_27b_model/",
+  "text": "&#32; submitted by &#32; /u/Any_Librarian_2295 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 14,
+  "created": "2026-10-08T10:35:28+00:00",
+  "links": [
+   "https://i.redd.it/7t8ue86k18uh1.jpeg"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x0nj7y/anyone_tried_the_new_bonsai_2_27b_model/\"> <img src=\"https://preview.redd.it/7t8ue86k18uh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=204f9c73ad360bd895d965f0e696b10db99718c1\" alt=\"Anyone tried the new Bonsai 2 27B model?\" title=\"Anyone tried the new Bonsai 2 27B model?\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Any_Librarian_2295\"> /u/Any_Librarian_2295 </a> <br/> <span><a href=\"https://i.redd.it/7t8ue86k18uh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x0nj7y/anyone_tried_the_new_bonsai_2_27b_model/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "GPU Recommendations for running local LLMs with ollama on proxmox",
+  "url": "https://www.reddit.com/r/ollama/comments/1x5nxtg/gpu_recommendations_for_running_local_llms_with/",
+  "text": "Hello everyone, I&#39;m trying local models with ollama on my pc desktop used as a home server. The server runs proxmox, and i created a container lxc running ollama. I currently allocated all the cpu of the machine and 18GB of ram to the container. I&#39;ve tried models such as qwen2.5-coder:7b and qwen3:8b using the Continue extension in VS Code. Here are my server&#39;s specifications: Cpu intel core i5-12400 (6 core, 3.0 GHz ) MotherBoard ASUS Prime H610M-K D4 RAM 2x 16GB DDR4 3200Mhz (KVR32N22S8/8) Scheda Video Intel UHD Graphics 730 (integrated into cpu) Alimentatore Corsair CX550 Disks SSD Nvme 512GB Since I don&#39;t have a dedicated GPU, I&#39;m currently running the models entirely on the CPU, achieving around 7–8 tokens per second. I&#39;m considering buying a gpu for my machine (crying with actual costs) that will be used with proxmox and the container lxc for run local models for programming. Which gpus would you recommend for my setup? Thank you very much! &#32; submitted by &#32; /u/Flitz_99 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 15,
+  "created": "2026-10-14T10:43:13+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>Hello everyone,</p> <p>I&#39;m trying local models with ollama on my pc desktop used as a home server.</p> <p>The server runs proxmox, and i created a container lxc running ollama.<br/> I currently allocated all the cpu of the machine and 18GB of ram to the container.<br/> I&#39;ve tried models such as <code>qwen2.5-coder:7b</code> and <code>qwen3:8b</code> using the Continue extension in VS Code.</p> <p>Here are my server&#39;s specifications:</p> <table><thead> <tr> <th align=\"left\"><strong>Cpu</strong></th> <th align=\"left\">intel core i5-12400 (6 core, 3.0 GHz )</th> </tr> </thead><tbody> <tr> <td align=\"left\"><strong>MotherBoard</strong></td> <td align=\"left\">ASUS Prime H610M-K D4</td> </tr> <tr> <td align=\"left\"><strong>RAM</strong></td> <td align=\"left\">2x 16GB DDR4 3200Mhz (KVR32N22S8/8)</td> </tr> <tr> <td align=\"left\"><strong>Scheda Video</strong></td> <td align=\"left\">Intel UHD Graphics 730 (integrated into cpu)</td> </tr> <tr> <td align=\"left\"><strong>Alimentatore</strong></td> <td align=\"left\">Corsair CX550</td> </tr> <tr> <td align=\"left\"><strong>Disks</strong></td> <td align=\"left\">SSD Nvme 512GB</td> </tr> </tbody></table> <p>Since I don&#39;t have a dedicated GPU, I&#39;m currently running the models entirely on the CPU, achieving around 7–8 tokens per second.</p> <p>I&#39;m considering buying a gpu for my machine (crying with actual costs) that will be used with proxmox and the container lxc for run local models for programming.</p> <p>Which gpus would you recommend for my setup? </p> <p>Thank you very much!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Flitz_99\"> /u/Flitz_99 </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5nxtg/gpu_recommendations_for_running_local_llms_with/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5nxtg/gpu_recommendations_for_running_local_llms_with/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Qwen3 4B on a GTX 1060: turning a recorded call into structured notes (and why I turned thinking off)",
+  "url": "https://www.reddit.com/r/ollama/comments/1x56sah/qwen3_4b_on_a_gtx_1060_turning_a_recorded_call/",
+  "text": "A small build I finished this week: a local web page where you drop in a recording of a doctor-patient call and get a doctor&#39;s note and a patient summary side by side, with the full transcript underneath. faster-whisper does the speech, qwen3:4b through Ollama does the extraction. A few things that might save someone time: - qwen3:4b fits fully on a 6 GB card (about 3.9 GB loaded) and runs around 27 tokens a second. On the CPU it was 4 to 5. - Thinking mode was a dead end for this. It used the whole token budget on reasoning and returned nothing, even at 6,500 tokens. `think: false` on `/api/chat` fixed it. - Asking for JSON with a schema was reliable for the facts. Asking for a free paragraph was not: the model copied its own instructions into the output. I ended up doing all layout in code. - First load onto the card took about 3 minutes; after that, a `keep_alive` of several minutes makes each step start straight away. - An old NVIDIA driver made the card drop out mid-run (&quot;device lost&quot;). Updating the driver fixed it. It is a prototype tested on two made-up calls only, and it still misses facts from run to run, so not for real patients. Happy to answer questions about the setup. &#32; submitted by &#32; /u/Finding_my_purpose_g [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 16,
+  "created": "2026-10-13T19:49:21+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>A small build I finished this week: a local web page where you drop in a recording of a doctor-patient call and get a doctor&#39;s note and a patient summary side by side, with the full transcript underneath. faster-whisper does the speech, qwen3:4b through Ollama does the extraction.</p> <p>A few things that might save someone time:</p> <p>- qwen3:4b fits fully on a 6 GB card (about 3.9 GB loaded) and runs around 27 tokens a second. On the CPU it was 4 to 5.</p> <p>- Thinking mode was a dead end for this. It used the whole token budget on reasoning and returned nothing, even at 6,500 tokens. `think: false` on `/api/chat` fixed it.</p> <p>- Asking for JSON with a schema was reliable for the facts. Asking for a free paragraph was not: the model copied its own instructions into the output. I ended up doing all layout in code.</p> <p>- First load onto the card took about 3 minutes; after that, a `keep_alive` of several minutes makes each step start straight away.</p> <p>- An old NVIDIA driver made the card drop out mid-run (&quot;device lost&quot;). Updating the driver fixed it.</p> <p>It is a prototype tested on two made-up calls only, and it still misses facts from run to run, so not for real patients.</p> <p>Happy to answer questions about the setup.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Finding_my_purpose_g\"> /u/Finding_my_purpose_g </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x56sah/qwen3_4b_on_a_gtx_1060_turning_a_recorded_call/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x56sah/qwen3_4b_on_a_gtx_1060_turning_a_recorded_call/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Ollama 0.35+ now reports a prefill tok/s on the OpenAI endpoint. On a warm cache it's off by the cache hit ratio (3875 vs 125 tok/s). Plus two other things I measured on 0.40.3.",
+  "url": "https://www.reddit.com/r/ollama/comments/1x3j8sz/ollama_035_now_reports_a_prefill_toks_on_the/",
+  "text": "Ollama 0.33.3 quietly started reporting prompt_eval_cached_count , and poking at it taught me something about prompt caching that I&#39;d been getting wrong for a long time. The KV cache only survives on a shared prefix . It holds for exactly as long as the prompt still matches from the very first token. The moment one token differs, everything after it is discarded and re-evaluated — however identical the rest of it was. Which means a single timestamp at the top of a system prompt costs you the entire system prompt, every single turn. I measured it. Same model (qwen2.5:7b), same system prompt, same 324 tokens. The only difference is where one 21-token timestamp sits: Timestamp position Prompt tokens Reused from cache Prefill At the start 324 4 64.6 ms At the end 324 290 18.6 ms Same words, same token count, 3.5x the prefill time . A few things that surprised me while testing this: The obvious measurement is the wrong one. My first attempt compared &quot;how much of layout A&#39;s cache does layout B reuse&quot; and produced a completely inverted result. That&#39;s not what real traffic does. Real traffic re-sends the same layout every turn with a fresh value. So you have to send each layout twice — once with its own values, once with the value changed — and measure the second send. Measuring the first only tells you how well a prompt matches itself, which is ~100% for any layout and tells you nothing. ** prompt_eval_duration changed meaning in 0.33.3** and it&#39;s easy to miss. It now times only the uncached tokens, while prompt_eval_count is still the total. So if you compute prefill throughput as count/duration the way everyone always has, you now over-report it by the cache hit ratio. On that warm run above, the naive formula reads 4375 tok/s instead of 115. Worth checking if you have dashboards doing this. The practical fix costs nothing. Stable stuff first — role, rules, style, examples. Anything that changes per turn goes last: current time, user id, session",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 17,
+  "created": "2026-10-11T20:54:43+00:00",
+  "links": [
+   "https://github.com/LogneBudo/llmxray"
+  ],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>Ollama 0.33.3 quietly started reporting <code>prompt_eval_cached_count</code>, and poking at it taught me something about prompt caching that I&#39;d been getting wrong for a long time.</p> <p>The KV cache only survives on a shared <strong>prefix</strong>. It holds for exactly as long as the prompt still matches from the very first token. The moment one token differs, everything after it is discarded and re-evaluated — however identical the rest of it was.</p> <p>Which means a single timestamp at the top of a system prompt costs you the entire system prompt, every single turn.</p> <p>I measured it. Same model (qwen2.5:7b), same system prompt, same 324 tokens. The only difference is where one 21-token timestamp sits:</p> <table><thead> <tr> <th>Timestamp position</th> <th>Prompt tokens</th> <th>Reused from cache</th> <th>Prefill</th> </tr> </thead><tbody> <tr> <td>At the start</td> <td>324</td> <td>4</td> <td>64.6 ms</td> </tr> <tr> <td>At the end</td> <td>324</td> <td>290</td> <td>18.6 ms</td> </tr> </tbody></table> <p>Same words, same token count, <strong>3.5x the prefill time</strong>.</p> <p>A few things that surprised me while testing this:</p> <p><strong>The obvious measurement is the wrong one.</strong> My first attempt compared &quot;how much of layout A&#39;s cache does layout B reuse&quot; and produced a completely inverted result. That&#39;s not what real traffic does. Real traffic re-sends the <em>same</em> layout every turn with a <em>fresh</em> value. So you have to send each layout twice — once with its own values, once with the value changed — and measure the second send. Measuring the first only tells you how well a prompt matches itself, which is ~100% for any layout and tells you nothing.</p> <p>**<code>prompt_eval_duration</code> changed meaning in 0.33.3** and it&#39;s easy to miss. It now times only the <em>uncached</em> tokens, while <code>prompt_eval_count</code> is still the total. So if you compute prefill throughput as count/duration the way everyone always has, you now over-report it by the cache hit ratio. On that warm run above, the naive formula reads 4375 tok/s instead of 115. Worth checking if you have dashboards doing this.</p> <p><strong>The practical fix costs nothing.</strong> Stable stuff first — role, rules, style, examples. Anything that changes per turn goes last: current time, user id, session id, retrieved chunks. Also keep RAG chunks in a stable order; re-ranking them between turns invalidates the cache from the first chunk that moved. None of this changes what the model is told, only where.</p> <hr/> <p>Disclosure: I build <a href=\"https://github.com/LogneBudo/llmxray\">LLMxRay</a>, a local observability UI for Ollama, and I added a page that automates the measurement above — it finds the values in your prompt that change between turns, shows where the shared prefix breaks, and measures what moving them actually saves against your own daemon. Apache-2.0, runs entirely on localhost, <code>npx llmxray</code>.</p> <p>But the finding stands on its own and you don&#39;t need the tool for it. If you have a system prompt with a timestamp near the top, you can check this with two curl calls and <code>prompt_eval_cached_count</code>. I&#39;d be curious whether the ratio holds on larger prompts and other models — mine is a fairly small test.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/GuruCsharp\"> /u/GuruCsharp </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3j8sz/ollama_035_now_reports_a_prefill_toks_on_the/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3j8sz/ollama_035_now_reports_a_prefill_toks_on_the/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Web browsing was implemented using only the **Clef-Flash 9B decision model**, running locally.",
+  "url": "https://www.reddit.com/r/ollama/comments/1x3buc0/web_browsing_was_implemented_using_only_the/",
+  "text": "The video demonstrates three tasks. Since the decision model cannot generate text on its own, the system is designed to extract and process text from web pages at runtime to support its decision-making. In this demonstration, the commands were entered manually. However, the entire process can be automated by having an LLM issue these commands. **Test Results** 1. Find out when Tibo resets its usage limits — **17s** 2. Find the latest stable Godot release for Windows x86_64 and download the standard version (not the .NET version) — **13s** 3. Play a video about the Jev model on YouTube — **11s** The system achieved high success rates on websites with straightforward navigation. However, success rates dropped significantly on websites with complex UI elements, such as toggles and multiple tabs. https://youtu.be/G8Yrh18P9bo &#32; submitted by &#32; /u/BangsFactory [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 18,
+  "created": "2026-10-11T16:00:39+00:00",
+  "links": [
+   "https://youtu.be/G8Yrh18P9bo",
+   "https://v.redd.it/5ykawk922vuh1"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x3buc0/web_browsing_was_implemented_using_only_the/\"> <img src=\"https://external-preview.redd.it/bWowcnUyYTIydnVoMRG6f58fz94Nvjj8OQdI9Jhw04PPx0MQGmL31HqBvHsd.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=ea17bfd7157a4b59f9068e91babaf74b3dd465ec\" alt=\"Web browsing was implemented using only the **Clef-Flash 9B decision model**, running locally.\" title=\"Web browsing was implemented using only the **Clef-Flash 9B decision model**, running locally.\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>The video demonstrates three tasks. Since the decision model cannot generate text on its own, the system is designed to extract and process text from web pages at runtime to support its decision-making. </p> <p>In this demonstration, the commands were entered manually. However, the entire process can be automated by having an LLM issue these commands. </p> <p>**Test Results**<br/> 1. Find out when Tibo resets its usage limits — **17s**<br/> 2. Find the latest stable Godot release for Windows x86_64 and download the standard version (not the .NET version) — **13s**<br/> 3. Play a video about the Jev model on YouTube — **11s** </p> <p>The system achieved high success rates on websites with straightforward navigation. However, success rates dropped significantly on websites with complex UI elements, such as toggles and multiple tabs. </p> <p><a href=\"https://youtu.be/G8Yrh18P9bo\">https://youtu.be/G8Yrh18P9bo</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BangsFactory\"> /u/BangsFactory </a> <br/> <span><a href=\"https://v.redd.it/5ykawk922vuh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3buc0/web_browsing_was_implemented_using_only_the/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "I tested 14 \"decision models\" against local LLMs on 56 real triage tasks. Qwen3.5-9B beat every one of them.",
+  "url": "https://www.reddit.com/r/ollama/comments/1x35tup/i_tested_14_decision_models_against_local_llms_on/",
+  "text": "&#32; submitted by &#32; /u/jeeleelee [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 19,
+  "created": "2026-10-11T11:26:53+00:00",
+  "links": [
+   "/r/LocalLLM/comments/1x35tkp/i_tested_14_decision_models_against_local_llms_on/"
+  ],
+  "raw_html": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/jeeleelee\"> /u/jeeleelee </a> <br/> <span><a href=\"/r/LocalLLM/comments/1x35tkp/i_tested_14_decision_models_against_local_llms_on/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x35tup/i_tested_14_decision_models_against_local_llms_on/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "embeddinggemma-2 MLX only?",
+  "url": "https://www.reddit.com/r/ollama/comments/1x1pygz/embeddinggemma2_mlx_only/",
+  "text": "I checked the site, and it didn&#39;t say anything about mlx only on the ollama models listing. So why is this restriction in place? ollama pull embeddinggemma-2 pulling manifest Error: this model requires MLX support, but the MLX runtime is not available &#32; submitted by &#32; /u/draeician [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 20,
+  "created": "2026-10-09T16:29:59+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>I checked the site, and it didn&#39;t say anything about mlx only on the ollama models listing. So why is this restriction in place?</p> <p>ollama pull embeddinggemma-2</p> <p>pulling manifest </p> <p>Error: this model requires MLX support, but the MLX runtime is not available</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/draeician\"> /u/draeician </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x1pygz/embeddinggemma2_mlx_only/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x1pygz/embeddinggemma2_mlx_only/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "New challenge: consolidated 2 cards in a single system but one card hogs all the models even if I run 2 different instances of Ollama on 2 different ports",
+  "url": "https://www.reddit.com/r/ollama/comments/1x150iw/new_challenge_consolidated_2_cards_in_a_single/",
+  "text": "In my attempt to combat powerty; as electricity cost a ton these days and it is hot as hell, I consolidated 2 machines into one, so my 2 crappy machines now are one, and that means a bit less power and some cash in my pocket and a happy kid on the block that can play fortnite I guess :) Anyway; I have one AMD card running on a Gen 1 X4 PCIe bus, and the main Nvidia card is running on the Gen3 X16 Pcie bus slot; both are happy, drivers are happy. I set up 2 instances of Ollama: one on port 11434 and one on 11435; this is running on linux as OS. The first instance runs with CUDA_VISIBLE_DEVICES=0; which if I am getting this right, is telling Ollama to run that model on my main CUDA card, which is my slot 0 Nvidia card. The second instance of Ollama has ROCR_VISIBLE_DEVICES=0; which again if I got this right, is telling Ollama to run the model on the first ROCm device, which is the AMD card on slot 1. But it does not work... No matter what, when I load a model on either instance on port 11434 or port 11435, the AMD card load the model. Been going back and forth for a bit, and can&#39;t get this solved. Isn&#39;t this something that should work out of the box once you force the hardware in the service file? EDIT --------------------------------------------------------------------- Solved: I had no idea that by default, Vulkan just enable itself and grab both cards. So they were both under Vulkan. Once I turned off explicitly Vulkan when I use the Nvidia card, everything seems to work fine, and the Nvidia card is loading correctly a model while the AMD card is loading another model, on their respective instances on their respective ports &#32; submitted by &#32; /u/fttklr [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 21,
+  "created": "2026-10-08T22:39:32+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>In my attempt to combat powerty; as electricity cost a ton these days and it is hot as hell, I consolidated 2 machines into one, so my 2 crappy machines now are one, and that means a bit less power and some cash in my pocket and a happy kid on the block that can play fortnite I guess :)</p> <p>Anyway; I have one AMD card running on a Gen 1 X4 PCIe bus, and the main Nvidia card is running on the Gen3 X16 Pcie bus slot; both are happy, drivers are happy.</p> <p>I set up 2 instances of Ollama: one on port 11434 and one on 11435; this is running on linux as OS. The first instance runs with CUDA_VISIBLE_DEVICES=0; which if I am getting this right, is telling Ollama to run that model on my main CUDA card, which is my slot 0 Nvidia card.</p> <p>The second instance of Ollama has ROCR_VISIBLE_DEVICES=0; which again if I got this right, is telling Ollama to run the model on the first ROCm device, which is the AMD card on slot 1.</p> <p>But it does not work... No matter what, when I load a model on either instance on port 11434 or port 11435, the AMD card load the model.</p> <p>Been going back and forth for a bit, and can&#39;t get this solved. Isn&#39;t this something that should work out of the box once you force the hardware in the service file?</p> <p>EDIT</p> <p>---------------------------------------------------------------------</p> <p>Solved: I had no idea that by default, Vulkan just enable itself and grab both cards. So they were both under Vulkan. Once I turned off explicitly Vulkan when I use the Nvidia card, everything seems to work fine, and the Nvidia card is loading correctly a model while the AMD card is loading another model, on their respective instances on their respective ports</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/fttklr\"> /u/fttklr </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x150iw/new_challenge_consolidated_2_cards_in_a_single/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x150iw/new_challenge_consolidated_2_cards_in_a_single/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Help",
+  "url": "https://www.reddit.com/r/ollama/comments/1x5r3ld/help/",
+  "text": "Hi Could anyone recommend a local model for Hermes? I tried Gemma 4 first, but I asked it to do a few things and it either couldn’t help me or didn’t know how to complete the tasks I asked for—or maybe it’s because I don’t know how to configure it. My hardware setup includes an RTX 4070 Super and 32 GB of RAM. I’d like to know if you could recommend another model better than Gemma 4 for me to try out. &#32; submitted by &#32; /u/Adventurous_Cow_2826 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 22,
+  "created": "2026-10-14T13:22:21+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>Hi</p> <p>Could anyone recommend a local model for Hermes? </p> <p>I tried Gemma 4 first, but I asked it to do a few things and it either couldn’t help me or didn’t know how to complete the tasks I asked for—or maybe it’s because I don’t know how to configure it. My hardware setup includes an RTX 4070 Super and 32 GB of RAM. I’d like to know if you could recommend another model better than Gemma 4 for me to try out. </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Adventurous_Cow_2826\"> /u/Adventurous_Cow_2826 </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5r3ld/help/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5r3ld/help/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Need a suggestion of a model/harness to extract information from plain text",
+  "url": "https://www.reddit.com/r/ollama/comments/1x527u5/need_a_suggestion_of_a_modelharness_to_extract/",
+  "text": "I have a multi-gigabyte mbox file and some text conversations. I would normally do this through Claude but they contain a lot of personal information. I&#39;m trying to extract some information from all this plain text that isn&#39;t easily greppable to create an Excel report. I have tried a few models (like qwen2.5:14b-instruct-q5_K_M, mistral-small, etc) and harnesses (open interpreter, goose) and they all start talking nonsense, refusing to run tools, writing very simple extraction scripts and then not running them, etc. It&#39;s not like it needs a huge context, I think, since it can very well read all the emails one by one or in batches. I have two hardware options to run this: Macbook M4 Pro 24 GB (what I&#39;ve been using, with ollama) RTX 4090 24 GB (Windows) I need ideas because I&#39;m at my wits&#39; end. I have no experience with these things. Thank you. &#32; submitted by &#32; /u/Equal-Collection962 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 23,
+  "created": "2026-10-13T17:01:23+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>I have a multi-gigabyte mbox file and some text conversations. I would normally do this through Claude but they contain a lot of personal information. I&#39;m trying to extract some information from all this plain text that isn&#39;t easily greppable to create an Excel report.</p> <p>I have tried a few models (like qwen2.5:14b-instruct-q5_K_M, mistral-small, etc) and harnesses (open interpreter, goose) and they all start talking nonsense, refusing to run tools, writing very simple extraction scripts and then not running them, etc.</p> <p>It&#39;s not like it needs a huge context, I think, since it can very well read all the emails one by one or in batches. </p> <p>I have two hardware options to run this:</p> <ul> <li><p>Macbook M4 Pro 24 GB (what I&#39;ve been using, with ollama)</p></li> <li><p>RTX 4090 24 GB (Windows)</p></li> </ul> <p>I need ideas because I&#39;m at my wits&#39; end. I have no experience with these things.</p> <p>Thank you.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Equal-Collection962\"> /u/Equal-Collection962 </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x527u5/need_a_suggestion_of_a_modelharness_to_extract/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x527u5/need_a_suggestion_of_a_modelharness_to_extract/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Mellum 12B-MoE thinking + RINIQ 9B fusions for small VRAM (my best: +15 over stock Q6 at -0.7GB)",
+  "url": "https://www.reddit.com/r/ollama/comments/1x47dc3/mellum_12bmoe_thinking_riniq_9b_fusions_for_small/",
+  "text": "Hi, I&#39;m wepiqx — I build MERNIK, an open measure-first GGUF allocator (Apache-2.0). Disclosure: this is my work, tested on a GTX 1070 8GB. IMPORTANT for Ollama: always pick a version tag, bare repo errors out. Like this: ollama run hf.co/wepiqx/Mellum2.1-12B-A2.5B-Thinking-MERNIK-GGUF:Mellum2.1-12B-A2.5B-Thinking-MERNIK-10000-SMSE ollama run hf.co/wepiqx/Mellum2.1-12B-A2.5B-Thinking-MERNIK-GGUF:Mellum2.1-12B-A2.5B-Thinking-MERNIK-7500-SMSE ollama run hf.co/wepiqx/RINIQ-GGUF:RINIQ-M2-MERNIK-5100-Q38 If you run without :TAG Ollama throws an error asking to choose a version — that&#39;s expected, the repos hold several files. Full file list is on each HF page. LM Studio / Jan / llama.cpp work with the same files. MELLUM — where we actually win Base is JetBrains Mellum2.1-12B-A2.5B-Thinking (12B MoE, only 2.5B active, 28 layers, 64 experts x 8 active). Vendor imatrix, routers pinned F16. Same harness for everything: temp 1.0 / top_p 0.95 / top_k 20, 164 HumanEval + EvalPlus HE+ (80x tests). No table, just lines (reddit mangles tables): - MERNIK-10000-SMSE, 10.16GB: HE 134/164 (81.7%), HE+ 130/164. Stock Q6_K, 10.88GB: HE 119/164, HE+ 116. That&#39;s +15 tasks at -0.7GB, paired duel 3/3 significant (HE p=0.0107, HE+ p=0.0161, empties p=0.0041). - MERNIK-7500-SMSE, 7.44GB: HE 125/164, HE+ 122. Stock Q4_K_M, 8.07GB: HE 125/164, HE+ 123. Exact tie, duel 0/3, p=1.0. - MERNIK-6500-SMSE, 7.01GB: HE 126/164, HE+ 124. Holds in Q3 territory, ties stock Q4 at -1GB. - MERNIK-6500-RECOVERY, 7.01GB: HE 123/164, HE+ 120. PPL 10.70 vs SMSE 11.18 — owns PPL by -0.48, ties verdict. PPL lies again. My claim is narrow and I stand by it: yes, our quants are really better — but on quality-per-size, not absolute. 10000 beats a heavier stock file. 7500 ties a heavier stock file. In absolute terms the models are just good, not magic. Judge by HE+ first: it&#39;s 80x tests per task, so it shows much better where is noise and where is signal. HE alone wobbles, HE+ holds. If HE and HE+ disagre",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 24,
+  "created": "2026-10-12T17:00:28+00:00",
+  "links": [
+   "http://hf.co/wepiqx/Mellum2.1-12B-A2.5B-Thinking-MERNIK-GGUF:Mellum2.1-12B-A2.5B-Thinking-MERNIK-10000-SMSE",
+   "http://hf.co/wepiqx/Mellum2.1-12B-A2.5B-Thinking-MERNIK-GGUF:Mellum2.1-12B-A2.5B-Thinking-MERNIK-7500-SMSE",
+   "http://hf.co/wepiqx/RINIQ-GGUF:RINIQ-M2-MERNIK-5100-Q38",
+   "http://hf.co/wepiqx/MERNIK",
+   "http://main.py"
+  ],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>Hi, I&#39;m wepiqx — I build MERNIK, an open measure-first GGUF allocator (Apache-2.0). Disclosure: this is my work, tested on a GTX 1070 8GB.</p> <p>IMPORTANT for Ollama: always pick a version tag, bare repo errors out. Like this:</p> <p>ollama run <a href=\"http://hf.co/wepiqx/Mellum2.1-12B-A2.5B-Thinking-MERNIK-GGUF:Mellum2.1-12B-A2.5B-Thinking-MERNIK-10000-SMSE\">hf.co/wepiqx/Mellum2.1-12B-A2.5B-Thinking-MERNIK-GGUF:Mellum2.1-12B-A2.5B-Thinking-MERNIK-10000-SMSE</a></p> <p>ollama run <a href=\"http://hf.co/wepiqx/Mellum2.1-12B-A2.5B-Thinking-MERNIK-GGUF:Mellum2.1-12B-A2.5B-Thinking-MERNIK-7500-SMSE\">hf.co/wepiqx/Mellum2.1-12B-A2.5B-Thinking-MERNIK-GGUF:Mellum2.1-12B-A2.5B-Thinking-MERNIK-7500-SMSE</a></p> <p>ollama run <a href=\"http://hf.co/wepiqx/RINIQ-GGUF:RINIQ-M2-MERNIK-5100-Q38\">hf.co/wepiqx/RINIQ-GGUF:RINIQ-M2-MERNIK-5100-Q38</a></p> <p>If you run without :TAG Ollama throws an error asking to choose a version — that&#39;s expected, the repos hold several files. Full file list is on each HF page. LM Studio / Jan / llama.cpp work with the same files.</p> <ol> <li>MELLUM — where we actually win</li> </ol> <p>Base is JetBrains Mellum2.1-12B-A2.5B-Thinking (12B MoE, only 2.5B active, 28 layers, 64 experts x 8 active). Vendor imatrix, routers pinned F16. Same harness for everything: temp 1.0 / top_p 0.95 / top_k 20, 164 HumanEval + EvalPlus HE+ (80x tests).</p> <p>No table, just lines (reddit mangles tables):</p> <p>- MERNIK-10000-SMSE, 10.16GB: HE 134/164 (81.7%), HE+ 130/164. Stock Q6_K, 10.88GB: HE 119/164, HE+ 116. That&#39;s +15 tasks at -0.7GB, paired duel 3/3 significant (HE p=0.0107, HE+ p=0.0161, empties p=0.0041).</p> <p>- MERNIK-7500-SMSE, 7.44GB: HE 125/164, HE+ 122. Stock Q4_K_M, 8.07GB: HE 125/164, HE+ 123. Exact tie, duel 0/3, p=1.0.</p> <p>- MERNIK-6500-SMSE, 7.01GB: HE 126/164, HE+ 124. Holds in Q3 territory, ties stock Q4 at -1GB.</p> <p>- MERNIK-6500-RECOVERY, 7.01GB: HE 123/164, HE+ 120. PPL 10.70 vs SMSE 11.18 — owns PPL by -0.48, ties verdict. PPL lies again.</p> <p>My claim is narrow and I stand by it: yes, our quants are really better — but on quality-per-size, not absolute. 10000 beats a heavier stock file. 7500 ties a heavier stock file. In absolute terms the models are just good, not magic. Judge by HE+ first: it&#39;s 80x tests per task, so it shows much better where is noise and where is signal. HE alone wobbles, HE+ holds. If HE and HE+ disagree, I call it noise.</p> <p>Floor note: Q4 floor is 7428 MiB. 5500 is arithmetically impossible (floor 5688 even with Q3 allowed).</p> <ol> <li>RINIQ — what it is</li> </ol> <p>RINIQ is a separate thing: a new finetune built by layer surgery, then quantized by MERNIK. All donors are the same Qwen3.5-9B ancestor (427/427 tensors match), so blocks swap cleanly. OxCoder-9B base + NeoHorse blk31 + Ornith mids 24-26 (M2 recipe). Tool is scripts/fuse_layers.py, no averaging of divergent blocks.</p> <p>Practical pick for 8GB: 5.0GB M2-Q38 (151/164) or M4a (150/164, most decisive, 4 empties). Top is a nine-way tie 151/eight 150 — I don&#39;t rank inside it. Ships with mmproj-F16 (~876MB) for vision, but vision on fused blocks is UNVERIFIED, text verdicts only.</p> <p>FAQ short:</p> <p>- Bartowski/mradermacher/unsloth make great flat quants. Mine are fitted sizes — you win when you need exactly 7.5 or 10GB to fit.</p> <p>- 8GB cards: Mellum-7500, RINIQ 5GB, OxCoder-5100. 12GB+: Mellum-10000.</p> <p>- Keep vendor sampling, use --jinja, don&#39;t set presence 1.5 (breaks thinking).</p> <p>- Batteries scored sequential, no spec. For serving only ngram-map lifts Mellum 60 to ~160 t/s.</p> <p>- Code: <a href=\"http://hf.co/wepiqx/MERNIK\">hf.co/wepiqx/MERNIK</a>, labels: datasets/wepiqx/MERNIK-gnom-labels + MERNIK-rlmini-kld</p> <p>- Reproduce: python <a href=\"http://main.py\">main.py</a> --model M.gguf --imatrix M.imatrix.gguf --size 7500 --utility smse --run</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Looking for engineers with real-world experience deploying on-prem LLMs for business workflows- Germany",
+  "url": "https://www.reddit.com/r/ollama/comments/1x40pfv/looking_for_engineers_with_realworld_experience/",
+  "text": "&#32; submitted by &#32; /u/Iamtheguyyy [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 25,
+  "created": "2026-10-12T12:36:26+00:00",
+  "links": [
+   "/r/LocalAIStack/comments/1x40pa6/looking_for_engineers_with_realworld_experience/"
+  ],
+  "raw_html": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Iamtheguyyy\"> /u/Iamtheguyyy </a> <br/> <span><a href=\"/r/LocalAIStack/comments/1x40pa6/looking_for_engineers_with_realworld_experience/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x40pfv/looking_for_engineers_with_realworld_experience/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "opencode ollama/qwen3.5:4b just stoppend while making a plan - why",
+  "url": "https://www.reddit.com/r/ollama/comments/1x3b9hg/opencode_ollamaqwen354b_just_stoppend_while/",
+  "text": "I tried running OpenCode with Ollama on my laptop and was a tad disappointed. Wondering if my expectations are too high. GPU: NVIDIA GTX 1650 Ti Mobile (4 GB VRAM) CPU: Intel i7-10750H (6 cores / 12 threads) RAM: 32 GB Inference: Ollama, currently using qwen3.5:4b Context window: 16k tokens I tasked OpenCode in plan mode to analyze a 1,444-row CSV to create a plan for drafting beancount (accounting) transactions. The model spent around 32 minutes struggling with file paths and truncated file output, then got stuck in a repetitive reasoning loop and stopped without producing a plan. 61k input tokens and 12k output tokens in total. I understand that my hardware is limited, but I expected a small model could handle this task. I thought it would just take a long time (which it did: 32 minutes). Why did it stop? Is the job too hard for my hardware and qwen3.5b:4b? Do you have any recommendations on how to run a local model meaningfully on my setup? Ultimatively, I want to hand-off some tasks to a local model instead of using OpenAI/Anthropic for data privacy reasons. &#32; submitted by &#32; /u/GawkyGibbon [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 26,
+  "created": "2026-10-11T15:37:02+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>I tried running OpenCode with Ollama on my laptop and was a tad disappointed. Wondering if my expectations are too high.</p> <p>GPU: NVIDIA GTX 1650 Ti Mobile (4 GB VRAM) CPU: Intel i7-10750H (6 cores / 12 threads) RAM: 32 GB Inference: Ollama, currently using qwen3.5:4b Context window: 16k tokens</p> <p>I tasked OpenCode in plan mode to analyze a 1,444-row CSV to create a plan for drafting beancount (accounting) transactions. The model spent around 32 minutes struggling with file paths and truncated file output, then got stuck in a repetitive reasoning loop and stopped without producing a plan.</p> <p>61k input tokens and 12k output tokens in total.</p> <p>I understand that my hardware is limited, but I expected a small model could handle this task. I thought it would just take a long time (which it did: 32 minutes).</p> <p>Why did it stop? Is the job too hard for my hardware and qwen3.5b:4b?</p> <p>Do you have any recommendations on how to run a local model meaningfully on my setup?</p> <p>Ultimatively, I want to hand-off some tasks to a local model instead of using OpenAI/Anthropic for data privacy reasons.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/GawkyGibbon\"> /u/GawkyGibbon </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3b9hg/opencode_ollamaqwen354b_just_stoppend_while/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3b9hg/opencode_ollamaqwen354b_just_stoppend_while/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "DIY opencode distillation and qwen 3.8 reasoning traces (SFT/RL) training pipeline",
+  "url": "https://www.reddit.com/r/ollama/comments/1x33ctq/diy_opencode_distillation_and_qwen_38_reasoning/",
+  "text": "So I&#39;ve been working on this over the last couple weeks. On a conference, someone was asking me how it would be possible to retrain a Qwen 3.8 model with the reasoning traces of a bigger teacher model. Long story short, I used it successfully to abliterate a Qwen3.8 model, and then train it on the thinking/reasoning traces of DeepSeek v4.1 flash that were gathered from my opencode profiles. The training time on my setup is around 12 hours, so it&#39;s feasible to do in a selfhosted capacity (I&#39;m so excited about this, because it took a long while bouncing back and forth with an LLM to figure out how to write the computation shaders). The cool part is that it doesn&#39;t waste any tokens or money, because it&#39;s just reusing the already existing reasoning traces in your local profile folder(s) that are part of the .local/share/opencode folder and its session history. Currently the pipeline assumes a single 48GB VRAM GPU (to fit all vulkan computation shaders + the model weights into it), which is what the --device flag implies. Check the run-pipeline.sh script in the root folder which shows how I&#39;m running it on the target machine. Anyways, thought I&#39;d share. I&#39;m super excited that I finally understood how reasoning distillation works, and my Qwen3.8 model is now pretty good with exploit development and compliance for this sort of work. The mentioned projects on GitHub: https://github.com/cookiengineer/opencode-reasoning-extractor https://github.com/cookiengineer/qwen-reasoning-trainer &#32; submitted by &#32; /u/cookiengineer [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 27,
+  "created": "2026-10-11T08:59:13+00:00",
+  "links": [
+   "https://github.com/cookiengineer/opencode-reasoning-extractor",
+   "https://github.com/cookiengineer/qwen-reasoning-trainer"
+  ],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>So I&#39;ve been working on this over the last couple weeks. On a conference, someone was asking me how it would be possible to retrain a Qwen 3.8 model with the reasoning traces of a bigger teacher model.</p> <p>Long story short, I used it successfully to abliterate a Qwen3.8 model, and then train it on the thinking/reasoning traces of DeepSeek v4.1 flash that were gathered from my opencode profiles. The training time on my setup is around 12 hours, so it&#39;s feasible to do in a selfhosted capacity (I&#39;m so excited about this, because it took a long while bouncing back and forth with an LLM to figure out how to write the computation shaders).</p> <p>The cool part is that it doesn&#39;t waste any tokens or money, because it&#39;s just reusing the already existing reasoning traces in your local profile folder(s) that are part of the .local/share/opencode folder and its session history.</p> <p>Currently the pipeline assumes a single 48GB VRAM GPU (to fit all vulkan computation shaders + the model weights into it), which is what the <code>--device</code> flag implies. Check the run-pipeline.sh script in the root folder which shows how I&#39;m running it on the target machine.</p> <p>Anyways, thought I&#39;d share. I&#39;m super excited that I finally understood how reasoning distillation works, and my Qwen3.8 model is now pretty good with exploit development and compliance for this sort of work.</p> <p>The mentioned projects on GitHub:</p> <ul> <li><p><a href=\"https://github.com/cookiengineer/opencode-reasoning-extractor\">https://github.com/cookiengineer/opencode-reasoning-extractor</a></p></li> <li><p><a href=\"https://github.com/cookiengineer/qwen-reasoning-trainer\">https://github.com/cookiengineer/qwen-reasoning-trainer</a></p></li> </ul> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/cookiengineer\"> /u/cookiengineer </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x33ctq/diy_opencode_distillation_and_qwen_38_reasoning/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x33ctq/diy_opencode_distillation_and_qwen_38_reasoning/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "How to Use Ollama from Your Phone (iPhone and Android)",
+  "url": "https://www.reddit.com/r/ollama/comments/1x2oj2a/how_to_use_ollama_from_your_phone_iphone_and/",
+  "text": "&#32; submitted by &#32; /u/slimelephant [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 28,
+  "created": "2026-10-10T19:59:37+00:00",
+  "links": [
+   "https://i.redd.it/qxw2scw14puh1.jpeg"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x2oj2a/how_to_use_ollama_from_your_phone_iphone_and/\"> <img src=\"https://preview.redd.it/qxw2scw14puh1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=fc2fb4ef336885976f4f02df74f6581d5a021d8f\" alt=\"How to Use Ollama from Your Phone (iPhone and Android)\" title=\"How to Use Ollama from Your Phone (iPhone and Android)\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/slimelephant\"> /u/slimelephant </a> <br/> <span><a href=\"https://i.redd.it/qxw2scw14puh1.jpeg\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x2oj2a/how_to_use_ollama_from_your_phone_iphone_and/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "I built a local server that speaks the Ollama API - sessions survive crashes, and your chat doesn't wait behind your agents",
+  "url": "https://www.reddit.com/r/ollama/comments/1x0tyup/i_built_a_local_server_that_speaks_the_ollama_api/",
+  "text": "Disclosure first: I&#39;m one of the maintainers, this is my project. If you&#39;ve pointed Open WebUI or a script at a local server, you know the failure modes: the server restarts and every conversation is gone; one long agent prefill and your chat sits in the queue; and if you ever bind past loopback, you&#39;re one port-forward away from being someone&#39;s free inference box. superfluid is a daemon we built for exactly that machine: it fronts llama.cpp and MLX with one server that speaks OpenAI, Anthropic and Ollama-compatible APIs, so existing clients keep working. What&#39;s different underneath: - every committed token is in a write-ahead log, kill the server mid-reply, restart it, and sessions resume; - QoS classes with preemption: your request runs in the interactive class and jumps the agents&#39; queue (chat behind 8 agents: first token in ~1.5 s vs minutes on the stock servers, same Mac, same model); - binds to 127.0.0.1 by default, refuses cross-origin browser requests and DNS-rebinding Host headers, and asks for a key before anything wider. It&#39;s not a replacement for Ollama — it uses llama.cpp&#39;s own builds and installs them on demand. Apple silicon + Linux. Repo + benchmarks: link . &#32; submitted by &#32; /u/nightowlsleeping [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 29,
+  "created": "2026-10-08T15:30:04+00:00",
+  "links": [
+   "http://127.0.0.1",
+   "https://github.com/basecompute/superfluid"
+  ],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>Disclosure first: I&#39;m one of the maintainers, this is my project.</p> <p>If you&#39;ve pointed Open WebUI or a script at a local server, you know the failure modes: the server restarts and every conversation is gone; one long agent prefill and your chat sits in the queue; and if you ever bind past loopback, you&#39;re one port-forward away from being someone&#39;s free inference box.</p> <p>superfluid is a daemon we built for exactly that machine: it fronts llama.cpp and MLX with one server that speaks OpenAI, Anthropic and Ollama-compatible APIs, so existing clients keep working. </p> <p>What&#39;s different underneath:</p> <p>- every committed token is in a write-ahead log, kill the server mid-reply, restart it, and sessions resume;</p> <p>- QoS classes with preemption: your request runs in the interactive class and jumps the agents&#39; queue (chat behind 8 agents: first token in ~1.5 s vs minutes on the stock servers, same Mac, same model);</p> <p>- binds to <a href=\"http://127.0.0.1\">127.0.0.1</a> by default, refuses cross-origin browser requests and DNS-rebinding Host headers, and asks for a key before anything wider.</p> <p>It&#39;s not a replacement for Ollama — it uses llama.cpp&#39;s own builds and installs them on demand.</p> <p>Apple silicon + Linux. Repo + benchmarks: <a href=\"https://github.com/basecompute/superfluid\">link</a>.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/nightowlsleeping\"> /u/nightowlsleeping </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x0tyup/i_built_a_local_server_that_speaks_the_ollama_api/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x0tyup/i_built_a_local_server_that_speaks_the_ollama_api/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "agentc: a sub-1 MB coding agent that drives Ollama through its OpenAI-compatible /v1",
+  "url": "https://www.reddit.com/r/ollama/comments/1x0gjoz/agentc_a_sub1_mb_coding_agent_that_drives_ollama/",
+  "text": "Hi everyone, just sharing a small project: https://github.com/abird-ai/agentc A minimal, extensible coding agent that uses Ollama as its default local backend. - Probes Ollama on first run, then talks to it through the OpenAI-compatible /v1 endpoint — one wire path shared with every other OpenAI-style provider - Queries /api/tags first, so family and size show up in the model picker alongside a built-in catalog - --offline disables all network probes; discovery results cache for 24 h and a cache miss is never fatal - Whole agent is one static binary under 1 MB, no libc, ~0.7 MB RSS startup, ~2-4mb idling. - MCP client, so local MCP servers work too MIT. Would love to hear which models it behaves best and worst with. Would love for anyone on macOS or Windows to try it: Linux is tested end to end, but those two have only run in CI so far. Binaries are up for Linux (x64, arm64, riscv64), Windows (x64, arm64) and macOS (arm64). &#32; submitted by &#32; /u/prasannavl [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 30,
+  "created": "2026-10-08T03:28:00+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><pre><code>Hi everyone, just sharing a small project: https://github.com/abird-ai/agentc A minimal, extensible coding agent that uses Ollama as its default local backend. - Probes Ollama on first run, then talks to it through the OpenAI-compatible /v1 endpoint — one wire path shared with every other OpenAI-style provider - Queries /api/tags first, so family and size show up in the model picker alongside a built-in catalog - --offline disables all network probes; discovery results cache for 24 h and a cache miss is never fatal - Whole agent is one static binary under 1 MB, no libc, ~0.7 MB RSS startup, ~2-4mb idling. - MCP client, so local MCP servers work too MIT. Would love to hear which models it behaves best and worst with. Would love for anyone on macOS or Windows to try it: Linux is tested end to end, but those two have only run in CI so far. Binaries are up for Linux (x64, arm64, riscv64), Windows (x64, arm64) and macOS (arm64). </code></pre> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/prasannavl\"> /u/prasannavl </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x0gjoz/agentc_a_sub1_mb_coding_agent_that_drives_ollama/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x0gjoz/agentc_a_sub1_mb_coding_agent_that_drives_ollama/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Ollama cloud gives really small usage",
+  "url": "https://www.reddit.com/r/ollama/comments/1x5z6ry/ollama_cloud_gives_really_small_usage/",
+  "text": "In the long forgotten past (6-7 month ago) I was able to do crazy amount of work with 20$ sub, I never even reached my weekly and 5 hour limit once. After retrying this week, with similar amount of usage I am quickly reaching limits. The cut is real, like 5 or 6 times less. Won&#39;t be renewing sub &#32; submitted by &#32; /u/UltramanQuar [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 31,
+  "created": "2026-10-14T18:33:37+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>In the long forgotten past (6-7 month ago) I was able to do crazy amount of work with 20$ sub, I never even reached my weekly and 5 hour limit once. After retrying this week, with similar amount of usage I am quickly reaching limits. The cut is real, like 5 or 6 times less. </p> <p>Won&#39;t be renewing sub</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/UltramanQuar\"> /u/UltramanQuar </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5z6ry/ollama_cloud_gives_really_small_usage/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5z6ry/ollama_cloud_gives_really_small_usage/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "[BENCH] Kimi K3 vs Qwen 3.8 Flash Next vs Qwen 3.8 27B vs 3.6, vs 3.5 8B...",
+  "url": "https://www.reddit.com/r/ollama/comments/1x3uk29/bench_kimi_k3_vs_qwen_38_flash_next_vs_qwen_38/",
+  "text": "&#32; submitted by &#32; /u/BoxieBoo [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 32,
+  "created": "2026-10-12T06:31:08+00:00",
+  "links": [],
+  "raw_html": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/BoxieBoo\"> /u/BoxieBoo </a> <br/> <span><a href=\"https://www.reddit.com/gallery/1x3uiwr\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3uk29/bench_kimi_k3_vs_qwen_38_flash_next_vs_qwen_38/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "I Built a Decisions Model That Can Process Videos",
+  "url": "https://www.reddit.com/r/ollama/comments/1x3qr30/i_built_a_decisions_model_that_can_process_videos/",
+  "text": "&#32; submitted by &#32; /u/not-ekalabya [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 33,
+  "created": "2026-10-12T02:55:14+00:00",
+  "links": [
+   "https://v.redd.it/fj3sclxn9yuh1"
+  ],
+  "raw_html": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/not-ekalabya\"> /u/not-ekalabya </a> <br/> <span><a href=\"https://v.redd.it/fj3sclxn9yuh1\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3qr30/i_built_a_decisions_model_that_can_process_videos/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Qwen3, Qwen3.5, or Qwen3.8",
+  "url": "https://www.reddit.com/r/ollama/comments/1x623um/qwen3_qwen35_or_qwen38/",
+  "text": "I keep seeing recommendations to use Qwen3 models for limited devices. While there are already more advanced models like 3.5 or 3.8 with small weights. Is there something I am missing regarding using plain v3 of Qwen instead of 3.5 or 3.8? &#32; submitted by &#32; /u/imarchiphoto [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 34,
+  "created": "2026-10-14T20:25:36+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>I keep seeing recommendations to use Qwen3 models for limited devices. While there are already more advanced models like 3.5 or 3.8 with small weights. Is there something I am missing regarding using plain v3 of Qwen instead of 3.5 or 3.8?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/imarchiphoto\"> /u/imarchiphoto </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x623um/qwen3_qwen35_or_qwen38/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x623um/qwen3_qwen35_or_qwen38/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "TextFold makes your text stretchable with \"semantic zoom\"",
+  "url": "https://www.reddit.com/r/ollama/comments/1x61m2h/textfold_makes_your_text_stretchable_with/",
+  "text": "https://preview.redd.it/13tpssmvohvh1.png?width=1080&amp;format=png&amp;auto=webp&amp;s=ec76c436cbd89a7aa79c3574a62a720e2fb8a472 I think we&#39;ve been reading too much information lately! TextFold turns any text into 5 zoomable layers—from a one-screen section map down to verbatim text. You pinch (or press 1–5) to zoom between them without losing your reading position, from your agentic output to any papers or documents. - Web Demo: https://chenxiachan.github.io/textfold/gallery/ - GitHub (Apache 2.0): https://github.com/chenxiachan/textfold https://i.redd.it/y88t3avwohvh1.gif &#32; submitted by &#32; /u/Lopsided_Scarcity979 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 35,
+  "created": "2026-10-14T20:06:16+00:00",
+  "links": [
+   "https://preview.redd.it/13tpssmvohvh1.png?width=1080&amp;format=png&amp;auto=webp&amp;s=ec76c436cbd89a7aa79c3574a62a720e2fb8a472",
+   "https://preview.redd.it/textfold-make-your-text-output-stretchable-with-semantic-v0-6t93geuiohvh1.png?width=1080&amp;format=png&amp;auto=webp&amp;s=f60d8f5851e3308a81aa462d26f13686042e1882",
+   "https://chenxiachan.github.io/textfold/gallery/",
+   "https://github.com/chenxiachan/paperfold",
+   "https://i.redd.it/y88t3avwohvh1.gif"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x61m2h/textfold_makes_your_text_stretchable_with/\"> <img src=\"https://external-preview.redd.it/EzRc6ev14JqReqOv4QIyowMZzWDirQRq28_kFnSva9k.png?width=140&amp;height=46&amp;auto=webp&amp;s=e37558256ca00704f63da5bdb9aee12cff2cbc92\" alt=\"TextFold makes your text stretchable with &quot;semantic zoom&quot;\" title=\"TextFold makes your text stretchable with &quot;semantic zoom&quot;\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p><a href=\"https://preview.redd.it/13tpssmvohvh1.png?width=1080&amp;format=png&amp;auto=webp&amp;s=ec76c436cbd89a7aa79c3574a62a720e2fb8a472\">https://preview.redd.it/13tpssmvohvh1.png?width=1080&amp;format=png&amp;auto=webp&amp;s=ec76c436cbd89a7aa79c3574a62a720e2fb8a472</a></p> <p>I think we&#39;ve been reading too much information lately!</p> <p><a href=\"https://preview.redd.it/textfold-make-your-text-output-stretchable-with-semantic-v0-6t93geuiohvh1.png?width=1080&amp;format=png&amp;auto=webp&amp;s=f60d8f5851e3308a81aa462d26f13686042e1882\"></a></p> <p>TextFold turns any text into 5 zoomable layers—from a one-screen section map down to verbatim text. You pinch (or press 1–5) to zoom between them without losing your reading position, from your agentic output to any papers or documents.</p> <p>- Web Demo: <a href=\"https://chenxiachan.github.io/textfold/gallery/\">https://chenxiachan.github.io/textfold/gallery/</a></p> <p>- GitHub (Apache 2.0): <a href=\"https://github.com/chenxiachan/paperfold\">https://github.com/chenxiachan/textfold</a></p> <p><a href=\"https://i.redd.it/y88t3avwohvh1.gif\">https://i.redd.it/y88t3avwohvh1.gif</a></p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Lopsided_Scarcity979\"> /u/Lopsided_Scarcity979 </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x61m2h/textfold_makes_your_text_stretchable_with/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x61m2h/textfold_makes_your_text_stretchable_with/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "OpenWebUI Model doesn't seem to use system prompt, nor knowledge base",
+  "url": "https://www.reddit.com/r/ollama/comments/1x612e8/openwebui_model_doesnt_seem_to_use_system_prompt/",
+  "text": "&#32; submitted by &#32; /u/Informal_Charity3099 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 36,
+  "created": "2026-10-14T19:45:02+00:00",
+  "links": [
+   "/r/OpenWebUI/comments/1x611yl/model_doesnt_seem_to_use_system_prompt_nor/"
+  ],
+  "raw_html": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Informal_Charity3099\"> /u/Informal_Charity3099 </a> <br/> <span><a href=\"/r/OpenWebUI/comments/1x611yl/model_doesnt_seem_to_use_system_prompt_nor/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x612e8/openwebui_model_doesnt_seem_to_use_system_prompt/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "I forked Ollama to split one model across two DGX Sparks over llama.cpp RPC. The second node buys capacity, not speed.",
+  "url": "https://www.reddit.com/r/ollama/comments/1x60m9p/i_forked_ollama_to_split_one_model_across_two_dgx/",
+  "text": "&#32; submitted by &#32; /u/ShadoByBB [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 37,
+  "created": "2026-10-14T19:27:16+00:00",
+  "links": [
+   "/r/LocalLLM/comments/1x60lzg/i_forked_ollama_to_split_one_model_across_two_dgx/"
+  ],
+  "raw_html": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ShadoByBB\"> /u/ShadoByBB </a> <br/> <span><a href=\"/r/LocalLLM/comments/1x60lzg/i_forked_ollama_to_split_one_model_across_two_dgx/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x60m9p/i_forked_ollama_to_split_one_model_across_two_dgx/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "is this a bug? gemma4:26b",
+  "url": "https://www.reddit.com/r/ollama/comments/1x5z6xj/is_this_a_bug_gemma426b/",
+  "text": "&gt;ollama ps NAME ID SIZE PROCESSOR CONTEXT UNTIL gemma4:26b 1.3 GB 24%/76% CPU/GPU 4096 4 minutes from now is the size supposed to 1.3? I am pretty sure it downloaded like 18gb, sorry I am new to this &#32; submitted by &#32; /u/Siri2611 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 38,
+  "created": "2026-10-14T18:33:48+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>&gt;ollama ps</p> <p>NAME ID SIZE PROCESSOR CONTEXT UNTIL</p> <p>gemma4:26b 1.3 GB 24%/76% CPU/GPU 4096 4 minutes from now</p> <p>is the size supposed to 1.3? I am pretty sure it downloaded like 18gb, sorry I am new to this</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Siri2611\"> /u/Siri2611 </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5z6xj/is_this_a_bug_gemma426b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5z6xj/is_this_a_bug_gemma426b/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "HELP NEEDED: How is Hermes meant to be deployed?",
+  "url": "https://www.reddit.com/r/ollama/comments/1x5ntoo/help_needed_how_is_hermes_meant_to_be_deployed/",
+  "text": "&#32; submitted by &#32; /u/The_BeatingsContinue [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 39,
+  "created": "2026-10-14T10:36:09+00:00",
+  "links": [
+   "/r/hermesagent/comments/1x5nte6/help_needed_how_is_hermes_meant_to_be_deployed/"
+  ],
+  "raw_html": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/The_BeatingsContinue\"> /u/The_BeatingsContinue </a> <br/> <span><a href=\"/r/hermesagent/comments/1x5nte6/help_needed_how_is_hermes_meant_to_be_deployed/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5ntoo/help_needed_how_is_hermes_meant_to_be_deployed/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Fine tuning a model",
+  "url": "https://www.reddit.com/r/ollama/comments/1x5fxgy/fine_tuning_a_model/",
+  "text": "Hi, Is it possible to fine tune a model on a mac5 pro with 64gb? If so how do you do it? &#32; submitted by &#32; /u/Tnimni [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 40,
+  "created": "2026-10-14T02:37:15+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>Hi,</p> <p>Is it possible to fine tune a model on a mac5 pro with 64gb?</p> <p>If so how do you do it?</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Tnimni\"> /u/Tnimni </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5fxgy/fine_tuning_a_model/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5fxgy/fine_tuning_a_model/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "I tested LFM2.5-24B-A2B after all the Hype on X",
+  "url": "https://www.reddit.com/r/ollama/comments/1x5e98i/i_tested_lfm2524ba2b_after_all_the_hype_on_x/",
+  "text": "&#32; submitted by &#32; /u/EmuHefty [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 41,
+  "created": "2026-10-14T01:13:04+00:00",
+  "links": [
+   "https://i.redd.it/7ewph9el2cvh1.png"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x5e98i/i_tested_lfm2524ba2b_after_all_the_hype_on_x/\"> <img src=\"https://preview.redd.it/7ewph9el2cvh1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=beb5aaecec08b30d54ed8c60227887ba18e36a58\" alt=\"I tested LFM2.5-24B-A2B after all the Hype on X\" title=\"I tested LFM2.5-24B-A2B after all the Hype on X\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/EmuHefty\"> /u/EmuHefty </a> <br/> <span><a href=\"https://i.redd.it/7ewph9el2cvh1.png\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x5e98i/i_tested_lfm2524ba2b_after_all_the_hype_on_x/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Group Chat for Ollama: You + Multiple AI Models in One Conversation",
+  "url": "https://www.reddit.com/r/ollama/comments/1x50nx6/group_chat_for_ollama_you_multiple_ai_models_in/",
+  "text": "&#32; submitted by &#32; /u/slimelephant [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 42,
+  "created": "2026-10-13T16:04:09+00:00",
+  "links": [
+   "/r/LMMini/comments/1x50nfw/group_chat_for_ollama_you_multiple_ai_models_in/"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x50nx6/group_chat_for_ollama_you_multiple_ai_models_in/\"> <img src=\"https://preview.redd.it/ja9e9qg9c9vh1.png?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=edae6dbeedd2a6dd598788e250f47ca2f33470b3\" alt=\"Group Chat for Ollama: You + Multiple AI Models in One Conversation\" title=\"Group Chat for Ollama: You + Multiple AI Models in One Conversation\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/slimelephant\"> /u/slimelephant </a> <br/> <span><a href=\"/r/LMMini/comments/1x50nfw/group_chat_for_ollama_you_multiple_ai_models_in/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x50nx6/group_chat_for_ollama_you_multiple_ai_models_in/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "1,000 tokens/s LLM inference on modern CPUs using a geometric approach. Breaking the memory wall?",
+  "url": "https://www.reddit.com/r/ollama/comments/1x4xwbs/1000_tokenss_llm_inference_on_modern_cpus_using_a/",
+  "text": "&#32; submitted by &#32; /u/Illustrious-Safe8508 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 43,
+  "created": "2026-10-13T14:18:42+00:00",
+  "links": [
+   "/r/OpenAssistant/comments/1x4xdl4/1000_tokenss_llm_inference_on_modern_cpus_using_a/"
+  ],
+  "raw_html": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Illustrious-Safe8508\"> /u/Illustrious-Safe8508 </a> <br/> <span><a href=\"/r/OpenAssistant/comments/1x4xdl4/1000_tokenss_llm_inference_on_modern_cpus_using_a/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x4xwbs/1000_tokenss_llm_inference_on_modern_cpus_using_a/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Time to clean up those coloring pages... Qwen3.8:27b-mlx, anyone using Semif or Laya (alternatives to Jev)?",
+  "url": "https://www.reddit.com/r/ollama/comments/1x4l3jo/time_to_clean_up_those_coloring_pages/",
+  "text": "Used rehex to finally organize my desktop. Felt oddly comfortable, and it&#39;s because of its designed strategy. Was on the same page with its intention. I&#39;ve designed the strategy to be 4 dimensions: intent and output, and guidelines and guardrails. 3.8 was incredibly efficient. Interestingly enough, the model was so performant, that it finished all the tasks and it&#39;s stuck with its predefined tasks. It forces the model to go through and verify its work. Frankly, it&#39;s a verification step that I&#39;m happy to see. Means I can actually walk away and not worry about it going off the f***ing rails. Should&#39;ve took a before shot. And yeah, I know a classifier would be a fantastic fit for this. I&#39;m working on integrating with an open source alternative. I&#39;ve got a sidecar built for Semif, I like how it uses the logits in open source models. However, I&#39;ve seen other folks getting better results with fine-tuned Laya. Anyone out there using Semif or Laya? &#32; submitted by &#32; /u/haseebnqureshi [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 44,
+  "created": "2026-10-13T02:34:20+00:00",
+  "links": [],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x4l3jo/time_to_clean_up_those_coloring_pages/\"> <img src=\"https://preview.redd.it/zdvgn726b5vh1.png?width=140&amp;height=91&amp;auto=webp&amp;s=9cf0534556951a1344decdc4601ac0049454d9e6\" alt=\"Time to clean up those coloring pages... Qwen3.8:27b-mlx, anyone using Semif or Laya (alternatives to Jev)?\" title=\"Time to clean up those coloring pages... Qwen3.8:27b-mlx, anyone using Semif or Laya (alternatives to Jev)?\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Used rehex to finally organize my desktop. Felt oddly comfortable, and it&#39;s because of its designed strategy. Was on the same page with its intention. I&#39;ve designed the strategy to be 4 dimensions: intent and output, and guidelines and guardrails. 3.8 was incredibly efficient. </p> <p>Interestingly enough, the model was so performant, that it finished all the tasks and it&#39;s stuck with its predefined tasks. It forces the model to go through and verify its work. Frankly, it&#39;s a verification step that I&#39;m happy to see.</p> <p>Means I can actually walk away and not worry about it going off the f***ing rails. Should&#39;ve took a before shot. And yeah, I know a classifier would be a fantastic fit for this. I&#39;m working on integrating with an open source alternative.</p> <p>I&#39;ve got a sidecar built for Semif, I like how it uses the logits in open source models. However, I&#39;ve seen other folks getting better results with fine-tuned Laya. Anyone out there using Semif or Laya? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/haseebnqureshi\"> /u/haseebnqureshi </a> <br/> <span><a href=\"https://www.reddit.com/gallery/1x4l3jo\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x4l3jo/time_to_clean_up_those_coloring_pages/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Test what happens when your Ollama agent’s tools fail",
+  "url": "https://www.reddit.com/r/ollama/comments/1x43jqq/test_what_happens_when_your_ollama_agents_tools/",
+  "text": "I’m the author of InfernoSIM, a local failure simulator for tool-using agents. I’ve just released v4.2. The new release can target an individual tool call’s arguments in supported recorded Ollama NDJSON streams, including streams containing multiple tool calls. It also adds causal-dependency discovery and seeded scheduling for concurrent HTTP/MCP traffic. You can vary request and response order within reviewed dependencies, inject faults, and retain a failing case as a regression test. Some situations you can test: Incorrect or missing arguments in one selected tool call. A tool operation completing but its response being lost. A retry creating duplicate application state. A delayed response causing the application to use stale data. Replay uses recorded model responses, so each fault case doesn’t require another inference run. You can supply separate checks for your application’s database or files. I’ve tested local Ollama compatibility and baseline/mutated recorded streams with the official Ollama Python SDK. Unsupported stream shapes and calls outside the recording fail explicitly. Repository and guide v4.2.0 release It is MIT licensed, runs locally and requires no hosted account. If you use Ollama with tools, I’d appreciate you trying it against a sanitized test incident. Please share the model, client and workflow, especially if something cannot be represented. Disclosure: I’m the project author. &#32; submitted by &#32; /u/pranaysparihar [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 45,
+  "created": "2026-10-12T14:36:38+00:00",
+  "links": [
+   "https://github.com/pranaysparihar/InfernoSIM",
+   "https://github.com/pranaysparihar/InfernoSIM/releases/tag/v4.2.0"
+  ],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>I’m the author of InfernoSIM, a local failure simulator for tool-using agents. I’ve just released v4.2.</p> <p>The new release can target an individual tool call’s arguments in supported recorded Ollama NDJSON streams, including streams containing multiple tool calls.</p> <p>It also adds causal-dependency discovery and seeded scheduling for concurrent HTTP/MCP traffic. You can vary request and response order within reviewed dependencies, inject faults, and retain a failing case as a regression test.</p> <p>Some situations you can test:</p> <ul> <li>Incorrect or missing arguments in one selected tool call.</li> <li>A tool operation completing but its response being lost.</li> <li>A retry creating duplicate application state.</li> <li>A delayed response causing the application to use stale data.</li> </ul> <p>Replay uses recorded model responses, so each fault case doesn’t require another inference run. You can supply separate checks for your application’s database or files.</p> <p>I’ve tested local Ollama compatibility and baseline/mutated recorded streams with the official Ollama Python SDK. Unsupported stream shapes and calls outside the recording fail explicitly.</p> <p><a href=\"https://github.com/pranaysparihar/InfernoSIM\">Repository and guide</a><br/> <a href=\"https://github.com/pranaysparihar/InfernoSIM/releases/tag/v4.2.0\">v4.2.0 release</a></p> <p>It is MIT licensed, runs locally and requires no hosted account.</p> <p>If you use Ollama with tools, I’d appreciate you trying it against a sanitized test incident. Please share the model, client and workflow, especially if something cannot be represented.</p> <p>Disclosure: I’m the project author.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/pranaysparihar\"> /u/pranaysparihar </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x43jqq/test_what_happens_when_your_ollama_agents_tools/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x43jqq/test_what_happens_when_your_ollama_agents_tools/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Opencode keeps stalling",
+  "url": "https://www.reddit.com/r/ollama/comments/1x3oubi/opencode_keeps_stalling/",
+  "text": "&#32; submitted by &#32; /u/ImpossibleBother5133 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 46,
+  "created": "2026-10-12T01:16:17+00:00",
+  "links": [
+   "/r/opencode/comments/1x3ou8t/opencode_keeps_stalling/"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x3oubi/opencode_keeps_stalling/\"> <img src=\"https://preview.redd.it/a7wpi4hbtxuh1.png?width=140&amp;height=68&amp;auto=webp&amp;s=9737628b91d267d38444528e99dd04a68c842ad2\" alt=\"Opencode keeps stalling\" title=\"Opencode keeps stalling\" /> </a> </td><td> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/ImpossibleBother5133\"> /u/ImpossibleBother5133 </a> <br/> <span><a href=\"/r/opencode/comments/1x3ou8t/opencode_keeps_stalling/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3oubi/opencode_keeps_stalling/\">[comments]</a></span> </td></tr></table>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Command to check default parameter",
+  "url": "https://www.reddit.com/r/ollama/comments/1x3hh50/command_to_check_default_parameter/",
+  "text": "I wanted to check the default temperature for the Nemotron3 , usually it&#39;s written in params, if not how can I check it? &#32; submitted by &#32; /u/Hedgehog_Dapper [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 47,
+  "created": "2026-10-11T19:43:03+00:00",
+  "links": [
+   "https://ollama.com/library/nemotron3:33b"
+  ],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>I wanted to check the default temperature for the <a href=\"https://ollama.com/library/nemotron3:33b\">Nemotron3</a>, usually it&#39;s written in params, if not how can I check it? </p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Hedgehog_Dapper\"> /u/Hedgehog_Dapper </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3hh50/command_to_check_default_parameter/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3hh50/command_to_check_default_parameter/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Best way to handle memory in a local AI agent?",
+  "url": "https://www.reddit.com/r/ollama/comments/1x3bokz/best_way_to_handle_memory_in_a_local_ai_agent/",
+  "text": "Hey! I&#39;m building a local AI agent using Ollama, Python and a custom HTML interface on an RTX 5090. I&#39;m currently using a 32k context window to avoid consuming too much VRAM, but it fills up quickly during long conversations. What&#39;s the best approach for long-term memory? Summaries, RAG/vector databases, or something else? I&#39;d love to hear what works best in practice. Thanks! &#32; submitted by &#32; /u/CommunicationNo8431 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 48,
+  "created": "2026-10-11T15:54:28+00:00",
+  "links": [],
+  "raw_html": "<!-- SC_OFF --><div class=\"md\"><p>Hey! I&#39;m building a local AI agent using Ollama, Python and a custom HTML interface on an RTX 5090.</p> <p>I&#39;m currently using a 32k context window to avoid consuming too much VRAM, but it fills up quickly during long conversations.</p> <p>What&#39;s the best approach for long-term memory? Summaries, RAG/vector databases, or something else?</p> <p>I&#39;d love to hear what works best in practice. Thanks!</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/CommunicationNo8431\"> /u/CommunicationNo8431 </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3bokz/best_way_to_handle_memory_in_a_local_ai_agent/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3bokz/best_way_to_handle_memory_in_a_local_ai_agent/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "OpenClaw + Qwen practicality",
+  "url": "https://www.reddit.com/r/ollama/comments/1x3awog/openclaw_qwen_practicality/",
+  "text": "&#32; submitted by &#32; /u/Big_South4585 [link] &#32; [comments]",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 49,
+  "created": "2026-10-11T15:22:18+00:00",
+  "links": [
+   "/r/LocalLLM/comments/1x3awey/openclaw_qwen_practicality/"
+  ],
+  "raw_html": "&#32; submitted by &#32; <a href=\"https://www.reddit.com/user/Big_South4585\"> /u/Big_South4585 </a> <br/> <span><a href=\"/r/LocalLLM/comments/1x3awey/openclaw_qwen_practicality/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x3awog/openclaw_qwen_practicality/\">[comments]</a></span>"
+ },
+ {
+  "source": "reddit_ollama",
+  "title": "Nyx AI for Android google play: on-phone Qwen3.5 4B, document tools and interactive previews",
+  "url": "https://www.reddit.com/r/ollama/comments/1x38x9m/nyx_ai_for_android_google_play_onphone_qwen35_4b/",
+  "text": "Nyx AI is an Android app combining AI chat, document creation and in-app previews, with an optional Qwen3.5 4B model designed to run directly on compatible phones. I’m the developer behind it. The on-phone option is intended to let you use your own hardware without a computer, cloud subscription or per-message model-provider fees. You can also connect to Ollama or LM Studio running on your computer over your own Wi-Fi, or connect to a cloud provider you choose. No Nyx AI account is needed. The app includes tools to create Word documents, Excel workbooks with calculations, PowerPoint presentations and PDFs. Preview the results, ask your model for changes, then save them to your device or share them. You can attach documents and pictures, use web research, open Markdown and SVG previews, and try interactive HTML previews such as small games. Available capabilities depend on your chosen model. https://preview.redd.it/p70uibosguuh1.png?width=357&amp;format=png&amp;auto=webp&amp;s=563759b57c9cb1a3f50a25aea8828c4197e581c5 Fine print: Free beta for adults aged 18+, licensed for personal, non-commercial use. Nyx AI is proprietary, closed-source software. App and third-party model licences apply. Usage limits and availability may change; this is not a promise of unlimited processing or free access forever. The optional on-phone model requires a compatible 8 GB-class device, sufficient available memory and storage, and a separate download of approximately 2.7 GB. Physical-phone inference, performance and document generation remain unverified. Device checks cannot guarantee compatibility or prevent every crash or overheating. Download, data, electricity and provider charges may apply. Connected providers receive the content supplied to them under their own terms. Local-network HTTP is unencrypted. Research and approved interactive previews can contact third parties; privacy filtering is best-effort. Deleting app data does not remove exported files or provider-held copies. AI o",
+  "metric": 0.0,
+  "metric_name": "rank",
+  "rank": 50,
+  "created": "2026-10-11T13:59:55+00:00",
+  "links": [
+   "https://preview.redd.it/p70uibosguuh1.png?width=357&amp;format=png&amp;auto=webp&amp;s=563759b57c9cb1a3f50a25aea8828c4197e581c5"
+  ],
+  "raw_html": "<table> <tr><td> <a href=\"https://www.reddit.com/r/ollama/comments/1x38x9m/nyx_ai_for_android_google_play_onphone_qwen35_4b/\"> <img src=\"https://preview.redd.it/p70uibosguuh1.png?width=140&amp;height=140&amp;crop=1:1,smart&amp;auto=webp&amp;s=dd82389ca81314aa045ac5298eba9e3f363e8a68\" alt=\"Nyx AI for Android google play: on-phone Qwen3.5 4B, document tools and interactive previews\" title=\"Nyx AI for Android google play: on-phone Qwen3.5 4B, document tools and interactive previews\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>Nyx AI is an Android app combining AI chat, document creation and in-app previews, with an optional Qwen3.5 4B model designed to run directly on compatible phones.</p> <p>I’m the developer behind it. The on-phone option is intended to let you use your own hardware without a computer, cloud subscription or per-message model-provider fees.</p> <p>You can also connect to Ollama or LM Studio running on your computer over your own Wi-Fi, or connect to a cloud provider you choose. No Nyx AI account is needed.</p> <p>The app includes tools to create Word documents, Excel workbooks with calculations, PowerPoint presentations and PDFs. Preview the results, ask your model for changes, then save them to your device or share them.</p> <p>You can attach documents and pictures, use web research, open Markdown and SVG previews, and try interactive HTML previews such as small games. Available capabilities depend on your chosen model.</p> <p><a href=\"https://preview.redd.it/p70uibosguuh1.png?width=357&amp;format=png&amp;auto=webp&amp;s=563759b57c9cb1a3f50a25aea8828c4197e581c5\">https://preview.redd.it/p70uibosguuh1.png?width=357&amp;format=png&amp;auto=webp&amp;s=563759b57c9cb1a3f50a25aea8828c4197e581c5</a></p> <p>Fine print:</p> <p>Free beta for adults aged 18+, licensed for personal, non-commercial use. Nyx AI is proprietary, closed-source software. App and third-party model licences apply. Usage limits and availability may change; this is not a promise of unlimited processing or free access forever.</p> <p>The optional on-phone model requires a compatible 8 GB-class device, sufficient available memory and storage, and a separate download of approximately 2.7 GB. Physical-phone inference, performance and document generation remain unverified. Device checks cannot guarantee compatibility or prevent every crash or overheating. Download, data, electricity and provider charges may apply.</p> <p>Connected providers receive the content supplied to them under their own terms. Local-network HTTP is unencrypted. Research and approved interactive previews can contact third parties; privacy filtering is best-effort. Deleting app data does not remove exported files or provider-held copies.</p> <p>AI output may be inaccurate, incomplete or unsafe and is not professional advice. Check outputs and image rights before relying on or sharing them. Nyx AI is independent of the named providers. The full licence, Terms and Privacy Notice supplied with your installed version apply; mandatory statutory rights remain unaffected.</p> </div><!-- SC_ON --> &#32; submitted by &#32; <a href=\"https://www.reddit.com/user/nyxlimitedv2\"> /u/nyxlimitedv2 </a> <br/> <span><a href=\"https://www.reddit.com/r/ollama/comments/1x38x9m/nyx_ai_for_android_google_play_onphone_qwen35_4b/\">[link]</a></span> &#32; <span><a href=\"https://www.reddit.com/r/ollama/comments/1x38x9m/nyx_ai_for_android_google_play_onphone_qwen35_4b/\">[comments]</a></span> </td></tr></table>"
+ }
+]

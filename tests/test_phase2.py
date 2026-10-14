@@ -24,9 +24,17 @@ class EnrichmentTests(unittest.TestCase):
     def test_slides_validate_against_schema(self):
         v = Draft202012Validator({"$ref": "#/$defs/slide", "$defs": SCHEMA["$defs"]}, format_checker=FormatChecker())
         for eid, ss in self.slides.items():
-            self.assertTrue(2 <= len(ss) <= 3, eid)
+            self.assertEqual(1, len(ss), eid)
             for s in ss:
+                self.assertEqual("infographic", s["diagram_type"], eid)
                 self.assertEqual([], [e.message for e in v.iter_errors(s)], f"{eid}: {s['title']}")
+
+    def test_digest_validates_and_matches_enriched_entities(self):
+        v = Draft202012Validator({"$ref": "#/$defs/digest", "$defs": SCHEMA["$defs"]}, format_checker=FormatChecker())
+        digest = load("digest.json")
+        self.assertEqual(set(digest), set(self.enr["entities"]))
+        for eid, g in digest.items():
+            self.assertEqual([], [e.message for e in v.iter_errors(g)], eid)
 
     def test_slide_urls_are_official_urls_of_the_entity(self):
         for eid, ss in self.slides.items():

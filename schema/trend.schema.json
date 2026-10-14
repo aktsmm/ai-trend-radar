@@ -36,12 +36,17 @@
     },
     "slide": {
       "type": "object",
-      "required": ["title", "bullets", "diagram_type", "icon", "official_url"],
+      "required": ["title", "diagram_type", "icon", "official_url"],
       "additionalProperties": false,
       "properties": {
         "title": { "type": "string", "minLength": 1, "maxLength": 40 },
         "bullets": { "type": "array", "items": { "type": "string", "maxLength": 140 }, "minItems": 1, "maxItems": 4 },
-        "diagram_type": { "enum": ["stat", "flow", "checklist"] },
+        "points": {
+          "type": "array", "minItems": 3, "maxItems": 4,
+          "items": { "type": "object", "required": ["h", "t"], "additionalProperties": false,
+                     "properties": { "h": { "type": "string", "maxLength": 10 }, "t": { "type": "string", "maxLength": 110 } } }
+        },
+        "diagram_type": { "enum": ["stat", "flow", "checklist", "infographic"] },
         "icon": { "enum": ["terminal", "cycle", "plug", "shield", "cloud", "lock", "check", "image", "chip", "spark", "layers"] },
         "official_url": { "type": "string", "pattern": "^https://" },
         "source_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
@@ -50,8 +55,23 @@
       },
       "allOf": [
         { "if": { "properties": { "diagram_type": { "const": "stat" } } }, "then": { "required": ["stat"] } },
-        { "if": { "properties": { "diagram_type": { "const": "flow" } } }, "then": { "required": ["steps"] } }
+        { "if": { "properties": { "diagram_type": { "const": "flow" } } }, "then": { "required": ["steps"] } },
+        { "if": { "properties": { "diagram_type": { "enum": ["stat", "flow", "checklist"] } } }, "then": { "required": ["bullets"] } },
+        { "if": { "properties": { "diagram_type": { "const": "infographic" } } }, "then": { "required": ["stat", "steps", "points"] } }
       ]
+    },
+    "digest": {
+      "type": "object",
+      "required": ["summary", "why_trending"],
+      "additionalProperties": false,
+      "properties": {
+        "summary": { "type": "array", "items": { "type": "string", "minLength": 1, "maxLength": 200 }, "minItems": 2, "maxItems": 4 },
+        "why_trending": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "what_changes": { "type": "array", "items": { "type": "string", "maxLength": 120 }, "maxItems": 3 },
+        "benefits": { "type": "array", "items": { "type": "string", "maxLength": 120 }, "maxItems": 3 },
+        "caveats": { "type": "array", "items": { "type": "string", "maxLength": 140 }, "maxItems": 3 },
+        "audience": { "type": "string", "maxLength": 80 }
+      }
     },
     "verification": {
       "type": "object",
@@ -113,6 +133,7 @@
         "official_verified": { "type": "boolean" },
         "summary": { "type": "string", "minLength": 1 },
         "slides": { "type": "array", "items": { "$ref": "#/$defs/slide" }, "maxItems": 3 },
+        "digest": { "$ref": "#/$defs/digest" },
         "score_breakdown": { "type": "object", "additionalProperties": { "type": "number" } },
         "x_posts": {
           "type": "array",

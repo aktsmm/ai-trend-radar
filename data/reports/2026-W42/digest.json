@@ -1,0 +1,101 @@
+{
+ "claude-code": {
+  "summary": [
+   "Anthropic のターミナル型 AI コーディングエージェント Claude Code が、2026-10-14 に新版 v2.1.300 を公開した。",
+   "OpenTelemetry の計測項目と拡張(mod)用のフックが追加され、多数の不具合が修正された。",
+   "Claude Code は、依頼を受けて計画を立て、複数ファイルを編集し、動作を確かめて報告する。git と連携し、コミットやプルリクエストの作成も頼める。"
+  ],
+  "why_trending": "GitHub・Hacker News・Reddit・Bluesky など複数のソースで言及があり、公式 GitHub Release も出たため、今週の注目 1 位。",
+  "what_changes": [
+   "OpenTelemetry の属性が追加され、計測できる項目が増えた",
+   "mod 用のフックが追加され、拡張の入口が増えた"
+  ],
+  "benefits": [
+   "利用状況の計測を既存の監視基盤に流しやすくなる見込み(公式の変更点は項目の追加まで。活用方法は各社の構成次第)"
+  ],
+  "caveats": [
+   "変更点の全体は v2.1.300 のリリースノートで確認する"
+  ],
+  "audience": "コードをターミナルで書く開発者・チーム"
+ },
+ "openai-codex": {
+  "summary": [
+   "OpenAI のコーディングエージェント Codex の大規模な企業導入事例が、2026-10-08 に OpenAI から公開された。",
+   "Oracle では Codex を 9.5 万人超、ChatGPT を 13 万人が利用し、採用の市場調査にかかる時間が 98% 減ったと紹介された(いずれも OpenAI の発表の数字)。",
+   "開発も活発で、openai/codex では 0.163.0 の alpha 版が 2026-10-13〜14 に連日公開された。"
+  ],
+  "why_trending": "公式の導入事例と alpha 版の連日リリースが重なり、GitHub・Hacker News・Bluesky などでも言及があったため、今週の注目 2 位。",
+  "what_changes": [
+   "CLI と IDE 拡張で MCP サーバーの設定を共有できる(~/.codex/config.toml)",
+   "/plugins から Codex Security を追加すると、ローカルのリポジトリのセキュリティ点検ができる"
+  ],
+  "benefits": [
+   "1 回の設定を CLI と IDE で使い回せる",
+   "AGENTS.md に指示を書いておくと、外部ツールをエージェントが使いやすくなる"
+  ],
+  "caveats": [
+   "公開されているのは alpha 版。安定版とは限らないので、本番利用は慎重にする",
+   "導入事例の数字は OpenAI と Oracle の発表で、このサイトでは独自に検証していない"
+  ],
+  "audience": "AI コーディングエージェントの導入を検討している開発者・企業"
+ },
+ "ollama": {
+  "summary": [
+   "Ollama が、Fly.io の Sprites から Ollama Cloud のモデルを使える連携を 2026-10-13 に発表した。",
+   "Sprite は、ディスクが残る完全な Linux 仮想マシンのサンドボックス。Claude Code・Codex・Gemini CLI などを最初から動かせ、コマンドの実行を安全に隔離できる。",
+   "新しい「Ollama Connector」で、kimi-k3・glm-5.3 などのクラウドモデルを使える。"
+  ],
+  "why_trending": "公式ブログの発表に加え、Reddit・Bluesky・GitHub・PyPI などでも言及があり、ローカル LLM 分野で今週 3 位。",
+  "what_changes": [
+   "API キーを Sprite に渡さず、Fly.io のゲートウェイがキーを付与する",
+   "Sprite が知っているのはゲートウェイの URL と接続 ID だけになる"
+  ],
+  "benefits": [
+   "エージェントがキーを漏らす心配が減る",
+   "OpenAI SDK の base_url をゲートウェイにすれば、そのまま呼び出せる"
+  ],
+  "caveats": [
+   "新しいコネクタは既定で全 Sprite を遮断する。Access Configuration で使わせる Sprite を選ぶ必要がある"
+  ],
+  "audience": "AI エージェントを安全な環境で動かしたい開発者"
+ },
+ "qwen-image-2-1": {
+  "summary": [
+   "Alibaba の Qwen チームが、画像生成・画像編集モデル Qwen-Image-2.1 の高速版 Turbo を、2026-10-09 に Hugging Face で公開した。",
+   "Turbo は 8 ステップで画像を生成する 7B のモデルで、元の Qwen-Image-2.1 と同じ 7B の設計を使う高速チェックポイントと説明されている。"
+  ],
+  "why_trending": "Hugging Face のモデル・Space、GitHub、Reddit、Bluesky など多くのソースで言及があり、モデル分野で今週 4 位。",
+  "what_changes": [
+   "少ない手順(8 ステップ)で画像を生成できる",
+   "文章や参照画像の文脈をステップ間で再利用して、高速化している(モデルカードの説明)"
+  ],
+  "benefits": [
+   "速度を重視した画像生成を試しやすくなる見込み"
+  ],
+  "caveats": [
+   "Diffusers は PR #14950 を含む最新のソース版が必要。transformers は 5.17.0 以上、PyTorch は CUDA 対応版を先に入れる"
+  ],
+  "audience": "自分の GPU で画像生成を動かしたい開発者"
+ },
+ "gemini-4-argon": {
+  "summary": [
+   "Google が、Gemini 4 ファミリー最初のモデル Gemini 4 Argon を 2026-10-13 に GA(一般提供)にした。",
+   "入力と出力(思考を含む)を合わせて 1,048,576 トークンまで扱える。コーディング・金融・法務・サイバーセキュリティ・科学など、深い作業向けと説明されている。",
+   "モデル ID は gemini-4-argon。Agent Studio で試せ、Google Gen AI SDK から呼び出せる。"
+  ],
+  "why_trending": "Hacker News・OpenRouter での言及と、Google の公式発表が重なったため、今週 9 位。",
+  "what_changes": [
+   "思考レベルを LOW / MEDIUM / HIGH の 3 段階から選べる",
+   "1 回の出力は最大 65,536 トークン。長い出力は continuation_token による継続で伸ばせる"
+  ],
+  "benefits": [
+   "作業の難しさに応じて、思考レベルで速度と深さを調整できる"
+  ],
+  "caveats": [
+   "temperature などのサンプリング指定は無視される",
+   "明示的なコンテキストキャッシュは未対応(暗黙キャッシュのみ)",
+   "防御的なサイバー用途の Cyber Permissive 版は、申請して許可された場合のみ使える"
+  ],
+  "audience": "Google Cloud の Agent Platform で AI を組み込む開発者"
+ }
+}

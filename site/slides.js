@@ -29,8 +29,29 @@
     return "";
   }
 
+  function infographic(t, s, i) {
+    const ver = (t.verification && t.verification.status) || "unverified";
+    const badge = t.trend_label === "baseline" ? "今週の注目" : "上昇中";
+    const n = [...s.stat.value].length, cls = n > 12 ? "xs" : n > 8 ? "sm" : "";
+    return `<div class="slide infog cat-${esc(t.category)}">
+      <div class="head">
+        <div class="chips"><span class="chip">${esc(t.category)}</span>${t.tags.slice(1).map(x => `<span class="chip alt">${esc(x)}</span>`).join("")}<span class="chip badge">${badge}</span><span class="pager">${esc(t.keyword)}</span></div>
+        <h1>${esc(s.title)}</h1>
+      </div>
+      <div class="ibody">
+        <div class="iside">
+          <div class="panel">${icon(s.icon)}<div class="stat-value ${cls}">${esc(s.stat.value)}</div><div class="stat-label">${esc(s.stat.label)}</div></div>
+          <div class="steps">${s.steps.map(x => `<div class="step">${esc(x)}</div>`).join('<div class="arrow">▼</div>')}</div>
+        </div>
+        <div class="points">${s.points.map((p, k) => `<div class="pt p${k}"><div class="ph">${esc(p.h)}</div><div class="pt-t">${md(p.t)}</div></div>`).join("")}</div>
+      </div>
+      <div class="foot"><span>公式:</span><span class="url">${esc(s.official_url)}</span>${s.source_date ? `<span class="date">出典日 ${esc(s.source_date)}</span>` : ""}<span class="ver ${ver}">${VER[ver] || ver}</span></div>
+    </div>`;
+  }
+
   window.renderSlide = function (t, i) {
     const s = t.slides[i];
+    if (s.diagram_type === "infographic") return infographic(t, s, i);
     const two = s.diagram_type !== "checklist";
     const ver = (t.verification && t.verification.status) || "unverified";
     const date = s.source_date || "";

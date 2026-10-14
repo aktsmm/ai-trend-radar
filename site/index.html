@@ -5,27 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Trend Radar (mock)</title>
 <style>
-  body{font-family:system-ui,"Yu Gothic UI",sans-serif;margin:0;background:#f5f7fb;color:#1c2333}
+  body{font-family:system-ui,"Yu Gothic UI",sans-serif;margin:0;background:#f5f7fb;color:#1c2333;line-height:1.6}
   header{padding:20px 24px;background:#1c2b4a;color:#fff}
+  header h1{margin:0;font-size:24px}
   header p{margin:4px 0 0;opacity:.8;font-size:13px}
-  main{max-width:1280px;margin:0 auto;padding:16px}
+  main{max-width:1100px;margin:0 auto;padding:16px}
   #filters button{border:1px solid #9aa7c0;background:#fff;border-radius:16px;padding:4px 12px;margin:0 6px 6px 0;cursor:pointer}
   #filters button.on{background:#2f5fd0;color:#fff;border-color:#2f5fd0}
-  .card{background:#fff;border-radius:10px;padding:14px 16px;margin:12px 0;box-shadow:0 1px 3px #0002}
-  .card h2{margin:0;font-size:18px}
+  details.guide{background:#fff;border-radius:10px;padding:10px 16px;margin:0 0 12px;box-shadow:0 1px 3px #0002;font-size:13px}
+  details.guide summary{cursor:pointer;font-weight:700;font-size:14px}
+  details.guide dl{margin:8px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px}
+  details.guide dt{font-weight:700;white-space:nowrap} details.guide dd{margin:0;color:#334}
+  .card{background:#fff;border-radius:10px;padding:16px 20px;margin:14px 0;box-shadow:0 1px 3px #0002}
+  .card h2{margin:0;font-size:20px}
   .rank{display:inline-block;min-width:28px;color:#2f5fd0}
-  .tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;background:#e3eaff;color:#2a45a0;margin-left:6px}
-  .score{float:right;font-weight:600}
-  .meta{font-size:12px;color:#556;margin:6px 0}
-  .slides{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
-  .frame{width:400px;height:225px;overflow:hidden;border:1px solid #cfd8ee;border-radius:8px;cursor:zoom-in}
+  .tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;background:#e3eaff;color:#2a45a0;margin-left:6px;vertical-align:middle}
+  .score{float:right;font-weight:600} .score small{font-weight:400;color:#667}
+  .ver{font-size:11px;padding:1px 8px;border-radius:10px;margin-left:6px;font-weight:600;vertical-align:middle}
+  .ver.verified{background:#d9f2e3;color:#157347} .ver.partially_verified{background:#fff0d1;color:#8a5a00} .ver.unverified{background:#fde2e4;color:#b02a37}
+  .sub{font-size:12px;color:#667;margin:2px 0 8px}
+  .summary{margin:8px 0;font-size:15px} .summary p{margin:2px 0}
+  .why{font-size:13px;color:#445;background:#f0f4ff;border-radius:6px;padding:6px 10px;margin:8px 0}
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:10px 0}
+  .box{border:1px solid #dde3f2;border-radius:8px;padding:8px 12px;font-size:13px}
+  .box h3{margin:0 0 4px;font-size:13px;color:#2a45a0}
+  .box ul{margin:0;padding-left:18px}
+  .box.warn h3{color:#8a5a00} .box.warn{background:#fffaf0;border-color:#f0dcae}
+  .body-row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
+  .frame{width:400px;height:225px;overflow:hidden;border:1px solid #cfd8ee;border-radius:8px;cursor:zoom-in;flex:none}
   .frame .slide{transform:scale(.3125);transform-origin:top left}
+  .links{flex:1;min-width:300px;font-size:13px}
+  .links dt{font-weight:700;margin-top:6px} .links dt small{font-weight:400;color:#667}
+  .links dd{margin:0 0 0 0;word-break:break-all}
+  .auto{font-size:13px;color:#556;border-left:3px solid #c9d2e8;padding-left:10px;margin:8px 0}
+  .x{font-size:12px;color:#444;border-left:3px solid #1d9bf0;padding-left:8px;margin-top:6px}
   .lightbox{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:9}
   .lightbox.on{display:flex}
   .lightbox .big{width:1280px;height:720px;transform:scale(var(--s,.8));flex:none}
-  .ver{font-size:11px;padding:1px 8px;border-radius:10px;margin-left:6px;font-weight:600}
-  .ver.verified{background:#d9f2e3;color:#157347} .ver.partially_verified{background:#fff0d1;color:#8a5a00} .ver.unverified{background:#fde2e4;color:#b02a37}
-  .x{font-size:12px;color:#444;border-left:3px solid #1d9bf0;padding-left:8px;margin-top:6px}
   a{color:#1d4ed8}
   #meta{font-size:12px;color:#556}
 </style>
@@ -34,6 +50,18 @@
 <body>
 <header><h1>AI Trend Radar <small>(mock)</small></h1><p id="period"></p></header>
 <main>
+  <details class="guide" open>
+    <summary>このページの見方</summary>
+    <dl>
+      <dt>目的</dt><dd>過去 1 週間に AI・ローカル LLM 界隈で出た新製品・モデル・リリースを機械的に集め、公式の一次情報で裏取りできたものだけを順位付けして載せます。</dd>
+      <dt>一次ソース</dt><dd>公式発表・公式ブログ・公式 GitHub Release など、発表元が出した情報。公開日が分かるものだけを採用の根拠にしています。</dd>
+      <dt>公式 URL</dt><dd>そのキーワードの公式ページ。リンク先が実際に開けること(HTTP 200)を確認したものは「確認済み」と表示します。</dd>
+      <dt>話題の根拠</dt><dd>今週、そのキーワードに言及していた GitHub・Hacker News・Reddit・Bluesky などの投稿や repo。順位付けの材料で、内容の正しさの根拠ではありません。関連の薄いものが混ざることがあります。</dd>
+      <dt>検証状態</dt><dd><span class="ver verified">検証済み</span>公式ドキュメント等で内容を確認 / <span class="ver partially_verified">一部検証</span>一部のみ確認 / <span class="ver unverified">未検証</span>自動収集のみで、内容は未確認</dd>
+      <dt>スコア</dt><dd>複数ソースでの言及の多さと新しさから算出した 0〜100 の相対値(1 位 = 100)。蓄積が 14 日分に満たない間は「上昇中」ではなく「今週の注目」と表示します。</dd>
+      <dt>X の投稿</dt><dd>補助情報です。採用は一次情報での裏取りで決めています。</dd>
+    </dl>
+  </details>
   <div id="filters"></div>
   <div id="list"></div>
   <p id="meta"></p>
@@ -45,6 +73,7 @@
 const D = window.TRENDS, TAGS = ["model","dev-tool","local-runtime","hardware","research","github-trending"];
 let cur = "all";
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const VER = {verified:"検証済み",partially_verified:"一部検証",unverified:"未検証"};
 document.getElementById("period").textContent = `${D.window.from} 〜 ${D.window.to}${D.window.partial ? "(集計途中)" : ""} / 最終成功: ${D.last_successful_report_at.slice(0,16)}` + (D.baseline.is_baseline ? ` / ※baseline期間(${D.baseline.snapshots}日分): 「上昇中」ではなく「今週の新着・注目」` : "");
 const f = document.getElementById("filters");
 ["all", ...TAGS].forEach(t => {
@@ -52,30 +81,51 @@ const f = document.getElementById("filters");
   b.textContent = t; b.onclick = () => { cur = t; render(); };
   f.appendChild(b);
 });
+const link = (u, label) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(label || u)}</a>`;
+const box = (h, items, cls) => items && items.length ? `<div class="box ${cls || ""}"><h3>${h}</h3><ul>${items.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "";
+
+function body(t) {
+  const g = t.digest;
+  if (g) return `
+    <div class="summary">${g.summary.map(x => `<p>${esc(x)}</p>`).join("")}</div>
+    <div class="why">なぜ話題か: ${esc(g.why_trending)}${g.audience ? ` / 想定読者: ${esc(g.audience)}` : ""}</div>
+    <div class="cols">${box("何が変わる", g.what_changes)}${box("嬉しいこと", g.benefits)}${box("注意点", g.caveats, "warn")}</div>`;
+  return `<div class="auto">自動抽出の要約(内容は未確認): ${esc(t.summary)}</div>`;
+}
+function links(t) {
+  const p = t.primary, d = p.published_at ? p.published_at.slice(0, 10) : "観測日基準";
+  const urlOk = t.official_urls.length && t.official_urls.every(u => t.url_checks && t.url_checks[u] && t.url_checks[u].status === 200);
+  return `<dl class="links">
+    <dt>一次ソース <small>(${esc(p.source_type)}・${d})</small></dt><dd>${link(p.url, p.title.slice(0, 80))}${t.related.length ? ` <small>/ 同ベンダー統合: ${esc(t.related.join(", "))}</small>` : ""}</dd>
+    <dt>公式 URL <small>${t.official_verified ? (urlOk ? "(リンク確認済み)" : "") : "(未確認・候補)"}</small></dt><dd>${t.official_urls.map(u => link(u)).join("<br>") || "-"}</dd>
+    <dt>話題の根拠 <small>(今週の言及。関連が薄いものも含む)</small></dt><dd>${t.sources.slice(0, 5).map(s => `${link(s.url, s.name + ": " + s.title.slice(0, 32))}`).join("<br>")}</dd>
+    ${t.digest ? "" : t.x_posts.slice(0, 1).map(p => `<dt>X 補助</dt><dd><div class="x">${link(p.url, "@" + p.author)} ♥${p.likes} ↻${p.reposts} 👁${p.views}<br>${esc(p.text)}</div></dd>`).join("")}
+  </dl>`;
+}
 function render() {
   [...f.children].forEach(b => b.classList.toggle("on", b.textContent === cur));
   document.getElementById("list").innerHTML = D.trends.filter(t => cur === "all" || t.category === cur).map(t => `
     <div class="card">
-      <span class="score">${t.score}</span>
-      <h2><span class="rank">#${t.rank}</span>${esc(t.keyword)}<span class="tag">${t.category}</span><span class="tag">${t.kind}</span>${t.tags.map(x => `<span class="tag">${x}</span>`).join("")}<span class="ver ${t.verification.status}">${{verified:"検証済み",partially_verified:"一部検証",unverified:"未検証"}[t.verification.status]}</span></h2>
-      <div class="meta">${esc(t.summary)}</div>
-      <div class="meta">一次ソース(${esc(t.primary.source_type)}・${t.primary.published_at ? t.primary.published_at.slice(0,10) : "観測日基準"}): <a href="${esc(t.primary.url)}" target="_blank" rel="noopener">${esc(t.primary.title.slice(0,70))}</a>${t.related.length ? ` / 同ベンダー統合: ${esc(t.related.join(", "))}` : ""}</div>
-      <div class="meta">公式${t.official_verified ? "" : "(未確認・候補)"}: ${t.official_urls.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}</a>`).join(" / ") || "-"}</div>
-      <div class="meta">話題の根拠: ${t.sources.slice(0,6).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.title)}">${esc(s.name)}: ${esc(s.title.slice(0,28))}</a>`).join(" / ")}</div>
-      ${t.x_posts.slice(0,1).map(p => `<div class="x">X補助: <a href="${esc(p.url)}" target="_blank">@${esc(p.author)}</a> ♥${p.likes} ↻${p.reposts} 👁${p.views}<br>${esc(p.text)}</div>`).join("")}
-      ${t.slides.length ? `<div class="slides">${t.slides.map((s,i) => `<div class="frame" data-e="${esc(t.entity_id)}" data-n="${i}">${renderSlide(t, i)}</div>`).join("")}</div>` : ""}
+      <span class="score">${t.score} <small>/100</small></span>
+      <h2><span class="rank">#${t.rank}</span>${esc(t.keyword)}<span class="tag">${t.category}</span><span class="tag">${t.kind}</span>${t.tags.map(x => `<span class="tag">${x}</span>`).join("")}<span class="ver ${t.verification.status}">${VER[t.verification.status]}</span></h2>
+      <div class="sub">${esc(t.vendor || "")}${t.primary.published_at ? ` ・ 公開 ${t.primary.published_at.slice(0, 10)}` : ""}</div>
+      ${body(t)}
+      <div class="body-row">
+        ${t.slides.length ? `<div class="frame" data-e="${esc(t.entity_id)}" data-n="0" title="クリックで拡大">${renderSlide(t, 0)}</div>` : ""}
+        ${links(t)}
+      </div>
     </div>`).join("");
 }
 render();
 const st = D.source_status, ng = Object.keys(st).filter(k => st[k].ok === false);
 const lb = document.getElementById("lb"), big = document.getElementById("big");
 document.getElementById("list").addEventListener("click", e => {
-  const f = e.target.closest(".frame"); if (!f) return;
-  big.innerHTML = renderSlide(D.trends.find(x => x.entity_id === f.dataset.e), +f.dataset.n);
+  const fr = e.target.closest(".frame"); if (!fr) return;
+  big.innerHTML = renderSlide(D.trends.find(x => x.entity_id === fr.dataset.e), +fr.dataset.n);
   big.style.setProperty("--s", Math.min(innerWidth / 1300, innerHeight / 740)); lb.classList.add("on");
 });
 lb.onclick = () => lb.classList.remove("on");
-document.getElementById("meta").textContent = `取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? ` (失敗/スキップ: ${ng.join(", ")})` : "") + ` / 保留(一次ソース日付なし) ${D.pending.length}件 / X検索: ${D.x_integration.search && D.x_integration.search.ok ? "OK" : "利用不可(ウォッチリストで代替)"}`;
+document.getElementById("meta").textContent = `ダイジェスト作成済み ${D.trends.filter(t => t.digest).length}/${D.trends.length}件(残りは自動抽出のみ・未検証) / 取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? ` (失敗/スキップ: ${ng.join(", ")})` : "") + ` / 保留(一次ソース日付なし) ${D.pending.length}件 / X検索: ${D.x_integration.search && D.x_integration.search.ok ? "OK" : "利用不可(ウォッチリストで代替)"}`;
 </script>
 </body>
 </html>

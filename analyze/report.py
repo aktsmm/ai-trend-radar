@@ -379,13 +379,27 @@ def build_report(items, status, now, week=None, xposts=None, vel=None, stoplist=
     }
 
 
+def on_topic_filter(t):
+    """Display-only denoising: keep sources / X posts whose own title or text names the keyword (not just a body-text mention)."""
+    if "keyword" not in t:
+        return
+    toks = {B.norm(t["keyword"]), B.norm(t["entity_id"].replace("-", " "))} | {f" {w} " for w in B.norm(t["keyword"]).split() if len(w) >= 5}
+    toks |= {B.norm(x) for x in t.get("related", [])}
+    hit = lambda s: any(k.strip() and k in B.norm(s) for k in toks)
+    on = [s for s in t["sources"] if hit(s["title"]) or s["name"] in ("gh_releases", "official")]
+    t["sources"] = on or t["sources"][:1]
+    t["x_posts"] = [p for p in t["x_posts"] if hit(p["text"])]
+
+
 def apply_enrichment(trends, label):
     """Merge Phase-2 MCP verification records and slide JSON (both committed under data/reports/<week>/). Others stay 'unverified'."""
     d = ROOT / "data" / "reports" / label
     enr = json.loads((d / "enrichment.json").read_text(encoding="utf-8")) if (d / "enrichment.json").exists() else {"entities": {}}
     slides = json.loads((d / "slides.json").read_text(encoding="utf-8")) if (d / "slides.json").exists() else {}
+    digests = json.loads((d / "digest.json").read_text(encoding="utf-8")) if (d / "digest.json").exists() else {}
     checks = enr.get("url_checks", {})
     for t in trends:
+        on_topic_filter(t)
         e = enr["entities"].get(t["entity_id"])
         t["verification"] = {"status": "unverified", "checks": []}
         if not e:
@@ -395,6 +409,8 @@ def apply_enrichment(trends, label):
         t["official_verified"] = e["verification_status"] in ("verified", "partially_verified")
         t["url_checks"] = {u: checks.get(u) for u in e["official_urls"]}
         t["slides"] = slides.get(t["entity_id"], [])
+        if t["entity_id"] in digests:
+            t["digest"] = digests[t["entity_id"]]
 
 
 def entry(r, rank, mx, snaps):

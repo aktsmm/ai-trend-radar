@@ -50,9 +50,11 @@ python -m unittest discover -s tests         # 固定fixtureでの決定性・�
 
 - 選定(`data/reports/2026-W42/enrichment.json` に理由を記録): Claude Code / OpenAI Codex / Ollama / Qwen-Image-2.1 / Gemini 4 Argon(dev-tool 2・local-runtime 1・model 2、発行元は全て別)。
 - 調査記録(`enrichment.json`): `verification_status`・使用MCP/ツール・検索クエリ・取得日時・根拠URL・根拠公開日・`url_checks`(公式URLへのGETが200)。Docs MCP は Claude Code→claudeCodeDocs+github-mcp、OpenAI→openaiDeveloperDocs、Google→google-developer-knowledge を使用。OSS(Ollama/Qwen)はDocs MCP対象外のため公式ブログ/モデルカードを直接取得。
-- スライドの正本は `data/reports/<週>/slides.json`(title/bullets/diagram_type/icon/official_url/source_date)。`site/slides.js` + `slides.css` が描画し、`python -m render.build_png` が Playwright(Chromium)で `build/slides/*.png`(Git管理外)を生成する。画像・フォントは同梱せず、アイコンは自作SVG。
+- 図解の正本は `data/reports/<週>/slides.json`(1キーワード1枚の高密度インフォグラフィック: title/stat/steps/points[何が起きた・何が変わる・嬉しいこと・注意]/icon/official_url/source_date)。ダイジェスト文の正本は `digest.json`(summary 2〜4行/why_trending/what_changes/benefits/caveats/audience。書けない項目は省略)。`site/slides.js` + `slides.css` が描画し、`python -m render.build_png` が Playwright(Chromium)で `build/slides/*.png`(Git管理外)を生成する。画像・フォントは同梱せず、アイコンは自作SVG。図解はサイト(GitHub Pages 想定)には1枚だけ載せる。
+- 生成物ゲート: `analyze/digest_gate.py` が、LLM 等で生成した提案(digest/slides)をスキーマ・公式URL許可リスト・日付整合・変更件数上限で検証する(自動マージはしない)。
+- 表示のノイズ除外: `話題の根拠` と X 補助投稿は、タイトル/本文にキーワード自体が出るものだけを表示する(`analyze/report.py: on_topic_filter`)。
 - `python -m render.verify_urls` で公式URL/根拠URLの到達性を再確認できる。
-- サイト: 各カードにスライド(クリックで拡大)・公式URL・検証状態(未検証も表示)・カテゴリフィルタ。
+- サイト: 各カードにダイジェスト(概要3〜4行・なぜ話題か・何が変わる・嬉しいこと・注意点)、図解1枚(クリックで拡大)、一次ソース/公式URL/話題の根拠の説明付きリンク、検証状態(未検証も表示)、カテゴリフィルタ、ページ上部の「このページの見方」。
 
 ## 既知の課題
 

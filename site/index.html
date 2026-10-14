@@ -35,10 +35,10 @@
 </main>
 <script src="data.js"></script>
 <script>
-const D = window.TRENDS, TAGS = ["models","local-llm","hardware","agents","vendor","tools","research"];
+const D = window.TRENDS, TAGS = ["model","dev-tool","local-runtime","hardware","research","github-trending"];
 let cur = "all";
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-document.getElementById("period").textContent = `${D.window.from} 〜 ${D.window.to} / 生成: ${D.generated_at.slice(0,16)}`;
+document.getElementById("period").textContent = `${D.window.from} 〜 ${D.window.to}${D.window.partial ? "(集計途中)" : ""} / 最終成功: ${D.last_successful_report_at.slice(0,16)}` + (D.baseline.is_baseline ? ` / ※baseline期間(${D.baseline.snapshots}日分): 「上昇中」ではなく「今週の新着・注目」` : "");
 const f = document.getElementById("filters");
 ["all", ...TAGS].forEach(t => {
   const b = document.createElement("button");
@@ -47,20 +47,21 @@ const f = document.getElementById("filters");
 });
 function render() {
   [...f.children].forEach(b => b.classList.toggle("on", b.textContent === cur));
-  document.getElementById("list").innerHTML = D.trends.filter(t => cur === "all" || t.tags.includes(cur)).map(t => `
+  document.getElementById("list").innerHTML = D.trends.filter(t => cur === "all" || t.category === cur).map(t => `
     <div class="card">
       <span class="score">${t.score}</span>
-      <h2><span class="rank">#${t.rank}</span>${esc(t.keyword)}${t.tags.map(x => `<span class="tag">${x}</span>`).join("")}</h2>
+      <h2><span class="rank">#${t.rank}</span>${esc(t.keyword)}<span class="tag">${t.category}</span><span class="tag">${t.kind}</span>${t.tags.map(x => `<span class="tag">${x}</span>`).join("")}</h2>
       <div class="meta">${esc(t.summary)}</div>
+      <div class="meta">一次ソース(${esc(t.primary.source_type)}・${t.primary.published_at ? t.primary.published_at.slice(0,10) : "観測日基準"}): <a href="${esc(t.primary.url)}" target="_blank" rel="noopener">${esc(t.primary.title.slice(0,70))}</a>${t.related.length ? ` / 同ベンダー統合: ${esc(t.related.join(", "))}` : ""}</div>
       <div class="meta">公式${t.official_verified ? "" : "(未確認・候補)"}: ${t.official_urls.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}</a>`).join(" / ") || "-"}</div>
-      <div class="meta">根拠: ${t.sources.slice(0,4).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(", ")}</div>
+      <div class="meta">話題の根拠: ${t.sources.slice(0,4).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(", ")}</div>
       ${t.x_posts.slice(0,1).map(p => `<div class="x">X補助: <a href="${esc(p.url)}" target="_blank">@${esc(p.author)}</a> ♥${p.likes} ↻${p.reposts} 👁${p.views}<br>${esc(p.text)}</div>`).join("")}
       ${t.slides.length ? `<div class="slides">${t.slides.map((s,i) => `<div class="slide"><b>${i+1}. ${esc(s.title)}</b><ul>${s.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul></div>`).join("")}</div>` : ""}
     </div>`).join("");
 }
 render();
-const st = D.source_status, ng = Object.keys(st).filter(k => !st[k].ok);
-document.getElementById("meta").textContent = `取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? ` (失敗: ${ng.join(", ")})` : "");
+const st = D.source_status, ng = Object.keys(st).filter(k => st[k].ok === false);
+document.getElementById("meta").textContent = `取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? ` (失敗/スキップ: ${ng.join(", ")})` : "") + ` / 保留(一次ソース日付なし) ${D.pending.length}件 / X検索: ${D.x_integration.search && D.x_integration.search.ok ? "OK" : "利用不可(ウォッチリストで代替)"}`;
 </script>
 </body>
 </html>

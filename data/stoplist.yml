@@ -1,0 +1,8 @@
+# Excluded from the public TOP (kept only as facets/tags). Matched on normalized whole-token names.
+vendors: [OpenAI, Anthropic, Google, Google DeepMind, Meta, Meta AI, Microsoft, Microsoft Foundry, NVIDIA, Apple, Amazon, AWS, Mistral AI,
+  xAI, Alibaba, Alibaba Qwen, DeepSeek, Moonshot AI, Hugging Face, Intel, AMD, Cerebras, Groq, Cloudflare, Telegram]
+concepts: [RAG, Quantization, Mixture of Experts, MoE, Speculative decoding, Reinforcement learning (RLVR), Test-time compute, Diffusion language models,
+  GGUF, MCP, A2A protocol, Agent Skills, Apple Silicon, Google TPU]
+generic: [ChatGPT, Llama, Image, Video, Coding, Evidence, Mixture, Local, Agent, Agents, Model, Models, Tools, Python, Rust, Github, Reddit,
+  Gemini, Qwen, Claude, Gemma, Grok, GPT, Windows, Linux, Flash, Design, Pixel, Diffusion, Benchmarking, English, GeForce, WebUI, PublicationList,
+  extract, skills, Docker, PyTorch, Spotify, Transformers, LangChain, Cursor]

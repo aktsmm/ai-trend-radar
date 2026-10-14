@@ -1,0 +1,15 @@
+# Owner-verified official / key-person accounts used ONLY as an entry point for finding announcements.
+# Adoption requires corroboration on an official site, release note, or official GitHub Release.
+accounts:
+  - {handle: OpenAI, vendor: OpenAI, kind: official}
+  - {handle: AnthropicAI, vendor: Anthropic, kind: official}
+  - {handle: GoogleAI, vendor: Google, kind: official}
+  - {handle: MSFTResearch, vendor: Microsoft, kind: official}
+  - {handle: awscloud, vendor: AWS, kind: official}
+  - {handle: NVIDIAAI, vendor: NVIDIA, kind: official}
+  - {handle: huggingface, vendor: HuggingFace, kind: official}
+  - {handle: ollama, vendor: Ollama, kind: official}
+  - {handle: ggerganov, vendor: ggml, kind: key-person}
+  - {handle: Alibaba_Qwen, vendor: Alibaba, kind: official}
+  - {handle: deepseek_ai, vendor: DeepSeek, kind: official}
+  - {handle: MistralAI, vendor: Mistral, kind: official}

@@ -1,0 +1,3865 @@
+{
+ "generated_at": "2026-10-14T22:32:09.630702+00:00",
+ "last_successful_report_at": "2026-10-14T22:32:09.630702+00:00",
+ "window": {
+  "from": "2026-10-08",
+  "to": "2026-10-15",
+  "label": "2026-W42",
+  "partial": true,
+  "tz": "JST, [start, end)"
+ },
+ "baseline": {
+  "snapshots": 1,
+  "is_baseline": true,
+  "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
+ },
+ "source_status": {
+  "hf_models": {
+   "ok": true,
+   "count": 60,
+   "group": "models",
+   "seconds": 0.5
+  },
+  "hf_spaces": {
+   "ok": true,
+   "count": 30,
+   "group": "models",
+   "seconds": 0.5
+  },
+  "hf_papers": {
+   "ok": true,
+   "count": 40,
+   "group": "research",
+   "seconds": 0.6
+  },
+  "github_new": {
+   "ok": true,
+   "count": 120,
+   "group": "tools",
+   "seconds": 11.2
+  },
+  "github_trending": {
+   "ok": true,
+   "count": 12,
+   "group": "tools",
+   "seconds": 3.1
+  },
+  "hackernews": {
+   "ok": true,
+   "count": 116,
+   "group": "community",
+   "seconds": 7.8
+  },
+  "reddit_localllama": {
+   "ok": true,
+   "count": 100,
+   "group": "local-llm",
+   "seconds": 4.0
+  },
+  "reddit_ollama": {
+   "ok": false,
+   "error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "group": "local-llm"
+  },
+  "reddit_ml": {
+   "ok": true,
+   "count": 50,
+   "group": "research",
+   "seconds": 70.8
+  },
+  "lobsters": {
+   "ok": true,
+   "count": 12,
+   "group": "community",
+   "seconds": 1.5
+  },
+  "devto": {
+   "ok": true,
+   "count": 132,
+   "group": "community",
+   "seconds": 1.6
+  },
+  "arxiv": {
+   "ok": true,
+   "count": 80,
+   "group": "research",
+   "seconds": 0.1
+  },
+  "ollama": {
+   "ok": true,
+   "count": 60,
+   "group": "local-llm",
+   "seconds": 2.4
+  },
+  "openrouter": {
+   "ok": true,
+   "count": 9,
+   "group": "vendor",
+   "seconds": 0.1
+  },
+  "pypi": {
+   "ok": true,
+   "count": 13,
+   "group": "tools",
+   "seconds": 7.9
+  },
+  "bluesky": {
+   "ok": true,
+   "count": 173,
+   "group": "community",
+   "seconds": 4.3
+  },
+  "official": {
+   "ok": true,
+   "count": 113,
+   "group": "vendor"
+  },
+  "gh_releases": {
+   "ok": true,
+   "count": 69,
+   "group": "tools"
+  },
+  "x_watch": {
+   "ok": true,
+   "count": 38,
+   "group": "community",
+   "accounts": {
+    "OpenAI": {
+     "ok": true,
+     "posts": 1
+    },
+    "AnthropicAI": {
+     "ok": true,
+     "posts": 7
+    },
+    "GoogleAI": {
+     "ok": true,
+     "posts": 5
+    },
+    "MSFTResearch": {
+     "ok": true,
+     "posts": 4
+    },
+    "awscloud": {
+     "ok": true,
+     "posts": 5
+    },
+    "NVIDIAAI": {
+     "ok": true,
+     "posts": 8
+    },
+    "huggingface": {
+     "ok": true,
+     "posts": 1
+    },
+    "ollama": {
+     "ok": true,
+     "posts": 0
+    },
+    "ggerganov": {
+     "ok": true,
+     "posts": 0
+    },
+    "Alibaba_Qwen": {
+     "ok": true,
+     "posts": 4
+    },
+    "deepseek_ai": {
+     "ok": true,
+     "posts": 0
+    },
+    "MistralAI": {
+     "ok": true,
+     "posts": 3
+    }
+   }
+  },
+  "x_search": {
+   "ok": false,
+   "note": "skipped (cooldown after 404)",
+   "group": "community"
+  }
+ },
+ "official_ledger": {
+  "openai-news": {
+   "ok": true,
+   "count": 11,
+   "url": "https://openai.com/news/rss.xml"
+  },
+  "google-ai-blog": {
+   "ok": true,
+   "count": 1,
+   "url": "https://blog.google/technology/ai/rss/"
+  },
+  "deepmind-blog": {
+   "ok": false,
+   "error": "ParseError: not well-formed (invalid token): line 1, column 0",
+   "url": "https://deepmind.google/blog/rss.xml"
+  },
+  "nvidia-blog": {
+   "ok": true,
+   "count": 7,
+   "url": "https://blogs.nvidia.com/feed/"
+  },
+  "nvidia-dev-blog": {
+   "ok": true,
+   "count": 6,
+   "url": "https://developer.nvidia.com/blog/feed/"
+  },
+  "aws-ml-blog": {
+   "ok": true,
+   "count": 17,
+   "url": "https://aws.amazon.com/blogs/machine-learning/feed/"
+  },
+  "aws-whats-new": {
+   "ok": true,
+   "count": 50,
+   "url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/"
+  },
+  "microsoft-foundry-blog": {
+   "ok": true,
+   "count": 2,
+   "url": "https://devblogs.microsoft.com/foundry/feed/"
+  },
+  "github-changelog": {
+   "ok": true,
+   "count": 10,
+   "url": "https://github.blog/changelog/feed/"
+  },
+  "huggingface-blog": {
+   "ok": true,
+   "count": 3,
+   "url": "https://huggingface.co/blog/feed.xml"
+  },
+  "qwen-blog": {
+   "ok": true,
+   "count": 0,
+   "url": "https://qwenlm.github.io/blog/index.xml"
+  },
+  "anthropic-news": {
+   "ok": true,
+   "count": 5,
+   "url": "https://www.anthropic.com/news"
+  },
+  "mistral-news": {
+   "ok": true,
+   "count": 0,
+   "url": "https://mistral.ai/news/rss"
+  },
+  "meta-ai-blog": {
+   "ok": false,
+   "error": "HTTPError: HTTP Error 400: Bad Request",
+   "url": "https://ai.meta.com/blog/rss/"
+  },
+  "ollama-blog": {
+   "ok": true,
+   "count": 1,
+   "url": "https://ollama.com/blog/rss.xml"
+  },
+  "ggml-org/llama.cpp": {
+   "ok": true,
+   "count": 10,
+   "url": "https://github.com/ggml-org/llama.cpp/releases.atom"
+  },
+  "ollama/ollama": {
+   "ok": true,
+   "count": 10,
+   "url": "https://github.com/ollama/ollama/releases.atom"
+  },
+  "vllm-project/vllm": {
+   "ok": true,
+   "count": 2,
+   "url": "https://github.com/vllm-project/vllm/releases.atom"
+  },
+  "sgl-project/sglang": {
+   "ok": true,
+   "count": 0,
+   "url": "https://github.com/sgl-project/sglang/releases.atom"
+  },
+  "anthropics/claude-code": {
+   "ok": true,
+   "count": 5,
+   "url": "https://github.com/anthropics/claude-code/releases.atom"
+  },
+  "openai/codex": {
+   "ok": true,
+   "count": 10,
+   "url": "https://github.com/openai/codex/releases.atom"
+  },
+  "google-gemini/gemini-cli": {
+   "ok": true,
+   "count": 8,
+   "url": "https://github.com/google-gemini/gemini-cli/releases.atom"
+  },
+  "QwenLM/Qwen3": {
+   "ok": true,
+   "count": 0,
+   "url": "https://github.com/QwenLM/Qwen3/releases.atom"
+  },
+  "deepseek-ai/DeepSeek-V3": {
+   "ok": true,
+   "count": 0,
+   "url": "https://github.com/deepseek-ai/DeepSeek-V3/releases.atom"
+  },
+  "huggingface/transformers": {
+   "ok": true,
+   "count": 0,
+   "url": "https://github.com/huggingface/transformers/releases.atom"
+  },
+  "ml-explore/mlx": {
+   "ok": true,
+   "count": 1,
+   "url": "https://github.com/ml-explore/mlx/releases.atom"
+  },
+  "unslothai/unsloth": {
+   "ok": true,
+   "count": 9,
+   "url": "https://github.com/unslothai/unsloth/releases.atom"
+  },
+  "open-webui/open-webui": {
+   "ok": true,
+   "count": 3,
+   "url": "https://github.com/open-webui/open-webui/releases.atom"
+  },
+  "modelcontextprotocol/servers": {
+   "ok": true,
+   "count": 1,
+   "url": "https://github.com/modelcontextprotocol/servers/releases.atom"
+  },
+  "microsoft/autogen": {
+   "ok": true,
+   "count": 0,
+   "url": "https://github.com/microsoft/autogen/releases.atom"
+  },
+  "github/copilot-cli": {
+   "ok": true,
+   "count": 10,
+   "url": "https://github.com/github/copilot-cli/releases.atom"
+  }
+ },
+ "x_integration": {
+  "search": {
+   "ok": false,
+   "note": "skipped (cooldown after 404)",
+   "group": "community"
+  },
+  "watchlist": {
+   "ok": true,
+   "count": 38,
+   "group": "community",
+   "accounts": {
+    "OpenAI": {
+     "ok": true,
+     "posts": 1
+    },
+    "AnthropicAI": {
+     "ok": true,
+     "posts": 7
+    },
+    "GoogleAI": {
+     "ok": true,
+     "posts": 5
+    },
+    "MSFTResearch": {
+     "ok": true,
+     "posts": 4
+    },
+    "awscloud": {
+     "ok": true,
+     "posts": 5
+    },
+    "NVIDIAAI": {
+     "ok": true,
+     "posts": 8
+    },
+    "huggingface": {
+     "ok": true,
+     "posts": 1
+    },
+    "ollama": {
+     "ok": true,
+     "posts": 0
+    },
+    "ggerganov": {
+     "ok": true,
+     "posts": 0
+    },
+    "Alibaba_Qwen": {
+     "ok": true,
+     "posts": 4
+    },
+    "deepseek_ai": {
+     "ok": true,
+     "posts": 0
+    },
+    "MistralAI": {
+     "ok": true,
+     "posts": 3
+    }
+   }
+  },
+  "posts_used": 45
+ },
+ "trends": [
+  {
+   "rank": 1,
+   "keyword": "Claude Code",
+   "entity_id": "claude-code",
+   "kind": "release",
+   "category": "dev-tool",
+   "tags": [
+    "agents",
+    "tools"
+   ],
+   "score": 100.0,
+   "vendor": "Anthropic",
+   "primary": {
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
+    "published_at": "2026-10-14T18:24:25+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "claude-code v2.1.300",
+    "event_id": "17dac896e5"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
+     "published_at": "2026-10-14T18:24:25+00:00",
+     "source_type": "release_note",
+     "title": "claude-code v2.1.300",
+     "vendor": "Anthropic",
+     "date_basis": "published",
+     "event_id": "17dac896e5"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
+     "published_at": "2026-10-14T02:49:42+00:00",
+     "source_type": "release_note",
+     "title": "claude-code v2.1.299",
+     "vendor": "Anthropic",
+     "date_basis": "published",
+     "event_id": "2005505e02"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.296",
+     "published_at": "2026-10-09T19:28:59+00:00",
+     "source_type": "release_note",
+     "title": "claude-code v2.1.296",
+     "vendor": "Anthropic",
+     "date_basis": "published",
+     "event_id": "d3883583c2"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
+     "published_at": "2026-10-08T19:48:38+00:00",
+     "source_type": "release_note",
+     "title": "claude-code v2.1.295",
+     "vendor": "Anthropic",
+     "date_basis": "published",
+     "event_id": "8195c26111"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.294",
+     "published_at": "2026-10-08T05:03:54+00:00",
+     "source_type": "release_note",
+     "title": "claude-code v2.1.294",
+     "vendor": "Anthropic",
+     "date_basis": "published",
+     "event_id": "76d8592c02"
+    }
+   ],
+   "sources": [
+    {
+     "name": "github_new",
+     "title": "Arekejoker/qwen21-nsfw-pose-skill",
+     "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
+     "metric": 1234.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "github_new",
+     "title": "YeonwooSung/my-claude-code-mods",
+     "url": "https://github.com/YeonwooSung/my-claude-code-mods",
+     "metric": 773.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "github_trending",
+     "title": "cathrynlavery/diagram-design",
+     "url": "https://github.com/cathrynlavery/diagram-design",
+     "metric": 9867.0,
+     "metric_name": "stars_week"
+    },
+    {
+     "name": "github_trending",
+     "title": "thedotmack/claude-mem",
+     "url": "https://github.com/thedotmack/claude-mem",
+     "metric": 3587.0,
+     "metric_name": "stars_week"
+    },
+    {
+     "name": "hackernews",
+     "title": "I think I found a planet nobody knew existed. I used Claude Code to find it",
+     "url": "https://www.reddit.com/r/ClaudeAI/s/mbe5IY2LF9",
+     "metric": 301.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "hackernews",
+     "title": "Linus Torvalds Working on a Hefty Linux Kernel Improvement with Claude Code",
+     "url": "https://www.phoronix.com/news/Linus-Torvalds-Claude-Code",
+     "metric": 32.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Last week some of South Korea's biggest banks were hit by a cyberattack. We now know the entire hack may have been done ",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0n4pt/last_week_some_of_south_koreas_biggest_banks_were/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "devto",
+     "title": "Can a local LLM replace Claude Code? The benchmark everyone quotes is the wrong one.",
+     "url": "https://dev.to/rudratosh/can-a-local-llm-replace-claude-code-the-benchmark-everyone-quotes-is-the-wrong-one-2kna",
+     "metric": 46.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "devto",
+     "title": "The September cut took 17% of my Claude Code week. Subagents were taking 48%.",
+     "url": "https://dev.to/aidiveyt/the-september-cut-took-17-of-my-claude-code-week-subagents-were-taking-48-98n",
+     "metric": 13.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "bluesky",
+     "title": "Claude code recomp of New Vegas",
+     "url": "https://bsky.app/profile/win98tech.bsky.social/post/3mxsf4zndis2i",
+     "metric": 1465.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "bluesky",
+     "title": "ColGrep-Agent-2B\n\na local open agent that you can pop into Claude Code or whatever to get cheap local search\n\nColGrep: m",
+     "url": "https://bsky.app/profile/timkellogg.me/post/3mxpqazvtc22k",
+     "metric": 39.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "gh_releases",
+     "title": "claude-code v2.1.300",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "claude-code v2.1.299",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.299",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
+    "https://www.anthropic.com/claude-code"
+   ],
+   "official_verified": true,
+   "summary": "claude-code v2.1.300 ― Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / Open。7ソースで言及(代表: 「Last week some of South Korea's biggest banks were hit by a 」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 1.299,
+    "github_trending": 1.068,
+    "hackernews": 0.906,
+    "reddit_localllama": 0.93,
+    "devto": 0.577,
+    "bluesky": 0.492,
+    "gh_releases": 0.9,
+    "x_aux": 0.445
+   },
+   "velocity": {
+    "hn_this_week": 10,
+    "hn_prev_week": 14,
+    "factor": 0.6
+   },
+   "why": {
+    "first_seen": "2026-10-08",
+    "peak_day": "2026-10-08",
+    "co_mentioned": [
+     "OpenAI Codex"
+    ],
+    "evidence": [
+     {
+      "source": "reddit_localllama",
+      "title": "Last week some of South Korea's biggest banks were hit by a cyberattack. We now know the entire hack may have been done by a single person. ",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0n4pt/last_week_some_of_south_koreas_biggest_banks_were/"
+     },
+     {
+      "source": "github_new",
+      "title": "Arekejoker/qwen21-nsfw-pose-skill",
+      "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill"
+     },
+     {
+      "source": "github_new",
+      "title": "YeonwooSung/my-claude-code-mods",
+      "url": "https://github.com/YeonwooSung/my-claude-code-mods"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": [
+    {
+     "url": "https://x.com/jukan05/status/2108110513033093369",
+     "author": "jukan05",
+     "likes": 10463,
+     "reposts": 973,
+     "views": 931169,
+     "text": "This hacker is truly legendary. A complete amateur.\n\n1. He left directory listing enabled on his own server, so researchers could figure out who he was with barely any effort.\n2. They found files like",
+     "via": "link"
+    },
+    {
+     "url": "https://x.com/AndrewCurran_/status/2108108695876092323",
+     "author": "AndrewCurran_",
+     "likes": 5124,
+     "reposts": 618,
+     "views": 1490945,
+     "text": "Last week some of South Korea's biggest banks were hit by a cyberattack. Thanks to a report from CrowdStrike tonight, we now know the entire hack may have been done by a single person. He used a combi",
+     "via": "link"
+    }
+   ]
+  },
+  {
+   "rank": 2,
+   "keyword": "OpenAI Codex",
+   "entity_id": "openai-codex",
+   "kind": "product",
+   "category": "dev-tool",
+   "tags": [
+    "agents",
+    "tools"
+   ],
+   "score": 97.9,
+   "vendor": "OpenAI",
+   "primary": {
+    "url": "https://openai.com/index/oracle",
+    "published_at": "2026-10-08T16:00:00+00:00",
+    "date_basis": "published",
+    "source_type": "announcement",
+    "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+    "event_id": "4022529c9e"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://openai.com/index/oracle",
+     "published_at": "2026-10-08T16:00:00+00:00",
+     "source_type": "announcement",
+     "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+     "vendor": "OpenAI",
+     "date_basis": "published",
+     "event_id": "4022529c9e"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://openai.com/index/legalon-halves-codex-costs",
+     "published_at": "2026-10-08T12:00:00+00:00",
+     "source_type": "announcement",
+     "title": "LegalOn halves Codex costs while maintaining development speed",
+     "vendor": "OpenAI",
+     "date_basis": "published",
+     "event_id": "9ec79d47bb"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.13",
+     "published_at": "2026-10-14T14:46:39+00:00",
+     "source_type": "release_note",
+     "title": "codex rust-v0.163.0-alpha.13",
+     "vendor": "OpenAI",
+     "date_basis": "published",
+     "event_id": "85eca03dd6"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.12",
+     "published_at": "2026-10-14T09:38:13+00:00",
+     "source_type": "release_note",
+     "title": "codex rust-v0.163.0-alpha.12",
+     "vendor": "OpenAI",
+     "date_basis": "published",
+     "event_id": "020d28ad76"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.6",
+     "published_at": "2026-10-10T01:27:22+00:00",
+     "source_type": "release_note",
+     "title": "codex rust-v0.163.0-alpha.6",
+     "vendor": "OpenAI",
+     "date_basis": "published",
+     "event_id": "7e9bbca232"
+    }
+   ],
+   "sources": [
+    {
+     "name": "github_new",
+     "title": "Arekejoker/qwen21-nsfw-pose-skill",
+     "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
+     "metric": 1234.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "github_new",
+     "title": "franzenzenhofer/big-arrow-on-the-screen",
+     "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+     "metric": 744.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "github_trending",
+     "title": "cathrynlavery/diagram-design",
+     "url": "https://github.com/cathrynlavery/diagram-design",
+     "metric": 9867.0,
+     "metric_name": "stars_week"
+    },
+    {
+     "name": "github_trending",
+     "title": "thedotmack/claude-mem",
+     "url": "https://github.com/thedotmack/claude-mem",
+     "metric": 3587.0,
+     "metric_name": "stars_week"
+    },
+    {
+     "name": "hackernews",
+     "title": "Codex CLI installs a persistent, self-updating background daemon by default",
+     "url": "https://github.com/openai/codex/issues/48195",
+     "metric": 606.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "hackernews",
+     "title": "Show HN: XY Music Notation",
+     "url": "https://music.xy.dev/",
+     "metric": 80.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "devto",
+     "title": "Your AI agent reads your Jira, Slack and inbox. Some of that text is talking to it, not you.",
+     "url": "https://dev.to/icegaming/your-ai-agent-reads-your-jira-slack-and-inbox-some-of-that-text-is-talking-to-it-not-you-2jgg",
+     "metric": 7.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "devto",
+     "title": "magents: hand a live session from Claude Code to Codex (or Cursor, Grok, Gemini, OpenCode) without recapping",
+     "url": "https://dev.to/jakebarnby/magents-hand-a-live-session-from-claude-code-to-codex-or-cursor-grok-gemini-opencode-without-2cjg",
+     "metric": 2.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "bluesky",
+     "title": "my work's enterprise tok/s on codex makes my local LLM setup feel fast somehow",
+     "url": "https://bsky.app/profile/shinyquagsire.bowser.gay/post/3mxptwtyqjs2g",
+     "metric": 4.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "official",
+     "title": "How Third Moment Research runs 10,000 agents for 36+ hours",
+     "url": "https://openai.com/index/third-moment-research",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "official",
+     "title": "Asana cuts model costs 76x in browser tests with GPT-6.1 Sol",
+     "url": "https://openai.com/index/asana-browser-agent",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "gh_releases",
+     "title": "codex rust-v0.163.0-alpha.13",
+     "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.13",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "codex rust-v0.163.0-alpha.12",
+     "url": "https://github.com/openai/codex/releases/tag/rust-v0.163.0-alpha.12",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://openai.com/index/oracle",
+    "https://developers.openai.com/codex"
+   ],
+   "official_verified": true,
+   "summary": "How Oracle turns days of work into minutes with ChatGPT and Codex ― With GPT-6 Astra and GPT-6.1 Sol, Codex, and Daybreak for cybersecurity, this AI lab builds agents that focus 。7ソースで言及(代表: 「Codex CLI installs a persistent, self-updating background da」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 1.245,
+    "github_trending": 1.068,
+    "hackernews": 1.033,
+    "devto": 0.256,
+    "bluesky": 0.096,
+    "official": 1.2,
+    "gh_releases": 0.9
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-08",
+    "peak_day": "2026-10-13",
+    "co_mentioned": [
+     "Claude Code"
+    ],
+    "evidence": [
+     {
+      "source": "hackernews",
+      "title": "Codex CLI installs a persistent, self-updating background daemon by default",
+      "url": "https://github.com/openai/codex/issues/48195"
+     },
+     {
+      "source": "github_new",
+      "title": "Arekejoker/qwen21-nsfw-pose-skill",
+      "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill"
+     },
+     {
+      "source": "github_new",
+      "title": "franzenzenhofer/big-arrow-on-the-screen",
+      "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 3,
+   "keyword": "Ollama",
+   "entity_id": "ollama",
+   "kind": "product",
+   "category": "local-runtime",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "score": 94.4,
+   "vendor": "Ollama",
+   "primary": {
+    "url": "https://ollama.com/blog/fly-io-sprites",
+    "published_at": "2026-10-13T00:00:00+00:00",
+    "date_basis": "published",
+    "source_type": "announcement",
+    "title": "Run AI agents safely with Ollama and Fly.io",
+    "event_id": "f2e54420f7"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://ollama.com/blog/fly-io-sprites",
+     "published_at": "2026-10-13T00:00:00+00:00",
+     "source_type": "announcement",
+     "title": "Run AI agents safely with Ollama and Fly.io",
+     "vendor": "Ollama",
+     "date_basis": "published",
+     "event_id": "f2e54420f7"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.5-rc0",
+     "published_at": "2026-10-14T19:45:22+00:00",
+     "source_type": "release_note",
+     "title": "ollama v0.40.5",
+     "vendor": "Ollama",
+     "date_basis": "published",
+     "event_id": "fce22a2602"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.4",
+     "published_at": "2026-10-14T02:23:26+00:00",
+     "source_type": "release_note",
+     "title": "ollama v0.40.4",
+     "vendor": "Ollama",
+     "date_basis": "published",
+     "event_id": "fb7f641518"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.4-rc2",
+     "published_at": "2026-10-13T21:23:05+00:00",
+     "source_type": "release_note",
+     "title": "ollama v0.40.4-rc2",
+     "vendor": "Ollama",
+     "date_basis": "published",
+     "event_id": "e33083e2ef"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.4-rc1",
+     "published_at": "2026-10-13T04:50:41+00:00",
+     "source_type": "release_note",
+     "title": "ollama v0.40.4-rc1: Add Kev decision scoring to MLX (#18976)",
+     "vendor": "Ollama",
+     "date_basis": "published",
+     "event_id": "088c996d99"
+    }
+   ],
+   "sources": [
+    {
+     "name": "github_new",
+     "title": "recepyagmur/EnglishPractice",
+     "url": "https://github.com/recepyagmur/EnglishPractice",
+     "metric": 83.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "github_new",
+     "title": "kasp0r/wideband-sdr",
+     "url": "https://github.com/kasp0r/wideband-sdr",
+     "metric": 17.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Why AnythingLLM is moving from Ollama to Lemonade and llama.cpp",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x5720r/why_anythingllm_is_moving_from_ollama_to_lemonade/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_ollama",
+     "title": "Ollama restricted my account after I complained about API issues — $10,000 invested, 6+ projects at risk",
+     "url": "https://www.reddit.com/r/ollama/comments/1x5nk6u/ollama_restricted_my_account_after_i_complained/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_ollama",
+     "title": "I built EpochGo: A 100% offline, local-first multi-agent AutoML platform powered by Ollama (Qwen2.5-Coder:7B) and Scikit",
+     "url": "https://www.reddit.com/r/ollama/comments/1x3kqu5/i_built_epochgo_a_100_offline_localfirst/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "devto",
+     "title": "Run a local coding agent with Ollama + Qwen 3 using OpenPilot",
+     "url": "https://dev.to/openpilot/run-a-local-coding-agent-with-ollama-qwen-3-using-openpilot-3j8n",
+     "metric": 1.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "devto",
+     "title": "Your local Ollama has no API key. Here's how to require one (Caddy or nginx) and still use Open WebUI, n8n and OpenAI cl",
+     "url": "https://dev.to/munimv2/your-local-ollama-has-no-api-key-heres-how-to-require-one-caddy-or-nginx-and-still-use-open-322g",
+     "metric": 1.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "pypi",
+     "title": "ollama",
+     "url": "https://pypi.org/project/ollama/",
+     "metric": 2940647.0,
+     "metric_name": "downloads_week"
+    },
+    {
+     "name": "bluesky",
+     "title": "It runs on a Hermes server with Ollama as the backend, so it's totally private. It maintains a simple text file where it",
+     "url": "https://bsky.app/profile/anderspucknielsen.dk/post/3mxjppmnths2l",
+     "metric": 50.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "bluesky",
+     "title": "🧞 Aladdin's Magic AI Images ✨\n\n🎨 Theme: Halloween is coming!\n\n💬 🤖 Another nice AI created image 😊👌❤️ 👍\n\n#AI #AIart #AIar",
+     "url": "https://bsky.app/profile/zentrocdot.bsky.social/post/3mxm6czwqkz27",
+     "metric": 6.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "official",
+     "title": "Run AI agents safely with Ollama and Fly.io",
+     "url": "https://ollama.com/blog/fly-io-sprites",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "gh_releases",
+     "title": "ollama v0.40.5",
+     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.5-rc0",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "ollama v0.40.4",
+     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.4",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://ollama.com/blog/fly-io-sprites",
+    "https://ollama.com/"
+   ],
+   "official_verified": true,
+   "summary": "Run AI agents safely with Ollama and Fly.io ― AI agents can now use Ollama's cloud models safely inside Fly.io's cloud computers.。8ソースで言及(代表: 「Run AI agents safely with Ollama and Fly.io」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 0.685,
+    "reddit_localllama": 0.62,
+    "reddit_ollama": 1.05,
+    "devto": 0.094,
+    "pypi": 0.415,
+    "bluesky": 0.298,
+    "official": 0.8,
+    "gh_releases": 0.9
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 2,
+    "factor": 0.6
+   },
+   "why": {
+    "first_seen": "2026-10-08",
+    "peak_day": "2026-10-11",
+    "co_mentioned": [
+     "llama.cpp",
+     "vLLM",
+     "Open WebUI",
+     "MLX"
+    ],
+    "evidence": [
+     {
+      "source": "reddit_ollama",
+      "title": "Ollama restricted my account after I complained about API issues — $10,000 invested, 6+ projects at risk",
+      "url": "https://www.reddit.com/r/ollama/comments/1x5nk6u/ollama_restricted_my_account_after_i_complained/"
+     },
+     {
+      "source": "reddit_ollama",
+      "title": "I built EpochGo: A 100% offline, local-first multi-agent AutoML platform powered by Ollama (Qwen2.5-Coder:7B) and Scikit-Learn",
+      "url": "https://www.reddit.com/r/ollama/comments/1x3kqu5/i_built_epochgo_a_100_offline_localfirst/"
+     },
+     {
+      "source": "reddit_ollama",
+      "title": "Web automation with Ollama on a 4 GB GPU: Qwen 3.5 4B plans, a heuristic clicks, and saved tasks replay with no model at all",
+      "url": "https://www.reddit.com/r/ollama/comments/1x1xdrk/web_automation_with_ollama_on_a_4_gb_gpu_qwen_35/"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 4,
+   "keyword": "Qwen-Image-2.1",
+   "entity_id": "qwen-image-2-1",
+   "kind": "model",
+   "category": "model",
+   "tags": [
+    "models",
+    "local-llm"
+   ],
+   "score": 89.5,
+   "vendor": "Alibaba",
+   "primary": {
+    "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+    "published_at": "2026-10-09T04:50:01+00:00",
+    "date_basis": "published",
+    "source_type": "model_card",
+    "title": "Qwen/Qwen-Image-2.1-Turbo",
+    "event_id": "c1efc606b8"
+   },
+   "events": [
+    {
+     "kind": "model",
+     "source": "hf_models",
+     "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+     "published_at": "2026-10-09T04:50:01+00:00",
+     "source_type": "model_card",
+     "title": "Qwen/Qwen-Image-2.1-Turbo",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "c1efc606b8"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_models",
+     "title": "Qwen/Qwen-Image-2.1-Turbo",
+     "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+     "metric": 715.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "hf_models",
+     "title": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+     "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+     "metric": 537.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "hf_spaces",
+     "title": "Viggle/Qwen-Image-2.1-viggle-turbo",
+     "url": "https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo",
+     "metric": 85.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "hf_spaces",
+     "title": "arudradey/qwen-image-2.1-uncensored-aio-loras",
+     "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-aio-loras",
+     "metric": 67.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "github_new",
+     "title": "Arekejoker/qwen21-nsfw-pose-skill",
+     "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
+     "metric": 1234.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "github_new",
+     "title": "GabrieleLozupone/kokon",
+     "url": "https://github.com/GabrieleLozupone/kokon",
+     "metric": 27.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Qwen/Qwen-Image-2.1-Turbo · Hugging Face",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x1ldef/qwenqwenimage21turbo_hugging_face/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Qwen-Image-2.1-Turbo released!",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x1lclx/qwenimage21turbo_released/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "bluesky",
+     "title": "Witch for #WitchWednesday\n#ai8 #ai #aiart #aiartwork #aigenerated #aicommunity #aiartcommunity #aitraining #digitalart #",
+     "url": "https://bsky.app/profile/agatha8infinity.bsky.social/post/3mxtv4hvi2s2h",
+     "metric": 14.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "bluesky",
+     "title": "Simple pose.\n#ai8 #ai #aiart #aiartwork #aigenerated #aicommunity #aiartcommunity #aitraining #digitalart #creativeai #s",
+     "url": "https://bsky.app/profile/agatha8infinity.bsky.social/post/3mxtrkzfbfc2h",
+     "metric": 10.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "gh_releases",
+     "title": "unsloth Browser Use + Qwen-Image-2.1-Turbo",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "unsloth Qwen-Image-2.1 + Skills",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.815-beta",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+    "https://huggingface.co/Qwen/Qwen-Image-2.1",
+    "https://huggingface.co/Comfy-Org/Qwen-Image-2.1"
+   ],
+   "official_verified": false,
+   "summary": "Qwen/Qwen-Image-2.1-Turbo ― Qwen-Image 2.1 NSFW/姿势出图 skill：作者级提示词配方 + NSFW LoRA + 136 姿势 VNCCS 人偶控制；适用 Claude Code / Codex / Cursor / Open。6ソースで言及(代表: 「Qwen/Qwen-Image-2.1-Turbo」)",
+   "slides": [],
+   "score_breakdown": {
+    "hf_models": 1.5,
+    "hf_spaces": 0.683,
+    "github_new": 0.861,
+    "reddit_localllama": 0.96,
+    "bluesky": 0.269,
+    "gh_releases": 0.75,
+    "x_aux": 0.213
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-09-14",
+    "peak_day": "2026-10-13",
+    "co_mentioned": [
+     "Unsloth"
+    ],
+    "evidence": [
+     {
+      "source": "github_new",
+      "title": "Arekejoker/qwen21-nsfw-pose-skill",
+      "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "Qwen/Qwen-Image-2.1-Turbo · Hugging Face",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x1ldef/qwenqwenimage21turbo_hugging_face/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "Qwen-Image-2.1-Turbo released!",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x1lclx/qwenimage21turbo_released/"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": {
+    "url": "https://github.com/QwenLM/Qwen-Image-2.1",
+    "created_at": "2026-09-14T04:12:17Z",
+    "stars": 1933,
+    "description": "Qwen's most powerful open-source image generation model"
+   },
+   "trend_label": "baseline",
+   "x_posts": [
+    {
+     "url": "https://x.com/Alibaba_Qwen/status/2108549075218120949",
+     "author": "Alibaba_Qwen",
+     "likes": 5304,
+     "reposts": 535,
+     "views": 714073,
+     "text": "🚀 Meet Qwen-Image-2.1-Turbo — create and edit images in just 8 denoising steps! Open weights now available!\n\nBuilt on Qwen-Image-2.1, Turbo is an accelerated checkpoint on the same 7B visual generatio",
+     "via": "watchlist"
+    }
+   ]
+  },
+  {
+   "rank": 5,
+   "keyword": "llama.cpp",
+   "entity_id": "llama-cpp",
+   "kind": "release",
+   "category": "local-runtime",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "score": 88.7,
+   "vendor": "ggml",
+   "primary": {
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11624",
+    "published_at": "2026-10-14T20:13:15+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "llama.cpp b11624",
+    "event_id": "291a7c2cab"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11624",
+     "published_at": "2026-10-14T20:13:15+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11624",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "event_id": "291a7c2cab"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11623",
+     "published_at": "2026-10-14T19:54:20+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11623",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "event_id": "f9550b51be"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11622",
+     "published_at": "2026-10-14T19:35:53+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11622",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "event_id": "3da374651d"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11621",
+     "published_at": "2026-10-14T19:17:27+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11621",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "event_id": "194fbf2c67"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11620",
+     "published_at": "2026-10-14T18:47:28+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11620",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "event_id": "63cc50977b"
+    }
+   ],
+   "sources": [
+    {
+     "name": "github_new",
+     "title": "1nikitas/NIKA_desktop",
+     "url": "https://github.com/1nikitas/NIKA_desktop",
+     "metric": 33.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "github_new",
+     "title": "OpenBMB/llama.cpp-omni",
+     "url": "https://github.com/OpenBMB/llama.cpp-omni",
+     "metric": 15.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Why AnythingLLM is moving from Ollama to Lemonade and llama.cpp",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x5720r/why_anythingllm_is_moving_from_ollama_to_lemonade/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Qwen3.8-27B on a single 3090: 140 tok/s on code with a custom megakernel",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x2erdj/qwen3827b_on_a_single_3090_140_toks_on_code_with/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_ollama",
+     "title": "BigMoeOnEdge+ – an Android chat app fork of BigMoeOnEdge (llama.cpp / GGUF)",
+     "url": "https://www.reddit.com/r/ollama/comments/1x1x60i/bigmoeonedge_an_android_chat_app_fork_of/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_ollama",
+     "title": "I forked Ollama to split one model across two DGX Sparks over llama.cpp RPC. The second node buys capacity, not speed.",
+     "url": "https://www.reddit.com/r/ollama/comments/1x60m9p/i_forked_ollama_to_split_one_model_across_two_dgx/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "devto",
+     "title": "Deploying LLMs Locally: Ollama, llama.cpp, vLLM & Text Generation Inference",
+     "url": "https://dev.to/ipsphil_digital/deploying-llms-locally-ollama-llamacpp-vllm-text-generation-inference-4c0k",
+     "metric": 0.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "devto",
+     "title": "Deploying LLMs Locally: Ollama, llama.cpp, and vLLM Comparison",
+     "url": "https://dev.to/ipsphil_digital/deploying-llms-locally-ollama-llamacpp-and-vllm-comparison-1bln",
+     "metric": 0.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "pypi",
+     "title": "llama-cpp-python",
+     "url": "https://pypi.org/project/llama-cpp-python/",
+     "metric": 165100.0,
+     "metric_name": "downloads_week"
+    },
+    {
+     "name": "bluesky",
+     "title": "demolishing my intuitions, llama.cpp only gets 8-10t/s for a 4bit 27b while bitsandbytes + transformers gets me 27t/s. w",
+     "url": "https://bsky.app/profile/crumb.bsky.social/post/3mxhu46yj5s2m",
+     "metric": 20.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "bluesky",
+     "title": "Jeyzma is like @typesafeai.bsky.social minus $870 million plus @golang.org & @tinygo.org & @hf.co llama.cpp \n\nGo make a ",
+     "url": "https://bsky.app/profile/yzma.ai/post/3mxj4e7swhc2t",
+     "metric": 13.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "official",
+     "title": "Deploy decision models with llama.cpp on Amazon SageMaker AI",
+     "url": "https://aws.amazon.com/blogs/machine-learning/deploy-decision-models-with-llama-cpp-on-amazon-sagemaker-ai/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "gh_releases",
+     "title": "llama.cpp b11627",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11627",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "llama.cpp b11626: model: split layers evenly when no device reports free memory (#29677)",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11626",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/ggml-org/llama.cpp/releases/tag/b11624",
+    "https://github.com/ggml-org/llama.cpp"
+   ],
+   "official_verified": true,
+   "summary": "llama.cpp b11624 ― Learn how to deploy decision models with llama.cpp on Amazon SageMaker AI. This technical how-to serves OpenAI。8ソースで言及(代表: 「Deploy decision models with llama.cpp on Amazon SageMaker AI」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 0.579,
+    "reddit_localllama": 0.748,
+    "reddit_ollama": 0.581,
+    "devto": 0.0,
+    "pypi": 0.335,
+    "bluesky": 0.28,
+    "official": 0.8,
+    "gh_releases": 0.9
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 1,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-08",
+    "peak_day": "2026-10-14",
+    "co_mentioned": [
+     "Ollama",
+     "vLLM",
+     "SageMaker"
+    ],
+    "evidence": [
+     {
+      "source": "reddit_ollama",
+      "title": "BigMoeOnEdge+ – an Android chat app fork of BigMoeOnEdge (llama.cpp / GGUF)",
+      "url": "https://www.reddit.com/r/ollama/comments/1x1x60i/bigmoeonedge_an_android_chat_app_fork_of/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "Why AnythingLLM is moving from Ollama to Lemonade and llama.cpp",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x5720r/why_anythingllm_is_moving_from_ollama_to_lemonade/"
+     },
+     {
+      "source": "github_new",
+      "title": "1nikitas/NIKA_desktop",
+      "url": "https://github.com/1nikitas/NIKA_desktop"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 6,
+   "keyword": "vLLM",
+   "entity_id": "vllm",
+   "kind": "release",
+   "category": "local-runtime",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "score": 67.5,
+   "vendor": "vLLM",
+   "primary": {
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc0",
+    "published_at": "2026-10-12T20:49:49+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "vllm v0.32.0rc0: [HiSparse] Report host pool in KV cache capacity logs (#60285)",
+    "event_id": "b5750ca590"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc0",
+     "published_at": "2026-10-12T20:49:49+00:00",
+     "source_type": "release_note",
+     "title": "vllm v0.32.0rc0: [HiSparse] Report host pool in KV cache capacity logs (#60285)",
+     "vendor": "vLLM",
+     "date_basis": "published",
+     "event_id": "b5750ca590"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.5.0",
+     "published_at": "2026-10-09T03:11:40+00:00",
+     "source_type": "release_note",
+     "title": "vllm proto-v0.5.0",
+     "vendor": "vLLM",
+     "date_basis": "published",
+     "event_id": "7e3de1d005"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_models",
+     "title": "vllm-sr/d3",
+     "url": "https://huggingface.co/vllm-sr/d3",
+     "metric": 153.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "github_new",
+     "title": "T-Crypt/berth",
+     "url": "https://github.com/T-Crypt/berth",
+     "metric": 1.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "github_new",
+     "title": "Ahmadshen/llm-inference-eks",
+     "url": "https://github.com/Ahmadshen/llm-inference-eks",
+     "metric": 0.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Decision 3.0: open, multimodal decision models from 0.6B to 27B. Ranks #1 on both Jev Decision Index boards",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x3th4p/decision_30_open_multimodal_decision_models_from/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "$2800 rig with 8x Radeon Pro V620 (256 GB VRAM) + custom vLLM fork = Qwen3.8-Flash-Next at 60 to 100 t/s decode and 3000",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0wnz1/2800_rig_with_8x_radeon_pro_v620_256_gb_vram/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "devto",
+     "title": "Small Apache-2.0 Models Against Gemma 4 E2B on One TPU v5e: Which Ones Keep Up?",
+     "url": "https://dev.to/gde/small-apache-20-models-against-gemma-4-e2b-on-one-tpu-v5e-which-ones-keep-up-mm4",
+     "metric": 21.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "devto",
+     "title": "vLLM GGUF FAQ: Ten Search Questions, Answered",
+     "url": "https://dev.to/mrsaynothing/vllm-gguf-faq-ten-search-questions-answered-34da",
+     "metric": 6.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "pypi",
+     "title": "vllm",
+     "url": "https://pypi.org/project/vllm/",
+     "metric": 463948.0,
+     "metric_name": "downloads_week"
+    },
+    {
+     "name": "bluesky",
+     "title": "Deploying LLMs Locally: Ollama, LM Studio, llama.cpp & vLLM Compared",
+     "url": "https://bsky.app/profile/targetsocialmedia.bsky.social/post/3mxpjdizn5j2g",
+     "metric": 0.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "gh_releases",
+     "title": "vllm v0.32.0rc0: [HiSparse] Report host pool in KV cache capacity logs (#60285)",
+     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc0",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "vllm proto-v0.5.0",
+     "url": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.5.0",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc0",
+    "https://github.com/vllm-project/vllm"
+   ],
+   "official_verified": true,
+   "summary": "vllm v0.32.0rc0: [HiSparse] Report host pool in KV cache capacity logs (#60285) ― The VRAM leasing service for every GPU you run. Engines lease the card instead of grabbing it: llama.cpp, llam。7ソースで言及(代表: 「Decision 3.0: open, multimodal decision models from 0.6B to 」)",
+   "slides": [],
+   "score_breakdown": {
+    "hf_models": 0.715,
+    "github_new": 0.075,
+    "reddit_localllama": 1.013,
+    "devto": 0.389,
+    "pypi": 0.364,
+    "bluesky": 0.0,
+    "gh_releases": 0.75
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-08",
+    "peak_day": "2026-10-12",
+    "co_mentioned": [
+     "llama.cpp",
+     "Ollama"
+    ],
+    "evidence": [
+     {
+      "source": "reddit_localllama",
+      "title": "Decision 3.0: open, multimodal decision models from 0.6B to 27B. Ranks #1 on both Jev Decision Index boards",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x3th4p/decision_30_open_multimodal_decision_models_from/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "$2800 rig with 8x Radeon Pro V620 (256 GB VRAM) + custom vLLM fork = Qwen3.8-Flash-Next at 60 to 100 t/s decode and 3000+ t/s prefill",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0wnz1/2800_rig_with_8x_radeon_pro_v620_256_gb_vram/"
+     },
+     {
+      "source": "github_new",
+      "title": "T-Crypt/berth",
+      "url": "https://github.com/T-Crypt/berth"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 7,
+   "keyword": "lfm2",
+   "entity_id": "lfm2",
+   "kind": "model",
+   "category": "model",
+   "tags": [
+    "models",
+    "local-llm"
+   ],
+   "score": 53.3,
+   "vendor": "Liquid",
+   "primary": {
+    "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+    "published_at": "2026-10-12T05:35:46+00:00",
+    "date_basis": "published",
+    "source_type": "model_card",
+    "title": "LiquidAI/LFM2.5-24B-A2B",
+    "event_id": "5d781c5210"
+   },
+   "events": [
+    {
+     "kind": "model",
+     "source": "hf_models",
+     "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+     "published_at": "2026-10-12T05:35:46+00:00",
+     "source_type": "model_card",
+     "title": "LiquidAI/LFM2.5-24B-A2B",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "5d781c5210"
+    },
+    {
+     "kind": "model",
+     "source": "hf_models",
+     "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-GGUF",
+     "published_at": "2026-10-09T18:03:23+00:00",
+     "source_type": "model_card",
+     "title": "LiquidAI/LFM2.5-24B-A2B-GGUF",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "e7d09a1434"
+    },
+    {
+     "kind": "model",
+     "source": "openrouter",
+     "url": "https://openrouter.ai/liquid/lfm-2.5-24b-a2b",
+     "published_at": "2026-10-13T17:20:25+00:00",
+     "source_type": "catalog",
+     "title": "liquid/lfm-2.5-24b-a2b",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "a6576d370f"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+     "published_at": "2026-10-13T17:05:48+00:00",
+     "source_type": "announcement",
+     "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+     "vendor": "HuggingFace",
+     "date_basis": "published",
+     "event_id": "dabd8000f8"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_models",
+     "title": "LiquidAI/LFM2.5-24B-A2B",
+     "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+     "metric": 296.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "hf_models",
+     "title": "LiquidAI/LFM2.5-24B-A2B-GGUF",
+     "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-GGUF",
+     "metric": 115.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "LiquidAI/LFM2.5-24B-A2B",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x52kco/liquidailfm2524ba2b/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_ollama",
+     "title": "I tested LFM2.5-24B-A2B after all the Hype on X",
+     "url": "https://www.reddit.com/r/ollama/comments/1x5e98i/i_tested_lfm2524ba2b_after_all_the_hype_on_x/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "ollama",
+     "title": "lfm2.5",
+     "url": "https://ollama.com/library/lfm2.5",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "ollama",
+     "title": "lfm2",
+     "url": "https://ollama.com/library/lfm2",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "openrouter",
+     "title": "liquid/lfm-2.5-24b-a2b",
+     "url": "https://openrouter.ai/liquid/lfm-2.5-24b-a2b",
+     "metric": 1.0,
+     "metric_name": "new_model"
+    },
+    {
+     "name": "official",
+     "title": "Run fast, private agents on-device with LFM2.5-24B-A2B",
+     "url": "https://huggingface.co/blog/LiquidAI/lfm25-24b-a2b",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://ollama.com/library/lfm2"
+   ],
+   "official_verified": false,
+   "summary": "LiquidAI/LFM2.5-24B-A2B ― LFM2.5-8B-A1B, an edge model built for fast, reliable tool calling on consumer hardware.。6ソースで言及(代表: 「LiquidAI/LFM2.5-24B-A2B」)",
+   "slides": [],
+   "score_breakdown": {
+    "hf_models": 0.977,
+    "reddit_localllama": 0.83,
+    "reddit_ollama": 0.14,
+    "ollama": 0.4,
+    "openrouter": 0.18,
+    "official": 0.8
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-09",
+    "peak_day": "2026-10-13",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "reddit_localllama",
+      "title": "LiquidAI/LFM2.5-24B-A2B",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x52kco/liquidailfm2524ba2b/"
+     },
+     {
+      "source": "reddit_ollama",
+      "title": "I tested LFM2.5-24B-A2B after all the Hype on X",
+      "url": "https://www.reddit.com/r/ollama/comments/1x5e98i/i_tested_lfm2524ba2b_after_all_the_hype_on_x/"
+     }
+    ]
+   },
+   "related": [
+    "LFM2.5"
+   ],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 8,
+   "keyword": "Unsloth",
+   "entity_id": "unsloth",
+   "kind": "release",
+   "category": "local-runtime",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "score": 48.6,
+   "vendor": "Unsloth",
+   "primary": {
+    "url": "https://github.com/unslothai/unsloth/releases/tag/prebuilt-wheels-cu13",
+    "published_at": "2026-10-14T06:01:14+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "unsloth Flash-Attention2, Causal-Conv1D, Mamba_SSM Binaries",
+    "event_id": "e429f0cd7a"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/prebuilt-wheels-cu13",
+     "published_at": "2026-10-14T06:01:14+00:00",
+     "source_type": "release_note",
+     "title": "unsloth Flash-Attention2, Causal-Conv1D, Mamba_SSM Binaries",
+     "vendor": "Unsloth",
+     "date_basis": "published",
+     "event_id": "e429f0cd7a"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.907-beta",
+     "published_at": "2026-10-13T22:38:10+00:00",
+     "source_type": "release_note",
+     "title": "unsloth Large Performance Gains + More Browser Use",
+     "vendor": "Unsloth",
+     "date_basis": "published",
+     "event_id": "c81794059b"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.815-beta",
+     "published_at": "2026-10-13T02:10:09+00:00",
+     "source_type": "release_note",
+     "title": "unsloth Qwen-Image-2.1 + Skills",
+     "vendor": "Unsloth",
+     "date_basis": "published",
+     "event_id": "66a3c5b8d6"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.900-beta",
+     "published_at": "2026-10-13T02:05:09+00:00",
+     "source_type": "release_note",
+     "title": "unsloth Laya Decision Models + Library",
+     "vendor": "Unsloth",
+     "date_basis": "published",
+     "event_id": "43d9d2b69a"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.902-beta",
+     "published_at": "2026-10-13T02:04:42+00:00",
+     "source_type": "release_note",
+     "title": "unsloth Command Palette + Desktop UI/UX",
+     "vendor": "Unsloth",
+     "date_basis": "published",
+     "event_id": "cc2dddfe6e"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_models",
+     "title": "unsloth/Qwen3.8-27B-GGUF",
+     "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
+     "metric": 137.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "hf_models",
+     "title": "unsloth/embeddinggemma-2-GGUF",
+     "url": "https://huggingface.co/unsloth/embeddinggemma-2-GGUF",
+     "metric": 114.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "devto",
+     "title": "Fine-tuning gpt-oss-20b with Unsloth and running it in Ollama",
+     "url": "https://dev.to/khadimhussain/fine-tuning-gpt-oss-20b-with-unsloth-and-running-it-in-ollama-1nfh",
+     "metric": 0.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "pypi",
+     "title": "unsloth",
+     "url": "https://pypi.org/project/unsloth/",
+     "metric": 193016.0,
+     "metric_name": "downloads_week"
+    },
+    {
+     "name": "gh_releases",
+     "title": "unsloth Large Performance Gains + More Browser Use",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.907-beta",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "unsloth Browser Use + Qwen-Image-2.1-Turbo",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/unslothai/unsloth/releases/tag/prebuilt-wheels-cu13",
+    "https://unsloth.ai/"
+   ],
+   "official_verified": true,
+   "summary": "unsloth Flash-Attention2, Causal-Conv1D, Mamba_SSM Binaries。4ソースで言及(代表: 「unsloth/Qwen3.8-27B-GGUF」)",
+   "slides": [],
+   "score_breakdown": {
+    "hf_models": 0.867,
+    "devto": 0.0,
+    "pypi": 0.339,
+    "gh_releases": 0.9
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-08-13",
+    "peak_day": "2026-10-13",
+    "co_mentioned": [
+     "Qwen-Image-2.1"
+    ],
+    "evidence": []
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 9,
+   "keyword": "gemini-4-argon",
+   "entity_id": "gemini-4-argon",
+   "kind": "model",
+   "category": "model",
+   "tags": [
+    "models",
+    "tools"
+   ],
+   "score": 48.5,
+   "vendor": "Google",
+   "primary": {
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "published_at": "2026-10-13T16:00:00+00:00",
+    "date_basis": "published",
+    "source_type": "announcement",
+    "title": "Gemini 4 Argon: Built to solve your hardest problems",
+    "event_id": "dba1345e0d"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+     "published_at": "2026-10-13T16:00:00+00:00",
+     "source_type": "announcement",
+     "title": "Gemini 4 Argon: Built to solve your hardest problems",
+     "vendor": "Google",
+     "date_basis": "published",
+     "event_id": "dba1345e0d"
+    },
+    {
+     "kind": "model",
+     "source": "openrouter",
+     "url": "https://openrouter.ai/google/gemini-4-argon",
+     "published_at": "2026-10-13T16:04:37+00:00",
+     "source_type": "catalog",
+     "title": "google/gemini-4-argon",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "ced7ea815f"
+    },
+    {
+     "kind": "model",
+     "source": "openrouter",
+     "url": "https://openrouter.ai/google/gemini-4-argon:batch",
+     "published_at": "2026-10-13T16:04:37+00:00",
+     "source_type": "catalog",
+     "title": "google/gemini-4-argon:batch",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "45cd53488f"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+     "published_at": "2026-10-13T18:39:56+00:00",
+     "source_type": "release_note",
+     "title": "Gemini 4 Argon in GitHub Copilot",
+     "vendor": "Microsoft",
+     "date_basis": "published",
+     "event_id": "252deb477f"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hackernews",
+     "title": "Gemini 4 Argon",
+     "url": "https://deepmind.google/models/gemini/",
+     "metric": 1431.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "hackernews",
+     "title": "Gemini 4 Argon for Robotics",
+     "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+     "metric": 228.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "openrouter",
+     "title": "google/gemini-4-argon",
+     "url": "https://openrouter.ai/google/gemini-4-argon",
+     "metric": 1.0,
+     "metric_name": "new_model"
+    },
+    {
+     "name": "openrouter",
+     "title": "google/gemini-4-argon:batch",
+     "url": "https://openrouter.ai/google/gemini-4-argon:batch",
+     "metric": 1.0,
+     "metric_name": "new_model"
+    },
+    {
+     "name": "official",
+     "title": "Gemini 4 Argon: Built to solve your hardest problems",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "official",
+     "title": "Gemini 4 Argon in GitHub Copilot",
+     "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "https://openrouter.ai/google/gemini-4-argon",
+    "https://openrouter.ai/google/gemini-4-argon:batch"
+   ],
+   "official_verified": true,
+   "summary": "Gemini 4 Argon: Built to solve your hardest problems ― We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier 。3ソースで言及(代表: 「Gemini 4 Argon」)",
+   "slides": [],
+   "score_breakdown": {
+    "hackernews": 1.187,
+    "openrouter": 0.225,
+    "official": 1.0,
+    "x_aux": 0.35
+   },
+   "velocity": {
+    "hn_this_week": 2,
+    "hn_prev_week": 1,
+    "factor": 0.6
+   },
+   "why": {
+    "first_seen": "2026-10-13",
+    "peak_day": "2026-10-13",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "hackernews",
+      "title": "Gemini 4 Argon",
+      "url": "https://deepmind.google/models/gemini/"
+     },
+     {
+      "source": "hackernews",
+      "title": "Gemini 4 Argon for Robotics",
+      "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": [
+    {
+     "url": "https://x.com/GoogleAI/status/2110039860077527293",
+     "author": "GoogleAI",
+     "likes": 1613,
+     "reposts": 143,
+     "views": 88994,
+     "text": "Gemini 4️⃣ Argon ✨ is now rolling out globally.\n\nOur frontier model is built for complex, real-world tasks across coding, finance, legal, cybersecurity, and science.\n\nCheck out how you can use Argon i",
+     "via": "watchlist"
+    },
+    {
+     "url": "https://x.com/GoogleAI/status/2110083927620591769",
+     "author": "GoogleAI",
+     "likes": 1022,
+     "reposts": 113,
+     "views": 75232,
+     "text": "We’ve been exploring the potential of using Gemini 4 Argon to accelerate research @Google. One of our tests was using videos of humans performing fun tasks (game of bags, anyone?) to autonomously spin",
+     "via": "watchlist"
+    }
+   ]
+  },
+  {
+   "rank": 10,
+   "keyword": "GitHub Copilot",
+   "entity_id": "github-copilot",
+   "kind": "product",
+   "category": "dev-tool",
+   "tags": [
+    "agents",
+    "tools"
+   ],
+   "score": 45.5,
+   "vendor": "Microsoft",
+   "primary": {
+    "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+    "published_at": "2026-10-13T18:39:56+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "Gemini 4 Argon in GitHub Copilot",
+    "event_id": "9b38e0581f"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+     "published_at": "2026-10-13T18:39:56+00:00",
+     "source_type": "release_note",
+     "title": "Gemini 4 Argon in GitHub Copilot",
+     "vendor": "Microsoft",
+     "date_basis": "published",
+     "event_id": "9b38e0581f"
+    }
+   ],
+   "sources": [
+    {
+     "name": "github_trending",
+     "title": "cathrynlavery/diagram-design",
+     "url": "https://github.com/cathrynlavery/diagram-design",
+     "metric": 9867.0,
+     "metric_name": "stars_week"
+    },
+    {
+     "name": "bluesky",
+     "title": "GitHub Copilot's local sandboxing reaches general availability alongside Claude Haiku 5.5\n\nGitHub's October 7-9 changelo",
+     "url": "https://bsky.app/profile/pondero-ai.bsky.social/post/3mxo4x3xfou22",
+     "metric": 2.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "bluesky",
+     "title": "https://note.com/harudev/n/nd8987b7555ee\n\n■CopilotとOllamaの統合がもたらす変化\n・GitHub Copilot CLI 1.0.94-0 以降で、ローカルに起動している Ollama ",
+     "url": "https://bsky.app/profile/kuraopenclaw.bsky.social/post/3mxqrznv6ng2x",
+     "metric": 1.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "official",
+     "title": "HydraFusion updates and new Max option",
+     "url": "https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "official",
+     "title": "Gemini 4 Argon in GitHub Copilot",
+     "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+    "https://github.com/features/copilot"
+   ],
+   "official_verified": true,
+   "summary": "Gemini 4 Argon in GitHub Copilot ― HydraFusion has an updated model pool, improved orchestration workflows, and introduces HydraFusion Max. Both 。3ソースで言及(代表: 「HydraFusion updates and new Max option」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_trending": 0.759,
+    "bluesky": 0.076,
+    "official": 1.2
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-12",
+    "peak_day": "2026-10-13",
+    "co_mentioned": [],
+    "evidence": []
+   },
+   "related": [
+    "HydraFusion"
+   ],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 11,
+   "keyword": "Open WebUI",
+   "entity_id": "open-webui",
+   "kind": "release",
+   "category": "local-runtime",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "score": 42.4,
+   "vendor": "OpenWebUI",
+   "primary": {
+    "url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.2",
+    "published_at": "2026-10-14T21:07:29+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "open-webui v0.12.2",
+    "event_id": "b81cbe70a2"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.2",
+     "published_at": "2026-10-14T21:07:29+00:00",
+     "source_type": "release_note",
+     "title": "open-webui v0.12.2",
+     "vendor": "OpenWebUI",
+     "date_basis": "published",
+     "event_id": "b81cbe70a2"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.1",
+     "published_at": "2026-10-14T16:18:56+00:00",
+     "source_type": "release_note",
+     "title": "open-webui v0.12.1",
+     "vendor": "OpenWebUI",
+     "date_basis": "published",
+     "event_id": "fa7f52bf33"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.0",
+     "published_at": "2026-10-10T21:17:46+00:00",
+     "source_type": "release_note",
+     "title": "open-webui v0.12.0",
+     "vendor": "OpenWebUI",
+     "date_basis": "published",
+     "event_id": "1305cfec99"
+    }
+   ],
+   "sources": [
+    {
+     "name": "github_new",
+     "title": "rasidi3112/pondok-ai",
+     "url": "https://github.com/rasidi3112/pondok-ai",
+     "metric": 6.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "reddit_ollama",
+     "title": "I built a local server that speaks the Ollama API - sessions survive crashes, and your chat doesn't wait behind your age",
+     "url": "https://www.reddit.com/r/ollama/comments/1x0tyup/i_built_a_local_server_that_speaks_the_ollama_api/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "devto",
+     "title": "Your local Ollama has no API key. Here's how to require one (Caddy or nginx) and still use Open WebUI, n8n and OpenAI cl",
+     "url": "https://dev.to/munimv2/your-local-ollama-has-no-api-key-heres-how-to-require-one-caddy-or-nginx-and-still-use-open-322g",
+     "metric": 1.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "devto",
+     "title": "Open WebUI or n8n in Docker can't reach Ollama? Fix it without OLLAMA_HOST=0.0.0.0",
+     "url": "https://dev.to/munimv2/open-webui-or-n8n-in-docker-cant-reach-ollama-fix-it-without-ollamahost0000-4b22",
+     "metric": 0.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "bluesky",
+     "title": "🔥 Hot Repo！ 🔥 (100+ new stars)\n\n📦 open-webui / open-webui\n⭐ 154,435 (+142)\n🗒 Python\n\nUser-friendly AI Interface (Support",
+     "url": "https://bsky.app/profile/github-trending.bsky.social/post/3mxossr35752i",
+     "metric": 1.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "gh_releases",
+     "title": "open-webui v0.12.2",
+     "url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.2",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "open-webui v0.12.1",
+     "url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.1",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/open-webui/open-webui/releases/tag/v0.12.2",
+    "https://openwebui.com/"
+   ],
+   "official_verified": true,
+   "summary": "open-webui v0.12.2 ― One-command private AI stack: Ollama + Open WebUI + Qdrant + an OpenAI-compatible API gateway, with hardware-a。5ソースで言及(代表: 「open-webui v0.12.2」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 0.211,
+    "reddit_ollama": 0.308,
+    "devto": 0.075,
+    "bluesky": 0.042,
+    "gh_releases": 0.9
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-08",
+    "peak_day": "2026-10-12",
+    "co_mentioned": [
+     "Ollama"
+    ],
+    "evidence": [
+     {
+      "source": "reddit_ollama",
+      "title": "I built a local server that speaks the Ollama API - sessions survive crashes, and your chat doesn't wait behind your agents",
+      "url": "https://www.reddit.com/r/ollama/comments/1x0tyup/i_built_a_local_server_that_speaks_the_ollama_api/"
+     },
+     {
+      "source": "github_new",
+      "title": "rasidi3112/pondok-ai",
+      "url": "https://github.com/rasidi3112/pondok-ai"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 12,
+   "keyword": "Strata",
+   "entity_id": "strata",
+   "kind": "release",
+   "category": "local-runtime",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "score": 41.9,
+   "vendor": null,
+   "primary": {
+    "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44",
+    "published_at": "2026-10-14T00:14:06+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "Niko1221/Strata Strata 0.1.44",
+    "event_id": "533d985d23"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44",
+     "published_at": "2026-10-14T00:14:06+00:00",
+     "source_type": "release_note",
+     "title": "Niko1221/Strata Strata 0.1.44",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "533d985d23"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1",
+     "published_at": "2026-10-14T00:13:09+00:00",
+     "source_type": "release_note",
+     "title": "Niko1221/Strata Strata 0.1.44.1",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "467022d245"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.43.1",
+     "published_at": "2026-10-12T17:30:57+00:00",
+     "source_type": "release_note",
+     "title": "Niko1221/Strata Strata v0.1.43.1",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "e2c92e3379"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.43",
+     "published_at": "2026-10-11T14:40:33+00:00",
+     "source_type": "release_note",
+     "title": "Niko1221/Strata Strata v0.1.43",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "2ebe978256"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.42",
+     "published_at": "2026-10-10T16:10:01+00:00",
+     "source_type": "release_note",
+     "title": "Niko1221/Strata Strata v0.1.42",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "0f4322f0c0"
+    }
+   ],
+   "sources": [
+    {
+     "name": "github_new",
+     "title": "hongfaqiu/strata-manager",
+     "url": "https://github.com/hongfaqiu/strata-manager",
+     "metric": 8.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Strata rewrote their Github history to wipe evidence of Claude-authoring",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x15a8w/strata_rewrote_their_github_history_to_wipe/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "\"Strata\" for GLM5.3 Flash is here for some! Project Maya",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x3fxzj/strata_for_glm53_flash_is_here_for_some_project/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/Niko1221/Strata/releases/tag/v0.1.44",
+    "https://github.com/Niko1221/Strata"
+   ],
+   "official_verified": true,
+   "summary": "Niko1221/Strata Strata 0.1.44 ― Strata Manager makes Niko1221/Strata, the local LLM inference engine, easier to set up and use. Manage local m。2ソースで言及(代表: 「Strata rewrote their Github history to wipe evidence of Clau」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 0.238,
+    "reddit_localllama": 1.11
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 2,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-07",
+    "peak_day": "2026-10-10",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "reddit_localllama",
+      "title": "Strata rewrote their Github history to wipe evidence of Claude-authoring",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x15a8w/strata_rewrote_their_github_history_to_wipe/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "\"Strata\" for GLM5.3 Flash is here for some! Project Maya",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x3fxzj/strata_for_glm53_flash_is_here_for_some_project/"
+     },
+     {
+      "source": "github_new",
+      "title": "hongfaqiu/strata-manager",
+      "url": "https://github.com/hongfaqiu/strata-manager"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": {
+    "url": "https://github.com/Niko1221/Strata",
+    "created_at": "2026-09-24T16:40:20Z",
+    "stars": 24560,
+    "description": "Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optional image input."
+   },
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 13,
+   "keyword": "JEV",
+   "entity_id": "jev",
+   "kind": "model",
+   "category": "model",
+   "tags": [
+    "models"
+   ],
+   "score": 40.6,
+   "vendor": null,
+   "primary": {
+    "url": "https://huggingface.co/autotrust/JEV-35B-NVFP4",
+    "published_at": "2026-10-11T03:05:28+00:00",
+    "date_basis": "published",
+    "source_type": "model_card",
+    "title": "autotrust/JEV-35B-NVFP4",
+    "event_id": "ecbc41c78c"
+   },
+   "events": [
+    {
+     "kind": "model",
+     "source": "hf_models",
+     "url": "https://huggingface.co/autotrust/JEV-35B-NVFP4",
+     "published_at": "2026-10-11T03:05:28+00:00",
+     "source_type": "model_card",
+     "title": "autotrust/JEV-35B-NVFP4",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "ecbc41c78c"
+    },
+    {
+     "kind": "model",
+     "source": "hf_models",
+     "url": "https://huggingface.co/autotrust/JEV-35B",
+     "published_at": "2026-10-11T01:22:03+00:00",
+     "source_type": "model_card",
+     "title": "autotrust/JEV-35B",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "e9f8fd04a0"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_models",
+     "title": "autotrust/JEV-35B",
+     "url": "https://huggingface.co/autotrust/JEV-35B",
+     "metric": 451.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "hf_models",
+     "title": "autotrust/JEV-35B-NVFP4",
+     "url": "https://huggingface.co/autotrust/JEV-35B-NVFP4",
+     "metric": 204.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "hf_spaces",
+     "title": "multimodalart/jev-decision-index",
+     "url": "https://huggingface.co/spaces/multimodalart/jev-decision-index",
+     "metric": 137.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "hackernews",
+     "title": "Show HN: Jevman – AI decision models play Pac-Man",
+     "url": "https://opper.ai/jevman-benchmark/",
+     "metric": 81.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Decision 3.0: open, multimodal decision models from 0.6B to 27B. Ranks #1 on both Jev Decision Index boards",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x3th4p/decision_30_open_multimodal_decision_models_from/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "jevman: AI decision models play Pac-Man",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0sm1b/jevman_ai_decision_models_play_pacman/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_ollama",
+     "title": "Time to clean up those coloring pages... Qwen3.8:27b-mlx, anyone using Semif or Laya (alternatives to Jev)?",
+     "url": "https://www.reddit.com/r/ollama/comments/1x4l3jo/time_to_clean_up_those_coloring_pages/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "devto",
+     "title": "How Do We Extract the “Why” from a PR into a CHANGELOG with Jev? 🤔",
+     "url": "https://dev.to/nyaomaru/how-do-we-extract-the-why-from-a-pr-into-a-changelog-with-jev-52pk",
+     "metric": 98.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "devto",
+     "title": "I got Jev to zero mistakes. I'm still using Flash-Lite.",
+     "url": "https://dev.to/theycallmeswift/i-got-jev-to-zero-mistakes-im-still-using-flash-lite-2mo7",
+     "metric": 45.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "bluesky",
+     "title": "Jeyzma is like @typesafeai.bsky.social minus $870 million plus @golang.org & @tinygo.org & @hf.co llama.cpp \n\nGo make a ",
+     "url": "https://bsky.app/profile/yzma.ai/post/3mxj4e7swhc2t",
+     "metric": 13.0,
+     "metric_name": "likes+2*reposts"
+    }
+   ],
+   "official_urls": [
+    "https://huggingface.co/autotrust/JEV-35B",
+    "https://huggingface.co/autotrust/JEV-35B-NVFP4"
+   ],
+   "official_verified": false,
+   "summary": "autotrust/JEV-35B-NVFP4。7ソースで言及(代表: 「autotrust/JEV-35B」)",
+   "slides": [],
+   "score_breakdown": {
+    "hf_models": 1.056,
+    "hf_spaces": 0.45,
+    "hackernews": 0.606,
+    "reddit_localllama": 1.2,
+    "reddit_ollama": 0.098,
+    "devto": 0.604,
+    "bluesky": 0.158
+   },
+   "velocity": {
+    "hn_this_week": 8,
+    "hn_prev_week": 11,
+    "factor": 0.35
+   },
+   "why": {
+    "first_seen": "2026-09-17",
+    "peak_day": "2026-10-10",
+    "co_mentioned": [
+     "clef"
+    ],
+    "evidence": [
+     {
+      "source": "reddit_localllama",
+      "title": "Decision 3.0: open, multimodal decision models from 0.6B to 27B. Ranks #1 on both Jev Decision Index boards",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x3th4p/decision_30_open_multimodal_decision_models_from/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "jevman: AI decision models play Pac-Man",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0sm1b/jevman_ai_decision_models_play_pacman/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "Created laya : Now Introducing a new 800 Million Param physics-based typed decision model with 73k context and image support",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x28zr9/created_laya_now_introducing_a_new_800_million/"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 14,
+   "keyword": "MLX",
+   "entity_id": "mlx",
+   "kind": "release",
+   "category": "local-runtime",
+   "tags": [
+    "local-llm",
+    "hardware"
+   ],
+   "score": 37.8,
+   "vendor": "Apple",
+   "primary": {
+    "url": "https://github.com/ml-explore/mlx/releases/tag/v0.32.4",
+    "published_at": "2026-10-14T20:07:04+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "mlx v0.32.4",
+    "event_id": "ee6f6d2d21"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ml-explore/mlx/releases/tag/v0.32.4",
+     "published_at": "2026-10-14T20:07:04+00:00",
+     "source_type": "release_note",
+     "title": "mlx v0.32.4",
+     "vendor": "Apple",
+     "date_basis": "published",
+     "event_id": "ee6f6d2d21"
+    }
+   ],
+   "sources": [
+    {
+     "name": "reddit_ollama",
+     "title": "embeddinggemma-2 MLX only?",
+     "url": "https://www.reddit.com/r/ollama/comments/1x1pygz/embeddinggemma2_mlx_only/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_ollama",
+     "title": "Time to clean up those coloring pages... Qwen3.8:27b-mlx, anyone using Semif or Laya (alternatives to Jev)?",
+     "url": "https://www.reddit.com/r/ollama/comments/1x4l3jo/time_to_clean_up_those_coloring_pages/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "pypi",
+     "title": "mlx-lm",
+     "url": "https://pypi.org/project/mlx-lm/",
+     "metric": 137103.0,
+     "metric_name": "downloads_week"
+    },
+    {
+     "name": "bluesky",
+     "title": "Ollama v0.40.4 adds decision model support to CLI with `ollama run`, plus MLX runner support for Kev models on Apple sil",
+     "url": "https://bsky.app/profile/minaxlab.bsky.social/post/3mxtfs6cm2s2n",
+     "metric": 0.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "bluesky",
+     "title": "Ollama v0.40.4\n\nDecision models can now be used directly from the CLI with ollama run, for yes/no questions, text classi",
+     "url": "https://bsky.app/profile/whatsnew.fyi/post/3mxskpivxgr2l",
+     "metric": 0.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "gh_releases",
+     "title": "mlx v0.32.4",
+     "url": "https://github.com/ml-explore/mlx/releases/tag/v0.32.4",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/ml-explore/mlx/releases/tag/v0.32.4",
+    "https://github.com/ml-explore/mlx"
+   ],
+   "official_verified": true,
+   "summary": "mlx v0.32.4。4ソースで言及(代表: 「mlx v0.32.4」)",
+   "slides": [],
+   "score_breakdown": {
+    "reddit_ollama": 0.458,
+    "pypi": 0.33,
+    "bluesky": 0.0,
+    "gh_releases": 0.6
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-09",
+    "peak_day": "2026-10-14",
+    "co_mentioned": [
+     "Ollama"
+    ],
+    "evidence": [
+     {
+      "source": "reddit_ollama",
+      "title": "embeddinggemma-2 MLX only?",
+      "url": "https://www.reddit.com/r/ollama/comments/1x1pygz/embeddinggemma2_mlx_only/"
+     },
+     {
+      "source": "reddit_ollama",
+      "title": "Time to clean up those coloring pages... Qwen3.8:27b-mlx, anyone using Semif or Laya (alternatives to Jev)?",
+      "url": "https://www.reddit.com/r/ollama/comments/1x4l3jo/time_to_clean_up_those_coloring_pages/"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 15,
+   "keyword": "ARTEX",
+   "entity_id": "artex",
+   "kind": "product",
+   "category": "dev-tool",
+   "tags": [
+    "agents",
+    "tools"
+   ],
+   "score": 36.7,
+   "vendor": null,
+   "primary": {
+    "url": "https://github.com/mhtsec/ARTEX",
+    "published_at": "2026-10-08T05:33:06+00:00",
+    "date_basis": "published",
+    "source_type": "repo",
+    "title": "mhtsec/ARTEX",
+    "event_id": "5f2ed9119e"
+   },
+   "events": [
+    {
+     "kind": "repo",
+     "source": "github_new",
+     "url": "https://github.com/mhtsec/ARTEX",
+     "published_at": "2026-10-08T05:33:06+00:00",
+     "source_type": "repo",
+     "title": "mhtsec/ARTEX",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "5f2ed9119e"
+    },
+    {
+     "kind": "repo",
+     "source": "github_new",
+     "url": "https://github.com/mhtsec/ARTEX",
+     "published_at": "2026-10-08T05:33:06+00:00",
+     "source_type": "repo",
+     "title": "mhtsec/ARTEX",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "5f2ed9119e"
+    }
+   ],
+   "sources": [
+    {
+     "name": "github_new",
+     "title": "mhtsec/ARTEX",
+     "url": "https://github.com/mhtsec/ARTEX",
+     "metric": 4070.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "github_new",
+     "title": "trhhubsd/ARTEXX",
+     "url": "https://github.com/trhhubsd/ARTEXX",
+     "metric": 1206.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Last week some of South Korea's biggest banks were hit by a cyberattack. We now know the entire hack may have been done ",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0n4pt/last_week_some_of_south_koreas_biggest_banks_were/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/mhtsec/ARTEX"
+   ],
+   "official_verified": false,
+   "summary": "mhtsec/ARTEX ― AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目。2ソースで言及(代表: 「Last week some of South Korea's biggest banks were hit by a 」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 1.092,
+    "reddit_localllama": 0.93,
+    "x_aux": 0.22
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-08",
+    "peak_day": "2026-10-08",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "github_new",
+      "title": "mhtsec/ARTEX",
+      "url": "https://github.com/mhtsec/ARTEX"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "Last week some of South Korea's biggest banks were hit by a cyberattack. We now know the entire hack may have been done by a single person. ",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0n4pt/last_week_some_of_south_koreas_biggest_banks_were/"
+     },
+     {
+      "source": "github_new",
+      "title": "trhhubsd/ARTEXX",
+      "url": "https://github.com/trhhubsd/ARTEXX"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": {
+    "url": "https://github.com/mhtsec/ARTEX",
+    "created_at": "2026-10-08T05:33:06Z",
+    "stars": 4071,
+    "description": "AI 自主渗透测试系统 | 百度“agent+”攻防挑战赛冠军项目"
+   },
+   "trend_label": "baseline",
+   "x_posts": [
+    {
+     "url": "https://x.com/AndrewCurran_/status/2108108695876092323",
+     "author": "AndrewCurran_",
+     "likes": 5124,
+     "reposts": 618,
+     "views": 1490945,
+     "text": "Last week some of South Korea's biggest banks were hit by a cyberattack. Thanks to a report from CrowdStrike tonight, we now know the entire hack may have been done by a single person. He used a combi",
+     "via": "link"
+    }
+   ]
+  },
+  {
+   "rank": 16,
+   "keyword": "SageMaker",
+   "entity_id": "sagemaker",
+   "kind": "product",
+   "category": "dev-tool",
+   "tags": [
+    "agents",
+    "tools"
+   ],
+   "score": 35.7,
+   "vendor": null,
+   "primary": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-social-sign-in/",
+    "published_at": "2026-10-14T17:00:00+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "Amazon SageMaker Studio simplifies getting started for new AI/ML builders with social sign-in",
+    "event_id": "9c41a7d7d9"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-social-sign-in/",
+     "published_at": "2026-10-14T17:00:00+00:00",
+     "source_type": "release_note",
+     "title": "Amazon SageMaker Studio simplifies getting started for new AI/ML builders with social sign-in",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "event_id": "9c41a7d7d9"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/blogs/machine-learning/deploy-and-evaluate-models-with-amazon-sagemaker-jumpstart/",
+     "published_at": "2026-10-14T13:14:36+00:00",
+     "source_type": "announcement",
+     "title": "Deploy and evaluate models with Amazon SageMaker JumpStart",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "event_id": "60e753e373"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/blogs/machine-learning/mixture-of-experts-kernel-engineering-on-amazon-sagemaker-ai/",
+     "published_at": "2026-10-13T15:17:09+00:00",
+     "source_type": "announcement",
+     "title": "Mixture-of-Experts kernel engineering on Amazon SageMaker AI",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "event_id": "3bc7b013b1"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/bring-sagemaker-ai-expertise-to-your-coding-agent/",
+     "published_at": "2026-10-13T14:00:00+00:00",
+     "source_type": "release_note",
+     "title": "Bring deep SageMaker AI expertise to your coding agent with the AWS AI/ML skill in the Agent Toolkit for AWS",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "event_id": "ba19f46941"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/blogs/machine-learning/deploy-decision-models-with-llama-cpp-on-amazon-sagemaker-ai/",
+     "published_at": "2026-10-12T15:51:46+00:00",
+     "source_type": "announcement",
+     "title": "Deploy decision models with llama.cpp on Amazon SageMaker AI",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "event_id": "67a407aeda"
+    }
+   ],
+   "sources": [
+    {
+     "name": "bluesky",
+     "title": "🤖 **Deploy decision models with llama.cpp on Amazon SageMaker AI**\n\nLearn how to deploy decision models with llama.cpp o",
+     "url": "https://bsky.app/profile/feed.igeek.gamer-geek-news.com.ap.brid.gy/post/3mxujorrbtvc2",
+     "metric": 2.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "bluesky",
+     "title": "🤖 **Deploy decision models with llama.cpp on Amazon SageMaker AI**\n\nLearn how to deploy decision models with llama.cpp o",
+     "url": "https://bsky.app/profile/feed.igeek.gamer-geek-news.com.ap.brid.gy/post/3mxovdcpnvhs2",
+     "metric": 2.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "official",
+     "title": "Deploy and evaluate models with Amazon SageMaker JumpStart",
+     "url": "https://aws.amazon.com/blogs/machine-learning/deploy-and-evaluate-models-with-amazon-sagemaker-jumpstart/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "official",
+     "title": "Mixture-of-Experts kernel engineering on Amazon SageMaker AI",
+     "url": "https://aws.amazon.com/blogs/machine-learning/mixture-of-experts-kernel-engineering-on-amazon-sagemaker-ai/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-social-sign-in/"
+   ],
+   "official_verified": true,
+   "summary": "Amazon SageMaker Studio simplifies getting started for new AI/ML builders with social sign ― Learn how to deploy an available model from Amazon SageMaker JumpStart, run a lightweight and repeatable perfo。2ソースで言及(代表: 「Deploy and evaluate models with Amazon SageMaker JumpStart」)",
+   "slides": [],
+   "score_breakdown": {
+    "bluesky": 0.082,
+    "official": 1.2
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-08",
+    "peak_day": "2026-10-12",
+    "co_mentioned": [
+     "llama.cpp"
+    ],
+    "evidence": []
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 17,
+   "keyword": "clef",
+   "entity_id": "clef",
+   "kind": "model",
+   "category": "model",
+   "tags": [
+    "models",
+    "local-llm"
+   ],
+   "score": 35.5,
+   "vendor": null,
+   "primary": {
+    "url": "https://huggingface.co/Cloudflare/clef-omni",
+    "published_at": "2026-10-09T04:10:22+00:00",
+    "date_basis": "published",
+    "source_type": "model_card",
+    "title": "Cloudflare/clef-omni",
+    "event_id": "f67cd5597e"
+   },
+   "events": [
+    {
+     "kind": "model",
+     "source": "hf_models",
+     "url": "https://huggingface.co/Cloudflare/clef-omni",
+     "published_at": "2026-10-09T04:10:22+00:00",
+     "source_type": "model_card",
+     "title": "Cloudflare/clef-omni",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "f67cd5597e"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_models",
+     "title": "Cloudflare/clef",
+     "url": "https://huggingface.co/Cloudflare/clef",
+     "metric": 296.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "hf_models",
+     "title": "Cloudflare/clef-flash",
+     "url": "https://huggingface.co/Cloudflare/clef-flash",
+     "metric": 138.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "hackernews",
+     "title": "Show HN: Jevman – AI decision models play Pac-Man",
+     "url": "https://opper.ai/jevman-benchmark/",
+     "metric": 81.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Running decision model locally on an RTX 4090 to find out which one is the fastest",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0wg85/running_decision_model_locally_on_an_rtx_4090_to/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "jevman: AI decision models play Pac-Man",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0sm1b/jevman_ai_decision_models_play_pacman/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_ollama",
+     "title": "Web browsing was implemented using only the **Clef-Flash 9B decision model**, running locally.",
+     "url": "https://www.reddit.com/r/ollama/comments/1x3buc0/web_browsing_was_implemented_using_only_the/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "ollama",
+     "title": "clef-flash",
+     "url": "https://ollama.com/library/clef-flash",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "ollama",
+     "title": "clef",
+     "url": "https://ollama.com/library/clef",
+     "metric": 0.0,
+     "metric_name": "rank"
+    }
+   ],
+   "official_urls": [
+    "https://huggingface.co/Cloudflare/clef",
+    "https://ollama.com/library/clef"
+   ],
+   "official_verified": false,
+   "summary": "Cloudflare/clef-omni ― Clef-Flash is a 9B multimodal model that turns a state and a schema of typed questions into decisions.。5ソースで言及(代表: 「Cloudflare/clef」)",
+   "slides": [],
+   "score_breakdown": {
+    "hf_models": 1.152,
+    "hackernews": 0.606,
+    "reddit_localllama": 0.917,
+    "reddit_ollama": 0.462,
+    "ollama": 0.685
+   },
+   "velocity": {
+    "hn_this_week": 2,
+    "hn_prev_week": 3,
+    "factor": 0.35
+   },
+   "why": {
+    "first_seen": "2026-09-30",
+    "peak_day": "2026-10-08",
+    "co_mentioned": [
+     "JEV"
+    ],
+    "evidence": [
+     {
+      "source": "reddit_localllama",
+      "title": "Running decision model locally on an RTX 4090 to find out which one is the fastest",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0wg85/running_decision_model_locally_on_an_rtx_4090_to/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "jevman: AI decision models play Pac-Man",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x0sm1b/jevman_ai_decision_models_play_pacman/"
+     },
+     {
+      "source": "reddit_ollama",
+      "title": "Web browsing was implemented using only the **Clef-Flash 9B decision model**, running locally.",
+      "url": "https://www.reddit.com/r/ollama/comments/1x3buc0/web_browsing_was_implemented_using_only_the/"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 18,
+   "keyword": "talorys",
+   "entity_id": "talorys",
+   "kind": "release",
+   "category": "dev-tool",
+   "tags": [
+    "agents",
+    "tools"
+   ],
+   "score": 34.7,
+   "vendor": null,
+   "primary": {
+    "url": "https://github.com/rociiu/talorys/releases/tag/create-talorys%400.1.6",
+    "published_at": "2026-10-13T07:41:41+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "rociiu/talorys create-talorys@0.1.6: Release 0.1.6 (#34)",
+    "event_id": "93d112df3b"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/rociiu/talorys/releases/tag/create-talorys%400.1.6",
+     "published_at": "2026-10-13T07:41:41+00:00",
+     "source_type": "release_note",
+     "title": "rociiu/talorys create-talorys@0.1.6: Release 0.1.6 (#34)",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "93d112df3b"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/rociiu/talorys/releases/tag/create-talorys%400.1.5",
+     "published_at": "2026-10-12T00:28:22+00:00",
+     "source_type": "release_note",
+     "title": "rociiu/talorys create-talorys@0.1.5: Release 0.1.5 (#17)",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "46766d1165"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/rociiu/talorys/releases/tag/create-talorys%400.1.1",
+     "published_at": "2026-10-10T11:05:27+00:00",
+     "source_type": "release_note",
+     "title": "rociiu/talorys create-talorys@0.1.1: Bump TALORYS_VERSION to 0.1.1",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "ca592848ca"
+    },
+    {
+     "kind": "repo",
+     "source": "github_new",
+     "url": "https://github.com/rociiu/talorys",
+     "published_at": "2026-10-10T09:46:56+00:00",
+     "source_type": "repo",
+     "title": "rociiu/talorys",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "d546761c51"
+    },
+    {
+     "kind": "repo",
+     "source": "github_new",
+     "url": "https://github.com/rociiu/talorys",
+     "published_at": "2026-10-10T09:46:56+00:00",
+     "source_type": "repo",
+     "title": "rociiu/talorys",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "d546761c51"
+    }
+   ],
+   "sources": [
+    {
+     "name": "github_new",
+     "title": "rociiu/talorys",
+     "url": "https://github.com/rociiu/talorys",
+     "metric": 997.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "hackernews",
+     "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+     "url": "https://github.com/rociiu/talorys",
+     "metric": 329.0,
+     "metric_name": "points"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/rociiu/talorys/releases/tag/create-talorys%400.1.6",
+    "https://github.com/rociiu/talorys"
+   ],
+   "official_verified": true,
+   "summary": "rociiu/talorys create-talorys@0.1.6: Release 0.1.6 (#34) ― Your personal AI agent in your own Cloudflare account. Chat, memory, tasks, notes and scheduled reminders, dep。2ソースで言及(代表: 「Talorys – A self-hosted personal AI agent on Cloudflare's fr」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 0.748,
+    "hackernews": 0.798
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-10",
+    "peak_day": "2026-10-10",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "github_new",
+      "title": "rociiu/talorys",
+      "url": "https://github.com/rociiu/talorys"
+     },
+     {
+      "source": "hackernews",
+      "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
+      "url": "https://github.com/rociiu/talorys"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": {
+    "url": "https://github.com/rociiu/talorys",
+    "created_at": "2026-10-10T09:46:56Z",
+    "stars": 997,
+    "description": "Your personal AI agent in your own Cloudflare account. Chat, memory, tasks, notes and scheduled reminders, deployed with one command: npx create-talorys@latest. Free-tier friendly, single-user, no telemetry."
+   },
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 19,
+   "keyword": "Grok 4.7",
+   "entity_id": "grok-4-7",
+   "kind": "model",
+   "category": "model",
+   "tags": [
+    "models",
+    "tools"
+   ],
+   "score": 32.7,
+   "vendor": "xAI",
+   "primary": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/",
+    "published_at": "2026-10-13T15:52:20+00:00",
+    "date_basis": "published",
+    "source_type": "announcement",
+    "title": "Build long-horizon agents with Grok 4.7 on Amazon Bedrock",
+    "event_id": "0bc1dfb29a"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/",
+     "published_at": "2026-10-13T15:52:20+00:00",
+     "source_type": "announcement",
+     "title": "Build long-horizon agents with Grok 4.7 on Amazon Bedrock",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "event_id": "0bc1dfb29a"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_models",
+     "title": "nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2",
+     "url": "https://huggingface.co/nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2",
+     "metric": 305.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "official",
+     "title": "Build long-horizon agents with Grok 4.7 on Amazon Bedrock",
+     "url": "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/"
+   ],
+   "official_verified": true,
+   "summary": "Build long-horizon agents with Grok 4.7 on Amazon Bedrock ― Grok 4.7 is now available on Amazon Bedrock. In this post, we build a tool-calling agent on Grok 4.7 and evalu。2ソースで言及(代表: 「nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astr」)",
+   "slides": [],
+   "score_breakdown": {
+    "hf_models": 0.812,
+    "official": 0.8
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-04",
+    "peak_day": "2026-10-04",
+    "co_mentioned": [],
+    "evidence": []
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  },
+  {
+   "rank": 20,
+   "keyword": "AgentCore",
+   "entity_id": "agentcore",
+   "kind": "product",
+   "category": "dev-tool",
+   "tags": [
+    "agents",
+    "tools"
+   ],
+   "score": 32.5,
+   "vendor": "AWS",
+   "primary": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-self-improving-document-processing-using-amazon-bedrock-agentcore/",
+    "published_at": "2026-10-14T16:24:07+00:00",
+    "date_basis": "published",
+    "source_type": "announcement",
+    "title": "Build self-improving document processing using Amazon Bedrock AgentCore",
+    "event_id": "bca2d2ca6b"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/blogs/machine-learning/build-self-improving-document-processing-using-amazon-bedrock-agentcore/",
+     "published_at": "2026-10-14T16:24:07+00:00",
+     "source_type": "announcement",
+     "title": "Build self-improving document processing using Amazon Bedrock AgentCore",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "event_id": "bca2d2ca6b"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/blogs/machine-learning/generate-presentations-with-amazon-bedrock-agentcore/",
+     "published_at": "2026-10-14T13:58:43+00:00",
+     "source_type": "announcement",
+     "title": "Generate presentations with Amazon Bedrock AgentCore",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "event_id": "e4cc317106"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/blogs/machine-learning/building-agents-that-transact-with-anchor-browser-and-agentcore-payments/",
+     "published_at": "2026-10-13T20:10:33+00:00",
+     "source_type": "announcement",
+     "title": "Building agents that transact with Anchor Browser and AgentCore payments",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "event_id": "d6b1c2cd87"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/blogs/machine-learning/how-shipstation-global-built-an-ai-it-help-desk-on-amazon-bedrock-agentcore/",
+     "published_at": "2026-10-13T15:54:49+00:00",
+     "source_type": "announcement",
+     "title": "How ShipStation Global built an AI IT help desk on Amazon Bedrock AgentCore",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "event_id": "0e76db718c"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/agentcore-memory-consumption-based-pricing",
+     "published_at": "2026-10-12T16:00:00+00:00",
+     "source_type": "release_note",
+     "title": "Announcing consumption-based pricing for short-term memory in Amazon Bedrock AgentCore",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "event_id": "159e6d455f"
+    }
+   ],
+   "sources": [
+    {
+     "name": "devto",
+     "title": "Where the spending rules live: agent authorization on AWS vs Sui",
+     "url": "https://dev.to/lewisawe/where-the-spending-rules-live-agent-authorization-on-aws-vs-sui-2bfe",
+     "metric": 3.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "official",
+     "title": "Build self-improving document processing using Amazon Bedrock AgentCore",
+     "url": "https://aws.amazon.com/blogs/machine-learning/build-self-improving-document-processing-using-amazon-bedrock-agentcore/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "official",
+     "title": "Generate presentations with Amazon Bedrock AgentCore",
+     "url": "https://aws.amazon.com/blogs/machine-learning/generate-presentations-with-amazon-bedrock-agentcore/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://aws.amazon.com/blogs/machine-learning/build-self-improving-document-processing-using-amazon-bedrock-agentcore/"
+   ],
+   "official_verified": true,
+   "summary": "Build self-improving document processing using Amazon Bedrock AgentCore ― Learn how to build an agentic intelligent document processing (IDP) system using Amazon Bedrock AgentCore that。2ソースで言及(代表: 「Build self-improving document processing using Amazon Bedroc」)",
+   "slides": [],
+   "score_breakdown": {
+    "devto": 0.151,
+    "official": 1.2
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-08",
+    "peak_day": "2026-10-13",
+    "co_mentioned": [],
+    "evidence": []
+   },
+   "related": [
+    "S3 Vectors",
+    "BlockRun",
+    "CloudFront",
+    "DataSync",
+    "ElastiCache",
+    "GameLift",
+    "GuardDuty",
+    "HealthOmics",
+    "LiveTaskCount",
+    "OpenSearch",
+    "Route 53",
+    "S3 Express",
+    "Server 2022",
+    "ShipStation",
+    "TwelveLabs",
+    "September 2026"
+   ],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": []
+  }
+ ],
+ "pending": [
+  {
+   "keyword": "Qwen3",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "Qwen3.8",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "glm-5.3",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "laya",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "qwen3.5",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "embeddinggemma-2",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "gemma4",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "clef-flash",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "DeepSeek-V4.1-Flash",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "OpenCode",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "kev",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "MiniCPM",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "NVIDIA Blackwell",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "nemotron3",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "MiniCPM-V-4.7",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "NVIDIA DGX Spark",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "whistle",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "Mellum2.1",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "MiniMax-H3",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "kimi-k3",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "LightOnOCR-3",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "mistral-large-4",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "drama-3",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "BFS-Best-Face-Swap",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "strands-decider",
+   "reason": "no primary source dated inside the window"
+  }
+ ],
+ "rejected": [
+  {
+   "keyword": "rea",
+   "reasons": [
+    "anomalous weekly stars (183758)"
+   ]
+  },
+  {
+   "keyword": "OpenClaw",
+   "reasons": [
+    "promotional wording"
+   ]
+  }
+ ],
+ "merged_vendor_duplicates": [
+  "LFM2.5",
+  "S3 Vectors",
+  "BlockRun",
+  "CloudFront",
+  "DataSync",
+  "ElastiCache",
+  "GameLift",
+  "GuardDuty",
+  "HealthOmics",
+  "HydraFusion",
+  "LiveTaskCount",
+  "OpenSearch",
+  "Route 53",
+  "S3 Express",
+  "Server 2022",
+  "ShipStation",
+  "SimReady",
+  "TwelveLabs",
+  "September 2026"
+ ],
+ "stoplisted": [
+  "Agent Skills",
+  "Anthropic",
+  "Apple Silicon",
+  "Benchmarking",
+  "ChatGPT",
+  "Cloudflare",
+  "Cursor",
+  "DeepSeek",
+  "Design",
+  "Diffusion",
+  "Docker",
+  "English",
+  "Evidence",
+  "Flash",
+  "GGUF",
+  "GeForce",
+  "Gemini",
+  "Google DeepMind",
+  "Hugging Face",
+  "Image",
+  "Intel",
+  "LangChain",
+  "Linux",
+  "MCP",
+  "Microsoft Foundry",
+  "Mixture",
+  "Mixture of Experts",
+  "OpenAI",
+  "Pixel",
+  "PublicationList",
+  "PyTorch",
+  "Quantization",
+  "RAG",
+  "Reinforcement learning (RLVR)",
+  "Speculative decoding",
+  "Spotify",
+  "Telegram",
+  "Transformers",
+  "WebUI",
+  "Windows",
+  "extract",
+  "skills"
+ ],
+ "leads_unverified": [
+  {
+   "author": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI/status/2110047081414987957",
+   "text": "New on our Engineering blog: Creating in-house source control. \n\nIn May, we merged around 2,500 code changes per day. In September, we merged more than 30,000 p",
+   "links": [
+    "https://www.anthropic.com/engineering/redesigning-source-control"
+   ],
+   "likes": 24249,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI/status/2109795898909950247",
+   "text": "Over the last few months, we’ve made significant progress in reducing the effectiveness of distillation attacks against Claude.\n\nIn this post, we explain how: h",
+   "links": [
+    "https://www.anthropic.com/research/distillation-defenses"
+   ],
+   "likes": 6233,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI/status/2108290395599667700",
+   "text": "An astrophysicist worked with Claude Science to create the first complete ultraviolet map of the sky. Astronomers have already created complete sky maps from ra",
+   "links": [
+    "https://www.anthropic.com/research/the-missing-map-of-the-sky"
+   ],
+   "likes": 4705,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI/status/2108680150556737819",
+   "text": "We’re beginning a process of publishing more frequent reports on model behavior, beyond what appears in our system cards and regular risk reports.\n\nToday’s repo",
+   "links": [
+    "https://www.anthropic.com/research/investigating-unintended-model-actions"
+   ],
+   "likes": 4546,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI/status/2110289695888511368",
+   "text": "We’ve opened an office in Singapore—our fifth in the Asia-Pacific region. We’ve also signed an MOU with the Government of Singapore on AI safety and responsible",
+   "links": [
+    "https://www.anthropic.com/news/singapore-office-opening"
+   ],
+   "likes": 3077,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI/status/2108226292235809081",
+   "text": "We're deepening our commitment to scientific research and technological discovery by committing $150 million to the Genesis Mission.\n\nWe'll also make Claude and",
+   "links": [
+    "https://www.anthropic.com/news/genesis-mission-commitment"
+   ],
+   "likes": 3026,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI/status/2108302539498414208",
+   "text": "We’re launching the Anthropic Cyber Mission, a new effort to secure critical infrastructure and open-source software.\n\nhttps://www.anthropic.com/news/anthropic-",
+   "links": [
+    "https://www.anthropic.com/news/anthropic-cyber-mission"
+   ],
+   "likes": 2667,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "OpenAI",
+   "url": "https://x.com/OpenAI/status/2110442001749659890",
+   "text": "European businesses are rapidly expanding their use of AI agents. More than half of the AI use among our EU enterprise and business customers now involves these",
+   "links": [
+    "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic/"
+   ],
+   "likes": 1566,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  }
+ ],
+ "candidates_pool": 83
+}

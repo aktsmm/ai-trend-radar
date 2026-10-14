@@ -33,7 +33,8 @@ SIZE_RE = re.compile(r"^(\d+(\.\d+)?[bmkt]|a\d+(\.\d+)?b|\d+x\d+b|\d{4}|q\d.*|iq
 
 
 def norm(s):
-    return " " + re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip() + " "
+    t = re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).strip()
+    return " " + re.sub(r"([a-z])\s+(\d)", r"\1\2", t) + " "  # 'qwen 3 8' == 'qwen3 8'
 
 
 def clean_model_name(raw):
@@ -47,7 +48,7 @@ def vendor_of(name, org=""):
     n = norm(name + " " + org)
     for v, pats in VENDOR_PATTERNS.items():
         for p in pats:
-            if f" {p} " in n or any(w.startswith(p) and len(p) >= 4 for w in n.split()):
+            if f" {p} " in n or any(w.startswith(p) and (len(p) >= 4 or w[len(p):].isdigit()) for w in n.split()):
                 return v
     return None
 
@@ -228,9 +229,9 @@ def score(items, C, xposts):
         groups = {SOURCES[s][1] for s in hits}
         n_src = len(hits)
         # dynamic text-only names need independent confirmation; structured names may stand alone if strong
-        if c.get("dyn_text") and n_src < 2:
+        if c.get("dyn_text") and n_src < 2 and sum(len(v) for v in hits.values()) < 3:
             continue
-        if n_src < 2 and total < 0.9:
+        if n_src < 2 and total < 0.9 and not (set(hits) & {"official", "gh_releases"}):
             continue
         total += 0.25 * (len(groups) - 1)
         results.append({"key": key, "c": c, "hits": hits, "pre": total, "breakdown": breakdown, "groups": groups})

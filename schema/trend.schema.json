@@ -14,6 +14,11 @@
     "source_status": { "type": "object" },
     "x_integration": { "type": "object" },
     "candidates_pool": { "type": "integer" },
+    "last_successful_report_at": { "type": "string", "format": "date-time" },
+    "baseline": { "type": "object" },
+    "pending": { "type": "array", "items": { "type": "object", "required": ["keyword", "reason"] } },
+    "leads_unverified": { "type": "array" },
+    "official_ledger": { "type": "object" },
     "trends": { "type": "array", "items": { "$ref": "#/$defs/trend" } }
   },
   "$defs": {
@@ -40,10 +45,33 @@
     },
     "trend": {
       "type": "object",
-      "required": ["keyword", "tags", "score", "sources", "official_urls", "summary", "slides"],
+      "required": ["keyword", "entity_id", "kind", "category", "tags", "score", "primary", "sources", "official_urls", "summary", "slides"],
       "properties": {
         "rank": { "type": "integer", "minimum": 1 },
         "keyword": { "type": "string", "minLength": 2 },
+        "entity_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9\\-]*$" },
+        "kind": { "enum": ["model", "release", "product", "paper", "hardware", "repo"] },
+        "category": { "enum": ["model", "dev-tool", "local-runtime", "hardware", "research", "github-trending"] },
+        "trend_label": { "enum": ["baseline", "rising"] },
+        "primary": {
+          "type": "object",
+          "required": ["url", "published_at", "date_basis", "source_type", "title"],
+          "properties": {
+            "url": { "type": "string", "pattern": "^https://" },
+            "published_at": { "type": ["string", "null"], "format": "date-time" },
+            "date_basis": { "enum": ["published", "observed"] },
+            "source_type": { "enum": ["announcement", "release_note", "docs", "product_page", "model_card", "paper", "repo", "catalog", "trending"] },
+            "title": { "type": "string" },
+            "event_id": { "type": ["string", "null"] }
+          },
+          "if": { "properties": { "date_basis": { "const": "published" } } },
+          "then": { "properties": { "published_at": { "type": "string" } } }
+        },
+        "events": { "type": "array", "items": { "type": "object", "required": ["url", "source_type"] } },
+        "related": { "type": "array", "items": { "type": "string" } },
+        "resolved_repo": { "type": ["object", "null"] },
+        "why": { "type": "object" },
+        "velocity": { "type": "object" },
         "tags": { "type": "array", "items": { "$ref": "#/$defs/tag" }, "minItems": 1, "maxItems": 3, "uniqueItems": true },
         "score": { "type": "number", "minimum": 0, "maximum": 100 },
         "vendor": { "type": ["string", "null"] },
@@ -61,7 +89,7 @@
             "properties": {
               "url": { "type": "string" }, "author": { "type": "string" }, "text": { "type": "string" },
               "likes": { "type": "integer" }, "reposts": { "type": "integer" }, "views": { "type": "integer" },
-              "via": { "enum": ["link", "brave"] }
+              "via": { "enum": ["link", "brave", "watchlist"] }
             }
           }
         }

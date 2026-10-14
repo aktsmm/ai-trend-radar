@@ -252,4 +252,5 @@ SOURCES = {
     "lobsters": (lobsters, "community"), "devto": (devto, "community"), "arxiv": (arxiv, "research"),
     "ollama": (ollama_library, "local-llm"), "openrouter": (openrouter, "vendor"), "pypi": (pypi_stats, "tools"),
     "bluesky": (bluesky, "community"),
+    "official": (None, "vendor"), "gh_releases": (None, "tools"),  # filled by collect.run.run_official
 }

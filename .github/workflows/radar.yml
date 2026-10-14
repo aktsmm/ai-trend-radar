@@ -1,0 +1,36 @@
+name: radar
+on:
+  schedule:
+    - cron: "0 20 * * *"   # daily collect (05:00 JST)
+    - cron: "30 15 * * 0"  # weekly report (Mon 00:30 JST)
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt
+      - run: python -m unittest discover -s tests
+      - run: python -m collect.run
+        env: { PYTHONIOENCODING: utf-8, GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
+      - uses: actions/upload-artifact@v4   # raw + daily snapshots are artifacts, not Git content
+        with:
+          name: raw-${{ github.run_id }}
+          path: |
+            data/raw
+            data/snapshots
+          retention-days: 30
+      - name: Weekly report
+        if: github.event.schedule == '30 15 * * 0' || github.event_name == 'workflow_dispatch'
+        env: { PYTHONIOENCODING: utf-8, GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}", BRAVE_API_KEY: "${{ secrets.BRAVE_API_KEY }}" }
+        run: |
+          python -m analyze.report
+          python -m analyze.validate
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add data/reports site/data.js data/trends.json
+          git diff --cached --quiet || (git commit -m "weekly report" && git push)

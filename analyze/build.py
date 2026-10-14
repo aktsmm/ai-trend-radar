@@ -6,6 +6,7 @@ from collections import defaultdict
 from datetime import datetime, timezone
 
 from collect import x as xmod
+from collect.velocity import hn_velocity
 from collect.common import RAW, ROOT, X_URL_RE, NOW, SINCE_DATE
 from collect.sources import SOURCES
 from .lexicon import L, VENDOR_PATTERNS
@@ -147,6 +148,35 @@ def discover(items):
             add(name, ["tools"], None, vendor=vendor_of(name))
             if not existed and k in C:
                 C[k]["dyn_text"] = True
+    # coinages: names seen in GitHub repo names/topics AND mentioned in >=2 discussion items (catches new projects like 'Strata')
+    TEXT_SRC = ("hackernews", "reddit_localllama", "reddit_ollama", "reddit_ml", "lobsters", "devto", "bluesky")
+    gh_tokens = set()
+    for it in items:
+        if it["source"] in ("github_new", "github_trending"):
+            for part in re.split(r"[/\-_ ]+", it["title"]) + list(it.get("topics") or []):
+                for tk in re.findall(r"[A-Z]?[a-z]{5,}|[A-Z]{2,}(?![a-z])", part):
+                    gh_tokens.add(tk.lower())
+    seen_in = defaultdict(set)
+    for it in items:
+        if it["source"] in TEXT_SRC:
+            for tk in set(re.findall(r"\b[A-Z][a-z]{4,}\b|\b[A-Z][a-z]+[A-Z]\w+\b", it["title"] + " " + (it["text"] or "")[:600])):
+                if tk.lower() in gh_tokens:
+                    seen_in[tk].add(it["_i"])
+    low = defaultdict(int)
+    allc = defaultdict(int)
+    corpus = " ".join(it["title"] + " " + (it["text"] or "")[:600] for it in items if it["source"] in TEXT_SRC)
+    for tk in seen_in:
+        n_all = len(re.findall(r"\b%s\b" % re.escape(tk), corpus, re.I))
+        low[tk] = len(re.findall(r"\b%s\b" % re.escape(tk.lower()), corpus))
+        allc[tk] = max(n_all, 1)
+    for tk, idxs in seen_in.items():
+        if len(idxs) >= 2 and tk.lower() not in STOP and low[tk] / allc[tk] < 0.6:
+            k = norm(tk).strip()
+            if k not in C:
+                add(tk, ["tools"], None)
+                if k in C:
+                    C[k]["dyn_text"] = True
+                    C[k]["coin"] = True
     return C
 
 
@@ -259,10 +289,19 @@ def main():
     x_meta["posts_fetched"] = len(xposts)
     attach_x(results, items, xposts)
 
-    top = max((r["pre"] for r in results), default=1) or 1
+    results.sort(key=lambda r: -(r["pre"] + r["x_score"]))
+    pool = results[:150]
+    vel = hn_velocity([r["c"]["name"] for r in pool])
     for r in results:
-        r["total"] = r["pre"] + r["x_score"]
+        r["vel"] = vel.get(r["c"]["name"])
+        r["factor"] = rising_factor(r["vel"])
+        if r["c"].get("coin") and r["vel"] and sum(r["vel"]) >= 8:
+            r["factor"] = 0.0  # coined-looking token but widely used on HN = common word / established name
+        r["total"] = r["pre"] * r["factor"] + r["x_score"]
     results.sort(key=lambda r: -r["total"])
+    pool = results[:80]
+    annotate_why(pool, items)
+    themes = make_themes(pool, items)
     mx = results[0]["total"]
     out = []
     for r in results[:120]:
@@ -275,12 +314,74 @@ def main():
             e["official_urls"], e["slides"], e["official_verified"] = cur["official_urls"], cur["slides"], True
     data = {
         "generated_at": NOW.isoformat(), "window": {"from": SINCE_DATE, "to": NOW.strftime("%Y-%m-%d")},
-        "source_status": status["sources"], "x_integration": x_meta, "trends": selected, "candidates_pool": len(results),
+        "source_status": status["sources"], "x_integration": x_meta, "trends": selected, "themes": themes, "candidates_pool": len(results),
     }
     (ROOT / "data" / "trends.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     (ROOT / "site" / "data.js").write_text("window.TRENDS = " + json.dumps(data, ensure_ascii=False) + ";\n", encoding="utf-8")
     for e in selected:
         print(f"{e['rank']:>2} {e['score']:5.1f} {e['keyword']:<34} {','.join(e['tags']):<26} {e.get('vendor') or '-':<10} src={len(e['sources'])} x={e['score_breakdown'].get('x_aux', 0)}")
+
+
+def rising_factor(vel):
+    """Down-weight evergreen topics: ratio of HN stories this week vs previous week (4x or more = full weight)."""
+    if not vel or sum(vel) < 3:
+        return 0.7
+    g = math.log2((vel[0] + 1) / (vel[1] + 1))
+    return max(0.35, min(1.0, 0.35 + 0.65 * g / 2))
+
+
+def annotate_why(pool, items):
+    """Why is it rising? first-seen date, co-mentioned keywords (likely trigger / context), strongest evidence items."""
+    sets = [{i["_i"] for l in r["hits"].values() for i in l} for r in pool]
+    for n, r in enumerate(pool):
+        co = []
+        for m, r2 in enumerate(pool):
+            if m == n or r2["key"] in r["key"] or r["key"] in r2["key"]:
+                continue
+            shared = len(sets[n] & sets[m])
+            if shared >= 2:
+                co.append((shared, r2["c"]["name"]))
+        co.sort(reverse=True)
+        dated = sorted(i["created"][:10] for l in r["hits"].values() for i in l if i.get("created"))
+        peak = max(set(dated), key=dated.count) if dated else None
+        top_items = sorted((i for l in r["hits"].values() for i in l if i["source"] in ("reddit_localllama", "hackernews", "lobsters", "reddit_ollama", "github_new", "hf_papers")),
+                           key=lambda i: -i["_s"])[:3]
+        r["why"] = {"first_seen": dated[0] if dated else None, "peak_day": peak,
+                    "co_mentioned": [c for _, c in co[:5]],
+                    "evidence": [{"source": i["source"], "title": i["title"][:140], "url": i["url"]} for i in top_items]}
+
+
+def make_themes(pool, items, min_shared=3):
+    """Cluster keywords that share discussion items -> 'what is going on' themes."""
+    parent = list(range(len(pool)))
+
+    def find(a):
+        while parent[a] != a:
+            parent[a] = parent[parent[a]]
+            a = parent[a]
+        return a
+    sets = [{i["_i"] for l in r["hits"].values() for i in l if i["source"] not in ("arxiv", "pypi")} for r in pool]
+    for a in range(len(pool)):
+        for b in range(a + 1, len(pool)):
+            inter = len(sets[a] & sets[b])
+            if inter >= min_shared and inter / max(1, min(len(sets[a]), len(sets[b]))) >= 0.35:
+                parent[find(a)] = find(b)
+    groups = defaultdict(list)
+    for n in range(len(pool)):
+        groups[find(n)].append(n)
+    themes = []
+    for g in groups.values():
+        if len(g) < 3:
+            continue
+        cnt = defaultdict(int)
+        for n in g:
+            for i in sets[n]:
+                cnt[i] += 1
+        shared = sorted(cnt, key=lambda i: -cnt[i])[:4]
+        themes.append({"keywords": [pool[n]["c"]["name"] for n in sorted(g, key=lambda n: -pool[n]["total"])][:10],
+                       "evidence": [{"source": items[i]["source"], "title": items[i]["title"][:140], "url": items[i]["url"]} for i in shared]})
+    themes.sort(key=lambda t: -len(t["keywords"]))
+    return themes[:6]
 
 
 def build_entry(r, mx, items):
@@ -312,6 +413,8 @@ def build_entry(r, mx, items):
         "sources": srcs, "official_urls": official, "official_verified": not c["dyn"],
         "summary": f"{nsrc}個のソース({', '.join(sorted(r['hits']))})で言及。代表: 「{best['title'][:80]}」" + (f" / {desc[:100]}" if desc else ""),
         "slides": [], "score_breakdown": bd,
+        "velocity": {"hn_this_week": r["vel"][0], "hn_prev_week": r["vel"][1], "factor": round(r["factor"], 2)} if r["vel"] else {"factor": round(r["factor"], 2)},
+        "why": r.get("why", {}),
         "x_posts": [{"url": p["url"], "author": p["author"], "likes": p["likes"], "reposts": p["reposts"], "views": p["views"],
                      "text": p["text"][:200], "via": p["_via"]} for p in sorted(r["x_posts"], key=lambda p: -p["likes"])[:3]],
     }

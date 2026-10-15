@@ -1,0 +1,279 @@
+{
+ "version": 1,
+ "week": "2026-W42",
+ "window": {
+  "from": "2026-10-08",
+  "to": "2026-10-15",
+  "label": "2026-W42",
+  "partial": true,
+  "tz": "JST, [start, end)"
+ },
+ "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
+ "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "partial": true,
+ "baseline": {
+  "snapshots": 1,
+  "is_baseline": true,
+  "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
+ },
+ "id": "gemini-4-argon",
+ "keyword": "gemini-4-argon",
+ "headline": "Gemini 4 Argon が一般提供(GA)",
+ "vendor": "Google",
+ "category": "model",
+ "kind": "model",
+ "tags": [
+  "models",
+  "tools"
+ ],
+ "rank": 9,
+ "score": 48.5,
+ "summary": [
+  "Google が、Gemini 4 ファミリー最初のモデル Gemini 4 Argon を 2026-10-13 に GA(一般提供)にした。",
+  "入力と出力(思考を含む)を合わせて 1,048,576 トークンまで扱える。コーディング・金融・法務・サイバーセキュリティ・科学など、深い作業向けと説明されている。",
+  "モデル ID は gemini-4-argon。Agent Studio で試せ、Google Gen AI SDK から呼び出せる。"
+ ],
+ "published_at": "2026-10-13T16:00:00+00:00",
+ "official_urls": [
+  "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+  "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon"
+ ],
+ "verification": {
+  "status": "verified",
+  "checks": [
+   {
+    "mcp_name": "google-developer-knowledge",
+    "tool": "search_documents",
+    "query": "Gemini 4 Argon model",
+    "evidence_urls": [
+     "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon"
+    ],
+    "evidence_published_at": "2026-10-13T00:00:00Z",
+    "result": "GA・リリース日 2026-10-13、1,048,576トークン共通上限、思考レベル、暗黙キャッシュのみ、Cyber Permissive(許可リスト制)を確認",
+    "retrieved_at": "2026-10-15T07:40:00+09:00"
+   },
+   {
+    "mcp_name": "web_fetch",
+    "tool": "fetch",
+    "query": "blog.google Gemini 4 Argon",
+    "evidence_urls": [
+     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/"
+    ],
+    "evidence_published_at": "2026-10-13T16:00:00Z",
+    "result": "公式ブログの存在と内容(ロボティクス評価の記述)を確認",
+    "retrieved_at": "2026-10-15T07:40:00+09:00"
+   }
+  ],
+  "selection_reason": "TOP9。model 2件目(Alibabaと別ベンダー)。Googleが2026-10-13にGA。llama.cpp(TOP5)はリリース番号の更新が主で、ニュース性の観点から見送り。"
+ },
+ "urls": {
+  "self": "api/v1/keywords/gemini-4-argon.json",
+  "infographic": "assets/slides/gemini-4-argon.png",
+  "pdf": "downloads/gemini-4-argon.pdf",
+  "pptx": "downloads/gemini-4-argon.pptx",
+  "page": "index.html#k-gemini-4-argon"
+ },
+ "digest": {
+  "summary": [
+   "Google が、Gemini 4 ファミリー最初のモデル Gemini 4 Argon を 2026-10-13 に GA(一般提供)にした。",
+   "入力と出力(思考を含む)を合わせて 1,048,576 トークンまで扱える。コーディング・金融・法務・サイバーセキュリティ・科学など、深い作業向けと説明されている。",
+   "モデル ID は gemini-4-argon。Agent Studio で試せ、Google Gen AI SDK から呼び出せる。"
+  ],
+  "why_trending": "Hacker News・OpenRouter での言及と、Google の公式発表が重なったため、今週 9 位。",
+  "what_changes": [
+   "思考レベルを LOW / MEDIUM / HIGH の 3 段階から選べる",
+   "1 回の出力は最大 65,536 トークン。長い出力は continuation_token による継続で伸ばせる"
+  ],
+  "benefits": [
+   "作業の難しさに応じて、思考レベルで速度と深さを調整できる"
+  ],
+  "caveats": [
+   "temperature などのサンプリング指定は無視される",
+   "明示的なコンテキストキャッシュは未対応(暗黙キャッシュのみ)",
+   "防御的なサイバー用途の Cyber Permissive 版は、申請して許可された場合のみ使える"
+  ],
+  "audience": "Google Cloud の Agent Platform で AI を組み込む開発者"
+ },
+ "infographic": {
+  "title": "Gemini 4 Argon が一般提供(GA)",
+  "diagram_type": "infographic",
+  "icon": "spark",
+  "stat": {
+   "value": "1,048,576",
+   "label": "入出力を合わせたトークン上限"
+  },
+  "steps": [
+   "入力(長文・コード)",
+   "思考レベル LOW / MEDIUM / HIGH",
+   "出力(1 回最大 65,536 トークン)"
+  ],
+  "points": [
+   {
+    "h": "何が起きた",
+    "t": "Google の Gemini 4 ファミリー最初のモデルが、2026-10-13 に GA になった"
+   },
+   {
+    "h": "何が変わる",
+    "t": "思考レベルを 3 段階から選べる。コーディング・金融・法務・科学など深い作業向けと説明されている"
+   },
+   {
+    "h": "嬉しいこと",
+    "t": "作業の難しさに応じて、思考レベルで速度と深さを調整できる"
+   },
+   {
+    "h": "注意",
+    "t": "temperature などの指定は無視される。明示的なコンテキストキャッシュは未対応"
+   }
+  ],
+  "official_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+  "source_date": "2026-10-13"
+ },
+ "deck": {
+  "overview": {
+   "takeaway": "Gemini 4 ファミリー最初のモデルが GA。入出力合計 1,048,576 トークンまで扱え、思考レベルを 3 段階で選べる。",
+   "stat": {
+    "value": "1,048,576",
+    "label": "入出力を合わせたトークン上限"
+   },
+   "steps": [
+    "入力(長文・コード)",
+    "思考レベル LOW / MEDIUM / HIGH",
+    "出力(1 回最大 65,536 トークン)"
+   ],
+   "changes": [
+    "2026-10-13 に GA(一般提供)になった",
+    "思考レベルを LOW / MEDIUM / HIGH から選べる",
+    "長い出力は continuation_token で延長できる"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Google"
+    },
+    {
+     "k": "GA の日",
+     "v": "2026-10-13"
+    },
+    {
+     "k": "上限",
+     "v": "1,048,576 トークン"
+    },
+    {
+     "k": "モデル ID",
+     "v": "gemini-4-argon"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "impact": {
+   "audience": "Google Cloud の Agent Platform で AI を組み込む開発者",
+   "benefits": [
+    "作業の難しさに応じて、思考レベルで速度と深さを調整できる",
+    "コーディング・金融・法務・サイバーセキュリティ・科学など深い作業向けと説明されている",
+    "長い入力と出力を、1 つのモデルで扱える"
+   ],
+   "how_to": [
+    "モデル ID に gemini-4-argon を指定する",
+    "Agent Studio で試す",
+    "Google Gen AI SDK(google-genai 2.30.1 以上)で呼び出す"
+   ],
+   "caveats": [
+    "temperature などのサンプリング指定は無視される",
+    "明示的なコンテキストキャッシュは未対応(暗黙キャッシュのみ)",
+    "Cyber Permissive 版は、申請して許可された場合のみ使える"
+   ],
+   "terms": [
+    {
+     "t": "GA",
+     "d": "一般提供。正式にだれでも使える段階"
+    },
+    {
+     "t": "思考レベル",
+     "d": "回答前にどれだけ考えさせるかの設定"
+    },
+    {
+     "t": "トークン",
+     "d": "AI が文章を数える単位"
+    }
+   ],
+   "refs": [
+    "s2"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Introducing Gemini 4 Argon",
+    "publisher": "Google",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "date": "2026-10-13"
+   },
+   {
+    "id": "s2",
+    "title": "Gemini 4 Argon ガイド",
+    "publisher": "Google Cloud",
+    "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon"
+   }
+  ]
+ },
+ "mentions": [
+  {
+   "name": "hackernews",
+   "title": "Gemini 4 Argon",
+   "url": "https://deepmind.google/models/gemini/",
+   "metric": 1431.0,
+   "metric_name": "points"
+  },
+  {
+   "name": "hackernews",
+   "title": "Gemini 4 Argon for Robotics",
+   "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
+   "metric": 228.0,
+   "metric_name": "points"
+  },
+  {
+   "name": "openrouter",
+   "title": "google/gemini-4-argon",
+   "url": "https://openrouter.ai/google/gemini-4-argon",
+   "metric": 1.0,
+   "metric_name": "new_model"
+  },
+  {
+   "name": "openrouter",
+   "title": "google/gemini-4-argon:batch",
+   "url": "https://openrouter.ai/google/gemini-4-argon:batch",
+   "metric": 1.0,
+   "metric_name": "new_model"
+  },
+  {
+   "name": "official",
+   "title": "Gemini 4 Argon: Built to solve your hardest problems",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+   "metric": 1.0,
+   "metric_name": "announcement"
+  }
+ ],
+ "jp_reactions": [
+  {
+   "site": "zenn",
+   "title": "AI を3社で比べるときにハマる所。Gemini 4 Argon が白紙を返す原因から、テストの間違いまで",
+   "url": "https://zenn.dev/gui/articles/ai-coding-bench-claude-codex-gemini",
+   "date": "2026-10-14"
+  },
+  {
+   "site": "hatena",
+   "title": "Google、待望の新AIモデル「Gemini 4 Argon」一般提供を開始 推論の継続力を強化 一部ベンチでトップに",
+   "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002265/",
+   "date": "2026-10-14"
+  },
+  {
+   "site": "hatena",
+   "title": "Google、最上位AI「Gemini 4 Argon」を一般提供開始",
+   "url": "https://pc.watch.impress.co.jp/docs/news/2147870.html",
+   "date": "2026-10-14"
+  }
+ ]
+}

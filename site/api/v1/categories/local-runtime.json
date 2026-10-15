@@ -1,0 +1,160 @@
+{
+ "version": 1,
+ "week": "2026-W42",
+ "window": {
+  "from": "2026-10-08",
+  "to": "2026-10-15",
+  "label": "2026-W42",
+  "partial": true,
+  "tz": "JST, [start, end)"
+ },
+ "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
+ "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "partial": true,
+ "baseline": {
+  "snapshots": 1,
+  "is_baseline": true,
+  "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
+ },
+ "category": "local-runtime",
+ "items": [
+  {
+   "id": "ollama",
+   "keyword": "Ollama",
+   "headline": "Ollama Cloud を Fly.io Sprites で使える",
+   "vendor": "Ollama",
+   "category": "local-runtime",
+   "kind": "product",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "rank": 3,
+   "score": 94.4,
+   "summary": [
+    "Ollama が、Fly.io の Sprites から Ollama Cloud のモデルを使える連携を 2026-10-13 に発表した。",
+    "Sprite は、ディスクが残る完全な Linux 仮想マシンのサンドボックス。Claude Code・Codex・Gemini CLI などを最初から動かせ、コマンドの実行を安全に隔離できる。",
+    "新しい「Ollama Connector」で、kimi-k3・glm-5.3 などのクラウドモデルを使える。"
+   ],
+   "published_at": "2026-10-13T00:00:00+00:00",
+   "official_urls": [
+    "https://ollama.com/blog/fly-io-sprites"
+   ],
+   "verification": {
+    "status": "verified",
+    "checked_at": "2026-10-15T07:40:00+09:00"
+   },
+   "urls": {
+    "self": "api/v1/keywords/ollama.json",
+    "infographic": "assets/slides/ollama.png",
+    "pdf": "downloads/ollama.pdf",
+    "pptx": "downloads/ollama.pptx",
+    "page": "index.html#k-ollama"
+   }
+  },
+  {
+   "id": "unsloth",
+   "keyword": "Unsloth",
+   "headline": "Unsloth がモデルのブラウザ操作に対応",
+   "vendor": "Unsloth",
+   "category": "local-runtime",
+   "kind": "release",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "rank": 8,
+   "score": 48.6,
+   "summary": [
+    "ローカルで AI を動かして学習できる Unsloth が、2026-10-12 に新版 v0.1.906-beta を公開した。",
+    "チャットで Browser use を有効にすると、モデルがページを開いて読み、クリック・入力・スクロールをする。モデルは専用のタブで動き、ほかのタブには触れない。",
+    "画像生成モデル Qwen-Image-2.1-Turbo(8 ステップ、約 2.5 倍速と説明)にも対応した。"
+   ],
+   "published_at": "2026-10-14T06:01:14+00:00",
+   "official_urls": [
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta"
+   ],
+   "verification": {
+    "status": "verified",
+    "checked_at": "2026-10-15T09:30:00+09:00"
+   },
+   "urls": {
+    "self": "api/v1/keywords/unsloth.json",
+    "infographic": "assets/slides/unsloth.png",
+    "pdf": "downloads/unsloth.pdf",
+    "pptx": "downloads/unsloth.pptx",
+    "page": "index.html#k-unsloth"
+   }
+  },
+  {
+   "id": "open-webui",
+   "keyword": "Open WebUI",
+   "headline": "Open WebUI v0.12.2 で運用面が強化",
+   "vendor": "OpenWebUI",
+   "category": "local-runtime",
+   "kind": "release",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "rank": 11,
+   "score": 42.4,
+   "summary": [
+    "セルフホスト型の AI チャット画面 Open WebUI が、2026-10-14 に v0.12.2 を公開した。",
+    "自社運用向けの機能が増えた。接続先へのカスタムヘッダーでモデル ID を渡せ、監査ログにも要求されたモデルが残る。",
+    "管理者アカウントが SCIM 経由で削除されない修正など、安全面の修正も入った。"
+   ],
+   "published_at": "2026-10-14T21:07:29+00:00",
+   "official_urls": [
+    "https://github.com/open-webui/open-webui/releases/tag/v0.12.2"
+   ],
+   "verification": {
+    "status": "verified",
+    "checked_at": "2026-10-15T09:30:00+09:00"
+   },
+   "urls": {
+    "self": "api/v1/keywords/open-webui.json",
+    "infographic": "assets/slides/open-webui.png",
+    "pdf": "downloads/open-webui.pdf",
+    "pptx": "downloads/open-webui.pptx",
+    "page": "index.html#k-open-webui"
+   }
+  },
+  {
+   "id": "strata",
+   "keyword": "Strata",
+   "headline": "Strata 0.1.44.1:12GB GPUで大型MoEを動かす",
+   "vendor": null,
+   "category": "local-runtime",
+   "kind": "release",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "rank": 12,
+   "score": 41.9,
+   "summary": [
+    "Strata は、個人開発者 Niko1221 の OSS(MIT ライセンス)で、GPU メモリ 12GB 以上のゲーミング PC で大型 MoE モデル Qwen3.8-Flash-Next を動かすローカル推論エンジン。コミュニティ/個人プロジェクトで、ベンダー発表はない。",
+    "全専門家(24,576)を RAM に置き、よく使うものを GPU に載せ、残りを CPU が分担する。小さな補助モデルが先読みして大モデルが検証する方式で、同じ答えが 1.6〜1.8 倍速くなると README は説明している。",
+    "10/14 に 0.1.44.1 を公開。0.1.44 では Unsloth の 4〜8bit 版や NVFP4 パック、Qwen3.6-35B-A3B に対応し、0.1.44.1 は AVX2 非対応 CPU の起動不具合などを直す修正版。"
+   ],
+   "published_at": "2026-10-14T00:14:06+00:00",
+   "official_urls": [
+    "https://github.com/Niko1221/Strata",
+    "https://github.com/Niko1221/Strata/releases/tag/v0.1.44",
+    "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1"
+   ],
+   "verification": {
+    "status": "verified",
+    "checked_at": "2026-10-15T10:30:00+09:00"
+   },
+   "urls": {
+    "self": "api/v1/keywords/strata.json",
+    "infographic": "assets/slides/strata.png",
+    "pdf": "downloads/strata.pdf",
+    "pptx": "downloads/strata.pptx",
+    "page": "index.html#k-strata"
+   }
+  }
+ ]
+}

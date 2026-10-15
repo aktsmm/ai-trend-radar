@@ -1,0 +1,33 @@
+{
+ "version": 1,
+ "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
+ "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "latest_week": "2026-W42",
+ "weeks": [
+  {
+   "week": "2026-W42",
+   "published": 15,
+   "url": "api/v1/weeks/2026-W42.json"
+  }
+ ],
+ "endpoints": {
+  "latest": "api/v1/latest.json",
+  "week": "api/v1/weeks/{week}.json",
+  "keyword": "api/v1/keywords/{id}.json",
+  "category": "api/v1/categories/{category}.json",
+  "candidates": "api/v1/candidates.json",
+  "health": "api/v1/health.json"
+ },
+ "downloads": {
+  "pdf": "downloads/{id}.pdf",
+  "pptx": "downloads/{id}.pptx",
+  "weekly_pdf": "downloads/weekly-2026-W42.pdf",
+  "weekly_pptx": "downloads/weekly-2026-W42.pptx",
+  "all": "downloads/trends.json"
+ },
+ "notes": [
+  "読み取り専用の静的 JSON です。任意条件の検索 API はありません(静的ファイルのため)。",
+  "要約・図解・ブリーフは AI の下書きを一次情報と照合したものです。ベンダー発表の数字は独自には検証していません。",
+  "週が変わると latest.json は新しい週に切り替わります。過去週は weeks/<week>.json(データがある週のみ)。"
+ ]
+}

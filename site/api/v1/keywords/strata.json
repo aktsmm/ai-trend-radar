@@ -1,0 +1,277 @@
+{
+ "version": 1,
+ "week": "2026-W42",
+ "window": {
+  "from": "2026-10-08",
+  "to": "2026-10-15",
+  "label": "2026-W42",
+  "partial": true,
+  "tz": "JST, [start, end)"
+ },
+ "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
+ "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "partial": true,
+ "baseline": {
+  "snapshots": 1,
+  "is_baseline": true,
+  "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
+ },
+ "id": "strata",
+ "keyword": "Strata",
+ "headline": "Strata 0.1.44.1:12GB GPUで大型MoEを動かす",
+ "vendor": null,
+ "category": "local-runtime",
+ "kind": "release",
+ "tags": [
+  "local-llm",
+  "tools"
+ ],
+ "rank": 12,
+ "score": 41.9,
+ "summary": [
+  "Strata は、個人開発者 Niko1221 の OSS(MIT ライセンス)で、GPU メモリ 12GB 以上のゲーミング PC で大型 MoE モデル Qwen3.8-Flash-Next を動かすローカル推論エンジン。コミュニティ/個人プロジェクトで、ベンダー発表はない。",
+  "全専門家(24,576)を RAM に置き、よく使うものを GPU に載せ、残りを CPU が分担する。小さな補助モデルが先読みして大モデルが検証する方式で、同じ答えが 1.6〜1.8 倍速くなると README は説明している。",
+  "10/14 に 0.1.44.1 を公開。0.1.44 では Unsloth の 4〜8bit 版や NVFP4 パック、Qwen3.6-35B-A3B に対応し、0.1.44.1 は AVX2 非対応 CPU の起動不具合などを直す修正版。"
+ ],
+ "published_at": "2026-10-14T00:14:06+00:00",
+ "official_urls": [
+  "https://github.com/Niko1221/Strata",
+  "https://github.com/Niko1221/Strata/releases/tag/v0.1.44",
+  "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1"
+ ],
+ "verification": {
+  "status": "verified",
+  "checks": [
+   {
+    "mcp_name": "github_cli",
+    "tool": "gh api repos/Niko1221/Strata + /readme",
+    "query": "Niko1221/Strata の概要・要件・使い方・制限(README)",
+    "evidence_urls": [
+     "https://github.com/Niko1221/Strata"
+    ],
+    "evidence_published_at": "2026-10-14T00:10:55Z",
+    "result": "個人 OSS(MIT、C++)。README を取得し、Qwen3.8-Flash-Next を GPU 12GB 以上・RAM 32GB 以上・約 80GB のディスクの PC で動かすこと、全専門家(24,576)を RAM に置き頻出分を GPU に載せる仕組み、START-HERE.bat / ./setup.sh での導入、127.0.0.1:8080/v1 の OpenAI 互換 API、起動時に PC が 1〜3 分重くなる注意、速度表が作者の自己計測であることを確認。リポジトリ作成は 2026-09-24 で期間外だが、最終 push は 2026-10-14。",
+    "retrieved_at": "2026-10-15T10:30:00+09:00"
+   },
+   {
+    "mcp_name": "github_cli",
+    "tool": "gh api repos/Niko1221/Strata/releases",
+    "query": "v0.1.44 のリリースノート",
+    "evidence_urls": [
+     "https://github.com/Niko1221/Strata/releases/tag/v0.1.44"
+    ],
+    "evidence_published_at": "2026-10-13T19:26:51Z",
+    "result": "リリース本文を取得。Unsloth の UD-Q4_K_XL〜Q8_0 と NVFP4 パックの追加、Qwen3.6-35B-A3B 対応(NVIDIA/AMD)、AMD マルチ GPU と Intel Arc A シリーズの高速化を確認。品質・速度の数値は作者の自己計測のため引用しない。",
+    "retrieved_at": "2026-10-15T10:30:00+09:00"
+   },
+   {
+    "mcp_name": "github_cli",
+    "tool": "gh api repos/Niko1221/Strata/releases",
+    "query": "v0.1.44.1 のリリースノート",
+    "evidence_urls": [
+     "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1"
+    ],
+    "evidence_published_at": "2026-10-14T00:13:09Z",
+    "result": "リリース本文を取得。AVX2 非対応 CPU で起動直後に落ちる不具合、CUDA 12.0/12.1 でのビルド不具合、Apple M2 で誤った答えが出る不具合の修正と、再セットアップで導入済みサイズを保持する変更を確認。いずれもベンダー発表ではなく作者の記述。",
+    "retrieved_at": "2026-10-15T10:30:00+09:00"
+   }
+  ],
+  "selection_reason": "ローカルLLM枠(オーナー指定)。個人OSSプロジェクト Niko1221/Strata の公式 README とリリースノート(0.1.41〜0.1.44.1 を 10/8 以降に連続公開、0.1.44.1 は 2026-10-14)で内容を確認。ベンダー発表はなく、コミュニティ/個人プロジェクトとして扱う。"
+ },
+ "urls": {
+  "self": "api/v1/keywords/strata.json",
+  "infographic": "assets/slides/strata.png",
+  "pdf": "downloads/strata.pdf",
+  "pptx": "downloads/strata.pptx",
+  "page": "index.html#k-strata"
+ },
+ "digest": {
+  "summary": [
+   "Strata は、個人開発者 Niko1221 の OSS(MIT ライセンス)で、GPU メモリ 12GB 以上のゲーミング PC で大型 MoE モデル Qwen3.8-Flash-Next を動かすローカル推論エンジン。コミュニティ/個人プロジェクトで、ベンダー発表はない。",
+   "全専門家(24,576)を RAM に置き、よく使うものを GPU に載せ、残りを CPU が分担する。小さな補助モデルが先読みして大モデルが検証する方式で、同じ答えが 1.6〜1.8 倍速くなると README は説明している。",
+   "10/14 に 0.1.44.1 を公開。0.1.44 では Unsloth の 4〜8bit 版や NVFP4 パック、Qwen3.6-35B-A3B に対応し、0.1.44.1 は AVX2 非対応 CPU の起動不具合などを直す修正版。"
+  ],
+  "why_trending": "r/LocalLLaMA や Zenn でも話題(コミュニティ報告)。10/8 以降に 0.1.41〜0.1.44.1 を連続公開し、更新が非常に速い。",
+  "what_changes": [
+   "0.1.44: Unsloth の 4〜8bit 版と NVFP4 パックを setup から選べる",
+   "0.1.44: Qwen3.6-35B-A3B に対応(NVIDIA / AMD)",
+   "0.1.44.1: AVX2 非対応 CPU の起動不具合と CUDA 12.0/12.1 のビルド不具合を修正"
+  ],
+  "benefits": [
+   "GPU 12GB 級の手元 PC で大型モデルを試せる見込み",
+   "OpenAI / Anthropic 互換 API(127.0.0.1:8080)で既存のエージェントから接続できる"
+  ],
+  "caveats": [
+   "起動時に RAM へ 35〜55GB を読み込み、PC が 1〜3 分重くなることがある",
+   "速度や品質の数字は作者の自己計測。要件は RAM 32GB 以上・ディスク約 80GB",
+   "個人プロジェクト。Mac や古い GPU は実験的扱いで、既定は同時 1 リクエスト"
+  ],
+  "audience": "手元の GPU で大型 LLM を動かしたい開発者"
+ },
+ "infographic": {
+  "title": "Strata 0.1.44.1:12GB GPUで大型MoEを動かす",
+  "diagram_type": "infographic",
+  "icon": "chip",
+  "stat": {
+   "value": "12GB+",
+   "label": "必要な GPU メモリ(VRAM)の目安"
+  },
+  "steps": [
+   "GPU に頻出の専門家",
+   "RAM に全専門家",
+   "CPU と分担して推論"
+  ],
+  "points": [
+   {
+    "h": "何が起きた",
+    "t": "個人 OSS の Strata が 10/14 に 0.1.44.1 を公開。大型 MoE を普通のゲーミング PC で動かす(ベンダー発表なし)"
+   },
+   {
+    "h": "仕組み",
+    "t": "全専門家を RAM に置き、頻出分を GPU に載せ、CPU が残りを分担。補助モデルの先読みで 1.6〜1.8 倍速と説明"
+   },
+   {
+    "h": "使い方",
+    "t": "Windows は START-HERE.bat、Linux は ./setup.sh。OpenAI / Anthropic 互換 API をローカルで提供"
+   },
+   {
+    "h": "注意",
+    "t": "RAM 32GB 以上が必要。起動時に PC が 1〜3 分重くなる。速度の数字は作者の自己計測"
+   }
+  ],
+  "official_url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1",
+  "source_date": "2026-10-14"
+ },
+ "deck": {
+  "overview": {
+   "takeaway": "個人 OSS の Strata は、GPU 12GB 級の手元 PC で大型 MoE モデルを動かす。今週も 0.1.44.1 まで更新が続いた。",
+   "stat": {
+    "value": "12GB+",
+    "label": "必要な GPU メモリ(VRAM)の目安"
+   },
+   "steps": [
+    "頻出の専門家は GPU",
+    "全専門家は RAM",
+    "残りは CPU が分担"
+   ],
+   "changes": [
+    "Unsloth の 4〜8bit 版と NVFP4 パックを選べる",
+    "Qwen3.6-35B-A3B に対応(NVIDIA / AMD)",
+    "0.1.44.1 で AVX2 非対応 CPU の起動不具合を修正"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Niko1221(個人 / OSS)"
+    },
+    {
+     "k": "ライセンス",
+     "v": "MIT"
+    },
+    {
+     "k": "最新版",
+     "v": "0.1.44.1(2026-10-14)"
+    },
+    {
+     "k": "必要環境",
+     "v": "VRAM 12GB+/RAM 32GB+"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s3"
+   ]
+  },
+  "impact": {
+   "audience": "手元の GPU で大型 LLM を動かしたい開発者",
+   "benefits": [
+    "サーバーなしで大型モデルを手元で試せる見込み",
+    "OpenAI / Anthropic 互換 API で既存のエージェントやアプリから使える",
+    "モデルのサイズを RAM に合わせて選べる"
+   ],
+   "how_to": [
+    "Windows は START-HERE.bat、Linux は ./setup.sh を実行する",
+    "質問に答えるとモデルを約 70GB ダウンロードして起動する",
+    "ブラウザ(127.0.0.1:8080)か、API の base URL /v1 で接続する"
+   ],
+   "caveats": [
+    "ベンダー発表のない個人プロジェクト。数値は作者の自己計測",
+    "起動時に RAM へ 35〜55GB を読み込み、PC が 1〜3 分重くなる",
+    "Mac や古い GPU、Intel Arc は実験的扱い"
+   ],
+   "terms": [
+    {
+     "t": "MoE",
+     "d": "多数の専門家のうち一部だけを使って計算するモデル構成"
+    },
+    {
+     "t": "VRAM",
+     "d": "グラフィックスカードのメモリ"
+    },
+    {
+     "t": "NVFP4",
+     "d": "RTX 50 シリーズが得意とする 4bit 系の重み形式"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2",
+    "s3"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Niko1221/Strata README(GitHub)",
+    "publisher": "Niko1221(個人 OSS)",
+    "url": "https://github.com/Niko1221/Strata",
+    "date": "2026-10-14"
+   },
+   {
+    "id": "s2",
+    "title": "Strata 0.1.44 リリースノート",
+    "publisher": "Niko1221(個人 OSS)",
+    "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44",
+    "date": "2026-10-13"
+   },
+   {
+    "id": "s3",
+    "title": "Strata 0.1.44.1 リリースノート",
+    "publisher": "Niko1221(個人 OSS)",
+    "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1",
+    "date": "2026-10-14"
+   }
+  ]
+ },
+ "mentions": [
+  {
+   "name": "github_new",
+   "title": "hongfaqiu/strata-manager",
+   "url": "https://github.com/hongfaqiu/strata-manager",
+   "metric": 8.0,
+   "metric_name": "stars"
+  },
+  {
+   "name": "reddit_localllama",
+   "title": "Strata rewrote their Github history to wipe evidence of Claude-authoring",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x15a8w/strata_rewrote_their_github_history_to_wipe/",
+   "metric": 0.0,
+   "metric_name": "rank"
+  },
+  {
+   "name": "reddit_localllama",
+   "title": "\"Strata\" for GLM5.3 Flash is here for some! Project Maya",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x3fxzj/strata_for_glm53_flash_is_here_for_some_project/",
+   "metric": 0.0,
+   "metric_name": "rank"
+  }
+ ],
+ "jp_reactions": [
+  {
+   "site": "zenn",
+   "title": "RTX 5070＋V100で大きなMoEを動かす：StrataとV100単体27Bを実測で比べてみた",
+   "url": "https://zenn.dev/lube8163/articles/87856ef9fffd66",
+   "date": "2026-10-14"
+  }
+ ]
+}

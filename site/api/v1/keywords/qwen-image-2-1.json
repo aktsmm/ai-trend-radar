@@ -1,0 +1,244 @@
+{
+ "version": 1,
+ "week": "2026-W42",
+ "window": {
+  "from": "2026-10-08",
+  "to": "2026-10-15",
+  "label": "2026-W42",
+  "partial": true,
+  "tz": "JST, [start, end)"
+ },
+ "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
+ "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "partial": true,
+ "baseline": {
+  "snapshots": 1,
+  "is_baseline": true,
+  "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
+ },
+ "id": "qwen-image-2-1",
+ "keyword": "Qwen-Image-2.1",
+ "headline": "Qwen-Image-2.1 の高速版 Turbo を公開",
+ "vendor": "Alibaba",
+ "category": "model",
+ "kind": "model",
+ "tags": [
+  "models",
+  "local-llm"
+ ],
+ "rank": 4,
+ "score": 89.5,
+ "summary": [
+  "Alibaba の Qwen チームが、画像生成・画像編集モデル Qwen-Image-2.1 の高速版 Turbo を、2026-10-09 に Hugging Face で公開した。",
+  "Turbo は 8 ステップで画像を生成する 7B のモデルで、元の Qwen-Image-2.1 と同じ 7B の設計を使う高速チェックポイントと説明されている。"
+ ],
+ "published_at": "2026-10-09T04:50:01+00:00",
+ "official_urls": [
+  "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+  "https://github.com/QwenLM/Qwen-Image-2.1"
+ ],
+ "verification": {
+  "status": "verified",
+  "checks": [
+   {
+    "mcp_name": "web_fetch",
+    "tool": "fetch",
+    "query": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+    "evidence_urls": [
+     "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo"
+    ],
+    "evidence_published_at": "2026-10-09T16:30:48Z",
+    "result": "OSSのためDocs MCPの対象外。モデルカードで Turbo=8ステップ・7B・CFG=1・Diffusers/transformers要件を確認",
+    "retrieved_at": "2026-10-15T07:40:00+09:00"
+   }
+  ],
+  "selection_reason": "TOP4。model代表(画像生成)。Qwen公式のHFモデルカードが2026-10-09公開。"
+ },
+ "urls": {
+  "self": "api/v1/keywords/qwen-image-2-1.json",
+  "infographic": "assets/slides/qwen-image-2-1.png",
+  "pdf": "downloads/qwen-image-2-1.pdf",
+  "pptx": "downloads/qwen-image-2-1.pptx",
+  "page": "index.html#k-qwen-image-2-1"
+ },
+ "digest": {
+  "summary": [
+   "Alibaba の Qwen チームが、画像生成・画像編集モデル Qwen-Image-2.1 の高速版 Turbo を、2026-10-09 に Hugging Face で公開した。",
+   "Turbo は 8 ステップで画像を生成する 7B のモデルで、元の Qwen-Image-2.1 と同じ 7B の設計を使う高速チェックポイントと説明されている。"
+  ],
+  "why_trending": "Hugging Face のモデル・Space、GitHub、Reddit、Bluesky など多くのソースで言及があり、モデル分野で今週 4 位。",
+  "what_changes": [
+   "少ない手順(8 ステップ)で画像を生成できる",
+   "文章や参照画像の文脈をステップ間で再利用して、高速化している(モデルカードの説明)"
+  ],
+  "benefits": [
+   "速度を重視した画像生成を試しやすくなる見込み"
+  ],
+  "caveats": [
+   "Diffusers は PR #14950 を含む最新のソース版が必要。transformers は 5.17.0 以上、PyTorch は CUDA 対応版を先に入れる"
+  ],
+  "audience": "自分の GPU で画像生成を動かしたい開発者"
+ },
+ "infographic": {
+  "title": "Qwen-Image-2.1 の高速版 Turbo を公開",
+  "diagram_type": "infographic",
+  "icon": "image",
+  "stat": {
+   "value": "8 ステップ",
+   "label": "Turbo の画像生成"
+  },
+  "steps": [
+   "入力・参照画像",
+   "7B の生成モデル(8 ステップ)",
+   "画像を出力"
+  ],
+  "points": [
+   {
+    "h": "何が起きた",
+    "t": "Alibaba の Qwen チームが、画像生成・編集モデルの高速版を Hugging Face で公開した(2026-10-09)"
+   },
+   {
+    "h": "何が変わる",
+    "t": "少ない手順で生成できる。文章や参照画像の文脈をステップ間で再利用して高速化している"
+   },
+   {
+    "h": "嬉しいこと",
+    "t": "速度を重視した画像生成を試しやすくなる見込み"
+   },
+   {
+    "h": "注意",
+    "t": "Diffusers は最新のソース版、transformers は 5.17.0 以上、CUDA 対応の PyTorch が必要"
+   }
+  ],
+  "official_url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+  "source_date": "2026-10-09"
+ },
+ "deck": {
+  "overview": {
+   "takeaway": "画像生成・編集モデル Qwen-Image-2.1 の高速版 Turbo が公開。8 ステップで画像を生成する 7B のモデル。",
+   "stat": {
+    "value": "8 ステップ",
+    "label": "Turbo の画像生成"
+   },
+   "steps": [
+    "入力・参照画像",
+    "7B の生成モデル(8 ステップ)",
+    "画像を出力"
+   ],
+   "changes": [
+    "8 ステップで画像を生成する高速版",
+    "元の Qwen-Image-2.1 と同じ 7B の設計を使う",
+    "文章や参照画像の文脈をステップ間で再利用して高速化"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Alibaba Qwen"
+    },
+    {
+     "k": "公開日",
+     "v": "2026-10-09"
+    },
+    {
+     "k": "サイズ",
+     "v": "7B"
+    },
+    {
+     "k": "既定の CFG",
+     "v": "1"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "自分の GPU で画像生成を動かしたい開発者",
+   "benefits": [
+    "少ない手順で生成でき、速度を重視した画像生成を試しやすくなる見込み",
+    "画像の生成と編集の両方を扱うモデル系統の高速版"
+   ],
+   "how_to": [
+    "Diffusers の `QwenImage21Pipeline` で読み込む",
+    "`Qwen/Qwen-Image-2.1-Turbo` を指定する",
+    "transformers 5.17.0 以上を入れる",
+    "CUDA 対応の PyTorch を先に入れる"
+   ],
+   "caveats": [
+    "Diffusers は PR #14950 を含む最新のソース版が必要",
+    "品質や速度の比較は、モデルカードの範囲では確認していない"
+   ],
+   "terms": [
+    {
+     "t": "Diffusers",
+     "d": "Hugging Face の画像生成ライブラリ"
+    },
+    {
+     "t": "ステップ",
+     "d": "画像を少しずつ仕上げる回数。少ないほど速い"
+    },
+    {
+     "t": "CFG",
+     "d": "指示の効かせ具合を調整する値"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Qwen/Qwen-Image-2.1-Turbo モデルカード",
+    "publisher": "Qwen(Hugging Face)",
+    "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+    "date": "2026-10-09"
+   },
+   {
+    "id": "s2",
+    "title": "QwenLM/Qwen-Image-2.1",
+    "publisher": "Qwen(GitHub)",
+    "url": "https://github.com/QwenLM/Qwen-Image-2.1"
+   }
+  ]
+ },
+ "mentions": [
+  {
+   "name": "hf_models",
+   "title": "Qwen/Qwen-Image-2.1-Turbo",
+   "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+   "metric": 715.0,
+   "metric_name": "trendingScore"
+  },
+  {
+   "name": "hf_models",
+   "title": "abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+   "url": "https://huggingface.co/abenzerps/Qwen-Image-2.1-Uncensored-Quantized",
+   "metric": 537.0,
+   "metric_name": "trendingScore"
+  },
+  {
+   "name": "hf_spaces",
+   "title": "Viggle/Qwen-Image-2.1-viggle-turbo",
+   "url": "https://huggingface.co/spaces/Viggle/Qwen-Image-2.1-viggle-turbo",
+   "metric": 85.0,
+   "metric_name": "trendingScore"
+  },
+  {
+   "name": "hf_spaces",
+   "title": "arudradey/qwen-image-2.1-uncensored-aio-loras",
+   "url": "https://huggingface.co/spaces/arudradey/qwen-image-2.1-uncensored-aio-loras",
+   "metric": 67.0,
+   "metric_name": "trendingScore"
+  },
+  {
+   "name": "reddit_localllama",
+   "title": "Qwen/Qwen-Image-2.1-Turbo · Hugging Face",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x1ldef/qwenqwenimage21turbo_hugging_face/",
+   "metric": 0.0,
+   "metric_name": "rank"
+  }
+ ],
+ "jp_reactions": []
+}

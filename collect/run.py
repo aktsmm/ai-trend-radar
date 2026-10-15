@@ -7,7 +7,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 
-from . import official, x_watch
+from . import jp, official, x_watch
 from .common import NOW, RAW, ROOT, save_raw
 from .sources import SOURCES
 
@@ -46,6 +46,16 @@ def run_official(status):
         status["official"] = status["gh_releases"] = {"ok": False, "error": str(e)[:200], "group": "vendor"}
 
 
+def run_jp(status):
+    try:
+        items, st = jp.collect_jp()
+        save_raw("jp_reaction", items)
+        status["jp_reaction"] = {"ok": any(s["ok"] for s in st.values()), "count": len(items), "group": "community-ja", "feeds": st}
+    except Exception as e:
+        save_raw("jp_reaction", [])
+        status["jp_reaction"] = {"ok": False, "error": str(e)[:200], "group": "community-ja"}
+
+
 def run_x(status):
     search = x_watch.probe_search()
     try:
@@ -81,6 +91,7 @@ def main():
                 print(name, st)
     run_official(status)
     run_x(status)
+    run_jp(status)
     print({k: v.get("ok") for k, v in status.items()})
     save_raw("_status", {"collected_at": datetime.now(timezone.utc).isoformat(), "sources": status})
     snapshot()

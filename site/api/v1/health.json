@@ -1,0 +1,31 @@
+{
+ "version": 1,
+ "week": "2026-W42",
+ "window": {
+  "from": "2026-10-08",
+  "to": "2026-10-15",
+  "label": "2026-W42",
+  "partial": true,
+  "tz": "JST, [start, end)"
+ },
+ "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
+ "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "partial": true,
+ "baseline": {
+  "snapshots": 1,
+  "is_baseline": true,
+  "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
+ },
+ "sources": {
+  "total": 20,
+  "ok": 18,
+  "failed": [
+   "reddit_ollama",
+   "x_search"
+  ]
+ },
+ "published": 15,
+ "candidates": 5,
+ "pending_without_primary_date": 25,
+ "x_search_ok": false
+}

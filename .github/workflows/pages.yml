@@ -1,0 +1,54 @@
+name: pages
+# build: always (the full site is also available as a build artifact, which works for private repos).
+# deploy: only when the repository variable PAGES_ENABLED == 'true' (GitHub Pages needs a public repo on the free plan).
+# Triggers: pushes to the default branch that touch data / site / renderers, manual runs, and calls from radar.yml.
+on:
+  push:
+    branches: [master, main]
+    paths: ["data/**", "site/**", "render/**", "analyze/**", "schema/**", ".github/workflows/pages.yml", "requirements.txt"]
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: "${{ github.event.repository.default_branch }}", persist-credentials: false }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+      - name: Build everything (apply -> gate -> URL check -> validate -> PNG/PDF/PPTX/API, with overflow check)
+        run: python -m render.build_all
+      - name: Assemble the published folder (only what the site needs; clean directory)
+        run: |
+          rm -rf _site && mkdir -p _site
+          cp site/index.html site/archive.html site/style.css site/app.js site/data.js _site/
+          cp -r site/assets site/downloads site/api _site/
+          touch _site/.nojekyll
+      - uses: actions/upload-artifact@v4
+        with: { name: site, path: _site, retention-days: 14 }
+      - uses: actions/configure-pages@v5
+        if: vars.PAGES_ENABLED == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        if: vars.PAGES_ENABLED == 'true'
+        with: { path: _site }
+  deploy:
+    needs: build
+    if: vars.PAGES_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

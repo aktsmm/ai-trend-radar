@@ -3,79 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Trend Radar (mock)</title>
-<style>
-  body{font-family:system-ui,"Yu Gothic UI",sans-serif;margin:0;background:#f5f7fb;color:#1c2333}
-  header{padding:20px 24px;background:#1c2b4a;color:#fff}
-  header p{margin:4px 0 0;opacity:.8;font-size:13px}
-  main{max-width:1280px;margin:0 auto;padding:16px}
-  #filters button{border:1px solid #9aa7c0;background:#fff;border-radius:16px;padding:4px 12px;margin:0 6px 6px 0;cursor:pointer}
-  #filters button.on{background:#2f5fd0;color:#fff;border-color:#2f5fd0}
-  .card{background:#fff;border-radius:10px;padding:14px 16px;margin:12px 0;box-shadow:0 1px 3px #0002}
-  .card h2{margin:0;font-size:18px}
-  .rank{display:inline-block;min-width:28px;color:#2f5fd0}
-  .tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;background:#e3eaff;color:#2a45a0;margin-left:6px}
-  .score{float:right;font-weight:600}
-  .meta{font-size:12px;color:#556;margin:6px 0}
-  .slides{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
-  .frame{width:400px;height:225px;overflow:hidden;border:1px solid #cfd8ee;border-radius:8px;cursor:zoom-in}
-  .frame .slide{transform:scale(.3125);transform-origin:top left}
-  .lightbox{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:9}
-  .lightbox.on{display:flex}
-  .lightbox .big{width:1280px;height:720px;transform:scale(var(--s,.8));flex:none}
-  .ver{font-size:11px;padding:1px 8px;border-radius:10px;margin-left:6px;font-weight:600}
-  .ver.verified{background:#d9f2e3;color:#157347} .ver.partially_verified{background:#fff0d1;color:#8a5a00} .ver.unverified{background:#fde2e4;color:#b02a37}
-  .x{font-size:12px;color:#444;border-left:3px solid #1d9bf0;padding-left:8px;margin-top:6px}
-  a{color:#1d4ed8}
-  #meta{font-size:12px;color:#556}
-</style>
-<link rel="stylesheet" href="slides.css">
+<title>AI Trend Radar - 週次 AI トレンド・ダイジェスト</title>
+<meta name="description" content="過去1週間の AI・ローカル LLM の新製品・モデル・リリースを、公式の一次情報で確認して日本語で整理した週次ダイジェスト。">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><h1>AI Trend Radar <small>(mock)</small></h1><p id="period"></p></header>
-<main>
-  <div id="filters"></div>
-  <div id="list"></div>
-  <p id="meta"></p>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="#top">AI Trend Radar</a>
+  <nav aria-label="メニュー"><a href="#latest">最新ダイジェスト</a><a href="#cands">観測候補(未掲載)</a><a href="#about">方式・出典</a><a href="archive.html">アーカイブ</a><a href="api/v1/index.json">JSON API</a></nav>
+  <div class="period" id="period"></div>
+</div></header>
+<main class="wrap" id="top">
+  <p class="lead">過去 1 週間に AI・ローカル LLM 界隈で出た新製品・モデル・リリースのうち、公式の一次情報で確認できたものを日本語で整理しています。各項目に図解 1 枚と、2 枚構成のブリーフ(PDF / PowerPoint)を付けています。</p>
+  <div class="dl" id="weekly" role="group" aria-label="今週の全ブリーフ"></div>
+  <details class="guide" open>
+    <summary>このページの見方</summary>
+    <dl>
+      <dt>一次ソース</dt><dd>公式発表・公式ブログ・公式 GitHub Release など、発表元が出した情報。公開日が分かるものだけを採用の根拠にしています。</dd>
+      <dt>公式 URL</dt><dd>そのキーワードの公式ページ。「リンク到達確認」は、実際に開けること(HTTP 200)を確認した日を表します。内容の正しさそのものを保証するものではありません。</dd>
+      <dt>話題の根拠</dt><dd>今週そのキーワードに言及していた GitHub・Hacker News・Reddit・Bluesky などの投稿や repo。順位付けの材料で、内容の正しさの根拠ではありません。</dd>
+      <dt>確認状態</dt><dd><span class="badge ok">一次情報確認済み</span>公式ドキュメント等で内容を確認 / <span class="badge part">一部確認</span> / <span class="badge no">未確認</span>自動収集のみ(下の「観測候補」に分けて掲載)</dd>
+      <dt>要約</dt><dd>要約と図解は AI が下書きし、公式の一次情報と照合したうえで掲載しています。ベンダーが発表した数字は「発表の数字」と明記し、独自には検証していません。</dd>
+      <dt>スコア</dt><dd>複数ソースでの言及の多さと新しさから算出した 0〜100 の相対値(1 位 = 100)。蓄積が 14 日分に満たない間は「上昇中」ではなく「今週の注目」と表示します。</dd>
+    </dl>
+  </details>
+  <div class="controls">
+    <input type="search" id="q" placeholder="キーワードで絞り込み" aria-label="キーワードで絞り込み">
+    <div class="chips" id="filters" role="group" aria-label="カテゴリ"></div>
+    <label class="tgl"><input type="checkbox" id="cand"> 観測候補(未確認)も検索対象にする</label>
+  </div>
+  <div id="latest" aria-live="polite"></div>
+  <details class="cands" id="cands"><summary id="candsum">観測候補(未掲載)</summary><p class="lead" id="candlead"></p><div id="candlist"></div></details>
+  <footer class="site-footer" id="about">
+    <h2>方式・出典</h2>
+    <p id="meta"></p>
+    <p>収集元: Hugging Face・GitHub・Hacker News・Reddit・Bluesky・dev.to・PyPI・OpenRouter と、各社の公式フィード。X の投稿は補助情報で、採用の判断は一次情報で行っています。公式サイトを取得できなかった発表元(例: Google DeepMind・Meta AI の一部)は、その旨を取得状態に表示します。</p>
+    <p>データは静的 JSON として <a href="api/v1/index.json">api/v1/index.json</a> から取得できます(認証不要・読み取り専用。仕様は docs/api.md)。</p>
+    <p>要約・図解・ブリーフは AI が下書きしたものを、決定的な検査(スキーマ・公式 URL の許可リスト・日付の整合・変更件数の上限)と一次情報の照合に通したものです。誤りに気づいた場合は GitHub の Issue でお知らせください。</p>
+  </footer>
 </main>
-<div class="lightbox" id="lb"><div class="big" id="big"></div></div>
+<dialog id="dlg" aria-label="図解の拡大表示"><button id="dlgclose" type="button">閉じる (Esc)</button><img id="dlgimg" alt=""></dialog>
 <script src="data.js"></script>
-<script src="slides.js"></script>
-<script>
-const D = window.TRENDS, TAGS = ["model","dev-tool","local-runtime","hardware","research","github-trending"];
-let cur = "all";
-const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-document.getElementById("period").textContent = `${D.window.from} 〜 ${D.window.to}${D.window.partial ? "(集計途中)" : ""} / 最終成功: ${D.last_successful_report_at.slice(0,16)}` + (D.baseline.is_baseline ? ` / ※baseline期間(${D.baseline.snapshots}日分): 「上昇中」ではなく「今週の新着・注目」` : "");
-const f = document.getElementById("filters");
-["all", ...TAGS].forEach(t => {
-  const b = document.createElement("button");
-  b.textContent = t; b.onclick = () => { cur = t; render(); };
-  f.appendChild(b);
-});
-function render() {
-  [...f.children].forEach(b => b.classList.toggle("on", b.textContent === cur));
-  document.getElementById("list").innerHTML = D.trends.filter(t => cur === "all" || t.category === cur).map(t => `
-    <div class="card">
-      <span class="score">${t.score}</span>
-      <h2><span class="rank">#${t.rank}</span>${esc(t.keyword)}<span class="tag">${t.category}</span><span class="tag">${t.kind}</span>${t.tags.map(x => `<span class="tag">${x}</span>`).join("")}<span class="ver ${t.verification.status}">${{verified:"検証済み",partially_verified:"一部検証",unverified:"未検証"}[t.verification.status]}</span></h2>
-      <div class="meta">${esc(t.summary)}</div>
-      <div class="meta">一次ソース(${esc(t.primary.source_type)}・${t.primary.published_at ? t.primary.published_at.slice(0,10) : "観測日基準"}): <a href="${esc(t.primary.url)}" target="_blank" rel="noopener">${esc(t.primary.title.slice(0,70))}</a>${t.related.length ? ` / 同ベンダー統合: ${esc(t.related.join(", "))}` : ""}</div>
-      <div class="meta">公式${t.official_verified ? "" : "(未確認・候補)"}: ${t.official_urls.map(u => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(u)}</a>`).join(" / ") || "-"}</div>
-      <div class="meta">話題の根拠: ${t.sources.slice(0,6).map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" title="${esc(s.title)}">${esc(s.name)}: ${esc(s.title.slice(0,28))}</a>`).join(" / ")}</div>
-      ${t.x_posts.slice(0,1).map(p => `<div class="x">X補助: <a href="${esc(p.url)}" target="_blank">@${esc(p.author)}</a> ♥${p.likes} ↻${p.reposts} 👁${p.views}<br>${esc(p.text)}</div>`).join("")}
-      ${t.slides.length ? `<div class="slides">${t.slides.map((s,i) => `<div class="frame" data-e="${esc(t.entity_id)}" data-n="${i}">${renderSlide(t, i)}</div>`).join("")}</div>` : ""}
-    </div>`).join("");
-}
-render();
-const st = D.source_status, ng = Object.keys(st).filter(k => st[k].ok === false);
-const lb = document.getElementById("lb"), big = document.getElementById("big");
-document.getElementById("list").addEventListener("click", e => {
-  const f = e.target.closest(".frame"); if (!f) return;
-  big.innerHTML = renderSlide(D.trends.find(x => x.entity_id === f.dataset.e), +f.dataset.n);
-  big.style.setProperty("--s", Math.min(innerWidth / 1300, innerHeight / 740)); lb.classList.add("on");
-});
-lb.onclick = () => lb.classList.remove("on");
-document.getElementById("meta").textContent = `取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? ` (失敗/スキップ: ${ng.join(", ")})` : "") + ` / 保留(一次ソース日付なし) ${D.pending.length}件 / X検索: ${D.x_integration.search && D.x_integration.search.ok ? "OK" : "利用不可(ウォッチリストで代替)"}`;
-</script>
+<script src="app.js"></script>
 </body>
 </html>

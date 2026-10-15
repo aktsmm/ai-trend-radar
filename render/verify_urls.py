@@ -29,12 +29,14 @@ def main():
     d = ROOT / "data" / "reports" / a.week
     enr = json.loads((d / "enrichment.json").read_text(encoding="utf-8"))
     slides = json.loads((d / "slides.json").read_text(encoding="utf-8"))
+    decks = json.loads((d / "decks.json").read_text(encoding="utf-8")) if (d / "decks.json").exists() else {}
     urls = set()
     for eid, e in enr["entities"].items():
         urls |= set(e["official_urls"])
         for c in e["checks"]:
             urls |= set(c["evidence_urls"])
         urls |= {s["official_url"] for s in slides.get(eid, [])}
+        urls |= {s["url"] for s in decks.get(eid, {}).get("sources", [])}
     now = datetime.now(timezone.utc).isoformat()
     enr["url_checks"] = {u: {"status": status_of(u), "checked_at": now} for u in sorted(urls)}
     (d / "enrichment.json").write_text(json.dumps(enr, ensure_ascii=False, indent=1), encoding="utf-8")

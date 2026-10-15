@@ -25,10 +25,17 @@ FEEDS = [
     ("qwen-blog", "Alibaba", "announcement", "https://qwenlm.github.io/blog/index.xml"),
     ("anthropic-news", "Anthropic", "announcement", "https://www.anthropic.com/news"),
     ("mistral-news", "Mistral", "announcement", "https://mistral.ai/news/rss"),
-    ("meta-ai-blog", "Meta", "announcement", "https://ai.meta.com/blog/rss/"),
+    # ai.meta.com/blog/rss/ was removed (404/400); the Meta newsroom feed is used instead, filtered to AI topics (AI_ONLY_FEEDS).
+    ("meta-newsroom", "Meta", "announcement", "https://about.fb.com/news/feed/"),
+    ("google-research-blog", "Google", "announcement", "https://research.google/blog/rss/"),
+    ("microsoft-research-blog", "Microsoft", "announcement", "https://www.microsoft.com/en-us/research/feed/"),
+    ("apple-ml-research", "Apple", "announcement", "https://machinelearning.apple.com/rss.xml"),
+    ("nvidia-genai-blog", "NVIDIA", "announcement", "https://blogs.nvidia.com/blog/category/generative-ai/feed/"),
     # deepseek.com is blocked by the corporate IT policy (Windows Security notice, 2026-10-15): intentionally not collected.
     ("ollama-blog", "Ollama", "announcement", "https://ollama.com/blog/rss.xml"),
 ]
+AI_ONLY_FEEDS = {"meta-newsroom"}
+AI_RE = re.compile(r"\b(ai|llama|llm|model|models|agent|agents|superintelligence|glasses|smart glasses|gpu|inference)\b", re.I)
 # official GitHub repositories -> Releases atom
 GH_REPOS = [
     ("ggml-org/llama.cpp", "ggml"), ("ollama/ollama", "Ollama"), ("vllm-project/vllm", "vLLM"), ("sgl-project/sglang", "SGLang"),

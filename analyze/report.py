@@ -115,7 +115,7 @@ def make_events(c, hits, items, win):
             evs.append(dict(kind={"gh_releases": "release", "hf_papers": "paper", "hf_models": "model", "openrouter": "model",
                                   "github_new": "repo"}.get(s, "announcement"),
                             source=s, url=it["url"], published_at=dt.isoformat(), source_type=st, title=it["title"][:140],
-                            vendor=it.get("vendor"), date_basis="published"))
+                            vendor=it.get("vendor"), date_basis="published", feed=it.get("feed")))
     for e in evs:
         e["event_id"] = hashlib.sha1((slug(c["name"]) + e["url"]).encode()).hexdigest()[:10]
     def key(e):
@@ -134,11 +134,14 @@ def desc_of(c, hits):
     return ""
 
 
+RESEARCH_FEEDS = {"google-research-blog", "microsoft-research-blog", "apple-ml-research", "deepmind-blog"}
+
+
 def categorize(c, hits, desc, events):
     names = set(hits)
     blob = B.norm(c["name"] + " " + desc)
     t0 = (c["tags"] or [""])[0]
-    if (events and events[0]["source"] == "hf_papers") or names == {"hf_papers"} or (t0 == "research" and not c["vendor"]):
+    if (events and (events[0]["source"] == "hf_papers" or events[0].get("feed") in RESEARCH_FEEDS)) or names == {"hf_papers"} or (t0 == "research" and not c["vendor"]):
         return "research"
     if t0 == "hardware" or re.search(r" (gpu|npu|fpga|accelerator|chip|tpu|jetson|dgx|rtx) ", B.norm(c["name"])):
         return "hardware"
@@ -379,12 +382,27 @@ def build_report(items, status, now, week=None, xposts=None, vel=None, stoplist=
     }
 
 
+def _topic_tokens(t):
+    toks = {B.norm(t["keyword"]), B.norm(t["entity_id"].replace("-", " "))} | {f" {w} " for w in B.norm(t["keyword"]).split() if len(w) >= 5}
+    return toks | {B.norm(x) for x in t.get("related", [])}
+
+
+def attach_jp(trends, jp_items, limit=3):
+    """Japanese-language reactions (Zenn/Qiita/Hatena): display-only links whose title names the keyword. Never used for ranking."""
+    for t in trends:
+        if "keyword" not in t:
+            continue
+        toks = _topic_tokens(t)
+        hits = [x for x in jp_items if any(k.strip() and k in B.norm(x["title"]) for k in toks)]
+        t["jp_reactions"] = [{"site": x.get("site", ""), "title": x["title"][:80], "url": x["url"], "date": (x.get("created") or "")[:10]}
+                             for x in sorted(hits, key=lambda x: x.get("created") or "", reverse=True)[:limit]]
+
+
 def on_topic_filter(t):
     """Display-only denoising: keep sources / X posts whose own title or text names the keyword (not just a body-text mention)."""
     if "keyword" not in t:
         return
-    toks = {B.norm(t["keyword"]), B.norm(t["entity_id"].replace("-", " "))} | {f" {w} " for w in B.norm(t["keyword"]).split() if len(w) >= 5}
-    toks |= {B.norm(x) for x in t.get("related", [])}
+    toks = _topic_tokens(t)
     hit = lambda s: any(k.strip() and k in B.norm(s) for k in toks)
     on = [s for s in t["sources"] if hit(s["title"]) or s["name"] in ("gh_releases", "official")]
     t["sources"] = on or t["sources"][:1]
@@ -397,6 +415,7 @@ def apply_enrichment(trends, label):
     enr = json.loads((d / "enrichment.json").read_text(encoding="utf-8")) if (d / "enrichment.json").exists() else {"entities": {}}
     slides = json.loads((d / "slides.json").read_text(encoding="utf-8")) if (d / "slides.json").exists() else {}
     digests = json.loads((d / "digest.json").read_text(encoding="utf-8")) if (d / "digest.json").exists() else {}
+    decks = json.loads((d / "decks.json").read_text(encoding="utf-8")) if (d / "decks.json").exists() else {}
     checks = enr.get("url_checks", {})
     for t in trends:
         on_topic_filter(t)
@@ -411,6 +430,8 @@ def apply_enrichment(trends, label):
         t["slides"] = slides.get(t["entity_id"], [])
         if t["entity_id"] in digests:
             t["digest"] = digests[t["entity_id"]]
+        if t["entity_id"] in decks:
+            t["deck"] = decks[t["entity_id"]]
 
 
 def entry(r, rank, mx, snaps):
@@ -492,6 +513,9 @@ def main():
     for p in watch:  # watchlist posts are also scored as auxiliary X evidence
         xposts.setdefault(p["id"], dict(p, _cited=[], _via="watchlist"))
     rep = build_report(items, status, now, a.week, xposts, None, None, a.offline, snaps, ledger, watch)
+    jp_path = RAW / "jp_reaction.json"
+    if jp_path.exists():
+        attach_jp(rep["trends"], json.loads(jp_path.read_text(encoding="utf-8")))
     out = ROOT / "data" / "reports" / rep["window"]["label"]
     out.mkdir(parents=True, exist_ok=True)
     txt = json.dumps(rep, ensure_ascii=False, indent=1)

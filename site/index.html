@@ -3,129 +3,183 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Trend Radar (mock)</title>
+<title>AI Trend Radar - 週次 AI トレンド・ダイジェスト</title>
+<meta name="description" content="過去1週間の AI・ローカル LLM の新製品・モデル・リリースを、公式の一次情報で確認して日本語で整理した週次ダイジェスト。">
 <style>
-  body{font-family:system-ui,"Yu Gothic UI",sans-serif;margin:0;background:#f5f7fb;color:#1c2333;line-height:1.6}
-  header{padding:20px 24px;background:#1c2b4a;color:#fff}
-  header h1{margin:0;font-size:24px}
-  header p{margin:4px 0 0;opacity:.8;font-size:13px}
-  main{max-width:1100px;margin:0 auto;padding:16px}
-  #filters button{border:1px solid #9aa7c0;background:#fff;border-radius:16px;padding:4px 12px;margin:0 6px 6px 0;cursor:pointer}
-  #filters button.on{background:#2f5fd0;color:#fff;border-color:#2f5fd0}
+  :root{--navy:#1c2b4a;--blue:#2f5fd0;--ink:#1c2333;--muted:#556;--line:#dde3f2}
+  *{box-sizing:border-box}
+  body{font-family:system-ui,"Yu Gothic UI","Noto Sans JP",sans-serif;margin:0;background:#f5f7fb;color:var(--ink);line-height:1.65}
+  a{color:#1d4ed8} a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #fca311;outline-offset:2px}
+  .site-header{background:var(--navy);color:#fff}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+  .site-header .wrap{display:flex;flex-wrap:wrap;gap:6px 24px;align-items:center;padding-top:12px;padding-bottom:12px}
+  .brand{font-weight:800;font-size:20px;color:#fff;text-decoration:none}
+  nav a{color:#dbe4ff;margin-right:16px;font-size:14px}
+  .period{width:100%;font-size:12px;opacity:.85}
+  main{padding-top:16px;padding-bottom:32px}
+  .lead{font-size:14px;color:var(--muted);margin:0 0 12px}
+  .controls{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-bottom:12px}
+  .controls input[type=search]{padding:6px 12px;border:1px solid #9aa7c0;border-radius:16px;min-width:220px;font:inherit}
+  .chips button{border:1px solid #9aa7c0;background:#fff;border-radius:16px;padding:4px 12px;margin:0 4px 4px 0;cursor:pointer;font:inherit;font-size:13px}
+  .chips button[aria-pressed=true]{background:var(--blue);color:#fff;border-color:var(--blue)}
+  label.tgl{font-size:13px;color:var(--muted)}
   details.guide{background:#fff;border-radius:10px;padding:10px 16px;margin:0 0 12px;box-shadow:0 1px 3px #0002;font-size:13px}
   details.guide summary{cursor:pointer;font-weight:700;font-size:14px}
   details.guide dl{margin:8px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px}
   details.guide dt{font-weight:700;white-space:nowrap} details.guide dd{margin:0;color:#334}
   .card{background:#fff;border-radius:10px;padding:16px 20px;margin:14px 0;box-shadow:0 1px 3px #0002}
-  .card h2{margin:0;font-size:20px}
-  .rank{display:inline-block;min-width:28px;color:#2f5fd0}
-  .tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;background:#e3eaff;color:#2a45a0;margin-left:6px;vertical-align:middle}
+  .card h2{margin:0;font-size:20px;line-height:1.4}
+  .rank{display:inline-block;min-width:28px;color:var(--blue)}
+  .tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;background:#e3eaff;color:#2a45a0;margin-left:6px;vertical-align:middle;font-weight:400}
   .score{float:right;font-weight:600} .score small{font-weight:400;color:#667}
-  .ver{font-size:11px;padding:1px 8px;border-radius:10px;margin-left:6px;font-weight:600;vertical-align:middle}
-  .ver.verified{background:#d9f2e3;color:#157347} .ver.partially_verified{background:#fff0d1;color:#8a5a00} .ver.unverified{background:#fde2e4;color:#b02a37}
+  .badge{font-size:11px;padding:1px 8px;border-radius:10px;margin-left:6px;font-weight:600;vertical-align:middle;white-space:nowrap}
+  .badge.ok{background:#d9f2e3;color:#157347} .badge.part{background:#fff0d1;color:#8a5a00} .badge.no{background:#fde2e4;color:#b02a37} .badge.link{background:#e8f0ff;color:#1d4ed8}
   .sub{font-size:12px;color:#667;margin:2px 0 8px}
-  .summary{margin:8px 0;font-size:15px} .summary p{margin:2px 0}
+  .summary p{margin:2px 0;font-size:15px}
   .why{font-size:13px;color:#445;background:#f0f4ff;border-radius:6px;padding:6px 10px;margin:8px 0}
   .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:10px 0}
-  .box{border:1px solid #dde3f2;border-radius:8px;padding:8px 12px;font-size:13px}
-  .box h3{margin:0 0 4px;font-size:13px;color:#2a45a0}
-  .box ul{margin:0;padding-left:18px}
-  .box.warn h3{color:#8a5a00} .box.warn{background:#fffaf0;border-color:#f0dcae}
-  .body-row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
-  .frame{width:400px;height:225px;overflow:hidden;border:1px solid #cfd8ee;border-radius:8px;cursor:zoom-in;flex:none}
-  .frame .slide{transform:scale(.3125);transform-origin:top left}
-  .links{flex:1;min-width:300px;font-size:13px}
-  .links dt{font-weight:700;margin-top:6px} .links dt small{font-weight:400;color:#667}
-  .links dd{margin:0 0 0 0;word-break:break-all}
-  .auto{font-size:13px;color:#556;border-left:3px solid #c9d2e8;padding-left:10px;margin:8px 0}
-  .x{font-size:12px;color:#444;border-left:3px solid #1d9bf0;padding-left:8px;margin-top:6px}
-  .lightbox{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:9}
-  .lightbox.on{display:flex}
-  .lightbox .big{width:1280px;height:720px;transform:scale(var(--s,.8));flex:none}
-  a{color:#1d4ed8}
-  #meta{font-size:12px;color:#556}
+  .box{border:1px solid var(--line);border-radius:8px;padding:8px 12px;font-size:13px}
+  .box h3{margin:0 0 4px;font-size:13px;color:#2a45a0} .box ul{margin:0;padding-left:18px}
+  .box.warn{background:#fffaf0;border-color:#f0dcae} .box.warn h3{color:#8a5a00}
+  .row{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start}
+  .info{flex:none;width:min(100%,420px);border:1px solid #cfd8ee;border-radius:8px;padding:0;background:none;cursor:zoom-in;display:block}
+  .info img{display:block;width:100%;height:auto;border-radius:8px}
+  .side{flex:1;min-width:260px;font-size:13px}
+  .side h3{margin:8px 0 2px;font-size:13px} .side h3 small{font-weight:400;color:#667}
+  .side ul{margin:0;padding-left:18px} .side li{word-break:break-all}
+  .dl{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+  .dl a{display:inline-block;padding:4px 12px;border:1px solid var(--blue);border-radius:16px;text-decoration:none;font-size:13px;font-weight:600;background:#fff}
+  .dl a:hover{background:#eef3ff}
+  .auto{font-size:13px;color:var(--muted);border-left:3px solid #c9d2e8;padding-left:10px;margin:8px 0}
+  table.cand{width:100%;border-collapse:collapse;font-size:13px} table.cand th,table.cand td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+  section.cands{background:#fff;border-radius:10px;padding:12px 16px;margin:14px 0;box-shadow:0 1px 3px #0002}
+  section.cands h2{margin:0 0 4px;font-size:16px}
+  .empty{padding:24px;text-align:center;color:var(--muted)}
+  footer.site-footer{font-size:12px;color:var(--muted);padding-bottom:32px} footer h2{font-size:14px;margin:16px 0 4px;color:var(--ink)}
+  dialog{border:0;border-radius:10px;padding:0;max-width:96vw;background:#000}
+  dialog::backdrop{background:#000b}
+  dialog img{display:block;max-width:96vw;max-height:88vh}
+  dialog button{position:absolute;top:6px;right:6px;border:0;border-radius:14px;padding:4px 14px;font:inherit;cursor:pointer;background:#fff}
+  @media (max-width:640px){.score{float:none;display:block}.card{padding:12px}details.guide dl{grid-template-columns:1fr}.controls input[type=search]{width:100%}}
 </style>
-<link rel="stylesheet" href="slides.css">
 </head>
 <body>
-<header><h1>AI Trend Radar <small>(mock)</small></h1><p id="period"></p></header>
-<main>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="#top">AI Trend Radar</a>
+  <nav aria-label="メニュー"><a href="#latest">最新ダイジェスト</a><a href="#cands">観測候補(未掲載)</a><a href="#about">方式・出典</a><a href="downloads/trends.json">JSON</a></nav>
+  <div class="period" id="period"></div>
+</div></header>
+<main class="wrap" id="top">
+  <p class="lead">過去 1 週間に AI・ローカル LLM 界隈で出た新製品・モデル・リリースのうち、公式の一次情報で確認できたものを日本語で整理しています。各項目に図解 1 枚と、2 枚構成のブリーフ(PDF / PowerPoint)を付けています。</p>
   <details class="guide" open>
     <summary>このページの見方</summary>
     <dl>
-      <dt>目的</dt><dd>過去 1 週間に AI・ローカル LLM 界隈で出た新製品・モデル・リリースを機械的に集め、公式の一次情報で裏取りできたものだけを順位付けして載せます。</dd>
       <dt>一次ソース</dt><dd>公式発表・公式ブログ・公式 GitHub Release など、発表元が出した情報。公開日が分かるものだけを採用の根拠にしています。</dd>
-      <dt>公式 URL</dt><dd>そのキーワードの公式ページ。リンク先が実際に開けること(HTTP 200)を確認したものは「確認済み」と表示します。</dd>
-      <dt>話題の根拠</dt><dd>今週、そのキーワードに言及していた GitHub・Hacker News・Reddit・Bluesky などの投稿や repo。順位付けの材料で、内容の正しさの根拠ではありません。関連の薄いものが混ざることがあります。</dd>
-      <dt>検証状態</dt><dd><span class="ver verified">検証済み</span>公式ドキュメント等で内容を確認 / <span class="ver partially_verified">一部検証</span>一部のみ確認 / <span class="ver unverified">未検証</span>自動収集のみで、内容は未確認</dd>
+      <dt>公式 URL</dt><dd>そのキーワードの公式ページ。「リンク到達確認」は、実際に開けること(HTTP 200)を確認した日を表します。内容の正しさそのものを保証するものではありません。</dd>
+      <dt>話題の根拠</dt><dd>今週そのキーワードに言及していた GitHub・Hacker News・Reddit・Bluesky などの投稿や repo。順位付けの材料で、内容の正しさの根拠ではありません。</dd>
+      <dt>確認状態</dt><dd><span class="badge ok">一次情報確認済み</span>公式ドキュメント等で内容を確認 / <span class="badge part">一部確認</span> / <span class="badge no">未確認</span>自動収集のみ(下の「観測候補」に分けて掲載)</dd>
+      <dt>要約</dt><dd>要約と図解は AI が下書きし、公式の一次情報と照合したうえで掲載しています。ベンダーが発表した数字は「発表の数字」と明記し、独自には検証していません。</dd>
       <dt>スコア</dt><dd>複数ソースでの言及の多さと新しさから算出した 0〜100 の相対値(1 位 = 100)。蓄積が 14 日分に満たない間は「上昇中」ではなく「今週の注目」と表示します。</dd>
-      <dt>X の投稿</dt><dd>補助情報です。採用は一次情報での裏取りで決めています。</dd>
     </dl>
   </details>
-  <div id="filters"></div>
-  <div id="list"></div>
-  <p id="meta"></p>
+  <div class="controls">
+    <input type="search" id="q" placeholder="キーワードで絞り込み" aria-label="キーワードで絞り込み">
+    <div class="chips" id="filters" role="group" aria-label="カテゴリ"></div>
+    <label class="tgl"><input type="checkbox" id="cand"> 観測候補(未確認)も検索対象にする</label>
+  </div>
+  <div id="latest" aria-live="polite"></div>
+  <details class="cands" id="cands"><summary id="candsum">観測候補(未掲載)</summary><p class="lead" id="candlead"></p><div id="candlist"></div></details>
+  <footer class="site-footer" id="about">
+    <h2>方式・出典</h2>
+    <p id="meta"></p>
+    <p>収集元: Hugging Face・GitHub・Hacker News・Reddit・Bluesky・dev.to・PyPI・OpenRouter と、各社の公式フィード。X の投稿は補助情報で、採用の判断は一次情報で行っています。公式サイトを取得できなかった発表元(例: Google DeepMind・Meta AI の一部)は、その旨を取得状態に表示します。</p>
+    <p>要約・図解・ブリーフは AI が下書きしたものを、決定的な検査(スキーマ・公式 URL の許可リスト・日付の整合・変更件数の上限)と一次情報の照合に通したものです。誤りに気づいた場合は GitHub の Issue でお知らせください。</p>
+  </footer>
 </main>
-<div class="lightbox" id="lb"><div class="big" id="big"></div></div>
+<dialog id="dlg" aria-label="図解の拡大表示"><button id="dlgclose" type="button">閉じる (Esc)</button><img id="dlgimg" alt=""></dialog>
 <script src="data.js"></script>
-<script src="slides.js"></script>
 <script>
-const D = window.TRENDS, TAGS = ["model","dev-tool","local-runtime","hardware","research","github-trending"];
-let cur = "all";
+const D = window.TRENDS, CATS = ["model","dev-tool","local-runtime","hardware","research","github-trending"];
+let cat = "all", opener = null;
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const VER = {verified:"検証済み",partially_verified:"一部検証",unverified:"未検証"};
-document.getElementById("period").textContent = `${D.window.from} 〜 ${D.window.to}${D.window.partial ? "(集計途中)" : ""} / 最終成功: ${D.last_successful_report_at.slice(0,16)}` + (D.baseline.is_baseline ? ` / ※baseline期間(${D.baseline.snapshots}日分): 「上昇中」ではなく「今週の新着・注目」` : "");
-const f = document.getElementById("filters");
-["all", ...TAGS].forEach(t => {
+const $ = id => document.getElementById(id);
+const link = (u, label) => `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(label || u)}</a>`;
+const published = D.trends.filter(t => t.deck), cands = D.trends.filter(t => !t.deck);
+$("period").textContent = `対象期間 ${D.window.from} 〜 ${D.window.to}(${D.window.label}${D.window.partial ? "・集計途中" : ""}) / データ更新 ${D.last_successful_report_at.slice(0,16).replace("T"," ")} UTC` + (D.baseline.is_baseline ? ` / 蓄積 ${D.baseline.snapshots} 日分のため「今週の注目」表示` : "");
+
+const f = $("filters");
+["all", ...CATS].forEach(c => {
   const b = document.createElement("button");
-  b.textContent = t; b.onclick = () => { cur = t; render(); };
+  b.type = "button"; b.textContent = c === "all" ? "すべて" : c; b.dataset.c = c; b.setAttribute("aria-pressed", c === "all");
+  b.onclick = () => { cat = c; render(); };
   f.appendChild(b);
 });
-const link = (u, label) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(label || u)}</a>`;
-const box = (h, items, cls) => items && items.length ? `<div class="box ${cls || ""}"><h3>${h}</h3><ul>${items.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "";
+$("q").oninput = render; $("cand").onchange = render;
 
-function body(t) {
-  const g = t.digest;
-  if (g) return `
+const hay = t => [t.keyword, t.vendor, t.category, ...(t.tags || []), t.digest ? t.digest.summary.join(" ") : t.summary].join(" ").toLowerCase();
+const box = (h, items, cls) => items && items.length ? `<div class="box ${cls || ""}"><h3>${h}</h3><ul>${items.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "";
+function badges(t) {
+  const v = t.verification.status;
+  const urls = t.official_urls.map(u => t.url_checks && t.url_checks[u]).filter(Boolean);
+  const okAll = urls.length && urls.every(c => c.status === 200);
+  const when = okAll ? urls.map(c => c.checked_at).sort().pop().slice(0, 10) : "";
+  return `<span class="badge ${v === "verified" ? "ok" : v === "partially_verified" ? "part" : "no"}">${{verified:"一次情報確認済み",partially_verified:"一部確認",unverified:"未確認"}[v]}</span>` +
+         (okAll ? `<span class="badge link">リンク到達確認 ${when}</span>` : "");
+}
+function altText(t) {
+  const s = t.slides[0];
+  return `${t.keyword}の図解: ${s.title}。` + s.points.map(p => `${p.h}: ${p.t}`).join(" ");
+}
+function card(t) {
+  const g = t.digest, k = t.deck, s = t.slides[0], id = esc(t.entity_id);
+  const checked = t.verification.checks.map(c => c.retrieved_at).sort().pop();
+  return `<article class="card" id="k-${id}" aria-labelledby="h-${id}">
+    <span class="score" title="複数ソースでの言及の多さと新しさ(1位=100)">${t.score}<small> / 100</small></span>
+    <h2 id="h-${id}"><span class="rank">#${t.rank}</span>${esc(t.keyword)}<span class="tag">${esc(t.category)}</span><span class="tag">${esc(t.kind)}</span>${t.tags.map(x => `<span class="tag">${esc(x)}</span>`).join("")}${badges(t)}</h2>
+    <div class="sub">${esc(t.vendor || "")}${t.primary.published_at ? ` ・ 一次情報の公開 ${t.primary.published_at.slice(0, 10)}` : ""}${checked ? ` ・ 確認日 ${checked.slice(0, 10)}` : ""}</div>
     <div class="summary">${g.summary.map(x => `<p>${esc(x)}</p>`).join("")}</div>
     <div class="why">なぜ話題か: ${esc(g.why_trending)}${g.audience ? ` / 想定読者: ${esc(g.audience)}` : ""}</div>
-    <div class="cols">${box("何が変わる", g.what_changes)}${box("嬉しいこと", g.benefits)}${box("注意点", g.caveats, "warn")}</div>`;
-  return `<div class="auto">自動抽出の要約(内容は未確認): ${esc(t.summary)}</div>`;
-}
-function links(t) {
-  const p = t.primary, d = p.published_at ? p.published_at.slice(0, 10) : "観測日基準";
-  const urlOk = t.official_urls.length && t.official_urls.every(u => t.url_checks && t.url_checks[u] && t.url_checks[u].status === 200);
-  return `<dl class="links">
-    <dt>一次ソース <small>(${esc(p.source_type)}・${d})</small></dt><dd>${link(p.url, p.title.slice(0, 80))}${t.related.length ? ` <small>/ 同ベンダー統合: ${esc(t.related.join(", "))}</small>` : ""}</dd>
-    <dt>公式 URL <small>${t.official_verified ? (urlOk ? "(リンク確認済み)" : "") : "(未確認・候補)"}</small></dt><dd>${t.official_urls.map(u => link(u)).join("<br>") || "-"}</dd>
-    <dt>話題の根拠 <small>(今週の言及。関連が薄いものも含む)</small></dt><dd>${t.sources.slice(0, 5).map(s => `${link(s.url, s.name + ": " + s.title.slice(0, 32))}`).join("<br>")}</dd>
-    ${t.digest ? "" : t.x_posts.slice(0, 1).map(p => `<dt>X 補助</dt><dd><div class="x">${link(p.url, "@" + p.author)} ♥${p.likes} ↻${p.reposts} 👁${p.views}<br>${esc(p.text)}</div></dd>`).join("")}
-  </dl>`;
+    <div class="cols">${box("何が変わる", g.what_changes)}${box("嬉しいこと", g.benefits)}${box("注意点", g.caveats, "warn")}</div>
+    <div class="row">
+      <button type="button" class="info" data-e="${id}" aria-label="図解を拡大: ${esc(t.keyword)}"><img src="assets/slides/${id}.png" width="1280" height="720" loading="lazy" alt="${esc(altText(t))}"></button>
+      <div class="side">
+        <div class="dl" role="group" aria-label="ダウンロード"><a href="downloads/${id}.pdf" download>ブリーフ PDF(2 枚)</a><a href="downloads/${id}.pptx" download>ブリーフ PowerPoint(2 枚)</a></div>
+        <h3>出典 <small>(確認に使った一次情報)</small></h3>
+        <ul>${k.sources.map(x => `<li>[${esc(x.id)}] ${esc(x.publisher)}: ${link(x.url, x.title)}${x.date ? ` (${esc(x.date)})` : ""}</li>`).join("")}</ul>
+        <h3>公式 URL</h3>
+        <ul>${t.official_urls.map(u => `<li>${link(u)}</li>`).join("")}</ul>
+        <h3>話題の根拠 <small>(今週の言及。順位付けの材料)</small></h3>
+        <ul>${t.sources.slice(0, 5).map(x => `<li>${link(x.url, x.name + ": " + x.title.slice(0, 40))}</li>`).join("")}</ul>
+        ${(t.jp_reactions || []).length ? `<h3>日本語の反応 <small>(Zenn・Qiita・はてブ。表示のみで順位には使っていません)</small></h3><ul>${t.jp_reactions.map(x => `<li>${esc(x.site)}: ${link(x.url, x.title)}${x.date ? ` (${esc(x.date)})` : ""}</li>`).join("")}</ul>` : ""}
+      </div>
+    </div>
+  </article>`;
 }
 function render() {
-  [...f.children].forEach(b => b.classList.toggle("on", b.textContent === cur));
-  document.getElementById("list").innerHTML = D.trends.filter(t => cur === "all" || t.category === cur).map(t => `
-    <div class="card">
-      <span class="score">${t.score} <small>/100</small></span>
-      <h2><span class="rank">#${t.rank}</span>${esc(t.keyword)}<span class="tag">${t.category}</span><span class="tag">${t.kind}</span>${t.tags.map(x => `<span class="tag">${x}</span>`).join("")}<span class="ver ${t.verification.status}">${VER[t.verification.status]}</span></h2>
-      <div class="sub">${esc(t.vendor || "")}${t.primary.published_at ? ` ・ 公開 ${t.primary.published_at.slice(0, 10)}` : ""}</div>
-      ${body(t)}
-      <div class="body-row">
-        ${t.slides.length ? `<div class="frame" data-e="${esc(t.entity_id)}" data-n="0" title="クリックで拡大">${renderSlide(t, 0)}</div>` : ""}
-        ${links(t)}
-      </div>
-    </div>`).join("");
+  [...f.children].forEach(b => b.setAttribute("aria-pressed", b.dataset.c === cat));
+  const q = $("q").value.trim().toLowerCase(), inCat = t => cat === "all" || t.category === cat, inQ = t => !q || hay(t).includes(q);
+  const list = published.filter(t => inCat(t) && inQ(t));
+  $("latest").innerHTML = list.length ? list.map(card).join("") : `<div class="empty">条件に一致する掲載項目はありません。「観測候補」も確認してください。</div>`;
+  const showAll = $("cand").checked || q || cat !== "all";
+  const cl = cands.filter(t => inCat(t) && inQ(t));
+  const rej = D.rejected_candidates || {};
+  $("candlead").textContent = `自動収集で上位に入ったものの、公式の一次情報での確認や掲載価値の判断が済んでいない、または見送った項目です(${cands.length}件)。内容は未確認で、要約は載せていません。`;
+  $("candlist").innerHTML = cl.length ? `<table class="cand"><thead><tr><th>順位</th><th>キーワード</th><th>カテゴリ</th><th>状態</th><th>一次ソース候補</th></tr></thead><tbody>${cl.map(t => `<tr><td>#${t.rank}</td><td>${esc(t.keyword)}</td><td>${esc(t.category)}</td><td>${rej[t.entity_id] ? "見送り: " + esc(rej[t.entity_id]) : "未確認(自動収集のみ)"}</td><td>${link(t.primary.url, t.primary.title.slice(0, 50))}</td></tr>`).join("")}</tbody></table>` : `<div class="empty">該当なし</div>`;
+  $("candsum").textContent = `観測候補(未掲載) ${cands.length}件` + (cl.length !== cands.length ? ` / 条件に一致 ${cl.length}件` : "");
+  $("cands").open = !!showAll && (!!q || $("cand").checked);
 }
 render();
 const st = D.source_status, ng = Object.keys(st).filter(k => st[k].ok === false);
-const lb = document.getElementById("lb"), big = document.getElementById("big");
-document.getElementById("list").addEventListener("click", e => {
-  const fr = e.target.closest(".frame"); if (!fr) return;
-  big.innerHTML = renderSlide(D.trends.find(x => x.entity_id === fr.dataset.e), +fr.dataset.n);
-  big.style.setProperty("--s", Math.min(innerWidth / 1300, innerHeight / 740)); lb.classList.add("on");
+$("meta").textContent = `掲載 ${published.length} 件 / 観測候補 ${cands.length} 件 / 取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? `(取得できなかった: ${ng.join(", ")})` : "") + ` / 公開日が確認できず保留 ${D.pending.length} 件 / X 検索: ${D.x_integration.search && D.x_integration.search.ok ? "利用可" : "利用不可(ウォッチリストで補完)"}`;
+
+const dlg = $("dlg");
+$("latest").addEventListener("click", e => {
+  const b = e.target.closest(".info"); if (!b) return;
+  opener = b; $("dlgimg").src = b.querySelector("img").src; $("dlgimg").alt = b.querySelector("img").alt; dlg.showModal();
 });
-lb.onclick = () => lb.classList.remove("on");
-document.getElementById("meta").textContent = `ダイジェスト作成済み ${D.trends.filter(t => t.digest).length}/${D.trends.length}件(残りは自動抽出のみ・未検証) / 取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? ` (失敗/スキップ: ${ng.join(", ")})` : "") + ` / 保留(一次ソース日付なし) ${D.pending.length}件 / X検索: ${D.x_integration.search && D.x_integration.search.ok ? "OK" : "利用不可(ウォッチリストで代替)"}`;
+$("dlgclose").onclick = () => dlg.close();
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+dlg.addEventListener("close", () => opener && opener.focus());
 </script>
 </body>
 </html>

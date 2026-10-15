@@ -97,5 +97,171 @@
    "防御的なサイバー用途の Cyber Permissive 版は、申請して許可された場合のみ使える"
   ],
   "audience": "Google Cloud の Agent Platform で AI を組み込む開発者"
+ },
+ "agentcore": {
+  "summary": [
+   "AWS が、Amazon Bedrock AgentCore の Memory で、短期メモリの料金を 1 イベント定額から従量課金に変えた。発表は 2026-10-12。",
+   "料金は、取り込みが 1GB あたり $1.00、取得が $0.20、保存が 1GB・月あたり $0.10(いずれも AWS の発表)。",
+   "AgentCore は、任意のフレームワークやモデルで、エージェントの構築・運用を行う AWS の基盤。"
+  ],
+  "why_trending": "AWS が AgentCore 関連の発表とブログを今週続けて出し、今週 20 位。",
+  "what_changes": [
+   "短期メモリの課金が、扱うデータ量に比例する方式になった",
+   "取り込み・取得は 1 イベント 12KB 以上 64KB 以下で課金される"
+  ],
+  "benefits": [
+   "小さなイベントを頻繁に書くエージェントほど、コストが下がる見込み(AWS の説明)"
+  ],
+  "caveats": [
+   "長期メモリの料金は変わらない",
+   "TTL を短くすると、保存コストを抑えられる"
+  ],
+  "audience": "AgentCore Memory を使うエージェント開発者"
+ },
+ "clef": {
+  "summary": [
+   "Cloudflare が、音声・動画・画像・テキストを入力できるオープンウェイトの決定モデル Clef-omni を、2026-10-09 に公開した。",
+   "文章を生成せず、状態とスキーマ(型付きの質問)を受け取り、各質問の選択肢ごとの確率を1回の推論で返す。",
+   "Qwen3-Omni-30B-A3B-Instruct を土台にした 30B-A3B の MoE モデルで、Apache-2.0 で Hugging Face に置かれている。"
+  ],
+  "why_trending": "Cloudflare 公式のブログとモデル公開が重なり、決定モデルの新しい選択肢として注目された。",
+  "what_changes": [
+   "音声(wav/mp3)と動画(mp4/webm)も1回の API 呼び出しで判定できる",
+   "文字起こしなどの前処理モデルを挟まずに済む"
+  ],
+  "benefits": [
+   "複数の入力形式を1つのモデルで扱える見込み(公式ブログの説明)",
+   "速度は中央値でテキスト約130ms、画像約150ms(Cloudflare 発表の数字)"
+  ],
+  "caveats": [
+   "モデルカードでは bfloat16 の土台に約64GBのGPUメモリが必要とされている",
+   "ベンチマークは Cloudflare 発表の数字で、既存の Clef・Jev に勝てない項目もある"
+  ],
+  "audience": "分類や振り分けの判定を自動化したい開発者"
+ },
+ "github-copilot": {
+  "summary": [
+   "GitHub が、Google の Gemini 4 Argon を GitHub Copilot で一般提供(GA)にした。公式 changelog は 2026-10-13 付け。",
+   "複雑なコーディング・エージェント作業・推論向けのモデルで、初期テストでは Gemini の従来モデルより全てのコーディングベンチマークで多くの課題を解いたと説明されている(GitHub の発表)。",
+   "VS Code・Visual Studio・Copilot CLI・コーディングエージェント・JetBrains・Xcode・Eclipse などのモデルピッカーから選べる。"
+  ],
+  "why_trending": "GitHub 公式の changelog が出たうえ、Copilot の話題が Bluesky などでも続き、今週 10 位。",
+  "what_changes": [
+   "Copilot のモデルピッカーに Gemini 4 Argon が加わる",
+   "Business・Enterprise では管理者がモデルポリシーで有効・無効を決められる"
+  ],
+  "benefits": [
+   "コーディングや作業の内容に合わせて、使うモデルを選びやすくなる見込み"
+  ],
+  "caveats": [
+   "対象は Copilot Pro+・Max・Business・Enterprise。展開は段階的で、すぐ見えない場合がある",
+   "利用量ベース課金のもと、提供元の定価で課金される"
+  ],
+  "audience": "GitHub Copilot を使う開発者と、チームの管理者"
+ },
+ "grok-4-7": {
+  "summary": [
+   "SpaceXAI の Grok 4.7 が、2026-10-13 に Amazon Bedrock で使えるようになったと、AWS が公式ブログで紹介した。",
+   "AWS はこのモデルで道具を呼ぶエージェントを作り、3 つの課題を 72 回実行した。67 回が正答で、推論の強さを xhigh にすると 18 回すべて正答した。",
+   "モデル自体の発表(2026-09-21)では、長く働き、自分の作業をより丁寧に確かめるモデルと説明されている。"
+  ],
+  "why_trending": "AWS 公式ブログが出て、Hugging Face 上でも Grok 4.7 に触れたモデルが話題になり、今週 19 位。",
+  "what_changes": [
+   "Bedrock で us.xai.grok-4.7 などの推論プロファイル経由で呼び出せる",
+   "推論の強さを low・medium・high・xhigh から選べる"
+  ],
+  "benefits": [
+   "推論の強さで、正確さと出力トークン量のバランスを調整できる。low は xhigh より出力が約 8 分の 1 と報告されている(AWS の測定)"
+  ],
+  "caveats": [
+   "正答数は AWS が作った 3 課題の測定で、一般的な性能を示すものではない",
+   "ベンチマークの数字は SpaceXAI の発表で、独自には検証していない"
+  ],
+  "audience": "Amazon Bedrock でエージェントを作る開発者"
+ },
+ "lfm2": {
+  "summary": [
+   "Liquid AI が、推論(考えてから答える)特化のオンデバイス向けモデル LFM2.5-24B-A2B を、2026-10-12 に Hugging Face で公開した。",
+   "総パラメータは 24B だが、1 トークンあたりに動くのは 2.45B だけの MoE 構成。コンテキストは 131,072 トークンで、ツール呼び出しに対応する。",
+   "モデルカードは、Qwen3.6-35B-A3B と比べて LiveClaw で 48.09 対 38.19 と紹介している(いずれも Liquid AI の発表の数字)。"
+  ],
+  "why_trending": "Hugging Face のトレンド上位に入り、OpenRouter への掲載や公式ブログも重なったため、今週 7 位。",
+  "what_changes": [
+   "24B のうち 2.45B だけが動く MoE で、考えながらも軽く動かせる設計",
+   "FP8・GGUF・ONNX・MLX 4bit など、用途別の重みが用意されている"
+  ],
+  "benefits": [
+   "手元の PC や端末でエージェントを動かす選択肢が増える見込み",
+   "GGUF なら llama.cpp など対応ツールで試せる"
+  ],
+  "caveats": [
+   "モデルカードは知識を問う用途の単独利用は非推奨とし、検索との併用を勧めている",
+   "ベンチマークの数字は Liquid AI の発表で、このサイトでは独自に検証していない"
+  ],
+  "audience": "手元でエージェントや LLM を動かしたい開発者"
+ },
+ "open-webui": {
+  "summary": [
+   "セルフホスト型の AI チャット画面 Open WebUI が、2026-10-14 に v0.12.2 を公開した。",
+   "自社運用向けの機能が増えた。接続先へのカスタムヘッダーでモデル ID を渡せ、監査ログにも要求されたモデルが残る。",
+   "管理者アカウントが SCIM 経由で削除されない修正など、安全面の修正も入った。"
+  ],
+  "why_trending": "公式 GitHub Release が公開され、運用・監査・ドキュメント処理まで幅広い変更が入ったため、今週の注目に入った。",
+  "what_changes": [
+   "接続・ツールサーバーのヘッダーで {{MODEL_ID}} が使える",
+   "監査ログに要求されたモデルの model_id が付く",
+   "MinerU 4.x のサーバーでドキュメント処理が動く"
+  ],
+  "benefits": [
+   "モデルごとの利用状況の記録や振り分けをしやすくなる見込み",
+   "社内の Milvus に独自の TLS 証明書で接続できる"
+  ],
+  "caveats": [
+   "MinerU 4.x では language と model_version は指定できない(3.x のみ)",
+   "変更点の全体は v0.12.2 のリリースノートで確認する"
+  ],
+  "audience": "Open WebUI を自社環境で運用する管理者・開発者"
+ },
+ "sagemaker": {
+  "summary": [
+   "AWS が、Amazon SageMaker Studio に Google・GitHub・Apple のアカウントで新規登録できるソーシャルサインインを、2026-10-14 に発表した。",
+   "登録後は、設定済みの Studio 環境にすぐ入れる。クレジットカードは不要で、AWS Free Tier の無料クレジットが付く。",
+   "メールでメンバーを招待でき、招待された人も自分のソーシャルアカウントでサインインして、共有のモデルやノートブックを使える。"
+  ],
+  "why_trending": "AWS 公式の発表に加え、SageMaker 関連のブログも同じ週に続き、今週 16 位。",
+  "what_changes": [
+   "AWS アカウントの作成や IAM の設定をせずに Studio を始められる",
+   "無料クレジットを使い切ったら、有料プランに上げて利用上限を設定できる"
+  ],
+  "benefits": [
+   "Hugging Face のモデルから、そのまま微調整・評価・デプロイに進みやすくなる見込み"
+  ],
+  "caveats": [
+   "利用できるのは SageMaker Studio 対応の全 AWS 商用リージョン",
+   "無料クレジットの条件は、AWS Free Tier の案内で確認する"
+  ],
+  "audience": "AI/ML を初めて試す開発者・チーム"
+ },
+ "unsloth": {
+  "summary": [
+   "ローカルで AI を動かして学習できる Unsloth が、2026-10-12 に新版 v0.1.906-beta を公開した。",
+   "チャットで Browser use を有効にすると、モデルがページを開いて読み、クリック・入力・スクロールをする。モデルは専用のタブで動き、ほかのタブには触れない。",
+   "画像生成モデル Qwen-Image-2.1-Turbo(8 ステップ、約 2.5 倍速と説明)にも対応した。"
+  ],
+  "why_trending": "公式 GitHub Release が連日出ており(10/12 と 10/13)、Browser use と画像生成の追加が重なったため、今週の注目に入った。",
+  "what_changes": [
+   "+ メニューから Browser use を有効にできる",
+   "Qwen-Image-2.1-Turbo を Images ページで使える(Q4 GGUF は 4.2 GB)",
+   "テキスト拡散 LLM を DiffusionTrainer で学習できる"
+  ],
+  "benefits": [
+   "ローカルのモデルにも調べ物やサイト操作を任せやすくなる見込み",
+   "VRAM より大きい MoE GGUF が最大 3 倍速になると説明(リリースノートの数字)"
+  ],
+  "caveats": [
+   "ログインや購入・送信・削除の前には確認が入り、パスワードなどはユーザー自身が入力する",
+   "バージョン名が beta。数字はリリースノートの記載で、独自には検証していない"
+  ],
+  "audience": "ローカルで LLM を動かし、学習や画像生成も試したい開発者"
  }
 }

@@ -1,0 +1,32 @@
+name: ci
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0, persist-credentials: false }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+      - run: python -m unittest discover -s tests
+      - name: Schema validation
+        run: python -m analyze.validate
+      - name: Digest gate against the base branch (change cap, deletions, URLs, dates, refs)
+        env: { WEEK_GLOB: "data/reports/*" }
+        run: |
+          WEEK=$(python -c "import json;print(json.load(open('data/trends.json',encoding='utf-8'))['window']['label'])")
+          if [ -n "${{ github.base_ref }}" ] && git cat-file -e "origin/${{ github.base_ref }}:data/reports/$WEEK/digest.json" 2>/dev/null; then
+            mkdir -p .base && for f in digest slides decks; do git show "origin/${{ github.base_ref }}:data/reports/$WEEK/$f.json" > ".base/$f.json" 2>/dev/null || echo '{}' > ".base/$f.json"; done
+            python -m analyze.digest_gate --week "$WEEK" --base .base
+          else
+            python -m analyze.digest_gate --week "$WEEK"
+          fi
+      - name: Build artifacts (PNG / PDF / PPTX, with overflow check)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+          python -m render.build_site

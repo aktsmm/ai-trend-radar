@@ -3,3 +3,7 @@ __pycache__/
 data/raw/
 data/snapshots/
 build/
+
+.work/
+site/assets/
+site/downloads/

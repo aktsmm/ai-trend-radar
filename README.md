@@ -46,16 +46,15 @@ python -m unittest discover -s tests         # 固定fixtureでの決定性・�
 | 19 | Grok 4.7 | model / model | 32.7 | [announcement](https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/) 2026-10-13 |
 | 20 | AgentCore | dev-tool / product | 32.5 | [announcement](https://aws.amazon.com/blogs/machine-learning/build-self-improving-document-processing-using-amazon-bedrock-agentcore/) 2026-10-14 |
 
-## フェーズ2: MCP調査 + インフォグラフィック(上位5件)
+## フェーズ3: ダイジェスト・ブリーフ・自動生成(詳細は [docs/design.md](docs/design.md))
 
-- 選定(`data/reports/2026-W42/enrichment.json` に理由を記録): Claude Code / OpenAI Codex / Ollama / Qwen-Image-2.1 / Gemini 4 Argon(dev-tool 2・local-runtime 1・model 2、発行元は全て別)。
-- 調査記録(`enrichment.json`): `verification_status`・使用MCP/ツール・検索クエリ・取得日時・根拠URL・根拠公開日・`url_checks`(公式URLへのGETが200)。Docs MCP は Claude Code→claudeCodeDocs+github-mcp、OpenAI→openaiDeveloperDocs、Google→google-developer-knowledge を使用。OSS(Ollama/Qwen)はDocs MCP対象外のため公式ブログ/モデルカードを直接取得。
-- 図解の正本は `data/reports/<週>/slides.json`(1キーワード1枚の高密度インフォグラフィック: title/stat/steps/points[何が起きた・何が変わる・嬉しいこと・注意]/icon/official_url/source_date)。ダイジェスト文の正本は `digest.json`(summary 2〜4行/why_trending/what_changes/benefits/caveats/audience。書けない項目は省略)。`site/slides.js` + `slides.css` が描画し、`python -m render.build_png` が Playwright(Chromium)で `build/slides/*.png`(Git管理外)を生成する。画像・フォントは同梱せず、アイコンは自作SVG。図解はサイト(GitHub Pages 想定)には1枚だけ載せる。
-- 生成物ゲート: `analyze/digest_gate.py` が、LLM 等で生成した提案(digest/slides)をスキーマ・公式URL許可リスト・日付整合・変更件数上限で検証する(自動マージはしない)。
-- 表示のノイズ除外: `話題の根拠` と X 補助投稿は、タイトル/本文にキーワード自体が出るものだけを表示する(`analyze/report.py: on_topic_filter`)。
-- `python -m render.verify_urls` で公式URL/根拠URLの到達性を再確認できる。
-- サイト: 各カードにダイジェスト(概要3〜4行・なぜ話題か・何が変わる・嬉しいこと・注意点)、図解1枚(クリックで拡大)、一次ソース/公式URL/話題の根拠の説明付きリンク、検証状態(未検証も表示)、カテゴリフィルタ、ページ上部の「このページの見方」。
-
+- 掲載は一次情報で確認できたものだけ(今週 13 件)。見送りは理由付きで `rejected_candidates.json`、未確認は「観測候補」に分けて表示。
+- 1 キーワードの成果物: ダイジェスト文(`digest.json`)・図解 1 枚(`slides.json` → `site/assets/slides/<id>.png`)・2 枚ブリーフ(`decks.json` → `site/downloads/<id>.pdf` / `.pptx`)。
+- ビルド: `python -m analyze.apply`(確認記録・ダイジェスト・ブリーフを trends.json / site/data.js に反映)→ `python -m render.build_site`(PNG・PDF・PPTX、はみ出し検査つき)。生成物は Git 管理外。
+- 生成物ゲート: `python -m analyze.digest_gate --week <週> [--base DIR]`(スキーマ・公式URL許可・日付が取得済み公開日と一致・refs 解決・変更件数上限・削除拒否)。
+- 自動生成: `.github/workflows/digest.md`(gh-aw、読み取り権限 + ドラフト PR、自動マージなし)。`ci.yml` が PR でゲートとテストを実行。`pages.yml` は手動のみ(公開は承認後)。
+- 取得元: 公式フィード追加(Meta newsroom・Google/Microsoft Research・Apple ML・NVIDIA GenAI)、日本語の反応(Zenn・Qiita・はてブ。表示のみ)。
+- `python -m render.verify_urls` で公式URL/ブリーフ出典URLの到達性を再確認できる。
 ## 既知の課題
 
 - 「リリース」系(Claude Code, llama.cpp 等)は常にリリースがあるため上位に来やすい。14日分のスナップショットがたまるまで「上昇」は判定できない(baseline表示)。

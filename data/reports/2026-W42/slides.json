@@ -4,13 +4,33 @@
    "title": "Claude Code v2.1.300 を公開",
    "diagram_type": "infographic",
    "icon": "terminal",
-   "stat": {"value": "v2.1.300", "label": "2026-10-14 公開"},
-   "steps": ["やりたいことを伝える", "コードを読んで計画", "複数ファイルを編集", "動作を確認して報告"],
+   "stat": {
+    "value": "v2.1.300",
+    "label": "2026-10-14 公開"
+   },
+   "steps": [
+    "やりたいことを伝える",
+    "コードを読んで計画",
+    "複数ファイルを編集",
+    "動作を確認して報告"
+   ],
    "points": [
-    {"h": "何が起きた", "t": "ターミナルで動く AI コーディングエージェントの新版が出た。多数の不具合も修正された"},
-    {"h": "何が変わる", "t": "OpenTelemetry の計測項目と、拡張(mod)用のフックが追加された"},
-    {"h": "嬉しいこと", "t": "利用状況の計測を既存の監視基盤に流しやすくなる見込み"},
-    {"h": "使い方", "t": "1 行で依頼できる。CLAUDE.md に規約を書くと毎回読み込まれ、MCP・スキル・フックで連携も増やせる"}
+    {
+     "h": "何が起きた",
+     "t": "ターミナルで動く AI コーディングエージェントの新版が出た。多数の不具合も修正された"
+    },
+    {
+     "h": "何が変わる",
+     "t": "OpenTelemetry の計測項目と、拡張(mod)用のフックが追加された"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "利用状況の計測を既存の監視基盤に流しやすくなる見込み"
+    },
+    {
+     "h": "使い方",
+     "t": "1 行で依頼できる。CLAUDE.md に規約を書くと毎回読み込まれ、MCP・スキル・フックで連携も増やせる"
+    }
    ],
    "official_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
    "source_date": "2026-10-14"
@@ -21,13 +41,32 @@
    "title": "Codex が企業導入で大規模に: Oracle 事例",
    "diagram_type": "infographic",
    "icon": "terminal",
-   "stat": {"value": "95K+", "label": "Oracle の Codex 利用者(OpenAI 事例・2026-10-08)"},
-   "steps": ["ターミナル / IDE 拡張", "共通の設定 ~/.codex/config.toml", "MCP サーバー(外部ツール)"],
+   "stat": {
+    "value": "95K+",
+    "label": "Oracle の Codex 利用者(OpenAI 事例・2026-10-08)"
+   },
+   "steps": [
+    "ターミナル / IDE 拡張",
+    "共通の設定 ~/.codex/config.toml",
+    "MCP サーバー(外部ツール)"
+   ],
    "points": [
-    {"h": "何が起きた", "t": "OpenAI が Oracle の事例を公開。Codex を 9.5 万人超、ChatGPT を 13 万人が利用(OpenAI 発表の数字)"},
-    {"h": "何が変わる", "t": "採用の市場調査にかかる時間が 98% 減ったと紹介された。CLI と IDE で MCP 設定を共有できる"},
-    {"h": "嬉しいこと", "t": "1 回の設定を CLI と IDE で使い回せる。AGENTS.md に指示を書くと外部ツールを使いやすい"},
-    {"h": "注意", "t": "公開中の 0.163.0 は alpha 版。安定版とは限らないので、本番利用は慎重に"}
+    {
+     "h": "何が起きた",
+     "t": "OpenAI が Oracle の事例を公開。Codex を 9.5 万人超、ChatGPT を 13 万人が利用(OpenAI 発表の数字)"
+    },
+    {
+     "h": "何が変わる",
+     "t": "採用の市場調査にかかる時間が 98% 減ったと紹介された。CLI と IDE で MCP 設定を共有できる"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "1 回の設定を CLI と IDE で使い回せる。AGENTS.md に指示を書くと外部ツールを使いやすい"
+    },
+    {
+     "h": "注意",
+     "t": "公開中の 0.163.0 は alpha 版。安定版とは限らないので、本番利用は慎重に"
+    }
    ],
    "official_url": "https://openai.com/index/oracle",
    "source_date": "2026-10-08"
@@ -38,13 +77,32 @@
    "title": "Ollama Cloud を Fly.io Sprites で使える",
    "diagram_type": "infographic",
    "icon": "cloud",
-   "stat": {"value": "Sprites × Ollama", "label": "2026-10-13 発表"},
-   "steps": ["Sprite 内のエージェント", "Fly.io のゲートウェイ(キーを付与)", "Ollama Cloud のモデル"],
+   "stat": {
+    "value": "Sprites × Ollama",
+    "label": "2026-10-13 発表"
+   },
+   "steps": [
+    "Sprite 内のエージェント",
+    "Fly.io のゲートウェイ(キーを付与)",
+    "Ollama Cloud のモデル"
+   ],
    "points": [
-    {"h": "何が起きた", "t": "ディスクが残る Linux 仮想マシンの Sprite から、Ollama Cloud のモデルを使える連携が発表された"},
-    {"h": "何が変わる", "t": "新しい Ollama Connector で kimi-k3・glm-5.3 などのクラウドモデルが使える"},
-    {"h": "嬉しいこと", "t": "API キーを Sprite に渡さずに済み、エージェントがキーを漏らす心配が減る"},
-    {"h": "注意", "t": "新しいコネクタは既定で全 Sprite を遮断する。Access Configuration で使わせる Sprite を選ぶ"}
+    {
+     "h": "何が起きた",
+     "t": "ディスクが残る Linux 仮想マシンの Sprite から、Ollama Cloud のモデルを使える連携が発表された"
+    },
+    {
+     "h": "何が変わる",
+     "t": "新しい Ollama Connector で kimi-k3・glm-5.3 などのクラウドモデルが使える"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "API キーを Sprite に渡さずに済み、エージェントがキーを漏らす心配が減る"
+    },
+    {
+     "h": "注意",
+     "t": "新しいコネクタは既定で全 Sprite を遮断する。Access Configuration で使わせる Sprite を選ぶ"
+    }
    ],
    "official_url": "https://ollama.com/blog/fly-io-sprites",
    "source_date": "2026-10-13"
@@ -55,13 +113,32 @@
    "title": "Qwen-Image-2.1 の高速版 Turbo を公開",
    "diagram_type": "infographic",
    "icon": "image",
-   "stat": {"value": "8 ステップ", "label": "Turbo の画像生成"},
-   "steps": ["入力・参照画像", "7B の生成モデル(8 ステップ)", "画像を出力"],
+   "stat": {
+    "value": "8 ステップ",
+    "label": "Turbo の画像生成"
+   },
+   "steps": [
+    "入力・参照画像",
+    "7B の生成モデル(8 ステップ)",
+    "画像を出力"
+   ],
    "points": [
-    {"h": "何が起きた", "t": "Alibaba の Qwen チームが、画像生成・編集モデルの高速版を Hugging Face で公開した(2026-10-09)"},
-    {"h": "何が変わる", "t": "少ない手順で生成できる。文章や参照画像の文脈をステップ間で再利用して高速化している"},
-    {"h": "嬉しいこと", "t": "速度を重視した画像生成を試しやすくなる見込み"},
-    {"h": "注意", "t": "Diffusers は最新のソース版、transformers は 5.17.0 以上、CUDA 対応の PyTorch が必要"}
+    {
+     "h": "何が起きた",
+     "t": "Alibaba の Qwen チームが、画像生成・編集モデルの高速版を Hugging Face で公開した(2026-10-09)"
+    },
+    {
+     "h": "何が変わる",
+     "t": "少ない手順で生成できる。文章や参照画像の文脈をステップ間で再利用して高速化している"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "速度を重視した画像生成を試しやすくなる見込み"
+    },
+    {
+     "h": "注意",
+     "t": "Diffusers は最新のソース版、transformers は 5.17.0 以上、CUDA 対応の PyTorch が必要"
+    }
    ],
    "official_url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
    "source_date": "2026-10-09"
@@ -72,16 +149,323 @@
    "title": "Gemini 4 Argon が一般提供(GA)",
    "diagram_type": "infographic",
    "icon": "spark",
-   "stat": {"value": "1,048,576", "label": "入出力を合わせたトークン上限"},
-   "steps": ["入力(長文・コード)", "思考レベル LOW / MEDIUM / HIGH", "出力(1 回最大 65,536 トークン)"],
+   "stat": {
+    "value": "1,048,576",
+    "label": "入出力を合わせたトークン上限"
+   },
+   "steps": [
+    "入力(長文・コード)",
+    "思考レベル LOW / MEDIUM / HIGH",
+    "出力(1 回最大 65,536 トークン)"
+   ],
    "points": [
-    {"h": "何が起きた", "t": "Google の Gemini 4 ファミリー最初のモデルが、2026-10-13 に GA になった"},
-    {"h": "何が変わる", "t": "思考レベルを 3 段階から選べる。コーディング・金融・法務・科学など深い作業向けと説明されている"},
-    {"h": "嬉しいこと", "t": "作業の難しさに応じて、思考レベルで速度と深さを調整できる"},
-    {"h": "注意", "t": "temperature などの指定は無視される。明示的なコンテキストキャッシュは未対応"}
+    {
+     "h": "何が起きた",
+     "t": "Google の Gemini 4 ファミリー最初のモデルが、2026-10-13 に GA になった"
+    },
+    {
+     "h": "何が変わる",
+     "t": "思考レベルを 3 段階から選べる。コーディング・金融・法務・科学など深い作業向けと説明されている"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "作業の難しさに応じて、思考レベルで速度と深さを調整できる"
+    },
+    {
+     "h": "注意",
+     "t": "temperature などの指定は無視される。明示的なコンテキストキャッシュは未対応"
+    }
    ],
    "official_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
    "source_date": "2026-10-13"
+  }
+ ],
+ "agentcore": [
+  {
+   "title": "AgentCore の短期メモリが従量課金に",
+   "diagram_type": "infographic",
+   "icon": "layers",
+   "stat": {
+    "value": "$1.00 / GB",
+    "label": "取り込みの料金(AWS の発表・2026-10-12)"
+   },
+   "steps": [
+    "エージェントが書き込む",
+    "取り込み・取得・保存で課金",
+    "TTL で保存を調整"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "AgentCore Memory の短期メモリが、1 イベント定額から、データ量に応じた従量課金になった"
+    },
+    {
+     "h": "何が変わる",
+     "t": "取り込み $1.00/GB、取得 $0.20/GB、保存 $0.10/GB・月。長期メモリは据え置き"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "小さなイベントを頻繁に書く使い方ほど、コストが下がる見込み"
+    },
+    {
+     "h": "注意",
+     "t": "課金サイズは 1 イベント 12KB 以上 64KB 以下。保存は TTL を短くして抑える"
+    }
+   ],
+   "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/agentcore-memory-consumption-based-pricing",
+   "source_date": "2026-10-12"
+  }
+ ],
+ "clef": [
+  {
+   "title": "Cloudflare が Clef-omni を公開",
+   "diagram_type": "infographic",
+   "icon": "chip",
+   "stat": {
+    "value": "30B-A3B",
+    "label": "Clef-omni(2026-10-09 公開)"
+   },
+   "steps": [
+    "状態とメディアを入力",
+    "質問と選択肢を指定",
+    "各選択肢の確率を返す"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "Cloudflare が、音声・動画・画像・テキストを扱える決定モデルをオープンウェイトで公開した"
+    },
+    {
+     "h": "何が変わる",
+     "t": "文章は生成せず、質問ごとの選択肢の確率を1回の推論で返す。前処理モデルが不要になる"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "テキスト約130ms、画像約150msの中央値(Cloudflare 発表の数字)で判定できる"
+    },
+    {
+     "h": "注意",
+     "t": "モデルカードでは約64GBのGPUメモリが必要。ライセンスは Apache-2.0"
+    }
+   ],
+   "official_url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal",
+   "source_date": "2026-10-09"
+  }
+ ],
+ "github-copilot": [
+  {
+   "title": "Gemini 4 Argon が Copilot で一般提供",
+   "diagram_type": "infographic",
+   "icon": "spark",
+   "stat": {
+    "value": "GA",
+    "label": "2026-10-13 に Copilot で提供開始"
+   },
+   "steps": [
+    "モデルピッカーを開く",
+    "Gemini 4 Argon を選ぶ",
+    "コーディングを依頼"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "Google の Gemini 4 Argon が GitHub Copilot で一般提供になった(2026-10-13)"
+    },
+    {
+     "h": "何が変わる",
+     "t": "VS Code・Copilot CLI・コーディングエージェント・JetBrains などのモデルピッカーで選べる"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "作業に合わせてモデルを選べる。管理者はモデルポリシーで利用を制御できる"
+    },
+    {
+     "h": "注意",
+     "t": "対象は Pro+・Max・Business・Enterprise。展開は段階的で、提供元の定価で課金される"
+    }
+   ],
+   "official_url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+   "source_date": "2026-10-13"
+  }
+ ],
+ "grok-4-7": [
+  {
+   "title": "Grok 4.7 が Amazon Bedrock で利用可能に",
+   "diagram_type": "infographic",
+   "icon": "cloud",
+   "stat": {
+    "value": "67 / 72",
+    "label": "AWS の検証で正答した実行数(AWS の測定)"
+   },
+   "steps": [
+    "推論プロファイルを指定",
+    "推論の強さを選ぶ",
+    "エージェントが道具を呼ぶ"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "SpaceXAI の Grok 4.7 が Amazon Bedrock で使えるようになった(AWS ブログ・2026-10-13)"
+    },
+    {
+     "h": "何が変わる",
+     "t": "推論の強さを low から xhigh の 4 段階で選べ、ツール呼び出しと構造化出力にも対応する"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "AWS の測定では、low は xhigh より出力が約 8 分の 1 で済み、速度と精度を調整できる"
+    },
+    {
+     "h": "注意",
+     "t": "正答数は AWS が作った 3 課題の結果。ベンチマークは SpaceXAI の発表の数字"
+    }
+   ],
+   "official_url": "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/",
+   "source_date": "2026-10-13"
+  }
+ ],
+ "lfm2": [
+  {
+   "title": "LFM2.5-24B-A2B を Hugging Face で公開",
+   "diagram_type": "infographic",
+   "icon": "chip",
+   "stat": {
+    "value": "2.45B",
+    "label": "24B のうち 1 トークンで動く量(MoE)"
+   },
+   "steps": [
+    "考えてから答える",
+    "必要な専門家だけ稼働",
+    "ツールを呼んで回答"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "Liquid AI が、端末で動かすエージェント向けの推論モデルを 2026-10-12 に Hugging Face で公開した"
+    },
+    {
+     "h": "何が変わる",
+     "t": "総 24B のうち 2.45B だけが動く MoE。131,072 トークンの長さを扱え、ツール呼び出しに対応する"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "FP8・GGUF・ONNX・MLX の重みが用意され、手元の環境で試しやすくなる見込み"
+    },
+    {
+     "h": "注意",
+     "t": "知識を問う用途は単独だと不得手と説明されている。ベンチの数字は Liquid AI の発表"
+    }
+   ],
+   "official_url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+   "source_date": "2026-10-12"
+  }
+ ],
+ "open-webui": [
+  {
+   "title": "Open WebUI v0.12.2 で運用面が強化",
+   "diagram_type": "infographic",
+   "icon": "layers",
+   "stat": {
+    "value": "v0.12.2",
+    "label": "2026-10-14 公開"
+   },
+   "steps": [
+    "チャットのリクエスト",
+    "ヘッダーに {{MODEL_ID}} を付与",
+    "監査ログに model_id を記録"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "セルフホスト型の AI チャット画面 Open WebUI の新版 v0.12.2 が公開された"
+    },
+    {
+     "h": "何が変わる",
+     "t": "ヘッダーでモデル ID を渡せ、監査ログにも記録される。MinerU 4.x のサーバーにも対応した"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "モデルごとの利用の記録や振り分けをしやすくなる見込み"
+    },
+    {
+     "h": "注意",
+     "t": "SCIM による管理者の削除は 403 になる修正が入った。同期の運用がある場合は確認する"
+    }
+   ],
+   "official_url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.2",
+   "source_date": "2026-10-14"
+  }
+ ],
+ "sagemaker": [
+  {
+   "title": "SageMaker Studio にソーシャルサインイン",
+   "diagram_type": "infographic",
+   "icon": "lock",
+   "stat": {
+    "value": "3 種類",
+    "label": "Google / GitHub / Apple でサインイン"
+   },
+   "steps": [
+    "既存アカウントで登録",
+    "設定済みの Studio に入る",
+    "微調整・評価・デプロイ"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "SageMaker Studio に、Google・GitHub・Apple の認証情報で新規登録できる機能が加わった(2026-10-14)"
+    },
+    {
+     "h": "何が変わる",
+     "t": "AWS アカウントの作成や IAM の設定なしで、設定済みの Studio 環境にすぐ入れる"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "クレジットカード不要で、AWS Free Tier の無料クレジットが付く。メールでメンバーも招待できる"
+    },
+    {
+     "h": "注意",
+     "t": "無料クレジットを超えたら有料プランに上げる。利用上限(スペンドリミット)を設定できる"
+    }
+   ],
+   "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-social-sign-in/",
+   "source_date": "2026-10-14"
+  }
+ ],
+ "unsloth": [
+  {
+   "title": "Unsloth がモデルのブラウザ操作に対応",
+   "diagram_type": "infographic",
+   "icon": "spark",
+   "stat": {
+    "value": "v0.1.906-beta",
+    "label": "2026-10-12 公開"
+   },
+   "steps": [
+    "+ メニューで Browser use をオン",
+    "モデルが専用タブでページを操作",
+    "危険な操作は確認してから実行"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "Unsloth の新版が出て、ローカルのモデルがページを開いて読み、クリックや入力をできるようになった"
+    },
+    {
+     "h": "何が変わる",
+     "t": "Qwen-Image-2.1-Turbo(8 ステップ)や、テキスト拡散 LLM の学習にも対応した"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "調べ物やサイト操作をローカルのモデルに任せやすくなる見込み。他のタブは見えない"
+    },
+    {
+     "h": "注意",
+     "t": "ログインや購入などは事前に確認が入る。パスワードは自分で入力する。beta 版"
+    }
+   ],
+   "official_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta",
+   "source_date": "2026-10-12"
   }
  ]
 }

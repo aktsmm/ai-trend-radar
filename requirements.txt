@@ -1,2 +1,5 @@
 pyyaml
 jsonschema
+playwright
+python-pptx
+

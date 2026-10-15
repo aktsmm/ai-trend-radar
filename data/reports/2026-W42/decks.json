@@ -1,0 +1,1151 @@
+{
+ "claude-code": {
+  "overview": {
+   "takeaway": "ターミナルで動く AI コーディングエージェントの新版。計測と拡張の入口が増え、多数の不具合が修正された。",
+   "stat": {
+    "value": "v2.1.300",
+    "label": "2026-10-14 公開"
+   },
+   "steps": [
+    "やりたいことを伝える",
+    "コードを読んで計画",
+    "複数ファイルを編集",
+    "動作を確認して報告"
+   ],
+   "changes": [
+    "OpenTelemetry の属性が追加された",
+    "拡張(mod)用のフックが追加された",
+    "多数の不具合が修正された"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Anthropic"
+    },
+    {
+     "k": "最新版",
+     "v": "v2.1.300"
+    },
+    {
+     "k": "公開日",
+     "v": "2026-10-14"
+    },
+    {
+     "k": "動く場所",
+     "v": "ターミナル"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "impact": {
+   "audience": "コードをターミナルで書く開発者・チーム",
+   "benefits": [
+    "依頼 → 計画 → 編集 → 確認を、1 つの流れで任せられる",
+    "git と連携し、コミットやプルリクエストの作成も頼める",
+    "利用状況の計測を既存の監視基盤に流しやすくなる見込み"
+   ],
+   "how_to": [
+    "`claude \"認証モジュールのテストを書いて実行し、失敗を直して\"` のように 1 行で頼む",
+    "プロジェクト直下の CLAUDE.md に規約や好みを書く",
+    "MCP・スキル・フックで外部ツール連携や自動化を足す",
+    "新機能の詳細は v2.1.300 のリリースノートで確認する"
+   ],
+   "caveats": [
+    "今回の変更点の全体は、リリースノートで確認する",
+    "OpenTelemetry・mod フックの具体的な使い方は、このブリーフでは扱っていない"
+   ],
+   "terms": [
+    {
+     "t": "OpenTelemetry",
+     "d": "アプリの動作を計測・収集するための共通の仕組み"
+    },
+    {
+     "t": "MCP",
+     "d": "AI と外部ツールをつなぐ共通の接続方式"
+    },
+    {
+     "t": "CLAUDE.md",
+     "d": "プロジェクトの規約を書き、毎回読み込ませるファイル"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Claude Code v2.1.300 リリースノート",
+    "publisher": "Anthropic(GitHub)",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.300",
+    "date": "2026-10-14"
+   },
+   {
+    "id": "s2",
+    "title": "Claude Code overview",
+    "publisher": "Anthropic",
+    "url": "https://code.claude.com/docs/en/overview"
+   }
+  ]
+ },
+ "openai-codex": {
+  "overview": {
+   "takeaway": "Codex は OpenAI のコーディングエージェント。Oracle の大規模導入事例が公開され、開発版も連日更新されている。",
+   "stat": {
+    "value": "95K+",
+    "label": "Oracle の Codex 利用者(OpenAI 事例)"
+   },
+   "steps": [
+    "ターミナル / IDE 拡張",
+    "共通の設定 config.toml",
+    "MCP サーバー(外部ツール)"
+   ],
+   "changes": [
+    "Oracle で Codex 9.5 万人超・ChatGPT 13 万人が利用(OpenAI 発表)",
+    "採用の市場調査にかかる時間が 98% 減ったと紹介(Oracle の事例)",
+    "0.163.0 の alpha 版が 2026-10-13〜14 に連日公開"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "OpenAI"
+    },
+    {
+     "k": "事例の公開",
+     "v": "2026-10-08"
+    },
+    {
+     "k": "Codex 利用者",
+     "v": "9.5 万人超(Oracle)"
+    },
+    {
+     "k": "最新の版",
+     "v": "0.163.0-alpha 系"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s3"
+   ]
+  },
+  "impact": {
+   "audience": "AI コーディングエージェントの導入を検討している開発者・企業",
+   "benefits": [
+    "CLI と IDE 拡張で MCP サーバーの設定を共有できる",
+    "/plugins から Codex Security を追加し、セキュリティ点検ができる",
+    "AGENTS.md に指示を書くと、外部ツールをエージェントが使いやすくなる"
+   ],
+   "how_to": [
+    "リポジトリで `codex` を起動する",
+    "`/plugins` から Codex Security を追加する",
+    "~/.codex/config.toml に MCP サーバーを設定する(CLI と IDE で共有)",
+    "AGENTS.md に使ってほしいツールや規約を書く"
+   ],
+   "caveats": [
+    "0.163.0 は alpha 版。安定版とは限らず、本番利用は慎重に",
+    "導入事例の数字は OpenAI・Oracle の発表で、独自には検証していない"
+   ],
+   "terms": [
+    {
+     "t": "MCP",
+     "d": "AI と外部ツールをつなぐ共通の接続方式"
+    },
+    {
+     "t": "AGENTS.md",
+     "d": "エージェントへの指示を書いておくファイル"
+    },
+    {
+     "t": "alpha 版",
+     "d": "動作確認中の先行版。仕様や品質が変わりうる"
+    }
+   ],
+   "refs": [
+    "s2",
+    "s3"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+    "publisher": "OpenAI",
+    "url": "https://openai.com/index/oracle",
+    "date": "2026-10-08"
+   },
+   {
+    "id": "s2",
+    "title": "Docs MCP(Codex の設定と利用)",
+    "publisher": "OpenAI",
+    "url": "https://developers.openai.com/learn/docs-mcp"
+   },
+   {
+    "id": "s3",
+    "title": "openai/codex Releases",
+    "publisher": "OpenAI(GitHub)",
+    "url": "https://github.com/openai/codex/releases",
+    "date": "2026-10-14"
+   }
+  ]
+ },
+ "ollama": {
+  "overview": {
+   "takeaway": "Ollama Cloud のモデルを、Fly.io の安全な仮想マシン(Sprite)から API キーを渡さずに使えるようになった。",
+   "stat": {
+    "value": "Sprites × Ollama",
+    "label": "2026-10-13 発表"
+   },
+   "steps": [
+    "Sprite 内のエージェント",
+    "Fly.io のゲートウェイ(キーを付与)",
+    "Ollama Cloud のモデル"
+   ],
+   "changes": [
+    "新しい Ollama Connector で kimi-k3・glm-5.3 などのクラウドモデルが使える",
+    "API キーは Fly.io のゲートウェイが付与し、Sprite には渡らない",
+    "Sprite は Claude Code・Codex・Gemini CLI などを最初から動かせる"
+   ],
+   "facts": [
+    {
+     "k": "発表日",
+     "v": "2026-10-13"
+    },
+    {
+     "k": "連携先",
+     "v": "Fly.io Sprites"
+    },
+    {
+     "k": "新機能",
+     "v": "Ollama Connector"
+    },
+    {
+     "k": "呼び出し",
+     "v": "OpenAI SDK で可"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "AI エージェントを安全な環境で動かしたい開発者",
+   "benefits": [
+    "API キーが Sprite の中に置かれず、エージェントがキーを漏らす心配が減る",
+    "ディスクが残る Linux 仮想マシンで、コマンドの実行を安全に隔離できる",
+    "OpenAI SDK の base_url をゲートウェイにすれば、そのまま呼び出せる"
+   ],
+   "how_to": [
+    "Fly.io ダッシュボードの Sprites → Connectors で Ollama コネクタを追加し、API キーを登録する",
+    "Access Configuration で使わせる Sprite を選ぶ",
+    "Test reachability で疎通を確認する",
+    "OpenAI SDK の base_url をゲートウェイにして呼び出す"
+   ],
+   "caveats": [
+    "新しいコネクタは既定で全 Sprite を遮断する。許可する Sprite の選択が必要",
+    "呼び出せるのは Sprite の内側だけ"
+   ],
+   "terms": [
+    {
+     "t": "Sprite",
+     "d": "ディスクが残る完全な Linux 仮想マシンのサンドボックス(Fly.io)"
+    },
+    {
+     "t": "Ollama Connector",
+     "d": "Sprite から Ollama Cloud のモデルを使うための接続設定"
+    },
+    {
+     "t": "ゲートウェイ",
+     "d": "Sprite からの呼び出しを中継し、API キーを付ける仕組み"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Run AI agents safely with Ollama and Fly.io",
+    "publisher": "Ollama",
+    "url": "https://ollama.com/blog/fly-io-sprites",
+    "date": "2026-10-13"
+   }
+  ]
+ },
+ "qwen-image-2-1": {
+  "overview": {
+   "takeaway": "画像生成・編集モデル Qwen-Image-2.1 の高速版 Turbo が公開。8 ステップで画像を生成する 7B のモデル。",
+   "stat": {
+    "value": "8 ステップ",
+    "label": "Turbo の画像生成"
+   },
+   "steps": [
+    "入力・参照画像",
+    "7B の生成モデル(8 ステップ)",
+    "画像を出力"
+   ],
+   "changes": [
+    "8 ステップで画像を生成する高速版",
+    "元の Qwen-Image-2.1 と同じ 7B の設計を使う",
+    "文章や参照画像の文脈をステップ間で再利用して高速化"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Alibaba Qwen"
+    },
+    {
+     "k": "公開日",
+     "v": "2026-10-09"
+    },
+    {
+     "k": "サイズ",
+     "v": "7B"
+    },
+    {
+     "k": "既定の CFG",
+     "v": "1"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "自分の GPU で画像生成を動かしたい開発者",
+   "benefits": [
+    "少ない手順で生成でき、速度を重視した画像生成を試しやすくなる見込み",
+    "画像の生成と編集の両方を扱うモデル系統の高速版"
+   ],
+   "how_to": [
+    "Diffusers の `QwenImage21Pipeline` で読み込む",
+    "`Qwen/Qwen-Image-2.1-Turbo` を指定する",
+    "transformers 5.17.0 以上を入れる",
+    "CUDA 対応の PyTorch を先に入れる"
+   ],
+   "caveats": [
+    "Diffusers は PR #14950 を含む最新のソース版が必要",
+    "品質や速度の比較は、モデルカードの範囲では確認していない"
+   ],
+   "terms": [
+    {
+     "t": "Diffusers",
+     "d": "Hugging Face の画像生成ライブラリ"
+    },
+    {
+     "t": "ステップ",
+     "d": "画像を少しずつ仕上げる回数。少ないほど速い"
+    },
+    {
+     "t": "CFG",
+     "d": "指示の効かせ具合を調整する値"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Qwen/Qwen-Image-2.1-Turbo モデルカード",
+    "publisher": "Qwen(Hugging Face)",
+    "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+    "date": "2026-10-09"
+   },
+   {
+    "id": "s2",
+    "title": "QwenLM/Qwen-Image-2.1",
+    "publisher": "Qwen(GitHub)",
+    "url": "https://github.com/QwenLM/Qwen-Image-2.1"
+   }
+  ]
+ },
+ "gemini-4-argon": {
+  "overview": {
+   "takeaway": "Gemini 4 ファミリー最初のモデルが GA。入出力合計 1,048,576 トークンまで扱え、思考レベルを 3 段階で選べる。",
+   "stat": {
+    "value": "1,048,576",
+    "label": "入出力を合わせたトークン上限"
+   },
+   "steps": [
+    "入力(長文・コード)",
+    "思考レベル LOW / MEDIUM / HIGH",
+    "出力(1 回最大 65,536 トークン)"
+   ],
+   "changes": [
+    "2026-10-13 に GA(一般提供)になった",
+    "思考レベルを LOW / MEDIUM / HIGH から選べる",
+    "長い出力は continuation_token で延長できる"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Google"
+    },
+    {
+     "k": "GA の日",
+     "v": "2026-10-13"
+    },
+    {
+     "k": "上限",
+     "v": "1,048,576 トークン"
+    },
+    {
+     "k": "モデル ID",
+     "v": "gemini-4-argon"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "impact": {
+   "audience": "Google Cloud の Agent Platform で AI を組み込む開発者",
+   "benefits": [
+    "作業の難しさに応じて、思考レベルで速度と深さを調整できる",
+    "コーディング・金融・法務・サイバーセキュリティ・科学など深い作業向けと説明されている",
+    "長い入力と出力を、1 つのモデルで扱える"
+   ],
+   "how_to": [
+    "モデル ID に gemini-4-argon を指定する",
+    "Agent Studio で試す",
+    "Google Gen AI SDK(google-genai 2.30.1 以上)で呼び出す"
+   ],
+   "caveats": [
+    "temperature などのサンプリング指定は無視される",
+    "明示的なコンテキストキャッシュは未対応(暗黙キャッシュのみ)",
+    "Cyber Permissive 版は、申請して許可された場合のみ使える"
+   ],
+   "terms": [
+    {
+     "t": "GA",
+     "d": "一般提供。正式にだれでも使える段階"
+    },
+    {
+     "t": "思考レベル",
+     "d": "回答前にどれだけ考えさせるかの設定"
+    },
+    {
+     "t": "トークン",
+     "d": "AI が文章を数える単位"
+    }
+   ],
+   "refs": [
+    "s2"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Introducing Gemini 4 Argon",
+    "publisher": "Google",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "date": "2026-10-13"
+   },
+   {
+    "id": "s2",
+    "title": "Gemini 4 Argon ガイド",
+    "publisher": "Google Cloud",
+    "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon"
+   }
+  ]
+ },
+ "agentcore": {
+  "overview": {
+   "takeaway": "AgentCore Memory の短期メモリは、扱ったデータ量に応じて払う方式に変わった。",
+   "stat": {
+    "value": "$1.00 / GB",
+    "label": "短期メモリの取り込み料金"
+   },
+   "steps": [
+    "エージェントが書き込む",
+    "取り込み・取得・保存で課金",
+    "TTL で保存を調整"
+   ],
+   "changes": [
+    "1 イベント定額から従量課金へ",
+    "取り込み $1.00/GB・取得 $0.20/GB",
+    "保存 $0.10/GB・月。長期メモリは据え置き"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "AWS"
+    },
+    {
+     "k": "発表日",
+     "v": "2026-10-12"
+    },
+    {
+     "k": "対象",
+     "v": "短期メモリ(STM)"
+    },
+    {
+     "k": "提供地域",
+     "v": "AgentCore Memory の全リージョン"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "impact": {
+   "audience": "AgentCore Memory を使うエージェント開発者",
+   "benefits": [
+    "書き込みが多く小さいイベントのほど、費用が下がる見込み",
+    "TTL で、保存コストを自分で調整できる"
+   ],
+   "how_to": [
+    "AgentCore の料金ページで、短期メモリの新しい料金を確認する",
+    "自分のイベントの大きさと件数から、費用を見積もる",
+    "不要なデータは、TTL を短くして保存量を減らす"
+   ],
+   "caveats": [
+    "取り込み・取得の課金サイズは 1 イベント 12KB 以上 64KB 以下",
+    "AWS は「ほとんどの利用で低くなる」と説明。実際の費用は利用次第",
+    "料金は AWS の発表の数字。最新は料金ページで確認する"
+   ],
+   "terms": [
+    {
+     "t": "AgentCore Memory",
+     "d": "エージェントに記憶(短期・長期)を持たせる機能"
+    },
+    {
+     "t": "短期メモリ(STM)",
+     "d": "1 つの会話・セッション内の文脈を保つ記憶"
+    },
+    {
+     "t": "TTL",
+     "d": "データを保存しておく期間の上限"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "AgentCore の短期メモリが従量課金に(What's New)",
+    "publisher": "AWS",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/agentcore-memory-consumption-based-pricing",
+    "date": "2026-10-12"
+   },
+   {
+    "id": "s2",
+    "title": "What is Amazon Bedrock AgentCore?",
+    "publisher": "AWS",
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html"
+   }
+  ]
+ },
+ "clef": {
+  "overview": {
+   "takeaway": "Cloudflare の決定モデルが音声・動画にも対応。文章を作らず、選択肢の確率を返す。",
+   "stat": {
+    "value": "30B-A3B",
+    "label": "Clef-omni の規模(MoE)"
+   },
+   "steps": [
+    "状態とメディアを入力",
+    "質問と選択肢を指定",
+    "各選択肢の確率を返す"
+   ],
+   "changes": [
+    "音声・動画・画像・テキストを入力できる",
+    "Apache-2.0 でオープンウェイトを公開した"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Cloudflare"
+    },
+    {
+     "k": "公開日",
+     "v": "2026-10-09"
+    },
+    {
+     "k": "土台",
+     "v": "Qwen3-Omni-30B-A3B"
+    },
+    {
+     "k": "ライセンス",
+     "v": "Apache-2.0"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "impact": {
+   "audience": "分類や振り分けの判定を自動化したい開発者",
+   "benefits": [
+    "音声や動画も、文字起こしなしで1つのモデルに判定させられる見込み",
+    "テキスト約130msなどの速度(Cloudflare 発表の数字)"
+   ],
+   "how_to": [
+    "Hugging Face の Cloudflare/clef-omni を取得する",
+    "state と questions(型付きの質問)を渡して推論する",
+    "質問ごとに softmax して確率を読む"
+   ],
+   "caveats": [
+    "bfloat16 で約64GBのGPUメモリが必要(モデルカード)",
+    "ベンチマークは Cloudflare 発表の数字で、独自には検証していない"
+   ],
+   "terms": [
+    {
+     "t": "決定モデル",
+     "d": "文章でなく、選択肢の確率を返すモデル"
+    },
+    {
+     "t": "MoE",
+     "d": "入力ごとに一部の専門家だけを使う構造"
+    },
+    {
+     "t": "オープンウェイト",
+     "d": "学習済みの重みが公開されていること"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Introducing Clef-omni with full multimodality",
+    "publisher": "Cloudflare",
+    "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal",
+    "date": "2026-10-09"
+   },
+   {
+    "id": "s2",
+    "title": "Cloudflare/clef-omni モデルカード",
+    "publisher": "Hugging Face",
+    "url": "https://huggingface.co/Cloudflare/clef-omni",
+    "date": "2026-10-09"
+   }
+  ]
+ },
+ "github-copilot": {
+  "overview": {
+   "takeaway": "Google の最新モデル Gemini 4 Argon が、GitHub Copilot のモデルピッカーで選べるようになった。",
+   "stat": {
+    "value": "GA",
+    "label": "2026-10-13 に提供開始"
+   },
+   "steps": [
+    "モデルピッカーを開く",
+    "Gemini 4 Argon を選ぶ",
+    "依頼する"
+   ],
+   "changes": [
+    "Gemini 4 Argon が Copilot で一般提供",
+    "VS Code・CLI・JetBrains・Xcode など 8 つの場所で選べる",
+    "管理者はモデルポリシーで制御できる"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "GitHub(Google のモデル)"
+    },
+    {
+     "k": "公開日",
+     "v": "2026-10-13"
+    },
+    {
+     "k": "対象プラン",
+     "v": "Pro+・Max・Business・Ent"
+    },
+    {
+     "k": "課金",
+     "v": "提供元の定価(利用量ベース)"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "GitHub Copilot を使う開発者と、チームの管理者",
+   "benefits": [
+    "複雑なコーディングやエージェント作業で、使えるモデルの選択肢が増える",
+    "初期テストでは Gemini の従来モデルより解けた課題が多いと説明されている(GitHub の発表)"
+   ],
+   "how_to": [
+    "エディターや CLI のモデルピッカーで Gemini 4 Argon を選ぶ",
+    "表示されなければ、段階的な展開のため少し待って再確認する",
+    "Business・Enterprise の管理者は、Copilot の設定でモデルポリシーを確認する"
+   ],
+   "caveats": [
+    "対象は Copilot Pro+・Max・Business・Enterprise",
+    "展開は段階的で、すぐ選べない場合がある",
+    "料金の詳細は GitHub の料金ドキュメントで確認する"
+   ],
+   "terms": [
+    {
+     "t": "モデルピッカー",
+     "d": "使う AI モデルを切り替える、エディター内のメニュー"
+    },
+    {
+     "t": "利用量ベース課金",
+     "d": "使った量に応じて請求される方式"
+    },
+    {
+     "t": "モデルポリシー",
+     "d": "組織で使えるモデルを管理者が決める設定"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Gemini 4 Argon in GitHub Copilot",
+    "publisher": "GitHub",
+    "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+    "date": "2026-10-13"
+   }
+  ]
+ },
+ "grok-4-7": {
+  "overview": {
+   "takeaway": "長い作業を任せるエージェント向けの Grok 4.7 が、Amazon Bedrock から使えるようになった。",
+   "stat": {
+    "value": "67 / 72",
+    "label": "AWS の検証で正答した実行数"
+   },
+   "steps": [
+    "推論プロファイルを指定",
+    "推論の強さを選ぶ",
+    "エージェントが道具を呼ぶ"
+   ],
+   "changes": [
+    "Bedrock で Grok 4.7 が利用可能に",
+    "推論の強さを 4 段階から選べる",
+    "OpenAI 互換 API と Converse API に対応"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "SpaceXAI"
+    },
+    {
+     "k": "Bedrock 掲載",
+     "v": "2026-10-13"
+    },
+    {
+     "k": "コンテキスト",
+     "v": "500K トークン(発表)"
+    },
+    {
+     "k": "入出力",
+     "v": "入力 テキスト・画像 / 出力 テキスト"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "impact": {
+   "audience": "Amazon Bedrock でエージェントを作る開発者",
+   "benefits": [
+    "推論の強さで、正確さと出力量のバランスを調整できる",
+    "low は xhigh より出力トークンが約 8 分の 1(AWS の測定)",
+    "ツール呼び出しと構造化出力に対応する"
+   ],
+   "how_to": [
+    "`us.xai.grok-4.7` か `global.xai.grok-4.7` の推論プロファイルを指定する",
+    "IAM に推論プロファイルと default プロジェクトの権限を付ける",
+    "推論の強さを変え、自分の課題で出力量と精度を測る",
+    "推論トークンも出力に数えるため、上限は余裕を持って決める"
+   ],
+   "caveats": [
+    "AWS の 72 回の測定は合成の 3 課題で、一般的な性能ではない",
+    "ベンチマークは SpaceXAI の発表の数字で、独自には検証していない",
+    "対応リージョンと料金は Bedrock の公式ページで確認する"
+   ],
+   "terms": [
+    {
+     "t": "推論プロファイル",
+     "d": "リージョンをまたいで処理を振り分ける Bedrock の指定"
+    },
+    {
+     "t": "推論の強さ",
+     "d": "答える前にどれだけ考えるかの設定"
+    },
+    {
+     "t": "Converse API",
+     "d": "Bedrock の共通の呼び出し方式"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Build long-horizon agents with Grok 4.7 on Amazon Bedrock",
+    "publisher": "AWS",
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/",
+    "date": "2026-10-13"
+   },
+   {
+    "id": "s2",
+    "title": "Introducing Grok 4.7",
+    "publisher": "SpaceXAI",
+    "url": "https://x.ai/news/grok-4-7"
+   }
+  ]
+ },
+ "lfm2": {
+  "overview": {
+   "takeaway": "手元の端末で動かすエージェント向けに作られた、軽く動く推論モデル。用途別の重みも同時に公開された。",
+   "stat": {
+    "value": "2.45B",
+    "label": "24B のうち 1 トークンで動く量"
+   },
+   "steps": [
+    "考えてから答える",
+    "必要な部分だけ稼働",
+    "ツールを呼ぶ"
+   ],
+   "changes": [
+    "総 24B・稼働 2.45B の MoE 構成",
+    "コンテキストは 131,072 トークン",
+    "FP8・GGUF・ONNX・MLX 4bit の重みを用意"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Liquid AI"
+    },
+    {
+     "k": "公開日",
+     "v": "2026-10-12"
+    },
+    {
+     "k": "総パラメータ",
+     "v": "24B(稼働 2.45B)"
+    },
+    {
+     "k": "コンテキスト",
+     "v": "131,072 トークン"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "手元でエージェントや LLM を動かしたい開発者",
+   "benefits": [
+    "端末や手元の GPU で、ツールを呼ぶエージェントを試しやすくなる見込み",
+    "用途に合わせて FP8・GGUF・ONNX・MLX から重みを選べる",
+    "日本語を含む 16 言語を扱えると説明されている"
+   ],
+   "how_to": [
+    "Transformers 5.0 以上で `LiquidAI/LFM2.5-24B-A2B` を読み込む",
+    "llama.cpp を使うなら GGUF 版、Mac なら MLX 4bit 版を選ぶ",
+    "OpenAI 互換のサーバーで動かし、エージェントから接続する"
+   ],
+   "caveats": [
+    "知識を問う用途は単独では推奨されず、検索との併用が勧められている",
+    "ベンチマークは Liquid AI の発表の数字で、独自には検証していない"
+   ],
+   "terms": [
+    {
+     "t": "MoE",
+     "d": "多数の専門家のうち、一部だけを使って計算する構成"
+    },
+    {
+     "t": "稼働パラメータ",
+     "d": "1 トークンの処理で実際に使われるパラメータの量"
+    },
+    {
+     "t": "GGUF",
+     "d": "llama.cpp などで使う、量子化した重みの形式"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "LiquidAI/LFM2.5-24B-A2B モデルカード",
+    "publisher": "Liquid AI(Hugging Face)",
+    "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+    "date": "2026-10-12"
+   }
+  ]
+ },
+ "open-webui": {
+  "overview": {
+   "takeaway": "Open WebUI の新版。モデル ID の受け渡しと監査ログの強化、ドキュメント処理の対応が入った。",
+   "stat": {
+    "value": "v0.12.2",
+    "label": "2026-10-14 公開"
+   },
+   "steps": [
+    "チャットを送る",
+    "ヘッダーでモデル ID を渡す",
+    "監査ログに記録"
+   ],
+   "changes": [
+    "{{MODEL_ID}} をカスタムヘッダーで使える",
+    "監査ログに model_id が付く",
+    "MinerU 4.x と Milvus の TLS 証明書に対応"
+   ],
+   "facts": [
+    {
+     "k": "公開日",
+     "v": "2026-10-14"
+    },
+    {
+     "k": "版",
+     "v": "v0.12.2"
+    },
+    {
+     "k": "対象",
+     "v": "セルフホストの管理者"
+    },
+    {
+     "k": "新環境変数",
+     "v": "MILVUS_SERVER_PEM_PATH"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "Open WebUI を自社環境で運用する管理者・開発者",
+   "benefits": [
+    "モデルごとの利用の記録や振り分けをしやすくなる見込み",
+    "自己署名や社内発行の証明書の Milvus に接続できる",
+    "Tool Search で、見つけたツールを call_tool 経由で呼べる"
+   ],
+   "how_to": [
+    "接続やツールサーバーのヘッダーに {{MODEL_ID}} を書く",
+    "Milvus の証明書は MILVUS_SERVER_PEM_PATH でファイルを指定する",
+    "MinerU 4.x を使う場合は、tier と enable_ocr を設定する"
+   ],
+   "caveats": [
+    "MinerU 4.x では language と model_version は 3.x 専用",
+    "SCIM の削除要求では管理者が消せない。管理者は管理画面で削除する"
+   ],
+   "terms": [
+    {
+     "t": "SCIM",
+     "d": "ユーザー情報を ID 基盤から自動で同期する仕組み"
+    },
+    {
+     "t": "監査ログ",
+     "d": "誰が何をしたかを後から確認するための記録"
+    },
+    {
+     "t": "MinerU",
+     "d": "PDF などの文書を読み取るドキュメント処理エンジン"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Open WebUI v0.12.2 リリースノート",
+    "publisher": "Open WebUI(GitHub)",
+    "url": "https://github.com/open-webui/open-webui/releases/tag/v0.12.2",
+    "date": "2026-10-14"
+   }
+  ]
+ },
+ "sagemaker": {
+  "overview": {
+   "takeaway": "Google・GitHub・Apple のアカウントだけで SageMaker Studio を始められるようになり、最初の手間が減った。",
+   "stat": {
+    "value": "3 種類",
+    "label": "対応するソーシャルアカウント"
+   },
+   "steps": [
+    "既存アカウントで登録",
+    "設定済みの Studio に入る",
+    "微調整・評価・デプロイ"
+   ],
+   "changes": [
+    "ソーシャルアカウントで新規登録できる",
+    "クレジットカード不要で無料クレジットが付く",
+    "メールで招待し、共有環境を使える"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "AWS"
+    },
+    {
+     "k": "発表日",
+     "v": "2026-10-14"
+    },
+    {
+     "k": "対応",
+     "v": "Google・GitHub・Apple"
+    },
+    {
+     "k": "提供地域",
+     "v": "Studio 対応の全商用リージョン"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "AI/ML を初めて試す開発者・チーム",
+   "benefits": [
+    "AWS アカウント作成や IAM 設定の手間なく Studio を始められる",
+    "Hugging Face のモデルから、微調整・評価・デプロイに進める",
+    "招待したメンバーも、自分のアカウントで共有環境に入れる"
+   ],
+   "how_to": [
+    "Hugging Face で対応モデルを開き、「Deploy on SageMaker AI」などを選ぶ",
+    "または SageMaker Studio のページで Get Started を押す",
+    "Google・GitHub・Apple のいずれかで登録する"
+   ],
+   "caveats": [
+    "無料クレジットを超えたら、有料プランへの切り替えが必要",
+    "有料プランでは利用上限を設定して、費用を抑える",
+    "詳細な条件は AWS のサインアップ手順で確認する"
+   ],
+   "terms": [
+    {
+     "t": "SageMaker Studio",
+     "d": "機械学習の開発をブラウザで行える AWS の環境"
+    },
+    {
+     "t": "IAM",
+     "d": "AWS の利用権限を管理する仕組み"
+    },
+    {
+     "t": "AWS Free Tier",
+     "d": "一定範囲を無料で試せる AWS の制度"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Amazon SageMaker Studio simplifies getting started with social sign-in",
+    "publisher": "AWS",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-social-sign-in/",
+    "date": "2026-10-14"
+   }
+  ]
+ },
+ "unsloth": {
+  "overview": {
+   "takeaway": "Unsloth の新版で、ローカルのモデルがブラウザを操作でき、画像生成や学習の対応も広がった。",
+   "stat": {
+    "value": "v0.1.906-beta",
+    "label": "2026-10-12 公開"
+   },
+   "steps": [
+    "Browser use をオン",
+    "依頼を入力",
+    "モデルがページを操作",
+    "確認して実行"
+   ],
+   "changes": [
+    "モデルがページを開き、クリック・入力・スクロールをする",
+    "Qwen-Image-2.1-Turbo(8 ステップ)に対応",
+    "テキスト拡散 LLM の学習に対応"
+   ],
+   "facts": [
+    {
+     "k": "公開日",
+     "v": "2026-10-12"
+    },
+    {
+     "k": "版",
+     "v": "v0.1.906-beta"
+    },
+    {
+     "k": "画像モデル",
+     "v": "Qwen-Image-2.1-Turbo"
+    },
+    {
+     "k": "Mac",
+     "v": "投機的デコード対応"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "ローカルで LLM を動かし、学習や画像生成も試したい開発者",
+   "benefits": [
+    "ローカルのモデルにも調べ物やサイト操作を任せやすくなる見込み",
+    "Mac で MLX の返答が最大 2.8 倍速になると説明(リリースノート)",
+    "VRAM より大きい MoE GGUF が最大 3 倍速になると説明(同上)"
+   ],
+   "how_to": [
+    "チャットの + メニューから Browser use をオンにする",
+    "調べたいことやサイトでの作業をモデルに頼む",
+    "Settings > Browser で開いてよいサイトや履歴へのアクセスを決める"
+   ],
+   "caveats": [
+    "ログインや送信・購入・削除の前には確認が入る",
+    "パスワードやカード番号などはモデルでなく自分で入力する",
+    "速度の数字はリリースノートの記載で、独自には検証していない"
+   ],
+   "terms": [
+    {
+     "t": "Browser use",
+     "d": "モデルがブラウザで操作を行う機能"
+    },
+    {
+     "t": "GGUF",
+     "d": "ローカル実行向けに量子化されたモデルの形式"
+    },
+    {
+     "t": "投機的デコード",
+     "d": "小さなモデルで先読みして、出力を速くする手法"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Unsloth v0.1.906-beta リリースノート",
+    "publisher": "Unsloth(GitHub)",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta",
+    "date": "2026-10-12"
+   }
+  ]
+ }
+}

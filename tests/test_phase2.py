@@ -55,7 +55,10 @@ class EnrichmentTests(unittest.TestCase):
     def test_unverified_is_visible_in_site(self):
         js = (ROOT / "site" / "slides.js").read_text(encoding="utf-8")
         self.assertIn("未検証", js)
-        self.assertIn("unverified", (ROOT / "site" / "index.html").read_text(encoding="utf-8"))
+        html = (ROOT / "site" / "index.html").read_text(encoding="utf-8")
+        self.assertIn("未確認", html)
+        self.assertIn("観測候補", html)
+        self.assertNotIn("(mock)", html)
 
     def test_trends_without_enrichment_are_unverified_with_no_slides(self):
         from analyze import report as R

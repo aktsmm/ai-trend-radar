@@ -114,8 +114,12 @@ details. Edit only the five files below under `data/reports/<week>/`; never touc
 
 1. Decide whether it is worth publishing: a real, notable product / model / release with an official first-party page dated inside `window`. Tiny personal repos, build-number bumps, third-party re-uploads, offensive-security tools: **reject** (write the reason to `rejected_candidates.json` as `{entity_id: "<one Japanese sentence>"}`). Rejecting is normal; never pad.
 2. Research with `web-fetch` / `microsoft_docs_*`: fetch the actual first-party pages (release notes, official blog, docs, model card) — not search snippets.
-3. Add to `enrichment.json` → `entities.<id>`: `selection_reason`, `verification_status` (`verified` / `partially_verified`), `official_urls` (1–3 first-party HTTPS pages you fetched), `checks[]` (`mcp_name`, `tool`, `query`, `evidence_urls`, `evidence_published_at`, `result` in Japanese, `retrieved_at` ISO+09:00).
+3. (If the automatic category/kind is clearly wrong, set `category` / `kind` on the entity; categories: model, dev-tool, local-runtime, hardware, research, github-trending.) Add to `enrichment.json` → `entities.<id>`: `selection_reason`, `verification_status` (`verified` / `partially_verified`), `official_urls` (1–3 first-party HTTPS pages you fetched), `checks[]` (`mcp_name`, `tool`, `query`, `evidence_urls`, `evidence_published_at`, `result` in Japanese, `retrieved_at` ISO+09:00).
 4. Add `digest.json[id]`, `slides.json[id]` (exactly ONE `infographic` slide), `decks.json[id]` (`deck/1`: overview + impact + sources).
+
+## Weekly themes (after all entities pass the gate)
+
+Write `data/reports/<week>/themes.json`: 2-4 themes, each an INTERPRETATION of what several published items of this week have in common and the plausible background (a shared trend, a shared buyer need, a platform shift). Rules: >=2 published entities per theme; one `signals` entry per cited entity quoting a fact already in that entity's digest; `refs` only URLs already captured for those entities; give `confidence` honestly (two examples = `low`); mark opinion wording as 見立て; never state causes you cannot support from the cited items; no theme is better than a forced theme. Existing themes of the week may be revised, not deleted without reason. The gate (`check_themes`) enforces the structure.
 
 ## Content rules (the gate rejects violations)
 

@@ -8,11 +8,11 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
- "data_at": "2026-10-15T01:25:17.279945+00:00",
+ "snapshot_at": "2026-10-15T02:00:20.953719+00:00",
+ "data_at": "2026-10-15T01:54:54.841714+00:00",
  "partial": true,
  "baseline": {
-  "snapshots": 1,
+  "snapshots": 0,
   "is_baseline": true,
   "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
  },
@@ -65,7 +65,7 @@
     "tools"
    ],
    "rank": 2,
-   "score": 98.0,
+   "score": 94.4,
    "summary": [
     "OpenAI のコーディングエージェント Codex の大規模な企業導入事例が、2026-10-08 に OpenAI から公開された。",
     "Oracle では Codex を 9.5 万人超、ChatGPT を 13 万人が利用し、採用の市場調査にかかる時間が 98% 減ったと紹介された(いずれも OpenAI の発表の数字)。",
@@ -100,8 +100,8 @@
     "agents",
     "tools"
    ],
-   "rank": 11,
-   "score": 45.3,
+   "rank": 17,
+   "score": 43.6,
    "summary": [
     "GitHub が、Google の Gemini 4 Argon を GitHub Copilot で一般提供(GA)にした。公式 changelog は 2026-10-13 付け。",
     "複雑なコーディング・エージェント作業・推論向けのモデルで、初期テストでは Gemini の従来モデルより全てのコーディングベンチマークで多くの課題を解いたと説明されている(GitHub の発表)。",
@@ -134,8 +134,8 @@
     "agents",
     "tools"
    ],
-   "rank": 14,
-   "score": 35.5,
+   "rank": 19,
+   "score": 34.2,
    "summary": [
     "AWS が、Amazon SageMaker Studio に Google・GitHub・Apple のアカウントで新規登録できるソーシャルサインインを、2026-10-14 に発表した。",
     "登録後は、設定済みの Studio 環境にすぐ入れる。クレジットカードは不要で、AWS Free Tier の無料クレジットが付く。",
@@ -168,8 +168,8 @@
     "agents",
     "tools"
    ],
-   "rank": 17,
-   "score": 32.4,
+   "rank": 21,
+   "score": 31.2,
    "summary": [
     "AWS が、Amazon Bedrock AgentCore の Memory で、短期メモリの料金を 1 イベント定額から従量課金に変えた。発表は 2026-10-12。",
     "料金は、取り込みが 1GB あたり $1.00、取得が $0.20、保存が 1GB・月あたり $0.10(いずれも AWS の発表)。",

@@ -8,11 +8,11 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
- "data_at": "2026-10-15T01:25:17.279945+00:00",
+ "snapshot_at": "2026-10-15T02:00:20.953719+00:00",
+ "data_at": "2026-10-15T01:54:54.841714+00:00",
  "partial": true,
  "baseline": {
-  "snapshots": 1,
+  "snapshots": 0,
   "is_baseline": true,
   "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
  },
@@ -26,8 +26,8 @@
   "models",
   "tools"
  ],
- "rank": 16,
- "score": 32.6,
+ "rank": 20,
+ "score": 31.4,
  "summary": [
   "SpaceXAI の Grok 4.7 が、2026-10-13 に Amazon Bedrock で使えるようになったと、AWS が公式ブログで紹介した。",
   "AWS はこのモデルで道具を呼ぶエージェントを作り、3 つの課題を 72 回実行した。67 回が正答で、推論の強さを xhigh にすると 18 回すべて正答した。",
@@ -225,7 +225,7 @@
    "name": "hf_models",
    "title": "nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2",
    "url": "https://huggingface.co/nerkyor/Qwen3.8-27B-Coder390-EfficientThink-Opus5.5-GPT6Astra-Grok4.7-DSV4Pro-K3-SFT-RLOO-MTP-DFlash2",
-   "metric": 308.0,
+   "metric": 309.0,
    "metric_name": "trendingScore"
   },
   {

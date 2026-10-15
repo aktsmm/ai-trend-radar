@@ -9,9 +9,9 @@ from analyze.automerge_check import classify  # noqa: E402
 
 class AllowlistTests(unittest.TestCase):
     def test_report_files_and_generated_are_accepted(self):
-        take, gen, bad = classify(["data/reports/2026-W43/digest.json", "data/reports/2026-W43/decks.json", "data/trends.json", "site/data.js"])
+        take, gen, bad = classify(["data/reports/2026-W43/digest.json", "data/reports/2026-W43/decks.json", "data/reports/2026-W43/themes.json", "data/trends.json", "site/data.js"])
         self.assertEqual([], bad)
-        self.assertEqual(2, len(take))
+        self.assertEqual(3, len(take))
         self.assertEqual(2, len(gen))
 
     def test_anything_else_is_rejected(self):

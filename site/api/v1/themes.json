@@ -1,0 +1,176 @@
+{
+ "version": 1,
+ "week": "2026-W42",
+ "window": {
+  "from": "2026-10-08",
+  "to": "2026-10-15",
+  "label": "2026-W42",
+  "partial": true,
+  "tz": "JST, [start, end)"
+ },
+ "snapshot_at": "2026-10-15T02:00:20.953719+00:00",
+ "data_at": "2026-10-15T01:54:54.841714+00:00",
+ "partial": true,
+ "baseline": {
+  "snapshots": 0,
+  "is_baseline": true,
+  "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
+ },
+ "note": "解釈(AI の見立て)。根拠となる項目と出典を signals / refs に示す",
+ "items": [
+  {
+   "id": "agent-ops",
+   "title": "エージェントの「運用の足回り」が整う",
+   "confidence": "medium",
+   "summary": "コーディングエージェントや社内チャットで、計測・監査・隔離・課金といった運用の論点が、各社のリリースに並んで出てきた。",
+   "background": [
+    "エージェントが試用から企業導入の段階に入り(Oracle の事例は OpenAI の発表の数字)、動かし続けるための仕組みが要るようになったと読める。",
+    "鍵を渡さない、記録を残す、使った分だけ払う、といった項目は、本番運用で問われる点と重なる(見立て)。"
+   ],
+   "entities": [
+    "claude-code",
+    "openai-codex",
+    "ollama",
+    "open-webui",
+    "agentcore"
+   ],
+   "signals": [
+    {
+     "entity": "claude-code",
+     "note": "OpenTelemetry の計測項目と拡張フックを追加"
+    },
+    {
+     "entity": "openai-codex",
+     "note": "Oracle で 9.5 万人超が利用(発表)。MCP 設定を CLI と IDE で共有"
+    },
+    {
+     "entity": "ollama",
+     "note": "API キーを Sprite に渡さず、ゲートウェイが付与"
+    },
+    {
+     "entity": "open-webui",
+     "note": "監査ログにモデル ID、SCIM の管理者削除の修正"
+    },
+    {
+     "entity": "agentcore",
+     "note": "短期メモリを 1 イベント定額から従量課金へ"
+    }
+   ],
+   "refs": [
+    "https://code.claude.com/docs/en/overview",
+    "https://openai.com/index/oracle",
+    "https://ollama.com/blog/fly-io-sprites",
+    "https://github.com/open-webui/open-webui/releases/tag/v0.12.2",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/agentcore-memory-consumption-based-pricing"
+   ]
+  },
+  {
+   "id": "same-week-rollout",
+   "title": "新モデルが主要プラットフォームに同時に届く",
+   "confidence": "high",
+   "summary": "Gemini 4 Argon は GA と同日に GitHub Copilot でも一般提供になり、Grok 4.7 も発表から約 3 週間で Amazon Bedrock に載った。",
+   "background": [
+    "モデルの提供元とは別の開発ツールやクラウドが、短い間隔で取り込む流れが見える。",
+    "開発者は、使う場所を変えずにモデルを選び直せる状況に近づいている(見立て)。"
+   ],
+   "entities": [
+    "gemini-4-argon",
+    "github-copilot",
+    "grok-4-7"
+   ],
+   "signals": [
+    {
+     "entity": "gemini-4-argon",
+     "note": "2026-10-13 に GA"
+    },
+    {
+     "entity": "github-copilot",
+     "note": "同じ 2026-10-13 に Copilot で GA"
+    },
+    {
+     "entity": "grok-4-7",
+     "note": "2026-09-21 の発表後、10-13 に Bedrock で提供"
+    }
+   ],
+   "refs": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot",
+    "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/"
+   ]
+  },
+  {
+   "id": "efficient-local",
+   "title": "「手元で動かす」を効率の工夫が押し広げる",
+   "confidence": "medium",
+   "summary": "専門家だけを動かす MoE と、少ないステップでの生成が、ローカルや端末で大きなモデルを動かす手段として並んだ。",
+   "background": [
+    "総パラメータは大きくても、動かす部分を絞る MoE の構成が複数のモデルで共通している(各モデルカードの説明)。",
+    "少ステップ化や先読み(推測的な復号)で、同じ品質を少ない時間で得る工夫も共通する。ローカル用途の現実味が上がっていると読める(見立て)。"
+   ],
+   "entities": [
+    "strata",
+    "lfm2",
+    "qwen-image-2-1",
+    "unsloth",
+    "clef"
+   ],
+   "signals": [
+    {
+     "entity": "strata",
+     "note": "12GB GPU で大型 MoE。全専門家を RAM、頻出分を GPU に置く"
+    },
+    {
+     "entity": "lfm2",
+     "note": "24B 中 2.45B だけが動く MoE。オンデバイス向け"
+    },
+    {
+     "entity": "qwen-image-2-1",
+     "note": "8 ステップで生成する 7B の Turbo 版"
+    },
+    {
+     "entity": "unsloth",
+     "note": "Qwen-Image-2.1-Turbo に対応(約 2.5 倍速と説明)"
+    },
+    {
+     "entity": "clef",
+     "note": "30B-A3B の MoE。1 回の推論で確率を返す"
+    }
+   ],
+   "refs": [
+    "https://github.com/Niko1221/Strata",
+    "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+    "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo",
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta",
+    "https://blog.cloudflare.com/clef-faster-cheaper-multimodal"
+   ]
+  },
+  {
+   "id": "decision-models",
+   "title": "文章ではなく「判断」を返すモデルが出てきた",
+   "confidence": "low",
+   "summary": "Jev と Clef-omni は、チャットの文章ではなく、型付きの判断や選択肢ごとの確率を返す。ソフトウェアから直接使う用途を想定している。",
+   "background": [
+    "文章を生成せず、状態と質問を受けて確率や型付きの結果を返す設計が 2 つの別の提供元で並んだ。",
+    "ただし 2 例だけで、流れと呼べるかは今後の観測次第(見立て)。"
+   ],
+   "entities": [
+    "jev",
+    "clef"
+   ],
+   "signals": [
+    {
+     "entity": "jev",
+     "note": "型付きの判断と確信度を API で返す(1.14.0)"
+    },
+    {
+     "entity": "clef",
+     "note": "選択肢ごとの確率を 1 回の推論で返す"
+    }
+   ],
+   "refs": [
+    "https://typesafe.ai/blog/jev-1-14",
+    "https://blog.cloudflare.com/clef-faster-cheaper-multimodal"
+   ]
+  }
+ ]
+}

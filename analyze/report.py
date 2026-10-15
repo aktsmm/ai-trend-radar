@@ -134,7 +134,7 @@ def desc_of(c, hits):
     return ""
 
 
-RESEARCH_FEEDS = {"google-research-blog", "microsoft-research-blog", "apple-ml-research", "deepmind-blog"}
+RESEARCH_FEEDS = {"google-research-blog", "microsoft-research-blog", "apple-ml-research"}  # deepmind-blog mixes product news, so it is not a research signal
 
 
 def categorize(c, hits, desc, events):
@@ -256,6 +256,33 @@ def gh_quality(c, hits, api, repo_counts):
 
 
 # ---------- report ----------
+BROAD_FEEDS = {"meta-newsroom", "aws-whats-new", "github-changelog", "nvidia-blog", "nvidia-dev-blog", "microsoft-research-blog", "google-research-blog", "apple-ml-research", "nvidia-genai-blog", "google-ai-blog"}
+AI_TITLE_RE = re.compile(r"\b(ai|a\.i\.|llm|gpt|gemini|claude|copilot|agent|agents|agentic|model|models|neural|inference|machine learning|generative|robot|robotics|gpu|mcp|bedrock|sagemaker|diffusion|openai|anthropic|deepseek|qwen|llama|mistral)\b", re.I)
+
+
+def official_highlights(items, trends, win, per_vendor=3, limit=24):
+    """Vendor announcements (first-party feeds) in the window that are not already a published trend: title / vendor / date / link only.
+    This keeps policy, safety, research and business news in view without a generated summary (nothing to verify beyond the title)."""
+    used = {t["primary"]["url"] for t in trends} | {u for t in trends for u in t["official_urls"]} | {e["url"] for t in trends for e in t["events"]}
+    out, per, seen = [], {}, set()
+    for it in sorted((i for i in items if i["source"] == "official"), key=lambda i: i.get("created") or "", reverse=True):
+        dt = parse_dt(it.get("created"))
+        if not dt or not (win["start"] <= dt < win["end"]) or it["url"] in used:
+            continue
+        if it.get("feed") in BROAD_FEEDS and not AI_TITLE_RE.search(it["title"] + " " + (it.get("text") or "")[:200]):
+            continue
+        title = re.split(r"<", it["title"])[0].strip()  # some HTML list pages leak markup into titles
+        v = it.get("vendor") or it.get("feed")
+        if not title or title.lower() in seen or per.get(v, 0) >= per_vendor:
+            continue
+        seen.add(title.lower())
+        per[v] = per.get(v, 0) + 1
+        out.append({"vendor": v, "title": title[:140], "url": it["url"], "date": dt.astimezone(JST).strftime("%Y-%m-%d"), "feed": it.get("feed")})
+        if len(out) >= limit:
+            break
+    return out
+
+
 def build_report(items, status, now, week=None, xposts=None, vel=None, stoplist=None, offline=False, snapshots_n=0, ledger=None,
                  watch_posts=None, brave_urls=None):
     win = make_window(now, week)
@@ -360,6 +387,12 @@ def build_report(items, status, now, week=None, xposts=None, vel=None, stoplist=
             used.add(r["key"])
     selected.sort(key=lambda r: (-r["total"], r["key"]))
     selected = selected[:B.TOP_N]
+    # entities already published for this week stay in the list even if a re-run reshuffles the ranking (never silently un-publish)
+    dg = ROOT / "data" / "reports" / win["label"] / "digest.json"
+    pinned = set(json.loads(dg.read_text(encoding="utf-8"))) if dg.exists() else set()
+    chosen = {r["key"] for r in selected}
+    selected += [r for r in cands if slug(r["c"]["name"]) in pinned and r["key"] not in chosen]
+    selected.sort(key=lambda r: (-r["total"], r["key"]))
 
     B.annotate_why(selected, items)
     trends = [entry(r, n + 1, mx, snapshots_n) for n, r in enumerate(selected)]
@@ -378,6 +411,7 @@ def build_report(items, status, now, week=None, xposts=None, vel=None, stoplist=
         "pending": [{"keyword": r["c"]["name"], "reason": "no primary source dated inside the window"} for r in sorted(pending, key=lambda r: -r["pre"])[:25]],
         "rejected": rejected, "merged_vendor_duplicates": merged, "stoplisted": sorted(set(dropped_stop)),
         "leads_unverified": leads,
+        "official_highlights": official_highlights(items, trends, win),
         "candidates_pool": len(results),
     }
 
@@ -424,6 +458,9 @@ def apply_enrichment(trends, label):
         if not e:
             continue
         t["verification"] = {"status": e["verification_status"], "checks": e["checks"], "selection_reason": e.get("selection_reason")}
+        for k in ("category", "kind"):  # optional correction when the automatic classification is wrong
+            if e.get(k):
+                t[k] = e[k]
         t["official_urls"] = e["official_urls"]
         t["official_verified"] = e["verification_status"] in ("verified", "partially_verified")
         t["url_checks"] = {u: checks.get(u) for u in e["official_urls"]}

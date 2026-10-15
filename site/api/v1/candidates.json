@@ -8,11 +8,11 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
- "data_at": "2026-10-15T01:25:17.279945+00:00",
+ "snapshot_at": "2026-10-15T02:00:20.953719+00:00",
+ "data_at": "2026-10-15T01:54:54.841714+00:00",
  "partial": true,
  "baseline": {
-  "snapshots": 1,
+  "snapshots": 0,
   "is_baseline": true,
   "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
  },
@@ -36,31 +36,85 @@
    "primary_url": "https://github.com/vllm-project/vllm/releases/tag/proto-v0.6.0"
   },
   {
+   "id": "speech",
+   "keyword": "Speech",
+   "category": "research",
+   "rank": 7,
+   "status": "not_researched",
+   "reason": null,
+   "primary_url": "https://machinelearning.apple.com/research/code-switching-detection"
+  },
+  {
    "id": "spark",
    "keyword": "Spark",
    "category": "model",
-   "rank": 8,
-   "status": "unverified",
+   "rank": 9,
+   "status": "not_researched",
    "reason": null,
    "primary_url": "https://developer.nvidia.com/blog/rewrite-apache-spark-udfs-gpu-acceleration-ai-agents/feed/"
   },
   {
-   "id": "talorys",
-   "keyword": "talorys",
+   "id": "analysis",
+   "keyword": "Analysis",
    "category": "dev-tool",
-   "rank": 15,
-   "status": "skipped",
-   "reason": "個人リポジトリの scaffold 用パッケージの小規模なパッチリリース(0.1.6)で、注目に値する変更を確認できなかった。",
-   "primary_url": "https://github.com/rociiu/talorys/releases/tag/create-talorys%400.1.6"
+   "rank": 11,
+   "status": "not_researched",
+   "reason": null,
+   "primary_url": "https://openai.com/index/sentinelone"
   },
   {
-   "id": "hyperframes",
-   "keyword": "hyperframes",
+   "id": "studio",
+   "keyword": "Studio",
    "category": "dev-tool",
-   "rank": 20,
-   "status": "unverified",
+   "rank": 14,
+   "status": "not_researched",
    "reason": null,
-   "primary_url": "https://github.com/heygen-com/hyperframes/releases/tag/v0.8.159"
+   "primary_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-social-sign-in/"
+  },
+  {
+   "id": "learn",
+   "keyword": "Learn",
+   "category": "research",
+   "rank": 15,
+   "status": "not_researched",
+   "reason": null,
+   "primary_url": "https://huggingface.co/papers/2610.18614"
+  },
+  {
+   "id": "remote",
+   "keyword": "Remote",
+   "category": "dev-tool",
+   "rank": 18,
+   "status": "not_researched",
+   "reason": null,
+   "primary_url": "https://github.com/Alpha-Park/genpark-remote-mcp-oauth-scope-auditor-and-token-vault-skill"
   }
+ ],
+ "held_no_dated_source": [
+  "Qwen3.8",
+  "glm-5.3",
+  "laya",
+  "embeddinggemma-2",
+  "clef-flash",
+  "qwen3.5",
+  "kev",
+  "gemma4",
+  "MiniCPM",
+  "DeepSeek-V4.1-Flash",
+  "NVIDIA Blackwell",
+  "nemotron3",
+  "MiniCPM-V-4.7",
+  "NVIDIA DGX Spark",
+  "OpenCode",
+  "whistle",
+  "MiniMax-H3",
+  "Mellum2.1",
+  "kimi-k3",
+  "ema-lightning",
+  "LightOnOCR-3",
+  "mistral-large-4",
+  "hyperframes",
+  "drama-3",
+  "BFS-Best-Face-Swap"
  ]
 }

@@ -151,7 +151,9 @@
      "result": "公式ブログの存在と内容(ロボティクス評価の記述)を確認",
      "retrieved_at": "2026-10-15T07:40:00+09:00"
     }
-   ]
+   ],
+   "category": "model",
+   "kind": "model"
   },
   "agentcore": {
    "selection_reason": "TOP20。dev-tool。how-to ブログ(2026-10-14)のみだと弱いため、窓内(2026-10-12)の公式 What's New『AgentCore Memory の短期メモリが従量課金に』を一次情報にした。製品概要は公式ドキュメントで確認。",

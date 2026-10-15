@@ -1,7 +1,7 @@
 {
  "version": 1,
- "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
- "data_at": "2026-10-15T01:25:17.279945+00:00",
+ "snapshot_at": "2026-10-15T02:00:20.953719+00:00",
+ "data_at": "2026-10-15T01:54:54.841714+00:00",
  "latest_week": "2026-W42",
  "weeks": [
   {
@@ -16,6 +16,8 @@
   "keyword": "api/v1/keywords/{id}.json",
   "category": "api/v1/categories/{category}.json",
   "candidates": "api/v1/candidates.json",
+  "highlights": "api/v1/highlights.json",
+  "themes": "api/v1/themes.json",
   "health": "api/v1/health.json"
  },
  "downloads": {

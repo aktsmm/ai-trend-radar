@@ -219,13 +219,35 @@ def cover_slides(prs, data, items):
         rect(sl, 300, y + 4, 130, dy - 12, a, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=12)
         text(sl, 300, y + 4, 130, dy - 12, t["category"], 13, WHITE, True, PP_ALIGN.CENTER, MSO_ANCHOR.MIDDLE)
         text(sl, 446, y, 700, dy - 4, ((t.get("slides") or [{}])[0].get("title") or t["deck"]["overview"]["takeaway"]), 16, "334455", anchor=MSO_ANCHOR.MIDDLE)
-        text(sl, 1160, y, 66, dy - 4, f"p.{3 + i * 2}", 15, MUTED, False, PP_ALIGN.RIGHT, MSO_ANCHOR.MIDDLE)
+        text(sl, 1160, y, 66, dy - 4, f"p.{3 + (1 if data.get('themes') else 0) + i * 2}", 15, MUTED, False, PP_ALIGN.RIGHT, MSO_ANCHOR.MIDDLE)
+
+
+def themes_slide(prs, data):
+    th = data.get("themes") or []
+    if not th:
+        return
+    sl = prs.slides.add_slide(prs.slide_layouts[6])
+    sl.background.fill.solid()
+    sl.background.fill.fore_color.rgb = rgb(PAPER)
+    rect(sl, 0, 0, 1280, 104, NAVY)
+    text(sl, 44, 28, 1190, 50, "今週のテーマ(共通する背景の見立て)", 34, WHITE, True, anchor=MSO_ANCHOR.MIDDLE)
+    names = {t["entity_id"]: t["keyword"] for t in data["trends"]}
+    conf = {"high": "確度 高", "medium": "確度 中", "low": "確度 低"}
+    for i, x in enumerate(th[:4]):
+        cx, cy = 44 + (i % 2) * 604, 124 + (i // 2) * 262
+        rect(sl, cx, cy, 588, 248, WHITE, NAVY, 3, MSO_SHAPE.ROUNDED_RECTANGLE, 14)
+        text(sl, cx + 14, cy + 8, 560, 30, [[(x["title"], {"bold": True, "color": NAVY, "size": 21}), (f"  {conf[x['confidence']]}", {"size": 13, "color": MUTED})]], 21, NAVY)
+        text(sl, cx + 14, cy + 44, 560, 80, x["summary"], 17, INK)
+        text(sl, cx + 14, cy + 124, 560, 76, x["background"][0], 16, INK)
+        text(sl, cx + 14, cy + 208, 560, 34, " ・ ".join(names.get(e, e) for e in x["entities"]), 15, "0B7285", True)
+    text(sl, 44, 660, 1190, 40, "AI による解釈です(事実ではありません)。根拠と出典は api/v1/themes.json に記載しています。", 13, MUTED)
 
 
 def build_weekly(data, out):
     items = [t for t in data["trends"] if t.get("deck")]
     prs = new_prs()
     cover_slides(prs, data, items)
+    themes_slide(prs, data)
     for t in items:
         slide1(prs, t)
         slide2(prs, t)

@@ -10,7 +10,7 @@
 <body>
 <header class="site-header"><div class="wrap">
   <a class="brand" href="#top">AI Trend Radar</a>
-  <nav aria-label="メニュー"><a href="#latest">最新ダイジェスト</a><a href="#cands">観測候補(未掲載)</a><a href="#about">方式・出典</a><a href="archive.html">アーカイブ</a><a href="api/v1/index.json">JSON API</a></nav>
+  <nav aria-label="メニュー"><a href="#latest">最新ダイジェスト</a><a href="#cands">観測候補(未掲載)</a><a href="#about">方式・出典</a><a href="archive.html">アーカイブ</a><a href="api/v1/index.json">JSON API</a><a href="feed.xml">Atom</a></nav>
   <div class="period" id="period"></div>
 </div></header>
 <main class="wrap" id="top">
@@ -27,18 +27,21 @@
       <dt>スコア</dt><dd>複数ソースでの言及の多さと新しさから算出した 0〜100 の相対値(1 位 = 100)。蓄積が 14 日分に満たない間は「上昇中」ではなく「今週の注目」と表示します。</dd>
     </dl>
   </details>
+  <section id="themes" class="themes" aria-labelledby="themes-h" hidden><h2 id="themes-h">今週のテーマ <small>共通する背景の見立て</small></h2><p class="lead">今週の項目に共通する流れと、その背景として考えられることをまとめました。<strong>事実ではなく AI による解釈</strong>です。根拠にした項目(signals)と出典(refs)を各テーマに示しています。</p><div id="themelist"></div></section>
   <div class="controls">
     <input type="search" id="q" placeholder="キーワードで絞り込み" aria-label="キーワードで絞り込み">
     <div class="chips" id="filters" role="group" aria-label="カテゴリ"></div>
     <label class="tgl"><input type="checkbox" id="cand"> 観測候補(未確認)も検索対象にする</label>
   </div>
   <div id="latest" aria-live="polite"></div>
+  <details class="cands" id="hl" open><summary id="hlsum">今週の公式発表(タイトルのみ)</summary><p class="lead">主要ベンダーの公式フィードに出た発表のうち、上の項目に含まれないものです。ポリシー・安全性・研究・事業の話題も見落とさないための一覧で、要約は付けていません。タイトルと日付は発表元のものです。</p><div id="hllist"></div></details>
   <details class="cands" id="cands"><summary id="candsum">観測候補(未掲載)</summary><p class="lead" id="candlead"></p><div id="candlist"></div></details>
   <footer class="site-footer" id="about">
     <h2>方式・出典</h2>
     <p id="meta"></p>
     <p>収集元: Hugging Face・GitHub・Hacker News・Reddit・Bluesky・dev.to・PyPI・OpenRouter と、各社の公式フィード。X の投稿は補助情報で、採用の判断は一次情報で行っています。公式サイトを取得できなかった発表元(例: Google DeepMind・Meta AI の一部)は、その旨を取得状態に表示します。</p>
     <p>データは静的 JSON として <a href="api/v1/index.json">api/v1/index.json</a> から取得できます(認証不要・読み取り専用。仕様は docs/api.md)。</p>
+    <p>ライセンス: コードは MIT。掲載内容は各社・各作者の公開情報の要約で、商標・製品名は各権利者に帰属します(<a href="https://github.com/aktsmm/ai-trend-radar/blob/master/NOTICE">NOTICE</a>)。</p>
     <p>要約・図解・ブリーフは AI が下書きしたものを、決定的な検査(スキーマ・公式 URL の許可リスト・日付の整合・変更件数の上限)と一次情報の照合に通したものです。誤りに気づいた場合は GitHub の Issue でお知らせください。</p>
   </footer>
 </main>

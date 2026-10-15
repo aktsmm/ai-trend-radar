@@ -6,3 +6,4 @@ build/
 .work/
 site/assets/
 site/downloads/
+site/feed.xml

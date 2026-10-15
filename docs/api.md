@@ -14,6 +14,8 @@ GitHub Pages から配信する、読み取り専用の静的 JSON です。認�
 | `api/v1/keywords/<id>.json` | 1 件の詳細。ダイジェスト、図解、ブリーフ(deck)、確認記録、話題の根拠 |
 | `api/v1/categories/<category>.json` | カテゴリ別の軽量索引 |
 | `api/v1/candidates.json` | 観測候補(未掲載)と見送りの理由 |
+| `api/v1/themes.json` | 今週の共通テーマと背景の見立て(解釈。signals で各項目の根拠、refs で出典を示す) |
+| `api/v1/highlights.json` | 今週の公式発表(タイトル・発表元・日付・URL のみ。要約なし) |
 | `api/v1/health.json` | 取得元の成否、件数。監視用 |
 | `downloads/<id>.pdf` / `.pptx` | 1 キーワード 2 枚のブリーフ |
 | `downloads/weekly-<週>.pdf` / `.pptx` | 今週の全ブリーフ(表紙・目次つき) |

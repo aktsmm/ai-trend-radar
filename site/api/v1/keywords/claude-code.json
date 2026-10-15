@@ -8,11 +8,11 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
- "data_at": "2026-10-15T01:25:17.279945+00:00",
+ "snapshot_at": "2026-10-15T02:00:20.953719+00:00",
+ "data_at": "2026-10-15T01:54:54.841714+00:00",
  "partial": true,
  "baseline": {
-  "snapshots": 1,
+  "snapshots": 0,
   "is_baseline": true,
   "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
  },
@@ -225,7 +225,7 @@
    "name": "github_new",
    "title": "YeonwooSung/my-claude-code-mods",
    "url": "https://github.com/YeonwooSung/my-claude-code-mods",
-   "metric": 777.0,
+   "metric": 778.0,
    "metric_name": "stars"
   },
   {
@@ -260,15 +260,15 @@
  "jp_reactions": [
   {
    "site": "qiita",
-   "title": "【ローカル破壊を防ぐ】Dockerでつくる安全なClaude Codeの社内展開ガイド",
-   "url": "https://qiita.com/ReQ_HY/items/882eec40d102dd1a8950",
-   "date": "2026-10-15"
-  },
-  {
-   "site": "qiita",
    "title": "gemini-3.7-flashがエラーなしで3.8に切り替わる、Claude Haiku 5.5が登場",
    "url": "https://qiita.com/aiapi_radar_news/items/23c2e736f9b98db156d9",
    "date": "2026-10-15"
+  },
+  {
+   "site": "zenn",
+   "title": "Claude の Invalid signature in thinking block を直す ― 履歴は追記のみに",
+   "url": "https://zenn.dev/persimmoq/articles/claude-fable-invalid-signature-thinking",
+   "date": "2026-10-14"
   },
   {
    "site": "zenn",

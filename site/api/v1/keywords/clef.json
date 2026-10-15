@@ -8,11 +8,11 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
- "data_at": "2026-10-15T01:25:17.279945+00:00",
+ "snapshot_at": "2026-10-15T02:00:20.953719+00:00",
+ "data_at": "2026-10-15T01:54:54.841714+00:00",
  "partial": true,
  "baseline": {
-  "snapshots": 1,
+  "snapshots": 0,
   "is_baseline": true,
   "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
  },
@@ -26,8 +26,8 @@
   "models",
   "local-llm"
  ],
- "rank": 19,
- "score": 31.6,
+ "rank": 12,
+ "score": 52.5,
  "summary": [
   "Cloudflare が、音声・動画・画像・テキストを入力できるオープンウェイトの決定モデル Clef-omni を、2026-10-09 に公開した。",
   "文章を生成せず、状態とスキーマ(型付きの質問)を受け取り、各質問の選択肢ごとの確率を1回の推論で返す。",
@@ -230,7 +230,7 @@
    "name": "hf_models",
    "title": "Cloudflare/clef-flash",
    "url": "https://huggingface.co/Cloudflare/clef-flash",
-   "metric": 134.0,
+   "metric": 132.0,
    "metric_name": "trendingScore"
   },
   {

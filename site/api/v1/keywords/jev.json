@@ -8,11 +8,11 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
- "data_at": "2026-10-15T01:25:17.279945+00:00",
+ "snapshot_at": "2026-10-15T02:00:20.953719+00:00",
+ "data_at": "2026-10-15T01:54:54.841714+00:00",
  "partial": true,
  "baseline": {
-  "snapshots": 1,
+  "snapshots": 0,
   "is_baseline": true,
   "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
  },
@@ -25,8 +25,8 @@
  "tags": [
   "models"
  ],
- "rank": 13,
- "score": 39.3,
+ "rank": 8,
+ "score": 64.1,
  "summary": [
   "Jev は TypeSafe AI の System One モデル。文章ではなく、ソフトウェアがそのまま使える型付きの判断と確信度を API(POST /v1/systemone)で返す、チャットではない新種のモデル。",
   "10/14 に公式ブログで Jev 1.14.0(jev-preview)を公開。画像入力、画像内の位置を返す新しい box 型、長い文脈を、本番非推奨の実験機能(danger zone ヘッダー)として加えた。",
@@ -285,10 +285,10 @@
    "date": "2026-10-14"
   },
   {
-   "site": "zenn",
-   "title": "open-jev を TypeSafe AI 互換 API にして、公式 SDK のまま Databricks で呼べるようにしてみた",
-   "url": "https://zenn.dev/hiouchiy/articles/3c090b0e7e1b14",
-   "date": "2026-10-14"
+   "site": "hatena",
+   "title": "LLM の 23 秒を 0.3 秒にした — decision-only モデル Jev を日本語校正プラグインに実測投入した話",
+   "url": "https://zenn.dev/bamboo_nova/articles/c6176164dcffd0",
+   "date": "2026-10-13"
   }
  ]
 }

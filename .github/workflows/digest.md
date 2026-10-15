@@ -135,7 +135,8 @@ Write `data/reports/<week>/themes.json`: 2-4 themes, each an INTERPRETATION of w
 
 ## Finish (validate-and-fix loop, at most 5 attempts)
 
-1. Run `python -m analyze.digest_gate --week <week>`.
+0. Shell rules (the sandbox denies anything else): edit the JSON files only with the edit/write tools; never run python scripts, heredocs, `cd`, `&&`, `;` or pipes. The ONLY command that works for python is the exact gate command below, run alone from the default working directory.
+1. Run `python -m analyze.digest_gate --week <week>` (alone, nothing before or after it).
 2. On any `REJECT <entity> ...` line: read it, fix that entity's JSON (wrong URL, date not matching the captured date, length, unresolved `refs`, missing field), and rerun the gate. Repeat up to **5 attempts in total**.
 3. If an entity still fails after the last attempt, **remove all of that entity's additions** (enrichment, digest, slide, deck) so it stays an unpublished candidate, rerun the gate until it prints `0 problem(s)`, then open ONE issue (safe-output `create-issue`) titled `dropped candidates <week>` listing each dropped entity and its last gate message.
 4. Stop when the gate prints `0 problem(s)`. The tests, `analyze.apply` and the pull request follow automatically; a separate workflow validates the pull request with trusted code and merges it. There is no human review, so never write anything you did not verify on a fetched first-party page.

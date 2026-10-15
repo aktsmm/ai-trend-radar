@@ -749,7 +749,7 @@
    "url_checks": {
     "https://ollama.com/blog/fly-io-sprites": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [
@@ -1112,15 +1112,15 @@
    "url_checks": {
     "https://openai.com/index/oracle": {
      "status": 403,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://developers.openai.com/learn/docs-mcp": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://github.com/openai/codex/releases": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [
@@ -1462,11 +1462,11 @@
    "url_checks": {
     "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://github.com/QwenLM/Qwen-Image-2.1": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [],
@@ -1700,13 +1700,46 @@
     }
    ],
    "official_urls": [
-    "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/feed/",
-    "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
-    "https://openrouter.ai/meta/muse-spark-open"
+    "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/"
    ],
    "official_verified": true,
    "summary": "Scale Agentic Coding Workflows with Meta’s Muse Spark Open on NVIDIA GB300 NVL72 ― Meta launches Muse Spark Open, a coding-optimized 816B mixture-of-experts (MoE) model with 42B active paramete。5ソースで言及(代表: 「Introducing Muse Spark Open: the most capable US open-weight」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Muse Spark Open: 100 万トークンのコード用モデル",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "816B",
+      "label": "MoE。1 トークンで 42B を使用(NVIDIA 発表)"
+     },
+     "steps": [
+      "コードベース全体を読む",
+      "計画してツールを使う",
+      "結果を見て自己修正"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Meta のオープンウェイトのコーディング特化モデルを NVIDIA が 2026-10-15 に紹介した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "100 万トークンの文脈で、数千ファイルのプロジェクトを分割せずに扱える"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "GB300 NVL72 で GPU 1 基あたり最大 5 万トークン/秒(NVIDIA 発表の数字)"
+      },
+      {
+       "h": "注意",
+       "t": "数字は発表のもの。816B の大型モデルで、自分の環境での検証が必要"
+      }
+     ],
+     "official_url": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+     "source_date": "2026-10-15"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 0.674,
     "hackernews": 0.568,
@@ -1757,8 +1790,21 @@
     }
    ],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "web_fetch",
+      "tool": "fetch",
+      "query": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+      "evidence_urls": [
+       "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/"
+      ],
+      "evidence_published_at": "2026-10-15T18:00:01Z",
+      "result": "816B の MoE(1 トークンで 42B を使用)、100 万トークンの文脈、音声・動画の理解、NVFP4 版の重み、GB300 NVL72 での速度(NVIDIA 発表の数字)を確認",
+      "retrieved_at": "2026-10-16T03:50:00+09:00"
+     }
+    ],
+    "selection_reason": "Meta のオープンウェイトのコーディング特化モデル。NVIDIA 公式技術ブログが 2026-10-15 に公開され、複数ソースで言及がある。"
    },
    "jp_reactions": [
     {
@@ -1767,7 +1813,115 @@
      "url": "https://pc.watch.impress.co.jp/docs/news/2148249.html",
      "date": "2026-10-15"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/": {
+     "status": 200,
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Meta がコーディング用エージェント向けのオープンウェイトモデル Muse Spark Open を公開し、NVIDIA が 2026-10-15 に技術ブログで紹介した。",
+     "816B パラメータの MoE 構成で、1 トークンあたり 42B を使い、100 万トークンの文脈を扱える。音声・動画・画像・文書も理解する。",
+     "NVIDIA GB300 NVL72 向けの NVFP4 版の重みが Hugging Face で配布され、NIM でも試せる。"
+    ],
+    "why_trending": "NVIDIA の公式ブログに加え、Hugging Face・Hacker News・Reddit・OpenRouter でも言及があり、今週 4 位。",
+    "what_changes": [
+     "大規模プロジェクト全体を分割せずに 1 回の文脈へ入れられる",
+     "計画・実行・確認を繰り返し、ツール呼び出しやサブエージェントを使える"
+    ],
+    "benefits": [
+     "GB300 NVL72 で GPU 1 基あたり最大 5 万トークン/秒(NVIDIA 発表の数字)",
+     "NVFP4 版でメモリ使用量を抑えられる(NVIDIA 発表)"
+    ],
+    "caveats": [
+     "性能の数字は NVIDIA の発表で、自分の環境での効果は別途検証が必要",
+     "816B の大型モデルで、手元の PC で動かすのは現実的ではない"
+    ],
+    "audience": "AI コーディングエージェントを自前で運用したい開発者・企業"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Meta のコーディング特化オープンウェイトモデル。100 万トークンの文脈で、プロジェクト全体を扱える。",
+     "stat": {
+      "value": "816B",
+      "label": "MoE。1 トークンで 42B を使用"
+     },
+     "steps": [
+      "コードベースを読む",
+      "計画してツールを使う",
+      "結果を見て修正"
+     ],
+     "changes": [
+      "1M トークンの文脈で数千ファイルを一度に扱う",
+      "音声・動画・画像・文書も理解する",
+      "NVFP4 版でメモリ使用量を抑える"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Meta"
+      },
+      {
+       "k": "構成",
+       "v": "816B MoE(42B 使用)"
+      },
+      {
+       "k": "文脈長",
+       "v": "100 万トークン"
+      },
+      {
+       "k": "紹介日",
+       "v": "2026-10-15"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "AI コーディングエージェントを自前で運用したい開発者・企業",
+     "benefits": [
+      "大規模なコードベースを分割せずに渡せる",
+      "GB300 NVL72 で GPU 1 基あたり最大 5 万トークン/秒(NVIDIA 発表)"
+     ],
+     "how_to": [
+      "Hugging Face から NVFP4 版の重みをダウンロードして試す",
+      "本番用途は NVIDIA NIM で単一コマンドの配備を試す"
+     ],
+     "caveats": [
+      "速度などの数字は NVIDIA の発表で、自社環境での検証が必要",
+      "816B の大型モデルで、手元の PC での実行は想定されていない"
+     ],
+     "terms": [
+      {
+       "t": "MoE",
+       "d": "複数の専門家のうち一部だけを使う構成"
+      },
+      {
+       "t": "NVFP4",
+       "d": "メモリを減らすための 4 ビットの数値形式"
+      },
+      {
+       "t": "コンテキスト長",
+       "d": "モデルが一度に扱える文章量"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Muse Spark Open on NVIDIA GB300 NVL72",
+      "publisher": "NVIDIA",
+      "url": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+      "date": "2026-10-15"
+     }
+    ]
+   }
   },
   {
    "rank": 5,
@@ -2239,11 +2393,11 @@
    "url_checks": {
     "https://code.claude.com/docs/en/overview": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.300": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [
@@ -2823,11 +2977,11 @@
    "url_checks": {
     "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://www.liquid.ai/blog/lfm2-5-24b-a2b": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [
@@ -3163,7 +3317,7 @@
    "url_checks": {
     "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [],
@@ -3510,7 +3664,7 @@
    "url_checks": {
     "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [],
@@ -3881,11 +4035,11 @@
    "url_checks": {
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [
@@ -4288,7 +4442,7 @@
    "url_checks": {
     "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [
@@ -4640,15 +4794,15 @@
    "url_checks": {
     "https://github.com/Niko1221/Strata": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://github.com/Niko1221/Strata/releases/tag/v0.1.44": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [
@@ -4848,13 +5002,46 @@
     }
    ],
    "official_urls": [
-    "https://huggingface.co/blog/flux-3",
-    "https://huggingface.co/black-forest-labs/flux-3-image-klein",
-    "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy"
+    "https://huggingface.co/blog/flux-3"
    ],
    "official_verified": true,
    "summary": "Welcome FLUX.3 Image Klein in Diffusers。3ソースで言及(代表: 「Welcome FLUX.3 Image Klein in Diffusers」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "FLUX.3 Image Klein: 枠で配置を指定できる画像生成",
+     "diagram_type": "infographic",
+     "icon": "image",
+     "stat": {
+      "value": "約 2 秒",
+      "label": "H100 で 1024×1024(Hugging Face の記載)"
+     },
+     "steps": [
+      "文章や参照画像を入力",
+      "枠で配置を指定",
+      "Diffusers で画像を生成"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Black Forest Labs の画像生成モデルが 2026-10-15 に Diffusers で使えるようになった"
+      },
+      {
+       "h": "何が変わる",
+       "t": "1 つのモデルで画像生成と複数画像を使った編集ができ、枠で配置も指定できる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "蒸留版は 16 ステップで速く、FP8・NVFP4 版は小さめの GPU 向け"
+      },
+      {
+       "h": "使い方",
+       "t": "pip install -U diffusers transformers のあと、ModularPipeline で読み込む"
+      }
+     ],
+     "official_url": "https://huggingface.co/blog/flux-3",
+     "source_date": "2026-10-15"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 0.881,
     "hf_spaces": 0.292,
@@ -4876,10 +5063,133 @@
    "trend_label": "baseline",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "web_fetch",
+      "tool": "fetch",
+      "query": "https://huggingface.co/blog/flux-3",
+      "evidence_urls": [
+       "https://huggingface.co/blog/flux-3"
+      ],
+      "evidence_published_at": "2026-10-15T00:00:00Z",
+      "result": "文章からの画像生成と複数参照画像の編集、枠で配置を指定するレイアウト制御、蒸留版は H100 で 1024×1024 を約 2 秒、FP8・NVFP4 版を確認",
+      "retrieved_at": "2026-10-16T03:50:00+09:00"
+     }
+    ],
+    "selection_reason": "Black Forest Labs の新しいオープン画像生成モデル。Hugging Face の公式ブログが 2026-10-15 に Diffusers 対応を紹介した。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://huggingface.co/blog/flux-3": {
+     "status": 200,
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Black Forest Labs の画像生成モデル FLUX.3 Image Klein が、Hugging Face の Diffusers で 2026-10-15 から使えるようになった。",
+     "1 つのモデルで、文章からの画像生成と、複数の参照画像を使った編集ができる。",
+     "プロンプトに枠(バウンディングボックス)を書き、どこに何を置くか、参照画像のどの部分を動かすかを指定できる。"
+    ],
+    "why_trending": "Hugging Face の公式ブログとモデル・デモ(Space)が同日に公開され、注目が集まった。",
+    "what_changes": [
+     "文章だけでなく、枠で画像の配置を指定できる",
+     "蒸留版は 16 ステップで速く、ベース版は追加学習向け"
+    ],
+    "benefits": [
+     "蒸留版は H100 で 1024×1024 を約 2 秒で生成(Hugging Face の記載)",
+     "FP8・NVFP4 版で小さめの GPU でも動かしやすい"
+    ],
+    "caveats": [
+     "速度は H100 での記載で、手元の GPU では異なる",
+     "利用条件(ライセンス)はモデルカードで確認する"
+    ],
+    "audience": "画像生成を自分のアプリや制作に組み込みたい開発者・クリエイター"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Black Forest Labs の画像生成モデル。枠で配置を指定でき、Diffusers ですぐ使える。",
+     "stat": {
+      "value": "約 2 秒",
+      "label": "H100 で 1024×1024(蒸留版)"
+     },
+     "steps": [
+      "文章・参照画像を入力",
+      "枠で配置を指定",
+      "画像を生成"
+     ],
+     "changes": [
+      "1 つのモデルで画像生成と画像編集ができる",
+      "枠でどこに何を置くかを指定できる",
+      "FP8・NVFP4 版で小さめの GPU にも対応"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Black Forest Labs"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-15"
+      },
+      {
+       "k": "版",
+       "v": "蒸留版とベース版"
+      },
+      {
+       "k": "使う場所",
+       "v": "Diffusers"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "画像生成を自分のアプリや制作に組み込みたい開発者・クリエイター",
+     "benefits": [
+      "配置を枠で指定でき、狙った構図に近づけやすい",
+      "複数の参照画像を組み合わせて編集できる",
+      "蒸留版は 16 ステップで速く生成できる"
+     ],
+     "how_to": [
+      "pip install -U diffusers transformers を実行する",
+      "ModularPipeline で flux-3-image-klein を読み込む",
+      "追加学習はベース版と LoRA スクリプトを使う"
+     ],
+     "caveats": [
+      "速度は H100 での記載で、手元の GPU では異なる",
+      "利用条件(ライセンス)はモデルカードで確認する"
+     ],
+     "terms": [
+      {
+       "t": "Diffusers",
+       "d": "画像生成モデルを動かす Hugging Face のライブラリ"
+      },
+      {
+       "t": "蒸留",
+       "d": "大きなモデルの性質を保ち、少ない手順で速く動かす手法"
+      },
+      {
+       "t": "LoRA",
+       "d": "少ない計算で行う軽量な追加学習"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Welcome FLUX.3 Image Klein in Diffusers",
+      "publisher": "Hugging Face",
+      "url": "https://huggingface.co/blog/flux-3",
+      "date": "2026-10-15"
+     }
+    ]
+   }
   },
   {
    "rank": 16,
@@ -5099,15 +5409,15 @@
    "url_checks": {
     "https://aws.amazon.com/about-aws/whats-new/2026/10/agentcore-memory-consumption-based-pricing": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://aws.amazon.com/blogs/machine-learning/build-self-improving-document-processing-using-amazon-bedrock-agentcore/": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [],
@@ -5559,7 +5869,7 @@
    "url_checks": {
     "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-social-sign-in/": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [],
@@ -5846,7 +6156,7 @@
    "url_checks": {
     "https://github.com/open-webui/open-webui/releases/tag/v0.12.2": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [],
@@ -6098,11 +6408,11 @@
    "url_checks": {
     "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://x.ai/news/grok-4-7": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [],
@@ -6390,11 +6700,11 @@
    "url_checks": {
     "https://blog.cloudflare.com/clef-faster-cheaper-multimodal": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     },
     "https://huggingface.co/Cloudflare/clef-omni": {
      "status": 200,
-     "checked_at": "2026-10-15T17:04:44.805859+00:00"
+     "checked_at": "2026-10-15T18:58:32.749171+00:00"
     }
    },
    "jp_reactions": [],

@@ -27,9 +27,17 @@
 
 ## Secret と期限
 
-- `COPILOT_GITHUB_TOKEN`: fine-grained PAT(Copilot Requests のみ。このリポジトリに限定)。期限の 1 週間前に更新する。
+- `COPILOT_GITHUB_TOKEN`: fine-grained PAT(Copilot Requests のみ。このリポジトリに限定、有効期限 30 日)。**期限が切れると digest が止まる**ので、期限の 1 週間前に再発行して Secret を更新する(watchdog の Issue でも気づける)。
 - `BRAVE_API_KEY`(任意)。
 - 値はログ・成果物に出さない。
+
+## digest(gh-aw)の運用メモ(実際に動かして分かったこと)
+
+- エージェントのサンドボックスには **fetch ツールも任意のシェルもない**。そのため、候補ページは実行前に `analyze.prefetch` が取得し(`.work/pages/`)、エージェントはそれだけを根拠にする。
+- 許可されるシェルは `./gate.sh`(単独で実行)のみ。`cd`・`&&`・python の直接実行は拒否される。JSON の編集は edit/write ツールで行う。
+- 変更があれば、エージェントが `create_pull_request` を呼ぶ(呼ばなければ PR は作られない)。何も変えなければ `noop`。
+- `auto-merge-digest` は digest の完了時(`workflow_run`、**ワークフロー名で指定**)と 3 時間ごとに動く。ボットが作った PR の `ci` は承認待ち(`action_required`)になることがあるが、自動マージは `ci` に依存しない(信頼コードで同じ検査を行う)。
+- ブランチ保護は force push・削除の禁止のみ(必須チェックにすると、ボットの自動マージが止まるため)。
 
 ## gh-aw の注意
 

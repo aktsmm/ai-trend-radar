@@ -59,6 +59,6 @@ python -m unittest discover -s tests         # 固定fixtureでの決定性・�
 
 - 「リリース」系(Claude Code, llama.cpp 等)は常にリリースがあるため上位に来やすい。14日分のスナップショットがたまるまで「上昇」は判定できない(baseline表示)。
 - hardware / research / github-trending は今週は条件を満たす候補が少なく0件(枠は他カテゴリで補充)。
-- 公式ソース未対応: Google DeepMind(HTML)、Meta AI(400)、DeepSeek(社内ITポリシーでブロックのため収集しない)。
+- 公式ソース未対応: Google DeepMind(HTML)、Meta AI(400)、DeepSeek(公式サイトは収集しない。GitHub Release のみ)。
 - ARTEX/talorys など小規模GitHub由来の品質は説明可能ルールのみで判定(人手確認が必要)。
 - 要約・日本語化・曖昧エンティティ判定のLLM工程は未実装(フェーズ2)。

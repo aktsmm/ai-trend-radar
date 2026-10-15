@@ -1,0 +1,10 @@
+AI Trend Radar - notices
+
+The code in this repository is MIT licensed (see LICENSE).
+
+Content: the digest text, infographics and briefs summarize information published by the original authors and vendors. Titles, product names,
+logos and quoted facts belong to their respective owners. Each entry links to its first-party sources. Numbers announced by vendors are reported
+as announced and are not independently verified. Summaries are AI drafts checked against first-party pages by automated validation; they can contain
+errors. Please report mistakes through GitHub Issues.
+
+No third-party images, fonts or icons are bundled. Fonts used at build time (Noto Sans CJK JP, SIL OFL) are installed by CI and are not redistributed.

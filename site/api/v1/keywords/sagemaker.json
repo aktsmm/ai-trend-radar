@@ -8,8 +8,8 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
- "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
+ "data_at": "2026-10-15T01:25:17.279945+00:00",
  "partial": true,
  "baseline": {
   "snapshots": 1,
@@ -26,14 +26,14 @@
   "agents",
   "tools"
  ],
- "rank": 16,
- "score": 35.7,
+ "rank": 14,
+ "score": 35.5,
  "summary": [
   "AWS が、Amazon SageMaker Studio に Google・GitHub・Apple のアカウントで新規登録できるソーシャルサインインを、2026-10-14 に発表した。",
   "登録後は、設定済みの Studio 環境にすぐ入れる。クレジットカードは不要で、AWS Free Tier の無料クレジットが付く。",
   "メールでメンバーを招待でき、招待された人も自分のソーシャルアカウントでサインインして、共有のモデルやノートブックを使える。"
  ],
- "published_at": "2026-10-14T17:00:00+00:00",
+ "published_at": "2026-10-14T22:00:00+00:00",
  "official_urls": [
   "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-social-sign-in/"
  ],

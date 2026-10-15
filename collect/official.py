@@ -31,7 +31,7 @@ FEEDS = [
     ("microsoft-research-blog", "Microsoft", "announcement", "https://www.microsoft.com/en-us/research/feed/"),
     ("apple-ml-research", "Apple", "announcement", "https://machinelearning.apple.com/rss.xml"),
     ("nvidia-genai-blog", "NVIDIA", "announcement", "https://blogs.nvidia.com/blog/category/generative-ai/feed/"),
-    # deepseek.com is blocked by the corporate IT policy (Windows Security notice, 2026-10-15): intentionally not collected.
+    # deepseek.com is intentionally not collected (only the official GitHub releases are).
     ("ollama-blog", "Ollama", "announcement", "https://ollama.com/blog/rss.xml"),
 ]
 AI_ONLY_FEEDS = {"meta-newsroom"}

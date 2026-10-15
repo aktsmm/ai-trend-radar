@@ -26,7 +26,7 @@
 | OK(HTML解析) | Anthropic news(RSSなし。`/news` 一覧の日付・タイトルを解析) |
 | OK(GitHub Releases) | ggml-org/llama.cpp, ollama/ollama, vllm-project/vllm, sgl-project/sglang, anthropics/claude-code, openai/codex, google-gemini/gemini-cli, QwenLM/Qwen3, huggingface/transformers, ml-explore/mlx, unslothai/unsloth, open-webui/open-webui, modelcontextprotocol/servers, microsoft/autogen, github/copilot-cli |
 | 失敗 | Google DeepMind blog(XMLではなくHTMLを返す→未対応), Meta AI blog(HTTP 400) |
-| 対象外 | Microsoft AI blog(HTTP 410 廃止)。**DeepSeek公式サイトは社内ITポリシーでブロックされるため収集しない**(GitHub Releaseの`deepseek-ai/DeepSeek-V3`のみ) |
+| 対象外 | Microsoft AI blog(HTTP 410 廃止)。**DeepSeek公式サイトは収集しない**(GitHub Releaseの`deepseek-ai/DeepSeek-V3`のみ) |
 
 ledger の最新値は `data/raw/_official_ledger.json`(CI artifact)。
 

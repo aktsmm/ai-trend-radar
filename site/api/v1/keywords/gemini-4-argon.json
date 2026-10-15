@@ -8,8 +8,8 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
- "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
+ "data_at": "2026-10-15T01:25:17.279945+00:00",
  "partial": true,
  "baseline": {
   "snapshots": 1,
@@ -20,20 +20,21 @@
  "keyword": "gemini-4-argon",
  "headline": "Gemini 4 Argon が一般提供(GA)",
  "vendor": "Google",
- "category": "model",
- "kind": "model",
+ "category": "research",
+ "kind": "paper",
  "tags": [
+  "research",
   "models",
   "tools"
  ],
  "rank": 9,
- "score": 48.5,
+ "score": 55.2,
  "summary": [
   "Google が、Gemini 4 ファミリー最初のモデル Gemini 4 Argon を 2026-10-13 に GA(一般提供)にした。",
   "入力と出力(思考を含む)を合わせて 1,048,576 トークンまで扱える。コーディング・金融・法務・サイバーセキュリティ・科学など、深い作業向けと説明されている。",
   "モデル ID は gemini-4-argon。Agent Studio で試せ、Google Gen AI SDK から呼び出せる。"
  ],
- "published_at": "2026-10-13T16:00:00+00:00",
+ "published_at": "2026-10-13T19:43:07+00:00",
  "official_urls": [
   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
   "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon"
@@ -224,14 +225,14 @@
    "name": "hackernews",
    "title": "Gemini 4 Argon",
    "url": "https://deepmind.google/models/gemini/",
-   "metric": 1431.0,
+   "metric": 1433.0,
    "metric_name": "points"
   },
   {
    "name": "hackernews",
    "title": "Gemini 4 Argon for Robotics",
    "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
-   "metric": 228.0,
+   "metric": 230.0,
    "metric_name": "points"
   },
   {
@@ -258,15 +259,15 @@
  ],
  "jp_reactions": [
   {
-   "site": "zenn",
-   "title": "AI を3社で比べるときにハマる所。Gemini 4 Argon が白紙を返す原因から、テストの間違いまで",
-   "url": "https://zenn.dev/gui/articles/ai-coding-bench-claude-codex-gemini",
-   "date": "2026-10-14"
-  },
-  {
    "site": "hatena",
    "title": "Google、待望の新AIモデル「Gemini 4 Argon」一般提供を開始 推論の継続力を強化 一部ベンチでトップに",
    "url": "https://www.itmedia.co.jp/news/article/2610/14/2000002265/",
+   "date": "2026-10-14"
+  },
+  {
+   "site": "zenn",
+   "title": "Gemini 4 Argonの日本語性能を検証してみた",
+   "url": "https://zenn.dev/algoartis/articles/19bb1705ea4b16",
    "date": "2026-10-14"
   },
   {

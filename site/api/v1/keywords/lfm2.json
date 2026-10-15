@@ -8,8 +8,8 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
- "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
+ "data_at": "2026-10-15T01:25:17.279945+00:00",
  "partial": true,
  "baseline": {
   "snapshots": 1,
@@ -27,7 +27,7 @@
   "local-llm"
  ],
  "rank": 7,
- "score": 53.3,
+ "score": 61.1,
  "summary": [
   "Liquid AI が、推論(考えてから答える)特化のオンデバイス向けモデル LFM2.5-24B-A2B を、2026-10-12 に Hugging Face で公開した。",
   "総パラメータは 24B だが、1 トークンあたりに動くのは 2.45B だけの MoE 構成。コンテキストは 131,072 トークンで、ツール呼び出しに対応する。",
@@ -216,7 +216,7 @@
    "name": "hf_models",
    "title": "LiquidAI/LFM2.5-24B-A2B",
    "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
-   "metric": 296.0,
+   "metric": 307.0,
    "metric_name": "trendingScore"
   },
   {
@@ -227,16 +227,16 @@
    "metric_name": "trendingScore"
   },
   {
+   "name": "hackernews",
+   "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
+   "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
+   "metric": 57.0,
+   "metric_name": "points"
+  },
+  {
    "name": "reddit_localllama",
    "title": "LiquidAI/LFM2.5-24B-A2B",
    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x52kco/liquidailfm2524ba2b/",
-   "metric": 0.0,
-   "metric_name": "rank"
-  },
-  {
-   "name": "reddit_ollama",
-   "title": "I tested LFM2.5-24B-A2B after all the Hype on X",
-   "url": "https://www.reddit.com/r/ollama/comments/1x5e98i/i_tested_lfm2524ba2b_after_all_the_hype_on_x/",
    "metric": 0.0,
    "metric_name": "rank"
   },

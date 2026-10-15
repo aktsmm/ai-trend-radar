@@ -55,6 +55,7 @@
 .theme .conf{font-size:11px;padding:1px 8px;border-radius:10px;background:#eef1f8;color:#445;margin-left:6px;font-weight:400}
 .theme ul{margin:4px 0;padding-left:18px} .theme .bg{background:#f0f4ff;border-radius:6px;padding:6px 10px;margin:6px 0}
 .theme .chips a{display:inline-block;margin:2px 6px 2px 0;font-size:12px}
+.demo-nav{background:#eef1f8;font-size:12px;padding:4px 0} .demo-nav a{margin-right:12px}
 footer.site-footer{font-size:12px;color:var(--muted);padding-bottom:32px} footer h2{font-size:14px;margin:16px 0 4px;color:var(--ink)}
   dialog{border:0;border-radius:10px;padding:0;max-width:96vw;background:#000}
   dialog::backdrop{background:#000b}

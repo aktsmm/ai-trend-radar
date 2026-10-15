@@ -173,8 +173,7 @@
     "id": "s1",
     "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
     "publisher": "OpenAI",
-    "url": "https://openai.com/index/oracle",
-    "date": "2026-10-08"
+    "url": "https://openai.com/index/oracle"
    },
    {
     "id": "s2",
@@ -1346,6 +1345,86 @@
     "publisher": "Niko1221(個人 OSS)",
     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1",
     "date": "2026-10-14"
+   }
+  ]
+ },
+ "nemotron3": {
+  "overview": {
+   "takeaway": "NVIDIA のオープンなマルチモーダルモデル。文書・画像・動画と推論を 1 つで扱える。",
+   "stat": {
+    "value": "120B",
+    "label": "MoE。1 トークンで 12B を使用"
+   },
+   "steps": [
+    "文書・画像・動画を入力",
+    "推論とツール利用",
+    "NeMo で追加学習"
+   ],
+   "changes": [
+    "文章用と画像用のモデルを分けずに済む",
+    "オープンなデータセットで追加学習できる"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "NVIDIA"
+    },
+    {
+     "k": "発表日",
+     "v": "2026-10-15"
+    },
+    {
+     "k": "構成",
+     "v": "120B MoE(12B 活用)"
+    },
+    {
+     "k": "入力",
+     "v": "テキスト・画像・文書・動画"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "文書や画像を扱うエージェントを作る開発者・企業",
+   "benefits": [
+    "1 GPU で他のオープンモデルの最大 5 倍のスループットと発表(NVIDIA 発表)",
+    "CharXiv(グラフ推論)で 80.8%(NVIDIA 発表の数字)"
+   ],
+   "how_to": [
+    "NVIDIA の技術ブログから技術レポートと cookbook を読む",
+    "NVIDIA NIM で最適化された配備を試す",
+    "NeMo で SFT・LoRA・強化学習を使い自社データで学習する"
+   ],
+   "caveats": [
+    "数字は NVIDIA と提携企業の発表。自社業務での効果は検証が必要"
+   ],
+   "terms": [
+    {
+     "t": "MoE",
+     "d": "複数の専門家のうち一部だけを使う構成"
+    },
+    {
+     "t": "SFT",
+     "d": "正解例を使った追加学習"
+    },
+    {
+     "t": "LoRA",
+     "d": "少ない計算で行う軽量な追加学習"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Nemotron 3.5 Super VL 発表ブログ",
+    "publisher": "NVIDIA",
+    "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/",
+    "date": "2026-10-15"
    }
   ]
  }

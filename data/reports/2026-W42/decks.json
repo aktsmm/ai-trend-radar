@@ -1427,5 +1427,169 @@
     "date": "2026-10-15"
    }
   ]
+ },
+ "muse-spark-open": {
+  "overview": {
+   "takeaway": "Meta のコーディング特化オープンウェイトモデル。100 万トークンの文脈で、プロジェクト全体を扱える。",
+   "stat": {
+    "value": "816B",
+    "label": "MoE。1 トークンで 42B を使用"
+   },
+   "steps": [
+    "コードベースを読む",
+    "計画してツールを使う",
+    "結果を見て修正"
+   ],
+   "changes": [
+    "1M トークンの文脈で数千ファイルを一度に扱う",
+    "音声・動画・画像・文書も理解する",
+    "NVFP4 版でメモリ使用量を抑える"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Meta"
+    },
+    {
+     "k": "構成",
+     "v": "816B MoE(42B 使用)"
+    },
+    {
+     "k": "文脈長",
+     "v": "100 万トークン"
+    },
+    {
+     "k": "紹介日",
+     "v": "2026-10-15"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "AI コーディングエージェントを自前で運用したい開発者・企業",
+   "benefits": [
+    "大規模なコードベースを分割せずに渡せる",
+    "GB300 NVL72 で GPU 1 基あたり最大 5 万トークン/秒(NVIDIA 発表)"
+   ],
+   "how_to": [
+    "Hugging Face から NVFP4 版の重みをダウンロードして試す",
+    "本番用途は NVIDIA NIM で単一コマンドの配備を試す"
+   ],
+   "caveats": [
+    "速度などの数字は NVIDIA の発表で、自社環境での検証が必要",
+    "816B の大型モデルで、手元の PC での実行は想定されていない"
+   ],
+   "terms": [
+    {
+     "t": "MoE",
+     "d": "複数の専門家のうち一部だけを使う構成"
+    },
+    {
+     "t": "NVFP4",
+     "d": "メモリを減らすための 4 ビットの数値形式"
+    },
+    {
+     "t": "コンテキスト長",
+     "d": "モデルが一度に扱える文章量"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Muse Spark Open on NVIDIA GB300 NVL72",
+    "publisher": "NVIDIA",
+    "url": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+    "date": "2026-10-15"
+   }
+  ]
+ },
+ "flux-3-image-klein": {
+  "overview": {
+   "takeaway": "Black Forest Labs の画像生成モデル。枠で配置を指定でき、Diffusers ですぐ使える。",
+   "stat": {
+    "value": "約 2 秒",
+    "label": "H100 で 1024×1024(蒸留版)"
+   },
+   "steps": [
+    "文章・参照画像を入力",
+    "枠で配置を指定",
+    "画像を生成"
+   ],
+   "changes": [
+    "1 つのモデルで画像生成と画像編集ができる",
+    "枠でどこに何を置くかを指定できる",
+    "FP8・NVFP4 版で小さめの GPU にも対応"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Black Forest Labs"
+    },
+    {
+     "k": "公開日",
+     "v": "2026-10-15"
+    },
+    {
+     "k": "版",
+     "v": "蒸留版とベース版"
+    },
+    {
+     "k": "使う場所",
+     "v": "Diffusers"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "画像生成を自分のアプリや制作に組み込みたい開発者・クリエイター",
+   "benefits": [
+    "配置を枠で指定でき、狙った構図に近づけやすい",
+    "複数の参照画像を組み合わせて編集できる",
+    "蒸留版は 16 ステップで速く生成できる"
+   ],
+   "how_to": [
+    "pip install -U diffusers transformers を実行する",
+    "ModularPipeline で flux-3-image-klein を読み込む",
+    "追加学習はベース版と LoRA スクリプトを使う"
+   ],
+   "caveats": [
+    "速度は H100 での記載で、手元の GPU では異なる",
+    "利用条件(ライセンス)はモデルカードで確認する"
+   ],
+   "terms": [
+    {
+     "t": "Diffusers",
+     "d": "画像生成モデルを動かす Hugging Face のライブラリ"
+    },
+    {
+     "t": "蒸留",
+     "d": "大きなモデルの性質を保ち、少ない手順で速く動かす手法"
+    },
+    {
+     "t": "LoRA",
+     "d": "少ない計算で行う軽量な追加学習"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Welcome FLUX.3 Image Klein in Diffusers",
+    "publisher": "Hugging Face",
+    "url": "https://huggingface.co/blog/flux-3",
+    "date": "2026-10-15"
+   }
+  ]
  }
 }

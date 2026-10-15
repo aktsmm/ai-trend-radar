@@ -574,5 +574,77 @@
    "official_url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/",
    "source_date": "2026-10-15"
   }
+ ],
+ "muse-spark-open": [
+  {
+   "title": "Muse Spark Open: 100 万トークンのコード用モデル",
+   "diagram_type": "infographic",
+   "icon": "chip",
+   "stat": {
+    "value": "816B",
+    "label": "MoE。1 トークンで 42B を使用(NVIDIA 発表)"
+   },
+   "steps": [
+    "コードベース全体を読む",
+    "計画してツールを使う",
+    "結果を見て自己修正"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "Meta のオープンウェイトのコーディング特化モデルを NVIDIA が 2026-10-15 に紹介した"
+    },
+    {
+     "h": "何が変わる",
+     "t": "100 万トークンの文脈で、数千ファイルのプロジェクトを分割せずに扱える"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "GB300 NVL72 で GPU 1 基あたり最大 5 万トークン/秒(NVIDIA 発表の数字)"
+    },
+    {
+     "h": "注意",
+     "t": "数字は発表のもの。816B の大型モデルで、自分の環境での検証が必要"
+    }
+   ],
+   "official_url": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+   "source_date": "2026-10-15"
+  }
+ ],
+ "flux-3-image-klein": [
+  {
+   "title": "FLUX.3 Image Klein: 枠で配置を指定できる画像生成",
+   "diagram_type": "infographic",
+   "icon": "image",
+   "stat": {
+    "value": "約 2 秒",
+    "label": "H100 で 1024×1024(Hugging Face の記載)"
+   },
+   "steps": [
+    "文章や参照画像を入力",
+    "枠で配置を指定",
+    "Diffusers で画像を生成"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "Black Forest Labs の画像生成モデルが 2026-10-15 に Diffusers で使えるようになった"
+    },
+    {
+     "h": "何が変わる",
+     "t": "1 つのモデルで画像生成と複数画像を使った編集ができ、枠で配置も指定できる"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "蒸留版は 16 ステップで速く、FP8・NVFP4 版は小さめの GPU 向け"
+    },
+    {
+     "h": "使い方",
+     "t": "pip install -U diffusers transformers のあと、ModularPipeline で読み込む"
+    }
+   ],
+   "official_url": "https://huggingface.co/blog/flux-3",
+   "source_date": "2026-10-15"
+  }
  ]
 }

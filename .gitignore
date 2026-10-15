@@ -7,3 +7,4 @@ build/
 site/assets/
 site/downloads/
 site/feed.xml
+site/api/

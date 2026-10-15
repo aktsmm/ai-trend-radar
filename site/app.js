@@ -4,6 +4,8 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":
 const $ = id => document.getElementById(id);
 const link = (u, label) => `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(label || u)}</a>`;
 const published = D.trends.filter(t => t.deck), cands = D.trends.filter(t => !t.deck);
+const ageDays = (Date.now() - Date.parse(D.last_successful_report_at)) / 86400000;
+if (ageDays > 9) { const w = document.createElement("p"); w.className = "stale"; w.setAttribute("role", "alert"); w.textContent = `注意: データの最終更新が ${Math.floor(ageDays)} 日前です。取得または更新が止まっている可能性があります(最新の状態は api/v1/health.json)。`; document.querySelector("main").prepend(w); }
 $("period").textContent = `対象期間 ${D.window.from} 〜 ${D.window.to}(${D.window.label}${D.window.partial ? "・集計途中" : ""}) / データ更新 ${D.last_successful_report_at.slice(0,16).replace("T"," ")} UTC` + (D.baseline.is_baseline ? ` / 蓄積 ${D.baseline.snapshots} 日分のため「今週の注目」表示` : "");
 
 $("weekly").innerHTML = `<a href="downloads/weekly-${D.window.label}.pdf" download>今週の全ブリーフ PDF(表紙・目次つき)</a><a href="downloads/weekly-${D.window.label}.pptx" download>今週の全ブリーフ PowerPoint</a>`;
@@ -64,11 +66,25 @@ function render() {
   const showAll = $("cand").checked || q || cat !== "all";
   const cl = cands.filter(t => inCat(t) && inQ(t));
   const rej = D.rejected_candidates || {};
+  const pend = (D.pending || []).filter(p => !q || p.keyword.toLowerCase().includes(q));
   $("candlead").textContent = `自動収集で上位に入ったものの、公式の一次情報での確認や掲載価値の判断が済んでいない、または見送った項目です(${cands.length}件)。内容は未確認で、要約は載せていません。`;
-  $("candlist").innerHTML = cl.length ? `<table class="cand"><thead><tr><th>順位</th><th>キーワード</th><th>カテゴリ</th><th>状態</th><th>一次ソース候補</th></tr></thead><tbody>${cl.map(t => `<tr><td>#${t.rank}</td><td>${esc(t.keyword)}</td><td>${esc(t.category)}</td><td>${rej[t.entity_id] ? "見送り: " + esc(rej[t.entity_id]) : "未確認(自動収集のみ)"}</td><td>${link(t.primary.url, t.primary.title.slice(0, 50))}</td></tr>`).join("")}</tbody></table>` : `<div class="empty">該当なし</div>`;
+  $("candlist").innerHTML = cl.length ? `<table class="cand"><thead><tr><th>順位</th><th>キーワード</th><th>カテゴリ</th><th>状態</th><th>一次ソース候補</th></tr></thead><tbody>${cl.map(t => `<tr><td>#${t.rank}</td><td>${esc(t.keyword)}</td><td>${esc(t.category)}</td><td>${rej[t.entity_id] ? "見送り: " + esc(rej[t.entity_id]) : "未調査(自動収集のみ・今週の digest で調査予定)"}</td><td>${link(t.primary.url, t.primary.title.slice(0, 50))}</td></tr>`).join("")}</tbody></table>` : `<div class="empty">該当なし</div>`;
+  if (pend.length) $("candlist").innerHTML += `<p class="lead">一次ソースの公開日を期間内に確認できず保留(${pend.length}件): ${pend.map(p => esc(p.keyword)).join(" / ")}</p>`;
   $("candsum").textContent = `観測候補(未掲載) ${cands.length}件` + (cl.length !== cands.length ? ` / 条件に一致 ${cl.length}件` : "");
   $("cands").open = !!showAll && (!!q || $("cand").checked);
 }
+const TH = D.themes || [], byId = Object.fromEntries(D.trends.map(t => [t.entity_id, t]));
+if (TH.length) {
+  $("themes").hidden = false;
+  $("themelist").innerHTML = TH.map(th => `<div class="theme"><h3>${esc(th.title)}<span class="conf">確度: ${{high:"高",medium:"中",low:"低"}[th.confidence]}</span></h3>
+    <div>${esc(th.summary)}</div>
+    <div class="bg"><strong>背景の見立て</strong><ul>${th.background.map(b => `<li>${esc(b)}</li>`).join("")}</ul></div>
+    <div><strong>根拠にした項目</strong><ul>${th.signals.map(s => `<li><a href="#k-${esc(s.entity)}">${esc((byId[s.entity] || {keyword: s.entity}).keyword)}</a>: ${esc(s.note)}</li>`).join("")}</ul></div>
+    <div class="chips">出典: ${th.refs.map((u, i) => link(u, `[${i + 1}]`)).join(" ")}</div></div>`).join("");
+}
+const hl = D.official_highlights || [];
+$("hlsum").textContent = `今週の公式発表(タイトルのみ) ${hl.length}件`;
+$("hllist").innerHTML = hl.length ? `<table class="cand"><thead><tr><th>日付</th><th>発表元</th><th>タイトル</th></tr></thead><tbody>${hl.map(x => `<tr><td>${esc(x.date)}</td><td>${esc(x.vendor)}</td><td>${link(x.url, x.title)}</td></tr>`).join("")}</tbody></table>` : `<div class="empty">該当なし</div>`;
 render();
 const st = D.source_status, ng = Object.keys(st).filter(k => st[k].ok === false);
 $("meta").textContent = `掲載 ${published.length} 件 / 観測候補 ${cands.length} 件 / 取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? `(取得できなかった: ${ng.join(", ")})` : "") + ` / 公開日が確認できず保留 ${D.pending.length} 件 / X 検索: ${D.x_integration.search && D.x_integration.search.ok ? "利用可" : "利用不可(ウォッチリストで補完)"}`;

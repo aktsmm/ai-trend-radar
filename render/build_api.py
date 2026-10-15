@@ -54,9 +54,12 @@ def main():
                                                           "verification": t["verification"], "mentions": t["sources"][:5], "jp_reactions": t.get("jp_reactions", [])})
     for cat in sorted({t["category"] for t in pub}):
         dump(API / "categories" / f"{cat}.json", {**base, "category": cat, "items": [i for i, t in zip(items, pub) if t["category"] == cat]})
+    dump(API / "themes.json", {**base, "note": "解釈(AI の見立て)。根拠となる項目と出典を signals / refs に示す", "items": data.get("themes", [])})
+    dump(API / "highlights.json", {**base, "items": data.get("official_highlights", [])})
     dump(API / "candidates.json", {**base, "items": [{"id": t["entity_id"], "keyword": t["keyword"], "category": t["category"], "rank": t["rank"],
-                                                     "status": "skipped" if t["entity_id"] in rej else "unverified", "reason": rej.get(t["entity_id"]),
-                                                     "primary_url": t["primary"]["url"]} for t in cand]})
+                                                     "status": "skipped" if t["entity_id"] in rej else "not_researched", "reason": rej.get(t["entity_id"]),
+                                                     "primary_url": t["primary"]["url"]} for t in cand],
+                                  "held_no_dated_source": [p["keyword"] for p in data.get("pending", [])]})
     st = data["source_status"]
     bad = sorted(k for k, v in st.items() if v.get("ok") is False)
     dump(API / "health.json", {**base, "sources": {"total": len(st), "ok": len(st) - len(bad), "failed": bad},
@@ -67,12 +70,20 @@ def main():
         **{k: base[k] for k in ("version", "snapshot_at", "data_at")}, "latest_week": week,
         "weeks": [{"week": w, "published": len(pub) if w == week else None, "url": f"api/v1/weeks/{w}.json" if w == week else None} for w in weeks],
         "endpoints": {"latest": "api/v1/latest.json", "week": "api/v1/weeks/{week}.json", "keyword": "api/v1/keywords/{id}.json",
-                      "category": "api/v1/categories/{category}.json", "candidates": "api/v1/candidates.json", "health": "api/v1/health.json"},
+                      "category": "api/v1/categories/{category}.json", "candidates": "api/v1/candidates.json", "highlights": "api/v1/highlights.json", "themes": "api/v1/themes.json", "health": "api/v1/health.json"},
         "downloads": {"pdf": "downloads/{id}.pdf", "pptx": "downloads/{id}.pptx", "weekly_pdf": f"downloads/weekly-{week}.pdf",
                       "weekly_pptx": f"downloads/weekly-{week}.pptx", "all": "downloads/trends.json"},
         "notes": ["読み取り専用の静的 JSON です。任意条件の検索 API はありません(静的ファイルのため)。",
                   "要約・図解・ブリーフは AI の下書きを一次情報と照合したものです。ベンダー発表の数字は独自には検証していません。",
                   "週が変わると latest.json は新しい週に切り替わります。過去週は weeks/<week>.json(データがある週のみ)。"]})
+    from xml.sax.saxutils import escape as x
+    base_url = "https://aktsmm.github.io/ai-trend-radar/"
+    ent = "".join(f"""<entry><id>tag:ai-trend-radar,{x(week)}:{x(t['entity_id'])}</id><title>{x(((t.get('slides') or [{}])[0].get('title') or t['keyword']))}</title>
+<link href="{base_url}index.html#k-{x(t['entity_id'])}"/><updated>{x(t['primary']['published_at'] or data['last_successful_report_at'])}</updated>
+<category term="{x(t['category'])}"/><summary>{x(' '.join(t['digest']['summary']))}</summary></entry>\n""" for t in pub)
+    (ROOT / "site" / "feed.xml").write_text(f"""<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><id>tag:ai-trend-radar,feed</id><title>AI Trend Radar {x(week)}</title><link rel="self" href="{base_url}feed.xml"/>
+<updated>{x(now)}</updated>\n{ent}</feed>\n""", encoding="utf-8")
     print("API ->", API, f"({len(items)} items)")
 
 

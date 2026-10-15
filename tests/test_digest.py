@@ -91,6 +91,39 @@ class GateTests(unittest.TestCase):
         self.assertTrue(G.check_batch(p, self.enr, self.window, None)[1])
 
 
+class ThemeGateTests(unittest.TestCase):
+    def setUp(self):
+        self.enr, self.dk = load("enrichment.json"), load("decks.json")
+        self.th = load("themes.json")
+
+    def test_committed_themes_pass(self):
+        self.assertEqual([], G.check_themes(self.th, self.enr, self.dk))
+
+    def test_unknown_entity_and_foreign_ref_are_rejected(self):
+        bad = copy.deepcopy(self.th)
+        bad[0]["entities"][0] = "no-such-entity"
+        self.assertTrue(G.check_themes(bad, self.enr, self.dk))
+        bad = copy.deepcopy(self.th)
+        bad[0]["refs"] = ["https://example.com/x"]
+        self.assertTrue(any("captured evidence" in e for e in G.check_themes(bad, self.enr, self.dk)))
+
+    def test_signals_must_match_entities_and_single_entity_theme_is_rejected(self):
+        bad = copy.deepcopy(self.th)
+        bad[1]["signals"].pop()
+        self.assertTrue(any("signals" in e for e in G.check_themes(bad, self.enr, self.dk)))
+        bad = copy.deepcopy(self.th)
+        bad[3]["entities"] = bad[3]["entities"][:1]
+        self.assertTrue(G.check_themes(bad, self.enr, self.dk))
+
+    def test_secret_like_and_markup_text_are_rejected(self):
+        bad = copy.deepcopy(self.th)
+        bad[0]["summary"] = "token = abcdefghijklmnop1234"
+        self.assertTrue(any("secret" in e for e in G.check_themes(bad, self.enr, self.dk)))
+        bad = copy.deepcopy(self.th)
+        bad[0]["background"][0] = "<script>alert(1)</script>"
+        self.assertTrue(any("HTML" in e for e in G.check_themes(bad, self.enr, self.dk)))
+
+
 class DenoiseTests(unittest.TestCase):
     def test_body_only_mentions_and_unrelated_x_posts_are_dropped(self):
         t = {"keyword": "Claude Code", "entity_id": "claude-code", "related": [],

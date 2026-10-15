@@ -23,6 +23,11 @@ def main():
             t.pop(k, None)
         t["slides"] = []
     apply_enrichment(d["trends"], d["window"]["label"])
+    rp = ROOT / "data" / "reports" / d["window"]["label"] / "report.json"
+    if rp.exists():
+        d["official_highlights"] = json.loads(rp.read_text(encoding="utf-8")).get("official_highlights", d.get("official_highlights", []))
+    tp = ROOT / "data" / "reports" / d["window"]["label"] / "themes.json"
+    d["themes"] = json.loads(tp.read_text(encoding="utf-8")) if tp.exists() else []
     d["rejected_candidates"] = json.loads((ROOT / "data" / "reports" / d["window"]["label"] / "rejected_candidates.json").read_text(encoding="utf-8")) \
         if (ROOT / "data" / "reports" / d["window"]["label"] / "rejected_candidates.json").exists() else {}
     a = write_if_changed(p, json.dumps(d, ensure_ascii=False, indent=1))

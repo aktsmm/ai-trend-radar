@@ -31,9 +31,14 @@
 - `BRAVE_API_KEY`(任意)。
 - 値はログ・成果物に出さない。
 
+## gh-aw の注意
+
+- gh-aw は公開プレビューで、コンパイラのバージョンが拒否されることがある(`Blocked compile-agentic version` など)。その場合は `gh extension upgrade gh-aw` → `gh aw compile digest --strict` で `digest.lock.yml` を再生成し、`.github/aw/actions-lock.json` を更新する。
+- AI の使い過ぎは `digest.md` の `max-ai-credits` / `max-daily-ai-credits` で上限をかけている。上限に達したら実行は止まり、次の週次で再開する。
+
 ## 自動マージの安全境界
 
-- PR から取り込むのは `data/reports/<週>/{enrichment,digest,slides,decks,rejected_candidates}.json` のみ。他のパスが 1 つでもあれば取り込まない。
+- PR から取り込むのは `data/reports/<週>/{enrichment,digest,slides,decks,themes,rejected_candidates}.json` のみ。他のパスが 1 つでもあれば取り込まない。
 - `data/trends.json` と `site/data.js` は信頼せず、信頼コードで再生成して PR の内容と一致することを要求する。
 - `--match-head-commit` で、検証後に PR が更新された場合はマージしない。
 - ゲートは形式・出典・日付の整合までで、本文の事実誤りは検出できない。サイトに「AI の下書きを一次情報と照合」の注意書きを常時表示し、誤りは GitHub Issue で受け付ける。

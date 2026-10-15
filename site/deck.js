@@ -53,8 +53,14 @@
       <div class="cv-note">各キーワード 2 枚(概要 / 影響・使い方)。内容は公式の一次情報で確認したもので、要約は AI の下書きを照合して掲載しています。ベンダーが発表した数字は独自には検証していません。</div></div>`;
   }
   function toc(D, list) {
-    return `<div class="dslide toc"><div class="d-head"><h1>目次</h1></div><div class="toc-body">${list.map((t, i) => `<div class="toc-row"><span class="toc-no">${i + 1}</span><span class="toc-kw">${esc(t.keyword)}</span><span class="d-chip alt">${esc(t.category)}</span><span class="toc-tk">${esc((t.slides[0] || {}).title || t.deck.overview.takeaway)}</span><span class="toc-pg">p.${3 + i * 2}</span></div>`).join("")}</div></div>`;
+    return `<div class="dslide toc"><div class="d-head"><h1>目次</h1></div><div class="toc-body">${list.map((t, i) => `<div class="toc-row"><span class="toc-no">${i + 1}</span><span class="toc-kw">${esc(t.keyword)}</span><span class="d-chip alt">${esc(t.category)}</span><span class="toc-tk">${esc((t.slides[0] || {}).title || t.deck.overview.takeaway)}</span><span class="toc-pg">p.${3 + (D.themes && D.themes.length ? 1 : 0) + i * 2}</span></div>`).join("")}</div></div>`;
   }
-  window.renderWeekly = (D, list) => cover(D, list.length) + toc(D, list) + list.map(t => renderDeck(t, 0) + renderDeck(t, 1)).join("");
+  function themes(D) {
+    const th = D.themes || [];
+    if (!th.length) return "";
+    const conf = { high: "確度 高", medium: "確度 中", low: "確度 低" };
+    return `<div class="dslide toc"><div class="d-head"><h1>今週のテーマ(共通する背景の見立て)</h1></div><div class="th-body">${th.map(x => `<div class="th-card"><h2>${esc(x.title)} <span>${conf[x.confidence]}</span></h2><p>${esc(x.summary)}</p><p class="bg">${esc(x.background[0])}</p><p class="ent">${x.entities.map(e => esc(((D.trends.find(t => t.entity_id === e)) || { keyword: e }).keyword)).join(" ・ ")}</p></div>`).join("")}</div><div class="d-foot"><div class="d-src">AI による解釈です(事実ではありません)。根拠と出典は各テーマの JSON(api/v1/themes.json)に記載しています。</div></div></div>`;
+  }
+  window.renderWeekly = (D, list) => cover(D, list.length) + toc(D, list) + themes(D) + list.map(t => renderDeck(t, 0) + renderDeck(t, 1)).join("");
   window.renderDeck = (t, n) => (n === 0 ? slide1(t) : slide2(t));
 })();

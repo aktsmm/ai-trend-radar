@@ -14,6 +14,7 @@ Without --proposal the committed data/reports/<week> files are checked. --base e
 """
 import argparse
 import json
+import re
 import sys
 from datetime import date, timedelta
 from pathlib import Path
@@ -24,6 +25,21 @@ ROOT = Path(__file__).resolve().parent.parent
 SCHEMA = json.loads((ROOT / "schema" / "trend.schema.json").read_text(encoding="utf-8"))
 MAX_CHANGED_ENTITIES = 6
 FILES = {"digest": "digest.json", "slides": "slides.json", "decks": "decks.json"}
+
+
+SECRET_RE = re.compile(r"(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|xox[bp]-[A-Za-z0-9-]{10,}|"
+                       r"-----BEGIN [A-Z ]*PRIVATE KEY-----|(?i:api[_-]?key|secret|password|token)\s*[:=]\s*[A-Za-z0-9/+_-]{16,})")
+HTML_RE = re.compile(r"<\s*(script|iframe|img|object|embed|style|link)\b|javascript:", re.I)
+
+
+def _text_problems(eid, obj):
+    blob = json.dumps(obj, ensure_ascii=False)
+    out = []
+    if SECRET_RE.search(blob):
+        out.append(f"{eid}: secret-like string in generated text (never publish)")
+    if HTML_RE.search(blob):
+        out.append(f"{eid}: HTML / script markup in generated text")
+    return out
 
 
 def _validator(name):
@@ -70,7 +86,7 @@ def check_entity(eid, digest, slides, deck, enrichment, window):
     if not ent or ent["verification_status"] == "unverified":
         return [f"{eid}: no verified enrichment record (generation requires a verified entity)"]
     idx = evidence_index(ent)
-    errs = []
+    errs = _text_problems(eid, [digest, slides, deck])
     if digest is None:
         errs.append(f"{eid}: digest missing")
     else:
@@ -98,6 +114,36 @@ def check_entity(eid, digest, slides, deck, enrichment, window):
                 errs.append(f"{eid} deck: source {s['url']} is neither an official URL nor captured evidence")
             elif s.get("date"):
                 errs += _date_ok(s["date"], s["url"], idx, window, f"{eid} deck")
+    return errs
+
+
+def check_themes(themes, enrichment, decks):
+    """themes: list. Every theme must cite >=2 published entities, one signal per cited entity, and only URLs captured as evidence for those entities."""
+    errs = []
+    if len(themes) > 4:
+        errs.append("themes: at most 4 themes per week")
+    seen = set()
+    for th in themes:
+        who = f"theme {th.get('id', '?')}"
+        errs += [f"{who}: {e.message}" for e in _validator("theme").iter_errors(th)]
+        errs += _text_problems(who, th)
+        if th.get("id") in seen:
+            errs.append(f"{who}: duplicate id")
+        seen.add(th.get("id"))
+        ents = th.get("entities", [])
+        for e in ents:
+            if e not in decks or e not in enrichment["entities"]:
+                errs.append(f"{who}: entity {e} is not a published, verified entity")
+        sig = {s.get("entity") for s in th.get("signals", [])}
+        if sig != set(ents):
+            errs.append(f"{who}: signals must cover exactly the listed entities (missing {sorted(set(ents) - sig)}, extra {sorted(sig - set(ents))})")
+        allowed = set()
+        for e in ents:
+            if e in enrichment["entities"]:
+                allowed |= set(evidence_index(enrichment["entities"][e]))
+        for u in th.get("refs", []):
+            if u not in allowed:
+                errs.append(f"{who}: ref {u} is not captured evidence of the listed entities")
     return errs
 
 
@@ -139,6 +185,9 @@ def main(argv=None):
         return 2
     current = load_bundle(a.base, missing_ok=True) if a.base else None
     ok, problems = check_batch(proposal, enr, window, current)
+    tp = Path(a.proposal or wk) / "themes.json"
+    if tp.exists():
+        problems += check_themes(json.loads(tp.read_text(encoding="utf-8")), enr, proposal["decks"])
     for p in problems:
         print("REJECT", p, file=sys.stderr)
     print(f"accepted {len(ok)} entities; {len(problems)} problem(s)")

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>用語・基礎 - AI Trend Radar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html">AI Trend Radar</a>
+  <nav aria-label="メニュー"><a href="index.html">最新ダイジェスト</a><a href="glossary.html" aria-current="page">用語・基礎</a><a href="archive.html">アーカイブ</a><a href="api/v1/index.json">JSON API</a></nav>
+</div></header>
+<main class="wrap">
+  <p class="lead">ダイジェストに出てくる言葉を、初心者向けにまとめた用語集です。「基礎」と「仕組み」は定番の言葉、「項目」は各キーワードのブリーフで使った用語です。正確な仕様や数値は、各項目の公式 URL を確認してください。</p>
+  <div class="filters"><input id="q" type="search" placeholder="用語を検索" aria-label="用語を検索"> <select id="kind" aria-label="種類"><option value="">すべて</option><option>基礎</option><option>仕組み</option><option>項目</option></select></div>
+  <div id="list" aria-live="polite">読み込み中…</div>
+</main>
+<script>
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  let items = [];
+  function draw() {
+    const q = document.getElementById("q").value.trim().toLowerCase(), k = document.getElementById("kind").value;
+    const v = items.filter(i => (!k || i.kind === k) && (!q || (i.term + i.short + i.explain).toLowerCase().includes(q)));
+    document.getElementById("list").innerHTML = v.length ? v.map(i => `<details class="ev"><summary><b>${esc(i.term)}</b> <small>(${esc(i.kind)})</small> — ${esc(i.short)}</summary><p>${esc(i.explain)}</p>${i.appears_in.length ? `<p class="lead">登場: ${[...new Map(i.appears_in.map(a => [a.id, a])).values()].map(a => `<a href="${a.week === window.LATEST ? "" : "w/" + esc(a.week) + "/"}index.html#k-${esc(a.id)}">${esc(a.keyword)}</a>`).join(" / ")}</p>` : ""}</details>`).join("") : "該当する用語がありません。";
+  }
+  fetch("api/v1/glossary.json").then(r => r.json()).then(d => { window.LATEST = d.week; items = d.items; draw(); })
+    .catch(() => { document.getElementById("list").textContent = "api/v1/glossary.json を読み込めませんでした(file:// の場合は簡易サーバーで開いてください)。"; });
+  document.getElementById("q").addEventListener("input", draw);
+  document.getElementById("kind").addEventListener("change", draw);
+</script>
+</body>
+</html>

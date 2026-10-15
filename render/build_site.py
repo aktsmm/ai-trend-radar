@@ -30,7 +30,7 @@ def data_js(data):
 def week_index_html(label):
     """The week page is the normal index with relative paths re-pointed to the site root (data.js / assets / downloads stay local)."""
     t = (SITE / "index.html").read_text(encoding="utf-8")
-    for a, b in (('href="style.css"', 'href="../../style.css"'), ('src="app.js"', 'src="../../app.js"'), ('src="download.js"', 'src="../../download.js"'), ('href="archive.html"', 'href="../../archive.html"'),
+    for a, b in (('href="style.css"', 'href="../../style.css"'), ('src="app.js"', 'src="../../app.js"'), ('src="download.js"', 'src="../../download.js"'), ('href="archive.html"', 'href="../../archive.html"'), ('href="glossary.html"', 'href="../../glossary.html"'),
                  ('href="api/v1/index.json"', 'href="../../api/v1/index.json"'), ('href="feed.xml"', 'href="../../feed.xml"'), ('<a class="brand" href="#top">', '<a class="brand" href="../../index.html">')):
         t = t.replace(a, b)
     t = t.replace('<main class="wrap" id="top">', f'<main class="wrap" id="top">\n  <p class="stale" role="note">過去の週({label})のダイジェストです。<a href="../../index.html">最新の週へ</a> / <a href="../../archive.html">アーカイブ</a></p>', 1)

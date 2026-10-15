@@ -8,8 +8,8 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
- "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
+ "data_at": "2026-10-15T01:25:17.279945+00:00",
  "partial": true,
  "baseline": {
   "snapshots": 1,
@@ -26,8 +26,8 @@
   "models",
   "local-llm"
  ],
- "rank": 17,
- "score": 35.5,
+ "rank": 19,
+ "score": 31.6,
  "summary": [
   "Cloudflare が、音声・動画・画像・テキストを入力できるオープンウェイトの決定モデル Clef-omni を、2026-10-09 に公開した。",
   "文章を生成せず、状態とスキーマ(型付きの質問)を受け取り、各質問の選択肢ごとの確率を1回の推論で返す。",
@@ -223,22 +223,15 @@
    "name": "hf_models",
    "title": "Cloudflare/clef",
    "url": "https://huggingface.co/Cloudflare/clef",
-   "metric": 296.0,
+   "metric": 288.0,
    "metric_name": "trendingScore"
   },
   {
    "name": "hf_models",
    "title": "Cloudflare/clef-flash",
    "url": "https://huggingface.co/Cloudflare/clef-flash",
-   "metric": 138.0,
+   "metric": 134.0,
    "metric_name": "trendingScore"
-  },
-  {
-   "name": "reddit_ollama",
-   "title": "Web browsing was implemented using only the **Clef-Flash 9B decision model**, running locally.",
-   "url": "https://www.reddit.com/r/ollama/comments/1x3buc0/web_browsing_was_implemented_using_only_the/",
-   "metric": 0.0,
-   "metric_name": "rank"
   },
   {
    "name": "ollama",

@@ -8,8 +8,8 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
- "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
+ "data_at": "2026-10-15T01:25:17.279945+00:00",
  "partial": true,
  "baseline": {
   "snapshots": 1,
@@ -27,7 +27,7 @@
   "tools"
  ],
  "rank": 2,
- "score": 97.9,
+ "score": 98.0,
  "summary": [
   "OpenAI のコーディングエージェント Codex の大規模な企業導入事例が、2026-10-08 に OpenAI から公開された。",
   "Oracle では Codex を 9.5 万人超、ChatGPT を 13 万人が利用し、採用の市場調査にかかる時間が 98% 減ったと紹介された(いずれも OpenAI の発表の数字)。",

@@ -1,0 +1,58 @@
+{
+ "version": 1,
+ "week": "2026-W42",
+ "window": {
+  "from": "2026-10-08",
+  "to": "2026-10-15",
+  "label": "2026-W42",
+  "partial": true,
+  "tz": "JST, [start, end)"
+ },
+ "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
+ "data_at": "2026-10-15T01:25:17.279945+00:00",
+ "partial": true,
+ "baseline": {
+  "snapshots": 1,
+  "is_baseline": true,
+  "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
+ },
+ "category": "research",
+ "items": [
+  {
+   "id": "gemini-4-argon",
+   "keyword": "gemini-4-argon",
+   "headline": "Gemini 4 Argon が一般提供(GA)",
+   "vendor": "Google",
+   "category": "research",
+   "kind": "paper",
+   "tags": [
+    "research",
+    "models",
+    "tools"
+   ],
+   "rank": 9,
+   "score": 55.2,
+   "summary": [
+    "Google が、Gemini 4 ファミリー最初のモデル Gemini 4 Argon を 2026-10-13 に GA(一般提供)にした。",
+    "入力と出力(思考を含む)を合わせて 1,048,576 トークンまで扱える。コーディング・金融・法務・サイバーセキュリティ・科学など、深い作業向けと説明されている。",
+    "モデル ID は gemini-4-argon。Agent Studio で試せ、Google Gen AI SDK から呼び出せる。"
+   ],
+   "published_at": "2026-10-13T19:43:07+00:00",
+   "official_urls": [
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon"
+   ],
+   "verification": {
+    "status": "verified",
+    "checked_at": "2026-10-15T07:40:00+09:00"
+   },
+   "urls": {
+    "self": "api/v1/keywords/gemini-4-argon.json",
+    "infographic": "assets/slides/gemini-4-argon.png",
+    "pdf": "downloads/gemini-4-argon.pdf",
+    "pptx": "downloads/gemini-4-argon.pptx",
+    "page": "index.html#k-gemini-4-argon"
+   }
+  }
+ ]
+}

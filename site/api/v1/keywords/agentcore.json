@@ -8,8 +8,8 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
- "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
+ "data_at": "2026-10-15T01:25:17.279945+00:00",
  "partial": true,
  "baseline": {
   "snapshots": 1,
@@ -26,8 +26,8 @@
   "agents",
   "tools"
  ],
- "rank": 20,
- "score": 32.5,
+ "rank": 17,
+ "score": 32.4,
  "summary": [
   "AWS が、Amazon Bedrock AgentCore の Memory で、短期メモリの料金を 1 イベント定額から従量課金に変えた。発表は 2026-10-12。",
   "料金は、取り込みが 1GB あたり $1.00、取得が $0.20、保存が 1GB・月あたり $0.10(いずれも AWS の発表)。",

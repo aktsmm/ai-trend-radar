@@ -8,8 +8,8 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
- "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
+ "data_at": "2026-10-15T01:25:17.279945+00:00",
  "partial": true,
  "baseline": {
   "snapshots": 1,
@@ -26,8 +26,8 @@
   "local-llm",
   "tools"
  ],
- "rank": 3,
- "score": 94.4,
+ "rank": 4,
+ "score": 82.1,
  "summary": [
   "Ollama が、Fly.io の Sprites から Ollama Cloud のモデルを使える連携を 2026-10-13 に発表した。",
   "Sprite は、ディスクが残る完全な Linux 仮想マシンのサンドボックス。Claude Code・Codex・Gemini CLI などを最初から動かせ、コマンドの実行を安全に隔離できる。",
@@ -208,20 +208,6 @@
    "metric_name": "rank"
   },
   {
-   "name": "reddit_ollama",
-   "title": "Ollama restricted my account after I complained about API issues — $10,000 invested, 6+ projects at risk",
-   "url": "https://www.reddit.com/r/ollama/comments/1x5nk6u/ollama_restricted_my_account_after_i_complained/",
-   "metric": 0.0,
-   "metric_name": "rank"
-  },
-  {
-   "name": "reddit_ollama",
-   "title": "I built EpochGo: A 100% offline, local-first multi-agent AutoML platform powered by Ollama (Qwen2.5-Coder:7B) and Scikit",
-   "url": "https://www.reddit.com/r/ollama/comments/1x3kqu5/i_built_epochgo_a_100_offline_localfirst/",
-   "metric": 0.0,
-   "metric_name": "rank"
-  },
-  {
    "name": "devto",
    "title": "Run a local coding agent with Ollama + Qwen 3 using OpenPilot",
    "url": "https://dev.to/openpilot/run-a-local-coding-agent-with-ollama-qwen-3-using-openpilot-3j8n",
@@ -234,6 +220,20 @@
    "url": "https://dev.to/munimv2/your-local-ollama-has-no-api-key-heres-how-to-require-one-caddy-or-nginx-and-still-use-open-322g",
    "metric": 1.0,
    "metric_name": "reactions"
+  },
+  {
+   "name": "pypi",
+   "title": "ollama",
+   "url": "https://pypi.org/project/ollama/",
+   "metric": 2940647.0,
+   "metric_name": "downloads_week"
+  },
+  {
+   "name": "bluesky",
+   "title": "It runs on a Hermes server with Ollama as the backend, so it's totally private. It maintains a simple text file where it",
+   "url": "https://bsky.app/profile/anderspucknielsen.dk/post/3mxjppmnths2l",
+   "metric": 50.0,
+   "metric_name": "likes+2*reposts"
   }
  ],
  "jp_reactions": [

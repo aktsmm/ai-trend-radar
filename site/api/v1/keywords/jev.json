@@ -8,8 +8,8 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
- "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
+ "data_at": "2026-10-15T01:25:17.279945+00:00",
  "partial": true,
  "baseline": {
   "snapshots": 1,
@@ -26,7 +26,7 @@
   "models"
  ],
  "rank": 13,
- "score": 40.6,
+ "score": 39.3,
  "summary": [
   "Jev は TypeSafe AI の System One モデル。文章ではなく、ソフトウェアがそのまま使える型付きの判断と確信度を API(POST /v1/systemone)で返す、チャットではない新種のモデル。",
   "10/14 に公式ブログで Jev 1.14.0(jev-preview)を公開。画像入力、画像内の位置を返す新しい box 型、長い文脈を、本番非推奨の実験機能(danger zone ヘッダー)として加えた。",
@@ -246,20 +246,13 @@
    "name": "hf_spaces",
    "title": "multimodalart/jev-decision-index",
    "url": "https://huggingface.co/spaces/multimodalart/jev-decision-index",
-   "metric": 137.0,
+   "metric": 135.0,
    "metric_name": "trendingScore"
   },
   {
    "name": "reddit_localllama",
    "title": "Decision 3.0: open, multimodal decision models from 0.6B to 27B. Ranks #1 on both Jev Decision Index boards",
    "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x3th4p/decision_30_open_multimodal_decision_models_from/",
-   "metric": 0.0,
-   "metric_name": "rank"
-  },
-  {
-   "name": "reddit_ollama",
-   "title": "Time to clean up those coloring pages... Qwen3.8:27b-mlx, anyone using Semif or Laya (alternatives to Jev)?",
-   "url": "https://www.reddit.com/r/ollama/comments/1x4l3jo/time_to_clean_up_those_coloring_pages/",
    "metric": 0.0,
    "metric_name": "rank"
   },

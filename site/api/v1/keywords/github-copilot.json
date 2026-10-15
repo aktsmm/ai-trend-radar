@@ -8,8 +8,8 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
- "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
+ "data_at": "2026-10-15T01:25:17.279945+00:00",
  "partial": true,
  "baseline": {
   "snapshots": 1,
@@ -26,8 +26,8 @@
   "agents",
   "tools"
  ],
- "rank": 10,
- "score": 45.5,
+ "rank": 11,
+ "score": 45.3,
  "summary": [
   "GitHub が、Google の Gemini 4 Argon を GitHub Copilot で一般提供(GA)にした。公式 changelog は 2026-10-13 付け。",
   "複雑なコーディング・エージェント作業・推論向けのモデルで、初期テストでは Gemini の従来モデルより全てのコーディングベンチマークで多くの課題を解いたと説明されている(GitHub の発表)。",
@@ -229,6 +229,12 @@
   }
  ],
  "jp_reactions": [
+  {
+   "site": "qiita",
+   "title": "【GitHub日報】初登場ゼロ、rea累計24万超で8日連続トップ・常連6件入れ替わり — 2026-10-15",
+   "url": "https://qiita.com/Git_Dayori/items/3d26fb3a14484ca2ee6d",
+   "date": "2026-10-15"
+  },
   {
    "site": "zenn",
    "title": "Claude Code × GitHub Actions で“無人で回る”会社を作る（71日の実測ベース）",

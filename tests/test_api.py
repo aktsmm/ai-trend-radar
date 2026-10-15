@@ -13,7 +13,8 @@ PUB = [t for t in DATA["trends"] if t.get("deck")]
 
 
 def build_once():
-    if not (SITE / "api" / "v1" / "index.json").exists():
+    idx = SITE / "api" / "v1" / "index.json"
+    if not idx.exists() or idx.stat().st_mtime < (ROOT / "data" / "trends.json").stat().st_mtime:
         from render import build_site
         sys.argv = [sys.argv[0]]
         build_site.main()

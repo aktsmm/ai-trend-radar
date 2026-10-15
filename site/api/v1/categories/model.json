@@ -8,8 +8,8 @@
   "partial": true,
   "tz": "JST, [start, end)"
  },
- "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
- "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "snapshot_at": "2026-10-15T01:41:55.035443+00:00",
+ "data_at": "2026-10-15T01:25:17.279945+00:00",
  "partial": true,
  "baseline": {
   "snapshots": 1,
@@ -29,8 +29,8 @@
     "models",
     "local-llm"
    ],
-   "rank": 4,
-   "score": 89.5,
+   "rank": 3,
+   "score": 88.9,
    "summary": [
     "Alibaba の Qwen チームが、画像生成・画像編集モデル Qwen-Image-2.1 の高速版 Turbo を、2026-10-09 に Hugging Face で公開した。",
     "Turbo は 8 ステップで画像を生成する 7B のモデルで、元の Qwen-Image-2.1 と同じ 7B の設計を使う高速チェックポイントと説明されている。"
@@ -64,7 +64,7 @@
     "local-llm"
    ],
    "rank": 7,
-   "score": 53.3,
+   "score": 61.1,
    "summary": [
     "Liquid AI が、推論(考えてから答える)特化のオンデバイス向けモデル LFM2.5-24B-A2B を、2026-10-12 に Hugging Face で公開した。",
     "総パラメータは 24B だが、1 トークンあたりに動くのは 2.45B だけの MoE 構成。コンテキストは 131,072 トークンで、ツール呼び出しに対応する。",
@@ -88,41 +88,6 @@
    }
   },
   {
-   "id": "gemini-4-argon",
-   "keyword": "gemini-4-argon",
-   "headline": "Gemini 4 Argon が一般提供(GA)",
-   "vendor": "Google",
-   "category": "model",
-   "kind": "model",
-   "tags": [
-    "models",
-    "tools"
-   ],
-   "rank": 9,
-   "score": 48.5,
-   "summary": [
-    "Google が、Gemini 4 ファミリー最初のモデル Gemini 4 Argon を 2026-10-13 に GA(一般提供)にした。",
-    "入力と出力(思考を含む)を合わせて 1,048,576 トークンまで扱える。コーディング・金融・法務・サイバーセキュリティ・科学など、深い作業向けと説明されている。",
-    "モデル ID は gemini-4-argon。Agent Studio で試せ、Google Gen AI SDK から呼び出せる。"
-   ],
-   "published_at": "2026-10-13T16:00:00+00:00",
-   "official_urls": [
-    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-    "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon"
-   ],
-   "verification": {
-    "status": "verified",
-    "checked_at": "2026-10-15T07:40:00+09:00"
-   },
-   "urls": {
-    "self": "api/v1/keywords/gemini-4-argon.json",
-    "infographic": "assets/slides/gemini-4-argon.png",
-    "pdf": "downloads/gemini-4-argon.pdf",
-    "pptx": "downloads/gemini-4-argon.pptx",
-    "page": "index.html#k-gemini-4-argon"
-   }
-  },
-  {
    "id": "jev",
    "keyword": "JEV",
    "headline": "Jev 1.14.0:画像・box型・長文脈を追加",
@@ -133,7 +98,7 @@
     "models"
    ],
    "rank": 13,
-   "score": 40.6,
+   "score": 39.3,
    "summary": [
     "Jev は TypeSafe AI の System One モデル。文章ではなく、ソフトウェアがそのまま使える型付きの判断と確信度を API(POST /v1/systemone)で返す、チャットではない新種のモデル。",
     "10/14 に公式ブログで Jev 1.14.0(jev-preview)を公開。画像入力、画像内の位置を返す新しい box 型、長い文脈を、本番非推奨の実験機能(danger zone ヘッダー)として加えた。",
@@ -158,41 +123,6 @@
    }
   },
   {
-   "id": "clef",
-   "keyword": "clef",
-   "headline": "Cloudflare が Clef-omni を公開",
-   "vendor": null,
-   "category": "model",
-   "kind": "model",
-   "tags": [
-    "models",
-    "local-llm"
-   ],
-   "rank": 17,
-   "score": 35.5,
-   "summary": [
-    "Cloudflare が、音声・動画・画像・テキストを入力できるオープンウェイトの決定モデル Clef-omni を、2026-10-09 に公開した。",
-    "文章を生成せず、状態とスキーマ(型付きの質問)を受け取り、各質問の選択肢ごとの確率を1回の推論で返す。",
-    "Qwen3-Omni-30B-A3B-Instruct を土台にした 30B-A3B の MoE モデルで、Apache-2.0 で Hugging Face に置かれている。"
-   ],
-   "published_at": "2026-10-09T04:10:22+00:00",
-   "official_urls": [
-    "https://blog.cloudflare.com/clef-faster-cheaper-multimodal",
-    "https://huggingface.co/Cloudflare/clef-omni"
-   ],
-   "verification": {
-    "status": "verified",
-    "checked_at": "2026-10-15T09:30:00+09:00"
-   },
-   "urls": {
-    "self": "api/v1/keywords/clef.json",
-    "infographic": "assets/slides/clef.png",
-    "pdf": "downloads/clef.pdf",
-    "pptx": "downloads/clef.pptx",
-    "page": "index.html#k-clef"
-   }
-  },
-  {
    "id": "grok-4-7",
    "keyword": "Grok 4.7",
    "headline": "Grok 4.7 が Amazon Bedrock で利用可能に",
@@ -203,8 +133,8 @@
     "models",
     "tools"
    ],
-   "rank": 19,
-   "score": 32.7,
+   "rank": 16,
+   "score": 32.6,
    "summary": [
     "SpaceXAI の Grok 4.7 が、2026-10-13 に Amazon Bedrock で使えるようになったと、AWS が公式ブログで紹介した。",
     "AWS はこのモデルで道具を呼ぶエージェントを作り、3 つの課題を 72 回実行した。67 回が正答で、推論の強さを xhigh にすると 18 回すべて正答した。",
@@ -225,6 +155,41 @@
     "pdf": "downloads/grok-4-7.pdf",
     "pptx": "downloads/grok-4-7.pptx",
     "page": "index.html#k-grok-4-7"
+   }
+  },
+  {
+   "id": "clef",
+   "keyword": "clef",
+   "headline": "Cloudflare が Clef-omni を公開",
+   "vendor": null,
+   "category": "model",
+   "kind": "model",
+   "tags": [
+    "models",
+    "local-llm"
+   ],
+   "rank": 19,
+   "score": 31.6,
+   "summary": [
+    "Cloudflare が、音声・動画・画像・テキストを入力できるオープンウェイトの決定モデル Clef-omni を、2026-10-09 に公開した。",
+    "文章を生成せず、状態とスキーマ(型付きの質問)を受け取り、各質問の選択肢ごとの確率を1回の推論で返す。",
+    "Qwen3-Omni-30B-A3B-Instruct を土台にした 30B-A3B の MoE モデルで、Apache-2.0 で Hugging Face に置かれている。"
+   ],
+   "published_at": "2026-10-09T04:10:22+00:00",
+   "official_urls": [
+    "https://blog.cloudflare.com/clef-faster-cheaper-multimodal",
+    "https://huggingface.co/Cloudflare/clef-omni"
+   ],
+   "verification": {
+    "status": "verified",
+    "checked_at": "2026-10-15T09:30:00+09:00"
+   },
+   "urls": {
+    "self": "api/v1/keywords/clef.json",
+    "infographic": "assets/slides/clef.png",
+    "pdf": "downloads/clef.pdf",
+    "pptx": "downloads/clef.pptx",
+    "page": "index.html#k-clef"
    }
   }
  ]

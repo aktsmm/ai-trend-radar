@@ -65,10 +65,17 @@ def evidence_index(ent):
     return idx
 
 
+def _lo(window):
+    """Lower bound: the report window starts a week earlier for dates. A report that is regenerated later in the same week slides its rolling
+    window forward, and entries published earlier (pinned) must not fail because of that."""
+    y, m, d = map(int, window["from"].split("-"))
+    return (date(y, m, d) - timedelta(days=7)).isoformat()
+
+
 def _date_ok(d, url, idx, window, who):
     errs = []
-    if not (window["from"] <= d <= window["to"]):
-        errs.append(f"{who}: date {d} is outside the report window {window['from']}..{window['to']}")
+    if not (_lo(window) <= d <= window["to"]):
+        errs.append(f"{who}: date {d} is outside the report window {_lo(window)}..{window['to']}")
     known = idx.get(url)
     if not known:
         errs.append(f"{who}: date {d} has no captured publication date for {url} (omit the date)")

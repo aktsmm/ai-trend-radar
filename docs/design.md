@@ -89,6 +89,15 @@ flowchart LR
 - 本文の主張単位の出典対応(claim-level evidence)は未実装。現状はセクション単位の `refs`。
 - 公開(GitHub Pages)と Actions の自動実行は、オーナーの承認後に有効化する。
 
+## 9.1 週とアーカイブ
+
+- 週ごとのデータは `data/reports/<週>/`(report / enrichment / digest / slides / decks / themes / rejected)に残る。**消さない**。
+- ビルド(`render.build_site`)は、掲載のあった全ての週を、その週のデータで描画する。
+  - 最新週はサイトのルート(`index.html`、`assets/`、`downloads/`)。
+  - 過去週は `w/<週>/` に、同じ構成(`index.html`、`data.js`、`assets/`、`downloads/`)で残す。トップが入れ替わっても、前週の図解・PDF・PPTX は公開され続ける。
+- `archive.html` は `api/v1/index.json` の週の一覧から、各週のダイジェスト・JSON・週次 PDF/PPTX にリンクする。
+- 週が変わった直後(新週のブリーフがまだ 0 件)でも、新週のページは出る(掲載 0 件、観測候補と公式発表のみ)。前週へはアーカイブから行ける。
+
 ## 10. 目的との照合(幅広くトレンドを見ているか)
 
 目的は「AI のトレンドをまんべんなく見る」こと。週ごとに次を確認し、偏りがあれば収集か選定ルールを直す。

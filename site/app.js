@@ -5,7 +5,7 @@ const $ = id => document.getElementById(id);
 const link = (u, label) => `<a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(label || u)}</a>`;
 const published = D.trends.filter(t => t.deck), cands = D.trends.filter(t => !t.deck);
 const ageDays = (Date.now() - Date.parse(D.last_successful_report_at)) / 86400000;
-if (ageDays > 9) { const w = document.createElement("p"); w.className = "stale"; w.setAttribute("role", "alert"); w.textContent = `注意: データの最終更新が ${Math.floor(ageDays)} 日前です。取得または更新が止まっている可能性があります(最新の状態は api/v1/health.json)。`; document.querySelector("main").prepend(w); }
+if (ageDays > 9 && !location.pathname.includes("/w/")) { const w = document.createElement("p"); w.className = "stale"; w.setAttribute("role", "alert"); w.textContent = `注意: データの最終更新が ${Math.floor(ageDays)} 日前です。取得または更新が止まっている可能性があります(最新の状態は api/v1/health.json)。`; document.querySelector("main").prepend(w); }
 $("period").textContent = `対象期間 ${D.window.from} 〜 ${D.window.to}(${D.window.label}${D.window.partial ? "・集計途中" : ""}) / データ更新 ${D.last_successful_report_at.slice(0,16).replace("T"," ")} UTC` + (D.baseline.is_baseline ? ` / 蓄積 ${D.baseline.snapshots} 日分のため「今週の注目」表示` : "");
 
 $("weekly").innerHTML = `<a href="downloads/weekly-${D.window.label}.pdf" download>今週の全ブリーフ PDF(表紙・目次つき)</a><a href="downloads/weekly-${D.window.label}.pptx" download>今週の全ブリーフ PowerPoint</a>`;

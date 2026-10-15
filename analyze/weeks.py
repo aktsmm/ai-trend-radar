@@ -1,0 +1,48 @@
+"""Per-week data access for the archive: every week that has data/reports/<week>/report.json can be rebuilt with its own enrichment.
+
+week_data(label) returns the same shape as data/trends.json (report + verification + digest/slides/deck + themes + rejected candidates).
+The latest week is read from data/trends.json (the output of `python -m analyze.apply`); older weeks are re-derived from their report.json.
+"""
+import json
+
+from analyze.report import apply_enrichment
+from collect.common import ROOT
+
+REPORTS = ROOT / "data" / "reports"
+
+
+def latest_label():
+    return json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))["window"]["label"]
+
+
+def labels():
+    return sorted(p.name for p in REPORTS.iterdir() if (p / "report.json").exists())
+
+
+def week_data(label):
+    if label == latest_label():
+        return json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))
+    d = json.loads((REPORTS / label / "report.json").read_text(encoding="utf-8"))
+    for t in d["trends"]:
+        for k in ("digest", "deck"):
+            t.pop(k, None)
+        t["slides"] = []
+    apply_enrichment(d["trends"], label)
+    for name, key, default in (("themes.json", "themes", []), ("rejected_candidates.json", "rejected_candidates", {})):
+        p = REPORTS / label / name
+        d[key] = json.loads(p.read_text(encoding="utf-8")) if p.exists() else default
+    return d
+
+
+def published(data):
+    return [t for t in data["trends"] if t.get("deck")]
+
+
+def archive_weeks():
+    """[(label, data)] for the latest week and every older week that has at least one published item, oldest first."""
+    out, latest = [], latest_label()
+    for w in labels():
+        d = week_data(w)
+        if w == latest or published(d):
+            out.append((w, d))
+    return out

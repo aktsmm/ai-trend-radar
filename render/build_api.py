@@ -12,13 +12,14 @@ python -m render.build_api
 import json
 from datetime import datetime, timezone
 
+from analyze import weeks as W
 from collect.common import ROOT
 
 API = ROOT / "site" / "api" / "v1"
 VERSION = 1
 
 
-def light(t):
+def light(t, prefix="", self_url=True):
     eid = t["entity_id"]
     v = t.get("verification") or {}
     checked = max((c["retrieved_at"] for c in v.get("checks", [])), default=None)
@@ -27,8 +28,8 @@ def light(t):
         "category": t["category"], "kind": t["kind"], "tags": t["tags"], "rank": t["rank"], "score": t["score"],
         "summary": (t.get("digest") or {}).get("summary", []), "published_at": t["primary"]["published_at"],
         "official_urls": t["official_urls"], "verification": {"status": v.get("status", "unverified"), "checked_at": checked},
-        "urls": {"self": f"api/v1/keywords/{eid}.json", "infographic": f"assets/slides/{eid}.png",
-                 "pdf": f"downloads/{eid}.pdf", "pptx": f"downloads/{eid}.pptx", "page": f"index.html#k-{eid}"},
+        "urls": {**({"self": f"api/v1/keywords/{eid}.json"} if self_url else {}), "infographic": f"{prefix}assets/slides/{eid}.png",
+                 "pdf": f"{prefix}downloads/{eid}.pdf", "pptx": f"{prefix}downloads/{eid}.pptx", "page": f"{prefix}index.html#k-{eid}"},
     }
 
 
@@ -65,17 +66,32 @@ def main():
     dump(API / "health.json", {**base, "sources": {"total": len(st), "ok": len(st) - len(bad), "failed": bad},
                               "published": len(items), "candidates": len(cand), "pending_without_primary_date": len(data.get("pending", [])),
                               "x_search_ok": bool((data.get("x_integration") or {}).get("search", {}) and data["x_integration"]["search"].get("ok"))})
-    weeks = sorted(p.name for p in (ROOT / "data" / "reports").iterdir() if (p / "report.json").exists())
+    old = []
+    for w, d in W.archive_weeks():
+        if w == week:
+            continue
+        pw = [t for t in d["trends"] if t.get("deck")]
+        wb = {"version": VERSION, "week": w, "window": d["window"], "snapshot_at": now, "data_at": d["last_successful_report_at"],
+              "partial": False, "baseline": d["baseline"]}
+        dump(API / "weeks" / f"{w}.json", {**wb, "count": len(pw), "candidate_count": len(d["trends"]) - len(pw),
+                                           "items": [light(t, f"w/{w}/", False) for t in pw], "themes": d.get("themes", []),
+                                           "highlights": d.get("official_highlights", [])})
+        old.append((w, len(pw), d["window"]))
+    weeks_info = [{"week": w, "window": win, "published": n, "url": f"api/v1/weeks/{w}.json", "page": f"w/{w}/index.html",
+                   "weekly_pdf": f"w/{w}/downloads/weekly-{w}.pdf", "weekly_pptx": f"w/{w}/downloads/weekly-{w}.pptx"} for w, n, win in old]
+    weeks_info.append({"week": week, "window": data["window"], "published": len(pub), "url": f"api/v1/weeks/{week}.json", "page": "index.html",
+                       "weekly_pdf": f"downloads/weekly-{week}.pdf", "weekly_pptx": f"downloads/weekly-{week}.pptx"})
+    weeks_info.sort(key=lambda x: x["week"])
     dump(API / "index.json", {
         **{k: base[k] for k in ("version", "snapshot_at", "data_at")}, "latest_week": week,
-        "weeks": [{"week": w, "published": len(pub) if w == week else None, "url": f"api/v1/weeks/{w}.json" if w == week else None} for w in weeks],
+        "weeks": weeks_info,
         "endpoints": {"latest": "api/v1/latest.json", "week": "api/v1/weeks/{week}.json", "keyword": "api/v1/keywords/{id}.json",
                       "category": "api/v1/categories/{category}.json", "candidates": "api/v1/candidates.json", "highlights": "api/v1/highlights.json", "themes": "api/v1/themes.json", "health": "api/v1/health.json"},
         "downloads": {"pdf": "downloads/{id}.pdf", "pptx": "downloads/{id}.pptx", "weekly_pdf": f"downloads/weekly-{week}.pdf",
                       "weekly_pptx": f"downloads/weekly-{week}.pptx", "all": "downloads/trends.json"},
         "notes": ["読み取り専用の静的 JSON です。任意条件の検索 API はありません(静的ファイルのため)。",
                   "要約・図解・ブリーフは AI の下書きを一次情報と照合したものです。ベンダー発表の数字は独自には検証していません。",
-                  "週が変わると latest.json は新しい週に切り替わります。過去週は weeks/<week>.json(データがある週のみ)。"]})
+                  "週が変わると latest.json は新しい週に切り替わります。過去週は weeks/<week>.json と w/<week>/ に残ります(掲載のある週のみ)。"]})
     from xml.sax.saxutils import escape as x
     base_url = "https://aktsmm.github.io/ai-trend-radar/"
     ent = "".join(f"""<entry><id>tag:ai-trend-radar,{x(week)}:{x(t['entity_id'])}</id><title>{x(((t.get('slides') or [{}])[0].get('title') or t['keyword']))}</title>

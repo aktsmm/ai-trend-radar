@@ -31,6 +31,7 @@ jobs:
           rm -rf _site && mkdir -p _site
           cp site/index.html site/feed.xml site/archive.html site/style.css site/app.js site/data.js _site/
           cp -r site/assets site/downloads site/api _site/
+          [ -d site/w ] && cp -r site/w _site/ || true
           touch _site/.nojekyll
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with: { name: site, path: _site, retention-days: 14 }

@@ -53,8 +53,7 @@ tools:
     - "jq"
     - "head"
     - "grep"
-    - "python -c*"
-    - "python -m analyze.digest_gate*"
+    - "python -m analyze.digest_gate:*"
 steps:
   - uses: actions/checkout@v7.0.1
     with:

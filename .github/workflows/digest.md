@@ -126,6 +126,10 @@ details. Edit only the five files below under `data/reports/<week>/`; never touc
 
 Write `data/reports/<week>/themes.json`: 2-4 themes, each an INTERPRETATION of what several published items of this week have in common and the plausible background (a shared trend, a shared buyer need, a platform shift). Rules: >=2 published entities per theme; one `signals` entry per cited entity quoting a fact already in that entity's digest; `refs` only URLs already captured for those entities; give `confidence` honestly (two examples = `low`); mark opinion wording as 見立て; never state causes you cannot support from the cited items; no theme is better than a forced theme. Existing themes of the week may be revised, not deleted without reason. The gate (`check_themes`) enforces the structure.
 
+## Weekly glossary additions (after themes)
+
+Write `data/reports/<week>/glossary.json` (a JSON list, 0-6 entries; `[]` is fine): beginner-level definitions of basic technical terms that this week's published items rely on and that a newcomer may not know (e.g. 量子化, MoE, エージェント, コンテキスト長). Each entry has exactly `term`, `kind` (`基礎` or `仕組み`), `short` (<=40 chars, one-line meaning), `explain` (30-220 chars, plain Japanese: what it is, why it matters), `entity` (a published entity of the week that uses the term), `ref` (a URL captured as evidence of that entity). Only general, well-established definitions; no product-specific numbers or claims. Skip terms already in `data/glossary.json` or other weeks' glossary files (the gate rejects duplicates). Existing entries of the week may be revised.
+
 ## Content rules (the gate rejects violations)
 
 - Write only what you verified on a fetched first-party page. Never invent numbers, versions, dates, benefits. Expectations are marked 見込み. Vendor / case-study numbers say 発表の数字.

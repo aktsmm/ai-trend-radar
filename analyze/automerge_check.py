@@ -7,7 +7,7 @@ but never trusted (the merge job regenerates them with trusted code and requires
 import re
 import sys
 
-REPORT = re.compile(r"^data/reports/\d{4}-W\d{2}/(enrichment|digest|slides|decks|themes|rejected_candidates)\.json$")
+REPORT = re.compile(r"^data/reports/\d{4}-W\d{2}/(enrichment|digest|slides|decks|themes|glossary|rejected_candidates)\.json$")
 GENERATED = {"data/trends.json", "site/data.js"}
 
 

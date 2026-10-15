@@ -3,7 +3,7 @@ name: auto-merge-digest
 # No code from the PR is ever executed: only allowlisted JSON report files are taken from it, then the gate, tests and a full build run.
 on:
   workflow_run:
-    workflows: ["digest"]
+    workflows: ["AI Trend Radar — weekly brief drafting"]
     types: [completed]
   schedule:
     - cron: "47 */3 * * *"

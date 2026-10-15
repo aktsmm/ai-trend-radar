@@ -42,7 +42,7 @@ class ApiTests(unittest.TestCase):
             self.assertTrue((SITE / i["urls"]["infographic"]).exists())
             self.assertNotIn("pdf", i["urls"])
             self.assertNotIn("pptx", i["urls"])
-            self.assertTrue((SITE / "enc" / f"{i['id']}.json").exists(), i["id"])
+            self.assertTrue((SITE / "briefs" / f"{i['id']}.json").exists(), i["id"])
             self.assertTrue(i["headline"] and i["summary"] and i["official_urls"])
 
     def test_no_unverified_or_raw_fields_leak(self):
@@ -70,16 +70,12 @@ class SiteTests(unittest.TestCase):
                     continue
                 self.assertTrue((SITE / ref).exists(), f"{page}: {ref}")
 
-    def test_no_clear_text_briefs_are_published(self):
-        """Per-item / weekly PDF and PPTX, deck page images and the brief text must not be public; only encrypted blobs are."""
+    def test_briefs_exist_per_item_and_no_standalone_pdf_pptx_are_published(self):
         self.assertEqual([], [p.name for p in (SITE / "downloads").glob("*") if p.suffix in (".pdf", ".pptx")])
         self.assertFalse((SITE / "assets" / "decks").exists())
-        for t in PUB:
-            blob = (SITE / "enc" / f"{t['entity_id']}.json").read_text(encoding="utf-8")
-            self.assertNotIn(t["deck"]["overview"]["takeaway"], blob)
-            self.assertEqual({"v", "iter", "salt", "iv", "data"}, set(json.loads(blob)))
         ids = {t["entity_id"] for t in PUB}
-        self.assertEqual(ids, {p.stem for p in (SITE / "enc").glob("*.json")})
+        self.assertEqual(ids, {p.stem for p in (SITE / "briefs").glob("*.json")})
+        self.assertTrue((SITE / "template.pptx").exists())
 
 
 if __name__ == "__main__":

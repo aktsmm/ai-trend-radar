@@ -1,16 +1,9 @@
-// Gated download: decrypt the selected briefs with the password (WebCrypto), then build a PDF (JPEG pages) or an editable PPTX (slide XML merged into template.pptx).
-// No external libraries: PDF writer, ZIP reader/writer and AES-GCM decryption are implemented here.
+// Download: fetch the selected briefs, then build a PDF (JPEG pages) or an editable PPTX (slide XML merged into template.pptx).
+// No external libraries: PDF writer, ZIP reader/writer and no encryption.
 (function () {
   const enc = new TextEncoder(), dec = new TextDecoder();
   const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
   const cat = parts => { const n = parts.reduce((a, p) => a + p.length, 0), o = new Uint8Array(n); let i = 0; parts.forEach(p => { o.set(p, i); i += p.length; }); return o; };
-
-  async function decryptBlob(blob, password) {
-    const km = await crypto.subtle.importKey("raw", enc.encode(password), "PBKDF2", false, ["deriveKey"]);
-    const key = await crypto.subtle.deriveKey({ name: "PBKDF2", salt: b64(blob.salt), iterations: blob.iter, hash: "SHA-256" }, km, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
-    const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(blob.iv) }, key, b64(blob.data));  // throws on a wrong password
-    return JSON.parse(dec.decode(pt));
-  }
 
   // ---- PDF (each page = one JPEG, 960x540 pt = 16:9) ----
   function jpegSize(u) {
@@ -101,15 +94,15 @@
     setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 4000);
   }
 
-  // ids: selected entity ids in display order. Returns after the download starts; throws "wrong-password" on a bad password.
-  async function download(kind, ids, password, base, label) {
+  // ids: selected entity ids in display order. Returns after the download starts.
+  async function download(kind, ids, base, label) {
     const items = [];
     for (const id of ids) {
-      const r = await fetch(`${base}enc/${id}.json`); if (!r.ok) throw new Error("missing " + id);
-      try { items.push(await decryptBlob(await r.json(), password)); } catch (e) { throw new Error("wrong-password"); }
+      const r = await fetch(`${base}briefs/${id}.json`); if (!r.ok) throw new Error("missing " + id);
+      items.push(await r.json());
     }
     if (kind === "pdf") save(buildPdf(items.flatMap(i => i.pages.map(b64))), `ai-trend-radar-${label}.pdf`, "application/pdf");
     else save(await buildPptx(items.flatMap(i => i.slides), await (await fetch(base + "template.pptx")).arrayBuffer()), `ai-trend-radar-${label}.pptx`, "application/vnd.openxmlformats-officedocument.presentationml.presentation");
   }
-  window.BriefDownload = { download, decryptBlob, buildPdf, buildPptx };
+  window.BriefDownload = { download, buildPdf, buildPptx };
 })();

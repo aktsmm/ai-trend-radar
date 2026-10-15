@@ -493,6 +493,46 @@
      "retrieved_at": "2026-10-16T01:50:00+09:00"
     }
    ]
+  },
+  "muse-spark-open": {
+   "selection_reason": "Meta のオープンウェイトのコーディング特化モデル。NVIDIA 公式技術ブログが 2026-10-15 に公開され、複数ソースで言及がある。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "web_fetch",
+     "tool": "fetch",
+     "query": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+     "evidence_urls": [
+      "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/"
+     ],
+     "evidence_published_at": "2026-10-15T18:00:01Z",
+     "result": "816B の MoE(1 トークンで 42B を使用)、100 万トークンの文脈、音声・動画の理解、NVFP4 版の重み、GB300 NVL72 での速度(NVIDIA 発表の数字)を確認",
+     "retrieved_at": "2026-10-16T03:50:00+09:00"
+    }
+   ]
+  },
+  "flux-3-image-klein": {
+   "selection_reason": "Black Forest Labs の新しいオープン画像生成モデル。Hugging Face の公式ブログが 2026-10-15 に Diffusers 対応を紹介した。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://huggingface.co/blog/flux-3"
+   ],
+   "checks": [
+    {
+     "mcp_name": "web_fetch",
+     "tool": "fetch",
+     "query": "https://huggingface.co/blog/flux-3",
+     "evidence_urls": [
+      "https://huggingface.co/blog/flux-3"
+     ],
+     "evidence_published_at": "2026-10-15T00:00:00Z",
+     "result": "文章からの画像生成と複数参照画像の編集、枠で配置を指定するレイアウト制御、蒸留版は H100 で 1024×1024 を約 2 秒、FP8・NVFP4 版を確認",
+     "retrieved_at": "2026-10-16T03:50:00+09:00"
+    }
+   ]
   }
  },
  "url_checks": {

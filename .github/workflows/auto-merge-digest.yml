@@ -49,10 +49,12 @@ jobs:
             WEEK=$(python -c "import json;print(json.load(open('data/trends.json',encoding='utf-8'))['window']['label'])")
             mkdir -p .base; for f in digest slides decks; do git show "origin/$BASE:data/reports/$WEEK/$f.json" > ".base/$f.json" 2>/dev/null || echo '{}' > ".base/$f.json"; done
             validate() {
+              # reachability of every official / evidence URL is recorded by trusted code (the tests require url_checks for each URL)
+              python -m render.verify_urls --week "$WEEK" || return 1
               python -m analyze.digest_gate --week "$WEEK" --base .base || return 1
               python -m analyze.apply || return 1
               # trusted regeneration: apply ran on the BASE trends.json + the validated report files only
-              mkdir -p /tmp/trusted && cp data/trends.json site/data.js /tmp/trusted/
+              mkdir -p /tmp/trusted && cp data/trends.json site/data.js "data/reports/$WEEK/enrichment.json" /tmp/trusted/
               python -m render.build_all --offline || return 1
               python -m unittest discover -s tests || return 1
             }
@@ -62,9 +64,9 @@ jobs:
                 merged=$((merged+1))
                 # whatever generated files the PR carried are replaced by the trusted regeneration
                 git fetch -q origin "$BASE"; git reset -q --hard "origin/$BASE"
-                cp /tmp/trusted/trends.json data/trends.json; cp /tmp/trusted/data.js site/data.js
-                if ! git diff --quiet -- data/trends.json site/data.js; then
-                  git add data/trends.json site/data.js; git commit -q -m "digest: regenerate trends.json / data.js (trusted)"; git push -q origin "HEAD:$BASE"
+                cp /tmp/trusted/trends.json data/trends.json; cp /tmp/trusted/data.js site/data.js; cp /tmp/trusted/enrichment.json "data/reports/$WEEK/enrichment.json"
+                if ! git diff --quiet -- data/trends.json site/data.js "data/reports/$WEEK/enrichment.json"; then
+                  git add data/trends.json site/data.js "data/reports/$WEEK/enrichment.json"; git commit -q -m "digest: url_checks + regenerate trends.json / data.js (trusted)"; git push -q origin "HEAD:$BASE"
                 fi
               fi
             else

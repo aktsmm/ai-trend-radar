@@ -2,6 +2,8 @@ name: auto-merge-digest
 # Validates digest data PRs with TRUSTED code (the default branch) and merges them without human review.
 # No code from the PR is ever executed: only allowlisted JSON report files are taken from it, then the gate, tests and a full build run.
 on:
+  pull_request_target:   # runs the BASE workflow (never PR code); fires when the digest bot opens / updates its PR
+    types: [opened, reopened, synchronize, labeled]
   workflow_run:
     workflows: ["AI Trend Radar — weekly brief drafting"]
     types: [completed]

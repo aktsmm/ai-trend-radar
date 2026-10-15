@@ -1,0 +1,69 @@
+name: auto-merge-digest
+# Validates digest data PRs with TRUSTED code (the default branch) and merges them without human review.
+# No code from the PR is ever executed: only allowlisted JSON report files are taken from it, then the gate, tests and a full build run.
+on:
+  workflow_run:
+    workflows: ["digest"]
+    types: [completed]
+  schedule:
+    - cron: "47 */3 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+  issues: write
+concurrency:
+  group: data-write
+  cancel-in-progress: false
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with: { ref: "${{ github.event.repository.default_branch }}", fetch-depth: 0 }
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with: { python-version: "3.12", cache: pip }
+      - run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk
+      - name: Validate and merge eligible PRs
+        run: |
+          set -u
+          git config user.name github-actions; git config user.email github-actions@users.noreply.github.com
+          BASE="${{ github.event.repository.default_branch }}"
+          merged=0
+          for n in $(gh pr list --state open --label data --label automation --json number,author,isDraft --jq '.[] | select(.isDraft|not) | select(.author.login|test("^(app/)?github-actions(\\[bot\\])?$")) | .number'); do
+            echo "::group::PR #$n"
+            git reset -q --hard "origin/$BASE"; git clean -fdq
+            oid=$(gh pr view "$n" --json headRefOid --jq .headRefOid)
+            files=$(gh pr diff "$n" --name-only)
+            if ! take=$(printf '%s\n' "$files" | python -m analyze.automerge_check); then echo "skip #$n: files outside the allowlist"; echo "::endgroup::"; continue; fi
+            git fetch -q origin "pull/$n/head"
+            [ "$(git rev-parse FETCH_HEAD)" = "$oid" ] || { echo "skip #$n: head moved"; echo "::endgroup::"; continue; }
+            git checkout "$oid" -- $take
+            WEEK=$(python -c "import json;print(json.load(open('data/trends.json',encoding='utf-8'))['window']['label'])")
+            mkdir -p .base; for f in digest slides decks; do git show "origin/$BASE:data/reports/$WEEK/$f.json" > ".base/$f.json" 2>/dev/null || echo '{}' > ".base/$f.json"; done
+            validate() {
+              python -m analyze.digest_gate --week "$WEEK" --base .base || return 1
+              python -m analyze.apply || return 1
+              # generated files must equal what the PR contains (the PR cannot smuggle data through them)
+              git diff --quiet "$oid" -- data/trends.json site/data.js || { echo "generated files differ from the PR"; return 1; }
+              python -m render.build_all --offline || return 1
+              python -m unittest discover -s tests || return 1
+            }
+            validate && ok=1 || ok=0
+            if [ $ok = 1 ]; then
+              gh pr merge "$n" --squash --match-head-commit "$oid" && merged=$((merged+1))
+            else
+              gh pr comment "$n" --body "自動検証に失敗したためマージしませんでした(ログ: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)。" || true
+            fi
+            echo "::endgroup::"
+          done
+          echo "merged=$merged"
+          echo "MERGED=$merged" >> "$GITHUB_ENV"
+      - name: Publish (build + deploy when enabled) after a merge, or after any digest run (it may have produced only the weekly report)
+        if: env.MERGED != '0' || github.event_name == 'workflow_run'
+        run: gh workflow run pages.yml --ref "${{ github.event.repository.default_branch }}"

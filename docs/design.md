@@ -79,7 +79,7 @@ flowchart LR
 
 - 公式フィード: OpenAI・Google・DeepMind・NVIDIA・AWS・Microsoft・Hugging Face・Qwen・Anthropic・Mistral・Ollama・Meta(newsroom、AI のみ)・Google / Microsoft Research・Apple ML・各社 GitHub Releases。
 - 日本語の反応: Zenn・Qiita・はてなブックマークの公開 RSS(表示のみ、順位には使わない)。Yahoo!リアルタイム検索は公式 API がなく、規約上スクレイピングに適さないため収集しない。
-- 収集しない: DeepSeek 公式サイト(社内 IT ポリシーでブロック)。
+- 収集しない: DeepSeek 公式サイト(GitHub Release のみ収集)。
 - X: `/2/search` は上流障害で 404 が続いている。ウォッチリスト(12 アカウント)で補完し、数字は補助にとどめる。
 - Reddit は RSS、Bluesky は `api.bsky.app` を使う。
 

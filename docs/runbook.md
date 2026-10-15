@@ -1,0 +1,39 @@
+# 運用手順(runbook)
+
+全自動(人のレビューなし)で回るため、止まったときに何を見るかをまとめます。
+
+## 流れ
+
+1. `radar`(毎日 05:00 JST に収集・スナップショット。月曜 00:30 JST に週次レポート)→ コミット。
+2. 週次レポート後に `digest`(gh-aw)を起動。未処理の候補を調べ、JSON を作り、`digest_gate` を通し(失敗なら最大 5 回修正)、PR を作る。
+3. `auto-merge-digest` が、**信頼できるコード(既定ブランチ)** で許可リスト・ゲート・テスト・ビルドを検証して自動マージ。PR のコードは実行しない。
+4. `pages` がビルドして公開(`PAGES_ENABLED=true` のとき)。
+5. `watchdog`(6 時間ごと)が、止まった実行のキャンセル、pages の再実行、9 日成功がないときの Issue 作成を行う。
+
+## 症状別
+
+| 症状 | 見る場所 | 対処 |
+| --- | --- | --- |
+| サイトが更新されない | Actions: `pages` の最新実行 | 失敗ならログ確認 → `workflow_dispatch` で再実行。`PAGES_ENABLED` と Pages の設定(Source: GitHub Actions) |
+| 週次レポートが作られない | `radar` の最新実行、Issue「[watchdog]」 | 取得元の失敗は `api/v1/health.json` と `source_status`。再実行は `radar` を手動実行 |
+| digest の PR が来ない | `digest` の実行ログ、Issue「[digest] dropped candidates」 | Secret `COPILOT_GITHUB_TOKEN` の期限切れが最多。再発行して再実行 |
+| PR がマージされない | PR のコメント(自動検証の失敗)、`auto-merge-digest` のログ | ゲートの `REJECT` 行を確認。データ不備ならその実体を `rejected_candidates.json` に移すか手で直す |
+| 誤情報が載った | 該当キーワードの JSON | `data/reports/<週>/` から該当実体を削除(または `rejected_candidates.json` に移動)して push → 自動で再公開 |
+| 取得元が落ちている | `health.json`、サイトのフッター | 数日は放置してよい。恒久的ならフィードを `collect/official.py` から外す |
+
+## 巻き戻し
+
+誤った週次公開は、`git revert <merge commit>` を push すれば、`pages` が再ビルドして元に戻ります。
+
+## Secret と期限
+
+- `COPILOT_GITHUB_TOKEN`: fine-grained PAT(Copilot Requests のみ。このリポジトリに限定)。期限の 1 週間前に更新する。
+- `BRAVE_API_KEY`(任意)。
+- 値はログ・成果物に出さない。
+
+## 自動マージの安全境界
+
+- PR から取り込むのは `data/reports/<週>/{enrichment,digest,slides,decks,rejected_candidates}.json` のみ。他のパスが 1 つでもあれば取り込まない。
+- `data/trends.json` と `site/data.js` は信頼せず、信頼コードで再生成して PR の内容と一致することを要求する。
+- `--match-head-commit` で、検証後に PR が更新された場合はマージしない。
+- ゲートは形式・出典・日付の整合までで、本文の事実誤りは検出できない。サイトに「AI の下書きを一次情報と照合」の注意書きを常時表示し、誤りは GitHub Issue で受け付ける。

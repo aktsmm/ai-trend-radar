@@ -1,7 +1,6 @@
 ---
 description: Draft the weekly AI Trend Radar briefs (digest + one infographic + 2-slide deck) for researched candidates, validate them with the deterministic gate, and open a DRAFT pull request. Never auto-merged.
 on:
-  schedule: weekly on monday
   workflow_dispatch:
     inputs:
       week:
@@ -80,10 +79,14 @@ post-steps:
   - name: Rebuild trends.json / site data from enrichment
     run: python -m analyze.apply
 safe-outputs:
+  create-issue:
+    title-prefix: "[digest] "
+    labels: [automation]
+    max: 1
   create-pull-request:
     title-prefix: "[digest] "
-    labels: [data, automation, needs-human-review]
-    draft: true
+    labels: [data, automation]
+    draft: false
     max: 1
     if-no-changes: ignore
 ---
@@ -122,7 +125,9 @@ details. Edit only the five files below under `data/reports/<week>/`; never touc
 - Respect the schema's length limits (Japanese text; no padding). Natural, beginner-friendly Japanese; concrete audience, benefit, how-to-start, caveats.
 - Entities already in the files must not be changed or deleted.
 
-## Finish
+## Finish (validate-and-fix loop, at most 5 attempts)
 
-Run `python -m analyze.digest_gate --week <week>`; fix every `REJECT` line it prints. When it prints `0 problem(s)`, stop.
-The remaining steps (tests, `analyze.apply`) run automatically and the draft PR is opened for human review.
+1. Run `python -m analyze.digest_gate --week <week>`.
+2. On any `REJECT <entity> ...` line: read it, fix that entity's JSON (wrong URL, date not matching the captured date, length, unresolved `refs`, missing field), and rerun the gate. Repeat up to **5 attempts in total**.
+3. If an entity still fails after the last attempt, **remove all of that entity's additions** (enrichment, digest, slide, deck) so it stays an unpublished candidate, rerun the gate until it prints `0 problem(s)`, then open ONE issue (safe-output `create-issue`) titled `dropped candidates <week>` listing each dropped entity and its last gate message.
+4. Stop when the gate prints `0 problem(s)`. The tests, `analyze.apply` and the pull request follow automatically; a separate workflow validates the pull request with trusted code and merges it. There is no human review, so never write anything you did not verify on a fetched first-party page.

@@ -128,7 +128,7 @@ Write `data/reports/<week>/themes.json`: 2-4 themes, each an INTERPRETATION of w
 
 ## Weekly glossary additions (after themes)
 
-Write `data/reports/<week>/glossary.json` (a JSON list, 0-6 entries; `[]` is fine): beginner-level definitions of basic technical terms that this week's published items rely on and that a newcomer may not know (e.g. 量子化, MoE, エージェント, コンテキスト長). Each entry has exactly `term`, `kind` (`基礎` or `仕組み`), `short` (<=40 chars, one-line meaning), `explain` (30-220 chars, plain Japanese: what it is, why it matters), `entity` (a published entity of the week that uses the term), `ref` (a URL captured as evidence of that entity). Only general, well-established definitions; no product-specific numbers or claims. Skip terms already in `data/glossary.json` or other weeks' glossary files (the gate rejects duplicates). Existing entries of the week may be revised.
+Write `data/reports/<week>/glossary.json` (a JSON list, 1-6 entries; always create this file — an empty list is allowed only when every term used is already covered): beginner-level definitions of basic technical terms that this week's published items rely on and that a newcomer may not know (e.g. 量子化, MoE, エージェント, コンテキスト長). Each entry has exactly `term`, `kind` (`基礎` or `仕組み`), `short` (<=40 chars, one-line meaning), `explain` (30-220 chars, plain Japanese: what it is, why it matters), `entity` (a published entity of the week that uses the term), `ref` (a URL captured as evidence of that entity). Only general, well-established definitions; no product-specific numbers or claims. Skip terms already in `data/glossary.json` or other weeks' glossary files (the gate rejects duplicates). Existing entries of the week may be revised.
 
 ## Content rules (the gate rejects violations)
 

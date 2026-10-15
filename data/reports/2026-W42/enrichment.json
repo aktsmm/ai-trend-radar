@@ -383,104 +383,216 @@
      "retrieved_at": "2026-10-15T09:30:00+09:00"
     }
    ]
+  },
+  "jev": {
+   "selection_reason": "ローカルLLM枠(オーナー指定)の話題。Jev は TypeSafe AI 自身の公式ブログ(2026-10-14)と公式ドキュメントで 1.14.0 の公開を確認。Jev 本体はホスト型 API で、ローカル実行できるのは第三者の互換実装のみ(公式ではない)。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://typesafe.ai/blog/jev-1-14",
+    "https://docs.typesafe.ai/models",
+    "https://docs.typesafe.ai/primitives/box"
+   ],
+   "checks": [
+    {
+     "mcp_name": "web_fetch",
+     "tool": "curl",
+     "query": "https://typesafe.ai/blog/jev-1-14",
+     "evidence_urls": [
+      "https://typesafe.ai/blog/jev-1-14"
+     ],
+     "evidence_published_at": "2026-10-14T00:00:00Z",
+     "result": "TypeSafe AI 公式ブログ(Oct 14, 2026)。Jev 1.14.0 を jev-preview で公開、画像(danger zone ヘッダー)・新しい box 型(1.14 のみ)・長い文脈を実験機能として追加、jev-latest は 1 週間後に 1.14.0 へ更新予定、1.13.0 は 60 日前・1.14.0 は 30 日前に廃止予告、最大の改善は多言語対応と見込む、と記載されていることを確認。",
+     "retrieved_at": "2026-10-15T10:30:00+09:00"
+    },
+    {
+     "mcp_name": "web_fetch",
+     "tool": "curl",
+     "query": "https://docs.typesafe.ai/models",
+     "evidence_urls": [
+      "https://docs.typesafe.ai/models"
+     ],
+     "evidence_published_at": "2026-10-14T00:00:00Z",
+     "result": "公式ドキュメントの Models ページ。Jev 1.14 は 2026-10-14 から利用可能、モデル ID jev-1.14.0、入力 $42/10 億トークン(出力は無料)、既定の文脈は 64k(リクエスト)/32k(質問)、長文脈ヘッダーで 262k、入力はテキストのみ、全アカウント共通の重みで顧客データでの微調整はしない、CJK は英語ほど精度が出ない旨を確認。重みの公開に関する記載は見つからなかった。",
+     "retrieved_at": "2026-10-15T10:30:00+09:00"
+    },
+    {
+     "mcp_name": "web_fetch",
+     "tool": "curl",
+     "query": "https://docs.typesafe.ai/primitives/box",
+     "evidence_urls": [
+      "https://docs.typesafe.ai/primitives/box"
+     ],
+     "evidence_published_at": null,
+     "result": "公式ドキュメントの Box ページ(HTTP 200)。画像内の位置を 0〜1 の割合の 4 辺(top/bottom/left/right)と confidence で返す型で、Jev 1.14(jev-preview または jev-1.14.0)と TypeSafe-Danger-Zone-Images ヘッダーが必要、本番利用の水準には達していないと明記されていることを確認。",
+     "retrieved_at": "2026-10-15T10:30:00+09:00"
+    }
+   ]
+  },
+  "strata": {
+   "selection_reason": "ローカルLLM枠(オーナー指定)。個人OSSプロジェクト Niko1221/Strata の公式 README とリリースノート(0.1.41〜0.1.44.1 を 10/8 以降に連続公開、0.1.44.1 は 2026-10-14)で内容を確認。ベンダー発表はなく、コミュニティ/個人プロジェクトとして扱う。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://github.com/Niko1221/Strata",
+    "https://github.com/Niko1221/Strata/releases/tag/v0.1.44",
+    "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1"
+   ],
+   "checks": [
+    {
+     "mcp_name": "github_cli",
+     "tool": "gh api repos/Niko1221/Strata + /readme",
+     "query": "Niko1221/Strata の概要・要件・使い方・制限(README)",
+     "evidence_urls": [
+      "https://github.com/Niko1221/Strata"
+     ],
+     "evidence_published_at": "2026-10-14T00:10:55Z",
+     "result": "個人 OSS(MIT、C++)。README を取得し、Qwen3.8-Flash-Next を GPU 12GB 以上・RAM 32GB 以上・約 80GB のディスクの PC で動かすこと、全専門家(24,576)を RAM に置き頻出分を GPU に載せる仕組み、START-HERE.bat / ./setup.sh での導入、127.0.0.1:8080/v1 の OpenAI 互換 API、起動時に PC が 1〜3 分重くなる注意、速度表が作者の自己計測であることを確認。リポジトリ作成は 2026-09-24 で期間外だが、最終 push は 2026-10-14。",
+     "retrieved_at": "2026-10-15T10:30:00+09:00"
+    },
+    {
+     "mcp_name": "github_cli",
+     "tool": "gh api repos/Niko1221/Strata/releases",
+     "query": "v0.1.44 のリリースノート",
+     "evidence_urls": [
+      "https://github.com/Niko1221/Strata/releases/tag/v0.1.44"
+     ],
+     "evidence_published_at": "2026-10-13T19:26:51Z",
+     "result": "リリース本文を取得。Unsloth の UD-Q4_K_XL〜Q8_0 と NVFP4 パックの追加、Qwen3.6-35B-A3B 対応(NVIDIA/AMD)、AMD マルチ GPU と Intel Arc A シリーズの高速化を確認。品質・速度の数値は作者の自己計測のため引用しない。",
+     "retrieved_at": "2026-10-15T10:30:00+09:00"
+    },
+    {
+     "mcp_name": "github_cli",
+     "tool": "gh api repos/Niko1221/Strata/releases",
+     "query": "v0.1.44.1 のリリースノート",
+     "evidence_urls": [
+      "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1"
+     ],
+     "evidence_published_at": "2026-10-14T00:13:09Z",
+     "result": "リリース本文を取得。AVX2 非対応 CPU で起動直後に落ちる不具合、CUDA 12.0/12.1 でのビルド不具合、Apple M2 で誤った答えが出る不具合の修正と、再セットアップで導入済みサイズを保持する変更を確認。いずれもベンダー発表ではなく作者の記述。",
+     "retrieved_at": "2026-10-15T10:30:00+09:00"
+    }
+   ]
   }
  },
  "url_checks": {
   "https://aws.amazon.com/about-aws/whats-new/2026/10/agentcore-memory-consumption-based-pricing": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-social-sign-in/": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://aws.amazon.com/blogs/machine-learning/build-self-improving-document-processing-using-amazon-bedrock-agentcore/": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://blog.cloudflare.com/clef-faster-cheaper-multimodal": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://code.claude.com/docs/en/overview": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://developers.openai.com/learn/docs-mcp": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
+  },
+  "https://docs.typesafe.ai/models": {
+   "status": 200,
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
+  },
+  "https://docs.typesafe.ai/primitives/box": {
+   "status": 200,
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
+  },
+  "https://github.com/Niko1221/Strata": {
+   "status": 200,
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
+  },
+  "https://github.com/Niko1221/Strata/releases/tag/v0.1.44": {
+   "status": 200,
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
+  },
+  "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1": {
+   "status": 200,
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://github.com/QwenLM/Qwen-Image-2.1": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.300": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://github.com/open-webui/open-webui/releases/tag/v0.12.2": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://github.com/openai/codex/releases": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://huggingface.co/Cloudflare/clef-omni": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://learn.chatgpt.com/docs/security/plugin": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://ollama.com/blog/fly-io-sprites": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://openai.com/index/oracle": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
+  },
+  "https://typesafe.ai/blog/jev-1-14": {
+   "status": 200,
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://www.liquid.ai/blog/lfm2-5-24b-a2b": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   },
   "https://x.ai/news/grok-4-7": {
    "status": 200,
-   "checked_at": "2026-10-15T00:19:14.779378+00:00"
+   "checked_at": "2026-10-15T01:19:10.590967+00:00"
   }
  }
 }

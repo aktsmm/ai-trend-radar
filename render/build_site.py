@@ -28,6 +28,8 @@ def main():
     ap.add_argument("--no-pptx", action="store_true")
     a = ap.parse_args()
     data = json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))
+    for d in ("assets/slides", "assets/decks", "downloads", "api"):
+        shutil.rmtree(SITE / d, ignore_errors=True)  # no stale entity artifacts survive a rebuild
     for d in ("assets/slides", "assets/decks", "downloads"):
         (SITE / d).mkdir(parents=True, exist_ok=True)
     made = {"png": 0, "deck_png": 0, "pdf": 0}
@@ -55,10 +57,20 @@ def main():
                 page.pdf(path=str(SITE / "downloads" / f"{eid}.pdf"), width="1280px", height="720px", print_background=True,
                          margin={"top": "0", "right": "0", "bottom": "0", "left": "0"})
                 made["pdf"] += 1
+        weekly = [t for t in data["trends"] if t.get("deck")]
+        if weekly:
+            page.goto((SITE / "deck.html").as_uri() + "?weekly=1")
+            page.wait_for_selector("body[data-ready='1']")
+            overflow += [f"weekly: {c}" for c in page.evaluate(OVERFLOW_JS)]
+            page.pdf(path=str(SITE / "downloads" / f"weekly-{data['window']['label']}.pdf"), width="1280px", height="720px", print_background=True,
+                     margin={"top": "0", "right": "0", "bottom": "0", "left": "0"})
+            made["pdf"] += 1
         b.close()
     shutil.copyfile(ROOT / "data" / "trends.json", SITE / "downloads" / "trends.json")
     if not a.no_pptx:
         build_pptx.run()
+    from render import build_api
+    build_api.main()
     print(made)
     if overflow:
         print("OVERFLOW:", *overflow, sep="\n  ")

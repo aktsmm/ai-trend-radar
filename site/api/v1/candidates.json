@@ -1,0 +1,66 @@
+{
+ "version": 1,
+ "week": "2026-W42",
+ "window": {
+  "from": "2026-10-08",
+  "to": "2026-10-15",
+  "label": "2026-W42",
+  "partial": true,
+  "tz": "JST, [start, end)"
+ },
+ "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
+ "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "partial": true,
+ "baseline": {
+  "snapshots": 1,
+  "is_baseline": true,
+  "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
+ },
+ "items": [
+  {
+   "id": "llama-cpp",
+   "keyword": "llama.cpp",
+   "category": "local-runtime",
+   "rank": 5,
+   "status": "skipped",
+   "reason": "b11624 は RPC のログ表示改善のみの自動ビルド番号の更新で、ニュースとして紹介する内容がない。",
+   "primary_url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11624"
+  },
+  {
+   "id": "vllm",
+   "keyword": "vLLM",
+   "category": "local-runtime",
+   "rank": 6,
+   "status": "skipped",
+   "reason": "v0.32.0rc0 は GitHub 上にタグがあるだけで正式な Release とリリースノートがなく、確認できる変更点がない(最新の正式版は 10/05 の v0.31.0 で窓外)。",
+   "primary_url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0rc0"
+  },
+  {
+   "id": "mlx",
+   "keyword": "MLX",
+   "category": "local-runtime",
+   "rank": 14,
+   "status": "skipped",
+   "reason": "v0.32.4 は不具合修正が中心のパッチ更新で、初心者向けに紹介できる目玉の変更が弱いため見送る。",
+   "primary_url": "https://github.com/ml-explore/mlx/releases/tag/v0.32.4"
+  },
+  {
+   "id": "artex",
+   "keyword": "ARTEX",
+   "category": "dev-tool",
+   "rank": 15,
+   "status": "skipped",
+   "reason": "個人のリポジトリで、期間内の日付つき公式リリースや発表が確認できず、攻撃的な自動化ツールでもあるため掲載を見送る。",
+   "primary_url": "https://github.com/mhtsec/ARTEX"
+  },
+  {
+   "id": "talorys",
+   "keyword": "talorys",
+   "category": "dev-tool",
+   "rank": 18,
+   "status": "skipped",
+   "reason": "個人リポジトリの scaffold 用パッケージの小規模なパッチリリース(0.1.6)で、注目に値する変更を確認できなかった。",
+   "primary_url": "https://github.com/rociiu/talorys/releases/tag/create-talorys%400.1.6"
+  }
+ ]
+}

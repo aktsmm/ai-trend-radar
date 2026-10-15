@@ -558,7 +558,7 @@
    "summary": "claude-code v2.1.300 ― Custom Claude Code Mods that I need。7ソースで言及(代表: 「Last week some of South Korea's biggest banks were hit by a 」)",
    "slides": [
     {
-     "title": "Claude Code v2.1.300 を公開",
+     "title": "Claude Code v2.1.300: 計測と拡張フックが追加",
      "diagram_type": "infographic",
      "icon": "terminal",
      "stat": {
@@ -667,11 +667,11 @@
    "url_checks": {
     "https://code.claude.com/docs/en/overview": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     },
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.300": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [
@@ -1063,15 +1063,15 @@
    "url_checks": {
     "https://openai.com/index/oracle": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     },
     "https://developers.openai.com/learn/docs-mcp": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     },
     "https://github.com/openai/codex/releases": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [
@@ -1471,7 +1471,7 @@
    "url_checks": {
     "https://ollama.com/blog/fly-io-sprites": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [
@@ -1797,11 +1797,11 @@
    "url_checks": {
     "https://huggingface.co/Qwen/Qwen-Image-2.1-Turbo": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     },
     "https://github.com/QwenLM/Qwen-Image-2.1": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [],
@@ -2519,11 +2519,11 @@
    "url_checks": {
     "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     },
     "https://www.liquid.ai/blog/lfm2-5-24b-a2b": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [
@@ -2855,7 +2855,7 @@
    "url_checks": {
     "https://github.com/unslothai/unsloth/releases/tag/v0.1.906-beta": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [],
@@ -3201,11 +3201,11 @@
    "url_checks": {
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     },
     "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-4-argon": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [
@@ -3487,7 +3487,7 @@
    "url_checks": {
     "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [
@@ -3796,7 +3796,7 @@
    "url_checks": {
     "https://github.com/open-webui/open-webui/releases/tag/v0.12.2": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [],
@@ -4007,12 +4007,48 @@
     }
    ],
    "official_urls": [
+    "https://github.com/Niko1221/Strata",
     "https://github.com/Niko1221/Strata/releases/tag/v0.1.44",
-    "https://github.com/Niko1221/Strata"
+    "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1"
    ],
    "official_verified": true,
    "summary": "Niko1221/Strata Strata 0.1.44 ― Strata Manager makes Niko1221/Strata, the local LLM inference engine, easier to set up and use. Manage local m。2ソースで言及(代表: 「Strata rewrote their Github history to wipe evidence of Clau」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Strata 0.1.44.1:12GB GPUで大型MoEを動かす",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "12GB+",
+      "label": "必要な GPU メモリ(VRAM)の目安"
+     },
+     "steps": [
+      "GPU に頻出の専門家",
+      "RAM に全専門家",
+      "CPU と分担して推論"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "個人 OSS の Strata が 10/14 に 0.1.44.1 を公開。大型 MoE を普通のゲーミング PC で動かす(ベンダー発表なし)"
+      },
+      {
+       "h": "仕組み",
+       "t": "全専門家を RAM に置き、頻出分を GPU に載せ、CPU が残りを分担。補助モデルの先読みで 1.6〜1.8 倍速と説明"
+      },
+      {
+       "h": "使い方",
+       "t": "Windows は START-HERE.bat、Linux は ./setup.sh。OpenAI / Anthropic 互換 API をローカルで提供"
+      },
+      {
+       "h": "注意",
+       "t": "RAM 32GB 以上が必要。起動時に PC が 1〜3 分重くなる。速度の数字は作者の自己計測"
+      }
+     ],
+     "official_url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1",
+     "source_date": "2026-10-14"
+    }
+   ],
    "score_breakdown": {
     "github_new": 0.238,
     "reddit_localllama": 1.11
@@ -4054,8 +4090,43 @@
    "trend_label": "baseline",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "github_cli",
+      "tool": "gh api repos/Niko1221/Strata + /readme",
+      "query": "Niko1221/Strata の概要・要件・使い方・制限(README)",
+      "evidence_urls": [
+       "https://github.com/Niko1221/Strata"
+      ],
+      "evidence_published_at": "2026-10-14T00:10:55Z",
+      "result": "個人 OSS(MIT、C++)。README を取得し、Qwen3.8-Flash-Next を GPU 12GB 以上・RAM 32GB 以上・約 80GB のディスクの PC で動かすこと、全専門家(24,576)を RAM に置き頻出分を GPU に載せる仕組み、START-HERE.bat / ./setup.sh での導入、127.0.0.1:8080/v1 の OpenAI 互換 API、起動時に PC が 1〜3 分重くなる注意、速度表が作者の自己計測であることを確認。リポジトリ作成は 2026-09-24 で期間外だが、最終 push は 2026-10-14。",
+      "retrieved_at": "2026-10-15T10:30:00+09:00"
+     },
+     {
+      "mcp_name": "github_cli",
+      "tool": "gh api repos/Niko1221/Strata/releases",
+      "query": "v0.1.44 のリリースノート",
+      "evidence_urls": [
+       "https://github.com/Niko1221/Strata/releases/tag/v0.1.44"
+      ],
+      "evidence_published_at": "2026-10-13T19:26:51Z",
+      "result": "リリース本文を取得。Unsloth の UD-Q4_K_XL〜Q8_0 と NVFP4 パックの追加、Qwen3.6-35B-A3B 対応(NVIDIA/AMD)、AMD マルチ GPU と Intel Arc A シリーズの高速化を確認。品質・速度の数値は作者の自己計測のため引用しない。",
+      "retrieved_at": "2026-10-15T10:30:00+09:00"
+     },
+     {
+      "mcp_name": "github_cli",
+      "tool": "gh api repos/Niko1221/Strata/releases",
+      "query": "v0.1.44.1 のリリースノート",
+      "evidence_urls": [
+       "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1"
+      ],
+      "evidence_published_at": "2026-10-14T00:13:09Z",
+      "result": "リリース本文を取得。AVX2 非対応 CPU で起動直後に落ちる不具合、CUDA 12.0/12.1 でのビルド不具合、Apple M2 で誤った答えが出る不具合の修正と、再セットアップで導入済みサイズを保持する変更を確認。いずれもベンダー発表ではなく作者の記述。",
+      "retrieved_at": "2026-10-15T10:30:00+09:00"
+     }
+    ],
+    "selection_reason": "ローカルLLM枠(オーナー指定)。個人OSSプロジェクト Niko1221/Strata の公式 README とリリースノート(0.1.41〜0.1.44.1 を 10/8 以降に連続公開、0.1.44.1 は 2026-10-14)で内容を確認。ベンダー発表はなく、コミュニティ/個人プロジェクトとして扱う。"
    },
    "jp_reactions": [
     {
@@ -4064,7 +4135,145 @@
      "url": "https://zenn.dev/lube8163/articles/87856ef9fffd66",
      "date": "2026-10-14"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://github.com/Niko1221/Strata": {
+     "status": 200,
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
+    },
+    "https://github.com/Niko1221/Strata/releases/tag/v0.1.44": {
+     "status": 200,
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
+    },
+    "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1": {
+     "status": 200,
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Strata は、個人開発者 Niko1221 の OSS(MIT ライセンス)で、GPU メモリ 12GB 以上のゲーミング PC で大型 MoE モデル Qwen3.8-Flash-Next を動かすローカル推論エンジン。コミュニティ/個人プロジェクトで、ベンダー発表はない。",
+     "全専門家(24,576)を RAM に置き、よく使うものを GPU に載せ、残りを CPU が分担する。小さな補助モデルが先読みして大モデルが検証する方式で、同じ答えが 1.6〜1.8 倍速くなると README は説明している。",
+     "10/14 に 0.1.44.1 を公開。0.1.44 では Unsloth の 4〜8bit 版や NVFP4 パック、Qwen3.6-35B-A3B に対応し、0.1.44.1 は AVX2 非対応 CPU の起動不具合などを直す修正版。"
+    ],
+    "why_trending": "r/LocalLLaMA や Zenn でも話題(コミュニティ報告)。10/8 以降に 0.1.41〜0.1.44.1 を連続公開し、更新が非常に速い。",
+    "what_changes": [
+     "0.1.44: Unsloth の 4〜8bit 版と NVFP4 パックを setup から選べる",
+     "0.1.44: Qwen3.6-35B-A3B に対応(NVIDIA / AMD)",
+     "0.1.44.1: AVX2 非対応 CPU の起動不具合と CUDA 12.0/12.1 のビルド不具合を修正"
+    ],
+    "benefits": [
+     "GPU 12GB 級の手元 PC で大型モデルを試せる見込み",
+     "OpenAI / Anthropic 互換 API(127.0.0.1:8080)で既存のエージェントから接続できる"
+    ],
+    "caveats": [
+     "起動時に RAM へ 35〜55GB を読み込み、PC が 1〜3 分重くなることがある",
+     "速度や品質の数字は作者の自己計測。要件は RAM 32GB 以上・ディスク約 80GB",
+     "個人プロジェクト。Mac や古い GPU は実験的扱いで、既定は同時 1 リクエスト"
+    ],
+    "audience": "手元の GPU で大型 LLM を動かしたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "個人 OSS の Strata は、GPU 12GB 級の手元 PC で大型 MoE モデルを動かす。今週も 0.1.44.1 まで更新が続いた。",
+     "stat": {
+      "value": "12GB+",
+      "label": "必要な GPU メモリ(VRAM)の目安"
+     },
+     "steps": [
+      "頻出の専門家は GPU",
+      "全専門家は RAM",
+      "残りは CPU が分担"
+     ],
+     "changes": [
+      "Unsloth の 4〜8bit 版と NVFP4 パックを選べる",
+      "Qwen3.6-35B-A3B に対応(NVIDIA / AMD)",
+      "0.1.44.1 で AVX2 非対応 CPU の起動不具合を修正"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Niko1221(個人 / OSS)"
+      },
+      {
+       "k": "ライセンス",
+       "v": "MIT"
+      },
+      {
+       "k": "最新版",
+       "v": "0.1.44.1(2026-10-14)"
+      },
+      {
+       "k": "必要環境",
+       "v": "VRAM 12GB+/RAM 32GB+"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s3"
+     ]
+    },
+    "impact": {
+     "audience": "手元の GPU で大型 LLM を動かしたい開発者",
+     "benefits": [
+      "サーバーなしで大型モデルを手元で試せる見込み",
+      "OpenAI / Anthropic 互換 API で既存のエージェントやアプリから使える",
+      "モデルのサイズを RAM に合わせて選べる"
+     ],
+     "how_to": [
+      "Windows は START-HERE.bat、Linux は ./setup.sh を実行する",
+      "質問に答えるとモデルを約 70GB ダウンロードして起動する",
+      "ブラウザ(127.0.0.1:8080)か、API の base URL /v1 で接続する"
+     ],
+     "caveats": [
+      "ベンダー発表のない個人プロジェクト。数値は作者の自己計測",
+      "起動時に RAM へ 35〜55GB を読み込み、PC が 1〜3 分重くなる",
+      "Mac や古い GPU、Intel Arc は実験的扱い"
+     ],
+     "terms": [
+      {
+       "t": "MoE",
+       "d": "多数の専門家のうち一部だけを使って計算するモデル構成"
+      },
+      {
+       "t": "VRAM",
+       "d": "グラフィックスカードのメモリ"
+      },
+      {
+       "t": "NVFP4",
+       "d": "RTX 50 シリーズが得意とする 4bit 系の重み形式"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2",
+      "s3"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Niko1221/Strata README(GitHub)",
+      "publisher": "Niko1221(個人 OSS)",
+      "url": "https://github.com/Niko1221/Strata",
+      "date": "2026-10-14"
+     },
+     {
+      "id": "s2",
+      "title": "Strata 0.1.44 リリースノート",
+      "publisher": "Niko1221(個人 OSS)",
+      "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44",
+      "date": "2026-10-13"
+     },
+     {
+      "id": "s3",
+      "title": "Strata 0.1.44.1 リリースノート",
+      "publisher": "Niko1221(個人 OSS)",
+      "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1",
+      "date": "2026-10-14"
+     }
+    ]
+   }
   },
   {
    "rank": 13,
@@ -4147,12 +4356,48 @@
     }
    ],
    "official_urls": [
-    "https://huggingface.co/autotrust/JEV-35B",
-    "https://huggingface.co/autotrust/JEV-35B-NVFP4"
+    "https://typesafe.ai/blog/jev-1-14",
+    "https://docs.typesafe.ai/models",
+    "https://docs.typesafe.ai/primitives/box"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "autotrust/JEV-35B-NVFP4。7ソースで言及(代表: 「autotrust/JEV-35B」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Jev 1.14.0:画像・box型・長文脈を追加",
+     "diagram_type": "infographic",
+     "icon": "cloud",
+     "stat": {
+      "value": "$42",
+      "label": "入力 10 億トークンあたり(出力は無料)"
+     },
+     "steps": [
+      "状態を送る",
+      "型付きの質問",
+      "確信度つきで回答"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "TypeSafe AI が 10/14 に Jev 1.14.0 を jev-preview で公開した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "画像入力、位置を返す box 型、262k の長文脈が実験機能(danger zone ヘッダー)として使える"
+      },
+      {
+       "h": "ローカル",
+       "t": "Jev 自体はホスト型 API。手元で動くのは第三者の互換実装(公式ではない)"
+      },
+      {
+       "h": "注意",
+       "t": "実験機能は本番非推奨。jev-latest は 1 週間後に 1.14.0 へ更新される予定"
+      }
+     ],
+     "official_url": "https://typesafe.ai/blog/jev-1-14",
+     "source_date": "2026-10-14"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 1.056,
     "hf_spaces": 0.45,
@@ -4196,8 +4441,43 @@
    "trend_label": "baseline",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "web_fetch",
+      "tool": "curl",
+      "query": "https://typesafe.ai/blog/jev-1-14",
+      "evidence_urls": [
+       "https://typesafe.ai/blog/jev-1-14"
+      ],
+      "evidence_published_at": "2026-10-14T00:00:00Z",
+      "result": "TypeSafe AI 公式ブログ(Oct 14, 2026)。Jev 1.14.0 を jev-preview で公開、画像(danger zone ヘッダー)・新しい box 型(1.14 のみ)・長い文脈を実験機能として追加、jev-latest は 1 週間後に 1.14.0 へ更新予定、1.13.0 は 60 日前・1.14.0 は 30 日前に廃止予告、最大の改善は多言語対応と見込む、と記載されていることを確認。",
+      "retrieved_at": "2026-10-15T10:30:00+09:00"
+     },
+     {
+      "mcp_name": "web_fetch",
+      "tool": "curl",
+      "query": "https://docs.typesafe.ai/models",
+      "evidence_urls": [
+       "https://docs.typesafe.ai/models"
+      ],
+      "evidence_published_at": "2026-10-14T00:00:00Z",
+      "result": "公式ドキュメントの Models ページ。Jev 1.14 は 2026-10-14 から利用可能、モデル ID jev-1.14.0、入力 $42/10 億トークン(出力は無料)、既定の文脈は 64k(リクエスト)/32k(質問)、長文脈ヘッダーで 262k、入力はテキストのみ、全アカウント共通の重みで顧客データでの微調整はしない、CJK は英語ほど精度が出ない旨を確認。重みの公開に関する記載は見つからなかった。",
+      "retrieved_at": "2026-10-15T10:30:00+09:00"
+     },
+     {
+      "mcp_name": "web_fetch",
+      "tool": "curl",
+      "query": "https://docs.typesafe.ai/primitives/box",
+      "evidence_urls": [
+       "https://docs.typesafe.ai/primitives/box"
+      ],
+      "evidence_published_at": null,
+      "result": "公式ドキュメントの Box ページ(HTTP 200)。画像内の位置を 0〜1 の割合の 4 辺(top/bottom/left/right)と confidence で返す型で、Jev 1.14(jev-preview または jev-1.14.0)と TypeSafe-Danger-Zone-Images ヘッダーが必要、本番利用の水準には達していないと明記されていることを確認。",
+      "retrieved_at": "2026-10-15T10:30:00+09:00"
+     }
+    ],
+    "selection_reason": "ローカルLLM枠(オーナー指定)の話題。Jev は TypeSafe AI 自身の公式ブログ(2026-10-14)と公式ドキュメントで 1.14.0 の公開を確認。Jev 本体はホスト型 API で、ローカル実行できるのは第三者の互換実装のみ(公式ではない)。"
    },
    "jp_reactions": [
     {
@@ -4218,7 +4498,144 @@
      "url": "https://zenn.dev/hiouchiy/articles/3c090b0e7e1b14",
      "date": "2026-10-14"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://typesafe.ai/blog/jev-1-14": {
+     "status": 200,
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
+    },
+    "https://docs.typesafe.ai/models": {
+     "status": 200,
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
+    },
+    "https://docs.typesafe.ai/primitives/box": {
+     "status": 200,
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Jev は TypeSafe AI の System One モデル。文章ではなく、ソフトウェアがそのまま使える型付きの判断と確信度を API(POST /v1/systemone)で返す、チャットではない新種のモデル。",
+     "10/14 に公式ブログで Jev 1.14.0(jev-preview)を公開。画像入力、画像内の位置を返す新しい box 型、長い文脈を、本番非推奨の実験機能(danger zone ヘッダー)として加えた。",
+     "Jev 本体は TypeSafe のホスト型 API で、公式ドキュメントに重みの公開は見当たらない。手元で動かせるのは、コミュニティによる互換実装の話(公式ではない)。"
+    ],
+    "why_trending": "Jev 互換の OSS をローカルで動かす試みがコミュニティで相次ぎ、r/LocalLLaMA や Zenn でも話題(コミュニティ報告)。",
+    "what_changes": [
+     "画像を state・instructions・criteria のどこにでも入れられる(実験)",
+     "box 型で画像内の位置を 4 辺の割合で返す(1.14 のみ・実験)",
+     "長文脈ヘッダーで文脈を 262k まで広げられる(実験)"
+    ],
+    "benefits": [
+     "判断結果が型で返るので、コードの分岐にそのまま使える",
+     "入力は 10 億トークン $42 で、出力は無料と公式が説明している"
+    ],
+    "caveats": [
+     "画像・box・長文脈は本番非推奨。仕様が変わる可能性があると公式が明記",
+     "ホスト型 API でローカルでは動かない。入力はテキスト中心で、CJK は英語より精度が落ちる",
+     "jev-latest は 1 週間後に 1.14.0 へ更新予定。回答が変わり得るのでバージョン固定を推奨"
+    ],
+    "audience": "LLM の判断を自動化に組み込みたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Jev は文章でなく型付きの判断を返すモデル。1.14.0 で画像・box 型・長文脈が実験機能として加わった。",
+     "stat": {
+      "value": "$42",
+      "label": "入力 10 億トークンあたり(出力は無料)"
+     },
+     "steps": [
+      "状態を送る",
+      "型付きの質問",
+      "確信度つきで回答"
+     ],
+     "changes": [
+      "画像入力(danger zone ヘッダーで有効化)",
+      "box 型で画像内の位置を返す(1.14 のみ)",
+      "長文脈ヘッダーで 262k まで拡張"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "TypeSafe AI"
+      },
+      {
+       "k": "新版",
+       "v": "jev-1.14.0(2026-10-14)"
+      },
+      {
+       "k": "提供形態",
+       "v": "ホスト型 API"
+      },
+      {
+       "k": "既定の文脈",
+       "v": "64k / 質問ごと 32k"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2"
+     ]
+    },
+    "impact": {
+     "audience": "LLM の判断を自動化に組み込みたい開発者",
+     "benefits": [
+      "回答が型と確信度で返るため、コードで分岐・振り分けしやすい",
+      "確信度が低いときだけ人に回す設計ができる",
+      "入力のみ課金で、出力は無料と公式が説明している"
+     ],
+     "how_to": [
+      "POST /v1/systemone に state と型付きの質問を送る",
+      "新機能は model に jev-preview か jev-1.14.0 を指定する",
+      "画像や長文脈は専用の danger zone ヘッダーを付ける"
+     ],
+     "caveats": [
+      "画像・box・長文脈は本番非推奨で、仕様が変わり得る",
+      "ホスト型 API でローカル実行は不可。互換実装は第三者",
+      "日本語など CJK は英語ほど精度が出ないと公式が説明"
+     ],
+     "terms": [
+      {
+       "t": "System One",
+       "d": "ソフトウェアが使う型付きの判断を返すモデルの種類"
+      },
+      {
+       "t": "box 型",
+       "d": "画像内の対象を囲む四角を 4 辺の割合で返す質問"
+      },
+      {
+       "t": "danger zone",
+       "d": "実験機能を有効にする API ヘッダーの総称"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2",
+      "s3"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Jev: For the builders AND dreamers",
+      "publisher": "TypeSafe AI",
+      "url": "https://typesafe.ai/blog/jev-1-14",
+      "date": "2026-10-14"
+     },
+     {
+      "id": "s2",
+      "title": "Models(TypeSafe ドキュメント)",
+      "publisher": "TypeSafe AI",
+      "url": "https://docs.typesafe.ai/models",
+      "date": "2026-10-14"
+     },
+     {
+      "id": "s3",
+      "title": "Box(TypeSafe ドキュメント)",
+      "publisher": "TypeSafe AI",
+      "url": "https://docs.typesafe.ai/primitives/box"
+     }
+    ]
+   }
   },
   {
    "rank": 14,
@@ -4632,7 +5049,7 @@
    "url_checks": {
     "https://aws.amazon.com/about-aws/whats-new/2026/10/sagemaker-studio-social-sign-in/": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [],
@@ -4924,11 +5341,11 @@
    "url_checks": {
     "https://blog.cloudflare.com/clef-faster-cheaper-multimodal": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     },
     "https://huggingface.co/Cloudflare/clef-omni": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [],
@@ -5326,11 +5743,11 @@
    "url_checks": {
     "https://aws.amazon.com/blogs/machine-learning/build-long-horizon-agents-with-grok-4-7-on-amazon-bedrock/": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     },
     "https://x.ai/news/grok-4-7": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [],
@@ -5662,15 +6079,15 @@
    "url_checks": {
     "https://aws.amazon.com/about-aws/whats-new/2026/10/agentcore-memory-consumption-based-pricing": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     },
     "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     },
     "https://aws.amazon.com/blogs/machine-learning/build-self-improving-document-processing-using-amazon-bedrock-agentcore/": {
      "status": 200,
-     "checked_at": "2026-10-15T00:19:14.779378+00:00"
+     "checked_at": "2026-10-15T01:19:10.590967+00:00"
     }
    },
    "jp_reactions": [],
@@ -6053,10 +6470,8 @@
  "candidates_pool": 83,
  "rejected_candidates": {
   "artex": "個人のリポジトリで、期間内の日付つき公式リリースや発表が確認できず、攻撃的な自動化ツールでもあるため掲載を見送る。",
-  "jev": "autotrust による量子化モデルカードで、公式の発表日や検証できる具体的な事実がなく、Jev 本体(TypeSafe)の公式ソースでもない。",
   "llama-cpp": "b11624 は RPC のログ表示改善のみの自動ビルド番号の更新で、ニュースとして紹介する内容がない。",
   "mlx": "v0.32.4 は不具合修正が中心のパッチ更新で、初心者向けに紹介できる目玉の変更が弱いため見送る。",
-  "strata": "個人の GitHub リポジトリのパッチ版リリース(v0.1.44)で、公式の発表や注目に値する新機能を確認できなかった。",
   "talorys": "個人リポジトリの scaffold 用パッケージの小規模なパッチリリース(0.1.6)で、注目に値する変更を確認できなかった。",
   "vllm": "v0.32.0rc0 は GitHub 上にタグがあるだけで正式な Release とリリースノートがなく、確認できる変更点がない(最新の正式版は 10/05 の v0.31.0 で窓外)。"
  }

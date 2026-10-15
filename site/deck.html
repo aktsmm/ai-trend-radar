@@ -11,10 +11,13 @@
 <script src="data.js"></script>
 <script src="deck.js"></script>
 <script>
-  // ?e=<entity_id>&n=<0|1>  or  ?e=<entity_id>&all=1  (used by render/build_decks.py)
+  // ?e=<entity_id>&n=<0|1>  |  ?e=<entity_id>&all=1  |  ?weekly=1  (used by render/build_site.py)
   const q = new URLSearchParams(location.search);
   const t = window.TRENDS.trends.find(x => x.entity_id === q.get("e"));
-  if (t && t.deck) {
+  if (q.get("weekly")) {
+    document.getElementById("out").innerHTML = renderWeekly(window.TRENDS, window.TRENDS.trends.filter(x => x.deck));
+    document.fonts.ready.then(() => { document.body.dataset.ready = "1"; });
+  } else if (t && t.deck) {
     document.getElementById("out").innerHTML = q.get("all") ? renderDeck(t, 0) + renderDeck(t, 1) : renderDeck(t, +(q.get("n") || 0));
     document.fonts.ready.then(() => { document.body.dataset.ready = "1"; });
   }

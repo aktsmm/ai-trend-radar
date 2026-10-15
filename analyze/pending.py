@@ -13,11 +13,12 @@ from collect.common import ROOT
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--week", required=True)
+    ap.add_argument("--week")
     ap.add_argument("--limit", type=int, default=8)
     a = ap.parse_args()
-    wk = ROOT / "data" / "reports" / a.week
     data = json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))
+    a.week = a.week or data["window"]["label"]
+    wk = ROOT / "data" / "reports" / a.week
     done = set()
     for f in ("enrichment.json",):
         p = wk / f

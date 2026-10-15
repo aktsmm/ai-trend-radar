@@ -125,13 +125,14 @@ def check_batch(proposal, enrichment, window, current=None):
 
 def main(argv=None):
     ap = argparse.ArgumentParser()
-    ap.add_argument("--week", required=True)
+    ap.add_argument("--week")
     ap.add_argument("--proposal")
     ap.add_argument("--base")
     a = ap.parse_args(argv)
+    window = json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))["window"]
+    a.week = a.week or window["label"]
     wk = ROOT / "data" / "reports" / a.week
     enr = json.loads((wk / "enrichment.json").read_text(encoding="utf-8"))
-    window = json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))["window"]
     proposal = load_bundle(a.proposal or wk)
     if any(v is None for v in proposal.values()):
         print("missing bundle file(s)", file=sys.stderr)

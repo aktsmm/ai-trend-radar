@@ -37,7 +37,7 @@
   }
   function slide2(t) {
     const m = t.deck.impact;
-    return `<div class="dslide cat-${esc(t.category)}">${head(t, 2, `${t.keyword}: 誰に何が嬉しいか・使い方・注意点`)}
+    return `<div class="dslide cat-${esc(t.category)}">${head(t, 2, `${(t.slides[0] || {}).title || t.keyword}`)}
       <div class="d-aud"><b>想定する人</b> ${esc(m.audience)}</div>
       <div class="d-body s2">
         <div class="d-box"><h2>嬉しいこと</h2><ul>${m.benefits.map(x => `<li>${md(x)}</li>`).join("")}</ul></div>
@@ -46,5 +46,15 @@
         <div class="d-box"><h2>用語メモ</h2><dl>${m.terms.map(x => `<dt>${esc(x.t)}</dt><dd>${esc(x.d)}</dd>`).join("")}</dl></div>
       </div>${foot(t, m.refs)}</div>`;
   }
+  function cover(D, n) {
+    return `<div class="dslide cover"><div class="cv-main"><div class="cv-kicker">AI Trend Radar</div><h1>今週の AI トレンド・ブリーフ</h1>
+      <div class="cv-sub">${esc(D.window.label)} ・ ${esc(D.window.from)} 〜 ${esc(D.window.to)}</div>
+      <div class="cv-stat"><b>${n}</b> 件を一次情報で確認して掲載</div></div>
+      <div class="cv-note">各キーワード 2 枚(概要 / 影響・使い方)。内容は公式の一次情報で確認したもので、要約は AI の下書きを照合して掲載しています。ベンダーが発表した数字は独自には検証していません。</div></div>`;
+  }
+  function toc(D, list) {
+    return `<div class="dslide toc"><div class="d-head"><h1>目次</h1></div><div class="toc-body">${list.map((t, i) => `<div class="toc-row"><span class="toc-no">${i + 1}</span><span class="toc-kw">${esc(t.keyword)}</span><span class="d-chip alt">${esc(t.category)}</span><span class="toc-tk">${esc((t.slides[0] || {}).title || t.deck.overview.takeaway)}</span><span class="toc-pg">p.${3 + i * 2}</span></div>`).join("")}</div></div>`;
+  }
+  window.renderWeekly = (D, list) => cover(D, list.length) + toc(D, list) + list.map(t => renderDeck(t, 0) + renderDeck(t, 1)).join("");
   window.renderDeck = (t, n) => (n === 0 ? slide1(t) : slide2(t));
 })();

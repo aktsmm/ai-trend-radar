@@ -1,0 +1,301 @@
+{
+ "version": 1,
+ "week": "2026-W42",
+ "window": {
+  "from": "2026-10-08",
+  "to": "2026-10-15",
+  "label": "2026-W42",
+  "partial": true,
+  "tz": "JST, [start, end)"
+ },
+ "snapshot_at": "2026-10-15T01:19:52.003888+00:00",
+ "data_at": "2026-10-14T22:50:38.095162+00:00",
+ "partial": true,
+ "baseline": {
+  "snapshots": 1,
+  "is_baseline": true,
+  "note": "日次スナップショットが14日分たまるまでは『新着/注目』表示で、『上昇中』とは呼ばない"
+ },
+ "id": "jev",
+ "keyword": "JEV",
+ "headline": "Jev 1.14.0:画像・box型・長文脈を追加",
+ "vendor": null,
+ "category": "model",
+ "kind": "model",
+ "tags": [
+  "models"
+ ],
+ "rank": 13,
+ "score": 40.6,
+ "summary": [
+  "Jev は TypeSafe AI の System One モデル。文章ではなく、ソフトウェアがそのまま使える型付きの判断と確信度を API(POST /v1/systemone)で返す、チャットではない新種のモデル。",
+  "10/14 に公式ブログで Jev 1.14.0(jev-preview)を公開。画像入力、画像内の位置を返す新しい box 型、長い文脈を、本番非推奨の実験機能(danger zone ヘッダー)として加えた。",
+  "Jev 本体は TypeSafe のホスト型 API で、公式ドキュメントに重みの公開は見当たらない。手元で動かせるのは、コミュニティによる互換実装の話(公式ではない)。"
+ ],
+ "published_at": "2026-10-11T03:05:28+00:00",
+ "official_urls": [
+  "https://typesafe.ai/blog/jev-1-14",
+  "https://docs.typesafe.ai/models",
+  "https://docs.typesafe.ai/primitives/box"
+ ],
+ "verification": {
+  "status": "verified",
+  "checks": [
+   {
+    "mcp_name": "web_fetch",
+    "tool": "curl",
+    "query": "https://typesafe.ai/blog/jev-1-14",
+    "evidence_urls": [
+     "https://typesafe.ai/blog/jev-1-14"
+    ],
+    "evidence_published_at": "2026-10-14T00:00:00Z",
+    "result": "TypeSafe AI 公式ブログ(Oct 14, 2026)。Jev 1.14.0 を jev-preview で公開、画像(danger zone ヘッダー)・新しい box 型(1.14 のみ)・長い文脈を実験機能として追加、jev-latest は 1 週間後に 1.14.0 へ更新予定、1.13.0 は 60 日前・1.14.0 は 30 日前に廃止予告、最大の改善は多言語対応と見込む、と記載されていることを確認。",
+    "retrieved_at": "2026-10-15T10:30:00+09:00"
+   },
+   {
+    "mcp_name": "web_fetch",
+    "tool": "curl",
+    "query": "https://docs.typesafe.ai/models",
+    "evidence_urls": [
+     "https://docs.typesafe.ai/models"
+    ],
+    "evidence_published_at": "2026-10-14T00:00:00Z",
+    "result": "公式ドキュメントの Models ページ。Jev 1.14 は 2026-10-14 から利用可能、モデル ID jev-1.14.0、入力 $42/10 億トークン(出力は無料)、既定の文脈は 64k(リクエスト)/32k(質問)、長文脈ヘッダーで 262k、入力はテキストのみ、全アカウント共通の重みで顧客データでの微調整はしない、CJK は英語ほど精度が出ない旨を確認。重みの公開に関する記載は見つからなかった。",
+    "retrieved_at": "2026-10-15T10:30:00+09:00"
+   },
+   {
+    "mcp_name": "web_fetch",
+    "tool": "curl",
+    "query": "https://docs.typesafe.ai/primitives/box",
+    "evidence_urls": [
+     "https://docs.typesafe.ai/primitives/box"
+    ],
+    "evidence_published_at": null,
+    "result": "公式ドキュメントの Box ページ(HTTP 200)。画像内の位置を 0〜1 の割合の 4 辺(top/bottom/left/right)と confidence で返す型で、Jev 1.14(jev-preview または jev-1.14.0)と TypeSafe-Danger-Zone-Images ヘッダーが必要、本番利用の水準には達していないと明記されていることを確認。",
+    "retrieved_at": "2026-10-15T10:30:00+09:00"
+   }
+  ],
+  "selection_reason": "ローカルLLM枠(オーナー指定)の話題。Jev は TypeSafe AI 自身の公式ブログ(2026-10-14)と公式ドキュメントで 1.14.0 の公開を確認。Jev 本体はホスト型 API で、ローカル実行できるのは第三者の互換実装のみ(公式ではない)。"
+ },
+ "urls": {
+  "self": "api/v1/keywords/jev.json",
+  "infographic": "assets/slides/jev.png",
+  "pdf": "downloads/jev.pdf",
+  "pptx": "downloads/jev.pptx",
+  "page": "index.html#k-jev"
+ },
+ "digest": {
+  "summary": [
+   "Jev は TypeSafe AI の System One モデル。文章ではなく、ソフトウェアがそのまま使える型付きの判断と確信度を API(POST /v1/systemone)で返す、チャットではない新種のモデル。",
+   "10/14 に公式ブログで Jev 1.14.0(jev-preview)を公開。画像入力、画像内の位置を返す新しい box 型、長い文脈を、本番非推奨の実験機能(danger zone ヘッダー)として加えた。",
+   "Jev 本体は TypeSafe のホスト型 API で、公式ドキュメントに重みの公開は見当たらない。手元で動かせるのは、コミュニティによる互換実装の話(公式ではない)。"
+  ],
+  "why_trending": "Jev 互換の OSS をローカルで動かす試みがコミュニティで相次ぎ、r/LocalLLaMA や Zenn でも話題(コミュニティ報告)。",
+  "what_changes": [
+   "画像を state・instructions・criteria のどこにでも入れられる(実験)",
+   "box 型で画像内の位置を 4 辺の割合で返す(1.14 のみ・実験)",
+   "長文脈ヘッダーで文脈を 262k まで広げられる(実験)"
+  ],
+  "benefits": [
+   "判断結果が型で返るので、コードの分岐にそのまま使える",
+   "入力は 10 億トークン $42 で、出力は無料と公式が説明している"
+  ],
+  "caveats": [
+   "画像・box・長文脈は本番非推奨。仕様が変わる可能性があると公式が明記",
+   "ホスト型 API でローカルでは動かない。入力はテキスト中心で、CJK は英語より精度が落ちる",
+   "jev-latest は 1 週間後に 1.14.0 へ更新予定。回答が変わり得るのでバージョン固定を推奨"
+  ],
+  "audience": "LLM の判断を自動化に組み込みたい開発者"
+ },
+ "infographic": {
+  "title": "Jev 1.14.0:画像・box型・長文脈を追加",
+  "diagram_type": "infographic",
+  "icon": "cloud",
+  "stat": {
+   "value": "$42",
+   "label": "入力 10 億トークンあたり(出力は無料)"
+  },
+  "steps": [
+   "状態を送る",
+   "型付きの質問",
+   "確信度つきで回答"
+  ],
+  "points": [
+   {
+    "h": "何が起きた",
+    "t": "TypeSafe AI が 10/14 に Jev 1.14.0 を jev-preview で公開した"
+   },
+   {
+    "h": "何が変わる",
+    "t": "画像入力、位置を返す box 型、262k の長文脈が実験機能(danger zone ヘッダー)として使える"
+   },
+   {
+    "h": "ローカル",
+    "t": "Jev 自体はホスト型 API。手元で動くのは第三者の互換実装(公式ではない)"
+   },
+   {
+    "h": "注意",
+    "t": "実験機能は本番非推奨。jev-latest は 1 週間後に 1.14.0 へ更新される予定"
+   }
+  ],
+  "official_url": "https://typesafe.ai/blog/jev-1-14",
+  "source_date": "2026-10-14"
+ },
+ "deck": {
+  "overview": {
+   "takeaway": "Jev は文章でなく型付きの判断を返すモデル。1.14.0 で画像・box 型・長文脈が実験機能として加わった。",
+   "stat": {
+    "value": "$42",
+    "label": "入力 10 億トークンあたり(出力は無料)"
+   },
+   "steps": [
+    "状態を送る",
+    "型付きの質問",
+    "確信度つきで回答"
+   ],
+   "changes": [
+    "画像入力(danger zone ヘッダーで有効化)",
+    "box 型で画像内の位置を返す(1.14 のみ)",
+    "長文脈ヘッダーで 262k まで拡張"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "TypeSafe AI"
+    },
+    {
+     "k": "新版",
+     "v": "jev-1.14.0(2026-10-14)"
+    },
+    {
+     "k": "提供形態",
+     "v": "ホスト型 API"
+    },
+    {
+     "k": "既定の文脈",
+     "v": "64k / 質問ごと 32k"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "impact": {
+   "audience": "LLM の判断を自動化に組み込みたい開発者",
+   "benefits": [
+    "回答が型と確信度で返るため、コードで分岐・振り分けしやすい",
+    "確信度が低いときだけ人に回す設計ができる",
+    "入力のみ課金で、出力は無料と公式が説明している"
+   ],
+   "how_to": [
+    "POST /v1/systemone に state と型付きの質問を送る",
+    "新機能は model に jev-preview か jev-1.14.0 を指定する",
+    "画像や長文脈は専用の danger zone ヘッダーを付ける"
+   ],
+   "caveats": [
+    "画像・box・長文脈は本番非推奨で、仕様が変わり得る",
+    "ホスト型 API でローカル実行は不可。互換実装は第三者",
+    "日本語など CJK は英語ほど精度が出ないと公式が説明"
+   ],
+   "terms": [
+    {
+     "t": "System One",
+     "d": "ソフトウェアが使う型付きの判断を返すモデルの種類"
+    },
+    {
+     "t": "box 型",
+     "d": "画像内の対象を囲む四角を 4 辺の割合で返す質問"
+    },
+    {
+     "t": "danger zone",
+     "d": "実験機能を有効にする API ヘッダーの総称"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2",
+    "s3"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Jev: For the builders AND dreamers",
+    "publisher": "TypeSafe AI",
+    "url": "https://typesafe.ai/blog/jev-1-14",
+    "date": "2026-10-14"
+   },
+   {
+    "id": "s2",
+    "title": "Models(TypeSafe ドキュメント)",
+    "publisher": "TypeSafe AI",
+    "url": "https://docs.typesafe.ai/models",
+    "date": "2026-10-14"
+   },
+   {
+    "id": "s3",
+    "title": "Box(TypeSafe ドキュメント)",
+    "publisher": "TypeSafe AI",
+    "url": "https://docs.typesafe.ai/primitives/box"
+   }
+  ]
+ },
+ "mentions": [
+  {
+   "name": "hf_spaces",
+   "title": "multimodalart/jev-decision-index",
+   "url": "https://huggingface.co/spaces/multimodalart/jev-decision-index",
+   "metric": 137.0,
+   "metric_name": "trendingScore"
+  },
+  {
+   "name": "reddit_localllama",
+   "title": "Decision 3.0: open, multimodal decision models from 0.6B to 27B. Ranks #1 on both Jev Decision Index boards",
+   "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x3th4p/decision_30_open_multimodal_decision_models_from/",
+   "metric": 0.0,
+   "metric_name": "rank"
+  },
+  {
+   "name": "reddit_ollama",
+   "title": "Time to clean up those coloring pages... Qwen3.8:27b-mlx, anyone using Semif or Laya (alternatives to Jev)?",
+   "url": "https://www.reddit.com/r/ollama/comments/1x4l3jo/time_to_clean_up_those_coloring_pages/",
+   "metric": 0.0,
+   "metric_name": "rank"
+  },
+  {
+   "name": "devto",
+   "title": "How Do We Extract the “Why” from a PR into a CHANGELOG with Jev? 🤔",
+   "url": "https://dev.to/nyaomaru/how-do-we-extract-the-why-from-a-pr-into-a-changelog-with-jev-52pk",
+   "metric": 98.0,
+   "metric_name": "reactions"
+  },
+  {
+   "name": "devto",
+   "title": "I got Jev to zero mistakes. I'm still using Flash-Lite.",
+   "url": "https://dev.to/theycallmeswift/i-got-jev-to-zero-mistakes-im-still-using-flash-lite-2mo7",
+   "metric": 45.0,
+   "metric_name": "reactions"
+  }
+ ],
+ "jp_reactions": [
+  {
+   "site": "zenn",
+   "title": "正規表現の else が判定の65%を決めていた。Jevに任せて分かった置き換えの境界線",
+   "url": "https://zenn.dev/playpark/articles/regex-gate-vs-jev-classifier",
+   "date": "2026-10-14"
+  },
+  {
+   "site": "zenn",
+   "title": "Jevで飲食店の売上低下の原因を診断して、ローカルLLMと比べてみた",
+   "url": "https://zenn.dev/tnakano/articles/1ad0feaf0ab904",
+   "date": "2026-10-14"
+  },
+  {
+   "site": "zenn",
+   "title": "open-jev を TypeSafe AI 互換 API にして、公式 SDK のまま Databricks で呼べるようにしてみた",
+   "url": "https://zenn.dev/hiouchiy/articles/3c090b0e7e1b14",
+   "date": "2026-10-14"
+  }
+ ]
+}

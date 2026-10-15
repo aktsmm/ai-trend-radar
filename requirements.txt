@@ -1,5 +1,5 @@
-pyyaml
-jsonschema
-playwright
-python-pptx
+pyyaml>=6
+jsonschema>=4.20
+playwright>=1.45
+python-pptx>=1.0
 

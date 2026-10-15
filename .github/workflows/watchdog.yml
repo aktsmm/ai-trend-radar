@@ -1,0 +1,45 @@
+name: watchdog
+# AI-free operations guard: stuck agent runs, one retry of a failed pages build, and a dead-man alert when data goes stale.
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+permissions:
+  actions: write
+  contents: read
+  issues: write
+concurrency:
+  group: watchdog
+  cancel-in-progress: false
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      MAX_AGENT_MIN: "75"
+      MAX_STALE_DAYS: "9"
+    steps:
+      - name: Cancel digest runs stuck longer than MAX_AGENT_MIN
+        run: |
+          now=$(date +%s)
+          gh run list -R "$REPO" --workflow digest.lock.yml --status in_progress --json databaseId,startedAt --jq '.[] | "\(.databaseId) \(.startedAt)"' | while read id started; do
+            age=$(( (now - $(date -d "$started" +%s)) / 60 ))
+            if [ "$age" -gt "$MAX_AGENT_MIN" ]; then echo "cancelling $id (${age} min)"; gh run cancel -R "$REPO" "$id" || true; fi
+          done
+      - name: Retry the latest failed pages run once (only if no newer success)
+        run: |
+          read id concl attempt < <(gh run list -R "$REPO" --workflow pages.yml --limit 1 --json databaseId,conclusion,attempt --jq '.[0] | "\(.databaseId) \(.conclusion) \(.attempt)"' || echo "")
+          if [ "$concl" = "failure" ] && [ "${attempt:-1}" = "1" ]; then gh run rerun -R "$REPO" "$id" --failed || true; fi
+      - name: Dead-man check (last successful radar run)
+        run: |
+          last=$(gh run list -R "$REPO" --workflow radar.yml --status success --limit 1 --json updatedAt --jq '.[0].updatedAt // empty')
+          title="[watchdog] radar has not succeeded for over ${MAX_STALE_DAYS} days"
+          if [ -z "$last" ]; then stale=999; else stale=$(( ($(date +%s) - $(date -d "$last" +%s)) / 86400 )); fi
+          open=$(gh issue list -R "$REPO" --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          if [ "$stale" -gt "$MAX_STALE_DAYS" ]; then
+            [ -z "$open" ] && gh issue create -R "$REPO" --title "$title" --body "最後の成功: ${last:-なし}(${stale} 日前)。Actions の radar を確認してください。" || echo "issue #$open already open"
+          elif [ -n "$open" ]; then
+            gh issue close -R "$REPO" "$open" --comment "radar が回復しました。"
+          fi

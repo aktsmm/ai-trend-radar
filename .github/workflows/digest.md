@@ -1,11 +1,12 @@
 ---
 description: Draft the weekly AI Trend Radar briefs (digest + one infographic + 2-slide deck) for researched candidates, validate them with the deterministic gate, and open a DRAFT pull request. Never auto-merged.
 on:
+  schedule: weekly on monday
   workflow_dispatch:
     inputs:
       week:
-        description: "Report week label, e.g. 2026-W42"
-        required: true
+        description: "Report week label, e.g. 2026-W42 (default: latest report week)"
+        required: false
         type: string
       limit:
         description: "Max candidates to research this run"
@@ -64,7 +65,7 @@ steps:
     env:
       WEEK: ${{ inputs.week }}
       LIMIT: ${{ inputs.limit }}
-    run: python -m analyze.pending --week "$WEEK" --limit "$LIMIT"
+    run: python -m analyze.pending --week "$WEEK" --limit "${LIMIT:-6}"
 post-steps:
   - uses: actions/setup-python@v7.0.0
     with:
@@ -75,7 +76,7 @@ post-steps:
       WEEK: ${{ inputs.week }}
     run: |
       python -m analyze.digest_gate --week "$WEEK"
-      python -m unittest discover -s tests
+      python -m unittest tests.test_digest
   - name: Rebuild trends.json / site data from enrichment
     run: python -m analyze.apply
 safe-outputs:

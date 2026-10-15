@@ -175,7 +175,7 @@ def slide2(prs, t):
     sl.background.fill.solid()
     sl.background.fill.fore_color.rgb = rgb(PAPER)
     a, m = ACCENT.get(t["category"], "475569"), t["deck"]["impact"]
-    head(sl, t, 2, f"{t['keyword']}: 誰に何が嬉しいか・使い方・注意点", a)
+    head(sl, t, 2, (t.get("slides") or [{}])[0].get("title") or t["keyword"], a)
     rect(sl, 44, 120, 1192, 56, WHITE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=8)
     rect(sl, 44, 120, 8, 56, a)
     text(sl, 66, 120, 1160, 56, [[("想定する人   ", {"bold": True, "color": a}), (m["audience"], {})]], 22, INK, anchor=MSO_ANCHOR.MIDDLE)
@@ -187,9 +187,56 @@ def slide2(prs, t):
     foot(sl, t, m["refs"])
 
 
-def build(t, out):
+def new_prs():
     prs = Presentation()
     prs.slide_width, prs.slide_height = px(1280), px(720)
+    return prs
+
+
+def cover_slides(prs, data, items):
+    """Cover + table of contents for the weekly bundle."""
+    sl = prs.slides.add_slide(prs.slide_layouts[6])
+    sl.background.fill.solid()
+    sl.background.fill.fore_color.rgb = rgb(NAVY)
+    text(sl, 90, 120, 1100, 40, "AI Trend Radar", 28, AMBER, True)
+    text(sl, 90, 170, 1100, 100, "今週の AI トレンド・ブリーフ", 64, WHITE, True)
+    w = data["window"]
+    text(sl, 90, 290, 1100, 50, f"{w['label']} ・ {w['from']} 〜 {w['to']}", 30, "C9D1E3")
+    text(sl, 90, 380, 1100, 100, [[(str(len(items)), {"size": 84, "bold": True, "color": AMBER}), ("  件を一次情報で確認して掲載", {"size": 34, "color": WHITE})]], 34, WHITE)
+    text(sl, 90, 560, 1100, 100, "各キーワード 2 枚(概要 / 影響・使い方)。内容は公式の一次情報で確認したもので、要約は AI の下書きを照合して掲載しています。ベンダーが発表した数字は独自には検証していません。", 20, "C9D1E3")
+    sl = prs.slides.add_slide(prs.slide_layouts[6])
+    sl.background.fill.solid()
+    sl.background.fill.fore_color.rgb = rgb(PAPER)
+    rect(sl, 0, 0, 1280, 104, NAVY)
+    text(sl, 44, 30, 1000, 50, "目次", 36, WHITE, True, anchor=MSO_ANCHOR.MIDDLE)
+    dy = min(40, 590 // max(1, len(items)))
+    for i, t in enumerate(items):
+        y = 120 + i * dy
+        a = ACCENT.get(t["category"], "475569")
+        rect(sl, 44, y, 1192, dy - 4, WHITE, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=8)
+        text(sl, 56, y, 36, dy - 4, str(i + 1), 17, AMBER, True, anchor=MSO_ANCHOR.MIDDLE)
+        text(sl, 94, y, 200, dy - 4, t["keyword"], 18, INK, True, anchor=MSO_ANCHOR.MIDDLE)
+        rect(sl, 300, y + 4, 130, dy - 12, a, shape=MSO_SHAPE.ROUNDED_RECTANGLE, radius=12)
+        text(sl, 300, y + 4, 130, dy - 12, t["category"], 13, WHITE, True, PP_ALIGN.CENTER, MSO_ANCHOR.MIDDLE)
+        text(sl, 446, y, 700, dy - 4, ((t.get("slides") or [{}])[0].get("title") or t["deck"]["overview"]["takeaway"]), 16, "334455", anchor=MSO_ANCHOR.MIDDLE)
+        text(sl, 1160, y, 66, dy - 4, f"p.{3 + i * 2}", 15, MUTED, False, PP_ALIGN.RIGHT, MSO_ANCHOR.MIDDLE)
+
+
+def build_weekly(data, out):
+    items = [t for t in data["trends"] if t.get("deck")]
+    prs = new_prs()
+    cover_slides(prs, data, items)
+    for t in items:
+        slide1(prs, t)
+        slide2(prs, t)
+    prs.core_properties.title = f"AI Trend Radar {data['window']['label']}"
+    prs.core_properties.author = "AI Trend Radar"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    prs.save(str(out))
+
+
+def build(t, out):
+    prs = new_prs()
     slide1(prs, t)
     slide2(prs, t)
     prs.core_properties.title = f"{t['keyword']} - AI Trend Radar"
@@ -205,7 +252,9 @@ def run(out="site/downloads", only=None):
         if t.get("deck") and (not only or t["entity_id"] == only):
             build(t, ROOT / out / f"{t['entity_id']}.pptx")
             made.append(t["entity_id"])
-    print(len(made), "PPTX ->", ROOT / out)
+    if not only:
+        build_weekly(data, ROOT / out / f"weekly-{data['window']['label']}.pptx")
+    print(len(made), "PPTX (+ weekly bundle) ->", ROOT / out)
 
 
 def main():

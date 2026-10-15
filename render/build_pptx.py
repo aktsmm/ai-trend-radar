@@ -267,8 +267,8 @@ def build(t, out):
     prs.save(str(out))
 
 
-def run(out="site/downloads", only=None):
-    data = json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))
+def run(out="site/downloads", only=None, data=None):
+    data = data or json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))
     made = []
     for t in data["trends"]:
         if t.get("deck") and (not only or t["entity_id"] == only):

@@ -10,7 +10,8 @@ GitHub Pages から配信する、読み取り専用の静的 JSON です。認�
 | --- | --- |
 | `api/v1/index.json` | バージョン、取得時点、週の一覧、エンドポイントとダウンロードの URL テンプレート、注意書き |
 | `api/v1/latest.json` | 最新の週の掲載項目(軽量) |
-| `api/v1/weeks/<週>.json` | 週ごとの掲載項目(データがある週のみ) |
+| `api/v1/weeks/<週>.json` | 週ごとの掲載項目・テーマ・公式発表(掲載のあった全ての週) |
+| `w/<週>/index.html` ほか | 過去週のページと成果物(`assets/`、`downloads/` を含む)。最新週はルートにある |
 | `api/v1/keywords/<id>.json` | 1 件の詳細。ダイジェスト、図解、ブリーフ(deck)、確認記録、話題の根拠 |
 | `api/v1/categories/<category>.json` | カテゴリ別の軽量索引 |
 | `api/v1/candidates.json` | 観測候補(未掲載)と見送りの理由 |

@@ -51,6 +51,10 @@ tools:
     - "cat"
     - "ls"
     - "jq"
+    - "curl"
+    - "head"
+    - "grep"
+    - "python -c*"
     - "python -m analyze.digest_gate*"
 steps:
   - uses: actions/checkout@v7.0.1
@@ -113,7 +117,7 @@ details. Edit only the five files below under `data/reports/<week>/`; never touc
 ## Procedure (per candidate)
 
 1. Decide whether it is worth publishing: a real, notable product / model / release with an official first-party page dated inside `window`. Tiny personal repos, build-number bumps, third-party re-uploads, offensive-security tools: **reject** (write the reason to `rejected_candidates.json` as `{entity_id: "<one Japanese sentence>"}`). Rejecting is normal; never pad.
-2. Research with `web-fetch` / `microsoft_docs_*`: fetch the actual first-party pages (release notes, official blog, docs, model card) — not search snippets.
+2. Research with `web-fetch` (if it is denied in this run, use `curl -sL --max-time 30 <url>`; the firewall only allows the listed domains) / `microsoft_docs_*`: fetch the actual first-party pages (release notes, official blog, docs, model card) — not search snippets.
 3. (If the automatic category/kind is clearly wrong, set `category` / `kind` on the entity; categories: model, dev-tool, local-runtime, hardware, research, github-trending.) Add to `enrichment.json` → `entities.<id>`: `selection_reason`, `verification_status` (`verified` / `partially_verified`), `official_urls` (1–3 first-party HTTPS pages you fetched), `checks[]` (`mcp_name`, `tool`, `query`, `evidence_urls`, `evidence_published_at`, `result` in Japanese, `retrieved_at` ISO+09:00).
 4. Add `digest.json[id]`, `slides.json[id]` (exactly ONE `infographic` slide), `decks.json[id]` (`deck/1`: overview + impact + sources).
 

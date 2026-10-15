@@ -39,8 +39,10 @@ class ApiTests(unittest.TestCase):
     def test_every_item_has_detail_and_files(self):
         for i in self.j("latest.json")["items"]:
             self.assertTrue((self.api / "keywords" / f"{i['id']}.json").exists(), i["id"])
-            for k in ("infographic", "pdf", "pptx"):
-                self.assertTrue((SITE / i["urls"][k]).exists(), i["urls"][k])
+            self.assertTrue((SITE / i["urls"]["infographic"]).exists())
+            self.assertNotIn("pdf", i["urls"])
+            self.assertNotIn("pptx", i["urls"])
+            self.assertTrue((SITE / "enc" / f"{i['id']}.json").exists(), i["id"])
             self.assertTrue(i["headline"] and i["summary"] and i["official_urls"])
 
     def test_no_unverified_or_raw_fields_leak(self):
@@ -68,13 +70,16 @@ class SiteTests(unittest.TestCase):
                     continue
                 self.assertTrue((SITE / ref).exists(), f"{page}: {ref}")
 
-    def test_weekly_bundle_exists_and_no_stale_entity_files(self):
-        label = DATA["window"]["label"]
-        for f in (f"weekly-{label}.pdf", f"weekly-{label}.pptx"):
-            self.assertTrue((SITE / "downloads" / f).exists(), f)
+    def test_no_clear_text_briefs_are_published(self):
+        """Per-item / weekly PDF and PPTX, deck page images and the brief text must not be public; only encrypted blobs are."""
+        self.assertEqual([], [p.name for p in (SITE / "downloads").glob("*") if p.suffix in (".pdf", ".pptx")])
+        self.assertFalse((SITE / "assets" / "decks").exists())
+        for t in PUB:
+            blob = (SITE / "enc" / f"{t['entity_id']}.json").read_text(encoding="utf-8")
+            self.assertNotIn(t["deck"]["overview"]["takeaway"], blob)
+            self.assertEqual({"v", "iter", "salt", "iv", "data"}, set(json.loads(blob)))
         ids = {t["entity_id"] for t in PUB}
-        have = {p.stem for p in (SITE / "downloads").glob("*.pdf") if not p.stem.startswith("weekly-")}
-        self.assertEqual(ids, have)
+        self.assertEqual(ids, {p.stem for p in (SITE / "enc").glob("*.json")})
 
 
 if __name__ == "__main__":

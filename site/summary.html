@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>week summary</title>
+<link rel="stylesheet" href="summary.css">
+<style>body{margin:0;background:#fff}</style>
+</head>
+<body>
+<div id="out"></div>
+<script src="data.js"></script>
+<script src="summary.js"></script>
+<script>
+  document.getElementById("out").innerHTML = renderSummary(window.TRENDS);
+  document.fonts.ready.then(() => { document.body.dataset.ready = "1"; });
+</script>
+</body>
+</html>

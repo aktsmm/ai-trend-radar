@@ -29,7 +29,7 @@ def light(t, prefix="", self_url=True):
         "summary": (t.get("digest") or {}).get("summary", []), "published_at": t["primary"]["published_at"],
         "official_urls": t["official_urls"], "verification": {"status": v.get("status", "unverified"), "checked_at": checked},
         "urls": {**({"self": f"api/v1/keywords/{eid}.json"} if self_url else {}), "infographic": f"{prefix}assets/slides/{eid}.png",
-                 "pdf": f"{prefix}downloads/{eid}.pdf", "pptx": f"{prefix}downloads/{eid}.pptx", "page": f"{prefix}index.html#k-{eid}"},
+                 "page": f"{prefix}index.html#k-{eid}"},
     }
 
 
@@ -77,18 +77,15 @@ def main():
                                            "items": [light(t, f"w/{w}/", False) for t in pw], "themes": d.get("themes", []),
                                            "highlights": d.get("official_highlights", [])})
         old.append((w, len(pw), d["window"]))
-    weeks_info = [{"week": w, "window": win, "published": n, "url": f"api/v1/weeks/{w}.json", "page": f"w/{w}/index.html",
-                   "weekly_pdf": f"w/{w}/downloads/weekly-{w}.pdf", "weekly_pptx": f"w/{w}/downloads/weekly-{w}.pptx"} for w, n, win in old]
-    weeks_info.append({"week": week, "window": data["window"], "published": len(pub), "url": f"api/v1/weeks/{week}.json", "page": "index.html",
-                       "weekly_pdf": f"downloads/weekly-{week}.pdf", "weekly_pptx": f"downloads/weekly-{week}.pptx"})
+    weeks_info = [{"week": w, "window": win, "published": n, "url": f"api/v1/weeks/{w}.json", "page": f"w/{w}/index.html"} for w, n, win in old]
+    weeks_info.append({"week": week, "window": data["window"], "published": len(pub), "url": f"api/v1/weeks/{week}.json", "page": "index.html"})
     weeks_info.sort(key=lambda x: x["week"])
     dump(API / "index.json", {
         **{k: base[k] for k in ("version", "snapshot_at", "data_at")}, "latest_week": week,
         "weeks": weeks_info,
         "endpoints": {"latest": "api/v1/latest.json", "week": "api/v1/weeks/{week}.json", "keyword": "api/v1/keywords/{id}.json",
                       "category": "api/v1/categories/{category}.json", "candidates": "api/v1/candidates.json", "highlights": "api/v1/highlights.json", "themes": "api/v1/themes.json", "health": "api/v1/health.json"},
-        "downloads": {"pdf": "downloads/{id}.pdf", "pptx": "downloads/{id}.pptx", "weekly_pdf": f"downloads/weekly-{week}.pdf",
-                      "weekly_pptx": f"downloads/weekly-{week}.pptx", "all": "downloads/trends.json"},
+        "downloads": {"all": "downloads/trends.json"},
         "notes": ["読み取り専用の静的 JSON です。任意条件の検索 API はありません(静的ファイルのため)。",
                   "要約・図解・ブリーフは AI の下書きを一次情報と照合したものです。ベンダー発表の数字は独自には検証していません。",
                   "週が変わると latest.json は新しい週に切り替わります。過去週は weeks/<week>.json と w/<week>/ に残ります(掲載のある週のみ)。"]})

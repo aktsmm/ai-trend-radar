@@ -1,0 +1,26 @@
+.sm { width:1280px; height:720px; box-sizing:border-box; overflow:hidden; background:#f7f4ec; color:#1b2333; display:flex; flex-direction:column;
+  font-family:"Noto Sans CJK JP","Noto Sans JP","Yu Gothic","Meiryo",sans-serif; word-break:auto-phrase; line-break:strict; }
+.sm-head { background:#14213d; color:#fff; padding:20px 44px 16px; display:flex; justify-content:space-between; align-items:flex-end; }
+.sm-kick { color:#fca311; font-weight:800; letter-spacing:.12em; font-size:18px; } .sm h1 { margin:2px 0 0; font-size:38px; line-height:1.2; }
+.sm-week { text-align:right; font-size:34px; font-weight:800; color:#fca311; } .sm-week small { display:block; font-size:16px; color:#c9d1e3; font-weight:400; }
+.sm-body { flex:1; min-height:0; display:grid; grid-template-columns:360px 1fr; gap:24px; padding:18px 44px 8px; }
+.sm-left, .sm-right { min-height:0; display:flex; flex-direction:column; }
+.sm h2 { margin:0 0 8px; font-size:20px; color:#14213d; } .sm h2 small { font-size:13px; color:#667; font-weight:400; margin-left:6px; }
+.sm-nums { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:14px; }
+.sm-nums div { background:#fff; border:3px solid #14213d; border-radius:14px; padding:8px 4px; text-align:center; }
+.sm-nums b { display:block; font-size:44px; color:#c2410c; line-height:1.1; } .sm-nums span { font-size:12px; color:#556; line-height:1.25; display:block; }
+.sm-bar { display:grid; grid-template-columns:104px 1fr 28px; align-items:center; gap:8px; margin:5px 0; font-size:15px; }
+.sm-bar .t { background:#e6e0d0; border-radius:8px; height:18px; overflow:hidden; } .sm-bar i { display:block; height:100%; border-radius:8px; } .sm-bar .v { font-weight:800; text-align:right; }
+.sm-themes { flex:1; min-height:0; display:grid; grid-template-columns:1fr 1fr; grid-auto-rows:1fr; gap:10px; }
+.sm-th { background:#fff; border:3px solid #14213d; border-radius:14px; padding:8px 12px; display:flex; gap:10px; overflow:hidden; min-height:0; }
+.sm-th .no { flex:none; width:34px; height:34px; border-radius:50%; background:#14213d; color:#fff; font-weight:800; font-size:20px; display:flex; align-items:center; justify-content:center; }
+.sm-th h3 { margin:0 0 3px; font-size:19px; line-height:1.3; color:#14213d; } .sm-th h3 em { font-style:normal; font-size:11px; color:#667; font-weight:400; margin-left:4px; }
+.sm-th p { margin:0 0 4px; font-size:15px; line-height:1.4; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.sm-th .ch span { display:inline-block; background:#eef1f8; color:#0b7285; font-weight:700; font-size:12px; border-radius:10px; padding:1px 8px; margin:2px 4px 0 0; }
+.sm-h2b { margin-top:12px !important; }
+.sm-list { list-style:none; margin:0; padding:0; font-size:13px; line-height:1.3; overflow:hidden; }
+.sm-list li { display:flex; gap:6px; align-items:baseline; margin:3px 0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sm-list i { flex:none; width:9px; height:9px; border-radius:50%; } .sm-list b { flex:none; color:#14213d; }
+.sm-th .bgl { background:#f0f4ff; border-radius:8px; padding:3px 8px; font-size:13px; color:#334; -webkit-line-clamp:2; }
+.sm-foot { margin:0 44px; border-top:2px solid #e3dcc8; padding:8px 0 12px; font-size:14px; color:#556; white-space:nowrap; overflow:hidden; }
+.sm-foot b { color:#14213d; margin-right:8px; } .sm-pill { display:inline-block; background:var(--c); color:#fff; font-weight:700; border-radius:12px; padding:2px 12px; margin-right:6px; font-size:14px; }

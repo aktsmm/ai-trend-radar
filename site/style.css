@@ -54,6 +54,8 @@
 .theme{border-top:1px solid var(--line);padding:10px 0;font-size:14px} .theme h3{margin:0 0 4px;font-size:16px;color:#14213d}
 .theme .conf{font-size:11px;padding:1px 8px;border-radius:10px;background:#eef1f8;color:#445;margin-left:6px;font-weight:400}
 .theme ul{margin:4px 0;padding-left:18px} .theme .bg{background:#f0f4ff;border-radius:6px;padding:6px 10px;margin:6px 0}
+.info.wide{width:100%;max-width:760px;margin:6px 0 10px}
+.theme details.ev summary{cursor:pointer;font-size:12px;color:#1d4ed8} .theme .chips .src{font-size:12px;color:#556;margin-left:6px}
 .theme .chips a{display:inline-block;margin:2px 6px 2px 0;font-size:12px}
 .demo-nav{background:#eef1f8;font-size:12px;padding:4px 0} .demo-nav a{margin-right:12px}
 footer.site-footer{font-size:12px;color:var(--muted);padding-bottom:32px} footer h2{font-size:14px;margin:16px 0 4px;color:var(--ink)}
@@ -62,3 +64,12 @@ footer.site-footer{font-size:12px;color:var(--muted);padding-bottom:32px} footer
   dialog img{display:block;max-width:96vw;max-height:88vh}
   dialog button{position:absolute;top:6px;right:6px;border:0;border-radius:14px;padding:4px 14px;font:inherit;cursor:pointer;background:#fff}
   @media (max-width:640px){.score{float:none;display:block}.card{padding:12px}details.guide dl{grid-template-columns:1fr}.controls input[type=search]{width:100%}}
+
+.card .sel{display:block;font-size:12px;color:#445;margin:0 0 4px} .card .sel input{margin-right:4px}
+.controls select{padding:5px 10px;border:1px solid #9aa7c0;border-radius:16px;background:#fff;font:inherit;font-size:13px}
+.dlbar{position:sticky;bottom:0;z-index:5;background:#14213d;color:#fff;display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;justify-content:center;padding:8px 12px;font-size:13px}
+.dlbar button{border:1px solid #9aa7c0;background:#fff;color:#14213d;border-radius:16px;padding:4px 12px;cursor:pointer;font:inherit;font-size:13px}
+.dlbar button.primary,#pwdlg button.primary{background:#fca311;border-color:#fca311;font-weight:700} .dlbar button:disabled{opacity:.45;cursor:not-allowed}
+#pwdlg{border:0;border-radius:10px;padding:16px 20px;max-width:92vw;background:#fff;color:#1c2333} #pwdlg::backdrop{background:#000a}
+#pwdlg input[type=password]{display:block;width:260px;max-width:100%;padding:6px 10px;border:1px solid #9aa7c0;border-radius:8px;font:inherit;margin:8px 0}
+#pwdlg .pwrow{display:flex;gap:8px} #pwdlg button{position:static} #pwdlg button{border:1px solid #9aa7c0;background:#fff;border-radius:16px;padding:4px 14px;cursor:pointer;font:inherit} .pwerr{color:#b02a37;font-size:13px;min-height:1.2em;margin:6px 0 0}

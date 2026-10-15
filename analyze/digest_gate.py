@@ -154,6 +154,38 @@ def check_themes(themes, enrichment, decks):
     return errs
 
 
+def check_glossary(items, enrichment, decks, base_terms=()):
+    """Weekly glossary additions: general beginner definitions of terms that appear in a published entity; each cites that entity and one of its captured URLs."""
+    errs = []
+    if not isinstance(items, list):
+        return ["glossary: must be a list"]
+    if len(items) > 6:
+        errs.append("glossary: at most 6 new terms per week")
+    seen = set(base_terms)
+    for it in items:
+        who = f"glossary {it.get('term', '?')}"
+        if set(it) != {"term", "kind", "short", "explain", "entity", "ref"}:
+            errs.append(f"{who}: keys must be exactly term, kind, short, explain, entity, ref")
+            continue
+        if it["kind"] not in ("基礎", "仕組み"):
+            errs.append(f"{who}: kind must be 基礎 or 仕組み")
+        for k, n in (("term", 40), ("short", 40), ("explain", 220)):
+            if not isinstance(it[k], str) or not 2 <= len(it[k]) <= n:
+                errs.append(f"{who}: {k} must be 2-{n} characters")
+        if not isinstance(it["explain"], str) or len(it["explain"]) < 30:
+            errs.append(f"{who}: explain must be at least 30 characters")
+        errs += _text_problems(who, it)
+        key = re.sub(r"[\s・/()（）]", "", str(it["term"])).lower()
+        if key in seen:
+            errs.append(f"{who}: already in the glossary")
+        seen.add(key)
+        if it["entity"] not in decks or it["entity"] not in enrichment["entities"]:
+            errs.append(f"{who}: entity {it['entity']} is not a published, verified entity")
+        elif it["ref"] not in evidence_index(enrichment["entities"][it["entity"]]):
+            errs.append(f"{who}: ref {it['ref']} is not captured evidence of {it['entity']}")
+    return errs
+
+
 def check_batch(proposal, enrichment, window, current=None):
     """Returns (accepted_entity_ids, problems). `current` enables the diff-based change cap and deletion check."""
     keys = set(proposal["digest"]) | set(proposal["slides"]) | set(proposal["decks"])
@@ -195,6 +227,10 @@ def main(argv=None):
     tp = Path(a.proposal or wk) / "themes.json"
     if tp.exists():
         problems += check_themes(json.loads(tp.read_text(encoding="utf-8")), enr, proposal["decks"])
+    gp = Path(a.proposal or wk) / "glossary.json"
+    if gp.exists():
+        from analyze import glossary
+        problems += check_glossary(json.loads(gp.read_text(encoding="utf-8")), enr, proposal["decks"], glossary.known_terms(exclude_week=a.week))
     for p in problems:
         print("REJECT", p, file=sys.stderr)
     print(f"accepted {len(ok)} entities; {len(problems)} problem(s)")

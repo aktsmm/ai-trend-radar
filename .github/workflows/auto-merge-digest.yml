@@ -49,14 +49,22 @@ jobs:
             validate() {
               python -m analyze.digest_gate --week "$WEEK" --base .base || return 1
               python -m analyze.apply || return 1
-              # generated files must equal what the PR contains (the PR cannot smuggle data through them)
-              git diff --quiet "$oid" -- data/trends.json site/data.js || { echo "generated files differ from the PR"; return 1; }
+              # trusted regeneration: apply ran on the BASE trends.json + the validated report files only
+              mkdir -p /tmp/trusted && cp data/trends.json site/data.js /tmp/trusted/
               python -m render.build_all --offline || return 1
               python -m unittest discover -s tests || return 1
             }
             validate && ok=1 || ok=0
             if [ $ok = 1 ]; then
-              gh pr merge "$n" --squash --match-head-commit "$oid" && merged=$((merged+1))
+              if gh pr merge "$n" --squash --match-head-commit "$oid"; then
+                merged=$((merged+1))
+                # whatever generated files the PR carried are replaced by the trusted regeneration
+                git fetch -q origin "$BASE"; git reset -q --hard "origin/$BASE"
+                cp /tmp/trusted/trends.json data/trends.json; cp /tmp/trusted/data.js site/data.js
+                if ! git diff --quiet -- data/trends.json site/data.js; then
+                  git add data/trends.json site/data.js; git commit -q -m "digest: regenerate trends.json / data.js (trusted)"; git push -q origin "HEAD:$BASE"
+                fi
+              fi
             else
               gh pr comment "$n" --body "自動検証に失敗したためマージしませんでした(ログ: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)。" || true
             fi

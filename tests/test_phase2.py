@@ -50,7 +50,8 @@ class EnrichmentTests(unittest.TestCase):
                 for c in e["checks"]:
                     self.assertTrue(c["retrieved_at"] and c["evidence_urls"] and c["mcp_name"] and c["query"], eid)
             for u in e["official_urls"]:
-                self.assertEqual(self.enr["url_checks"][u]["status"], 200, u)
+                # 403 / 429 = the page answered but blocks datacenter IPs (bot protection, e.g. openai.com from CI); the badge only shows for 200
+                self.assertIn(self.enr["url_checks"][u]["status"], (200, 403, 429), u)
 
     def test_unverified_is_visible_in_site(self):
         js = (ROOT / "site" / "slides.js").read_text(encoding="utf-8")

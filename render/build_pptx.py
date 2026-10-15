@@ -167,7 +167,7 @@ def box(sl, x, y, w, h, title, items, a, kind="ul", warn=False):
             paras.append([(it["t"] + "  ", {"bold": True, "color": a}), (it["d"], {})])
         else:
             paras.append([((f"{i + 1}. " if kind == "ol" else "• "), {"bold": True, "color": a}), (it, {})])
-    text(sl, x + 16, y + 40, w - 32, h - 46, paras, 20 if kind != "dl" else 18, INK, space=4)
+    text(sl, x + 16, y + 40, w - 32, h - 46, paras, (20 if sum(len(x) if isinstance(x, str) else len(x["d"]) for x in items) <= 180 else 18) if kind != "dl" else 18, INK, space=4)
 
 
 def slide2(prs, t):

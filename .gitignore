@@ -8,3 +8,5 @@ site/assets/
 site/downloads/
 site/feed.xml
 site/api/
+.playwright-mcp/
+pat-result.md

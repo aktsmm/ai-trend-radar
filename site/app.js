@@ -16,7 +16,8 @@ const f = $("filters");
   f.appendChild(b);
 });
 $("q").oninput = render; $("cand").onchange = render;
-const sel = new Set();
+const excluded = new Set();  // unchecked cards; everything visible is checked by default
+let lastSig = "";
 [...new Set(published.map(t => t.kind))].sort().forEach(k => $("kindSel").add(new Option(`種類: ${k}`, k)));
 [...new Set(published.map(t => t.vendor).filter(Boolean))].sort().forEach(v => $("vendorSel").add(new Option(`提供元: ${v}`, v)));
 $("kindSel").onchange = $("vendorSel").onchange = render;
@@ -39,7 +40,7 @@ function card(t) {
   const g = t.digest, k = t.deck, s = t.slides[0], id = esc(t.entity_id);
   const checked = t.verification.checks.map(c => c.retrieved_at).sort().pop();
   return `<article class="card" id="k-${id}" aria-labelledby="h-${id}">
-    <label class="sel"><input type="checkbox" class="selbox" data-id="${id}"${sel.has(t.entity_id) ? " checked" : ""}> ダウンロードに含める</label>
+    <label class="sel"><input type="checkbox" class="selbox" data-id="${id}"${excluded.has(t.entity_id) ? "" : " checked"}> PDF / PowerPoint に含める</label>
     <span class="score" title="複数ソースでの言及の多さと新しさ(1位=100)">${t.score}<small> / 100</small></span>
     <div class="kicker"><span class="rank">#${t.rank}</span><strong>${esc(t.keyword)}</strong><span class="tag">${esc(t.category)}</span><span class="tag">${esc(t.kind)}</span>${t.tags.map(x => `<span class="tag">${esc(x)}</span>`).join("")}${badges(t)}</div>
     <h2 id="h-${id}">${esc(s.title)}</h2>
@@ -66,7 +67,10 @@ function render() {
   const q = $("q").value.trim().toLowerCase(), inCat = t => cat === "all" || t.category === cat, inQ = t => !q || hay(t).includes(q);
   const kindF = $("kindSel").value, vendF = $("vendorSel").value;
   const list = published.filter(t => inCat(t) && inQ(t) && (!kindF || t.kind === kindF) && (!vendF || t.vendor === vendF));
+  const sig = [cat, q, kindF, vendF].join("|");
+  if (sig !== lastSig) { excluded.clear(); lastSig = sig; }  // a new filter starts with everything checked
   window.__visible = list.map(t => t.entity_id);
+  queueMicrotask(syncBar);  // after the cards are drawn
   $("latest").innerHTML = list.length ? list.map(card).join("") : `<div class="empty">条件に一致する掲載項目はありません。「観測候補」も確認してください。</div>`;
   const showAll = $("cand").checked || q || cat !== "all";
   const cl = cands.filter(t => inCat(t) && inQ(t));
@@ -91,27 +95,24 @@ const hl = D.official_highlights || [];
 $("hlsum").textContent = `今週の公式発表(タイトルのみ) ${hl.length}件`;
 $("hllist").innerHTML = hl.length ? `<table class="cand"><thead><tr><th>日付</th><th>発表元</th><th>タイトル</th></tr></thead><tbody>${hl.map(x => `<tr><td>${esc(x.date)}</td><td>${esc(x.vendor)}</td><td>${link(x.url, x.title)}</td></tr>`).join("")}</tbody></table>` : `<div class="empty">該当なし</div>`;
 render();
+function chosen() { return (window.__visible || []).filter(id => !excluded.has(id)); }
 function syncBar() {
-  $("selcount").textContent = `${sel.size} 件選択中`;
-  $("dlpdf").disabled = $("dlpptx").disabled = sel.size === 0;
-  document.querySelectorAll(".selbox").forEach(c => { c.checked = sel.has(c.dataset.id); });
+  const n = chosen().length;
+  $("selcount").textContent = `${n} / ${(window.__visible || []).length} 件`;
+  $("dlpdf").disabled = $("dlpptx").disabled = n === 0;
+  document.querySelectorAll(".selbox").forEach(c => { c.checked = !excluded.has(c.dataset.id); });
 }
-$("latest").addEventListener("change", e => { const c = e.target.closest(".selbox"); if (!c) return; c.checked ? sel.add(c.dataset.id) : sel.delete(c.dataset.id); syncBar(); });
-$("selall").onclick = () => { (window.__visible || []).forEach(i => sel.add(i)); syncBar(); };
-$("selnone").onclick = () => { sel.clear(); syncBar(); };
-let dlKind = null, pwCache = "";
-const pwdlg = $("pwdlg");
-function askDownload(kind) { dlKind = kind; $("pwerr").textContent = ""; $("pwin").value = ""; $("pwmsg").textContent = `${sel.size} 件を ${kind === "pdf" ? "PDF" : "PowerPoint"} でダウンロードします。パスワードを入力してください。`; pwdlg.showModal(); $("pwin").focus(); }
-$("dlpdf").onclick = () => askDownload("pdf"); $("dlpptx").onclick = () => askDownload("pptx");
-$("pwcancel").onclick = () => pwdlg.close();
-$("pwform").addEventListener("submit", async e => {
-  e.preventDefault();
-  const ids = D.trends.filter(t => sel.has(t.entity_id) && t.deck).map(t => t.entity_id), btn = e.submitter;
-  $("pwerr").textContent = "処理中…"; if (btn) btn.disabled = true;
-  try { await BriefDownload.download(dlKind, ids, $("pwin").value, "", D.window.label); pwdlg.close(); }
-  catch (err) { $("pwerr").textContent = err.message === "wrong-password" ? "パスワードが違います。" : "ダウンロードに失敗しました: " + err.message; }
-  finally { if (btn) btn.disabled = false; }
-});
+$("latest").addEventListener("change", e => { const c = e.target.closest(".selbox"); if (!c) return; c.checked ? excluded.delete(c.dataset.id) : excluded.add(c.dataset.id); syncBar(); });
+$("selall").onclick = () => { excluded.clear(); syncBar(); };
+$("selnone").onclick = () => { (window.__visible || []).forEach(i => excluded.add(i)); syncBar(); };
+async function runDownload(kind, btn) {
+  const ids = D.trends.filter(t => t.deck && chosen().includes(t.entity_id)).map(t => t.entity_id), old = btn.textContent;
+  btn.disabled = true; btn.textContent = "作成中…";
+  try { await BriefDownload.download(kind, ids, "", D.window.label); }
+  catch (err) { alert("ダウンロードに失敗しました: " + err.message); }
+  finally { btn.textContent = old; syncBar(); }
+}
+$("dlpdf").onclick = e => runDownload("pdf", e.currentTarget); $("dlpptx").onclick = e => runDownload("pptx", e.currentTarget);
 syncBar();
 const st = D.source_status, ng = Object.keys(st).filter(k => st[k].ok === false);
 $("meta").textContent = `掲載 ${published.length} 件 / 観測候補 ${cands.length} 件 / 取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? `(取得できなかった: ${ng.join(", ")})` : "") + ` / 公開日が確認できず保留 ${D.pending.length} 件 / X 検索: ${D.x_integration.search && D.x_integration.search.ok ? "利用可" : "利用不可(ウォッチリストで補完)"}`;

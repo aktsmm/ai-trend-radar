@@ -18,7 +18,7 @@ GitHub Pages から配信する、読み取り専用の静的 JSON です。認�
 | `api/v1/themes.json` | 今週の共通テーマと背景の見立て(解釈。signals で各項目の根拠、refs で出典を示す) |
 | `api/v1/highlights.json` | 今週の公式発表(タイトル・発表元・日付・URL のみ。要約なし) |
 | `api/v1/health.json` | 取得元の成否、件数。監視用 |
-| `enc/<id>.json` | **暗号化された**ブリーフ(2 枚)。サイトの「ダウンロード」でパスワードを入れたときだけ、ブラウザ内で復号して PDF / PowerPoint にします(直接は読めません) |
+| `briefs/<id>.json` | ブリーフ 2 ページ(JPEG の base64)と、編集できるスライドの XML。サイトの PDF / PowerPoint ダウンロードの素材 |
 | `assets/slides/<id>.png` | 図解(1 キーワード 1 枚) |
 | `downloads/trends.json` | 週次レポート全体(内部形式。安定性は保証しない) |
 

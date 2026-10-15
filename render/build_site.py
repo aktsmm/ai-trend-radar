@@ -1,6 +1,6 @@
 """Build every publishable artifact into site/ (all git-ignored build output), for the latest week AND every archived week.
 
-latest week (root):   site/assets/slides, site/assets/summary.png, site/enc/<id>.json (encrypted briefs), site/template.pptx, site/downloads/trends.json
+latest week (root):   site/assets/slides, site/assets/summary.png, site/briefs/<id>.json (brief pages + slide XML), site/template.pptx, site/downloads/trends.json
 older weeks:          site/w/<week>/{index.html,data.js,assets/...,downloads/...}
 API (all weeks):      site/api/v1/...  (see render/build_api.py)
 
@@ -46,16 +46,15 @@ def slide_xmls(item, tmp):
         return [z.read(f"ppt/slides/slide{n}.xml").decode("utf-8") for n in (1, 2)]
 
 
-def render_week(page, hq, data, out, made, overflow, password):
+def render_week(page, hq, data, out, made, overflow):
     """Render one week into `out` (the site root for the latest week). data.js must already hold this week.
-    Public: infographics + week summary. Briefs (deck pages / slide XML) are only written encrypted to out/enc/<id>.json."""
+    Public: infographics, week summary, and briefs/<id>.json (2 deck page JPEGs + 2 slide XMLs) used by the browser-side PDF / PPTX download."""
     import base64
     import tempfile
     from pathlib import Path
 
-    from render import enc
     label = data["window"]["label"]
-    for d in ("assets/slides", "downloads", "enc"):
+    for d in ("assets/slides", "downloads", "briefs"):
         (out / d).mkdir(parents=True, exist_ok=True)
     tmpdir = Path(tempfile.mkdtemp())
     for t in data["trends"]:
@@ -75,8 +74,8 @@ def render_week(page, hq, data, out, made, overflow, password):
                 jpegs.append(hq.locator(".dslide").screenshot(type="jpeg", quality=82))
             payload = {"id": eid, "title": (t.get("slides") or [{}])[0].get("title") or t["keyword"],
                        "pages": [base64.b64encode(j).decode("ascii") for j in jpegs], "slides": slide_xmls(t, tmpdir / f"{eid}.pptx")}
-            (out / "enc" / f"{eid}.json").write_text(json.dumps(enc.encrypt(payload, password)), encoding="utf-8")
-            made["enc"] += 1
+            (out / "briefs" / f"{eid}.json").write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+            made["briefs"] += 1
     if W.published(data):
         page.goto((SITE / "summary.html").as_uri())
         page.wait_for_selector("body[data-ready='1']")
@@ -94,11 +93,9 @@ def main():
     a = ap.parse_args()
     latest = W.latest_label()
     archive = W.archive_weeks()
-    for d in ("assets/slides", "assets/decks", "downloads", "enc", "api", "w"):
+    for d in ("assets/slides", "assets/decks", "downloads", "briefs", "api", "w"):
         shutil.rmtree(SITE / d, ignore_errors=True)  # no stale artifacts survive a rebuild
-    made = {"png": 0, "enc": 0}
-    from render import enc as _enc
-    password = _enc.get_password()
+    made = {"png": 0, "briefs": 0}
     overflow = []
     with sync_playwright() as p:
         b = p.chromium.launch()
@@ -107,7 +104,7 @@ def main():
         for label, data in archive:
             out = SITE if label == latest else SITE / "w" / label
             (SITE / "data.js").write_text(data_js(data), encoding="utf-8")  # the renderers read window.TRENDS from site/data.js
-            render_week(page, hq, data, out, made, overflow, password)
+            render_week(page, hq, data, out, made, overflow)
             if label != latest:
                 (out / "data.js").write_text(data_js(data), encoding="utf-8")
                 (out / "index.html").write_text(week_index_html(label), encoding="utf-8")

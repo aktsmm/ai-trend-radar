@@ -33,6 +33,9 @@
     <div class="chips" id="filters" role="group" aria-label="カテゴリ"></div>
     <select id="kindSel" aria-label="種類で絞り込み"><option value="">種類: すべて</option></select>
     <select id="vendorSel" aria-label="提供元で絞り込み"><option value="">提供元: すべて</option></select>
+    <span class="dlgroup" role="group" aria-label="ブリーフのダウンロード">ブリーフ(2 枚/項目): <span id="selcount">0 件</span>
+      <button type="button" id="selall">全選択</button><button type="button" id="selnone">全解除</button>
+      <button type="button" id="dlpdf" class="primary">PDF</button><button type="button" id="dlpptx" class="primary">PowerPoint</button></span>
     <label class="tgl"><input type="checkbox" id="cand"> 観測候補(未確認)も検索対象にする</label>
   </div>
   <div id="latest" aria-live="polite"></div>
@@ -47,10 +50,6 @@
     <p>要約・図解・ブリーフは AI が下書きしたものを、決定的な検査(スキーマ・公式 URL の許可リスト・日付の整合・変更件数の上限)と一次情報の照合に通したものです。誤りに気づいた場合は GitHub の Issue でお知らせください。</p>
   </footer>
 </main>
-<div class="dlbar" id="dlbar" role="region" aria-label="ブリーフのダウンロード"><span id="selcount">0 件選択中</span>
-  <button type="button" id="selall">表示中をすべて選択</button><button type="button" id="selnone">選択解除</button>
-  <button type="button" id="dlpdf" class="primary" disabled>PDF(パスワード付き)</button><button type="button" id="dlpptx" class="primary" disabled>PowerPoint(パスワード付き)</button></div>
-<dialog id="pwdlg" aria-label="パスワード入力"><form method="dialog" id="pwform"><p id="pwmsg">ダウンロードにはパスワードが必要です。</p><input type="password" id="pwin" autocomplete="off" aria-label="パスワード"><div class="pwrow"><button type="submit" class="primary">ダウンロード</button><button type="button" id="pwcancel">キャンセル</button></div><p id="pwerr" class="pwerr" role="alert"></p></form></dialog>
 <dialog id="dlg" aria-label="図解の拡大表示"><button id="dlgclose" type="button">閉じる (Esc)</button><img id="dlgimg" alt=""></dialog>
 <script src="data.js"></script>
 <script src="download.js"></script>

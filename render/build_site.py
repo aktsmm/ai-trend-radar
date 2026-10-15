@@ -1,6 +1,6 @@
 """Build every publishable artifact into site/ (all git-ignored build output), for the latest week AND every archived week.
 
-latest week (root):   site/assets/slides|decks, site/downloads/*.pdf|*.pptx|weekly-<w>.*, site/index.html
+latest week (root):   site/assets/slides, site/assets/summary.png, site/enc/<id>.json (encrypted briefs), site/template.pptx, site/downloads/trends.json
 older weeks:          site/w/<week>/{index.html,data.js,assets/...,downloads/...}
 API (all weeks):      site/api/v1/...  (see render/build_api.py)
 
@@ -19,7 +19,7 @@ from render import build_pptx
 SITE = ROOT / "site"
 PDF_OPTS = dict(width="1280px", height="720px", print_background=True, margin={"top": "0", "right": "0", "bottom": "0", "left": "0"})
 
-OVERFLOW_JS = """() => [...document.querySelectorAll('.d-box,.d-card,.d-panel,.d-col,.d-body,.d-take,.d-aud,.pt,.panel,.iside,.ibody,.step')]
+OVERFLOW_JS = """() => [...document.querySelectorAll('.sm-th,.sm-body,.sm-left,.sm-right,.d-box,.d-card,.d-panel,.d-col,.d-body,.d-take,.d-aud,.pt,.panel,.iside,.ibody,.step')]
   .filter(e => e.scrollHeight > e.clientHeight + 1 || e.scrollWidth > e.clientWidth + 1).map(e => e.className)"""
 
 
@@ -30,7 +30,7 @@ def data_js(data):
 def week_index_html(label):
     """The week page is the normal index with relative paths re-pointed to the site root (data.js / assets / downloads stay local)."""
     t = (SITE / "index.html").read_text(encoding="utf-8")
-    for a, b in (('href="style.css"', 'href="../../style.css"'), ('src="app.js"', 'src="../../app.js"'), ('href="archive.html"', 'href="../../archive.html"'),
+    for a, b in (('href="style.css"', 'href="../../style.css"'), ('src="app.js"', 'src="../../app.js"'), ('src="download.js"', 'src="../../download.js"'), ('href="archive.html"', 'href="../../archive.html"'),
                  ('href="api/v1/index.json"', 'href="../../api/v1/index.json"'), ('href="feed.xml"', 'href="../../feed.xml"'), ('<a class="brand" href="#top">', '<a class="brand" href="../../index.html">')):
         t = t.replace(a, b)
     t = t.replace('<main class="wrap" id="top">', f'<main class="wrap" id="top">\n  <p class="stale" role="note">過去の週({label})のダイジェストです。<a href="../../index.html">最新の週へ</a> / <a href="../../archive.html">アーカイブ</a></p>', 1)
@@ -38,11 +38,26 @@ def week_index_html(label):
     return t
 
 
-def render_week(page, data, out, made, overflow, no_pptx):
-    """Render the infographics / briefs of one week into `out` (the site root for the latest week). data.js must already hold this week."""
+def slide_xmls(item, tmp):
+    """The two slide XML parts of an item's editable deck (python-pptx), reused by the browser-side PPTX merge."""
+    import zipfile
+    build_pptx.build(item, tmp)
+    with zipfile.ZipFile(tmp) as z:
+        return [z.read(f"ppt/slides/slide{n}.xml").decode("utf-8") for n in (1, 2)]
+
+
+def render_week(page, hq, data, out, made, overflow, password):
+    """Render one week into `out` (the site root for the latest week). data.js must already hold this week.
+    Public: infographics + week summary. Briefs (deck pages / slide XML) are only written encrypted to out/enc/<id>.json."""
+    import base64
+    import tempfile
+    from pathlib import Path
+
+    from render import enc
     label = data["window"]["label"]
-    for d in ("assets/slides", "assets/decks", "downloads"):
+    for d in ("assets/slides", "downloads", "enc"):
         (out / d).mkdir(parents=True, exist_ok=True)
+    tmpdir = Path(tempfile.mkdtemp())
     for t in data["trends"]:
         eid = t["entity_id"]
         if t.get("slides"):
@@ -52,44 +67,47 @@ def render_week(page, data, out, made, overflow, no_pptx):
             page.locator(".slide").screenshot(path=str(out / "assets" / "slides" / f"{eid}.png"))
             made["png"] += 1
         if t.get("deck"):
+            jpegs = []
             for n in (0, 1):
-                page.goto((SITE / "deck.html").as_uri() + f"?e={eid}&n={n}")
-                page.wait_for_selector("body[data-ready='1']")
-                overflow += [f"{label} {eid} deck p{n + 1}: {c}" for c in page.evaluate(OVERFLOW_JS)]
-                page.locator(".dslide").screenshot(path=str(out / "assets" / "decks" / f"{eid}-{n + 1}.png"))
-                made["deck_png"] += 1
-            page.goto((SITE / "deck.html").as_uri() + f"?e={eid}&all=1")
-            page.wait_for_selector("body[data-ready='1']")
-            page.pdf(path=str(out / "downloads" / f"{eid}.pdf"), **PDF_OPTS)
-            made["pdf"] += 1
+                hq.goto((SITE / "deck.html").as_uri() + f"?e={eid}&n={n}")
+                hq.wait_for_selector("body[data-ready='1']")
+                overflow += [f"{label} {eid} deck p{n + 1}: {c}" for c in hq.evaluate(OVERFLOW_JS)]
+                jpegs.append(hq.locator(".dslide").screenshot(type="jpeg", quality=82))
+            payload = {"id": eid, "title": (t.get("slides") or [{}])[0].get("title") or t["keyword"],
+                       "pages": [base64.b64encode(j).decode("ascii") for j in jpegs], "slides": slide_xmls(t, tmpdir / f"{eid}.pptx")}
+            (out / "enc" / f"{eid}.json").write_text(json.dumps(enc.encrypt(payload, password)), encoding="utf-8")
+            made["enc"] += 1
     if W.published(data):
-        page.goto((SITE / "deck.html").as_uri() + "?weekly=1")
+        page.goto((SITE / "summary.html").as_uri())
         page.wait_for_selector("body[data-ready='1']")
-        overflow += [f"{label} weekly: {c}" for c in page.evaluate(OVERFLOW_JS)]
-        page.pdf(path=str(out / "downloads" / f"weekly-{label}.pdf"), **PDF_OPTS)
-        made["pdf"] += 1
+        overflow += [f"{label} summary: {c}" for c in page.evaluate(OVERFLOW_JS)]
+        page.locator(".sm").screenshot(path=str(out / "assets" / "summary.png"))
+        made["png"] += 1
+    prs = build_pptx.new_prs()
+    prs.save(str(out / "template.pptx"))
     (out / "downloads" / "trends.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
-    if not no_pptx:
-        build_pptx.run(str((out / "downloads").relative_to(ROOT)), data=data)
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--no-pptx", action="store_true")
+    ap.add_argument("--no-pptx", action="store_true", help="(ignored; kept for compatibility)")
     a = ap.parse_args()
     latest = W.latest_label()
     archive = W.archive_weeks()
-    for d in ("assets/slides", "assets/decks", "downloads", "api", "w"):
+    for d in ("assets/slides", "assets/decks", "downloads", "enc", "api", "w"):
         shutil.rmtree(SITE / d, ignore_errors=True)  # no stale artifacts survive a rebuild
-    made = {"png": 0, "deck_png": 0, "pdf": 0}
+    made = {"png": 0, "enc": 0}
+    from render import enc as _enc
+    password = _enc.get_password()
     overflow = []
     with sync_playwright() as p:
         b = p.chromium.launch()
         page = b.new_page(viewport={"width": 1280, "height": 720}, device_scale_factor=1)
+        hq = b.new_page(viewport={"width": 1280, "height": 720}, device_scale_factor=1.25)
         for label, data in archive:
             out = SITE if label == latest else SITE / "w" / label
             (SITE / "data.js").write_text(data_js(data), encoding="utf-8")  # the renderers read window.TRENDS from site/data.js
-            render_week(page, data, out, made, overflow, a.no_pptx)
+            render_week(page, hq, data, out, made, overflow, password)
             if label != latest:
                 (out / "data.js").write_text(data_js(data), encoding="utf-8")
                 (out / "index.html").write_text(week_index_html(label), encoding="utf-8")

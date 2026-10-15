@@ -16,7 +16,6 @@
 <div class="demo-nav" aria-label="関連サイト"><div class="wrap"><span>関連サイト:</span> <a href="https://aktsmm.github.io/azure-update-digest/">Azure Update Digest</a> <a href="https://aktsmm.github.io/m365-copilot-update-digest/">M365 Copilot Update Digest</a> <a href="https://aktsmm.github.io/vscode-copilot-digest/index.html">VS Code Copilot Digest</a> <a href="https://aktsmm.github.io/daily-dev-byte/">Daily Dev Byte</a></div></div>
 <main class="wrap" id="top">
   <p class="lead">過去 1 週間に AI・ローカル LLM 界隈で出た新製品・モデル・リリースのうち、公式の一次情報で確認できたものを日本語で整理しています。各項目に図解 1 枚と、2 枚構成のブリーフ(PDF / PowerPoint)を付けています。</p>
-  <div class="dl" id="weekly" role="group" aria-label="今週の全ブリーフ"></div>
   <details class="guide" open>
     <summary>このページの見方</summary>
     <dl>
@@ -32,6 +31,8 @@
   <div class="controls">
     <input type="search" id="q" placeholder="キーワードで絞り込み" aria-label="キーワードで絞り込み">
     <div class="chips" id="filters" role="group" aria-label="カテゴリ"></div>
+    <select id="kindSel" aria-label="種類で絞り込み"><option value="">種類: すべて</option></select>
+    <select id="vendorSel" aria-label="提供元で絞り込み"><option value="">提供元: すべて</option></select>
     <label class="tgl"><input type="checkbox" id="cand"> 観測候補(未確認)も検索対象にする</label>
   </div>
   <div id="latest" aria-live="polite"></div>
@@ -46,8 +47,13 @@
     <p>要約・図解・ブリーフは AI が下書きしたものを、決定的な検査(スキーマ・公式 URL の許可リスト・日付の整合・変更件数の上限)と一次情報の照合に通したものです。誤りに気づいた場合は GitHub の Issue でお知らせください。</p>
   </footer>
 </main>
+<div class="dlbar" id="dlbar" role="region" aria-label="ブリーフのダウンロード"><span id="selcount">0 件選択中</span>
+  <button type="button" id="selall">表示中をすべて選択</button><button type="button" id="selnone">選択解除</button>
+  <button type="button" id="dlpdf" class="primary" disabled>PDF(パスワード付き)</button><button type="button" id="dlpptx" class="primary" disabled>PowerPoint(パスワード付き)</button></div>
+<dialog id="pwdlg" aria-label="パスワード入力"><form method="dialog" id="pwform"><p id="pwmsg">ダウンロードにはパスワードが必要です。</p><input type="password" id="pwin" autocomplete="off" aria-label="パスワード"><div class="pwrow"><button type="submit" class="primary">ダウンロード</button><button type="button" id="pwcancel">キャンセル</button></div><p id="pwerr" class="pwerr" role="alert"></p></form></dialog>
 <dialog id="dlg" aria-label="図解の拡大表示"><button id="dlgclose" type="button">閉じる (Esc)</button><img id="dlgimg" alt=""></dialog>
 <script src="data.js"></script>
+<script src="download.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

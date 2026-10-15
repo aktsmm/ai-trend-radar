@@ -8,7 +8,6 @@ const ageDays = (Date.now() - Date.parse(D.last_successful_report_at)) / 8640000
 if (ageDays > 9 && !location.pathname.includes("/w/")) { const w = document.createElement("p"); w.className = "stale"; w.setAttribute("role", "alert"); w.textContent = `注意: データの最終更新が ${Math.floor(ageDays)} 日前です。取得または更新が止まっている可能性があります(最新の状態は api/v1/health.json)。`; document.querySelector("main").prepend(w); }
 $("period").textContent = `対象期間 ${D.window.from} 〜 ${D.window.to}(${D.window.label}${D.window.partial ? "・集計途中" : ""}) / データ更新 ${D.last_successful_report_at.slice(0,16).replace("T"," ")} UTC` + (D.baseline.is_baseline ? ` / 蓄積 ${D.baseline.snapshots} 日分のため「今週の注目」表示` : "");
 
-$("weekly").innerHTML = `<a href="downloads/weekly-${D.window.label}.pdf" download>今週の全ブリーフ PDF(表紙・目次つき)</a><a href="downloads/weekly-${D.window.label}.pptx" download>今週の全ブリーフ PowerPoint</a>`;
 const f = $("filters");
 ["all", ...CATS].forEach(c => {
   const b = document.createElement("button");
@@ -17,6 +16,10 @@ const f = $("filters");
   f.appendChild(b);
 });
 $("q").oninput = render; $("cand").onchange = render;
+const sel = new Set();
+[...new Set(published.map(t => t.kind))].sort().forEach(k => $("kindSel").add(new Option(`種類: ${k}`, k)));
+[...new Set(published.map(t => t.vendor).filter(Boolean))].sort().forEach(v => $("vendorSel").add(new Option(`提供元: ${v}`, v)));
+$("kindSel").onchange = $("vendorSel").onchange = render;
 
 const hay = t => [t.keyword, t.vendor, t.category, ...(t.tags || []), t.digest ? t.digest.summary.join(" ") : t.summary].join(" ").toLowerCase();
 const box = (h, items, cls) => items && items.length ? `<div class="box ${cls || ""}"><h3>${h}</h3><ul>${items.map(x => `<li>${esc(x)}</li>`).join("")}</ul></div>` : "";
@@ -36,6 +39,7 @@ function card(t) {
   const g = t.digest, k = t.deck, s = t.slides[0], id = esc(t.entity_id);
   const checked = t.verification.checks.map(c => c.retrieved_at).sort().pop();
   return `<article class="card" id="k-${id}" aria-labelledby="h-${id}">
+    <label class="sel"><input type="checkbox" class="selbox" data-id="${id}"${sel.has(t.entity_id) ? " checked" : ""}> ダウンロードに含める</label>
     <span class="score" title="複数ソースでの言及の多さと新しさ(1位=100)">${t.score}<small> / 100</small></span>
     <div class="kicker"><span class="rank">#${t.rank}</span><strong>${esc(t.keyword)}</strong><span class="tag">${esc(t.category)}</span><span class="tag">${esc(t.kind)}</span>${t.tags.map(x => `<span class="tag">${esc(x)}</span>`).join("")}${badges(t)}</div>
     <h2 id="h-${id}">${esc(s.title)}</h2>
@@ -46,7 +50,6 @@ function card(t) {
     <div class="row">
       <button type="button" class="info" data-e="${id}" aria-label="図解を拡大: ${esc(t.keyword)}"><img src="assets/slides/${id}.png" width="1280" height="720" loading="lazy" alt="${esc(altText(t))}"></button>
       <div class="side">
-        <div class="dl" role="group" aria-label="ダウンロード"><a href="downloads/${id}.pdf" download>ブリーフ PDF(2 枚)</a><a href="downloads/${id}.pptx" download>ブリーフ PowerPoint(2 枚)</a></div>
         <h3>出典 <small>(確認に使った一次情報)</small></h3>
         <ul>${k.sources.map(x => `<li>[${esc(x.id)}] ${esc(x.publisher)}: ${link(x.url, x.title)}${x.date ? ` (${esc(x.date)})` : ""}</li>`).join("")}</ul>
         <h3>公式 URL</h3>
@@ -61,7 +64,9 @@ function card(t) {
 function render() {
   [...f.children].forEach(b => b.setAttribute("aria-pressed", b.dataset.c === cat));
   const q = $("q").value.trim().toLowerCase(), inCat = t => cat === "all" || t.category === cat, inQ = t => !q || hay(t).includes(q);
-  const list = published.filter(t => inCat(t) && inQ(t));
+  const kindF = $("kindSel").value, vendF = $("vendorSel").value;
+  const list = published.filter(t => inCat(t) && inQ(t) && (!kindF || t.kind === kindF) && (!vendF || t.vendor === vendF));
+  window.__visible = list.map(t => t.entity_id);
   $("latest").innerHTML = list.length ? list.map(card).join("") : `<div class="empty">条件に一致する掲載項目はありません。「観測候補」も確認してください。</div>`;
   const showAll = $("cand").checked || q || cat !== "all";
   const cl = cands.filter(t => inCat(t) && inQ(t));
@@ -76,21 +81,43 @@ function render() {
 const TH = D.themes || [], byId = Object.fromEntries(D.trends.map(t => [t.entity_id, t]));
 if (TH.length) {
   $("themes").hidden = false;
-  $("themelist").innerHTML = TH.map(th => `<div class="theme"><h3>${esc(th.title)}<span class="conf">確度: ${{high:"高",medium:"中",low:"低"}[th.confidence]}</span></h3>
+  const alt = `${D.window.label} の 1 週間のまとめ。テーマ: ${TH.map(x => x.title).join(" / ")}`;
+  $("themelist").innerHTML = `<button type="button" class="info wide" aria-label="週のまとめ図を拡大"><img src="assets/summary.png" width="1280" height="720" alt="${esc(alt)}"></button>` + TH.map(th => `<div class="theme"><h3>${esc(th.title)}<span class="conf">確度: ${{high:"高",medium:"中",low:"低"}[th.confidence]}</span></h3>
     <div>${esc(th.summary)}</div>
     <div class="bg"><strong>背景の見立て</strong><ul>${th.background.map(b => `<li>${esc(b)}</li>`).join("")}</ul></div>
-    <div><strong>根拠にした項目</strong><ul>${th.signals.map(s => `<li><a href="#k-${esc(s.entity)}">${esc((byId[s.entity] || {keyword: s.entity}).keyword)}</a>: ${esc(s.note)}</li>`).join("")}</ul></div>
-    <div class="chips">出典: ${th.refs.map((u, i) => link(u, `[${i + 1}]`)).join(" ")}</div></div>`).join("");
+    <details class="ev"><summary>根拠にした項目と出典</summary><div class="chips">${th.signals.map(s => `<a href="#k-${esc(s.entity)}" title="${esc(s.note)}">${esc((byId[s.entity] || {keyword: s.entity}).keyword)}</a>`).join("")}<span class="src">出典: ${th.refs.map((u, i) => link(u, `[${i + 1}]`)).join(" ")}</span></div></details></div>`).join("");
 }
 const hl = D.official_highlights || [];
 $("hlsum").textContent = `今週の公式発表(タイトルのみ) ${hl.length}件`;
 $("hllist").innerHTML = hl.length ? `<table class="cand"><thead><tr><th>日付</th><th>発表元</th><th>タイトル</th></tr></thead><tbody>${hl.map(x => `<tr><td>${esc(x.date)}</td><td>${esc(x.vendor)}</td><td>${link(x.url, x.title)}</td></tr>`).join("")}</tbody></table>` : `<div class="empty">該当なし</div>`;
 render();
+function syncBar() {
+  $("selcount").textContent = `${sel.size} 件選択中`;
+  $("dlpdf").disabled = $("dlpptx").disabled = sel.size === 0;
+  document.querySelectorAll(".selbox").forEach(c => { c.checked = sel.has(c.dataset.id); });
+}
+$("latest").addEventListener("change", e => { const c = e.target.closest(".selbox"); if (!c) return; c.checked ? sel.add(c.dataset.id) : sel.delete(c.dataset.id); syncBar(); });
+$("selall").onclick = () => { (window.__visible || []).forEach(i => sel.add(i)); syncBar(); };
+$("selnone").onclick = () => { sel.clear(); syncBar(); };
+let dlKind = null, pwCache = "";
+const pwdlg = $("pwdlg");
+function askDownload(kind) { dlKind = kind; $("pwerr").textContent = ""; $("pwin").value = ""; $("pwmsg").textContent = `${sel.size} 件を ${kind === "pdf" ? "PDF" : "PowerPoint"} でダウンロードします。パスワードを入力してください。`; pwdlg.showModal(); $("pwin").focus(); }
+$("dlpdf").onclick = () => askDownload("pdf"); $("dlpptx").onclick = () => askDownload("pptx");
+$("pwcancel").onclick = () => pwdlg.close();
+$("pwform").addEventListener("submit", async e => {
+  e.preventDefault();
+  const ids = D.trends.filter(t => sel.has(t.entity_id) && t.deck).map(t => t.entity_id), btn = e.submitter;
+  $("pwerr").textContent = "処理中…"; if (btn) btn.disabled = true;
+  try { await BriefDownload.download(dlKind, ids, $("pwin").value, "", D.window.label); pwdlg.close(); }
+  catch (err) { $("pwerr").textContent = err.message === "wrong-password" ? "パスワードが違います。" : "ダウンロードに失敗しました: " + err.message; }
+  finally { if (btn) btn.disabled = false; }
+});
+syncBar();
 const st = D.source_status, ng = Object.keys(st).filter(k => st[k].ok === false);
 $("meta").textContent = `掲載 ${published.length} 件 / 観測候補 ${cands.length} 件 / 取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? `(取得できなかった: ${ng.join(", ")})` : "") + ` / 公開日が確認できず保留 ${D.pending.length} 件 / X 検索: ${D.x_integration.search && D.x_integration.search.ok ? "利用可" : "利用不可(ウォッチリストで補完)"}`;
 
 const dlg = $("dlg");
-$("latest").addEventListener("click", e => {
+document.addEventListener("click", e => {
   const b = e.target.closest(".info"); if (!b) return;
   opener = b; $("dlgimg").src = b.querySelector("img").src; $("dlgimg").alt = b.querySelector("img").alt; dlg.showModal();
 });

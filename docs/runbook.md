@@ -28,6 +28,7 @@
 ## Secret と期限
 
 - `COPILOT_GITHUB_TOKEN`: fine-grained PAT(Copilot Requests のみ。このリポジトリに限定、有効期限 30 日)。**期限が切れると digest が止まる**ので、期限の 1 週間前に再発行して Secret を更新する(watchdog の Issue でも気づける)。
+- `DOWNLOAD_PASSWORD`: ブリーフのダウンロード用パスワード(`pages` のビルドで暗号化に使う。未設定だとビルドが失敗する)。変えるときは Secret を更新して `pages` を再実行する(過去に配布したファイルには影響しない)。
 - `BRAVE_API_KEY`(任意)。
 - 値はログ・成果物に出さない。
 

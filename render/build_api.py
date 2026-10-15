@@ -57,6 +57,8 @@ def main():
         dump(API / "categories" / f"{cat}.json", {**base, "category": cat, "items": [i for i, t in zip(items, pub) if t["category"] == cat]})
     dump(API / "themes.json", {**base, "note": "解釈(AI の見立て)。根拠となる項目と出典を signals / refs に示す", "items": data.get("themes", [])})
     dump(API / "highlights.json", {**base, "items": data.get("official_highlights", [])})
+    from analyze import glossary
+    dump(API / "glossary.json", {**base, "note": "初心者向けの用語解説(基礎は手作成、項目別は各ブリーフの用語メモ)。数値や仕様の根拠は各項目の公式 URL を参照", "items": glossary.glossary_items(W.archive_weeks())})
     dump(API / "candidates.json", {**base, "items": [{"id": t["entity_id"], "keyword": t["keyword"], "category": t["category"], "rank": t["rank"],
                                                      "status": "skipped" if t["entity_id"] in rej else "not_researched", "reason": rej.get(t["entity_id"]),
                                                      "primary_url": t["primary"]["url"]} for t in cand],
@@ -84,7 +86,7 @@ def main():
         **{k: base[k] for k in ("version", "snapshot_at", "data_at")}, "latest_week": week,
         "weeks": weeks_info,
         "endpoints": {"latest": "api/v1/latest.json", "week": "api/v1/weeks/{week}.json", "keyword": "api/v1/keywords/{id}.json",
-                      "category": "api/v1/categories/{category}.json", "candidates": "api/v1/candidates.json", "highlights": "api/v1/highlights.json", "themes": "api/v1/themes.json", "health": "api/v1/health.json"},
+                      "category": "api/v1/categories/{category}.json", "candidates": "api/v1/candidates.json", "highlights": "api/v1/highlights.json", "themes": "api/v1/themes.json", "glossary": "api/v1/glossary.json", "health": "api/v1/health.json"},
         "downloads": {"all": "downloads/trends.json"},
         "notes": ["読み取り専用の静的 JSON です。任意条件の検索 API はありません(静的ファイルのため)。",
                   "要約・図解・ブリーフは AI の下書きを一次情報と照合したものです。ベンダー発表の数字は独自には検証していません。",

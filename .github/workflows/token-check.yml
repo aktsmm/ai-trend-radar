@@ -19,6 +19,7 @@ jobs:
       - name: Check COPILOT_GITHUB_TOKEN
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
           PAT: ${{ secrets.COPILOT_GITHUB_TOKEN }}
           WARN_DAYS: "14"
         run: |

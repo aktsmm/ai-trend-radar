@@ -43,7 +43,7 @@ function card(t) {
     <label class="sel"><input type="checkbox" class="selbox" data-id="${id}"${excluded.has(t.entity_id) ? "" : " checked"}> PDF / PowerPoint に含める</label>
     <span class="score" title="複数ソースでの言及の多さと新しさ(1位=100)">${t.score}<small> / 100</small></span>
     <div class="kicker"><span class="rank">#${t.rank}</span><strong>${esc(t.keyword)}</strong><span class="tag">${esc(t.category)}</span><span class="tag">${esc(t.kind)}</span>${t.tags.map(x => `<span class="tag">${esc(x)}</span>`).join("")}${badges(t)}</div>
-    <h2 id="h-${id}">${esc(s.title)}</h2>
+    <h2 id="h-${id}">${(t.official_urls || [])[0] ? `<a class="tl" href="${esc(t.official_urls[0])}" rel="noopener" title="公式の発表を開く">${esc(s.title)}</a>` : esc(s.title)}</h2>
     <div class="sub">${esc(t.vendor || "")}${t.primary.published_at ? ` ・ 一次情報の公開 ${t.primary.published_at.slice(0, 10)}` : ""}${checked ? ` ・ 確認日 ${checked.slice(0, 10)}` : ""}</div>
     <div class="summary">${g.summary.map(x => `<p>${esc(x)}</p>`).join("")}</div>
     <div class="why">なぜ話題か: ${esc(g.why_trending)}${g.audience ? ` / 想定読者: ${esc(g.audience)}` : ""}</div>

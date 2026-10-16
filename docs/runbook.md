@@ -50,3 +50,11 @@
 - `data/trends.json` と `site/data.js` は信頼せず、信頼コードで再生成して PR の内容と一致することを要求する。
 - `--match-head-commit` で、検証後に PR が更新された場合はマージしない。
 - ゲートは形式・出典・日付の整合までで、本文の事実誤りは検出できない。サイトに「AI の下書きを一次情報と照合」の注意書きを常時表示し、誤りは GitHub Issue で受け付ける。
+
+## 運用ガード(姉妹サイトから取り入れ)
+
+- token-check.yml: 毎週月曜 09:20 JST に COPILOT_GITHUB_TOKEN の有効性と期限(14 日前)を確認し、問題があれば Issue を作る。回復すると自動で閉じる。
+- watchdog.yml: digest が失敗したら 1 回だけ再 dispatch、2 回連続失敗は Issue にする。
+- radar.yml: データ commit の push は rebase して最大 4 回リトライ。
+- digest_gate: 中身のない要約(定型句、重複、短すぎる行)を reject する。
+

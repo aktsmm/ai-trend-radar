@@ -32,6 +32,23 @@ jobs:
         run: |
           read id concl attempt < <(gh run list -R "$REPO" --workflow pages.yml --limit 1 --json databaseId,conclusion,attempt --jq '.[0] | "\(.databaseId) \(.conclusion) \(.attempt)"' || echo "")
           if [ "$concl" = "failure" ] && [ "${attempt:-1}" = "1" ]; then gh run rerun -R "$REPO" "$id" --failed || true; fi
+      - name: Re-dispatch a failed digest run (at most once; two failures in a row become an issue)
+        run: |
+          mapfile -t R < <(gh run list -R "$REPO" --workflow digest.lock.yml --limit 2 --json conclusion,status,createdAt --jq '.[] | "\(.conclusion) \(.status) \(.createdAt)"')
+          set -- ${R[0]}; c1=$1; s1=$2; t1=$3
+          set -- ${R[1]:-none none none}; c2=$1
+          [ "$c1" = "failure" ] || { echo "latest digest run: ${c1:-none}/${s1:-none}"; exit 0; }
+          age=$(( $(date +%s) - $(date -d "$t1" +%s) ))
+          [ "$age" -lt 172800 ] || { echo "failure older than 48 h; not retrying"; exit 0; }
+          if [ "$c2" = "failure" ]; then
+            title="[watchdog] digest が連続で失敗しています"
+            open=$(gh issue list -R "$REPO" --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+            [ -z "$open" ] && gh issue create -R "$REPO" --title "$title" --body "digest.lock.yml が 2 回連続で失敗しました。Actions のログと COPILOT_GITHUB_TOKEN を確認してください。" || true
+            exit 0
+          fi
+          WEEK=$(gh api "repos/$REPO/contents/data/trends.json" -H "Accept: application/vnd.github.raw" --jq '.window.label')
+          echo "retrying digest for $WEEK"
+          gh workflow run digest.lock.yml -R "$REPO" -f week="$WEEK"
       - name: Dead-man check (last successful radar run)
         run: |
           last=$(gh run list -R "$REPO" --workflow radar.yml --status success --limit 1 --json updatedAt --jq '.[0].updatedAt // empty')

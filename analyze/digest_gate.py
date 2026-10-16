@@ -87,6 +87,24 @@ def _date_ok(d, url, idx, window, who):
     return errs
 
 
+FILLER_RE = re.compile(r"(詳細は(公式|こちら|リンク)|注目されています。?$|今後の動向に注目|さまざまな(用途|場面)で活用|大きな話題|期待されます。?$)")
+
+
+def filler_problems(eid, digest):
+    """Quality: summary lines must carry content. Reject duplicated lines, very short lines and stock filler phrases."""
+    out = []
+    lines = list(digest.get("summary", [])) + [digest.get("why_trending", "")]
+    for x in lines:
+        if len(x.strip()) < 15:
+            out.append(f"{eid} digest: line too short to be informative: {x!r}")
+        if FILLER_RE.search(x):
+            out.append(f"{eid} digest: filler phrase without concrete content: {x!r}")
+    norm = [re.sub(r"\W", "", x) for x in lines]
+    if len(set(norm)) != len(norm):
+        out.append(f"{eid} digest: duplicated sentence")
+    return out
+
+
 def check_entity(eid, digest, slides, deck, enrichment, window):
     """Return a list of problems (empty list = acceptable)."""
     ent = enrichment["entities"].get(eid)
@@ -98,6 +116,8 @@ def check_entity(eid, digest, slides, deck, enrichment, window):
         errs.append(f"{eid}: digest missing")
     else:
         errs += [f"{eid} digest: {e.message}" for e in _validator("digest").iter_errors(digest)]
+        if not errs:
+            errs += filler_problems(eid, digest)
     if not slides or len(slides) != 1:
         errs.append(f"{eid}: exactly one infographic is required")
     for s in slides or []:

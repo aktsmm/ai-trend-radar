@@ -142,5 +142,221 @@
         "date": "2026-10-15"
       }
     ]
+  },
+  "vllm": {
+    "overview": {
+      "takeaway": "LLM 推論エンジン vLLM の大型更新。低精度 KV キャッシュと起動の高速化が柱。",
+      "stat": { "value": "814", "label": "コミット(363 人の貢献者)" },
+      "steps": ["リリースノートを読む", "破壊的変更を確認", "更新して試す"],
+      "changes": ["NVFP4 の KV キャッシュが複数世代の GPU で動く", "vllm download-kernels で起動を速める", "脆弱性 3 件と CORS の既定値を修正"],
+      "facts": [
+        { "k": "提供元", "v": "vLLM プロジェクト" },
+        { "k": "公開日", "v": "2026-10-18" },
+        { "k": "版", "v": "v0.32.0" },
+        { "k": "廃止", "v": "Python 3.10" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "自前の GPU で LLM を配信・運用している開発者",
+      "benefits": ["KV キャッシュのメモリを減らし、長い文脈を扱いやすい", "EmbeddingGemma 2 など新しいモデルを扱える"],
+      "how_to": ["リリースノートの破壊的変更を確認する", "pip install vllm で更新する", "Docker は vllm/vllm-openai:v0.32.0 を使う"],
+      "caveats": ["速度の数字は各 PR のベンチマークで、独自には検証していない", "Python 3.10 の廃止や CORS の制限など、更新前に確認が要る"],
+      "terms": [
+        { "t": "KV キャッシュ", "d": "過去の入力の計算結果を保存し、再計算を避ける仕組み" },
+        { "t": "CORS", "d": "別のサイトからの通信を許可するかを決める仕組み" },
+        { "t": "推論エンジン", "d": "学習済みモデルを効率よく動かすソフトウェア" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Release v0.32.0 · vllm-project/vllm",
+        "publisher": "GitHub(vLLM)",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0",
+        "date": "2026-10-18"
+      }
+    ]
+  },
+  "claude-code": {
+    "overview": {
+      "takeaway": "Claude Code v2.1.302。auto モードの設定追加とサブエージェントの既定変更、多数の修正。",
+      "stat": { "value": "v2.1.302", "label": "リリース版" },
+      "steps": ["リリースノートを読む", "更新する", "既定の変更を確認"],
+      "changes": ["auto モードの分類モデルを環境変数で指定できる", "フォーク型サブエージェントが claude -p などで既定で有効", "プラグインが多い環境の起動が速くなった"],
+      "facts": [
+        { "k": "提供元", "v": "Anthropic" },
+        { "k": "公開日", "v": "2026-10-16" },
+        { "k": "版", "v": "v2.1.302" },
+        { "k": "種別", "v": "リリースノート" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "Claude Code を日常的に使う開発者・チーム",
+      "benefits": ["長い会話の圧縮や接続先切り替えの不具合が直った", "アイドル時の圧縮を /config で切り替えられる"],
+      "how_to": ["Claude Code を最新版に更新する", "claude -p や SDK の自動化の挙動を確認する", "必要なら CLAUDE_CODE_FORK_SUBAGENT=0 で無効にする"],
+      "caveats": ["既定動作が変わるため、自動化は更新後に確認が要る", "リリースノートの内容で、独自には検証していない"],
+      "terms": [
+        { "t": "サブエージェント", "d": "メインの作業から切り出して動く補助のエージェント" },
+        { "t": "フック", "d": "特定のイベントで自動実行される処理" },
+        { "t": "Agent SDK", "d": "エージェントを自作するための開発キット" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Release v2.1.302 · anthropics/claude-code",
+        "publisher": "GitHub(Anthropic)",
+        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.302",
+        "date": "2026-10-16"
+      }
+    ]
+  },
+  "gemini-4-argon": {
+    "overview": {
+      "takeaway": "Gemini 4 Argon の広範な提供開始と、3 層の防御を軸にした安全対策の解説。",
+      "stat": { "value": "12 / 12", "label": "サイバー攻撃シナリオを全達成(発表)" },
+      "steps": ["入力を審査", "内部信号を確認", "出力を継続監視"],
+      "changes": ["Fairwind プログラムを防御側へ拡大", "誤動作を読む自動モニターを製品で運用", "思考過程を罰しない方針で透明性を保つ"],
+      "facts": [
+        { "k": "提供元", "v": "Google DeepMind" },
+        { "k": "公開日", "v": "2026-10-13" },
+        { "k": "注入耐性", "v": "成功率 0.7%(発表)" },
+        { "k": "近道行動", "v": "2%(発表)" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "高度な AI を業務やセキュリティ対策に使う開発者・企業",
+      "benefits": ["防御側が複雑なバグ探しに使いやすくなる", "エージェントの越境や近道の行動を抑えやすい"],
+      "how_to": ["安全・セキュリティ報告書とモデルカードを読む", "自社の用途で想定される誤用を洗い出す", "広範な提供の対象を公式で確認する"],
+      "caveats": ["数字は Google の発表で、独自には検証していない", "価格や仕様の詳細はこのブログには無い"],
+      "terms": [
+        { "t": "プロンプトインジェクション", "d": "読み込んだ文面に紛れた命令で AI を操る攻撃" },
+        { "t": "ジェイルブレイク", "d": "安全制限を回避して、禁止された応答を引き出す行為" },
+        { "t": "ハニーポット", "d": "不正な行動を誘い、検知するために置く罠" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Developing Gemini 4 Argon responsibly and safely",
+        "publisher": "Google DeepMind",
+        "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "flux-3-image-klein": {
+    "overview": {
+      "takeaway": "Black Forest Labs の画像生成モデルが Diffusers 対応。枠の座標で配置を指定できる。",
+      "stat": { "value": "約 2 秒", "label": "H100 で 1024×1024(ブログの数字)" },
+      "steps": ["diffusers を更新", "モデルを読み込む", "プロンプトで生成"],
+      "changes": ["text-to-image と複数参照の image-to-image を 1 つで", "バウンディングボックスでレイアウトを指定", "高速版とベース版の 2 つの公開重み"],
+      "facts": [
+        { "k": "提供元", "v": "Black Forest Labs" },
+        { "k": "公開日", "v": "2026-10-15" },
+        { "k": "高速版", "v": "16 ステップ・CFG なし" },
+        { "k": "ベース版", "v": "50 ステップ・CFG あり" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "画像生成を自社のアプリや制作に組み込みたい開発者",
+      "benefits": ["NVFP4・FP8 の重みで、小さめの GPU でも試せる", "LoRA で自社のスタイルに調整できる"],
+      "how_to": ["pip install -U diffusers transformers で更新する", "ModularPipeline で高速版を読み込む", "調整にはベース版と LoRA スクリプトを使う"],
+      "caveats": ["速度は H100 でのブログの数字で、環境により異なる", "ライセンスは記事で確認できず、モデルカードで確認する"],
+      "terms": [
+        { "t": "Diffusers", "d": "画像生成モデルを動かす Hugging Face のライブラリ" },
+        { "t": "LoRA", "d": "一部の重みだけを追加学習する軽い調整方法" },
+        { "t": "蒸留", "d": "大きなモデルの挙動を、速い小さな手順に写す手法" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Welcome FLUX.3 Image Klein in Diffusers",
+        "publisher": "Hugging Face",
+        "url": "https://huggingface.co/blog/flux-3",
+        "date": "2026-10-15"
+      }
+    ]
+  },
+  "lfm2": {
+    "overview": {
+      "takeaway": "Liquid AI の端末向け推論モデル。24B のうち 2B だけが動く。",
+      "stat": { "value": "2B / 24B", "label": "稼働 / 総パラメータ" },
+      "steps": ["モデルカードを読む", "重みを取得", "端末で試す"],
+      "changes": ["LFM2.5 ファミリーで最大・最後のモデル", "端末上の高速でプライベートなエージェント向け", "英語・日本語・中国語など多言語に対応"],
+      "facts": [
+        { "k": "提供元", "v": "Liquid AI" },
+        { "k": "更新日", "v": "2026-10-13" },
+        { "k": "規模", "v": "24B(2B 稼働)" },
+        { "k": "種別", "v": "推論モデル" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "端末やローカル環境で小型のエージェントを動かしたい開発者",
+      "benefits": ["稼働量が小さく、手元でも動かしやすい見込み", "日本語を含む多言語で使える"],
+      "how_to": ["モデルカードの使い方を読む", "transformers で重みを読み込む", "用途に合うか小さな課題で試す"],
+      "caveats": ["取得できた本文は一部のみで、性能の数字は未確認", "ライセンスは other 表記で、公式で条件を確認する"],
+      "terms": [
+        { "t": "MoE", "d": "入力ごとに一部の専門家だけを動かす構造" },
+        { "t": "推論モデル", "d": "答えの前に段階的に考える過程を出すモデル" },
+        { "t": "オンデバイス", "d": "クラウドでなく手元の端末で動かすこと" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "LiquidAI/LFM2.5-24B-A2B",
+        "publisher": "Hugging Face(Liquid AI)",
+        "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
+        "date": "2026-10-13"
+      }
+    ]
+  },
+  "beam": {
+    "overview": {
+      "takeaway": "Reflection 初のオープンウェイトモデル Beam が、AWS の SageMaker JumpStart で使える。",
+      "stat": { "value": "Apache 2.0", "label": "ライセンス(2026-10-16 発表)" },
+      "steps": ["JumpStart で検索", "自社アカウントに配備", "業務に合わせて調整"],
+      "changes": ["SageMaker JumpStart で Beam を配備できる", "Trainium3 向けに移植・最適化された", "自社の AWS アカウント内でデータを管理"],
+      "facts": [
+        { "k": "提供元", "v": "Reflection / AWS" },
+        { "k": "発表日", "v": "2026-10-16" },
+        { "k": "ライセンス", "v": "Apache 2.0" },
+        { "k": "提供地域", "v": "米国東部(2 リージョン)" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "AWS 上で大型のオープンウェイトモデルを運用したい開発者・企業",
+      "benefits": ["自社のアカウントで動かし、データを手元に置ける", "Apache 2.0 で、中身の確認や調整ができる"],
+      "how_to": ["SageMaker Studio の JumpStart で Beam を検索する", "米国東部のリージョンで配備する", "コード生成やレビューの用途で試す"],
+      "caveats": ["当初の提供は米国東部の 2 リージョンのみ", "性能は発表側の説明で、独自には検証していない"],
+      "terms": [
+        { "t": "SageMaker JumpStart", "d": "AWS でモデルを選んですぐ配備できるハブ" },
+        { "t": "Trainium", "d": "AWS が作った AI 向けの専用チップ" },
+        { "t": "オープンウェイト", "d": "重みを公開し、手元で動かせるモデル" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Beam model by Reflection is now available on SageMaker JumpStart",
+        "publisher": "AWS",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
+        "date": "2026-10-16"
+      }
+    ]
   }
 }

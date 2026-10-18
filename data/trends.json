@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-18T18:13:46.866935+00:00",
- "last_successful_report_at": "2026-10-18T18:13:46.866935+00:00",
+ "generated_at": "2026-10-18T22:21:30.053584+00:00",
+ "last_successful_report_at": "2026-10-18T22:21:30.053584+00:00",
  "window": {
   "from": "2026-10-12",
   "to": "2026-10-19",
@@ -18,78 +18,78 @@
    "ok": true,
    "count": 60,
    "group": "models",
-   "seconds": 0.2
+   "seconds": 0.1
   },
   "hf_spaces": {
    "ok": true,
    "count": 30,
    "group": "models",
-   "seconds": 0.2
+   "seconds": 0.1
   },
   "hf_papers": {
    "ok": true,
    "count": 40,
    "group": "research",
-   "seconds": 0.3
+   "seconds": 0.2
   },
   "github_new": {
    "ok": true,
    "count": 125,
    "group": "tools",
-   "seconds": 5.1
+   "seconds": 5.4
   },
   "github_trending": {
    "ok": true,
    "count": 10,
    "group": "tools",
-   "seconds": 1.1
+   "seconds": 1.3
   },
   "hackernews": {
    "ok": true,
-   "count": 120,
+   "count": 121,
    "group": "community",
-   "seconds": 4.3
+   "seconds": 6.5
   },
   "reddit_localllama": {
    "ok": true,
    "count": 100,
    "group": "local-llm",
-   "seconds": 3.4
+   "seconds": 3.1
   },
   "reddit_ollama": {
-   "ok": true,
-   "count": 50,
-   "group": "local-llm",
-   "seconds": 12.0
-  },
-  "reddit_ml": {
    "ok": false,
    "error": "HTTPError: HTTP Error 429: Too Many Requests",
-   "group": "research"
+   "group": "local-llm"
+  },
+  "reddit_ml": {
+   "ok": true,
+   "count": 50,
+   "group": "research",
+   "seconds": 52.8
   },
   "lobsters": {
    "ok": true,
-   "count": 2,
+   "count": 4,
    "group": "community",
-   "seconds": 0.7
+   "seconds": 0.2
   },
   "devto": {
    "ok": true,
-   "count": 136,
+   "count": 135,
    "group": "community",
-   "seconds": 0.9
+   "seconds": 0.3
   },
   "arxiv": {
    "ok": true,
    "count": 80,
    "group": "research",
-   "seconds": 1.6
+   "seconds": 0.2
   },
   "ollama": {
    "ok": true,
    "count": 60,
    "group": "local-llm",
-   "seconds": 0.2
+   "seconds": 0.3
   },
   "openrouter": {
    "ok": true,
@@ -99,19 +99,19 @@
   },
   "pypi": {
    "ok": true,
-   "count": 13,
+   "count": 12,
    "group": "tools",
-   "seconds": 5.2
+   "seconds": 12.1
   },
   "bluesky": {
    "ok": true,
    "count": 172,
    "group": "community",
-   "seconds": 1.0
+   "seconds": 2.1
   },
   "official": {
    "ok": true,
-   "count": 168,
+   "count": 173,
    "group": "vendor"
   },
   "gh_releases": {
@@ -121,7 +121,7 @@
   },
   "x_watch": {
    "ok": true,
-   "count": 51,
+   "count": 42,
    "group": "community",
    "accounts": {
     "OpenAI": {
@@ -141,12 +141,12 @@
      "posts": 4
     },
     "awscloud": {
-     "ok": true,
-     "posts": 1
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "NVIDIAAI": {
      "ok": true,
-     "posts": 5
+     "posts": 4
     },
     "huggingface": {
      "ok": true,
@@ -161,27 +161,27 @@
      "posts": 1
     },
     "Alibaba_Qwen": {
-     "ok": true,
-     "posts": 2
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "deepseek_ai": {
      "ok": true,
      "posts": 1
     },
     "MistralAI": {
-     "ok": true,
-     "posts": 5
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     }
    }
   },
   "x_search": {
    "ok": false,
-   "note": "unavailable: HTTP Error 404: Not Found",
+   "note": "unavailable: The read operation timed out",
    "group": "community"
   },
   "jp_reaction": {
    "ok": true,
-   "count": 113,
+   "count": 115,
    "group": "community-ja",
    "feeds": {
     "https://zenn.dev/topics/llm/feed": {
@@ -202,7 +202,7 @@
     },
     "https://b.hatena.ne.jp/search/tag?q=LLM&mode=rss": {
      "ok": true,
-     "count": 34
+     "count": 36
     },
     "https://b.hatena.ne.jp/search/tag?q=AI&mode=rss": {
      "ok": true,
@@ -223,8 +223,8 @@
    "url": "https://blog.google/technology/ai/rss/"
   },
   "deepmind-blog": {
-   "ok": false,
-   "error": "ParseError: not well-formed (invalid token): line 1, column 0",
+   "ok": true,
+   "count": 5,
    "url": "https://deepmind.google/blog/rss.xml"
   },
   "nvidia-blog": {
@@ -391,12 +391,12 @@
  "x_integration": {
   "search": {
    "ok": false,
-   "note": "unavailable: HTTP Error 404: Not Found",
+   "note": "unavailable: The read operation timed out",
    "group": "community"
   },
   "watchlist": {
    "ok": true,
-   "count": 51,
+   "count": 42,
    "group": "community",
    "accounts": {
     "OpenAI": {
@@ -416,12 +416,12 @@
      "posts": 4
     },
     "awscloud": {
-     "ok": true,
-     "posts": 1
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "NVIDIAAI": {
      "ok": true,
-     "posts": 5
+     "posts": 4
     },
     "huggingface": {
      "ok": true,
@@ -436,20 +436,20 @@
      "posts": 1
     },
     "Alibaba_Qwen": {
-     "ok": true,
-     "posts": 2
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "deepseek_ai": {
      "ok": true,
      "posts": 1
     },
     "MistralAI": {
-     "ok": true,
-     "posts": 5
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     }
    }
   },
-  "posts_used": 56
+  "posts_used": 46
  },
  "trends": [
   {
@@ -539,14 +539,14 @@
      "name": "hf_models",
      "title": "meta-models/Muse-Spark-Open-816B-A42B",
      "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
-     "metric": 496.0,
+     "metric": 500.0,
      "metric_name": "trendingScore"
     },
     {
      "name": "hf_models",
      "title": "meta-models/Muse-Spark-Open-816B-A42B-NVFP4",
      "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B-NVFP4",
-     "metric": 150.0,
+     "metric": 153.0,
      "metric_name": "trendingScore"
     },
     {
@@ -649,9 +649,9 @@
     }
    ],
    "score_breakdown": {
-    "hf_models": 1.055,
+    "hf_models": 1.052,
     "hackernews": 0.566,
-    "reddit_localllama": 1.14,
+    "reddit_localllama": 1.137,
     "ollama": 0.57,
     "openrouter": 0.18,
     "official": 1.2,
@@ -696,7 +696,7 @@
      "author": "ollama",
      "likes": 590,
      "reposts": 42,
-     "views": 119193,
+     "views": 119250,
      "text": "Muse Spark Open is now on Ollama.\n\n@Meta's open-weight model for coding and tool use, with a 1M-token context window.\n\nRun it on Ollama’s cloud: \nollama run muse-spark-open:cloud\n\nUse with Claude Code",
      "via": "watchlist"
     },
@@ -705,7 +705,7 @@
      "author": "ollama",
      "likes": 162,
      "reposts": 9,
-     "views": 14497,
+     "views": 14518,
      "text": "Muse Spark Open is now rolled out to Pro, Max, Pay-as-you-go, and Teams plans.",
      "via": "watchlist"
     }
@@ -727,6 +727,12 @@
     ],
     "selection_reason": "TOP1。NVIDIA の公式技術ブログ(2026-10-15)が Meta の Muse Spark Open を解説。"
    },
+   "url_checks": {
+    "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/": {
+     "status": 200,
+     "checked_at": "2026-10-18T22:06:25.287584+00:00"
+    }
+   },
    "jp_reactions": [
     {
      "site": "hatena",
@@ -735,12 +741,6 @@
      "date": "2026-10-16"
     }
    ],
-   "url_checks": {
-    "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/": {
-     "status": 200,
-     "checked_at": "2026-10-18T22:06:25.287584+00:00"
-    }
-   },
    "digest": {
     "summary": [
      "Meta の Muse Spark Open は、コーディング向けに作られた 816B パラメータの MoE モデルで、1 トークンで動くのは 42B。NVIDIA が 2026-10-15 の技術ブログで解説した。",
@@ -857,7 +857,7 @@
     "local-llm",
     "tools"
    ],
-   "score": 92.5,
+   "score": 86.2,
    "vendor": "Ollama",
    "primary": {
     "url": "https://ollama.com/blog/reflection-beam",
@@ -938,16 +938,9 @@
      "metric_name": "rank"
     },
     {
-     "name": "reddit_ollama",
-     "title": "Ollama restricted my account after I complained about API issues — $10,000 invested, 6+ projects at risk",
-     "url": "https://www.reddit.com/r/ollama/comments/1x5nk6u/ollama_restricted_my_account_after_i_complained/",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "reddit_ollama",
-     "title": "SurfSense: an open-source NotebookLM alternative that runs on your Ollama models",
-     "url": "https://www.reddit.com/r/ollama/comments/1x7qwoy/surfsense_an_opensource_notebooklm_alternative/",
+     "name": "reddit_ml",
+     "title": "EpochGo: Local-first multi-agent AutoML engine using offline Ollama LLMs and deterministic Scikit-Learn pipelines [P]",
+     "url": "https://www.reddit.com/r/MachineLearning/comments/1x8c2sq/epochgo_localfirst_multiagent_automl_engine_using/",
      "metric": 0.0,
      "metric_name": "rank"
     },
@@ -1043,9 +1036,9 @@
     }
    ],
    "score_breakdown": {
-    "github_new": 1.078,
-    "reddit_localllama": 0.67,
-    "reddit_ollama": 1.05,
+    "github_new": 1.08,
+    "reddit_localllama": 0.66,
+    "reddit_ml": 0.252,
     "devto": 0.1,
     "pypi": 0.415,
     "bluesky": 0.243,
@@ -1065,24 +1058,24 @@
      "vLLM",
      "llama.cpp",
      "beam",
-     "Silicon",
-     "OpenAI Codex"
+     "OpenAI Codex",
+     "MLX"
     ],
     "evidence": [
      {
-      "source": "reddit_ollama",
-      "title": "Ollama restricted my account after I complained about API issues — $10,000 invested, 6+ projects at risk",
-      "url": "https://www.reddit.com/r/ollama/comments/1x5nk6u/ollama_restricted_my_account_after_i_complained/"
+      "source": "github_new",
+      "title": "LiCinCan/blender-ai-mcp-addon",
+      "url": "https://github.com/LiCinCan/blender-ai-mcp-addon"
      },
      {
-      "source": "reddit_ollama",
-      "title": "SurfSense: an open-source NotebookLM alternative that runs on your Ollama models",
-      "url": "https://www.reddit.com/r/ollama/comments/1x7qwoy/surfsense_an_opensource_notebooklm_alternative/"
+      "source": "reddit_localllama",
+      "title": "Why AnythingLLM is moving from Ollama to Lemonade and llama.cpp",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x5720r/why_anythingllm_is_moving_from_ollama_to_lemonade/"
      },
      {
-      "source": "reddit_ollama",
-      "title": "I built EpochGo: A 100% offline, local-first multi-agent AutoML platform powered by Ollama (Qwen2.5-Coder:7B) and Scikit-Learn",
-      "url": "https://www.reddit.com/r/ollama/comments/1x3kqu5/i_built_epochgo_a_100_offline_localfirst/"
+      "source": "github_new",
+      "title": "justxor/deepseek-local-guide-ru",
+      "url": "https://github.com/justxor/deepseek-local-guide-ru"
      }
     ]
    },
@@ -1093,18 +1086,18 @@
     {
      "url": "https://x.com/ollama/status/2111576482879553726",
      "author": "ollama",
-     "likes": 1134,
-     "reposts": 81,
-     "views": 117722,
+     "likes": 1212,
+     "reposts": 85,
+     "views": 123852,
      "text": "✈ DeepSeek-V4.1-Flash-1017 is on Ollama! US-based hosting with zero data retention. \n\nIt's strong on agentic tasks while being cheaper per task. \n\nTry it on Ollama Cloud: \nollama run deepseek-v4.1-fla",
      "via": "watchlist"
     },
     {
      "url": "https://x.com/ollama/status/2111587278271426605",
      "author": "ollama",
-     "likes": 877,
-     "reposts": 45,
-     "views": 38828,
+     "likes": 973,
+     "reposts": 48,
+     "views": 42778,
      "text": "Ollama Cloud is always zero data retention, hosted in US and EU with no training.",
      "via": "watchlist"
     },
@@ -1113,7 +1106,7 @@
      "author": "ollama",
      "likes": 592,
      "reposts": 36,
-     "views": 30692,
+     "views": 30720,
      "text": "Amazing to see @AIatMeta launch the best US open-weight model so far! \n\nThe model will be available on Ollama shortly. 🫡",
      "via": "watchlist"
     }
@@ -1135,6 +1128,12 @@
     ],
     "selection_reason": "TOP2。local-runtime 代表。2026-10-16 に公式ブログで Reflection の Beam の提供開始を発表。"
    },
+   "url_checks": {
+    "https://ollama.com/blog/reflection-beam": {
+     "status": 200,
+     "checked_at": "2026-10-18T22:06:25.287584+00:00"
+    }
+   },
    "jp_reactions": [
     {
      "site": "zenn",
@@ -1149,12 +1148,6 @@
      "date": "2026-10-12"
     }
    ],
-   "url_checks": {
-    "https://ollama.com/blog/reflection-beam": {
-     "status": 200,
-     "checked_at": "2026-10-18T22:06:25.287584+00:00"
-    }
-   },
    "digest": {
     "summary": [
      "Ollama が、Reflection 初のオープンウェイトモデル Beam を Ollama Cloud で期間限定・無料で提供すると 2026-10-16 に発表した。",
@@ -1269,7 +1262,7 @@
     "agents",
     "tools"
    ],
-   "score": 87.8,
+   "score": 82.6,
    "vendor": "OpenAI",
    "primary": {
     "url": "https://openai.com/index/benefit-street-partners",
@@ -1329,7 +1322,7 @@
      "name": "hackernews",
      "title": "Codex Desktop continuously generates Crashpad pending dumps",
      "url": "https://github.com/openai/codex/issues/25921",
-     "metric": 161.0,
+     "metric": 166.0,
      "metric_name": "points"
     },
     {
@@ -1366,14 +1359,13 @@
     "https://developers.openai.com/codex"
    ],
    "official_verified": true,
-   "summary": "Benefit Street Partners answers questions faster with Codex ― Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review。9ソースで言及(代表: 「Arekejoker/qwen21-nsfw-pose-skill」)",
+   "summary": "Benefit Street Partners answers questions faster with Codex ― Anant Kumar builds tools to compare loan valuations and analyze credit agreements, using Codex for code review。8ソースで言及(代表: 「Arekejoker/qwen21-nsfw-pose-skill」)",
    "slides": [],
    "score_breakdown": {
     "github_new": 1.35,
     "github_trending": 0.729,
-    "hackernews": 1.161,
-    "reddit_ollama": 0.28,
-    "devto": 0.3,
+    "hackernews": 1.162,
+    "devto": 0.299,
     "arxiv": 0.09,
     "bluesky": 0.073,
     "official": 1.2,
@@ -1419,9 +1411,9 @@
     {
      "url": "https://x.com/OpenAI/status/2110797830361436604",
      "author": "OpenAI",
-     "likes": 11196,
+     "likes": 11199,
      "reposts": 808,
-     "views": 1915249,
+     "views": 1920363,
      "text": "New voices. Better accents. And less \"checking...\"\n\nGPT-Live-1.1 brings these updates to Voice in ChatGPT, Codex, and dots, with new voices in French, German, Hindi, Mexican Spanish, Korean, and Japan",
      "via": "watchlist"
     }
@@ -1455,7 +1447,7 @@
     "models",
     "tools"
    ],
-   "score": 81.0,
+   "score": 74.9,
    "vendor": null,
    "primary": {
     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
@@ -1496,21 +1488,21 @@
      "name": "hf_models",
      "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-     "metric": 1183.0,
+     "metric": 1220.0,
      "metric_name": "trendingScore"
     },
     {
      "name": "hackernews",
      "title": "DeepSeek-v4.1-Flash-1017",
      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-     "metric": 925.0,
+     "metric": 933.0,
      "metric_name": "points"
     },
     {
      "name": "hackernews",
      "title": "DeepSeek: DeepSeek v4.1 Flash 1017",
      "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
-     "metric": 515.0,
+     "metric": 517.0,
      "metric_name": "points"
     },
     {
@@ -1524,13 +1516,6 @@
      "name": "reddit_localllama",
      "title": "DeepSeek V4.1 Flash (1017) Now Leads Open-Weight Models",
      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x8bb6b/deepseek_v41_flash_1017_now_leads_openweight/",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "reddit_ollama",
-     "title": "Deepseek-v4.1-flash-1017",
-     "url": "https://www.reddit.com/r/ollama/comments/1x85lhy/deepseekv41flash1017/",
      "metric": 0.0,
      "metric_name": "rank"
     },
@@ -1553,7 +1538,7 @@
     "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
    ],
    "official_verified": true,
-   "summary": "deepseek-ai/DeepSeek-V4.1-Flash-1017。6ソースで言及(代表: 「deepseek-ai/DeepSeek-V4.1-Flash-1017」)",
+   "summary": "deepseek-ai/DeepSeek-V4.1-Flash-1017。5ソースで言及(代表: 「deepseek-ai/DeepSeek-V4.1-Flash-1017」)",
    "slides": [
     {
      "title": "DeepSeek-V4.1-Flash-1017: 更新版が公開",
@@ -1593,12 +1578,11 @@
    ],
    "score_breakdown": {
     "hf_models": 1.0,
-    "hackernews": 1.107,
-    "reddit_localllama": 1.31,
-    "reddit_ollama": 0.588,
+    "hackernews": 1.109,
+    "reddit_localllama": 1.43,
     "openrouter": 0.18,
     "bluesky": 0.046,
-    "x_aux": 0.434
+    "x_aux": 0.435
    },
    "velocity": {
     "hn_this_week": 3,
@@ -1608,9 +1592,7 @@
    "why": {
     "first_seen": "2026-10-17",
     "peak_day": "2026-10-17",
-    "co_mentioned": [
-     "Ollama"
-    ],
+    "co_mentioned": [],
     "evidence": [
      {
       "source": "reddit_localllama",
@@ -1618,14 +1600,14 @@
       "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x84po4/deepseekaideepseekv41flash1017_hugging_face/"
      },
      {
-      "source": "hackernews",
-      "title": "DeepSeek-v4.1-Flash-1017",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
-     },
-     {
       "source": "reddit_localllama",
       "title": "DeepSeek V4.1 Flash (1017) Now Leads Open-Weight Models",
       "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x8bb6b/deepseek_v41_flash_1017_now_leads_openweight/"
+     },
+     {
+      "source": "hackernews",
+      "title": "DeepSeek-v4.1-Flash-1017",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
      }
     ]
    },
@@ -1636,18 +1618,18 @@
     {
      "url": "https://x.com/deepseek_ai/status/2111375640717033777",
      "author": "deepseek_ai",
-     "likes": 35102,
-     "reposts": 3945,
-     "views": 6381670,
+     "likes": 35396,
+     "reposts": 3973,
+     "views": 6541986,
      "text": "🚀 DeepSeek-V4.1-Flash-1017 is here!\n\nStronger benchmark performance, faster task completion, and shorter outputs than the previous version—a Pareto improvement in performance and cost. Now live on our",
      "via": "watchlist"
     },
     {
      "url": "https://x.com/ollama/status/2111576482879553726",
      "author": "ollama",
-     "likes": 1134,
-     "reposts": 81,
-     "views": 117722,
+     "likes": 1212,
+     "reposts": 85,
+     "views": 123852,
      "text": "✈ DeepSeek-V4.1-Flash-1017 is on Ollama! US-based hosting with zero data retention. \n\nIt's strong on agentic tasks while being cheaper per task. \n\nTry it on Ollama Cloud: \nollama run deepseek-v4.1-fla",
      "via": "watchlist"
     }
@@ -1669,6 +1651,12 @@
     ],
     "selection_reason": "TOP4。model 枠。DeepSeek 公式の Hugging Face モデルカードが 2026-10-17 に公開。"
    },
+   "url_checks": {
+    "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "status": 200,
+     "checked_at": "2026-10-18T22:06:25.287584+00:00"
+    }
+   },
    "jp_reactions": [
     {
      "site": "hatena",
@@ -1677,12 +1665,6 @@
      "date": "2026-10-17"
     }
    ],
-   "url_checks": {
-    "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
-     "status": 200,
-     "checked_at": "2026-10-18T22:06:25.287584+00:00"
-    }
-   },
    "digest": {
     "summary": [
      "DeepSeek が、V4.1-Flash の更新版 DeepSeek-V4.1-Flash-1017 を 2026-10-17 に Hugging Face で公開した。",
@@ -1791,228 +1773,6 @@
   },
   {
    "rank": 5,
-   "keyword": "llama.cpp",
-   "entity_id": "llama-cpp",
-   "kind": "release",
-   "category": "local-runtime",
-   "tags": [
-    "local-llm",
-    "tools"
-   ],
-   "score": 74.9,
-   "vendor": "ggml",
-   "primary": {
-    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11721",
-    "published_at": "2026-10-18T18:08:15+00:00",
-    "date_basis": "published",
-    "source_type": "release_note",
-    "title": "llama.cpp b11721",
-    "event_id": "99725030b6"
-   },
-   "events": [
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11721",
-     "published_at": "2026-10-18T18:08:15+00:00",
-     "source_type": "release_note",
-     "title": "llama.cpp b11721",
-     "vendor": "ggml",
-     "date_basis": "published",
-     "feed": "ggml-org/llama.cpp",
-     "event_id": "99725030b6"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11720",
-     "published_at": "2026-10-18T17:40:31+00:00",
-     "source_type": "release_note",
-     "title": "llama.cpp b11720",
-     "vendor": "ggml",
-     "date_basis": "published",
-     "feed": "ggml-org/llama.cpp",
-     "event_id": "345ed96df7"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11719",
-     "published_at": "2026-10-18T11:14:51+00:00",
-     "source_type": "release_note",
-     "title": "llama.cpp b11719",
-     "vendor": "ggml",
-     "date_basis": "published",
-     "feed": "ggml-org/llama.cpp",
-     "event_id": "fbc49646d5"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11718",
-     "published_at": "2026-10-18T04:45:27+00:00",
-     "source_type": "release_note",
-     "title": "llama.cpp b11718",
-     "vendor": "ggml",
-     "date_basis": "published",
-     "feed": "ggml-org/llama.cpp",
-     "event_id": "94e2aa3274"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11717",
-     "published_at": "2026-10-18T02:53:27+00:00",
-     "source_type": "release_note",
-     "title": "llama.cpp b11717",
-     "vendor": "ggml",
-     "date_basis": "published",
-     "feed": "ggml-org/llama.cpp",
-     "event_id": "a5e4133475"
-    }
-   ],
-   "sources": [
-    {
-     "name": "hackernews",
-     "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
-     "url": "https://github.com/cobanov/PS5LM",
-     "metric": 371.0,
-     "metric_name": "points"
-    },
-    {
-     "name": "reddit_localllama",
-     "title": "Why AnythingLLM is moving from Ollama to Lemonade and llama.cpp",
-     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x5720r/why_anythingllm_is_moving_from_ollama_to_lemonade/",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "devto",
-     "title": "Deploying LLMs Locally: Ollama, llama.cpp, vLLM & Text Generation Inference",
-     "url": "https://dev.to/ipsphil_digital/deploying-llms-locally-ollama-llamacpp-vllm-text-generation-inference-4c0k",
-     "metric": 0.0,
-     "metric_name": "reactions"
-    },
-    {
-     "name": "devto",
-     "title": "Deploying LLMs Locally: Ollama, llama.cpp, and vLLM Comparison",
-     "url": "https://dev.to/ipsphil_digital/deploying-llms-locally-ollama-llamacpp-and-vllm-comparison-1bln",
-     "metric": 0.0,
-     "metric_name": "reactions"
-    },
-    {
-     "name": "pypi",
-     "title": "llama-cpp-python",
-     "url": "https://pypi.org/project/llama-cpp-python/",
-     "metric": 144287.0,
-     "metric_name": "downloads_week"
-    },
-    {
-     "name": "bluesky",
-     "title": "Sure sure, throw together a cuda-library binary auto-patcher for llama.cpp while my PR gets reviewed, that's...I mean...",
-     "url": "https://bsky.app/profile/mike10010100.com/post/3mxu4uw5nlk2x",
-     "metric": 7.0,
-     "metric_name": "likes+2*reposts"
-    },
-    {
-     "name": "bluesky",
-     "title": "yzma v1.30 is out with @hf.co llama.cpp v0.7.0 support! More System One decision models, and decision heads running righ",
-     "url": "https://bsky.app/profile/yzma.ai/post/3mxwsrcjhhs26",
-     "metric": 4.0,
-     "metric_name": "likes+2*reposts"
-    },
-    {
-     "name": "official",
-     "title": "Deploy decision models with llama.cpp on Amazon SageMaker AI",
-     "url": "https://aws.amazon.com/blogs/machine-learning/deploy-decision-models-with-llama-cpp-on-amazon-sagemaker-ai/",
-     "metric": 1.0,
-     "metric_name": "announcement"
-    },
-    {
-     "name": "gh_releases",
-     "title": "llama.cpp b11721",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11721",
-     "metric": 1.0,
-     "metric_name": "release"
-    },
-    {
-     "name": "gh_releases",
-     "title": "llama.cpp b11720",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11720",
-     "metric": 1.0,
-     "metric_name": "release"
-    }
-   ],
-   "official_urls": [
-    "https://github.com/ggml-org/llama.cpp/releases/tag/b11721",
-    "https://github.com/ggml-org/llama.cpp"
-   ],
-   "official_verified": true,
-   "summary": "llama.cpp b11721 ― Learn how to deploy decision models with llama.cpp on Amazon SageMaker AI. This technical how-to serves OpenAI。8ソースで言及(代表: 「Deploy decision models with llama.cpp on Amazon SageMaker AI」)",
-   "slides": [],
-   "score_breakdown": {
-    "github_new": 0.767,
-    "hackernews": 0.781,
-    "reddit_localllama": 0.92,
-    "devto": 0.0,
-    "pypi": 0.33,
-    "bluesky": 0.215,
-    "official": 0.8,
-    "gh_releases": 0.9,
-    "x_aux": 0.145
-   },
-   "velocity": {
-    "hn_this_week": 1,
-    "hn_prev_week": 0,
-    "factor": 0.7
-   },
-   "why": {
-    "first_seen": "2026-10-12",
-    "peak_day": "2026-10-18",
-    "co_mentioned": [
-     "vLLM",
-     "Ollama"
-    ],
-    "evidence": [
-     {
-      "source": "hackernews",
-      "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
-      "url": "https://github.com/cobanov/PS5LM"
-     },
-     {
-      "source": "reddit_localllama",
-      "title": "Why AnythingLLM is moving from Ollama to Lemonade and llama.cpp",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x5720r/why_anythingllm_is_moving_from_ollama_to_lemonade/"
-     },
-     {
-      "source": "github_new",
-      "title": "justxor/deepseek-local-guide-ru",
-      "url": "https://github.com/justxor/deepseek-local-guide-ru"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": null,
-   "trend_label": "baseline",
-   "x_posts": [
-    {
-     "url": "https://x.com/ggerganov/status/2111146995003924576",
-     "author": "ggerganov",
-     "likes": 342,
-     "reposts": 22,
-     "views": 29867,
-     "text": "llama.cpp v0.7.0, 128GB Mac/Spark:\n\nllama serve -hf ggml-org/Qwen3.8-Flash-Next-GGUF:IQ4_NL --spec-type draft-mtp --lazy-mode on",
-     "via": "watchlist"
-    }
-   ],
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": []
-  },
-  {
-   "rank": 6,
    "keyword": "nemotron3",
    "entity_id": "nemotron3",
    "kind": "model",
@@ -2021,7 +1781,7 @@
     "models",
     "local-llm"
    ],
-   "score": 73.0,
+   "score": 73.1,
    "vendor": "NVIDIA",
    "primary": {
     "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/feed/",
@@ -2098,14 +1858,14 @@
      "name": "hf_models",
      "title": "nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-NVFP4",
-     "metric": 146.0,
+     "metric": 151.0,
      "metric_name": "trendingScore"
     },
     {
      "name": "hf_models",
      "title": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB",
-     "metric": 119.0,
+     "metric": 120.0,
      "metric_name": "trendingScore"
     },
     {
@@ -2207,8 +1967,8 @@
     }
    ],
    "score_breakdown": {
-    "hf_models": 1.035,
-    "reddit_localllama": 1.26,
+    "hf_models": 1.036,
+    "reddit_localllama": 1.258,
     "ollama": 0.78,
     "openrouter": 0.225,
     "official": 1.2,
@@ -2252,9 +2012,9 @@
     {
      "url": "https://x.com/NVIDIAAI/status/2111216377935831403",
      "author": "NVIDIAAI",
-     "likes": 650,
+     "likes": 652,
      "reposts": 72,
-     "views": 51740,
+     "views": 52442,
      "text": "Big shoutout to all of our partners for making Nemotron 3.5 Super VL their own through post-training 🙌\n\nHere’s what they’ve built 🧵",
      "via": "watchlist"
     },
@@ -2262,8 +2022,8 @@
      "url": "https://x.com/ollama/status/2110881725815324829",
      "author": "ollama",
      "likes": 321,
-     "reposts": 20,
-     "views": 23142,
+     "reposts": 21,
+     "views": 23187,
      "text": "NVIDIA Nemotron 3.5 Bolt 74B-A9B 24GB is now on Ollama\n\nThis model vision-language model (VLM) is designed to run everyday agentic tasks locally, using a native 2-bit quantization to fit in 24GB of me",
      "via": "watchlist"
     },
@@ -2272,7 +2032,7 @@
      "author": "ollama",
      "likes": 173,
      "reposts": 15,
-     "views": 243603,
+     "views": 243648,
      "text": "NVIDIA Nemotron 3.5 Super VL is now available on Ollama\n\nThis model combines reasoning and visual understanding across a range of agent workflows.\n\nOn a single GPU, this model delivers up to 5x higher",
      "via": "watchlist"
     }
@@ -2294,6 +2054,12 @@
     ],
     "selection_reason": "TOP6。NVIDIA 公式技術ブログ(2026-10-15)が Nemotron 3.5 Super VL を解説。"
    },
+   "url_checks": {
+    "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/": {
+     "status": 200,
+     "checked_at": "2026-10-18T22:06:25.287584+00:00"
+    }
+   },
    "jp_reactions": [
     {
      "site": "hatena",
@@ -2302,12 +2068,6 @@
      "date": "2026-10-16"
     }
    ],
-   "url_checks": {
-    "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/": {
-     "status": 200,
-     "checked_at": "2026-10-18T22:06:25.287584+00:00"
-    }
-   },
    "digest": {
     "summary": [
      "NVIDIA が Nemotron 3.5 Super VL を 2026-10-15 の技術ブログで紹介した。120B の MoE で、1 トークンで動くのは 12B。オープンで、自社向けに調整できるマルチモーダルモデル。",
@@ -2414,6 +2174,220 @@
    }
   },
   {
+   "rank": 6,
+   "keyword": "llama.cpp",
+   "entity_id": "llama-cpp",
+   "kind": "release",
+   "category": "local-runtime",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "score": 71.8,
+   "vendor": "ggml",
+   "primary": {
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11721",
+    "published_at": "2026-10-18T18:08:15+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "llama.cpp b11721",
+    "event_id": "99725030b6"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11721",
+     "published_at": "2026-10-18T18:08:15+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11721",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "feed": "ggml-org/llama.cpp",
+     "event_id": "99725030b6"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11720",
+     "published_at": "2026-10-18T17:40:31+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11720",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "feed": "ggml-org/llama.cpp",
+     "event_id": "345ed96df7"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11719",
+     "published_at": "2026-10-18T11:14:51+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11719",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "feed": "ggml-org/llama.cpp",
+     "event_id": "fbc49646d5"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11718",
+     "published_at": "2026-10-18T04:45:27+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11718",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "feed": "ggml-org/llama.cpp",
+     "event_id": "94e2aa3274"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11717",
+     "published_at": "2026-10-18T02:53:27+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11717",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "feed": "ggml-org/llama.cpp",
+     "event_id": "a5e4133475"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hackernews",
+     "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+     "url": "https://github.com/cobanov/PS5LM",
+     "metric": 372.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Why AnythingLLM is moving from Ollama to Lemonade and llama.cpp",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x5720r/why_anythingllm_is_moving_from_ollama_to_lemonade/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "devto",
+     "title": "Deploying LLMs Locally: Ollama, llama.cpp, vLLM & Text Generation Inference",
+     "url": "https://dev.to/ipsphil_digital/deploying-llms-locally-ollama-llamacpp-vllm-text-generation-inference-4c0k",
+     "metric": 0.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "devto",
+     "title": "Deploying LLMs Locally: Ollama, llama.cpp, and vLLM Comparison",
+     "url": "https://dev.to/ipsphil_digital/deploying-llms-locally-ollama-llamacpp-and-vllm-comparison-1bln",
+     "metric": 0.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "bluesky",
+     "title": "Sure sure, throw together a cuda-library binary auto-patcher for llama.cpp while my PR gets reviewed, that's...I mean...",
+     "url": "https://bsky.app/profile/mike10010100.com/post/3mxu4uw5nlk2x",
+     "metric": 7.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "bluesky",
+     "title": "- Day 1 support in llama.cpp, sglang, vllm. Includes end to end verification so that e.g. chat template errors are caugh",
+     "url": "https://bsky.app/profile/daniel-j-h.bsky.social/post/3my5p6yke7k2z",
+     "metric": 5.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "official",
+     "title": "Deploy decision models with llama.cpp on Amazon SageMaker AI",
+     "url": "https://aws.amazon.com/blogs/machine-learning/deploy-decision-models-with-llama-cpp-on-amazon-sagemaker-ai/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "gh_releases",
+     "title": "llama.cpp b11721",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11721",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "llama.cpp b11720",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11720",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/ggml-org/llama.cpp/releases/tag/b11721",
+    "https://github.com/ggml-org/llama.cpp"
+   ],
+   "official_verified": true,
+   "summary": "llama.cpp b11721 ― Learn how to deploy decision models with llama.cpp on Amazon SageMaker AI. This technical how-to serves OpenAI。7ソースで言及(代表: 「Deploy decision models with llama.cpp on Amazon SageMaker AI」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 0.773,
+    "hackernews": 0.781,
+    "reddit_localllama": 0.902,
+    "devto": 0.0,
+    "bluesky": 0.218,
+    "official": 0.8,
+    "gh_releases": 0.9,
+    "x_aux": 0.145
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-12",
+    "peak_day": "2026-10-18",
+    "co_mentioned": [
+     "vLLM",
+     "Ollama"
+    ],
+    "evidence": [
+     {
+      "source": "hackernews",
+      "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+      "url": "https://github.com/cobanov/PS5LM"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "Why AnythingLLM is moving from Ollama to Lemonade and llama.cpp",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x5720r/why_anythingllm_is_moving_from_ollama_to_lemonade/"
+     },
+     {
+      "source": "github_new",
+      "title": "justxor/deepseek-local-guide-ru",
+      "url": "https://github.com/justxor/deepseek-local-guide-ru"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": [
+    {
+     "url": "https://x.com/ggerganov/status/2111146995003924576",
+     "author": "ggerganov",
+     "likes": 342,
+     "reposts": 22,
+     "views": 30210,
+     "text": "llama.cpp v0.7.0, 128GB Mac/Spark:\n\nllama serve -hf ggml-org/Qwen3.8-Flash-Next-GGUF:IQ4_NL --spec-type draft-mtp --lazy-mode on",
+     "via": "watchlist"
+    }
+   ],
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": []
+  },
+  {
    "rank": 7,
    "keyword": "vLLM",
    "entity_id": "vllm",
@@ -2423,7 +2397,7 @@
     "local-llm",
     "tools"
    ],
-   "score": 71.3,
+   "score": 71.4,
    "vendor": "vLLM",
    "primary": {
     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0",
@@ -2500,7 +2474,7 @@
      "name": "hf_models",
      "title": "vllm-sr/d3",
      "url": "https://huggingface.co/vllm-sr/d3",
-     "metric": 195.0,
+     "metric": 186.0,
      "metric_name": "trendingScore"
     },
     {
@@ -2514,7 +2488,7 @@
      "name": "bluesky",
      "title": "- Day 1 support in llama.cpp, sglang, vllm. Includes end to end verification so that e.g. chat template errors are caugh",
      "url": "https://bsky.app/profile/daniel-j-h.bsky.social/post/3my5p6yke7k2z",
-     "metric": 4.0,
+     "metric": 5.0,
      "metric_name": "likes+2*reposts"
     },
     {
@@ -2547,12 +2521,12 @@
    "summary": "vllm v0.32.0。8ソースで言及(代表: 「Decision 3.0: open, multimodal decision models from 0.6B to 」)",
    "slides": [],
    "score_breakdown": {
-    "hf_models": 0.746,
-    "github_new": 0.569,
+    "hf_models": 0.736,
+    "github_new": 0.575,
     "reddit_localllama": 0.84,
-    "devto": 0.351,
+    "devto": 0.349,
     "pypi": 0.361,
-    "bluesky": 0.107,
+    "bluesky": 0.119,
     "official": 0.8,
     "gh_releases": 0.9
    },
@@ -2563,7 +2537,7 @@
    },
    "why": {
     "first_seen": "2026-10-10",
-    "peak_day": "2026-10-18",
+    "peak_day": "2026-10-12",
     "co_mentioned": [
      "llama.cpp",
      "Ollama"
@@ -2671,7 +2645,7 @@
      "name": "hackernews",
      "title": "How the Claude Code team does code review",
      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
-     "metric": 468.0,
+     "metric": 470.0,
      "metric_name": "points"
     },
     {
@@ -2699,7 +2673,7 @@
      "name": "bluesky",
      "title": "Trying to get jev to drive Claude code",
      "url": "https://bsky.app/profile/cee.wtf/post/3mxzldr37ic2q",
-     "metric": 698.0,
+     "metric": 700.0,
      "metric_name": "likes+2*reposts"
     },
     {
@@ -2728,14 +2702,14 @@
     "github_new": 1.35,
     "github_trending": 1.063,
     "hackernews": 0.927,
-    "devto": 0.538,
+    "devto": 0.535,
     "bluesky": 0.705,
     "gh_releases": 0.9,
-    "x_aux": 0.497
+    "x_aux": 0.498
    },
    "velocity": {
-    "hn_this_week": 13,
-    "hn_prev_week": 9,
+    "hn_this_week": 11,
+    "hn_prev_week": 11,
     "factor": 0.6
    },
    "why": {
@@ -2771,7 +2745,7 @@
      "author": "ollama",
      "likes": 590,
      "reposts": 42,
-     "views": 119193,
+     "views": 119250,
      "text": "Muse Spark Open is now on Ollama.\n\n@Meta's open-weight model for coding and tool use, with a 1M-token context window.\n\nRun it on Ollama’s cloud: \nollama run muse-spark-open:cloud\n\nUse with Claude Code",
      "via": "watchlist"
     }
@@ -2782,6 +2756,12 @@
    },
    "jp_reactions": [
     {
+     "site": "qiita",
+     "title": "Claude Code v2.1.299〜v2.1.302｜54 分の放置で idle compaction が走る｜週刊Changelog解説",
+     "url": "https://qiita.com/moha0918_/items/8075926f722e7cd5fca3",
+     "date": "2026-10-18"
+    },
+    {
      "site": "zenn",
      "title": "AIに毎回同じ説明をするのは今日で終わり。CLAUDE.md・Skills・MDの3層で「自分仕様のClaude Code」を作る",
      "url": "https://zenn.dev/aicontentsbank/articles/claude-md-skills-stop-explaining",
@@ -2791,12 +2771,6 @@
      "site": "zenn",
      "title": "Claude Codeが同じミスを繰り返したら/clearでやり直す",
      "url": "https://zenn.dev/k_grid/articles/claude-code-clear-compact-btw",
-     "date": "2026-10-18"
-    },
-    {
-     "site": "zenn",
-     "title": "Claude Codeのコンテキストを小さくするのをやめた話",
-     "url": "https://zenn.dev/yskms/articles/a273eb89061f22",
      "date": "2026-10-18"
     }
    ]
@@ -2811,17 +2785,53 @@
     "models",
     "tools"
    ],
-   "score": 58.1,
+   "score": 63.4,
    "vendor": "Google",
    "primary": {
-    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
-    "published_at": "2026-10-13T16:00:00+00:00",
+    "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+    "published_at": "2026-10-13T19:43:07+00:00",
     "date_basis": "published",
     "source_type": "announcement",
-    "title": "Gemini 4 Argon: Built to solve your hardest problems",
-    "event_id": "dba1345e0d"
+    "title": "Developing Gemini 4 Argon responsibly and safely",
+    "event_id": "83dd8e4cd9"
    },
    "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+     "published_at": "2026-10-13T19:43:07+00:00",
+     "source_type": "announcement",
+     "title": "Developing Gemini 4 Argon responsibly and safely",
+     "vendor": "Google",
+     "date_basis": "published",
+     "feed": "deepmind-blog",
+     "event_id": "83dd8e4cd9"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://deepmind.google/blog/gemini-4-argon-for-robotics/",
+     "published_at": "2026-10-13T16:01:58+00:00",
+     "source_type": "announcement",
+     "title": "Gemini 4 Argon for Robotics",
+     "vendor": "Google",
+     "date_basis": "published",
+     "feed": "deepmind-blog",
+     "event_id": "927b212bb1"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://deepmind.google/blog/introducing-gemini-4-argon/",
+     "published_at": "2026-10-13T16:01:52+00:00",
+     "source_type": "announcement",
+     "title": "Gemini 4 Argon: Built to solve your hardest problems",
+     "vendor": "Google",
+     "date_basis": "published",
+     "feed": "deepmind-blog",
+     "event_id": "ad56b06649"
+    },
     {
      "kind": "announcement",
      "source": "official",
@@ -2845,18 +2855,6 @@
      "date_basis": "published",
      "feed": null,
      "event_id": "ced7ea815f"
-    },
-    {
-     "kind": "model",
-     "source": "openrouter",
-     "url": "https://openrouter.ai/google/gemini-4-argon:batch",
-     "published_at": "2026-10-13T16:04:37+00:00",
-     "source_type": "catalog",
-     "title": "google/gemini-4-argon:batch",
-     "vendor": null,
-     "date_basis": "published",
-     "feed": null,
-     "event_id": "45cd53488f"
     }
    ],
    "sources": [
@@ -2864,7 +2862,7 @@
      "name": "hackernews",
      "title": "Gemini 4 Argon",
      "url": "https://deepmind.google/models/gemini/",
-     "metric": 1465.0,
+     "metric": 1466.0,
      "metric_name": "points"
     },
     {
@@ -2901,21 +2899,28 @@
      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
      "metric": 1.0,
      "metric_name": "announcement"
+    },
+    {
+     "name": "official",
+     "title": "Developing Gemini 4 Argon responsibly and safely",
+     "url": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
+     "metric": 1.0,
+     "metric_name": "announcement"
     }
    ],
    "official_urls": [
-    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+    "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/",
     "https://openrouter.ai/google/gemini-4-argon",
     "https://openrouter.ai/google/gemini-4-argon:batch"
    ],
    "official_verified": true,
-   "summary": "Gemini 4 Argon: Built to solve your hardest problems ― We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier 。4ソースで言及(代表: 「Gemini 4 Argon」)",
+   "summary": "Developing Gemini 4 Argon responsibly and safely ― We’re giving developers, enterprises, scientists, and consumers access to Gemini 4 Argon, our latest frontier 。4ソースで言及(代表: 「Gemini 4 Argon」)",
    "slides": [],
    "score_breakdown": {
     "hackernews": 1.324,
     "arxiv": 0.09,
     "openrouter": 0.225,
-    "official": 0.8,
+    "official": 1.2,
     "x_aux": 0.5
    },
    "velocity": {
@@ -2952,9 +2957,9 @@
     {
      "url": "https://x.com/GoogleAI/status/2110039860077527293",
      "author": "GoogleAI",
-     "likes": 1666,
+     "likes": 1667,
      "reposts": 152,
-     "views": 101734,
+     "views": 102111,
      "text": "Gemini 4️⃣ Argon ✨ is now rolling out globally.\n\nOur frontier model is built for complex, real-world tasks across coding, finance, legal, cybersecurity, and science.\n\nCheck out how you can use Argon i",
      "via": "watchlist"
     },
@@ -2962,8 +2967,8 @@
      "url": "https://x.com/GoogleAI/status/2110083927620591769",
      "author": "GoogleAI",
      "likes": 1077,
-     "reposts": 116,
-     "views": 137204,
+     "reposts": 117,
+     "views": 137883,
      "text": "We’ve been exploring the potential of using Gemini 4 Argon to accelerate research @Google. One of our tests was using videos of humans performing fun tasks (game of bags, anyone?) to autonomously spin",
      "via": "watchlist"
     },
@@ -2972,7 +2977,7 @@
      "author": "GoogleAI",
      "likes": 398,
      "reposts": 40,
-     "views": 65577,
+     "views": 65917,
      "text": "See a fully-explorable 3D world build itself in minutes ⛩️\n\nWatch @GoogleDeepMind's @GeokenAI explain how Gemini 4 Argon acts as a virtual builder in @antigravity to autonomously create a stunning, mu",
      "via": "watchlist"
     }
@@ -2981,7 +2986,14 @@
     "status": "unverified",
     "checks": []
    },
-   "jp_reactions": []
+   "jp_reactions": [
+    {
+     "site": "hatena",
+     "title": "「Gemini 4 Argon」の一般提供スタート／Metaが「Muse Wonder」シリーズを発表",
+     "url": "https://www.itmedia.co.jp/pcuser/articles/2610/18/news005.html",
+     "date": "2026-10-18"
+    }
+   ]
   },
   {
    "rank": 10,
@@ -2992,7 +3004,7 @@
    "tags": [
     "models"
    ],
-   "score": 57.3,
+   "score": 57.2,
    "vendor": "BlackForestLabs",
    "primary": {
     "url": "https://huggingface.co/blog/flux-3",
@@ -3021,14 +3033,14 @@
      "name": "hf_models",
      "title": "black-forest-labs/flux-3-image-klein-comfy",
      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy",
-     "metric": 611.0,
+     "metric": 627.0,
      "metric_name": "trendingScore"
     },
     {
      "name": "hf_models",
      "title": "black-forest-labs/flux-3-image-klein",
      "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein",
-     "metric": 437.0,
+     "metric": 444.0,
      "metric_name": "trendingScore"
     },
     {
@@ -3062,9 +3074,9 @@
    "summary": "Welcome FLUX.3 Image Klein in Diffusers。4ソースで言及(代表: 「black-forest-labs/flux-3-image-klein-comfy」)",
    "slides": [],
    "score_breakdown": {
-    "hf_models": 1.293,
+    "hf_models": 1.292,
     "hf_spaces": 0.431,
-    "reddit_localllama": 0.53,
+    "reddit_localllama": 0.52,
     "official": 0.8
    },
    "velocity": {
@@ -3157,14 +3169,14 @@
      "name": "hf_models",
      "title": "LiquidAI/LFM2.5-24B-A2B",
      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B",
-     "metric": 445.0,
+     "metric": 454.0,
      "metric_name": "trendingScore"
     },
     {
      "name": "hf_models",
      "title": "LiquidAI/LFM2.5-24B-A2B-GGUF",
      "url": "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-GGUF",
-     "metric": 198.0,
+     "metric": 200.0,
      "metric_name": "trendingScore"
     },
     {
@@ -3217,7 +3229,7 @@
    "summary": "LiquidAI/LFM2.5-24B-A2B ― LFM2.5-8B-A1B, an edge model built for fast, reliable tool calling on consumer hardware.。6ソースで言及(代表: 「LiquidAI/LFM2.5-24B-A2B」)",
    "slides": [],
    "score_breakdown": {
-    "hf_models": 1.049,
+    "hf_models": 1.048,
     "hackernews": 0.748,
     "reddit_localllama": 0.93,
     "ollama": 0.642,
@@ -3233,7 +3245,9 @@
    "why": {
     "first_seen": "2026-10-09",
     "peak_day": "2026-10-13",
-    "co_mentioned": [],
+    "co_mentioned": [
+     "Hybrid"
+    ],
     "evidence": [
      {
       "source": "reddit_localllama",
@@ -3263,7 +3277,7 @@
      "author": "ollama",
      "likes": 291,
      "reposts": 27,
-     "views": 22185,
+     "views": 22198,
      "text": "ollama run lfm2.5:24b\n\nhttps://ollama.com/library/lfm2.5:24b",
      "via": "watchlist"
     }
@@ -3291,7 +3305,7 @@
     "models",
     "local-llm"
    ],
-   "score": 54.5,
+   "score": 52.3,
    "vendor": null,
    "primary": {
     "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
@@ -3396,11 +3410,11 @@
    "summary": "Beam model by Reflection is now available on Amazon SageMaker JumpStart and AWS Trainium ― Reflection AI's Beam is an open-weight model for agentic coding and long-horizon tasks. This post shows how to。4ソースで言及(代表: 「Introducing Reflection Beam: an open-weight model for agenti」)",
    "slides": [],
    "score_breakdown": {
-    "reddit_localllama": 0.45,
+    "reddit_localllama": 0.44,
     "ollama": 0.58,
     "bluesky": 0.11,
     "official": 1.2,
-    "x_aux": 0.447
+    "x_aux": 0.289
    },
    "velocity": {
     "hn_this_week": 6,
@@ -3426,20 +3440,11 @@
    "trend_label": "baseline",
    "x_posts": [
     {
-     "url": "https://x.com/NVIDIAAI/status/2111089696025858212",
-     "author": "NVIDIAAI",
-     "likes": 690,
-     "reposts": 55,
-     "views": 30028,
-     "text": "Welcome Beam! \n\nCongrats to @ReflectionAI on launching their first open-weight model.\n\nThe 501B MoE model was trained on NVIDIA GB300 NVL72 and delivers over 70K tokens/sec/GPU on Blackwell Ultra out ",
-     "via": "watchlist"
-    },
-    {
      "url": "https://x.com/ollama/status/2111087699574903061",
      "author": "ollama",
      "likes": 308,
      "reposts": 30,
-     "views": 106953,
+     "views": 107026,
      "text": "We’re excited to be day 0 partners for @reflection_ai’s first open-weight model! For a limited time, \n\nBeam is FREE on Ollama! In partnership with @reflection_ai this model is hosted in the US with fu",
      "via": "watchlist"
     },
@@ -3448,7 +3453,7 @@
      "author": "huggingface",
      "likes": 104,
      "reposts": 12,
-     "views": 32754,
+     "views": 33072,
      "text": "LIVE STREAM in minutes! Hear from the Reflection team about how they built Beam.\n\nStream: https://www.youtube.com/watch?v=dGhUFqeITbY",
      "via": "watchlist"
     }
@@ -3469,7 +3474,7 @@
     "local-llm",
     "tools"
    ],
-   "score": 49.8,
+   "score": 52.0,
    "vendor": "Unsloth",
    "primary": {
     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta",
@@ -3546,13 +3551,13 @@
      "name": "hf_models",
      "title": "unsloth/Qwen3.8-27B-GGUF",
      "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-     "metric": 115.0,
+     "metric": 113.0,
      "metric_name": "trendingScore"
     },
     {
      "name": "reddit_localllama",
-     "title": "Unsloth Muse Spark Open is out!",
-     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x6rcid/unsloth_muse_spark_open_is_out/",
+     "title": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF · Hugging Face",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x95491/unslothdeepseekv41flash1017gguf_hugging_face/",
      "metric": 0.0,
      "metric_name": "rank"
     },
@@ -3600,8 +3605,8 @@
    "summary": "unsloth Meta Muse Spark Open + NVIDIA Nemotron 3.5。5ソースで言及(代表: 「You don’t need that expensive of a build for local llms.」)",
    "slides": [],
    "score_breakdown": {
-    "hf_models": 0.672,
-    "reddit_localllama": 0.887,
+    "hf_models": 0.666,
+    "reddit_localllama": 1.067,
     "devto": 0.0,
     "pypi": 0.337,
     "gh_releases": 0.9
@@ -3615,7 +3620,6 @@
     "first_seen": "2026-08-13",
     "peak_day": "2026-10-13",
     "co_mentioned": [
-     "Strata",
      "Muse-Spark-Open"
     ],
     "evidence": [
@@ -3626,13 +3630,13 @@
      },
      {
       "source": "reddit_localllama",
-      "title": "Unsloth Muse Spark Open is out!",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x6rcid/unsloth_muse_spark_open_is_out/"
+      "title": "unsloth/DeepSeek-V4.1-Flash-1017-GGUF · Hugging Face",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x95491/unslothdeepseekv41flash1017gguf_hugging_face/"
      },
      {
       "source": "reddit_localllama",
-      "title": "Qwen Flash Next potential SOTA Q2 nobody talks about",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x7bboy/qwen_flash_next_potential_sota_q2_nobody_talks/"
+      "title": "Unsloth Muse Spark Open is out!",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x6rcid/unsloth_muse_spark_open_is_out/"
      }
     ]
    },
@@ -3648,6 +3652,161 @@
   },
   {
    "rank": 14,
+   "keyword": "Hybrid",
+   "entity_id": "hybrid",
+   "kind": "model",
+   "category": "model",
+   "tags": [
+    "models",
+    "tools"
+   ],
+   "score": 50.2,
+   "vendor": null,
+   "primary": {
+    "url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/feed/",
+    "published_at": "2026-10-12T16:00:54+00:00",
+    "date_basis": "published",
+    "source_type": "announcement",
+    "title": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding",
+    "event_id": "a5342182a4"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/feed/",
+     "published_at": "2026-10-12T16:00:54+00:00",
+     "source_type": "announcement",
+     "title": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding",
+     "vendor": "NVIDIA",
+     "date_basis": "published",
+     "feed": "nvidia-dev-blog",
+     "event_id": "a5342182a4"
+    },
+    {
+     "kind": "repo",
+     "source": "github_new",
+     "url": "https://github.com/Alpha-Park/genpark-hybrid-dense-sparse-rrf-reranker-and-citation-verifier-skill",
+     "published_at": "2026-10-12T09:29:25+00:00",
+     "source_type": "repo",
+     "title": "Alpha-Park/genpark-hybrid-dense-sparse-rrf-reranker-and-citation-verifier-skill",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "06a52a63c4"
+    },
+    {
+     "kind": "repo",
+     "source": "github_new",
+     "url": "https://github.com/alphaparkinc/genpark-hybrid-dense-sparse-rrf-reranker-and-citation-verifier-skill",
+     "published_at": "2026-10-12T09:28:44+00:00",
+     "source_type": "repo",
+     "title": "alphaparkinc/genpark-hybrid-dense-sparse-rrf-reranker-and-citation-verifier-skill",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "34d45936a7"
+    }
+   ],
+   "sources": [
+    {
+     "name": "github_new",
+     "title": "Alpha-Park/genpark-hybrid-dense-sparse-rrf-reranker-and-citation-verifier-skill",
+     "url": "https://github.com/Alpha-Park/genpark-hybrid-dense-sparse-rrf-reranker-and-citation-verifier-skill",
+     "metric": 7.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "github_new",
+     "title": "alphaparkinc/genpark-hybrid-dense-sparse-rrf-reranker-and-citation-verifier-skill",
+     "url": "https://github.com/alphaparkinc/genpark-hybrid-dense-sparse-rrf-reranker-and-citation-verifier-skill",
+     "metric": 7.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "hackernews",
+     "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+     "url": "https://arxiv.org/abs/2610.18861",
+     "metric": 77.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "New paper from Stanford, Together AI, UIUC, and Meta introduces Hybrid Reasoning Agents. These AI models think mostly in",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x7a8i8/new_paper_from_stanford_together_ai_uiuc_and_meta/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "official",
+     "title": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding",
+     "url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/feed/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "official",
+     "title": "Second-generation AWS Outposts racks now supported in the AWS Mexico (Central) Region",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-outposts-racks-mexico-central/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/feed/"
+   ],
+   "official_verified": true,
+   "summary": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding ― Hybrid models interleave state-space model (SSM) layers with a few attention layers. NVIDIA Nemotron 3, Qwen3.。6ソースで言及(代表: 「ReplaySSM: Rethinking State Storage for Faster Hybrid-Model 」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 0.296,
+    "hackernews": 0.575,
+    "reddit_localllama": 0.57,
+    "reddit_ml": 0.528,
+    "ollama": 0.09,
+    "official": 1.0
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-12",
+    "peak_day": "2026-10-12",
+    "co_mentioned": [
+     "lfm2"
+    ],
+    "evidence": [
+     {
+      "source": "hackernews",
+      "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
+      "url": "https://arxiv.org/abs/2610.18861"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "New paper from Stanford, Together AI, UIUC, and Meta introduces Hybrid Reasoning Agents. These AI models think mostly in a hidden internal w",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x7a8i8/new_paper_from_stanford_together_ai_uiuc_and_meta/"
+     },
+     {
+      "source": "github_new",
+      "title": "Alpha-Park/genpark-hybrid-dense-sparse-rrf-reranker-and-citation-verifier-skill",
+      "url": "https://github.com/Alpha-Park/genpark-hybrid-dense-sparse-rrf-reranker-and-citation-verifier-skill"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": [],
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": []
+  },
+  {
+   "rank": 15,
    "keyword": "MLX",
    "entity_id": "mlx",
    "kind": "paper",
@@ -3752,7 +3911,6 @@
     "first_seen": "2026-10-14",
     "peak_day": "2026-10-16",
     "co_mentioned": [
-     "Silicon",
      "Ollama"
     ],
     "evidence": []
@@ -3775,108 +3933,6 @@
    ]
   },
   {
-   "rank": 15,
-   "keyword": "Silicon",
-   "entity_id": "silicon",
-   "kind": "paper",
-   "category": "research",
-   "tags": [
-    "research",
-    "tools"
-   ],
-   "score": 40.1,
-   "vendor": null,
-   "primary": {
-    "url": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
-    "published_at": "2026-10-12T00:00:00+00:00",
-    "date_basis": "published",
-    "source_type": "announcement",
-    "title": "Minions: A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
-    "event_id": "f93c323cca"
-   },
-   "events": [
-    {
-     "kind": "announcement",
-     "source": "official",
-     "url": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
-     "published_at": "2026-10-12T00:00:00+00:00",
-     "source_type": "announcement",
-     "title": "Minions: A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
-     "vendor": "Apple",
-     "date_basis": "published",
-     "feed": "apple-ml-research",
-     "event_id": "f93c323cca"
-    }
-   ],
-   "sources": [
-    {
-     "name": "hackernews",
-     "title": "A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
-     "url": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
-     "metric": 247.0,
-     "metric_name": "points"
-    },
-    {
-     "name": "official",
-     "title": "Minions: A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
-     "url": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
-     "metric": 1.0,
-     "metric_name": "announcement"
-    }
-   ],
-   "official_urls": [
-    "https://machinelearning.apple.com/research/distributed-gpu-cloud"
-   ],
-   "official_verified": true,
-   "summary": "Minions: A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices ― The increasing demand for GPU-accelerated machine learning inference has exposed limitations in centralized GP。4ソースで言及(代表: 「Minions: A Dynamic and Distributed Virtual GPU Cloud Built o」)",
-   "slides": [],
-   "score_breakdown": {
-    "hackernews": 0.886,
-    "reddit_ollama": 0.686,
-    "bluesky": 0.058,
-    "official": 0.8
-   },
-   "velocity": {
-    "hn_this_week": 5,
-    "hn_prev_week": 2,
-    "factor": 0.68
-   },
-   "why": {
-    "first_seen": "2026-10-12",
-    "peak_day": "2026-10-14",
-    "co_mentioned": [
-     "Ollama",
-     "MLX"
-    ],
-    "evidence": [
-     {
-      "source": "reddit_ollama",
-      "title": "SurfSense: an open-source NotebookLM alternative that runs on your Ollama models",
-      "url": "https://www.reddit.com/r/ollama/comments/1x7qwoy/surfsense_an_opensource_notebooklm_alternative/"
-     },
-     {
-      "source": "hackernews",
-      "title": "A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
-      "url": "https://machinelearning.apple.com/research/distributed-gpu-cloud"
-     },
-     {
-      "source": "hackernews",
-      "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
-      "url": "https://pulseos.finance"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": null,
-   "trend_label": "baseline",
-   "x_posts": [],
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": []
-  },
-  {
    "rank": 16,
    "keyword": "Switch",
    "entity_id": "switch",
@@ -3886,7 +3942,7 @@
     "agents",
     "tools"
    ],
-   "score": 36.6,
+   "score": 29.5,
    "vendor": null,
    "primary": {
     "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/region-switch-target-health-ssm-lambda/",
@@ -3912,13 +3968,6 @@
    ],
    "sources": [
     {
-     "name": "reddit_ollama",
-     "title": "Should I switch from OpenCode Go to Ollama Pro? How's the actual service quality?",
-     "url": "https://www.reddit.com/r/ollama/comments/1x8xhia/should_i_switch_from_opencode_go_to_ollama_pro/",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
      "name": "official",
      "title": "ARC Region switch adds four new capabilities",
      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/region-switch-target-health-ssm-lambda/",
@@ -3930,11 +3979,10 @@
     "https://aws.amazon.com/about-aws/whats-new/2026/10/region-switch-target-health-ssm-lambda/"
    ],
    "official_verified": true,
-   "summary": "ARC Region switch adds four new capabilities ― Amazon Application Recovery Controller (ARC) Region switch helps you orchestrate the failover of multi-Region 。4ソースで言及(代表: 「ARC Region switch adds four new capabilities」)",
+   "summary": "ARC Region switch adds four new capabilities ― Amazon Application Recovery Controller (ARC) Region switch helps you orchestrate the failover of multi-Region 。3ソースで言及(代表: 「ARC Region switch adds four new capabilities」)",
    "slides": [],
    "score_breakdown": {
-    "github_new": 0.76,
-    "reddit_ollama": 0.476,
+    "github_new": 0.763,
     "bluesky": 0.363,
     "official": 0.8
    },
@@ -3952,11 +4000,6 @@
       "source": "github_new",
       "title": "YOURSJEYO/claude-switcher",
       "url": "https://github.com/YOURSJEYO/claude-switcher"
-     },
-     {
-      "source": "reddit_ollama",
-      "title": "Should I switch from OpenCode Go to Ollama Pro? How's the actual service quality?",
-      "url": "https://www.reddit.com/r/ollama/comments/1x8xhia/should_i_switch_from_opencode_go_to_ollama_pro/"
      },
      {
       "source": "github_new",
@@ -3977,147 +4020,6 @@
   },
   {
    "rank": 17,
-   "keyword": "Strata",
-   "entity_id": "strata",
-   "kind": "repo",
-   "category": "github-trending",
-   "tags": [
-    "tools"
-   ],
-   "score": 29.2,
-   "vendor": null,
-   "primary": {
-    "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.45",
-    "published_at": "2026-10-17T06:53:17+00:00",
-    "date_basis": "published",
-    "source_type": "release_note",
-    "title": "Niko1221/Strata Strata 0.1.45",
-    "event_id": "9733ec926f"
-   },
-   "events": [
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.45",
-     "published_at": "2026-10-17T06:53:17+00:00",
-     "source_type": "release_note",
-     "title": "Niko1221/Strata Strata 0.1.45",
-     "vendor": null,
-     "date_basis": "published",
-     "event_id": "9733ec926f"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44",
-     "published_at": "2026-10-14T00:14:06+00:00",
-     "source_type": "release_note",
-     "title": "Niko1221/Strata Strata 0.1.44",
-     "vendor": null,
-     "date_basis": "published",
-     "event_id": "533d985d23"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.44.1",
-     "published_at": "2026-10-14T00:13:09+00:00",
-     "source_type": "release_note",
-     "title": "Niko1221/Strata Strata 0.1.44.1",
-     "vendor": null,
-     "date_basis": "published",
-     "event_id": "467022d245"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.1.43.1",
-     "published_at": "2026-10-12T17:30:57+00:00",
-     "source_type": "release_note",
-     "title": "Niko1221/Strata Strata v0.1.43.1",
-     "vendor": null,
-     "date_basis": "published",
-     "event_id": "e2c92e3379"
-    },
-    {
-     "kind": "repo",
-     "source": "github_new",
-     "url": "https://github.com/PiccataPro/strata-pc-simulator",
-     "published_at": "2026-10-17T06:37:19+00:00",
-     "source_type": "repo",
-     "title": "PiccataPro/strata-pc-simulator",
-     "vendor": null,
-     "date_basis": "published",
-     "feed": null,
-     "event_id": "cfdc68129f"
-    }
-   ],
-   "sources": [
-    {
-     "name": "github_new",
-     "title": "PiccataPro/strata-pc-simulator",
-     "url": "https://github.com/PiccataPro/strata-pc-simulator",
-     "metric": 1.0,
-     "metric_name": "stars"
-    }
-   ],
-   "official_urls": [
-    "https://github.com/Niko1221/Strata/releases/tag/v0.1.45",
-    "https://github.com/Niko1221/Strata"
-   ],
-   "official_verified": true,
-   "summary": "Niko1221/Strata Strata 0.1.45 ― 3D PC-building simulator for local MoE LLM inference — drag real parts, press power, see decode/prefill/TTFT r。2ソースで言及(代表: 「You don’t need that expensive of a build for local llms.」)",
-   "slides": [],
-   "score_breakdown": {
-    "github_new": 0.079,
-    "reddit_localllama": 1.073
-   },
-   "velocity": {
-    "hn_this_week": 0,
-    "hn_prev_week": 1,
-    "factor": 0.7
-   },
-   "why": {
-    "first_seen": "2026-10-11",
-    "peak_day": "2026-10-17",
-    "co_mentioned": [
-     "Unsloth"
-    ],
-    "evidence": [
-     {
-      "source": "reddit_localllama",
-      "title": "You don’t need that expensive of a build for local llms.",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x8s73i/you_dont_need_that_expensive_of_a_build_for_local/"
-     },
-     {
-      "source": "reddit_localllama",
-      "title": "Why not run Qwen 3.8 Flash Next with the full n-gram-table?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x8am0i/why_not_run_qwen_38_flash_next_with_the_full/"
-     },
-     {
-      "source": "reddit_localllama",
-      "title": "\"Strata\" for GLM5.3 Flash is here for some! Project Maya",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x3fxzj/strata_for_glm53_flash_is_here_for_some_project/"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": {
-    "url": "https://github.com/Niko1221/Strata",
-    "created_at": "2026-09-24T16:40:20Z",
-    "stars": 27357,
-    "description": "Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optional image input."
-   },
-   "trend_label": "baseline",
-   "x_posts": [],
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": []
-  },
-  {
-   "rank": 18,
    "keyword": "WhatsApp",
    "entity_id": "whatsapp",
    "kind": "product",
@@ -4181,7 +4083,7 @@
    "slides": [],
    "score_breakdown": {
     "github_new": 0.237,
-    "devto": 0.106,
+    "devto": 0.105,
     "bluesky": 0.046,
     "official": 1.0
    },
@@ -4192,7 +4094,7 @@
    },
    "why": {
     "first_seen": "2026-10-12",
-    "peak_day": "2026-10-16",
+    "peak_day": "2026-10-12",
     "co_mentioned": [],
     "evidence": [
      {
@@ -4215,7 +4117,7 @@
    "jp_reactions": []
   },
   {
-   "rank": 19,
+   "rank": 18,
    "keyword": "Remote",
    "entity_id": "remote",
    "kind": "paper",
@@ -4224,7 +4126,7 @@
     "research",
     "tools"
    ],
-   "score": 27.0,
+   "score": 21.3,
    "vendor": null,
    "primary": {
     "url": "https://huggingface.co/papers/2610.21500",
@@ -4286,14 +4188,14 @@
     "hf_papers": 0.135,
     "github_new": 0.505,
     "hackernews": 0.724,
-    "devto": 0.188,
+    "devto": 0.187,
     "bluesky": 0.073,
     "official": 0.8
    },
    "velocity": {
     "hn_this_week": 3,
-    "hn_prev_week": 2,
-    "factor": 0.48
+    "hn_prev_week": 3,
+    "factor": 0.35
    },
    "why": {
     "first_seen": "2026-10-12",
@@ -4328,7 +4230,7 @@
    "jp_reactions": []
   },
   {
-   "rank": 20,
+   "rank": 19,
    "keyword": "Radeon",
    "entity_id": "radeon",
    "kind": "repo",
@@ -4391,7 +4293,7 @@
    },
    "why": {
     "first_seen": "2026-10-13",
-    "peak_day": "2026-10-15",
+    "peak_day": "2026-10-17",
     "co_mentioned": [],
     "evidence": [
      {
@@ -4420,13 +4322,95 @@
     "checks": []
    },
    "jp_reactions": []
+  },
+  {
+   "rank": 20,
+   "keyword": "FDE-Gym",
+   "entity_id": "fde-gym",
+   "kind": "paper",
+   "category": "research",
+   "tags": [
+    "research"
+   ],
+   "score": 9.3,
+   "vendor": null,
+   "primary": {
+    "url": "https://huggingface.co/papers/2610.22350",
+    "published_at": "2026-10-15T00:00:00+00:00",
+    "date_basis": "published",
+    "source_type": "paper",
+    "title": "FDE-Gym: The Last Mile of AI Delivery",
+    "event_id": "9c40d78092"
+   },
+   "events": [
+    {
+     "kind": "paper",
+     "source": "hf_papers",
+     "url": "https://huggingface.co/papers/2610.22350",
+     "published_at": "2026-10-15T00:00:00+00:00",
+     "source_type": "paper",
+     "title": "FDE-Gym: The Last Mile of AI Delivery",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "9c40d78092"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_papers",
+     "title": "FDE-Gym: The Last Mile of AI Delivery",
+     "url": "https://huggingface.co/papers/2610.22350",
+     "metric": 285.0,
+     "metric_name": "upvotes"
+    },
+    {
+     "name": "arxiv",
+     "title": "FDE-Gym: The Last Mile of AI Delivery",
+     "url": "http://arxiv.org/abs/2610.22350v1",
+     "metric": 1.0,
+     "metric_name": "paper"
+    }
+   ],
+   "official_urls": [
+    "https://huggingface.co/papers/2610.22350"
+   ],
+   "official_verified": false,
+   "summary": "FDE-Gym: The Last Mile of AI Delivery ― Existing agent benchmarks typically evaluate agents on well-specified tasks defined by issue reports, specific。2ソースで言及(代表: 「FDE-Gym: The Last Mile of AI Delivery」)",
+   "slides": [],
+   "score_breakdown": {
+    "hf_papers": 0.696,
+    "arxiv": 0.09
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-15",
+    "peak_day": "2026-10-15",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "hf_papers",
+      "title": "FDE-Gym: The Last Mile of AI Delivery",
+      "url": "https://huggingface.co/papers/2610.22350"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "baseline",
+   "x_posts": [],
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": []
   }
  ],
  "pending": [
-  {
-   "keyword": "Qwen3",
-   "reason": "no primary source dated inside the window"
-  },
   {
    "keyword": "Qwen3.8",
    "reason": "no primary source dated inside the window"
@@ -4436,15 +4420,7 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "OpenCode",
-   "reason": "no primary source dated inside the window"
-  },
-  {
-   "keyword": "glm-5.3",
-   "reason": "no primary source dated inside the window"
-  },
-  {
-   "keyword": "gemma4",
+   "keyword": "NVIDIA Blackwell",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4452,15 +4428,11 @@
    "reason": "no primary source dated inside the window"
   },
   {
+   "keyword": "OpenCode",
+   "reason": "no primary source dated inside the window"
+  },
+  {
    "keyword": "Terminal",
-   "reason": "no primary source dated inside the window"
-  },
-  {
-   "keyword": "MiniMax-H3",
-   "reason": "no primary source dated inside the window"
-  },
-  {
-   "keyword": "MiniCPM",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4468,15 +4440,23 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "qwen3.5",
+   "keyword": "glm-5.3",
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "clef",
+   "keyword": "MiniCPM",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "gemma4",
    "reason": "no primary source dated inside the window"
   },
   {
    "keyword": "rea",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "clef",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4496,15 +4476,19 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "NVIDIA Blackwell",
+   "keyword": "qwen3.5",
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "kimi-k3",
+   "keyword": "MiniMax-H3",
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "Android",
+   "keyword": "Transformer",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "bonsai-2",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4520,7 +4504,11 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "JavaScript",
+   "keyword": "kimi-k3",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "Ternary-Bonsai-2",
    "reason": "no primary source dated inside the window"
   }
  ],
@@ -4547,7 +4535,6 @@
   "HiRO",
   "HydraFusion",
   "LiveTaskCount",
-  "ReplaySSM",
   "Route 53",
   "S3 Express",
   "S3 Metadata",
@@ -4562,16 +4549,18 @@
   "ChatGPT",
   "Cursor",
   "DeepSeek",
+  "Diffusion",
   "Diffusion language models",
   "Docker",
   "Flash",
   "GGUF",
   "GeForce",
   "Gemini",
+  "Gemma",
+  "Google DeepMind",
   "Hugging Face",
   "Image",
   "Intel",
-  "LangChain",
   "Linux",
   "MCP",
   "Microsoft Foundry",
@@ -4594,57 +4583,7 @@
    "links": [
     "https://www.anthropic.com/engineering/redesigning-source-control"
    ],
-   "likes": 25637,
-   "status": "unverified: needs official site / release note / GitHub Release corroboration"
-  },
-  {
-   "author": "AnthropicAI",
-   "url": "https://x.com/AnthropicAI/status/2109795898909950247",
-   "text": "Over the last few months, we’ve made significant progress in reducing the effectiveness of distillation attacks against Claude.\n\nIn this post, we explain how: h",
-   "links": [
-    "https://www.anthropic.com/research/distillation-defenses"
-   ],
-   "likes": 6567,
-   "status": "unverified: needs official site / release note / GitHub Release corroboration"
-  },
-  {
-   "author": "AnthropicAI",
-   "url": "https://x.com/AnthropicAI/status/2111152183240511640",
-   "text": "New from our STEM Fellows Program: Designing more efficient quantum circuits with Claude.\n\nGiven plain-language instructions, Claude Mythos 5 designed quantum c",
-   "links": [
-    "https://www.anthropic.com/research/designing-efficient-quantum-circuits"
-   ],
-   "likes": 5329,
-   "status": "unverified: needs official site / release note / GitHub Release corroboration"
-  },
-  {
-   "author": "AnthropicAI",
-   "url": "https://x.com/AnthropicAI/status/2110784662071398807",
-   "text": "We’ve committed to having evaluators assess our safety practices. We're in discussions with multiple organizations, and have now given employee-like access to a",
-   "links": [
-    "https://www.anthropic.com/news/an-update-on-independent-evaluators"
-   ],
-   "likes": 3799,
-   "status": "unverified: needs official site / release note / GitHub Release corroboration"
-  },
-  {
-   "author": "AnthropicAI",
-   "url": "https://x.com/AnthropicAI/status/2110289695888511368",
-   "text": "We’ve opened an office in Singapore—our fifth in the Asia-Pacific region. We’ve also signed an MOU with the Government of Singapore on AI safety and responsible",
-   "links": [
-    "https://www.anthropic.com/news/singapore-office-opening"
-   ],
-   "likes": 3476,
-   "status": "unverified: needs official site / release note / GitHub Release corroboration"
-  },
-  {
-   "author": "OpenAI",
-   "url": "https://x.com/OpenAI/status/2110442001749659890",
-   "text": "European businesses are rapidly expanding their use of AI agents. More than half of the AI use among our EU enterprise and business customers now involves these",
-   "links": [
-    "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic/"
-   ],
-   "likes": 2891,
+   "likes": 25641,
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   },
   {
@@ -4654,7 +4593,57 @@
    "links": [
     "https://www.anthropic.com/news/public-benefit-fund"
    ],
-   "likes": 370,
+   "likes": 9086,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI/status/2109795898909950247",
+   "text": "Over the last few months, we’ve made significant progress in reducing the effectiveness of distillation attacks against Claude.\n\nIn this post, we explain how: h",
+   "links": [
+    "https://www.anthropic.com/research/distillation-defenses"
+   ],
+   "likes": 6568,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI/status/2111152183240511640",
+   "text": "New from our STEM Fellows Program: Designing more efficient quantum circuits with Claude.\n\nGiven plain-language instructions, Claude Mythos 5 designed quantum c",
+   "links": [
+    "https://www.anthropic.com/research/designing-efficient-quantum-circuits"
+   ],
+   "likes": 5363,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI/status/2110784662071398807",
+   "text": "We’ve committed to having evaluators assess our safety practices. We're in discussions with multiple organizations, and have now given employee-like access to a",
+   "links": [
+    "https://www.anthropic.com/news/an-update-on-independent-evaluators"
+   ],
+   "likes": 3803,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "AnthropicAI",
+   "url": "https://x.com/AnthropicAI/status/2110289695888511368",
+   "text": "We’ve opened an office in Singapore—our fifth in the Asia-Pacific region. We’ve also signed an MOU with the Government of Singapore on AI safety and responsible",
+   "links": [
+    "https://www.anthropic.com/news/singapore-office-opening"
+   ],
+   "likes": 3480,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "OpenAI",
+   "url": "https://x.com/OpenAI/status/2110442001749659890",
+   "text": "European businesses are rapidly expanding their use of AI agents. More than half of the AI use among our EU enterprise and business customers now involves these",
+   "links": [
+    "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic/"
+   ],
+   "likes": 2894,
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   }
  ],
@@ -4765,6 +4754,13 @@
    "feed": "nvidia-blog"
   },
   {
+   "vendor": "Google",
+   "title": "Accelerating the search for antimicrobial peptides with Google Antigravity",
+   "url": "https://deepmind.google/blog/accelerating-antimicrobial-discovery/",
+   "date": "2026-10-16",
+   "feed": "deepmind-blog"
+  },
+  {
    "vendor": "Microsoft",
    "title": "AI Scan for pull requests generally available",
    "url": "https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available",
@@ -4819,16 +4815,9 @@
    "url": "https://huggingface.co/blog/allenai/hiro-acev2",
    "date": "2026-10-15",
    "feed": "huggingface-blog"
-  },
-  {
-   "vendor": "Meta",
-   "title": "Meta, Milan’s Pinacoteca di Brera, and EssilorLuxottica Expand Access to Art Through AI Glasses",
-   "url": "https://about.fb.com/news/2026/10/meta-milans-pinacoteca-di-brera-and-essilorluxottica-expand-access-to-art-through-ai-glasses/",
-   "date": "2026-10-15",
-   "feed": "meta-newsroom"
   }
  ],
- "candidates_pool": 121,
+ "candidates_pool": 115,
  "themes": [
   {
    "id": "big-moe-agents",

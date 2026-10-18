@@ -82,6 +82,126 @@
      "retrieved_at": "2026-10-19T03:20:00+09:00"
     }
    ]
+  },
+  "vllm": {
+   "selection_reason": "local-runtime 枠。vLLM の公式 GitHub リリース v0.32.0(2026-10-18)。383 コミット・814 件の変更を含む大型リリース。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://github.com/vllm-project/vllm/releases/tag/v0.32.0"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "vllm v0.32.0 release notes",
+     "evidence_urls": [
+      "https://github.com/vllm-project/vllm/releases/tag/v0.32.0"
+     ],
+     "evidence_published_at": "2026-10-18",
+     "result": "814 コミット・363 人の貢献、低精度 KV キャッシュの拡大、起動と配信の高速化、セキュリティ修正、破壊的変更(Python 3.10 の廃止など)を確認",
+     "retrieved_at": "2026-10-19T07:25:00+09:00"
+    }
+   ]
+  },
+  "claude-code": {
+   "selection_reason": "dev-tool 枠。Anthropic 公式リポジトリの Claude Code v2.1.302 リリースノート(2026-10-16)。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.302"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "claude-code v2.1.302 release notes",
+     "evidence_urls": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.302"
+     ],
+     "evidence_published_at": "2026-10-16",
+     "result": "auto モードの分類モデル指定、アイドル時の圧縮設定、サブエージェントの既定の変更、多数の修正を確認",
+     "retrieved_at": "2026-10-19T07:25:00+09:00"
+    }
+   ]
+  },
+  "gemini-4-argon": {
+   "selection_reason": "model 枠。Google DeepMind 公式ブログ(2026-10-13)が Gemini 4 Argon の段階的な一般提供開始と安全対策を解説。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Developing Gemini 4 Argon responsibly and safely",
+     "evidence_urls": [
+      "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/"
+     ],
+     "evidence_published_at": "2026-10-13",
+     "result": "広範な提供の開始、3 層のリアルタイム防御、サイバー評価 12 シナリオ全達成、プロンプトインジェクション耐性(発表の数字)を確認",
+     "retrieved_at": "2026-10-19T07:25:00+09:00"
+    }
+   ]
+  },
+  "flux-3-image-klein": {
+   "selection_reason": "model 枠(画像生成)。Hugging Face 公式ブログ(2026-10-15)が Black Forest Labs の FLUX.3 Image Klein の Diffusers 対応を解説。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://huggingface.co/blog/flux-3"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Welcome FLUX.3 Image Klein in Diffusers",
+     "evidence_urls": [
+      "https://huggingface.co/blog/flux-3"
+     ],
+     "evidence_published_at": "2026-10-15",
+     "result": "text-to-image・複数参照の image-to-image・バウンディングボックスのレイアウト制御、2 つのチェックポイント、NVFP4/FP8 の重み、LoRA 学習スクリプトを確認",
+     "retrieved_at": "2026-10-19T07:25:00+09:00"
+    }
+   ]
+  },
+  "lfm2": {
+   "selection_reason": "model 枠(小型・端末向け)。Liquid AI 公式の Hugging Face モデルカード LFM2.5-24B-A2B(2026-10-13 時点の更新)。",
+   "verification_status": "partially_verified",
+   "official_urls": [
+    "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "LiquidAI/LFM2.5-24B-A2B model card",
+     "evidence_urls": [
+      "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B"
+     ],
+     "evidence_published_at": "2026-10-13",
+     "result": "24B パラメータ・稼働 2B の推論モデルで端末上のエージェント向け、LFM2.5 ファミリー最大、多言語対応を確認(本文は一部のみ取得)",
+     "retrieved_at": "2026-10-19T07:25:00+09:00"
+    }
+   ]
+  },
+  "beam": {
+   "selection_reason": "model 枠。AWS 公式発表(2026-10-16)で Reflection 初のオープンウェイトモデル Beam が SageMaker JumpStart と Trainium で利用可能に。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Beam model by Reflection on Amazon SageMaker JumpStart and AWS Trainium",
+     "evidence_urls": [
+      "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/"
+     ],
+     "evidence_published_at": "2026-10-16",
+     "result": "SageMaker JumpStart(US East の 2 リージョン)で提供、Trainium3 向けに最適化、Apache 2.0 を確認",
+     "retrieved_at": "2026-10-19T07:25:00+09:00"
+    }
+   ]
   }
  },
  "url_checks": {

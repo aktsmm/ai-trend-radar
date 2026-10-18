@@ -22,5 +22,29 @@
     "explain": "Low-Rank Adaptation の略。モデル全体ではなく、小さな追加部分だけを学習するファインチューニングの手法。必要なメモリや時間が少なく、自社データへの調整を試しやすい。",
     "entity": "nemotron3",
     "ref": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+  },
+  {
+    "term": "KV キャッシュ",
+    "kind": "仕組み",
+    "short": "過去の計算結果を保存して再計算を省く仕組み",
+    "explain": "LLM が文章を生成するとき、これまでの入力の途中結果を保存して使い回す仕組み。再計算を避けて速くなる一方、文脈が長いほどメモリを多く使うので、小さく持つ工夫が重要になる。",
+    "entity": "vllm",
+    "ref": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0"
+  },
+  {
+    "term": "プロンプトインジェクション",
+    "kind": "基礎",
+    "short": "文面に紛れた命令で AI を操る攻撃",
+    "explain": "AI が読む Web ページや文書に、悪意ある命令を紛れ込ませて意図しない動きをさせる攻撃。ブラウズやコード読み取りをするエージェントでは特に対策が重要になる。",
+    "entity": "gemini-4-argon",
+    "ref": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/"
+  },
+  {
+    "term": "推論エンジン",
+    "kind": "基礎",
+    "short": "学習済みモデルを効率よく動かすソフト",
+    "explain": "学習済みの AI モデルに入力を与えて答えを出す処理を、速く・少ないメモリで行うソフトウェア。多くの利用者へ同時に応答するサーバー運用で、コストや速度に大きく影響する。",
+    "entity": "vllm",
+    "ref": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0"
   }
 ]

@@ -115,6 +115,7 @@ async function runDownload(kind, btn) {
 $("dlpdf").onclick = e => runDownload("pdf", e.currentTarget); $("dlpptx").onclick = e => runDownload("pptx", e.currentTarget);
 syncBar();
 const st = D.source_status, ng = Object.keys(st).filter(k => st[k].ok === false);
+$("statusbar").innerHTML = `<b>${esc(D.window.label)}</b> ・ 掲載 <b>${published.length}</b> 件 ・ 観測候補 ${cands.length} 件 ・ 週次レポート ${Math.floor(ageDays) < 1 ? "24 時間以内" : Math.floor(ageDays) + " 日前"} ・ 収集元 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}${ng.length ? ` <span class="ng">(未取得 ${ng.length})</span>` : ""} ・ <a href="about.html">しくみと運用状況</a>`;
 $("meta").textContent = `掲載 ${published.length} 件 / 観測候補 ${cands.length} 件 / 取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? `(取得できなかった: ${ng.join(", ")})` : "") + ` / 公開日が確認できず保留 ${D.pending.length} 件 / X 検索: ${D.x_integration.search && D.x_integration.search.ok ? "利用可" : "利用不可(ウォッチリストで補完)"}`;
 
 const dlg = $("dlg");

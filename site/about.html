@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About - AI Trend Radar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html">AI Trend Radar</a>
+  <nav aria-label="メニュー"><a href="index.html">最新ダイジェスト</a><a href="glossary.html">用語・基礎</a><a href="archive.html">アーカイブ</a><a href="about.html" aria-current="page">About</a><a href="api/v1/index.json">JSON API</a></nav>
+</div></header>
+<main class="wrap">
+  <p class="lead">AI・ローカル LLM の動きを毎週まとめる、自動更新のダイジェストです。人手の確認は挟まず、機械的な検査を通ったものだけが公開されます。</p>
+  <h2>いまの状態 <small>(実データ)</small></h2>
+  <table class="cand" id="state"><tbody><tr><td>読み込み中…</td></tr></tbody></table>
+  <h2>しくみ</h2>
+  <ol class="how">
+    <li><b>毎日 05:00 JST に収集</b>: Hugging Face・GitHub・Hacker News・Reddit・Bluesky・各社の公式フィードなどから、話題の候補を集めて日次スナップショットに残します。</li>
+    <li><b>毎週月曜 00:30 JST に順位付け</b>: 1 週間の言及の多さと新しさでキーワードを順位付けし、公式の一次情報が確認できた項目だけを AI が日本語に整理します。</li>
+    <li><b>機械的な検査</b>: スキーマ、公式 URL の許可リスト、日付の整合、変更件数の上限、中身のない要約の排除を通ったものだけが自動で公開されます。</li>
+    <li><b>自動修復</b>: 失敗した実行は 1 回だけ自動で再実行し、2 回続けて失敗すると Issue で知らせます。トークンの期限も毎週確認しています。</li>
+  </ol>
+  <h2>見方と限界</h2>
+  <ul>
+    <li>要約・図解・ブリーフは AI の下書きを一次情報と照合したものです。ベンダーが発表した数字は、独自には検証していません。</li>
+    <li>「今週のテーマ」は共通する背景の見立てで、事実ではなく AI の解釈です。</li>
+    <li>X の投稿は補助情報です。採用の判断は一次情報で行っています。</li>
+    <li>スナップショットの蓄積が 14 日分に満たない間は、「上昇中」ではなく「今週の注目」と表示します。</li>
+  </ul>
+  <p class="lead">設計は <a href="https://github.com/aktsmm/ai-trend-radar/blob/master/docs/design.md">docs/design.md</a>、運用は <a href="https://github.com/aktsmm/ai-trend-radar/blob/master/docs/runbook.md">docs/runbook.md</a>、データの取り方は <a href="https://github.com/aktsmm/ai-trend-radar/blob/master/docs/api.md">docs/api.md</a> にあります。誤りに気づいたら <a href="https://github.com/aktsmm/ai-trend-radar/issues">Issue</a> でお知らせください。</p>
+</main>
+<script>
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const j = u => fetch(u, { signal: AbortSignal.timeout(5000) }).then(r => { if (!r.ok) throw new Error(u); return r.json(); });
+  const ago = iso => { const h = (Date.now() - Date.parse(iso)) / 3600000; return h < 48 ? `${Math.round(h)} 時間前` : `${Math.round(h / 24)} 日前`; };
+  const rows = [];
+  const row = (k, v) => rows.push(`<tr><th>${esc(k)}</th><td>${v}</td></tr>`);
+  Promise.allSettled([j("api/v1/health.json"), j("api/v1/index.json"), j("api/v1/glossary.json"),
+    j("https://api.github.com/repos/aktsmm/ai-trend-radar/actions/runs?per_page=30&status=completed")]).then(([h, ix, g, runs]) => {
+    if (h.status === "fulfilled") {
+      const d = h.value;
+      row("最新の週", `${esc(d.week)}(${esc(d.window.from)} 〜 ${esc(d.window.to)})`);
+      row("最終データ更新", `${esc(d.data_at.slice(0, 16).replace("T", " "))} UTC(${ago(d.data_at)})`);
+      row("掲載 / 観測候補", `${d.published} 件 / ${d.candidates} 件`);
+      row("収集元の取得", `${d.sources.ok} / ${d.sources.total}` + (d.sources.failed.length ? `(取得できなかった: ${esc(d.sources.failed.join(", "))})` : ""));
+      row("蓄積", d.baseline && d.baseline.is_baseline ? `${d.baseline.snapshots} 日分(14 日未満のため「今週の注目」表示)` : "14 日分以上");
+    } else row("状態", "health.json を読み込めませんでした");
+    if (ix.status === "fulfilled") row("アーカイブ", `${ix.value.weeks.length} 週分`);
+    if (g.status === "fulfilled") row("用語集", `${g.value.items.length} 語`);
+    if (runs.status === "fulfilled") {
+      const last = {};
+      for (const r of runs.value.workflow_runs) if (!last[r.name]) last[r.name] = r;
+      const show = [["radar", "収集・順位付け"], ["pages", "サイト公開"], ["AI Trend Radar — weekly brief drafting", "週次の下書き(digest)"]];
+      for (const [n, label] of show) if (last[n]) row(`直近の実行: ${label}`, `${last[n].conclusion === "success" ? "成功" : esc(last[n].conclusion || "")}(${ago(last[n].updated_at)})`);
+    }
+    document.querySelector("#state tbody").innerHTML = rows.join("");
+  });
+</script>
+</body>
+</html>

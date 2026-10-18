@@ -58,3 +58,6 @@
 - radar.yml: データ commit の push は rebase して最大 4 回リトライ。
 - digest_gate: 中身のない要約(定型句、重複、短すぎる行)を reject する。
 
+
+- site/about.html: しくみと実データの運用状況(health.json と GitHub Actions の直近の実行を表示)。トップのステータスバーは同じ情報の要約。
+

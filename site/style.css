@@ -74,3 +74,4 @@ footer.site-footer{font-size:12px;color:var(--muted);padding-bottom:32px} footer
 .dlgroup button.primary{background:#fca311;border-color:#fca311;font-weight:700} .dlgroup button:disabled{opacity:.45;cursor:not-allowed}
 
 .card h2 a.tl{color:inherit;text-decoration:none}.card h2 a.tl:hover{text-decoration:underline}
+.statusbar{font-size:13px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 12px;margin:0 0 12px}.statusbar b{color:var(--ink)}.statusbar .ng{color:#b3261e}ol.how li{margin:6px 0}

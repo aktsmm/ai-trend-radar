@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: "0 20 * * *"   # daily collect (05:00 JST)
     - cron: "30 15 * * 0"  # weekly report (Mon 00:30 JST)
+    - cron: "30 15 * * 3"  # mid-week refresh (Thu 00:30 JST): same flow, published items stay pinned, only new candidates are added
   workflow_dispatch:
 permissions:
   contents: write
@@ -28,7 +29,7 @@ jobs:
           path: data/raw
           retention-days: 30
       - name: Weekly report
-        if: github.event.schedule == '30 15 * * 0' || github.event_name == 'workflow_dispatch'
+        if: contains(fromJSON('["30 15 * * 0","30 15 * * 3"]'), github.event.schedule) || github.event_name == 'workflow_dispatch'
         env: { PYTHONIOENCODING: utf-8, GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}", BRAVE_API_KEY: "${{ secrets.BRAVE_API_KEY }}" }
         run: |
           python -m analyze.report
@@ -50,7 +51,7 @@ jobs:
           done
           echo "changed=1" >> "$GITHUB_OUTPUT"
       - name: Start the digest drafting (weekly report only; publishing follows the auto-merge)
-        if: steps.commit.outputs.changed == '1' && (github.event.schedule == '30 15 * * 0' || github.event_name == 'workflow_dispatch')
+        if: steps.commit.outputs.changed == '1' && (contains(fromJSON('["30 15 * * 0","30 15 * * 3"]'), github.event.schedule) || github.event_name == 'workflow_dispatch')
         env: { GH_TOKEN: "${{ github.token }}" }
         run: |
           WEEK=$(python -c "import json;print(json.load(open('data/trends.json',encoding='utf-8'))['window']['label'])")

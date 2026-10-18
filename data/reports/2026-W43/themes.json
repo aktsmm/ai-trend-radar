@@ -40,5 +40,24 @@
       "https://ollama.com/blog/reflection-beam",
       "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
     ]
+  },
+  {
+    "id": "big-model-local",
+    "title": "巨大モデルを手元の機材で動かす工夫",
+    "confidence": "low",
+    "summary": "Unsloth と Apple の MLX は、どちらも 816B の Muse Spark Open を手元の機材で動かす方法を示した。量子化や複数台への分割で、巨大モデルの実行先が広がっている。",
+    "background": [
+      "Unsloth は 2bit で約 256GB、Apple は 4bit(約 493GB)を Mac Studio 複数台に分けて動かす方法を、それぞれ公式に説明している。",
+      "2 件だけの共通点で、データを手元に置きたい需要が背景にあるかもしれない(見立て)。"
+    ],
+    "entities": ["unsloth", "mlx"],
+    "signals": [
+      { "entity": "unsloth", "note": "Muse Spark Open は 2bit で約 256GB のメモリで動く" },
+      { "entity": "mlx", "note": "Mac Studio 4 台で Muse Spark Open が毎秒 36 トークン超(Apple の数字)" }
+    ],
+    "refs": [
+      "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta",
+      "https://machinelearning.apple.com/research/mlx-distributed-inference"
+    ]
   }
 ]

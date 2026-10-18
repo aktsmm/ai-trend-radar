@@ -16,14 +16,6 @@
     "ref": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
   },
   {
-    "term": "LoRA",
-    "kind": "仕組み",
-    "short": "一部の重みだけを追加学習する軽い調整方法",
-    "explain": "Low-Rank Adaptation の略。モデル全体ではなく、小さな追加部分だけを学習するファインチューニングの手法。必要なメモリや時間が少なく、自社データへの調整を試しやすい。",
-    "entity": "nemotron3",
-    "ref": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
-  },
-  {
     "term": "KV キャッシュ",
     "kind": "仕組み",
     "short": "過去の計算結果を保存して再計算を省く仕組み",
@@ -32,19 +24,27 @@
     "ref": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0"
   },
   {
-    "term": "プロンプトインジェクション",
-    "kind": "基礎",
-    "short": "文面に紛れた命令で AI を操る攻撃",
-    "explain": "AI が読む Web ページや文書に、悪意ある命令を紛れ込ませて意図しない動きをさせる攻撃。ブラウズやコード読み取りをするエージェントでは特に対策が重要になる。",
-    "entity": "gemini-4-argon",
-    "ref": "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/"
+    "term": "SSM(状態空間モデル)",
+    "kind": "仕組み",
+    "short": "固定サイズの状態で系列を処理する層",
+    "explain": "文章などの並びを、過去を要約した固定サイズの「状態」を更新しながら処理する仕組み。文脈が長くなっても記憶量が増えにくいのが利点で、注意機構と組み合わせたモデルも多い。",
+    "entity": "hybrid",
+    "ref": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/"
   },
   {
-    "term": "推論エンジン",
+    "term": "投機的デコード",
+    "kind": "仕組み",
+    "short": "下書きを先に作り、まとめて検証して速くする方式",
+    "explain": "小さな下書き役が数トークンを先に提案し、本命のモデルが一度にまとめて検証する生成の高速化手法。当たった分だけ一気に進めるので、品質を保ちつつ応答を速くできる。",
+    "entity": "hybrid",
+    "ref": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/"
+  },
+  {
+    "term": "GGUF",
     "kind": "基礎",
-    "short": "学習済みモデルを効率よく動かすソフト",
-    "explain": "学習済みの AI モデルに入力を与えて答えを出す処理を、速く・少ないメモリで行うソフトウェア。多くの利用者へ同時に応答するサーバー運用で、コストや速度に大きく影響する。",
-    "entity": "vllm",
-    "ref": "https://github.com/vllm-project/vllm/releases/tag/v0.32.0"
+    "short": "ローカル実行向けのモデルファイル形式",
+    "explain": "llama.cpp などのローカル実行ソフトで使われるモデルの保存形式。量子化した重みを 1 つのファイルにまとめられ、手元の PC でモデルを動かすときによく使われる。",
+    "entity": "unsloth",
+    "ref": "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta"
   }
 ]

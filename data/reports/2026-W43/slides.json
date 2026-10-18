@@ -1,0 +1,70 @@
+{
+  "muse-spark-open": [
+    {
+      "title": "Muse Spark Open: 816B の MoE コーディングモデル",
+      "diagram_type": "infographic",
+      "icon": "chip",
+      "stat": { "value": "42B / 816B", "label": "1 トークンで動く量(2026-10-15)" },
+      "steps": ["依頼を受ける", "計画して実行", "結果を確かめる", "自己修正する"],
+      "points": [
+        { "h": "何が起きた", "t": "Meta のコーディング向け MoE モデルを、NVIDIA が技術ブログで解説した" },
+        { "h": "何が変わる", "t": "100 万トークンの文脈で、プロジェクト全体をまとめて扱える" },
+        { "h": "嬉しいこと", "t": "NVFP4 の重みと NIM があり、GB300 NVL72 で最大 5 万トークン/秒/GPU(NVIDIA 発表)" },
+        { "h": "注意", "t": "速度の数字は NVIDIA の発表。816B 全体を載せるので大規模な環境が要る見込み" }
+      ],
+      "official_url": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+      "source_date": "2026-10-15"
+    }
+  ],
+  "ollama": [
+    {
+      "title": "Ollama で Reflection の Beam が期間限定無料",
+      "diagram_type": "infographic",
+      "icon": "cloud",
+      "stat": { "value": "501B", "label": "Beam の総パラメータ(2026-10-16 発表)" },
+      "steps": ["Ollama を更新", "ollama run beam:cloud", "エージェントに指定"],
+      "points": [
+        { "h": "何が起きた", "t": "Reflection 初のオープンウェイトモデル Beam が、Ollama Cloud で期間限定・無料になった" },
+        { "h": "何が変わる", "t": "約 23B が動く MoE で、100 万トークンの文脈。Apache 2.0 で公開されている" },
+        { "h": "嬉しいこと", "t": "ダウンロード不要で、ターミナルやアプリから試せる。ゼロデータ保持で動く" },
+        { "h": "使い方", "t": "`ollama launch claude --model beam:cloud` などで、コーディングツールに指定できる" }
+      ],
+      "official_url": "https://ollama.com/blog/reflection-beam",
+      "source_date": "2026-10-16"
+    }
+  ],
+  "flash-1017": [
+    {
+      "title": "DeepSeek-V4.1-Flash-1017: 更新版が公開",
+      "diagram_type": "infographic",
+      "icon": "spark",
+      "stat": { "value": "1M", "label": "コンテキスト(トークン)。2026-10-17 公開" },
+      "steps": ["モデルカードを読む", "重みを取得", "参照実装で整形", "推論を試す"],
+      "points": [
+        { "h": "何が起きた", "t": "DeepSeek が V4.1-Flash の更新版を、MIT ライセンスで Hugging Face に公開した" },
+        { "h": "何が変わる", "t": "推論・コーディング・エージェント・画像系の指標が上がった(発表の数字)" },
+        { "h": "嬉しいこと", "t": "作業時間と出力の長さが減り、速く安く終えられるとされる" },
+        { "h": "注意", "t": "チャットテンプレートは無く、encoding.py で整形する。重みは約 763B 分と大きい" }
+      ],
+      "official_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "source_date": "2026-10-17"
+    }
+  ],
+  "nemotron3": [
+    {
+      "title": "Nemotron 3.5 Super VL: 画像も扱う 120B MoE",
+      "diagram_type": "infographic",
+      "icon": "layers",
+      "stat": { "value": "12B / 120B", "label": "1 トークンで動く量(2026-10-15)" },
+      "steps": ["モデルを取得", "NeMo で追加学習", "NIM などで配備"],
+      "points": [
+        { "h": "何が起きた", "t": "NVIDIA が、テキスト・画像・文書・動画を扱うオープンなモデルを公開した" },
+        { "h": "何が変わる", "t": "推論・ツール利用・視覚理解が 1 つのモデルにまとまった" },
+        { "h": "嬉しいこと", "t": "自社データで追加学習できる。Scale AI はコスト 40 分の 1 を見込む(発表)" },
+        { "h": "注意", "t": "同規模のモデルの最大 5 倍のスループットは NVIDIA の発表の数字" }
+      ],
+      "official_url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/",
+      "source_date": "2026-10-15"
+    }
+  ]
+}

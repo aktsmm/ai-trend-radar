@@ -1,0 +1,44 @@
+[
+  {
+    "id": "big-moe-agents",
+    "title": "巨大な MoE を「エージェント用」に配る流れ",
+    "confidence": "medium",
+    "summary": "Muse Spark Open・Beam・Nemotron 3.5 Super VL は、総パラメータが大きくても一部だけを動かす MoE で、エージェント作業を想定している。",
+    "background": [
+      "3 件とも MoE で、稼働するのは一部(42B/816B、23B/501B、12B/120B)と各発表に書かれている。",
+      "コードや長い手順を任せる用途を前面に出す点が共通する。大きなモデルを実用の速度で動かす工夫が要る段階に入ったと読める(見立て)。"
+    ],
+    "entities": ["muse-spark-open", "ollama", "nemotron3"],
+    "signals": [
+      { "entity": "muse-spark-open", "note": "816B のうち 42B が動く MoE。コーディング向け" },
+      { "entity": "ollama", "note": "Beam は約 501B のうち約 23B が動く MoE" },
+      { "entity": "nemotron3", "note": "120B のうち 12B が動く MoE。エージェント向け" }
+    ],
+    "refs": [
+      "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+      "https://ollama.com/blog/reflection-beam",
+      "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+    ]
+  },
+  {
+    "id": "million-context",
+    "title": "100 万トークンの文脈が標準になりつつある",
+    "confidence": "medium",
+    "summary": "Muse Spark Open・Beam・DeepSeek-V4.1-Flash-1017 は、いずれも 100 万トークンの文脈を掲げている。長いコードや資料をまとめて渡す使い方が前提になってきた。",
+    "background": [
+      "3 件とも、モデルの説明に 100 万トークンの文脈を明記している。",
+      "コードベース全体や長い作業履歴を扱うエージェント用途が背景にあると読める(見立て)。"
+    ],
+    "entities": ["muse-spark-open", "ollama", "flash-1017"],
+    "signals": [
+      { "entity": "muse-spark-open", "note": "100 万トークンでプロジェクト全体を保持" },
+      { "entity": "ollama", "note": "Beam は 100 万トークンの文脈" },
+      { "entity": "flash-1017", "note": "context_window は 1M トークン" }
+    ],
+    "refs": [
+      "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+      "https://ollama.com/blog/reflection-beam",
+      "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    ]
+  }
+]

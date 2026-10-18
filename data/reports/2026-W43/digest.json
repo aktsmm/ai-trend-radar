@@ -214,5 +214,71 @@
       "性能は Reflection 側の説明で、このサイトでは検証していない"
     ],
     "audience": "AWS 上で大型のオープンウェイトモデルを運用したい開発者・企業"
+  },
+  "unsloth": {
+    "summary": [
+      "Unsloth が v0.1.908-beta を 2026-10-15 に公開し、Meta の Muse Spark Open と NVIDIA の Nemotron 3.5 を手元で動かせるようにした。",
+      "Muse Spark Open(816B)は 2bit で約 256GB、Nemotron 3.5 Bolt は約 24GB のメモリで動くと案内している。",
+      "コーディングエージェントが使うローカル GGUF モデルのプロンプトキャッシュ改善や、拡散 LLM の学習・対話にも対応した。"
+    ],
+    "why_trending": "公式リリースに加え、Hugging Face・Reddit・dev.to・PyPI でも言及があり、ローカル LLM 分野で今週 13 位。",
+    "what_changes": [
+      "Nemotron 3.5 Super VL / Bolt と Muse Spark Open を Unsloth で動かせる",
+      "Claude Code・Codex の 2 回目以降の再処理が減り、初回応答は最大 4 倍速い(発表の数字)",
+      "LLaDA など拡散 LLM と DeepSpeed での学習に対応"
+    ],
+    "benefits": [
+      "巨大モデルを量子化して、手元の機材で試せる",
+      "ローカルのモデルでコーディングエージェントを使いやすくなる"
+    ],
+    "caveats": [
+      "ベータ版のリリースで、速度の数字は開発元の発表。独自には検証していない",
+      "Muse Spark Open は 2bit でも約 256GB のメモリが要る"
+    ],
+    "audience": "ローカルで大型モデルの実行や追加学習を試したい開発者"
+  },
+  "mlx": {
+    "summary": [
+      "Apple の研究ブログが 2026-10-15 に、MLX と RDMA over Thunderbolt を使った Mac Studio での大型 LLM 推論を紹介した。",
+      "Mac Studio(M5 Ultra)4 台で、816B の Muse Spark Open が毎秒 36 トークン超で生成できたと報告している(Apple の数字)。",
+      "1 台でも Qwen 3.8(27B)と Mistral Medium 3.5(128B)が動き、M5 Ultra は M3 Ultra より最初の応答が最大 4.6 倍速いとする。"
+    ],
+    "why_trending": "Apple の公式研究記事に加え、Bluesky・PyPI・GitHub リリースでも言及があり、今週 15 位。",
+    "what_changes": [
+      "複数の Mac を Thunderbolt で結び、1 台に収まらないモデルを動かせる",
+      "mlx.launch と jaccl で、分散実行を 1 コマンドで始められる",
+      "M5 Ultra の Neural Accelerator で長い入力の処理が速くなる"
+    ],
+    "benefits": [
+      "データを外に出さず、手元でフロンティア級のモデルを試せる",
+      "消費電力は最大約 300W で、家庭やオフィスでも置きやすい"
+    ],
+    "caveats": [
+      "数字は Apple の測定で、M5 Ultra の Mac Studio が前提。独自には検証していない",
+      "Muse Spark Open は 4bit でも約 493GB で、1 台には載らない"
+    ],
+    "audience": "Mac で大型 LLM を私的な環境で動かしたい研究者・開発者"
+  },
+  "hybrid": {
+    "summary": [
+      "NVIDIA とプリンストン大の Dao AI Lab が、ハイブリッドモデルの SSM 層のデコードを速める ReplaySSM を 2026-10-12 に解説した。",
+      "状態をそのまま保存せず、チェックポイントと直近の入力を保持して、メモリ転送を約半分にする。",
+      "SSM のデコードが 1.46〜1.80 倍、投機的デコードが 1.85〜2.10 倍に速くなったと報告(NVIDIA の数字)。"
+    ],
+    "why_trending": "NVIDIA の公式技術ブログで取り上げられ、ハイブリッド構造のモデルが増えているため、今週 14 位。",
+    "what_changes": [
+      "SSM を「状態の更新」と「出力の計算」に分け、状態の書き込みを減らす",
+      "投機的デコードの巻き戻しが、バッファへの追記だけで済む",
+      "TensorRT-LLM・vLLM・FlashInfer に統合済みと説明"
+    ],
+    "benefits": [
+      "ハイブリッドモデルの提供コストと応答速度の改善が見込める",
+      "低精度の状態でも、精度の落ち込みを抑えやすい"
+    ],
+    "caveats": [
+      "速度の数字は B300 GPU・バッチ 256 での NVIDIA の測定で、独自には検証していない",
+      "評価した 4 モデルのうち 3 つが FP32 から約 2 ポイント以内で、残り 1 つは 2 ポイントを超える"
+    ],
+    "audience": "ハイブリッドモデルの推論基盤を運用する開発者・研究者"
   }
 }

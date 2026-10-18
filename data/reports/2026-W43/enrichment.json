@@ -202,6 +202,66 @@
      "retrieved_at": "2026-10-19T07:25:00+09:00"
     }
    ]
+  },
+  "unsloth": {
+   "selection_reason": "local-runtime 枠。Unsloth の公式リリース(2026-10-15)で Muse Spark Open と Nemotron 3.5 をローカルで動かせるようになった。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Unsloth v0.1.908-beta release notes",
+     "evidence_urls": [
+      "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta"
+     ],
+     "evidence_published_at": "2026-10-15",
+     "result": "Muse Spark Open(816B・約 256GB で 2bit)と Nemotron 3.5 の対応、コーディングエージェント向けのプロンプトキャッシュ改善、拡散 LLM の学習対応を確認",
+     "retrieved_at": "2026-10-19T07:55:00+09:00"
+    }
+   ]
+  },
+  "mlx": {
+   "selection_reason": "research 枠。Apple の公式研究ブログ(2026-10-15)が MLX と RDMA による Mac Studio での大規模 LLM 推論を解説。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://machinelearning.apple.com/research/mlx-distributed-inference"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+     "evidence_urls": [
+      "https://machinelearning.apple.com/research/mlx-distributed-inference"
+     ],
+     "evidence_published_at": "2026-10-15",
+     "result": "Mac Studio 4 台で Muse Spark Open が毎秒 36 トークン超、RDMA over Thunderbolt の利用、M5 Ultra の TTFT が最大 4.6 倍(Apple の数字)を確認",
+     "retrieved_at": "2026-10-19T07:55:00+09:00"
+    }
+   ]
+  },
+  "hybrid": {
+   "selection_reason": "model 枠。NVIDIA の公式技術ブログ(2026-10-12)が、ハイブリッドモデルの SSM 層を速くする ReplaySSM を解説。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding",
+     "evidence_urls": [
+      "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/"
+     ],
+     "evidence_published_at": "2026-10-12T16:00:54+00:00",
+     "result": "SSM のデコードが 1.46〜1.80 倍(B300・バッチ 256)、投機的デコードが 1.85〜2.10 倍、TensorRT-LLM・vLLM・FlashInfer へ統合を確認(NVIDIA の数字)",
+     "retrieved_at": "2026-10-19T07:55:00+09:00"
+    }
+   ]
   }
  },
  "url_checks": {

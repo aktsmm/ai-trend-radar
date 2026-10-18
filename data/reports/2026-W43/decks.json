@@ -358,5 +358,113 @@
         "date": "2026-10-16"
       }
     ]
+  },
+  "unsloth": {
+    "overview": {
+      "takeaway": "Unsloth が Muse Spark Open と Nemotron 3.5 に対応。ローカルのエージェント利用も改善した。",
+      "stat": { "value": "256GB", "label": "Muse Spark Open(2bit)の目安" },
+      "steps": ["Unsloth を更新", "GGUF を取得", "手元で実行"],
+      "changes": ["Nemotron 3.5 Bolt は約 24GB で動く", "ローカル GGUF でのプロンプト再処理が減った", "拡散 LLM と DeepSpeed の学習に対応"],
+      "facts": [
+        { "k": "提供元", "v": "Unsloth" },
+        { "k": "公開日", "v": "2026-10-15" },
+        { "k": "版", "v": "v0.1.908-beta" },
+        { "k": "対応", "v": "Muse Spark Open / Nemotron 3.5" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "ローカルで大型モデルの実行や追加学習を試したい開発者",
+      "benefits": ["巨大モデルを量子化して手元で試せる", "ローカルモデルでコーディングエージェントを使いやすい"],
+      "how_to": ["Unsloth を最新版にする", "ガイドの GGUF を取得する", "unsloth start でエージェントに指定する"],
+      "caveats": ["ベータ版で、速度は開発元の発表の数字", "Muse Spark Open は 2bit でも約 256GB が要る"],
+      "terms": [
+        { "t": "GGUF", "d": "ローカル実行向けのモデルファイル形式" },
+        { "t": "量子化", "d": "重みを少ないビットで持ち、メモリを減らす手法" },
+        { "t": "MoE", "d": "入力ごとに一部の専門家だけを動かす構造" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Meta Muse Spark Open + NVIDIA Nemotron 3.5 (v0.1.908-beta)",
+        "publisher": "GitHub(Unsloth)",
+        "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta",
+        "date": "2026-10-15"
+      }
+    ]
+  },
+  "mlx": {
+    "overview": {
+      "takeaway": "Apple が MLX と RDMA で、Mac Studio 複数台に 816B の巨大モデルを載せる方法を公開した。",
+      "stat": { "value": "36 tok/s", "label": "Mac Studio 4 台での生成速度" },
+      "steps": ["Mac を Thunderbolt で接続", "mlx.launch で起動", "モデルを分割して実行"],
+      "changes": ["RDMA over Thunderbolt で Mac 同士を高速に接続", "パイプラインとテンソルの 2 方式で分割", "M5 Ultra は最初の応答が最大 4.6 倍速い"],
+      "facts": [
+        { "k": "提供元", "v": "Apple" },
+        { "k": "公開日", "v": "2026-10-15" },
+        { "k": "対象モデル", "v": "Muse Spark Open ほか 2 種" },
+        { "k": "ピーク電力", "v": "約 300W(M5 Ultra)" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "Mac で大型 LLM を私的な環境で動かしたい研究者・開発者",
+      "benefits": ["データを外に出さずに大型モデルを試せる", "消費電力が小さく、家庭やオフィスに置ける"],
+      "how_to": ["Mac Studio を Thunderbolt 5 で接続する", "MLX を最新版にする", "mlx.launch で mlx_lm.benchmark を実行する"],
+      "caveats": ["数字は Apple の測定で、独自には検証していない", "Muse Spark Open は 4bit でも約 493GB で 1 台に載らない"],
+      "terms": [
+        { "t": "MLX", "d": "Apple silicon 向けの配列計算フレームワーク" },
+        { "t": "RDMA", "d": "CPU を介さず他の機械のメモリへ直接読み書きする通信" },
+        { "t": "TTFT", "d": "最初のトークンが出るまでの時間" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+        "publisher": "Apple ML Research",
+        "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+        "date": "2026-10-15"
+      }
+    ]
+  },
+  "hybrid": {
+    "overview": {
+      "takeaway": "ReplaySSM は SSM 層の状態保存を見直し、ハイブリッドモデルのデコードを速くする手法。",
+      "stat": { "value": "1.46〜1.80x", "label": "SSM デコードの高速化(NVIDIA)" },
+      "steps": ["入力を保存", "出力を計算", "満杯で更新"],
+      "changes": ["状態のメモリ転送が約半分になる", "投機的デコードの巻き戻しが追記だけで済む", "低精度の状態でも誤差の蓄積を抑える"],
+      "facts": [
+        { "k": "提供元", "v": "NVIDIA / Dao AI Lab" },
+        { "k": "公開日", "v": "2026-10-12" },
+        { "k": "測定環境", "v": "B300 GPU・バッチ 256" },
+        { "k": "統合先", "v": "TensorRT-LLM・vLLM ほか" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "ハイブリッドモデルの推論基盤を運用する開発者・研究者",
+      "benefits": ["応答速度と提供コストの改善が見込める", "投機的デコードの効果を出しやすくなる"],
+      "how_to": ["論文と GitHub のコードを読む", "TensorRT-LLM で ReplaySSM を有効にして試す"],
+      "caveats": ["速度は NVIDIA の測定で、独自には検証していない", "評価 4 モデル中 1 つは精度差が 2 ポイントを超える"],
+      "terms": [
+        { "t": "SSM", "d": "固定サイズの状態で系列を処理する層" },
+        { "t": "投機的デコード", "d": "下書きの複数トークンをまとめて検証し高速化する方式" },
+        { "t": "ハイブリッド", "d": "SSM 層と少数の注意層を組み合わせた構造" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding",
+        "publisher": "NVIDIA Technical Blog",
+        "url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/",
+        "date": "2026-10-12"
+      }
+    ]
   }
 }

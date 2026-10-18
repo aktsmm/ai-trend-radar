@@ -168,5 +168,56 @@
       "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
       "source_date": "2026-10-16"
     }
+  ],
+  "unsloth": [
+    {
+      "title": "Unsloth で Muse Spark Open と Nemotron 3.5",
+      "diagram_type": "infographic",
+      "icon": "terminal",
+      "stat": { "value": "256GB", "label": "Muse Spark Open を 2bit で動かす目安(2026-10-15)" },
+      "steps": ["Unsloth を更新", "GGUF を取得", "手元で実行"],
+      "points": [
+        { "h": "何が起きた", "t": "v0.1.908-beta で Muse Spark Open と Nemotron 3.5 をローカルで動かせるようになった" },
+        { "h": "何が変わる", "t": "Claude Code・Codex 利用時のプロンプト再処理が減り、初回応答が最大 4 倍速い" },
+        { "h": "嬉しいこと", "t": "Nemotron 3.5 Bolt は約 24GB で動く。拡散 LLM の学習にも対応" },
+        { "h": "注意", "t": "速度は開発元の発表の数字。Muse Spark Open は 2bit でも約 256GB が要る" }
+      ],
+      "official_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta",
+      "source_date": "2026-10-15"
+    }
+  ],
+  "mlx": [
+    {
+      "title": "MLX と RDMA で Mac Studio を束ねる",
+      "diagram_type": "infographic",
+      "icon": "chip",
+      "stat": { "value": "36 tok/s", "label": "Mac Studio 4 台での Muse Spark Open(2026-10-15)" },
+      "steps": ["Mac を Thunderbolt で接続", "mlx.launch で起動", "モデルを分割して実行"],
+      "points": [
+        { "h": "何が起きた", "t": "Apple が MLX と RDMA で、816B の Muse Spark Open を Mac Studio 4 台で動かす方法を公開" },
+        { "h": "何が変わる", "t": "1 台に載らないモデルを、パイプラインやテンソル分割で複数台に配れる" },
+        { "h": "嬉しいこと", "t": "M5 Ultra は M3 Ultra より最初の応答が最大 4.6 倍速い。電力は最大約 300W" },
+        { "h": "注意", "t": "数字は Apple の測定。M5 Ultra の Mac Studio が前提で、4bit でも約 493GB 要る" }
+      ],
+      "official_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "source_date": "2026-10-15"
+    }
+  ],
+  "hybrid": [
+    {
+      "title": "ReplaySSM: ハイブリッドモデルの高速化",
+      "diagram_type": "infographic",
+      "icon": "layers",
+      "stat": { "value": "1.46〜1.80x", "label": "SSM デコードの高速化(2026-10-12)" },
+      "steps": ["入力を保存", "出力を計算", "満杯で更新"],
+      "points": [
+        { "h": "何が起きた", "t": "NVIDIA らが、SSM 層の状態を「チェックポイント+直近の入力」で持つ ReplaySSM を解説" },
+        { "h": "何が変わる", "t": "状態のメモリ転送が約半分になり、投機的デコードは 1.85〜2.10 倍(NVIDIA 発表)" },
+        { "h": "嬉しいこと", "t": "TensorRT-LLM・vLLM・FlashInfer に統合済みで、試しやすい" },
+        { "h": "注意", "t": "数字は B300 GPU・バッチ 256 での測定。精度が 2 ポイント超落ちるモデルもある" }
+      ],
+      "official_url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/",
+      "source_date": "2026-10-12"
+    }
   ]
 }

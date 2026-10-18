@@ -11,7 +11,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from render import build_pptx  # noqa: E402
 
-DATA = json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))
+from analyze import weeks as W  # noqa: E402
+DATA = W.site_data()
 WITH_DECK = [t for t in DATA["trends"] if t.get("deck")]
 
 

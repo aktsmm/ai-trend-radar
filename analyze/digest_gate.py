@@ -237,6 +237,11 @@ def main(argv=None):
     window = json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))["window"]
     a.week = a.week or window["label"]
     wk = ROOT / "data" / "reports" / a.week
+    if not (wk / "enrichment.json").exists():
+        print(f"{a.week}: no enrichment yet (digest pending); nothing to check")
+        return 0
+    if (wk / "report.json").exists():
+        window = json.loads((wk / "report.json").read_text(encoding="utf-8"))["window"]
     enr = json.loads((wk / "enrichment.json").read_text(encoding="utf-8"))
     proposal = load_bundle(a.proposal or wk)
     if any(v is None for v in proposal.values()):

@@ -39,7 +39,7 @@ def dump(path, obj):
 
 
 def main():
-    data = json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))
+    data = W.site_data()
     now = datetime.now(timezone.utc).isoformat()
     week = data["window"]["label"]
     pub = [t for t in data["trends"] if t.get("deck")]

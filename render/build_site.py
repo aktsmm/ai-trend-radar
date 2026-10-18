@@ -91,7 +91,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--no-pptx", action="store_true", help="(ignored; kept for compatibility)")
     a = ap.parse_args()
-    latest = W.latest_label()
+    latest = W.site_label()
     archive = W.archive_weeks()
     for d in ("assets/slides", "assets/decks", "downloads", "briefs", "api", "w"):
         shutil.rmtree(SITE / d, ignore_errors=True)  # no stale artifacts survive a rebuild

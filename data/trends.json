@@ -730,7 +730,7 @@
    "url_checks": {
     "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/": {
      "status": 200,
-     "checked_at": "2026-10-18T22:37:01.988332+00:00"
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
     }
    },
    "jp_reactions": [
@@ -1131,7 +1131,7 @@
    "url_checks": {
     "https://ollama.com/blog/reflection-beam": {
      "status": 200,
-     "checked_at": "2026-10-18T22:37:01.988332+00:00"
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
     }
    },
    "jp_reactions": [
@@ -1654,7 +1654,7 @@
    "url_checks": {
     "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
      "status": 200,
-     "checked_at": "2026-10-18T22:37:01.988332+00:00"
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
     }
    },
    "jp_reactions": [
@@ -2057,7 +2057,7 @@
    "url_checks": {
     "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/": {
      "status": 200,
-     "checked_at": "2026-10-18T22:37:01.988332+00:00"
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
     }
    },
    "jp_reactions": [
@@ -2619,7 +2619,7 @@
    "url_checks": {
     "https://github.com/vllm-project/vllm/releases/tag/v0.32.0": {
      "status": 200,
-     "checked_at": "2026-10-18T22:37:01.988332+00:00"
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
     }
    },
    "digest": {
@@ -2981,7 +2981,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.302": {
      "status": 200,
-     "checked_at": "2026-10-18T22:37:01.988332+00:00"
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
     }
    },
    "digest": {
@@ -3357,7 +3357,7 @@
    "url_checks": {
     "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/": {
      "status": 200,
-     "checked_at": "2026-10-18T22:37:01.988332+00:00"
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
     }
    },
    "digest": {
@@ -3624,7 +3624,7 @@
    "url_checks": {
     "https://huggingface.co/blog/flux-3": {
      "status": 200,
-     "checked_at": "2026-10-18T22:37:01.988332+00:00"
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
     }
    },
    "digest": {
@@ -3971,7 +3971,7 @@
    "url_checks": {
     "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B": {
      "status": 200,
-     "checked_at": "2026-10-18T22:37:01.988332+00:00"
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
     }
    },
    "digest": {
@@ -4295,7 +4295,7 @@
    "url_checks": {
     "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/": {
      "status": 200,
-     "checked_at": "2026-10-18T22:37:01.988332+00:00"
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
     }
    },
    "digest": {
@@ -4536,12 +4536,46 @@
     }
    ],
    "official_urls": [
-    "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta",
-    "https://unsloth.ai/"
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta"
    ],
    "official_verified": true,
    "summary": "unsloth Meta Muse Spark Open + NVIDIA Nemotron 3.5。5ソースで言及(代表: 「You don’t need that expensive of a build for local llms.」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Unsloth で Muse Spark Open と Nemotron 3.5",
+     "diagram_type": "infographic",
+     "icon": "terminal",
+     "stat": {
+      "value": "256GB",
+      "label": "Muse Spark Open を 2bit で動かす目安(2026-10-15)"
+     },
+     "steps": [
+      "Unsloth を更新",
+      "GGUF を取得",
+      "手元で実行"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "v0.1.908-beta で Muse Spark Open と Nemotron 3.5 をローカルで動かせるようになった"
+      },
+      {
+       "h": "何が変わる",
+       "t": "Claude Code・Codex 利用時のプロンプト再処理が減り、初回応答が最大 4 倍速い"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "Nemotron 3.5 Bolt は約 24GB で動く。拡散 LLM の学習にも対応"
+      },
+      {
+       "h": "注意",
+       "t": "速度は開発元の発表の数字。Muse Spark Open は 2bit でも約 256GB が要る"
+      }
+     ],
+     "official_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta",
+     "source_date": "2026-10-15"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 0.666,
     "reddit_localllama": 1.067,
@@ -4583,10 +4617,133 @@
    "trend_label": "baseline",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Unsloth v0.1.908-beta release notes",
+      "evidence_urls": [
+       "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta"
+      ],
+      "evidence_published_at": "2026-10-15",
+      "result": "Muse Spark Open(816B・約 256GB で 2bit)と Nemotron 3.5 の対応、コーディングエージェント向けのプロンプトキャッシュ改善、拡散 LLM の学習対応を確認",
+      "retrieved_at": "2026-10-19T07:55:00+09:00"
+     }
+    ],
+    "selection_reason": "local-runtime 枠。Unsloth の公式リリース(2026-10-15)で Muse Spark Open と Nemotron 3.5 をローカルで動かせるようになった。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta": {
+     "status": 200,
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Unsloth が v0.1.908-beta を 2026-10-15 に公開し、Meta の Muse Spark Open と NVIDIA の Nemotron 3.5 を手元で動かせるようにした。",
+     "Muse Spark Open(816B)は 2bit で約 256GB、Nemotron 3.5 Bolt は約 24GB のメモリで動くと案内している。",
+     "コーディングエージェントが使うローカル GGUF モデルのプロンプトキャッシュ改善や、拡散 LLM の学習・対話にも対応した。"
+    ],
+    "why_trending": "公式リリースに加え、Hugging Face・Reddit・dev.to・PyPI でも言及があり、ローカル LLM 分野で今週 13 位。",
+    "what_changes": [
+     "Nemotron 3.5 Super VL / Bolt と Muse Spark Open を Unsloth で動かせる",
+     "Claude Code・Codex の 2 回目以降の再処理が減り、初回応答は最大 4 倍速い(発表の数字)",
+     "LLaDA など拡散 LLM と DeepSpeed での学習に対応"
+    ],
+    "benefits": [
+     "巨大モデルを量子化して、手元の機材で試せる",
+     "ローカルのモデルでコーディングエージェントを使いやすくなる"
+    ],
+    "caveats": [
+     "ベータ版のリリースで、速度の数字は開発元の発表。独自には検証していない",
+     "Muse Spark Open は 2bit でも約 256GB のメモリが要る"
+    ],
+    "audience": "ローカルで大型モデルの実行や追加学習を試したい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Unsloth が Muse Spark Open と Nemotron 3.5 に対応。ローカルのエージェント利用も改善した。",
+     "stat": {
+      "value": "256GB",
+      "label": "Muse Spark Open(2bit)の目安"
+     },
+     "steps": [
+      "Unsloth を更新",
+      "GGUF を取得",
+      "手元で実行"
+     ],
+     "changes": [
+      "Nemotron 3.5 Bolt は約 24GB で動く",
+      "ローカル GGUF でのプロンプト再処理が減った",
+      "拡散 LLM と DeepSpeed の学習に対応"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Unsloth"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-15"
+      },
+      {
+       "k": "版",
+       "v": "v0.1.908-beta"
+      },
+      {
+       "k": "対応",
+       "v": "Muse Spark Open / Nemotron 3.5"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "ローカルで大型モデルの実行や追加学習を試したい開発者",
+     "benefits": [
+      "巨大モデルを量子化して手元で試せる",
+      "ローカルモデルでコーディングエージェントを使いやすい"
+     ],
+     "how_to": [
+      "Unsloth を最新版にする",
+      "ガイドの GGUF を取得する",
+      "unsloth start でエージェントに指定する"
+     ],
+     "caveats": [
+      "ベータ版で、速度は開発元の発表の数字",
+      "Muse Spark Open は 2bit でも約 256GB が要る"
+     ],
+     "terms": [
+      {
+       "t": "GGUF",
+       "d": "ローカル実行向けのモデルファイル形式"
+      },
+      {
+       "t": "量子化",
+       "d": "重みを少ないビットで持ち、メモリを減らす手法"
+      },
+      {
+       "t": "MoE",
+       "d": "入力ごとに一部の専門家だけを動かす構造"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Meta Muse Spark Open + NVIDIA Nemotron 3.5 (v0.1.908-beta)",
+      "publisher": "GitHub(Unsloth)",
+      "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta",
+      "date": "2026-10-15"
+     }
+    ]
+   }
   },
   {
    "rank": 14,
@@ -4691,11 +4848,46 @@
     }
    ],
    "official_urls": [
-    "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/feed/"
+    "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/"
    ],
    "official_verified": true,
    "summary": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding ― Hybrid models interleave state-space model (SSM) layers with a few attention layers. NVIDIA Nemotron 3, Qwen3.。6ソースで言及(代表: 「ReplaySSM: Rethinking State Storage for Faster Hybrid-Model 」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "ReplaySSM: ハイブリッドモデルの高速化",
+     "diagram_type": "infographic",
+     "icon": "layers",
+     "stat": {
+      "value": "1.46〜1.80x",
+      "label": "SSM デコードの高速化(2026-10-12)"
+     },
+     "steps": [
+      "入力を保存",
+      "出力を計算",
+      "満杯で更新"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "NVIDIA らが、SSM 層の状態を「チェックポイント+直近の入力」で持つ ReplaySSM を解説"
+      },
+      {
+       "h": "何が変わる",
+       "t": "状態のメモリ転送が約半分になり、投機的デコードは 1.85〜2.10 倍(NVIDIA 発表)"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "TensorRT-LLM・vLLM・FlashInfer に統合済みで、試しやすい"
+      },
+      {
+       "h": "注意",
+       "t": "数字は B300 GPU・バッチ 256 での測定。精度が 2 ポイント超落ちるモデルもある"
+      }
+     ],
+     "official_url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/",
+     "source_date": "2026-10-12"
+    }
+   ],
    "score_breakdown": {
     "github_new": 0.296,
     "hackernews": 0.575,
@@ -4738,10 +4930,132 @@
    "trend_label": "baseline",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding",
+      "evidence_urls": [
+       "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/"
+      ],
+      "evidence_published_at": "2026-10-12T16:00:54+00:00",
+      "result": "SSM のデコードが 1.46〜1.80 倍(B300・バッチ 256)、投機的デコードが 1.85〜2.10 倍、TensorRT-LLM・vLLM・FlashInfer へ統合を確認(NVIDIA の数字)",
+      "retrieved_at": "2026-10-19T07:55:00+09:00"
+     }
+    ],
+    "selection_reason": "model 枠。NVIDIA の公式技術ブログ(2026-10-12)が、ハイブリッドモデルの SSM 層を速くする ReplaySSM を解説。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/": {
+     "status": 200,
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "NVIDIA とプリンストン大の Dao AI Lab が、ハイブリッドモデルの SSM 層のデコードを速める ReplaySSM を 2026-10-12 に解説した。",
+     "状態をそのまま保存せず、チェックポイントと直近の入力を保持して、メモリ転送を約半分にする。",
+     "SSM のデコードが 1.46〜1.80 倍、投機的デコードが 1.85〜2.10 倍に速くなったと報告(NVIDIA の数字)。"
+    ],
+    "why_trending": "NVIDIA の公式技術ブログで取り上げられ、ハイブリッド構造のモデルが増えているため、今週 14 位。",
+    "what_changes": [
+     "SSM を「状態の更新」と「出力の計算」に分け、状態の書き込みを減らす",
+     "投機的デコードの巻き戻しが、バッファへの追記だけで済む",
+     "TensorRT-LLM・vLLM・FlashInfer に統合済みと説明"
+    ],
+    "benefits": [
+     "ハイブリッドモデルの提供コストと応答速度の改善が見込める",
+     "低精度の状態でも、精度の落ち込みを抑えやすい"
+    ],
+    "caveats": [
+     "速度の数字は B300 GPU・バッチ 256 での NVIDIA の測定で、独自には検証していない",
+     "評価した 4 モデルのうち 3 つが FP32 から約 2 ポイント以内で、残り 1 つは 2 ポイントを超える"
+    ],
+    "audience": "ハイブリッドモデルの推論基盤を運用する開発者・研究者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "ReplaySSM は SSM 層の状態保存を見直し、ハイブリッドモデルのデコードを速くする手法。",
+     "stat": {
+      "value": "1.46〜1.80x",
+      "label": "SSM デコードの高速化(NVIDIA)"
+     },
+     "steps": [
+      "入力を保存",
+      "出力を計算",
+      "満杯で更新"
+     ],
+     "changes": [
+      "状態のメモリ転送が約半分になる",
+      "投機的デコードの巻き戻しが追記だけで済む",
+      "低精度の状態でも誤差の蓄積を抑える"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "NVIDIA / Dao AI Lab"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-12"
+      },
+      {
+       "k": "測定環境",
+       "v": "B300 GPU・バッチ 256"
+      },
+      {
+       "k": "統合先",
+       "v": "TensorRT-LLM・vLLM ほか"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "ハイブリッドモデルの推論基盤を運用する開発者・研究者",
+     "benefits": [
+      "応答速度と提供コストの改善が見込める",
+      "投機的デコードの効果を出しやすくなる"
+     ],
+     "how_to": [
+      "論文と GitHub のコードを読む",
+      "TensorRT-LLM で ReplaySSM を有効にして試す"
+     ],
+     "caveats": [
+      "速度は NVIDIA の測定で、独自には検証していない",
+      "評価 4 モデル中 1 つは精度差が 2 ポイントを超える"
+     ],
+     "terms": [
+      {
+       "t": "SSM",
+       "d": "固定サイズの状態で系列を処理する層"
+      },
+      {
+       "t": "投機的デコード",
+       "d": "下書きの複数トークンをまとめて検証し高速化する方式"
+      },
+      {
+       "t": "ハイブリッド",
+       "d": "SSM 層と少数の注意層を組み合わせた構造"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "ReplaySSM: Rethinking State Storage for Faster Hybrid-Model Decoding",
+      "publisher": "NVIDIA Technical Blog",
+      "url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/",
+      "date": "2026-10-12"
+     }
+    ]
+   }
   },
   {
    "rank": 15,
@@ -4828,12 +5142,46 @@
     }
    ],
    "official_urls": [
-    "https://machinelearning.apple.com/research/mlx-distributed-inference",
-    "https://github.com/ml-explore/mlx"
+    "https://machinelearning.apple.com/research/mlx-distributed-inference"
    ],
    "official_verified": true,
    "summary": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio。4ソースで言及(代表: 「Local and Distributed Large LLM Inference with MLX and RDMA 」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "MLX と RDMA で Mac Studio を束ねる",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "36 tok/s",
+      "label": "Mac Studio 4 台での Muse Spark Open(2026-10-15)"
+     },
+     "steps": [
+      "Mac を Thunderbolt で接続",
+      "mlx.launch で起動",
+      "モデルを分割して実行"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Apple が MLX と RDMA で、816B の Muse Spark Open を Mac Studio 4 台で動かす方法を公開"
+      },
+      {
+       "h": "何が変わる",
+       "t": "1 台に載らないモデルを、パイプラインやテンソル分割で複数台に配れる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "M5 Ultra は M3 Ultra より最初の応答が最大 4.6 倍速い。電力は最大約 300W"
+      },
+      {
+       "h": "注意",
+       "t": "数字は Apple の測定。M5 Ultra の Mac Studio が前提で、4bit でも約 493GB 要る"
+      }
+     ],
+     "official_url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+     "source_date": "2026-10-15"
+    }
+   ],
    "score_breakdown": {
     "pypi": 0.329,
     "bluesky": 0.108,
@@ -4858,8 +5206,21 @@
    "trend_label": "baseline",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "evidence_urls": [
+       "https://machinelearning.apple.com/research/mlx-distributed-inference"
+      ],
+      "evidence_published_at": "2026-10-15",
+      "result": "Mac Studio 4 台で Muse Spark Open が毎秒 36 トークン超、RDMA over Thunderbolt の利用、M5 Ultra の TTFT が最大 4.6 倍(Apple の数字)を確認",
+      "retrieved_at": "2026-10-19T07:55:00+09:00"
+     }
+    ],
+    "selection_reason": "research 枠。Apple の公式研究ブログ(2026-10-15)が MLX と RDMA による Mac Studio での大規模 LLM 推論を解説。"
    },
    "jp_reactions": [
     {
@@ -4868,7 +5229,117 @@
      "url": "https://zenn.dev/drbobt1122/articles/blog26101702",
      "date": "2026-10-18"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://machinelearning.apple.com/research/mlx-distributed-inference": {
+     "status": 200,
+     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Apple の研究ブログが 2026-10-15 に、MLX と RDMA over Thunderbolt を使った Mac Studio での大型 LLM 推論を紹介した。",
+     "Mac Studio(M5 Ultra)4 台で、816B の Muse Spark Open が毎秒 36 トークン超で生成できたと報告している(Apple の数字)。",
+     "1 台でも Qwen 3.8(27B)と Mistral Medium 3.5(128B)が動き、M5 Ultra は M3 Ultra より最初の応答が最大 4.6 倍速いとする。"
+    ],
+    "why_trending": "Apple の公式研究記事に加え、Bluesky・PyPI・GitHub リリースでも言及があり、今週 15 位。",
+    "what_changes": [
+     "複数の Mac を Thunderbolt で結び、1 台に収まらないモデルを動かせる",
+     "mlx.launch と jaccl で、分散実行を 1 コマンドで始められる",
+     "M5 Ultra の Neural Accelerator で長い入力の処理が速くなる"
+    ],
+    "benefits": [
+     "データを外に出さず、手元でフロンティア級のモデルを試せる",
+     "消費電力は最大約 300W で、家庭やオフィスでも置きやすい"
+    ],
+    "caveats": [
+     "数字は Apple の測定で、M5 Ultra の Mac Studio が前提。独自には検証していない",
+     "Muse Spark Open は 4bit でも約 493GB で、1 台には載らない"
+    ],
+    "audience": "Mac で大型 LLM を私的な環境で動かしたい研究者・開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Apple が MLX と RDMA で、Mac Studio 複数台に 816B の巨大モデルを載せる方法を公開した。",
+     "stat": {
+      "value": "36 tok/s",
+      "label": "Mac Studio 4 台での生成速度"
+     },
+     "steps": [
+      "Mac を Thunderbolt で接続",
+      "mlx.launch で起動",
+      "モデルを分割して実行"
+     ],
+     "changes": [
+      "RDMA over Thunderbolt で Mac 同士を高速に接続",
+      "パイプラインとテンソルの 2 方式で分割",
+      "M5 Ultra は最初の応答が最大 4.6 倍速い"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Apple"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-15"
+      },
+      {
+       "k": "対象モデル",
+       "v": "Muse Spark Open ほか 2 種"
+      },
+      {
+       "k": "ピーク電力",
+       "v": "約 300W(M5 Ultra)"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "Mac で大型 LLM を私的な環境で動かしたい研究者・開発者",
+     "benefits": [
+      "データを外に出さずに大型モデルを試せる",
+      "消費電力が小さく、家庭やオフィスに置ける"
+     ],
+     "how_to": [
+      "Mac Studio を Thunderbolt 5 で接続する",
+      "MLX を最新版にする",
+      "mlx.launch で mlx_lm.benchmark を実行する"
+     ],
+     "caveats": [
+      "数字は Apple の測定で、独自には検証していない",
+      "Muse Spark Open は 4bit でも約 493GB で 1 台に載らない"
+     ],
+     "terms": [
+      {
+       "t": "MLX",
+       "d": "Apple silicon 向けの配列計算フレームワーク"
+      },
+      {
+       "t": "RDMA",
+       "d": "CPU を介さず他の機械のメモリへ直接読み書きする通信"
+      },
+      {
+       "t": "TTFT",
+       "d": "最初のトークンが出るまでの時間"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Local and Distributed Large LLM Inference with MLX and RDMA on Mac Studio",
+      "publisher": "Apple ML Research",
+      "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+      "date": "2026-10-15"
+     }
+    ]
+   }
   },
   {
    "rank": 16,
@@ -5824,10 +6295,41 @@
     "https://ollama.com/blog/reflection-beam",
     "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
    ]
+  },
+  {
+   "id": "big-model-local",
+   "title": "巨大モデルを手元の機材で動かす工夫",
+   "confidence": "low",
+   "summary": "Unsloth と Apple の MLX は、どちらも 816B の Muse Spark Open を手元の機材で動かす方法を示した。量子化や複数台への分割で、巨大モデルの実行先が広がっている。",
+   "background": [
+    "Unsloth は 2bit で約 256GB、Apple は 4bit(約 493GB)を Mac Studio 複数台に分けて動かす方法を、それぞれ公式に説明している。",
+    "2 件だけの共通点で、データを手元に置きたい需要が背景にあるかもしれない(見立て)。"
+   ],
+   "entities": [
+    "unsloth",
+    "mlx"
+   ],
+   "signals": [
+    {
+     "entity": "unsloth",
+     "note": "Muse Spark Open は 2bit で約 256GB のメモリで動く"
+    },
+    {
+     "entity": "mlx",
+     "note": "Mac Studio 4 台で Muse Spark Open が毎秒 36 トークン超(Apple の数字)"
+    }
+   ],
+   "refs": [
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta",
+    "https://machinelearning.apple.com/research/mlx-distributed-inference"
+   ]
   }
  ],
  "rejected_candidates": {
   "llama-cpp": "b11721 は CUDA 向けカーネルの融合のみの自動ビルド番号の更新で、ニュースとして紹介する内容が弱い。",
-  "openai-codex": "一次情報の本文を確認できなかった(公式ページを取得できなかった)。"
+  "openai-codex": "一次情報の本文を確認できなかった(公式ページを取得できなかった)。",
+  "switch": "AWS の障害復旧機能の更新で、AI の動向としては関連が薄い。",
+  "whatsapp": "通話アプリの招待機能の発表で、AI の動向としては関連が薄い。",
+  "remote": "論文の紹介ページ(集約サイト)のみで、著者側の一次情報の本文を確認できなかった。"
  }
 }

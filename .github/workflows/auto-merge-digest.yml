@@ -8,7 +8,7 @@ on:
     workflows: ["AI Trend Radar — weekly brief drafting"]
     types: [completed]
   schedule:
-    - cron: "47 */3 * * *"
+    - cron: "*/30 * * * *"   # polls: the PR-open trigger does not always fire for bot-created PRs
   workflow_dispatch:
 permissions:
   contents: write
@@ -19,7 +19,21 @@ concurrency:
   group: data-write
   cancel-in-progress: false
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      pending: ${{ steps.n.outputs.pending }}
+    steps:
+      - id: n
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          n=$(gh pr list -R "$GITHUB_REPOSITORY" --state open --label data --label automation --json number --jq 'length')
+          echo "pending=$n" >> "$GITHUB_OUTPUT"
   merge:
+    needs: check
+    if: needs.check.outputs.pending != '0' || github.event_name != 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:

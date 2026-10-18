@@ -8,6 +8,7 @@ permissions:
   actions: write
   contents: read
   issues: write
+  pull-requests: read
 concurrency:
   group: watchdog
   cancel-in-progress: false
@@ -49,6 +50,26 @@ jobs:
           WEEK=$(gh api "repos/$REPO/contents/data/trends.json" -H "Accept: application/vnd.github.raw" --jq '.window.label')
           echo "retrying digest for $WEEK"
           gh workflow run digest.lock.yml -R "$REPO" -f week="$WEEK"
+      - name: Unstick digest PRs (re-run auto-merge once; open an issue if still open after 24 h)
+        run: |
+          gh pr list -R "$REPO" --state open --search "head:digest/" --json number,createdAt,headRefName --jq '.[] | "\(.number) \(.createdAt)"' | while read n created; do
+            age=$(( ($(date +%s) - $(date -d "$created" +%s)) / 3600 ))
+            echo "digest PR #$n open for ${age} h"
+            if [ "$age" -ge 4 ]; then gh workflow run auto-merge-digest.yml -R "$REPO" >/dev/null 2>&1 || true; fi
+            if [ "$age" -ge 24 ]; then
+              title="[watchdog] digest PR #$n が 24 時間以上 merge されていません"
+              open=$(gh issue list -R "$REPO" --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+              [ -z "$open" ] && gh issue create -R "$REPO" --title "$title" --body "auto-merge-digest の最新の実行ログと PR のコメントを確認してください。検証が通らない原因(コードかデータか)を切り分けます。" || true
+            fi
+          done
+      - name: Keep Pages fresh (deploy again when master is newer than the last successful deploy)
+        run: |
+          head_at=$(gh api "repos/$REPO/commits/master" --jq '.commit.committer.date')
+          last=$(gh run list -R "$REPO" --workflow pages.yml --status success --limit 1 --json updatedAt --jq '.[0].updatedAt // empty')
+          running=$(gh run list -R "$REPO" --workflow pages.yml --limit 3 --json status --jq '[.[]|select(.status=="in_progress" or .status=="queued")]|length')
+          if [ -z "$last" ] || [ "$(date -d "$head_at" +%s)" -gt $(( $(date -d "$last" +%s) + 1800 )) ]; then
+            if [ "$running" = "0" ]; then echo "master ($head_at) is newer than the last deploy (${last:-none}); deploying"; gh workflow run pages.yml -R "$REPO"; fi
+          fi
       - name: Dead-man check (last successful radar run)
         run: |
           last=$(gh run list -R "$REPO" --workflow radar.yml --status success --limit 1 --json updatedAt --jq '.[0].updatedAt // empty')

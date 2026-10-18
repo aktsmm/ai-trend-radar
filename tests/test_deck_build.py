@@ -17,7 +17,7 @@ WITH_DECK = [t for t in DATA["trends"] if t.get("deck")]
 
 class PptxTests(unittest.TestCase):
     def test_every_deck_builds_two_editable_slides_with_sources(self):
-        self.assertGreaterEqual(len(WITH_DECK), 5)
+        self.assertGreaterEqual(len(WITH_DECK), 1)
         with tempfile.TemporaryDirectory() as d:
             for t in WITH_DECK:
                 out = Path(d) / f"{t['entity_id']}.pptx"

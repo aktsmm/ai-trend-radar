@@ -80,12 +80,17 @@ class PngTests(unittest.TestCase):
             from playwright.sync_api import sync_playwright
         except ImportError:
             self.skipTest("playwright not installed")
+        import json
+        trends = json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))["trends"]
+        eid = next((t["entity_id"] for t in trends if t.get("slides")), None)
+        if not eid:
+            self.skipTest("no published infographic this week")
         digests = []
         with sync_playwright() as p:
             b = p.chromium.launch()
             for _ in range(2):
                 page = b.new_page(viewport={"width": 1280, "height": 720}, device_scale_factor=1)
-                page.goto((ROOT / "site" / "slide.html").as_uri() + "?e=claude-code&n=0")
+                page.goto((ROOT / "site" / "slide.html").as_uri() + f"?e={eid}&n=0")
                 page.wait_for_selector("body[data-ready='1']")
                 digests.append(hashlib.sha256(page.locator(".slide").screenshot()).hexdigest())
                 page.close()

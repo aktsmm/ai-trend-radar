@@ -1,0 +1,87 @@
+{
+  "week": "2026-W43",
+  "selected_on": "2026-10-18",
+  "selection_policy": "公開TOP6から、日付つきの一次情報の本文を確認できた4件(model 3 / local-runtime 1)。llama.cpp はビルド番号の更新、OpenAI Codex は公式ページを取得できなかったため見送り。",
+  "entities": {
+    "muse-spark-open": {
+      "selection_reason": "TOP1。NVIDIA の公式技術ブログ(2026-10-15)が Meta の Muse Spark Open を解説。",
+      "verification_status": "verified",
+      "official_urls": [
+        "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/"
+      ],
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "Muse Spark Open NVIDIA Technical Blog",
+          "evidence_urls": [
+            "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/"
+          ],
+          "evidence_published_at": "2026-10-15T18:00:01+00:00",
+          "result": "816B の MoE(42B が稼働)、1M トークン文脈、NVFP4 の重み、GB300 NVL72 での性能(NVIDIA の数字)を確認",
+          "retrieved_at": "2026-10-19T03:20:00+09:00"
+        }
+      ]
+    },
+    "ollama": {
+      "selection_reason": "TOP2。local-runtime 代表。2026-10-16 に公式ブログで Reflection の Beam の提供開始を発表。",
+      "verification_status": "verified",
+      "official_urls": [
+        "https://ollama.com/blog/reflection-beam"
+      ],
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "Reflection's Beam on Ollama",
+          "evidence_urls": [
+            "https://ollama.com/blog/reflection-beam"
+          ],
+          "evidence_published_at": "2026-10-16",
+          "result": "Beam が Ollama Cloud で期間限定・無料、501B の MoE(23B が稼働)、1M 文脈、Apache 2.0、起動コマンドを確認",
+          "retrieved_at": "2026-10-19T03:20:00+09:00"
+        }
+      ]
+    },
+    "flash-1017": {
+      "selection_reason": "TOP4。model 枠。DeepSeek 公式の Hugging Face モデルカードが 2026-10-17 に公開。",
+      "verification_status": "verified",
+      "official_urls": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      ],
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "DeepSeek-V4.1-Flash-1017 model card",
+          "evidence_urls": [
+            "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+          ],
+          "evidence_published_at": "2026-10-17T05:52:18",
+          "result": "V4.1-Flash の更新版、ベンチマーク表、MIT ライセンス、1M 文脈、チャットテンプレートの扱いを確認",
+          "retrieved_at": "2026-10-19T03:20:00+09:00"
+        }
+      ]
+    },
+    "nemotron3": {
+      "selection_reason": "TOP6。NVIDIA 公式技術ブログ(2026-10-15)が Nemotron 3.5 Super VL を解説。",
+      "verification_status": "verified",
+      "official_urls": [
+        "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+      ],
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "Nemotron 3.5 Super VL NVIDIA Technical Blog",
+          "evidence_urls": [
+            "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+          ],
+          "evidence_published_at": "2026-10-15T18:01:00+00:00",
+          "result": "120B の MoE(12B が稼働)、マルチモーダル対応、NeMo での追加学習、導入企業の数字(発表)を確認",
+          "retrieved_at": "2026-10-19T03:20:00+09:00"
+        }
+      ]
+    }
+  }
+}

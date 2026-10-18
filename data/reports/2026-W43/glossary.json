@@ -1,0 +1,26 @@
+[
+  {
+    "term": "NVFP4",
+    "kind": "仕組み",
+    "short": "NVIDIA の 4bit 浮動小数点形式",
+    "explain": "モデルの重みを 4bit の浮動小数点で持つ NVIDIA の形式。量子化の一種で、メモリ使用量を減らし、対応する GPU で速く動かせる。精度は元より少し落ちることがある。",
+    "entity": "muse-spark-open",
+    "ref": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/"
+  },
+  {
+    "term": "マルチモーダル",
+    "kind": "基礎",
+    "short": "文字だけでなく画像・音声・動画も扱えること",
+    "explain": "テキストに加えて、画像、音声、動画、文書のレイアウトなど複数の種類の情報を 1 つのモデルで理解・処理できること。図表入りの資料を読ませる用途で役立つ。",
+    "entity": "nemotron3",
+    "ref": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+  },
+  {
+    "term": "LoRA",
+    "kind": "仕組み",
+    "short": "一部の重みだけを追加学習する軽い調整方法",
+    "explain": "Low-Rank Adaptation の略。モデル全体ではなく、小さな追加部分だけを学習するファインチューニングの手法。必要なメモリや時間が少なく、自社データへの調整を試しやすい。",
+    "entity": "nemotron3",
+    "ref": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+  }
+]

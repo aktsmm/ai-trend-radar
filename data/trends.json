@@ -607,13 +607,47 @@
     }
    ],
    "official_urls": [
-    "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/feed/",
-    "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
-    "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B-NVFP4"
+    "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/"
    ],
    "official_verified": true,
    "summary": "Scale Agentic Coding Workflows with Meta’s Muse Spark Open on NVIDIA GB300 NVL72 ― Meta launches Muse Spark Open, a coding-optimized 816B mixture-of-experts (MoE) model with 42B active paramete。7ソースで言及(代表: 「Introducing Muse Spark Open: the most capable US open-weight」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Muse Spark Open: 816B の MoE コーディングモデル",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "42B / 816B",
+      "label": "1 トークンで動く量(2026-10-15)"
+     },
+     "steps": [
+      "依頼を受ける",
+      "計画して実行",
+      "結果を確かめる",
+      "自己修正する"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Meta のコーディング向け MoE モデルを、NVIDIA が技術ブログで解説した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "100 万トークンの文脈で、プロジェクト全体をまとめて扱える"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "NVFP4 の重みと NIM があり、GB300 NVL72 で最大 5 万トークン/秒/GPU(NVIDIA 発表)"
+      },
+      {
+       "h": "注意",
+       "t": "速度の数字は NVIDIA の発表。816B 全体を載せるので大規模な環境が要る見込み"
+      }
+     ],
+     "official_url": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+     "source_date": "2026-10-15"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 1.055,
     "hackernews": 0.566,
@@ -677,8 +711,21 @@
     }
    ],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Muse Spark Open NVIDIA Technical Blog",
+      "evidence_urls": [
+       "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/"
+      ],
+      "evidence_published_at": "2026-10-15T18:00:01+00:00",
+      "result": "816B の MoE(42B が稼働)、1M トークン文脈、NVFP4 の重み、GB300 NVL72 での性能(NVIDIA の数字)を確認",
+      "retrieved_at": "2026-10-19T03:20:00+09:00"
+     }
+    ],
+    "selection_reason": "TOP1。NVIDIA の公式技術ブログ(2026-10-15)が Meta の Muse Spark Open を解説。"
    },
    "jp_reactions": [
     {
@@ -687,7 +734,118 @@
      "url": "https://www.gamespark.jp/article/2026/10/16/173695.html",
      "date": "2026-10-16"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/": {
+     "status": 200,
+     "checked_at": "2026-10-18T22:06:25.287584+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Meta の Muse Spark Open は、コーディング向けに作られた 816B パラメータの MoE モデルで、1 トークンで動くのは 42B。NVIDIA が 2026-10-15 の技術ブログで解説した。",
+     "コンテキスト長は 100 万トークン。画像・文書に加えて音声・動画も扱え、ツールを使いながら長く作業するエージェント型のコーディングを想定している。",
+     "Meta が作った NVFP4 版の重みが Hugging Face で配布され、NVIDIA GB300 NVL72 では GPU あたり最大 5 万トークン/秒(NVIDIA の発表の数字)とされる。"
+    ],
+    "why_trending": "NVIDIA の公式ブログで取り上げられ、Hugging Face・Hacker News・Reddit でも言及があったため、今週 1 位。",
+    "what_changes": [
+     "816B の MoE で、256 の専門家のうち 8 つだけを動かす",
+     "100 万トークンの文脈で、プロジェクト全体をまとめて扱える",
+     "NVFP4 の重みと NVIDIA NIM が用意され、動かし始めやすい"
+    ],
+    "benefits": [
+     "動かす量が 42B なので、同規模の密なモデルより提供コストを抑えやすい(NVIDIA の説明)",
+     "コードベースを分割せずに渡せる"
+    ],
+    "caveats": [
+     "速度などの数字は NVIDIA の発表で、このサイトでは検証していない",
+     "816B 全体の重みを載せるため、大規模な GPU 環境が要る見込み"
+    ],
+    "audience": "コーディングエージェントを自前の GPU 環境で動かしたい開発者・企業"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Meta のコーディング向け MoE モデル。100 万トークンの文脈で、エージェント作業を想定している。",
+     "stat": {
+      "value": "42B / 816B",
+      "label": "1 トークンで動く量 / 総量"
+     },
+     "steps": [
+      "依頼を受ける",
+      "計画して実行",
+      "結果を確かめる",
+      "自己修正する"
+     ],
+     "changes": [
+      "256 の専門家から 8 つだけを動かす MoE",
+      "音声・動画・画像・文書を 1 つのモデルで扱う",
+      "NVFP4 の重みと NIM が用意された"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Meta(解説は NVIDIA)"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-15"
+      },
+      {
+       "k": "文脈",
+       "v": "100 万トークン"
+      },
+      {
+       "k": "規模",
+       "v": "816B(42B 稼働)"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "コーディングエージェントを自前の GPU 環境で動かしたい開発者・企業",
+     "benefits": [
+      "コードベースを分割せず、まとめて渡せる",
+      "動かす量が 42B で、提供コストを抑えやすい(NVIDIA の説明)"
+     ],
+     "how_to": [
+      "Hugging Face から NVFP4 の重みを取得する",
+      "本番は NVIDIA NIM で 1 コマンドの配備を試す",
+      "SGLang・vLLM・TensorRT LLM から選んで動かす"
+     ],
+     "caveats": [
+      "速度の数字は NVIDIA の発表で、独自には検証していない",
+      "816B 全体の重みを載せるため、大規模な環境が要る見込み"
+     ],
+     "terms": [
+      {
+       "t": "MoE",
+       "d": "入力ごとに一部の専門家だけを動かす構造"
+      },
+      {
+       "t": "NVFP4",
+       "d": "NVIDIA の 4bit 浮動小数点形式。メモリを節約する"
+      },
+      {
+       "t": "コンテキスト長",
+       "d": "一度に扱える入力と出力の長さの上限"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Scale Agentic Coding Workflows with Meta's Muse Spark Open on NVIDIA GB300 NVL72",
+      "publisher": "NVIDIA Technical Blog",
+      "url": "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+      "date": "2026-10-15"
+     }
+    ]
+   }
   },
   {
    "rank": 2,
@@ -844,12 +1002,46 @@
     }
    ],
    "official_urls": [
-    "https://ollama.com/blog/reflection-beam",
-    "https://ollama.com/"
+    "https://ollama.com/blog/reflection-beam"
    ],
    "official_verified": true,
    "summary": "Reflection's Beam is freely available on Ollama for a limited time ― Reflection's first open-weight model is now available on Ollama, and free for a limited time only. Beam is des。8ソースで言及(代表: 「Reflection's Beam is freely available on Ollama for a limite」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Ollama で Reflection の Beam が期間限定無料",
+     "diagram_type": "infographic",
+     "icon": "cloud",
+     "stat": {
+      "value": "501B",
+      "label": "Beam の総パラメータ(2026-10-16 発表)"
+     },
+     "steps": [
+      "Ollama を更新",
+      "ollama run beam:cloud",
+      "エージェントに指定"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Reflection 初のオープンウェイトモデル Beam が、Ollama Cloud で期間限定・無料になった"
+      },
+      {
+       "h": "何が変わる",
+       "t": "約 23B が動く MoE で、100 万トークンの文脈。Apache 2.0 で公開されている"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "ダウンロード不要で、ターミナルやアプリから試せる。ゼロデータ保持で動く"
+      },
+      {
+       "h": "使い方",
+       "t": "`ollama launch claude --model beam:cloud` などで、コーディングツールに指定できる"
+      }
+     ],
+     "official_url": "https://ollama.com/blog/reflection-beam",
+     "source_date": "2026-10-16"
+    }
+   ],
    "score_breakdown": {
     "github_new": 1.078,
     "reddit_localllama": 0.67,
@@ -927,8 +1119,21 @@
     }
    ],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Reflection's Beam on Ollama",
+      "evidence_urls": [
+       "https://ollama.com/blog/reflection-beam"
+      ],
+      "evidence_published_at": "2026-10-16",
+      "result": "Beam が Ollama Cloud で期間限定・無料、501B の MoE(23B が稼働)、1M 文脈、Apache 2.0、起動コマンドを確認",
+      "retrieved_at": "2026-10-19T03:20:00+09:00"
+     }
+    ],
+    "selection_reason": "TOP2。local-runtime 代表。2026-10-16 に公式ブログで Reflection の Beam の提供開始を発表。"
    },
    "jp_reactions": [
     {
@@ -943,7 +1148,116 @@
      "url": "https://tech-noisy.com/2026/10/12/ollama-v0-40-3-release/",
      "date": "2026-10-12"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://ollama.com/blog/reflection-beam": {
+     "status": 200,
+     "checked_at": "2026-10-18T22:06:25.287584+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Ollama が、Reflection 初のオープンウェイトモデル Beam を Ollama Cloud で期間限定・無料で提供すると 2026-10-16 に発表した。",
+     "Beam は総パラメータ約 501B、1 トークンで動くのは約 23B の MoE。100 万トークンの文脈を持ち、ソフトウェア開発や長い手順のエージェント作業向けで、ライセンスは Apache 2.0。",
+     "Ollama 側の Beam のエンドポイントはゼロデータ保持(ZDR)で動く。`ollama run beam:cloud` で試せる。"
+    ],
+    "why_trending": "公式ブログの発表に加え、Reddit・dev.to・PyPI でも言及があり、ローカル LLM 分野で今週 2 位。",
+    "what_changes": [
+     "巨大な Beam を、ダウンロードせずに Ollama Cloud から呼べる",
+     "`ollama launch` で Claude Code・Codex・OpenCode のモデルに指定できる"
+    ],
+    "benefits": [
+     "手元に 501B 級のモデルを置かなくても、アプリやターミナルから試せる",
+     "Apache 2.0 なので、中身を調べたり調整したりしやすい"
+    ],
+    "caveats": [
+     "無料は期間限定。終了日は記事に書かれていない",
+     "Beam の性能表は発表側の数字で、このサイトでは検証していない"
+    ],
+    "audience": "大型のオープンウェイトモデルを手軽に試したい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Reflection の Beam が Ollama Cloud で期間限定・無料に。巨大な MoE を、ダウンロードせず試せる。",
+     "stat": {
+      "value": "501B",
+      "label": "Beam の総パラメータ(約 23B が稼働)"
+     },
+     "steps": [
+      "Ollama を更新",
+      "ollama run beam:cloud",
+      "エージェントに指定"
+     ],
+     "changes": [
+      "Beam が Ollama Cloud で無料(期間限定)",
+      "100 万トークンの文脈、Apache 2.0",
+      "ollama launch で各ツールのモデルに指定できる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Ollama / Reflection"
+      },
+      {
+       "k": "発表日",
+       "v": "2026-10-16"
+      },
+      {
+       "k": "ライセンス",
+       "v": "Apache 2.0"
+      },
+      {
+       "k": "文脈",
+       "v": "100 万トークン"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "大型のオープンウェイトモデルを手軽に試したい開発者",
+     "benefits": [
+      "手元に巨大なモデルを置かずに試せる",
+      "Ollama 側のエンドポイントはゼロデータ保持で動く"
+     ],
+     "how_to": [
+      "最新の Ollama をダウンロードする",
+      "`ollama run beam:cloud` で対話を試す",
+      "`ollama launch claude --model beam:cloud` でツールに指定する"
+     ],
+     "caveats": [
+      "無料は期間限定。終了日は記事に書かれていない",
+      "性能表は発表側の数字で、独自には検証していない"
+     ],
+     "terms": [
+      {
+       "t": "Ollama Cloud",
+       "d": "モデルをダウンロードせず、クラウドで動かせるサービス"
+      },
+      {
+       "t": "ZDR",
+       "d": "ゼロデータ保持。入力などを保存しない運用"
+      },
+      {
+       "t": "MoE",
+       "d": "入力ごとに一部の専門家だけを動かす構造"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Reflection's Beam is freely available on Ollama for a limited time",
+      "publisher": "Ollama",
+      "url": "https://ollama.com/blog/reflection-beam",
+      "date": "2026-10-16"
+     }
+    ]
+   }
   },
   {
    "rank": 3,
@@ -1235,10 +1549,48 @@
      "metric_name": "likes+2*reposts"
     }
    ],
-   "official_urls": [],
-   "official_verified": false,
+   "official_urls": [
+    "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   ],
+   "official_verified": true,
    "summary": "deepseek-ai/DeepSeek-V4.1-Flash-1017。6ソースで言及(代表: 「deepseek-ai/DeepSeek-V4.1-Flash-1017」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "DeepSeek-V4.1-Flash-1017: 更新版が公開",
+     "diagram_type": "infographic",
+     "icon": "spark",
+     "stat": {
+      "value": "1M",
+      "label": "コンテキスト(トークン)。2026-10-17 公開"
+     },
+     "steps": [
+      "モデルカードを読む",
+      "重みを取得",
+      "参照実装で整形",
+      "推論を試す"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "DeepSeek が V4.1-Flash の更新版を、MIT ライセンスで Hugging Face に公開した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "推論・コーディング・エージェント・画像系の指標が上がった(発表の数字)"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "作業時間と出力の長さが減り、速く安く終えられるとされる"
+      },
+      {
+       "h": "注意",
+       "t": "チャットテンプレートは無く、encoding.py で整形する。重みは約 763B 分と大きい"
+      }
+     ],
+     "official_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "source_date": "2026-10-17"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 1.0,
     "hackernews": 1.107,
@@ -1301,8 +1653,21 @@
     }
    ],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "DeepSeek-V4.1-Flash-1017 model card",
+      "evidence_urls": [
+       "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+      ],
+      "evidence_published_at": "2026-10-17T05:52:18",
+      "result": "V4.1-Flash の更新版、ベンチマーク表、MIT ライセンス、1M 文脈、チャットテンプレートの扱いを確認",
+      "retrieved_at": "2026-10-19T03:20:00+09:00"
+     }
+    ],
+    "selection_reason": "TOP4。model 枠。DeepSeek 公式の Hugging Face モデルカードが 2026-10-17 に公開。"
    },
    "jp_reactions": [
     {
@@ -1311,7 +1676,118 @@
      "url": "https://pc.watch.impress.co.jp/docs/news/2149045.html",
      "date": "2026-10-17"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
+     "status": 200,
+     "checked_at": "2026-10-18T22:06:25.287584+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "DeepSeek が、V4.1-Flash の更新版 DeepSeek-V4.1-Flash-1017 を 2026-10-17 に Hugging Face で公開した。",
+     "推論・コーディング・エージェント作業・画像系のベンチマークが改善し、作業にかかる時間と出力の長さも減ったと説明している(発表の数字)。",
+     "ライセンスは MIT で、コンテキストは 100 万トークン。重みは約 763B パラメータ分で、FP8 などの低精度形式で配られている。"
+    ],
+    "why_trending": "Hugging Face のモデルカードが公開され、Hacker News・Reddit・OpenRouter でも言及があり、今週 4 位。",
+    "what_changes": [
+     "V4.1-Flash より、表の多くのベンチマークで高い値になった(発表の数字)",
+     "出力が短く済み、同じ作業をより速く、安く終えられるとされる",
+     "チャットテンプレートは付かず、参照実装の encoding.py で整形する"
+    ],
+    "benefits": [
+     "MIT ライセンスで、商用でも使いやすい",
+     "100 万トークンの文脈で、長い資料やコードをまとめて渡せる"
+    ],
+    "caveats": [
+     "ベンチマークは DeepSeek 自身の表で、このサイトでは検証していない",
+     "重みは約 763B 分あり、手元で動かすには大規模な環境が要る"
+    ],
+    "audience": "最新のオープンウェイトモデルを試す・自社で動かす開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "DeepSeek-V4.1-Flash の更新版。指標が上がり、MIT ライセンスで公開された。",
+     "stat": {
+      "value": "1M",
+      "label": "コンテキスト(トークン)"
+     },
+     "steps": [
+      "モデルカードを読む",
+      "重みを取得",
+      "参照実装で整形",
+      "推論を試す"
+     ],
+     "changes": [
+      "推論・コーディング・エージェント・画像系が改善",
+      "作業時間と出力の長さが減ったと説明",
+      "チャットテンプレートは無く、参照実装で整形"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "DeepSeek"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-17"
+      },
+      {
+       "k": "ライセンス",
+       "v": "MIT"
+      },
+      {
+       "k": "文脈",
+       "v": "100 万トークン"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "最新のオープンウェイトモデルを試す・自社で動かす開発者",
+     "benefits": [
+      "MIT ライセンスで、商用でも使いやすい",
+      "長い資料やコードをまとめて渡せる"
+     ],
+     "how_to": [
+      "モデルカードのベンチマーク表と注意書きを読む",
+      "inference フォルダの手順で重みを変換して動かす",
+      "本番用には deepseek-recipe の利用を検討する"
+     ],
+     "caveats": [
+      "ベンチマークは DeepSeek 自身の表で、独自には検証していない",
+      "重みは約 763B 分あり、手元では大規模な環境が要る"
+     ],
+     "terms": [
+      {
+       "t": "オープンウェイト",
+       "d": "重みを公開し、手元で動かせるモデル"
+      },
+      {
+       "t": "FP8",
+       "d": "8bit の浮動小数点形式。メモリと計算を節約する"
+      },
+      {
+       "t": "ベンチマーク",
+       "d": "モデルの性能を測る共通のテスト"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "publisher": "Hugging Face(DeepSeek)",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "date": "2026-10-17"
+     }
+    ]
+   }
   },
   {
    "rank": 5,
@@ -1690,12 +2166,46 @@
     }
    ],
    "official_urls": [
-    "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/feed/",
-    "https://ollama.com/library/nemotron3"
+    "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
    ],
    "official_verified": true,
    "summary": "NVIDIA Nemotron 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning ― Always-on agents are taking on longer, more complex enterprise workflows. A single request can involve reading。6ソースで言及(代表: 「NVIDIA Nemotron Bolt 3.5 74B A9B releases Oct. 15th」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Nemotron 3.5 Super VL: 画像も扱う 120B MoE",
+     "diagram_type": "infographic",
+     "icon": "layers",
+     "stat": {
+      "value": "12B / 120B",
+      "label": "1 トークンで動く量(2026-10-15)"
+     },
+     "steps": [
+      "モデルを取得",
+      "NeMo で追加学習",
+      "NIM などで配備"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "NVIDIA が、テキスト・画像・文書・動画を扱うオープンなモデルを公開した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "推論・ツール利用・視覚理解が 1 つのモデルにまとまった"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "自社データで追加学習できる。Scale AI はコスト 40 分の 1 を見込む(発表)"
+      },
+      {
+       "h": "注意",
+       "t": "同規模のモデルの最大 5 倍のスループットは NVIDIA の発表の数字"
+      }
+     ],
+     "official_url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/",
+     "source_date": "2026-10-15"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 1.035,
     "reddit_localllama": 1.26,
@@ -1768,8 +2278,21 @@
     }
    ],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Nemotron 3.5 Super VL NVIDIA Technical Blog",
+      "evidence_urls": [
+       "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+      ],
+      "evidence_published_at": "2026-10-15T18:01:00+00:00",
+      "result": "120B の MoE(12B が稼働)、マルチモーダル対応、NeMo での追加学習、導入企業の数字(発表)を確認",
+      "retrieved_at": "2026-10-19T03:20:00+09:00"
+     }
+    ],
+    "selection_reason": "TOP6。NVIDIA 公式技術ブログ(2026-10-15)が Nemotron 3.5 Super VL を解説。"
    },
    "jp_reactions": [
     {
@@ -1778,7 +2301,117 @@
      "url": "https://gigazine.net/news/20261016-nemotron-3-5-super-vl/",
      "date": "2026-10-16"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/": {
+     "status": 200,
+     "checked_at": "2026-10-18T22:06:25.287584+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "NVIDIA が Nemotron 3.5 Super VL を 2026-10-15 の技術ブログで紹介した。120B の MoE で、1 トークンで動くのは 12B。オープンで、自社向けに調整できるマルチモーダルモデル。",
+     "推論・指示への追従・ツール利用と、テキスト・画像・文書・動画の理解を 1 つのモデルにまとめ、言語用と画像用を別々に用意しなくて済む。",
+     "Scale AI は追加学習で推論コストを 40 分の 1 に、Ramp は最大 50% 高いスループットを見込む(いずれも発表の数字・見込み)。"
+    ],
+    "why_trending": "NVIDIA の公式ブログが解説し、Hugging Face・Reddit でも言及があったため、今週 6 位。",
+    "what_changes": [
+     "120B の MoE のうち 12B だけが動き、効率と能力を両立する",
+     "テキスト・画像・文書・動画を 1 つのモデルで扱う",
+     "NeMo で SFT・LoRA・強化学習ができ、学習用の公開データも出た"
+    ],
+    "benefits": [
+     "言語モデルと画像モデルを別々に動かさず、文書や図表の処理まで任せられる",
+     "自社のデータや規則で追加学習し、専用のエージェントに仕立てられる"
+    ],
+    "caveats": [
+     "「同規模のオープンモデルの最大 5 倍のスループット」は NVIDIA の発表の数字",
+     "導入企業の効果は各社の事例で、そのまま一般化はできない"
+    ],
+    "audience": "文書・図表・動画を扱う業務エージェントを作りたい開発者・企業"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "NVIDIA のオープンなマルチモーダル MoE。文書や図表を読むエージェントを自社向けに調整できる。",
+     "stat": {
+      "value": "12B / 120B",
+      "label": "1 トークンで動く量 / 総量"
+     },
+     "steps": [
+      "モデルを取得",
+      "NeMo で追加学習",
+      "NIM などで配備"
+     ],
+     "changes": [
+      "テキスト・画像・文書・動画を 1 つのモデルで扱う",
+      "NeMo で SFT・LoRA・強化学習ができる",
+      "学習用の公開データも Hugging Face に出た"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "NVIDIA"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-15"
+      },
+      {
+       "k": "規模",
+       "v": "120B(12B 稼働)"
+      },
+      {
+       "k": "対応",
+       "v": "テキスト・画像・動画"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "文書・図表・動画を扱う業務エージェントを作りたい開発者・企業",
+     "benefits": [
+      "言語用と画像用のモデルを別々に動かさずに済む",
+      "自社のデータや規則で専用エージェントに仕立てられる"
+     ],
+     "how_to": [
+      "公開された usage cookbook で使い方を確認する",
+      "NeMo AutoModel で SFT や LoRA を試す",
+      "配備は NVIDIA NIM から始める"
+     ],
+     "caveats": [
+      "最大 5 倍のスループットは NVIDIA の発表の数字",
+      "導入企業の効果は各社の事例で、一般化はできない"
+     ],
+     "terms": [
+      {
+       "t": "マルチモーダル",
+       "d": "文字だけでなく画像や動画も扱えること"
+      },
+      {
+       "t": "LoRA",
+       "d": "一部の重みだけを追加学習する軽い調整方法"
+      },
+      {
+       "t": "MoE",
+       "d": "入力ごとに一部の専門家だけを動かす構造"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "NVIDIA Nemotron 3.5 Super VL Powers Specialized Agents with Multimodal Reasoning",
+      "publisher": "NVIDIA Technical Blog",
+      "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/",
+      "date": "2026-10-15"
+     }
+    ]
+   }
   },
   {
    "rank": 7,
@@ -4196,6 +4829,78 @@
   }
  ],
  "candidates_pool": 121,
- "themes": [],
- "rejected_candidates": {}
+ "themes": [
+  {
+   "id": "big-moe-agents",
+   "title": "巨大な MoE を「エージェント用」に配る流れ",
+   "confidence": "medium",
+   "summary": "Muse Spark Open・Beam・Nemotron 3.5 Super VL は、総パラメータが大きくても一部だけを動かす MoE で、エージェント作業を想定している。",
+   "background": [
+    "3 件とも MoE で、稼働するのは一部(42B/816B、23B/501B、12B/120B)と各発表に書かれている。",
+    "コードや長い手順を任せる用途を前面に出す点が共通する。大きなモデルを実用の速度で動かす工夫が要る段階に入ったと読める(見立て)。"
+   ],
+   "entities": [
+    "muse-spark-open",
+    "ollama",
+    "nemotron3"
+   ],
+   "signals": [
+    {
+     "entity": "muse-spark-open",
+     "note": "816B のうち 42B が動く MoE。コーディング向け"
+    },
+    {
+     "entity": "ollama",
+     "note": "Beam は約 501B のうち約 23B が動く MoE"
+    },
+    {
+     "entity": "nemotron3",
+     "note": "120B のうち 12B が動く MoE。エージェント向け"
+    }
+   ],
+   "refs": [
+    "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+    "https://ollama.com/blog/reflection-beam",
+    "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+   ]
+  },
+  {
+   "id": "million-context",
+   "title": "100 万トークンの文脈が標準になりつつある",
+   "confidence": "medium",
+   "summary": "Muse Spark Open・Beam・DeepSeek-V4.1-Flash-1017 は、いずれも 100 万トークンの文脈を掲げている。長いコードや資料をまとめて渡す使い方が前提になってきた。",
+   "background": [
+    "3 件とも、モデルの説明に 100 万トークンの文脈を明記している。",
+    "コードベース全体や長い作業履歴を扱うエージェント用途が背景にあると読める(見立て)。"
+   ],
+   "entities": [
+    "muse-spark-open",
+    "ollama",
+    "flash-1017"
+   ],
+   "signals": [
+    {
+     "entity": "muse-spark-open",
+     "note": "100 万トークンでプロジェクト全体を保持"
+    },
+    {
+     "entity": "ollama",
+     "note": "Beam は 100 万トークンの文脈"
+    },
+    {
+     "entity": "flash-1017",
+     "note": "context_window は 1M トークン"
+    }
+   ],
+   "refs": [
+    "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/",
+    "https://ollama.com/blog/reflection-beam",
+    "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   ]
+  }
+ ],
+ "rejected_candidates": {
+  "llama-cpp": "b11721 は CUDA 向けカーネルの融合のみの自動ビルド番号の更新で、ニュースとして紹介する内容が弱い。",
+  "openai-codex": "一次情報の本文を確認できなかった(公式ページを取得できなかった)。"
+ }
 }

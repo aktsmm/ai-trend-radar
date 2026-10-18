@@ -14,7 +14,7 @@ from render import build_site  # noqa: E402
 
 class ArchiveTests(unittest.TestCase):
     def test_older_week_is_rederived_from_its_own_files(self):
-        latest = W.latest_label()
+        latest = W.site_label()
         with tempfile.TemporaryDirectory() as d:
             rep = Path(d) / "2026-W41"
             shutil.copytree(ROOT / "data" / "reports" / latest, rep)
@@ -40,7 +40,7 @@ class ArchiveTests(unittest.TestCase):
         self.assertIn("最新の週へ", html)
 
     def test_latest_week_is_in_the_archive_list(self):
-        self.assertIn(W.latest_label(), [w for w, _ in W.archive_weeks()])
+        self.assertIn(W.site_label(), [w for w, _ in W.archive_weeks()])
 
 
 if __name__ == "__main__":

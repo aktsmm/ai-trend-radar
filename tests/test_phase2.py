@@ -81,7 +81,8 @@ class PngTests(unittest.TestCase):
         except ImportError:
             self.skipTest("playwright not installed")
         import json
-        trends = json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))["trends"]
+        from analyze import weeks as W
+        trends = W.site_data()["trends"]
         eid = next((t["entity_id"] for t in trends if t.get("slides")), None)
         if not eid:
             self.skipTest("no published infographic this week")

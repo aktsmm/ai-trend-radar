@@ -15,6 +15,22 @@ def latest_label():
     return json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))["window"]["label"]
 
 
+def site_label():
+    """The week the public site shows: the newest week with at least one published item (the pipeline week in data/trends.json can be newer
+    while its digest is still being drafted / auto-merged; the site must not switch to an empty week meanwhile)."""
+    latest = latest_label()
+    if published(week_data(latest)):
+        return latest
+    for w in reversed(labels()):
+        if w != latest and published(week_data(w)):
+            return w
+    return latest
+
+
+def site_data():
+    return week_data(site_label())
+
+
 def labels():
     return sorted(p.name for p in REPORTS.iterdir() if (p / "report.json").exists())
 
@@ -39,10 +55,10 @@ def published(data):
 
 
 def archive_weeks():
-    """[(label, data)] for the latest week and every older week that has at least one published item, oldest first."""
-    out, latest = [], latest_label()
+    """[(label, data)] for every week that has at least one published item, oldest first (the pipeline week is added only when nothing is published yet)."""
+    out = []
     for w in labels():
         d = week_data(w)
-        if w == latest or published(d):
+        if published(d):
             out.append((w, d))
-    return out
+    return out or [(latest_label(), week_data(latest_label()))]

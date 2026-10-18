@@ -8,7 +8,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 SITE = ROOT / "site"
-DATA = json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))
+from analyze import weeks as W  # noqa: E402
+DATA = W.site_data()
 PUB = [t for t in DATA["trends"] if t.get("deck")]
 
 

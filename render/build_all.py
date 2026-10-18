@@ -22,7 +22,8 @@ def main():
     a = ap.parse_args()
     import json
     from collect.common import ROOT
-    week = a.week or json.loads((ROOT / "data" / "trends.json").read_text(encoding="utf-8"))["window"]["label"]
+    from analyze import weeks as W
+    week = a.week or W.site_label()
     sh("analyze.apply")
     sh("analyze.digest_gate", "--week", week)
     if not a.offline:

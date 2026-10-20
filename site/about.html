@@ -54,7 +54,7 @@
     if (runs.status === "fulfilled") {
       const last = {};
       for (const r of runs.value.workflow_runs) if (!last[r.name]) last[r.name] = r;
-      const show = [["radar", "収集・順位付け"], ["pages", "サイト公開"], ["AI Trend Radar — weekly brief drafting", "週次の下書き(digest)"]];
+      const show = [["radar", "収集・順位付け"], ["pages", "サイト公開"], ["AI Trend Radar — weekly brief drafting", "週次の下書き(digest)"], ["daily-tests", "毎日のフルテスト"]];
       for (const [n, label] of show) if (last[n]) row(`直近の実行: ${label}`, `${last[n].conclusion === "success" ? "成功" : esc(last[n].conclusion || "")}(${ago(last[n].updated_at)})`);
     }
     document.querySelector("#state tbody").innerHTML = rows.join("");

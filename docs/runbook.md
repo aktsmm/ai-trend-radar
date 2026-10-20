@@ -65,3 +65,6 @@
 - 公開サイトの週は「掲載ありの最新週」(analyze.weeks.site_label)。radar が新しい週を master に入れても、digest が自動マージされるまでサイトは前の週のまま。digest_gate は要約がない週では何も検査せず成功する。
 - watchdog は 4 時間以上 open の digest PR で auto-merge を再実行し、24 時間以上で Issue を作る。master が最後の公開より新しければ Pages を再デプロイする。
 
+
+- daily-tests.yml: 毎日 06:40 JST に master で digest_gate・ビルド・全テストを実行。失敗すると Issue を作り、回復すると閉じる。
+

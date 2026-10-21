@@ -466,5 +466,153 @@
         "date": "2026-10-12"
       }
     ]
+  },
+  "timestral": {
+    "overview": {
+      "takeaway": "Mistral 初の時系列基盤モデル。CPU で動き、3 つの公開指標で 1 位と説明。",
+      "stat": { "value": "209M", "label": "最大モデルのパラメータ数" },
+      "steps": ["サイズを選ぶ", "ゼロショットで予測", "必要なら微調整"],
+      "changes": [
+        "5M〜209M の 4 サイズを公開",
+        "確率的・多変量の予測と共変量に対応",
+        "Mistral Forge で微調整できる"
+      ],
+      "facts": [
+        { "k": "提供元", "v": "Mistral" },
+        { "k": "公開日", "v": "2026-10-15" },
+        { "k": "サイズ", "v": "5M / 28M / 123M / 209M" },
+        { "k": "推論", "v": "GPU 不要(CPU で可)" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "センサー・需要・金融などの時系列予測に取り組むデータ担当者",
+      "benefits": [
+        "CPU で動き、既存の監視基盤に組み込みやすい",
+        "予測の幅が分かり、リスクに合わせた計画を立てやすい"
+      ],
+      "how_to": [
+        "公式ブログで 4 サイズの違いを確認する",
+        "自社の時系列データでゼロショット予測を試す",
+        "必要なら Mistral Forge で微調整を検討する"
+      ],
+      "caveats": [
+        "ベンチマークは Mistral の発表の数字で、独自には検証していない",
+        "技術の詳細は今後の技術報告で説明される予定"
+      ],
+      "terms": [
+        { "t": "時系列", "d": "時間の順に並んだデータ。センサー値など" },
+        { "t": "ゼロショット", "d": "追加学習なしで、初見のデータに使うこと" },
+        { "t": "共変量", "d": "予測に役立つ、目的以外の系列(予定など)" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Introducing Timestral",
+        "publisher": "Mistral",
+        "url": "https://mistral.ai/news/timestral/",
+        "date": "2026-10-15"
+      }
+    ]
+  },
+  "copilot": {
+    "overview": {
+      "takeaway": "Copilot のモデルポリシーを API で取得・更新でき、一般提供になった。",
+      "stat": { "value": "4", "label": "管理できる階層" },
+      "steps": ["エンドポイントを選ぶ", "GET で現状を取得", "PATCH で更新"],
+      "changes": [
+        "企業・企業チーム・アプリ・組織に対応",
+        "GET と PATCH のエンドポイントが一般提供",
+        "企業から組織・チームへ管理を委任できる"
+      ],
+      "facts": [
+        { "k": "提供元", "v": "GitHub" },
+        { "k": "公開日", "v": "2026-10-19" },
+        { "k": "方式", "v": "REST API" },
+        { "k": "状態", "v": "一般提供" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "Copilot を企業・組織で管理する管理者と開発基盤の担当者",
+      "benefits": [
+        "モデル設定を、スクリプトでまとめて管理できる",
+        "企業と組織・チームで、管理の権限を分けられる"
+      ],
+      "how_to": [
+        "公式ドキュメントでモデルの提供可否の管理を読む",
+        "REST API 文書で各エンドポイントを確認する",
+        "GET で現在の設定を確認してから PATCH を試す"
+      ],
+      "caveats": [
+        "各エンドポイントの詳細は、公式の REST API 文書で確認が必要",
+        "更新は組織全体に影響するため、変更前に設定を控えておく"
+      ],
+      "terms": [
+        { "t": "REST API", "d": "HTTP でサービスを操作する標準的な方式" },
+        { "t": "ポリシー", "d": "使える機能や範囲を決める設定" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Copilot model policy API for enterprise, orgs, and teams",
+        "publisher": "GitHub Changelog",
+        "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+        "date": "2026-10-19"
+      }
+    ]
+  },
+  "runtime": {
+    "overview": {
+      "takeaway": "NVIDIA Sentry は、BlueField-4 上でエージェントを実行時に監視・制御する。",
+      "stat": { "value": "BlueField-4", "label": "隔離された DPU 上で動作" },
+      "steps": ["通信を検査", "実行環境を把握", "ポリシーで制御"],
+      "changes": [
+        "DOCA Tower が通信を検査し、OPA で判定",
+        "DOCA Argus がメモリから実行環境を把握"
+      ],
+      "facts": [
+        { "k": "提供元", "v": "NVIDIA" },
+        { "k": "公開日", "v": "2026-10-21" },
+        { "k": "動作先", "v": "BlueField-4 DPU" },
+        { "k": "基盤", "v": "NVIDIA DOCA" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "AI エージェントの基盤を設計するセキュリティ・インフラ担当者",
+      "benefits": [
+        "エージェントが侵害されても、制限を書き換えられにくい",
+        "改ざんしにくい記録が残り、調査に使える"
+      ],
+      "how_to": [
+        "公式ブログで全体の構成と図を読む",
+        "NVIDIA DOCA のライブラリで観測を試す",
+        "自社のポリシーを、OPA の形式で書けるか確認する"
+      ],
+      "caveats": [
+        "BlueField-4 など NVIDIA の特定のハードウェアが前提になる",
+        "実運用での効果は、このサイトでは検証していない"
+      ],
+      "terms": [
+        { "t": "DPU", "d": "ネットワーク処理などを担う専用プロセッサ" },
+        { "t": "OPA", "d": "ポリシーを判定するオープンソースのエンジン" },
+        { "t": "プロキシ", "d": "通信を中継して検査・制御する仕組み" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Inside NVIDIA Sentry: Secure AI Agents at Runtime",
+        "publisher": "NVIDIA Technical Blog",
+        "url": "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/",
+        "date": "2026-10-21"
+      }
+    ]
   }
 }

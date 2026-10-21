@@ -698,7 +698,7 @@
    "url_checks": {
     "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/": {
      "status": 200,
-     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
     }
    },
    "jp_reactions": [],
@@ -1084,7 +1084,7 @@
    "url_checks": {
     "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
      "status": 200,
-     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
     }
    },
    "jp_reactions": [
@@ -1491,7 +1491,7 @@
    "url_checks": {
     "https://ollama.com/blog/reflection-beam": {
      "status": 200,
-     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
     }
    },
    "jp_reactions": [
@@ -1859,7 +1859,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.302": {
      "status": 200,
-     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
     }
    },
    "jp_reactions": [
@@ -2587,7 +2587,7 @@
    "url_checks": {
     "https://github.com/vllm-project/vllm/releases/tag/v0.32.0": {
      "status": 200,
-     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
     }
    },
    "jp_reactions": [],
@@ -2968,7 +2968,7 @@
    "url_checks": {
     "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/": {
      "status": 200,
-     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
     }
    },
    "jp_reactions": [
@@ -3449,7 +3449,7 @@
    "url_checks": {
     "https://huggingface.co/blog/flux-3": {
      "status": 200,
-     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
     }
    },
    "jp_reactions": [],
@@ -3791,12 +3791,46 @@
     }
    ],
    "official_urls": [
-    "https://mistral.ai/news/timestral/",
-    "https://huggingface.co/mistralai/Timestral-209M"
+    "https://mistral.ai/news/timestral/"
    ],
    "official_verified": true,
    "summary": "Introducing Timestral ― State-of-the-art probabilistic forecasting in four sizes (5M–209M params), CPU-efficient, zero-shot ready.。4ソースで言及(代表: 「Introducing Timestral」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Timestral: Mistral の時系列予測モデル",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "209M",
+      "label": "最大モデルのパラメータ数。CPU で動く"
+     },
+     "steps": [
+      "サイズを選ぶ",
+      "ゼロショットで予測",
+      "必要なら微調整"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Mistral が初の時系列基盤モデル Timestral を 4 サイズで公開した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "3 つの公開ベンチマークで 1 位と説明(発表の数字)"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "GPU 不要。予測の幅も出せて、保守計画に使いやすい"
+      },
+      {
+       "h": "注意",
+       "t": "数字は Mistral 自身の発表で、技術報告は今後の予定"
+      }
+     ],
+     "official_url": "https://mistral.ai/news/timestral/",
+     "source_date": "2026-10-15"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 0.731,
     "reddit_localllama": 0.18,
@@ -3835,10 +3869,133 @@
    "trend_label": "baseline",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Introducing Timestral",
+      "evidence_urls": [
+       "https://mistral.ai/news/timestral/"
+      ],
+      "evidence_published_at": "2026-10-15",
+      "result": "5M〜209M の 4 サイズ、3 つの公開ベンチマークで 1 位(発表の数字)、GPU 不要で CPU 推論、Mistral Forge での微調整を確認",
+      "retrieved_at": "2026-10-22T04:33:00+09:00"
+     }
+    ],
+    "selection_reason": "Mistral 公式ブログ(2026-10-15)が、初の時系列基盤モデル Timestral の公開を発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://mistral.ai/news/timestral/": {
+     "status": 200,
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Mistral が、初の時系列基盤モデル群 Timestral を 2026-10-15 に公開した。5M・28M・123M・209M パラメータの 4 サイズがある。",
+     "最大の 209M モデルは、GIFT-Eval・TIME・fev-bench の 3 つの公開ベンチマークで 1 位と説明している(発表の数字)。",
+     "GPU なしの CPU で推論でき、過去・未来の共変量を使った確率的な多変量予測ができる。"
+    ],
+    "why_trending": "Mistral 公式ブログでの発表に加え、Lobsters や Reddit でも話題になり、今週 12 位。",
+    "what_changes": [
+     "時系列予測でも、事前学習済みモデルをゼロショットで使える",
+     "予測の幅(分位点)まで出せ、リスクを見て保守計画を立てやすい",
+     "Mistral Forge で自社データに合わせた微調整もできる"
+    ],
+    "benefits": [
+     "CPU で動くため、既存の監視基盤に組み込みやすい",
+     "4 サイズから、精度と速度の釣り合いで選べる"
+    ],
+    "caveats": [
+     "ベンチマークは Mistral の発表の数字で、独自には検証していない",
+     "詳細は今後の技術報告で説明される予定で、現時点では概要のみ"
+    ],
+    "audience": "センサー・需要・金融などの時系列予測に取り組むデータ担当者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Mistral 初の時系列基盤モデル。CPU で動き、3 つの公開指標で 1 位と説明。",
+     "stat": {
+      "value": "209M",
+      "label": "最大モデルのパラメータ数"
+     },
+     "steps": [
+      "サイズを選ぶ",
+      "ゼロショットで予測",
+      "必要なら微調整"
+     ],
+     "changes": [
+      "5M〜209M の 4 サイズを公開",
+      "確率的・多変量の予測と共変量に対応",
+      "Mistral Forge で微調整できる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Mistral"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-15"
+      },
+      {
+       "k": "サイズ",
+       "v": "5M / 28M / 123M / 209M"
+      },
+      {
+       "k": "推論",
+       "v": "GPU 不要(CPU で可)"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "センサー・需要・金融などの時系列予測に取り組むデータ担当者",
+     "benefits": [
+      "CPU で動き、既存の監視基盤に組み込みやすい",
+      "予測の幅が分かり、リスクに合わせた計画を立てやすい"
+     ],
+     "how_to": [
+      "公式ブログで 4 サイズの違いを確認する",
+      "自社の時系列データでゼロショット予測を試す",
+      "必要なら Mistral Forge で微調整を検討する"
+     ],
+     "caveats": [
+      "ベンチマークは Mistral の発表の数字で、独自には検証していない",
+      "技術の詳細は今後の技術報告で説明される予定"
+     ],
+     "terms": [
+      {
+       "t": "時系列",
+       "d": "時間の順に並んだデータ。センサー値など"
+      },
+      {
+       "t": "ゼロショット",
+       "d": "追加学習なしで、初見のデータに使うこと"
+      },
+      {
+       "t": "共変量",
+       "d": "予測に役立つ、目的以外の系列(予定など)"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Introducing Timestral",
+      "publisher": "Mistral",
+      "url": "https://mistral.ai/news/timestral/",
+      "date": "2026-10-15"
+     }
+    ]
+   }
   },
   {
    "rank": 13,
@@ -4020,7 +4177,7 @@
    "url_checks": {
     "https://machinelearning.apple.com/research/mlx-distributed-inference": {
      "status": 200,
-     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
     }
    },
    "jp_reactions": [],
@@ -4342,7 +4499,7 @@
    "url_checks": {
     "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta": {
      "status": 200,
-     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
     }
    },
    "jp_reactions": [],
@@ -4532,7 +4689,42 @@
    ],
    "official_verified": true,
    "summary": "Copilot model policy API for enterprise, orgs, and teams ― You can now use the REST API to retrieve and update Copilot model policies for enterprises, enterprise teams, 。6ソースで言及(代表: 「Copilot model policy API for enterprise, orgs, and teams」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Copilot モデルポリシー API が一般提供",
+     "diagram_type": "infographic",
+     "icon": "lock",
+     "stat": {
+      "value": "4",
+      "label": "階層で管理(企業・チーム・アプリ・組織)"
+     },
+     "steps": [
+      "エンドポイントを選ぶ",
+      "GET で現状を取得",
+      "PATCH で更新"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Copilot のモデルポリシーを取得・更新する REST API が一般提供になった"
+      },
+      {
+       "h": "何が変わる",
+       "t": "モデルの提供可否を、API で管理できる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "企業のポリシーから、組織やチームへ管理を委任できる"
+      },
+      {
+       "h": "注意",
+       "t": "各パラメータは、公式の REST API 文書で確認する"
+      }
+     ],
+     "official_url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+     "source_date": "2026-10-19"
+    }
+   ],
    "score_breakdown": {
     "github_new": 1.08,
     "github_trending": 0.543,
@@ -4576,8 +4768,21 @@
    "trend_label": "baseline",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Copilot model policy API for enterprise, orgs, and teams",
+      "evidence_urls": [
+       "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams"
+      ],
+      "evidence_published_at": "2026-10-19",
+      "result": "企業・企業チーム・エージェントアプリ・組織の 4 階層で GET / PATCH が一般提供になったことを確認",
+      "retrieved_at": "2026-10-22T04:33:00+09:00"
+     }
+    ],
+    "selection_reason": "GitHub 公式 Changelog(2026-10-19)が、Copilot のモデルポリシーを管理する REST API の一般提供を発表。"
    },
    "jp_reactions": [
     {
@@ -4592,7 +4797,112 @@
      "url": "https://techcommunity.microsoft.com/blog/spblog/introducing-a-team-knowledge-base-curated-by-copilot-and-agents/4564203",
      "date": "2026-10-14"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams": {
+     "status": 200,
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "GitHub が、Copilot のモデルポリシーを取得・更新する REST API を 2026-10-19 に一般提供した。",
+     "企業・企業チーム・エージェントアプリ・組織の 4 階層に、GET と PATCH のエンドポイントがある。",
+     "企業のポリシーは、組織やチーム・アプリへ、モデルの管理を委任できる。"
+    ],
+    "why_trending": "GitHub 公式 Changelog に掲載され、Copilot 関連の更新として今週 15 位。",
+    "what_changes": [
+     "モデルの提供可否を、画面操作でなく API で管理できる",
+     "企業・チーム・アプリ・組織の 4 階層で同じ方式を使える"
+    ],
+    "benefits": [
+     "多数の組織のモデル設定を、スクリプトでまとめて管理できる",
+     "企業から組織・チームへ、管理の権限を分けられる"
+    ],
+    "caveats": [
+     "利用には対象プランの管理権限が要る(詳細は公式ドキュメントを参照)",
+     "各エンドポイントのパラメータは、公式の REST API 文書で確認が必要"
+    ],
+    "audience": "Copilot を企業・組織で管理する管理者と開発基盤の担当者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Copilot のモデルポリシーを API で取得・更新でき、一般提供になった。",
+     "stat": {
+      "value": "4",
+      "label": "管理できる階層"
+     },
+     "steps": [
+      "エンドポイントを選ぶ",
+      "GET で現状を取得",
+      "PATCH で更新"
+     ],
+     "changes": [
+      "企業・企業チーム・アプリ・組織に対応",
+      "GET と PATCH のエンドポイントが一般提供",
+      "企業から組織・チームへ管理を委任できる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "GitHub"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-19"
+      },
+      {
+       "k": "方式",
+       "v": "REST API"
+      },
+      {
+       "k": "状態",
+       "v": "一般提供"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "Copilot を企業・組織で管理する管理者と開発基盤の担当者",
+     "benefits": [
+      "モデル設定を、スクリプトでまとめて管理できる",
+      "企業と組織・チームで、管理の権限を分けられる"
+     ],
+     "how_to": [
+      "公式ドキュメントでモデルの提供可否の管理を読む",
+      "REST API 文書で各エンドポイントを確認する",
+      "GET で現在の設定を確認してから PATCH を試す"
+     ],
+     "caveats": [
+      "各エンドポイントの詳細は、公式の REST API 文書で確認が必要",
+      "更新は組織全体に影響するため、変更前に設定を控えておく"
+     ],
+     "terms": [
+      {
+       "t": "REST API",
+       "d": "HTTP でサービスを操作する標準的な方式"
+      },
+      {
+       "t": "ポリシー",
+       "d": "使える機能や範囲を決める設定"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Copilot model policy API for enterprise, orgs, and teams",
+      "publisher": "GitHub Changelog",
+      "url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+      "date": "2026-10-19"
+     }
+    ]
+   }
   },
   {
    "rank": 16,
@@ -4772,7 +5082,7 @@
    "url_checks": {
     "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/": {
      "status": 200,
-     "checked_at": "2026-10-18T22:58:44.360420+00:00"
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
     }
    },
    "jp_reactions": [],
@@ -4995,11 +5305,46 @@
     }
    ],
    "official_urls": [
-    "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/feed/"
+    "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/"
    ],
    "official_verified": true,
    "summary": "Inside NVIDIA Sentry: Secure AI Agents at Runtime ― An AI agent can complete its assignment and still cross a security boundary. Recent incidents show that agents。6ソースで言及(代表: 「Inside NVIDIA Sentry: Secure AI Agents at Runtime」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "NVIDIA Sentry: エージェントを実行時に守る",
+     "diagram_type": "infographic",
+     "icon": "shield",
+     "stat": {
+      "value": "BlueField-4",
+      "label": "ホストから隔離された DPU 上で動作"
+     },
+     "steps": [
+      "通信を検査",
+      "実行環境を把握",
+      "ポリシーで制御"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "NVIDIA が、エージェントを実行時に監視・制御する Sentry を解説した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "DOCA Tower が通信を検査し、DOCA Argus が実行環境を把握する"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "エージェントが侵害されても、制限を書き換えられにくい設計"
+      },
+      {
+       "h": "注意",
+       "t": "BlueField-4 など NVIDIA のハードウェアが前提になる"
+      }
+     ],
+     "official_url": "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/",
+     "source_date": "2026-10-21"
+    }
+   ],
    "score_breakdown": {
     "github_new": 0.66,
     "github_trending": 0.753,
@@ -5046,10 +5391,131 @@
     }
    ],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Inside NVIDIA Sentry: Secure AI Agents at Runtime",
+      "evidence_urls": [
+       "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/"
+      ],
+      "evidence_published_at": "2026-10-21T09:52:16+00:00",
+      "result": "BlueField-4 DPU 上でホストから隔離して動くこと、DOCA Tower と DOCA Argus、OPA でのポリシー評価を確認",
+      "retrieved_at": "2026-10-22T04:33:00+09:00"
+     }
+    ],
+    "selection_reason": "NVIDIA 公式技術ブログ(2026-10-21)が、AI エージェントを実行時に守る NVIDIA Sentry を解説。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/": {
+     "status": 200,
+     "checked_at": "2026-10-21T19:59:15.775169+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "NVIDIA が、AI エージェントを実行時に監視・制御する NVIDIA Sentry を 2026-10-21 の技術ブログで解説した。",
+     "BlueField-4 DPU 上のホストから隔離された領域で動き、エージェントが自分で止められない位置から通信を見る。",
+     "DOCA Tower が通信を検査し、DOCA Argus がメモリから実行環境を把握して、ポリシーに反する動きを抑える。"
+    ],
+    "why_trending": "NVIDIA 公式技術ブログに掲載され、エージェントの安全な実行が注目されて今週 17 位。",
+    "what_changes": [
+     "エージェントの通信を、ホストの外側のハードウェアで制御できる",
+     "コンテナのハッシュなど実行時の情報をポリシーに使える"
+    ],
+    "benefits": [
+     "エージェントが侵害されても、制限を書き換えられにくい",
+     "改ざんしにくい記録が残り、調査に使える"
+    ],
+    "caveats": [
+     "BlueField-4 など NVIDIA の特定のハードウェアが前提になる",
+     "実運用での効果は、このサイトでは検証していない"
+    ],
+    "audience": "AI エージェントの基盤を設計するセキュリティ・インフラ担当者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "NVIDIA Sentry は、BlueField-4 上でエージェントを実行時に監視・制御する。",
+     "stat": {
+      "value": "BlueField-4",
+      "label": "隔離された DPU 上で動作"
+     },
+     "steps": [
+      "通信を検査",
+      "実行環境を把握",
+      "ポリシーで制御"
+     ],
+     "changes": [
+      "DOCA Tower が通信を検査し、OPA で判定",
+      "DOCA Argus がメモリから実行環境を把握"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "NVIDIA"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-21"
+      },
+      {
+       "k": "動作先",
+       "v": "BlueField-4 DPU"
+      },
+      {
+       "k": "基盤",
+       "v": "NVIDIA DOCA"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "AI エージェントの基盤を設計するセキュリティ・インフラ担当者",
+     "benefits": [
+      "エージェントが侵害されても、制限を書き換えられにくい",
+      "改ざんしにくい記録が残り、調査に使える"
+     ],
+     "how_to": [
+      "公式ブログで全体の構成と図を読む",
+      "NVIDIA DOCA のライブラリで観測を試す",
+      "自社のポリシーを、OPA の形式で書けるか確認する"
+     ],
+     "caveats": [
+      "BlueField-4 など NVIDIA の特定のハードウェアが前提になる",
+      "実運用での効果は、このサイトでは検証していない"
+     ],
+     "terms": [
+      {
+       "t": "DPU",
+       "d": "ネットワーク処理などを担う専用プロセッサ"
+      },
+      {
+       "t": "OPA",
+       "d": "ポリシーを判定するオープンソースのエンジン"
+      },
+      {
+       "t": "プロキシ",
+       "d": "通信を中継して検査・制御する仕組み"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Inside NVIDIA Sentry: Secure AI Agents at Runtime",
+      "publisher": "NVIDIA Technical Blog",
+      "url": "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/",
+      "date": "2026-10-21"
+     }
+    ]
+   }
   },
   {
    "rank": 18,
@@ -5861,6 +6327,34 @@
     "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta",
     "https://machinelearning.apple.com/research/mlx-distributed-inference"
    ]
+  },
+  {
+   "id": "agent-guardrails",
+   "title": "モデルとエージェントを「管理・制御する層」が製品になる",
+   "confidence": "low",
+   "summary": "Copilot のモデルポリシー API と NVIDIA Sentry は、AI の利用範囲を管理者側が外から決める仕組みを扱っている。",
+   "background": [
+    "GitHub は企業・チーム・アプリ・組織の 4 階層でモデルポリシーを API 管理できるようにし、NVIDIA は隔離された DPU 上でエージェントの通信を制御する仕組みを解説した。",
+    "2 件だけの共通点で、AI の利用が広がり、統制の需要が高まっていることが背景にあるかもしれない(見立て)。"
+   ],
+   "entities": [
+    "copilot",
+    "runtime"
+   ],
+   "signals": [
+    {
+     "entity": "copilot",
+     "note": "4 階層でモデルポリシーの取得・更新ができる REST API が一般提供"
+    },
+    {
+     "entity": "runtime",
+     "note": "BlueField-4 上でホストから隔離して、エージェントの通信を検査する"
+    }
+   ],
+   "refs": [
+    "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+    "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/"
+   ]
   }
  ],
  "rejected_candidates": {
@@ -5868,6 +6362,9 @@
   "openai-codex": "一次情報の本文を確認できなかった(公式ページを取得できなかった)。",
   "switch": "AWS の障害復旧機能の更新で、AI の動向としては関連が薄い。",
   "whatsapp": "通話アプリの招待機能の発表で、AI の動向としては関連が薄い。",
-  "remote": "論文の紹介ページ(集約サイト)のみで、著者側の一次情報の本文を確認できなかった。"
+  "remote": "論文の紹介ページ(集約サイト)のみで、著者側の一次情報の本文を確認できなかった。",
+  "minimax": "公式ページではなく OpenRouter のカタログ掲載のみで、MiniMax 自身の一次情報を確認できなかった。",
+  "deepseek-v4-1-flash": "すでに公開済みの flash-1017 と同じモデルで、重複するため見送った。",
+  "strata": "第三者の個人によるシミュレータのリポジトリで、公式の一次情報ではない。"
  }
 }

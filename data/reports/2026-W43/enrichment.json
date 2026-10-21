@@ -327,55 +327,67 @@
  "url_checks": {
   "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://deepmind.google/blog/developing-gemini-4-argon-responsibly-and-safely/": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
+  },
+  "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/": {
+   "status": 200,
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://developer.nvidia.com/blog/scale-agentic-coding-workflows-with-metas-muse-spark-open-on-nvidia-gb300-nvl72/": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
+  },
+  "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams": {
+   "status": 200,
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.302": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://github.com/unslothai/unsloth/releases/tag/v0.1.908-beta": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://github.com/vllm-project/vllm/releases/tag/v0.32.0": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://huggingface.co/LiquidAI/LFM2.5-24B-A2B": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://huggingface.co/blog/flux-3": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://machinelearning.apple.com/research/mlx-distributed-inference": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
+  },
+  "https://mistral.ai/news/timestral/": {
+   "status": 200,
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   },
   "https://ollama.com/blog/reflection-beam": {
    "status": 200,
-   "checked_at": "2026-10-18T22:58:44.360420+00:00"
+   "checked_at": "2026-10-21T19:59:15.775169+00:00"
   }
  }
 }

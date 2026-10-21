@@ -262,6 +262,66 @@
      "retrieved_at": "2026-10-19T07:55:00+09:00"
     }
    ]
+  },
+  "timestral": {
+   "selection_reason": "Mistral 公式ブログ(2026-10-15)が、初の時系列基盤モデル Timestral の公開を発表。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://mistral.ai/news/timestral/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Introducing Timestral",
+     "evidence_urls": [
+      "https://mistral.ai/news/timestral/"
+     ],
+     "evidence_published_at": "2026-10-15",
+     "result": "5M〜209M の 4 サイズ、3 つの公開ベンチマークで 1 位(発表の数字)、GPU 不要で CPU 推論、Mistral Forge での微調整を確認",
+     "retrieved_at": "2026-10-22T04:33:00+09:00"
+    }
+   ]
+  },
+  "copilot": {
+   "selection_reason": "GitHub 公式 Changelog(2026-10-19)が、Copilot のモデルポリシーを管理する REST API の一般提供を発表。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Copilot model policy API for enterprise, orgs, and teams",
+     "evidence_urls": [
+      "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams"
+     ],
+     "evidence_published_at": "2026-10-19",
+     "result": "企業・企業チーム・エージェントアプリ・組織の 4 階層で GET / PATCH が一般提供になったことを確認",
+     "retrieved_at": "2026-10-22T04:33:00+09:00"
+    }
+   ]
+  },
+  "runtime": {
+   "selection_reason": "NVIDIA 公式技術ブログ(2026-10-21)が、AI エージェントを実行時に守る NVIDIA Sentry を解説。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Inside NVIDIA Sentry: Secure AI Agents at Runtime",
+     "evidence_urls": [
+      "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/"
+     ],
+     "evidence_published_at": "2026-10-21T09:52:16+00:00",
+     "result": "BlueField-4 DPU 上でホストから隔離して動くこと、DOCA Tower と DOCA Argus、OPA でのポリシー評価を確認",
+     "retrieved_at": "2026-10-22T04:33:00+09:00"
+    }
+   ]
   }
  },
  "url_checks": {

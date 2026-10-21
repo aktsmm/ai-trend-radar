@@ -219,5 +219,56 @@
       "official_url": "https://developer.nvidia.com/blog/replayssm-rethinking-state-storage-for-faster-hybrid-model-decoding/",
       "source_date": "2026-10-12"
     }
+  ],
+  "timestral": [
+    {
+      "title": "Timestral: Mistral の時系列予測モデル",
+      "diagram_type": "infographic",
+      "icon": "chip",
+      "stat": { "value": "209M", "label": "最大モデルのパラメータ数。CPU で動く" },
+      "steps": ["サイズを選ぶ", "ゼロショットで予測", "必要なら微調整"],
+      "points": [
+        { "h": "何が起きた", "t": "Mistral が初の時系列基盤モデル Timestral を 4 サイズで公開した" },
+        { "h": "何が変わる", "t": "3 つの公開ベンチマークで 1 位と説明(発表の数字)" },
+        { "h": "嬉しいこと", "t": "GPU 不要。予測の幅も出せて、保守計画に使いやすい" },
+        { "h": "注意", "t": "数字は Mistral 自身の発表で、技術報告は今後の予定" }
+      ],
+      "official_url": "https://mistral.ai/news/timestral/",
+      "source_date": "2026-10-15"
+    }
+  ],
+  "copilot": [
+    {
+      "title": "Copilot モデルポリシー API が一般提供",
+      "diagram_type": "infographic",
+      "icon": "lock",
+      "stat": { "value": "4", "label": "階層で管理(企業・チーム・アプリ・組織)" },
+      "steps": ["エンドポイントを選ぶ", "GET で現状を取得", "PATCH で更新"],
+      "points": [
+        { "h": "何が起きた", "t": "Copilot のモデルポリシーを取得・更新する REST API が一般提供になった" },
+        { "h": "何が変わる", "t": "モデルの提供可否を、API で管理できる" },
+        { "h": "嬉しいこと", "t": "企業のポリシーから、組織やチームへ管理を委任できる" },
+        { "h": "注意", "t": "各パラメータは、公式の REST API 文書で確認する" }
+      ],
+      "official_url": "https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams",
+      "source_date": "2026-10-19"
+    }
+  ],
+  "runtime": [
+    {
+      "title": "NVIDIA Sentry: エージェントを実行時に守る",
+      "diagram_type": "infographic",
+      "icon": "shield",
+      "stat": { "value": "BlueField-4", "label": "ホストから隔離された DPU 上で動作" },
+      "steps": ["通信を検査", "実行環境を把握", "ポリシーで制御"],
+      "points": [
+        { "h": "何が起きた", "t": "NVIDIA が、エージェントを実行時に監視・制御する Sentry を解説した" },
+        { "h": "何が変わる", "t": "DOCA Tower が通信を検査し、DOCA Argus が実行環境を把握する" },
+        { "h": "嬉しいこと", "t": "エージェントが侵害されても、制限を書き換えられにくい設計" },
+        { "h": "注意", "t": "BlueField-4 など NVIDIA のハードウェアが前提になる" }
+      ],
+      "official_url": "https://developer.nvidia.com/blog/inside-nvidia-sentry-secure-ai-agents-at-runtime/",
+      "source_date": "2026-10-21"
+    }
   ]
 }

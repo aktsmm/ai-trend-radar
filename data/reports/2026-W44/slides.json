@@ -1,0 +1,70 @@
+{
+  "ollama": [
+    {
+      "title": "Ollama が音声モデルに対応、第 1 弾は Phonon",
+      "diagram_type": "infographic",
+      "icon": "terminal",
+      "stat": { "value": "35%", "label": "M5 Max で次点の実装より速い(2026-10-24 発表)" },
+      "steps": ["Ollama を更新", "ollama pull phonon", "ollama run phonon"],
+      "points": [
+        { "h": "何が起きた", "t": "Ollama が、テキストを音声にするモデルに対応。最初は Gradium の Phonon" },
+        { "h": "何が変わる", "t": "OpenAI 互換の音声 API で呼べ、既存の SDK のコードを流用できる" },
+        { "h": "嬉しいこと", "t": "チャットの返答をパイプで渡すと、最初の一文から読み上げが始まる" },
+        { "h": "注意", "t": "今は Apple Silicon の Mac のみ。40M のモデルは非商用ライセンス" }
+      ],
+      "official_url": "https://ollama.com/blog/speech-models",
+      "source_date": "2026-10-24"
+    }
+  ],
+  "flint": [
+    {
+      "title": "Flint-interactive: 操作できるグラフを作る言語",
+      "diagram_type": "infographic",
+      "icon": "layers",
+      "stat": { "value": "4 種", "label": "連携先: グラフ・表・文章・アプリ(2026-10-22)" },
+      "steps": ["操作を指定", "コンパイラが変換", "グラフが更新"],
+      "points": [
+        { "h": "何が起きた", "t": "Microsoft Research が、対話的なグラフを作る言語 Flint-interactive を紹介した" },
+        { "h": "何が変わる", "t": "クリックなどの操作を意味のあるイベントにし、高水準の指定でグラフを更新する" },
+        { "h": "嬉しいこと", "t": "エージェントがやり直す手間を減らし、グラフと表・文章を連動できる" },
+        { "h": "使い方", "t": "チャットでは Flint-MCP と MCP Apps、アプリでは Flint Interactive Canvas を使う" }
+      ],
+      "official_url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+      "source_date": "2026-10-22"
+    }
+  ],
+  "claude-code": [
+    {
+      "title": "Claude Code v2.1.310 のリリース",
+      "diagram_type": "infographic",
+      "icon": "check",
+      "stat": { "value": "v2.1.310", "label": "リリースされた版(2026-10-23)" },
+      "steps": ["更新を確認", "リリースノートを読む", "設定を見直す"],
+      "points": [
+        { "h": "何が起きた", "t": "Claude Code の新版が公開され、多数の修正と改善が入った" },
+        { "h": "何が変わる", "t": "Monitor ツールが Bedrock・Vertex・Foundry でも使える。MCP のタイムアウト時の通知も変わった" },
+        { "h": "嬉しいこと", "t": "Linux のサンドボックスが起動しない時、AppArmor の制限と解除方法が表示される" },
+        { "h": "注意", "t": "細かな修正の集合。管理者はクラウドセッションの権限設定を確認する" }
+      ],
+      "official_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
+      "source_date": "2026-10-23"
+    }
+  ],
+  "qwen3": [
+    {
+      "title": "SageMaker で Qwen3.8 をサーバーレス調整",
+      "diagram_type": "infographic",
+      "icon": "cloud",
+      "stat": { "value": "4", "label": "提供リージョン数(2026-10-22 発表)" },
+      "steps": ["データを用意", "手法を選ぶ", "調整ジョブを実行"],
+      "points": [
+        { "h": "何が起きた", "t": "SageMaker AI が Qwen3.8 27B などのサーバーレスなカスタマイズに対応した" },
+        { "h": "何が変わる", "t": "SFT・DPO・RFT と、LoRA またはフルファインチューニングを選べる" },
+        { "h": "嬉しいこと", "t": "インフラや学習の管理は AWS が担い、使った分だけの支払いになる" },
+        { "h": "使い方", "t": "SageMaker Studio の Models ページか Python SDK から始められる" }
+      ],
+      "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
+      "source_date": "2026-10-22"
+    }
+  ]
+}

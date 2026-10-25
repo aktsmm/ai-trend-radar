@@ -1,0 +1,89 @@
+{
+  "week": "2026-W44",
+  "selected_on": "2026-10-25",
+  "selection_policy": "候補6件のうち、日付つきの一次情報の本文を確認できた4件(local-runtime 1 / model 1 / dev-tool 1 / research 1)。MiniMax は OpenRouter のカタログのみ、llama.cpp はビルド番号の更新のため見送り。",
+  "entities": {
+    "ollama": {
+      "selection_reason": "TOP1。local-runtime 代表。2026-10-24 に公式ブログで音声(テキスト読み上げ)モデルへの対応を発表。",
+      "verification_status": "verified",
+      "official_urls": [
+        "https://ollama.com/blog/speech-models",
+        "https://ollama.com/library/phonon"
+      ],
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "Speech models in Ollama",
+          "evidence_urls": ["https://ollama.com/blog/speech-models"],
+          "evidence_published_at": "2026-10-24",
+          "result": "Gradium の Phonon を最初の音声モデルとして対応、macOS 先行、Ollama 0.40.11 以降、M5 Max で次点の実装より 35% 速い(発表の数字)、OpenAI 互換の音声 API、ライセンスを確認",
+          "retrieved_at": "2026-10-26T03:31:00+09:00"
+        },
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "phonon Ollama library",
+          "evidence_urls": ["https://ollama.com/library/phonon"],
+          "evidence_published_at": null,
+          "result": "Phonon のタグ(英・仏・独・西・葡・多言語)、サイズ、24 kHz モノラル、Apple Silicon 必須を確認",
+          "retrieved_at": "2026-10-26T03:31:00+09:00"
+        }
+      ]
+    },
+    "flint": {
+      "selection_reason": "research 代表。Microsoft Research が 2026-10-22 に公式ブログで Flint-interactive を紹介。",
+      "verification_status": "verified",
+      "official_urls": [
+        "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/"
+      ],
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "Flint-interactive Microsoft Research Blog",
+          "evidence_urls": ["https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/"],
+          "evidence_published_at": "2026-10-22T16:00:00+00:00",
+          "result": "AI エージェントが操作できるグラフを作る言語であること、Flint-MCP / MCP Apps での利用、コンパイラが操作を意味のあるイベントに変換する仕組みを確認",
+          "retrieved_at": "2026-10-26T03:31:00+09:00"
+        }
+      ]
+    },
+    "claude-code": {
+      "selection_reason": "dev-tool 代表。Anthropic 公式の GitHub リリース v2.1.310 が 2026-10-23 に公開。",
+      "verification_status": "verified",
+      "official_urls": [
+        "https://github.com/anthropics/claude-code/releases/tag/v2.1.310"
+      ],
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "Claude Code v2.1.310 release notes",
+          "evidence_urls": ["https://github.com/anthropics/claude-code/releases/tag/v2.1.310"],
+          "evidence_published_at": "2026-10-23",
+          "result": "Monitor ツールの対応拡大、Linux のサンドボックス警告の改善、MCP のタイムアウト時の挙動変更、クラウドセッションの権限追加などのリリースノートを確認",
+          "retrieved_at": "2026-10-26T03:31:00+09:00"
+        }
+      ]
+    },
+    "qwen3": {
+      "selection_reason": "model 代表。AWS が 2026-10-22 に、SageMaker AI で Qwen3.8 27B などのサーバーレスなカスタマイズ対応を発表。",
+      "verification_status": "verified",
+      "official_urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
+      ],
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "Amazon SageMaker AI serverless model customization Qwen3.8",
+          "evidence_urls": ["https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"],
+          "evidence_published_at": "2026-10-22",
+          "result": "Muse Glimmer・Qwen3.8 27B・Ministral 3 が対象、SFT・DPO・RFT と LoRA・フルファインチューニングに対応、提供リージョン 4 つを確認",
+          "retrieved_at": "2026-10-26T03:31:00+09:00"
+        }
+      ]
+    }
+  }
+}

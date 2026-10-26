@@ -2,7 +2,7 @@
 
 過去 1 週間に AI・ローカル LLM 界隈で新しく出たもの(製品・モデル・リリース・論文・ハード)と、その**共通する背景**を、公式の一次情報で確認して日本語で整理するダイジェストです(1 週間を単位に、月曜と木曜に更新)。収集からサイト公開まで人手なしで回ります(AI の下書きは、決定的な検査を通ったものだけが公開されます)。
 
-- サイト: GitHub Pages(`https://aktsmm.github.io/ai-trend-radar/`、公開後)
+- **サイト(GitHub Pages): <https://aktsmm.github.io/ai-trend-radar/>**(用語集は [glossary.html](https://aktsmm.github.io/ai-trend-radar/glossary.html)、しくみと運用状況は [about.html](https://aktsmm.github.io/ai-trend-radar/about.html)、過去の週は [archive.html](https://aktsmm.github.io/ai-trend-radar/archive.html))
 - 1 キーワードあたり: ダイジェスト文 + 図解 1 枚。週の全体像を 1 枚にまとめた図、今週のテーマ(共通の背景の見立て)、公式発表の一覧もあります。絞り込んだ項目(不要なものはチェックを外す)の 2 枚ブリーフを、PDF / PowerPoint にまとめてダウンロードできます。
 - データ: 静的 JSON API(`api/v1/index.json`、仕様は [docs/api.md](docs/api.md))と Atom フィード。
 

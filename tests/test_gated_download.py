@@ -12,6 +12,16 @@ from tests.test_api import build_once  # noqa: E402
 
 
 class BrowserDownloadTests(unittest.TestCase):
+    def _page_with_multi_item_kind(self, page):
+        import json
+        from collections import Counter
+        from analyze import weeks as W
+        for w, d in reversed(W.archive_weeks()):
+            c = Counter(t["kind"] for t in d["trends"] if t.get("deck"))
+            if any(2 <= n < sum(c.values()) for n in c.values()):
+                return "http://localhost:8771/index.html" if w == W.site_label() else f"http://localhost:8771/w/{w}/index.html"
+        self.fail("no published week has a kind with 2+ items; the filter / download flow cannot be exercised")
+
     def test_filtered_checked_items_download_as_valid_pdf_and_pptx(self):
         try:
             from playwright.sync_api import sync_playwright
@@ -25,11 +35,16 @@ class BrowserDownloadTests(unittest.TestCase):
             with sync_playwright() as p, tempfile.TemporaryDirectory() as d:
                 b = p.chromium.launch()
                 page = b.new_page(accept_downloads=True)
-                page.goto("http://localhost:8771/index.html")
+                # The latest week can have too few items to filter (e.g. one per kind), so use the newest published week that has a kind with 2+ items.
+                url = self._page_with_multi_item_kind(page)
+                page.goto(url)
                 page.wait_for_selector(".card")
                 total = page.locator(".card").count()
                 self.assertEqual(total, page.locator(".selbox:checked").count())  # everything is checked by default
-                page.select_option("#kindSel", "model")
+                from collections import Counter
+                counts = Counter(t["kind"] for t in page.evaluate("window.TRENDS.trends.filter(t => t.deck)"))
+                kind = next(k for k, c in counts.items() if 2 <= c < total)
+                page.select_option("#kindSel", kind)
                 n_model = page.locator(".card").count()
                 self.assertTrue(0 < n_model < total)
                 self.assertEqual(n_model, page.locator(".selbox:checked").count())  # a new filter starts all-checked

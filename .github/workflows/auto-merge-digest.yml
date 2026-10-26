@@ -72,7 +72,8 @@ jobs:
               python -m render.build_all --offline || return 1
               python -m unittest discover -s tests || return 1
             }
-            validate && ok=1 || ok=0
+            validate 2>&1 | tee /tmp/validate.log && ok=1 || ok=0
+            ok=$([ "${PIPESTATUS[0]}" = 0 ] && echo 1 || echo 0)
             if [ $ok = 1 ]; then
               if gh pr merge "$n" --squash --match-head-commit "$oid"; then
                 merged=$((merged+1))
@@ -84,7 +85,17 @@ jobs:
                 fi
               fi
             else
-              gh pr comment "$n" --body "自動検証に失敗したためマージしませんでした(ログ: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)。" || true
+              why=$(grep -E '^(ERROR|FAIL):|^REJECT|AssertionError|Error:|rror 40|problem\(s\)' /tmp/validate.log | grep -v ' 0 problem' | sort -u | head -8 | cut -c1-220)
+              body=$(printf '自動検証に失敗したためマージしませんでした(ログ: %s/%s/actions/runs/%s)。\n\n原因(抜粋):\n```\n%s\n```\n' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID" "${why:-(抜粋できませんでした。ログを確認してください)}")
+              gh pr comment "$n" --body "$body" || true
+              # a failure that repeats on the same head commit is not transient: raise it now instead of waiting for the watchdog
+              echo "$oid" > "/tmp/failed-$n"
+              prev=$(gh pr view "$n" --json comments --jq '[.comments[].body|select(contains("自動検証に失敗"))]|length')
+              if [ "${prev:-0}" -ge 2 ]; then
+                t="[auto-merge] digest PR #$n の自動検証が繰り返し失敗しています"
+                o=$(gh issue list --state open --search "\"$t\" in:title" --json number --jq '.[0].number // empty')
+                [ -z "$o" ] && gh issue create --title "$t" --body "$(printf '同じ PR で自動検証が %s 回失敗しました。多くはコード側(テストや検査)がその週のデータに合っていない場合です。\n\n原因(抜粋):\n```\n%s\n```\n実行ログ: %s/%s/actions/runs/%s' "$prev" "$why" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$GITHUB_RUN_ID")" || true
+              fi
             fi
             echo "::endgroup::"
           done

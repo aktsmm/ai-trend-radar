@@ -81,3 +81,5 @@
 
 - watchdog は公開サイトの `api/v1/index.json` の `data_at` と master の最新レポート時刻を比べ、3 日以上遅れていれば Issue を作る(デプロイが成功でも Pages が古いままの場合の検知。vscode-copilot-digest を参考)。
 
+- トップと各週のページに「前の週 / 次の週 / 直近 6 週 / すべてのアーカイブ」の動線(site/app.js、api/v1/index.json の weeks から生成。読めないときは非表示でメニューのアーカイブが残る)。
+

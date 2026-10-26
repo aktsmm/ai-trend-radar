@@ -70,6 +70,17 @@ jobs:
           if [ -z "$last" ] || [ "$(date -d "$head_at" +%s)" -gt $(( $(date -d "$last" +%s) + 1800 )) ]; then
             if [ "$running" = "0" ]; then echo "master ($head_at) is newer than the last deploy (${last:-none}); deploying"; gh workflow run pages.yml -R "$REPO"; fi
           fi
+      - name: Check the live site shows the latest weekly data (a green deploy is not proof that Pages serves it)
+        run: |
+          live=$(curl -fsS --max-time 30 "https://${REPO%%/*}.github.io/${REPO##*/}/api/v1/index.json" | python3 -c "import json,sys;print(json.load(sys.stdin).get('data_at',''))" 2>/dev/null || true)
+          want=$(gh api "repos/$REPO/contents/data/trends.json" -H "Accept: application/vnd.github.raw" --jq '.last_successful_report_at' 2>/dev/null || true)
+          echo "live data_at=${live:-unreadable} / master last_successful_report_at=${want:-unreadable}"
+          title="[watchdog] 公開サイトが最新のデータを表示していません"
+          open=$(gh issue list -R "$REPO" --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          # master's latest report vs the report data that the live site shows (the site may legitimately show an older week while a digest PR is pending, so allow 3 days)
+          if [ -n "$want" ] && [ -n "$live" ] && [ $(( $(date -d "$want" +%s) - $(date -d "$live" +%s) )) -gt 259200 ]; then
+            [ -z "$open" ] && gh issue create -R "$REPO" --title "$title" --body "公開サイトのデータ: ${live} / master の最新レポート: ${want}。pages.yml の実行と Pages の設定を確認してください。" || true
+          elif [ -n "$open" ]; then gh issue close -R "$REPO" "$open" --comment "公開サイトが追いつきました。"; fi
       - name: Restart dropped scheduled runs (daily collect; Monday / Thursday report)
         run: |
           now=$(date +%s)

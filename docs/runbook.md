@@ -79,3 +79,5 @@
 
 - 同じ理由で `playwright install --with-deps` も 3 回まで再試行(1 回 240 秒、ステップ全体 10 分の上限)。
 
+- watchdog は公開サイトの `api/v1/index.json` の `data_at` と master の最新レポート時刻を比べ、3 日以上遅れていれば Issue を作る(デプロイが成功でも Pages が古いままの場合の検知。vscode-copilot-digest を参考)。
+

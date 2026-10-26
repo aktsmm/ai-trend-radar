@@ -1,0 +1,40 @@
+[
+  {
+    "id": "mcp-agent-plumbing",
+    "title": "エージェントをつなぐ MCP が土台になる",
+    "confidence": "low",
+    "summary": "Flint-interactive と Claude Code v2.1.310 は、どちらも MCP を通じてエージェントと外部の道具をつなぐ前提で書かれている。",
+    "background": [
+      "Flint は Flint-MCP と MCP Apps でチャットに組み込め、Claude Code は MCP ツールのタイムアウト時の通知を変更した。",
+      "2 件だけの共通点で、エージェントと道具の接続口として MCP が広がっていることが背景にあるかもしれない(見立て)。"
+    ],
+    "entities": ["flint", "claude-code"],
+    "signals": [
+      { "entity": "flint", "note": "チャットでは Flint-MCP と MCP Apps 経由で使える" },
+      { "entity": "claude-code", "note": "MCP ツールのタイムアウト時のエラー文を変更した" }
+    ],
+    "refs": [
+      "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.310"
+    ]
+  },
+  {
+    "id": "open-models-own-hands",
+    "title": "オープンモデルを自分の環境で使いこなす",
+    "confidence": "low",
+    "summary": "Ollama は音声モデルを Mac で動かせるようにし、SageMaker AI は Qwen3.8 27B を自社データで調整できるようにした。どちらもオープンモデルを自分で扱う道具の拡充。",
+    "background": [
+      "Ollama は Phonon を ollama run で動かせるようにし、AWS は SFT・DPO・RFT と LoRA でのサーバーレスな調整に対応した。",
+      "2 件だけの共通点で、モデルを借りるだけでなく自分用に動かし、調整したい需要が背景にあるかもしれない(見立て)。"
+    ],
+    "entities": ["ollama", "qwen3"],
+    "signals": [
+      { "entity": "ollama", "note": "Phonon を ollama run で Mac 上で動かせる" },
+      { "entity": "qwen3", "note": "Qwen3.8 27B を SFT・DPO・RFT で調整できる" }
+    ],
+    "refs": [
+      "https://ollama.com/blog/speech-models",
+      "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
+    ]
+  }
+]

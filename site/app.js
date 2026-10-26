@@ -116,6 +116,22 @@ async function runDownload(kind, btn) {
 $("dlpdf").onclick = e => runDownload("pdf", e.currentTarget); $("dlpptx").onclick = e => runDownload("pptx", e.currentTarget);
 syncBar();
 const st = D.source_status, ng = Object.keys(st).filter(k => st[k].ok === false);
+// Week switcher: prev / next week plus recent weeks (from the static API; stays hidden when it cannot be read, e.g. file://)
+(async () => {
+  const inWeek = location.pathname.includes("/w/"), root = inWeek ? "../../" : "";
+  try {
+    const ix = await (await fetch(root + "api/v1/index.json")).json();
+    const ws = ix.weeks.filter(w => w.published > 0 || w.week === D.window.label), i = ws.findIndex(w => w.week === D.window.label);
+    if (ws.length < 2 || i < 0) return;
+    const tag = (w, text) => `<a href="${esc(root + w.page)}">${text}</a>`;
+    const prev = ws[i - 1], next = ws[i + 1];
+    $("weeknav").innerHTML = (prev ? tag(prev, `← 前の週 ${esc(prev.week)}`) : `<span class="off">← 前の週</span>`) +
+      `<span class="here">${esc(D.window.label)}${i === ws.length - 1 ? "(最新)" : ""}</span>` +
+      (next ? tag(next, `次の週 ${esc(next.week)} →`) : `<span class="off">次の週 →</span>`) +
+      `<span class="all">${ws.slice().reverse().slice(0, 6).map(w => w.week === D.window.label ? `<b>${esc(w.week)}</b>` : tag(w, esc(w.week))).join(" ")} ・ <a href="${root}archive.html">すべてのアーカイブ</a></span>`;
+    $("weeknav").hidden = false;
+  } catch (e) { /* offline or file://: the header menu still links to the archive */ }
+})();
 $("statusbar").innerHTML = `<b>${esc(D.window.label)}</b> ・ 掲載 <b>${published.length}</b> 件 ・ 観測候補 ${cands.length} 件 ・ 週次レポート ${Math.floor(ageDays) < 1 ? "24 時間以内" : Math.floor(ageDays) + " 日前"} ・ 収集元 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}${ng.length ? ` <span class="ng">(未取得 ${ng.length})</span>` : ""} ・ <a href="about.html">しくみと運用状況</a>`;
 $("meta").textContent = `掲載 ${published.length} 件 / 観測候補 ${cands.length} 件 / 取得成功 ${Object.keys(st).length - ng.length}/${Object.keys(st).length}` + (ng.length ? `(取得できなかった: ${ng.join(", ")})` : "") + ` / 公開日が確認できず保留 ${D.pending.length} 件 / X 検索: ${D.x_integration.search && D.x_integration.search.ok ? "利用可" : "利用不可(ウォッチリストで補完)"}`;
 

@@ -601,11 +601,46 @@
    ],
    "official_urls": [
     "https://ollama.com/blog/speech-models",
-    "https://ollama.com/"
+    "https://ollama.com/library/phonon"
    ],
    "official_verified": true,
    "summary": "Speech models in Ollama ― Ollama now supports speech models, starting with Phonon from Gradium. Read text aloud in five languages and do。7ソースで言及(代表: 「Adaptive agentic intelligence framework using Strands Agents」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Ollama が音声モデルに対応、第 1 弾は Phonon",
+     "diagram_type": "infographic",
+     "icon": "terminal",
+     "stat": {
+      "value": "35%",
+      "label": "M5 Max で次点の実装より速い(2026-10-24 発表)"
+     },
+     "steps": [
+      "Ollama を更新",
+      "ollama pull phonon",
+      "ollama run phonon"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Ollama が、テキストを音声にするモデルに対応。最初は Gradium の Phonon"
+      },
+      {
+       "h": "何が変わる",
+       "t": "OpenAI 互換の音声 API で呼べ、既存の SDK のコードを流用できる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "チャットの返答をパイプで渡すと、最初の一文から読み上げが始まる"
+      },
+      {
+       "h": "注意",
+       "t": "今は Apple Silicon の Mac のみ。40M のモデルは非商用ライセンス"
+      }
+     ],
+     "official_url": "https://ollama.com/blog/speech-models",
+     "source_date": "2026-10-24"
+    }
+   ],
    "score_breakdown": {
     "github_new": 1.071,
     "reddit_ollama": 1.05,
@@ -673,8 +708,32 @@
     }
    ],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Speech models in Ollama",
+      "evidence_urls": [
+       "https://ollama.com/blog/speech-models"
+      ],
+      "evidence_published_at": "2026-10-24",
+      "result": "Gradium の Phonon を最初の音声モデルとして対応、macOS 先行、Ollama 0.40.11 以降、M5 Max で次点の実装より 35% 速い(発表の数字)、OpenAI 互換の音声 API、ライセンスを確認",
+      "retrieved_at": "2026-10-26T03:31:00+09:00"
+     },
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "phonon Ollama library",
+      "evidence_urls": [
+       "https://ollama.com/library/phonon"
+      ],
+      "evidence_published_at": null,
+      "result": "Phonon のタグ(英・仏・独・西・葡・多言語)、サイズ、24 kHz モノラル、Apple Silicon 必須を確認",
+      "retrieved_at": "2026-10-26T03:31:00+09:00"
+     }
+    ],
+    "selection_reason": "TOP1。local-runtime 代表。2026-10-24 に公式ブログで音声(テキスト読み上げ)モデルへの対応を発表。"
    },
    "jp_reactions": [
     {
@@ -689,7 +748,121 @@
      "url": "https://qiita.com/hono_ai_labho/items/18530241ec20e4ab9e7f",
      "date": "2026-10-25"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://ollama.com/blog/speech-models": {
+     "status": 200,
+     "checked_at": "2026-10-26T22:01:59.262409+00:00"
+    },
+    "https://ollama.com/library/phonon": {
+     "status": 200,
+     "checked_at": "2026-10-26T22:01:59.262409+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Ollama が、テキストを音声にする音声モデルに対応したと 2026-10-24 に発表した。最初のモデルは Gradium の小型 TTS ファミリー Phonon。",
+     "まず macOS(Apple Silicon)で使え、Windows と Linux は近日対応とされる。`ollama run phonon \"Hello from Ollama.\"` で試せる。",
+     "OpenAI 互換の /v1/audio/speech で呼べるので、既存の OpenAI SDK のコードは接続先の変更だけで使える。"
+    ],
+    "why_trending": "公式ブログの発表に加え、Reddit・dev.to・PyPI でも言及があり、ローカル LLM 分野で今週 1 位。",
+    "what_changes": [
+     "Ollama でテキスト生成だけでなく、音声の生成もできる",
+     "チャットモデルの返答を Phonon にパイプして読み上げられる",
+     "英・仏・独・西・葡の 5 言語に対応する"
+    ],
+    "benefits": [
+     "M5 Max の Mac で、Gradium 自前の実行環境より 35% 速い(発表の数字)",
+     "音声が生成しながら流れるので、返答の再生をすぐ始められる"
+    ],
+    "caveats": [
+     "対応は Apple Silicon の Mac のみ(Ollama 0.40.11 以降)",
+     "40M のモデルは CC BY-NC 4.0 で、商用には使えない"
+    ],
+    "audience": "ローカルで AI の返答を読み上げたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Ollama が音声(読み上げ)モデルに対応。第 1 弾は Gradium の Phonon で、Mac から試せる。",
+     "stat": {
+      "value": "35%",
+      "label": "次点の実装より速い(M5 Max、発表の数字)"
+     },
+     "steps": [
+      "Ollama を更新",
+      "ollama pull phonon",
+      "ollama run phonon"
+     ],
+     "changes": [
+      "テキストから音声を生成できる",
+      "OpenAI 互換の音声 API で呼べる",
+      "5 言語と複数の声に対応する"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Ollama / Gradium"
+      },
+      {
+       "k": "発表日",
+       "v": "2026-10-24"
+      },
+      {
+       "k": "対応環境",
+       "v": "Apple Silicon の Mac"
+      },
+      {
+       "k": "必要版",
+       "v": "Ollama 0.40.11 以降"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "ローカルで AI の返答を読み上げたい開発者",
+     "benefits": [
+      "チャットの返答を、そのまま音声で聞ける",
+      "OpenAI SDK の接続先を変えるだけで使える"
+     ],
+     "how_to": [
+      "Ollama 0.40.11 以降を入れる",
+      "`ollama pull phonon` でモデルを取得する",
+      "`ollama run phonon \"Hello\" > speech.wav` で保存する"
+     ],
+     "caveats": [
+      "今は Apple Silicon の Mac のみで、他は近日対応とされる",
+      "40M のモデルは CC BY-NC 4.0 で非商用に限る"
+     ],
+     "terms": [
+      {
+       "t": "TTS",
+       "d": "文字を音声に変える技術(テキスト読み上げ)"
+      },
+      {
+       "t": "MLX",
+       "d": "Apple が作った、Mac 向けの機械学習の基盤"
+      },
+      {
+       "t": "OpenAI 互換",
+       "d": "OpenAI と同じ呼び方で使える API の形"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Speech models in Ollama",
+      "publisher": "Ollama",
+      "url": "https://ollama.com/blog/speech-models",
+      "date": "2026-10-24"
+     }
+    ]
+   }
   },
   {
    "rank": 2,
@@ -1033,12 +1206,46 @@
     }
    ],
    "official_urls": [
-    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
-    "https://aws.amazon.com/blogs/machine-learning/train-qwen3-on-aws-trainium-with-torchtitan/"
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
    ],
    "official_verified": true,
    "summary": "Amazon SageMaker AI now supports serverless model customization for Muse Glimmer, Qwen 3.8 ― Train Qwen3 on AWS Trainium with torchtitan three ways on a single trn2.48xlarge: the Hugging Face Transformer。9ソースで言及(代表: 「Qwen4-27B PR found」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "SageMaker で Qwen3.8 をサーバーレス調整",
+     "diagram_type": "infographic",
+     "icon": "cloud",
+     "stat": {
+      "value": "4",
+      "label": "提供リージョン数(2026-10-22 発表)"
+     },
+     "steps": [
+      "データを用意",
+      "手法を選ぶ",
+      "調整ジョブを実行"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "SageMaker AI が Qwen3.8 27B などのサーバーレスなカスタマイズに対応した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "SFT・DPO・RFT と、LoRA またはフルファインチューニングを選べる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "インフラや学習の管理は AWS が担い、使った分だけの支払いになる"
+      },
+      {
+       "h": "使い方",
+       "t": "SageMaker Studio の Models ページか Python SDK から始められる"
+      }
+     ],
+     "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
+     "source_date": "2026-10-22"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 1.336,
     "github_new": 0.085,
@@ -1090,8 +1297,21 @@
    "trend_label": "baseline",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Amazon SageMaker AI serverless model customization Qwen3.8",
+      "evidence_urls": [
+       "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
+      ],
+      "evidence_published_at": "2026-10-22",
+      "result": "Muse Glimmer・Qwen3.8 27B・Ministral 3 が対象、SFT・DPO・RFT と LoRA・フルファインチューニングに対応、提供リージョン 4 つを確認",
+      "retrieved_at": "2026-10-26T03:31:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。AWS が 2026-10-22 に、SageMaker AI で Qwen3.8 27B などのサーバーレスなカスタマイズ対応を発表。"
    },
    "jp_reactions": [
     {
@@ -1100,7 +1320,116 @@
      "url": "https://pc.watch.impress.co.jp/docs/news/2149485.html",
      "date": "2026-10-20"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/": {
+     "status": 200,
+     "checked_at": "2026-10-26T22:01:59.262409+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "AWS が、Amazon SageMaker AI で Muse Glimmer・Qwen3.8 27B・Ministral 3 のサーバーレスなカスタマイズに対応したと 2026-10-22 に発表した。",
+     "SFT・DPO・RFT の手法と、LoRA またはフルファインチューニングを選べる。インフラの準備や学習の管理は SageMaker AI が担う。",
+     "提供は米国東部(バージニア北部)、米国西部(オレゴン)、アジアパシフィック(東京)、欧州(アイルランド)。"
+    ],
+    "why_trending": "AWS 公式の発表があり、Qwen 系のモデルとして今週注目された。",
+    "what_changes": [
+     "Qwen3.8 27B を自社データに合わせて調整できる",
+     "クラスタを自分で管理せず、使った分だけ支払う"
+    ],
+    "benefits": [
+     "小さめのモデルを用途に合わせて、コストと遅延を抑えやすい(AWS の説明)",
+     "SageMaker Studio や Python SDK から始められる"
+    ],
+    "caveats": [
+     "対応リージョンは 4 つに限られる",
+     "発表は調整の仕組みの対応で、モデル自体の新性能の発表ではない"
+    ],
+    "audience": "自社データでオープンモデルを調整したい AWS の利用者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "SageMaker AI で Qwen3.8 27B などを、サーバーレスで自社データに合わせて調整できる。",
+     "stat": {
+      "value": "4",
+      "label": "提供リージョン数"
+     },
+     "steps": [
+      "データを用意",
+      "手法を選ぶ",
+      "調整ジョブを実行"
+     ],
+     "changes": [
+      "SFT・DPO・RFT の手法に対応",
+      "LoRA とフルファインチューニングを選べる",
+      "インフラ管理は AWS が担う"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "AWS"
+      },
+      {
+       "k": "発表日",
+       "v": "2026-10-22"
+      },
+      {
+       "k": "対象",
+       "v": "Qwen3.8 27B ほか"
+      },
+      {
+       "k": "地域",
+       "v": "東京を含む 4 リージョン"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "自社データでオープンモデルを調整したい AWS の利用者",
+     "benefits": [
+      "小さめのモデルで、コストと遅延を抑えやすい(AWS の説明)",
+      "使った分だけの支払いで始められる"
+     ],
+     "how_to": [
+      "SageMaker Studio の Models ページを開く",
+      "調整ジョブを作る(Python SDK も可)",
+      "データと評価を用意して実行する"
+     ],
+     "caveats": [
+      "対応リージョンは 4 つに限られる",
+      "モデル自体の新性能ではなく、調整の仕組みの対応"
+     ],
+     "terms": [
+      {
+       "t": "LoRA",
+       "d": "一部の追加パラメータだけを学習する軽い調整方法"
+      },
+      {
+       "t": "SFT",
+       "d": "正解つきデータで追加学習する教師ありの調整"
+      },
+      {
+       "t": "DPO",
+       "d": "好ましい答えの比較データで好みに合わせる調整"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "SageMaker AI: serverless customization for Muse Glimmer, Qwen3.8, Ministral 3",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
+      "date": "2026-10-22"
+     }
+    ]
+   }
   },
   {
    "rank": 4,
@@ -1250,12 +1579,46 @@
     }
    ],
    "official_urls": [
-    "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
-    "https://www.anthropic.com/claude-code"
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.310"
    ],
    "official_verified": true,
    "summary": "claude-code v2.1.310。8ソースで言及(代表: 「stablyai/orca」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Claude Code v2.1.310 のリリース",
+     "diagram_type": "infographic",
+     "icon": "check",
+     "stat": {
+      "value": "v2.1.310",
+      "label": "リリースされた版(2026-10-23)"
+     },
+     "steps": [
+      "更新を確認",
+      "リリースノートを読む",
+      "設定を見直す"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Claude Code の新版が公開され、多数の修正と改善が入った"
+      },
+      {
+       "h": "何が変わる",
+       "t": "Monitor ツールが Bedrock・Vertex・Foundry でも使える。MCP のタイムアウト時の通知も変わった"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "Linux のサンドボックスが起動しない時、AppArmor の制限と解除方法が表示される"
+      },
+      {
+       "h": "注意",
+       "t": "細かな修正の集合。管理者はクラウドセッションの権限設定を確認する"
+      }
+     ],
+     "official_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
+     "source_date": "2026-10-23"
+    }
+   ],
    "score_breakdown": {
     "github_new": 1.35,
     "github_trending": 1.5,
@@ -1304,8 +1667,21 @@
    "trend_label": "baseline",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Claude Code v2.1.310 release notes",
+      "evidence_urls": [
+       "https://github.com/anthropics/claude-code/releases/tag/v2.1.310"
+      ],
+      "evidence_published_at": "2026-10-23",
+      "result": "Monitor ツールの対応拡大、Linux のサンドボックス警告の改善、MCP のタイムアウト時の挙動変更、クラウドセッションの権限追加などのリリースノートを確認",
+      "retrieved_at": "2026-10-26T03:31:00+09:00"
+     }
+    ],
+    "selection_reason": "dev-tool 代表。Anthropic 公式の GitHub リリース v2.1.310 が 2026-10-23 に公開。"
    },
    "jp_reactions": [
     {
@@ -1326,7 +1702,113 @@
      "url": "https://zenn.dev/lilpacy/articles/claude-code-skill-two-stage-activation",
      "date": "2026-10-25"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.310": {
+     "status": 200,
+     "checked_at": "2026-10-26T22:01:59.262409+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Anthropic の Claude Code が v2.1.310 を 2026-10-23 にリリースした。多数の修正と改善を含む更新。",
+     "Monitor ツールが Bedrock・Vertex・Foundry などでも使えるようになった。Linux では Ubuntu の AppArmor の制限が原因でサンドボックスが起動しない場合に、解除方法を表示する。",
+     "クラウドセッションと Remote Control の権限を Enterprise のカスタムロールに追加でき、管理者がロール単位で使える人を制御できる。"
+    ],
+    "why_trending": "公式の GitHub リリースが公開され、開発ツール分野で今週注目された。",
+    "what_changes": [
+     "Monitor ツールの対応環境が広がった",
+     "MCP ツールがタイムアウトした時のエラー文を変更した",
+     "圧縮後に再び「プロンプトが長すぎる」になる不具合を修正した"
+    ],
+    "benefits": [
+     "ゲートウェイ越しでも、非対応の設定値で失敗した時に再試行して通る",
+     "管理者が権限をロール単位で制御しやすい"
+    ],
+    "caveats": [
+     "リリースノートの内容で、このサイトでは動作を検証していない",
+     "細かい修正の集合で、大きな新機能の発表ではない"
+    ],
+    "audience": "Claude Code を日常的に使う開発者と、組織で管理する管理者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Claude Code v2.1.310。Monitor ツールの対応拡大や、管理者向けの権限追加などが入った。",
+     "stat": {
+      "value": "v2.1.310",
+      "label": "リリースされた版"
+     },
+     "steps": [
+      "更新を確認",
+      "リリースノートを読む",
+      "設定を見直す"
+     ],
+     "changes": [
+      "Monitor ツールが Bedrock・Vertex・Foundry でも使える",
+      "Linux のサンドボックス警告に解除方法を表示",
+      "MCP のタイムアウト時の通知を変更"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Anthropic"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-23"
+      },
+      {
+       "k": "種類",
+       "v": "リリースノート"
+      },
+      {
+       "k": "対象",
+       "v": "Claude Code 利用者"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "Claude Code を使う開発者と、組織で管理する管理者",
+     "benefits": [
+      "不具合の修正で、普段の作業が安定しやすい",
+      "管理者がロール単位で権限を制御できる"
+     ],
+     "how_to": [
+      "最新版に更新する",
+      "リリースノートで自分の環境に関わる項目を確認する",
+      "管理者はカスタムロールの権限を見直す"
+     ],
+     "caveats": [
+      "細かな修正の集合で、大きな新機能の発表ではない",
+      "リリースノートの内容で、独自には検証していない"
+     ],
+     "terms": [
+      {
+       "t": "サンドボックス",
+       "d": "外から隔離された安全な実行環境"
+      },
+      {
+       "t": "MCP",
+       "d": "AI と外部ツールをつなぐ共通の接続方式"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Release v2.1.310 · anthropics/claude-code",
+      "publisher": "GitHub",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
+      "date": "2026-10-23"
+     }
+    ]
+   }
   },
   {
    "rank": 5,
@@ -1472,13 +1954,46 @@
     }
    ],
    "official_urls": [
-    "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
-    "https://huggingface.co/RecursiveSI/flint",
-    "https://huggingface.co/unsloth/flint-GGUF"
+    "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/"
    ],
    "official_verified": true,
    "summary": "Flint-interactive: A language for creating interactive data visualizations ― Flint-interactive gives AI agents a language for creating interactive visualizations. Click a chart, filter da。7ソースで言及(代表: 「RecursiveSI/flint」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Flint-interactive: 操作できるグラフを作る言語",
+     "diagram_type": "infographic",
+     "icon": "layers",
+     "stat": {
+      "value": "4 種",
+      "label": "連携先: グラフ・表・文章・アプリ(2026-10-22)"
+     },
+     "steps": [
+      "操作を指定",
+      "コンパイラが変換",
+      "グラフが更新"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Microsoft Research が、対話的なグラフを作る言語 Flint-interactive を紹介した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "クリックなどの操作を意味のあるイベントにし、高水準の指定でグラフを更新する"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "エージェントがやり直す手間を減らし、グラフと表・文章を連動できる"
+      },
+      {
+       "h": "使い方",
+       "t": "チャットでは Flint-MCP と MCP Apps、アプリでは Flint Interactive Canvas を使う"
+      }
+     ],
+     "official_url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+     "source_date": "2026-10-22"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 1.131,
     "reddit_localllama": 0.69,
@@ -1534,10 +2049,128 @@
     }
    ],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Flint-interactive Microsoft Research Blog",
+      "evidence_urls": [
+       "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/"
+      ],
+      "evidence_published_at": "2026-10-22T16:00:00+00:00",
+      "result": "AI エージェントが操作できるグラフを作る言語であること、Flint-MCP / MCP Apps での利用、コンパイラが操作を意味のあるイベントに変換する仕組みを確認",
+      "retrieved_at": "2026-10-26T03:31:00+09:00"
+     }
+    ],
+    "selection_reason": "research 代表。Microsoft Research が 2026-10-22 に公式ブログで Flint-interactive を紹介。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/": {
+     "status": 200,
+     "checked_at": "2026-10-26T22:01:59.262409+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Microsoft Research が、操作できるグラフを作る言語 Flint-interactive を 2026-10-22 のブログで紹介した。",
+     "AI エージェントが作るグラフを、クリック・絞り込み・拡大などで読み手が探れるようにする。操作の細かい処理はコンパイラが担う。",
+     "チャットでは Flint-MCP と MCP Apps 経由で使え、ダッシュボードなどのアプリにも組み込める。"
+    ],
+    "why_trending": "Microsoft Research の公式ブログで公開され、論文・研究分野で今週注目された。",
+    "what_changes": [
+     "グラフの操作を、低水準のコードなしで高水準の指定により書ける",
+     "グラフと表・文章・ウィジェットが連動する"
+    ],
+    "benefits": [
+     "エージェントが何度もやり直す手間とトークンを減らせる(発表側の説明)",
+     "選んだ範囲を次の質問の文脈として渡せる"
+    ],
+    "caveats": [
+     "公式ブログの紹介で、このサイトでは動作を検証していない",
+     "実際の使い方は MCP の設定手順に従う必要がある"
+    ],
+    "audience": "データ可視化をエージェントやアプリに組み込みたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "エージェントが作るグラフを、読み手が操作して探れるようにする言語。Microsoft Research が紹介した。",
+     "stat": {
+      "value": "4 種",
+      "label": "連携先: グラフ・表・文章・アプリ"
+     },
+     "steps": [
+      "操作を指定",
+      "コンパイラが変換",
+      "グラフが更新"
+     ],
+     "changes": [
+      "クリックなどを意味のあるイベントに変換",
+      "高水準の指定で更新を書ける",
+      "表や文章とグラフが連動する"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Microsoft Research"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-22"
+      },
+      {
+       "k": "種類",
+       "v": "グラフ用の言語"
+      },
+      {
+       "k": "連携",
+       "v": "Flint-MCP / MCP Apps"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "データ可視化をエージェントやアプリに組み込みたい開発者",
+     "benefits": [
+      "エージェントのやり直しを減らせる(発表側の説明)",
+      "選んだ範囲を次の質問の文脈にできる"
+     ],
+     "how_to": [
+      "チャットでは Flint-MCP の設定手順に沿って導入する",
+      "アプリは Flint Interactive Canvas で組み込む",
+      "独自の操作は programming API で定義する"
+     ],
+     "caveats": [
+      "公式ブログの紹介で、独自には検証していない",
+      "導入には MCP の設定が必要"
+     ],
+     "terms": [
+      {
+       "t": "MCP",
+       "d": "AI と外部ツールをつなぐ共通の接続方式"
+      },
+      {
+       "t": "コンパイラ",
+       "d": "人が書いた指定を、実行できる形へ変換する仕組み"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Flint-interactive: A language for creating interactive data visualizations",
+      "publisher": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+      "date": "2026-10-22"
+     }
+    ]
+   }
   },
   {
    "rank": 6,
@@ -4096,6 +4729,66 @@
   }
  ],
  "candidates_pool": 115,
- "themes": [],
- "rejected_candidates": {}
+ "themes": [
+  {
+   "id": "mcp-agent-plumbing",
+   "title": "エージェントをつなぐ MCP が土台になる",
+   "confidence": "low",
+   "summary": "Flint-interactive と Claude Code v2.1.310 は、どちらも MCP を通じてエージェントと外部の道具をつなぐ前提で書かれている。",
+   "background": [
+    "Flint は Flint-MCP と MCP Apps でチャットに組み込め、Claude Code は MCP ツールのタイムアウト時の通知を変更した。",
+    "2 件だけの共通点で、エージェントと道具の接続口として MCP が広がっていることが背景にあるかもしれない(見立て)。"
+   ],
+   "entities": [
+    "flint",
+    "claude-code"
+   ],
+   "signals": [
+    {
+     "entity": "flint",
+     "note": "チャットでは Flint-MCP と MCP Apps 経由で使える"
+    },
+    {
+     "entity": "claude-code",
+     "note": "MCP ツールのタイムアウト時のエラー文を変更した"
+    }
+   ],
+   "refs": [
+    "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.310"
+   ]
+  },
+  {
+   "id": "open-models-own-hands",
+   "title": "オープンモデルを自分の環境で使いこなす",
+   "confidence": "low",
+   "summary": "Ollama は音声モデルを Mac で動かせるようにし、SageMaker AI は Qwen3.8 27B を自社データで調整できるようにした。どちらもオープンモデルを自分で扱う道具の拡充。",
+   "background": [
+    "Ollama は Phonon を ollama run で動かせるようにし、AWS は SFT・DPO・RFT と LoRA でのサーバーレスな調整に対応した。",
+    "2 件だけの共通点で、モデルを借りるだけでなく自分用に動かし、調整したい需要が背景にあるかもしれない(見立て)。"
+   ],
+   "entities": [
+    "ollama",
+    "qwen3"
+   ],
+   "signals": [
+    {
+     "entity": "ollama",
+     "note": "Phonon を ollama run で Mac 上で動かせる"
+    },
+    {
+     "entity": "qwen3",
+     "note": "Qwen3.8 27B を SFT・DPO・RFT で調整できる"
+    }
+   ],
+   "refs": [
+    "https://ollama.com/blog/speech-models",
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
+   ]
+  }
+ ],
+ "rejected_candidates": {
+  "minimax": "公式ページではなく OpenRouter のカタログ掲載のみで、MiniMax 自身の一次情報を確認できなかった。",
+  "llama-cpp": "b11886 は変換処理の修正のみの自動ビルド番号の更新で、ニュースとして紹介する内容が弱い。"
+ }
 }

@@ -22,19 +22,21 @@
     "id": "open-models-own-hands",
     "title": "オープンモデルを自分の環境で使いこなす",
     "confidence": "low",
-    "summary": "Ollama は音声モデルを Mac で動かせるようにし、SageMaker AI は Qwen3.8 27B を自社データで調整できるようにした。どちらもオープンモデルを自分で扱う道具の拡充。",
+    "summary": "Ollama は音声モデルを Mac で動かせるようにし、SageMaker AI は Qwen3.8 27B を自社データで調整できるようにし、Liquid AI は約 1 GB で動く LFM3 の重みを公開した。いずれもオープンモデルを自分で扱う道具の拡充。",
     "background": [
-      "Ollama は Phonon を ollama run で動かせるようにし、AWS は SFT・DPO・RFT と LoRA でのサーバーレスな調整に対応した。",
-      "2 件だけの共通点で、モデルを借りるだけでなく自分用に動かし、調整したい需要が背景にあるかもしれない(見立て)。"
+      "Ollama は Phonon を ollama run で動かせるようにし、AWS は SFT・DPO・RFT と LoRA でのサーバーレスな調整に対応し、Liquid AI は LFM3 を単一 GPU で調整できると発表した。",
+      "3 件の共通点で、モデルを借りるだけでなく自分用に動かし、調整したい需要が背景にあるかもしれない(見立て)。"
     ],
-    "entities": ["ollama", "qwen3"],
+    "entities": ["ollama", "qwen3", "lfm3"],
     "signals": [
       { "entity": "ollama", "note": "Phonon を ollama run で Mac 上で動かせる" },
-      { "entity": "qwen3", "note": "Qwen3.8 27B を SFT・DPO・RFT で調整できる" }
+      { "entity": "qwen3", "note": "Qwen3.8 27B を SFT・DPO・RFT で調整できる" },
+      { "entity": "lfm3", "note": "LFM3-1.7B は 4 ビットで約 1 GB のメモリに収まる" }
     ],
     "refs": [
       "https://ollama.com/blog/speech-models",
-      "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
+      "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
+      "https://www.liquid.ai/blog/lfm3"
     ]
   }
 ]

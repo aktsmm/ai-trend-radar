@@ -1,4 +1,86 @@
 {
+  "lfm3": {
+    "overview": {
+      "takeaway": "Liquid AI が小型モデル LFM3 を発表。LFM3-1.7B は 4 ビットで約 1 GB で動き、重みも公開されている。",
+      "stat": {
+        "value": "約1GB",
+        "label": "4 ビット時のメモリ(発表の数字)"
+      },
+      "steps": [
+        "Hugging Face で重みを取得",
+        "GGUF や MLX を選ぶ",
+        "手元で実行・調整"
+      ],
+      "changes": [
+        "文字・画像・音声などを 1 つの土台でそろえた 6 モデル",
+        "256K トークンの文脈長",
+        "単一 GPU で調整できる"
+      ],
+      "facts": [
+        {
+          "k": "提供元",
+          "v": "Liquid AI"
+        },
+        {
+          "k": "発表日",
+          "v": "2026-10-27"
+        },
+        {
+          "k": "大きさ",
+          "v": "1.73B パラメータ"
+        },
+        {
+          "k": "ライセンス",
+          "v": "LFM Open License v1.0"
+        }
+      ],
+      "refs": [
+        "s1"
+      ]
+    },
+    "impact": {
+      "audience": "端末上で動くエージェントや特定用途向けの小型モデルを作りたい開発者",
+      "benefits": [
+        "スマホやノート PC に収まる大きさで、ツール呼び出し向けに学習されたモデルを使える",
+        "自分のデータで、単一 GPU で調整できる"
+      ],
+      "how_to": [
+        "Hugging Face の LFM3-1.7B のページを開く",
+        "環境に合う形式(GGUF・MLX など)を選ぶ",
+        "モデルカードのサンプルで試し、必要なら TRL で調整する"
+      ],
+      "caveats": [
+        "小さいため、複雑なコーディングや多段の推論には非推奨とされる",
+        "知識が必要な作業は検索と組み合わせる"
+      ],
+      "terms": [
+        {
+          "t": "4 ビット",
+          "d": "重みを少ない桁で表して、メモリを節約する方法(量子化)"
+        },
+        {
+          "t": "GGUF",
+          "d": "llama.cpp などで使われる、ローカル実行向けのモデル形式"
+        },
+        {
+          "t": "ファインチューニング",
+          "d": "用途に合わせてモデルを追加で学習すること"
+        }
+      ],
+      "refs": [
+        "s1"
+      ]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
+        "publisher": "Liquid AI",
+        "url": "https://www.liquid.ai/blog/lfm3",
+        "date": "2026-10-27"
+      }
+    ]
+  },
   "ollama": {
     "overview": {
       "takeaway": "Ollama が音声(読み上げ)モデルに対応。第 1 弾は Gradium の Phonon で、Mac から試せる。",

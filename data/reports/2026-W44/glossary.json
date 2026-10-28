@@ -16,6 +16,22 @@
   "ref": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
  },
  {
+  "term": "音声認識(ASR)",
+  "kind": "基礎",
+  "short": "話し声を文字に変える技術",
+  "explain": "録音された話し声を、文字のテキストに変える技術。会議の議事録や字幕づくりに使われ、誤りの少なさは単語誤り率(WER)などで測る。",
+  "entity": "nemotron3",
+  "ref": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+ },
+ {
+  "term": "チェックポイント",
+  "kind": "仕組み",
+  "short": "処理の途中状態を保存した記録",
+  "explain": "長い処理の途中経過を保存しておく仕組み。失敗や中断があっても最初からやり直さず、保存した地点から再開できるので、エージェントの運用で役立つ。",
+  "entity": "langgraph",
+  "ref": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.18"
+ },
+ {
   "term": "TTS(テキスト読み上げ)",
   "kind": "基礎",
   "short": "文字を音声に変える技術",

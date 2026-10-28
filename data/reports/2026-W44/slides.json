@@ -321,5 +321,77 @@
    "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
    "source_date": "2026-10-22"
   }
+ ],
+ "nemotron3": [
+  {
+   "title": "NVIDIA Nemotron 3.5 Transcribe 公開",
+   "diagram_type": "infographic",
+   "icon": "spark",
+   "stat": {
+    "value": "40 言語",
+    "label": "文字起こし対応(2026-10-28 NVIDIA 発表)"
+   },
+   "steps": [
+    "音声を用意",
+    "指示文で用途を指定",
+    "文字起こし・話者識別・翻訳"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "NVIDIA がオープンウェイトの音声認識モデル Nemotron 3.5 Transcribe を公開"
+    },
+    {
+     "h": "何が変わる",
+     "t": "文字起こし・話者識別・翻訳・音声への質問を 1 つのモデルで切り替えられる"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "専門用語を指示に書き添えたり、Granary v2 と NeMo で追加学習したりできる"
+    },
+    {
+     "h": "注意",
+     "t": "録音済み音声向けでライブ配信は想定外。量子化版は近日公開"
+    }
+   ],
+   "official_url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+   "source_date": "2026-10-28"
+  }
+ ],
+ "langgraph": [
+  {
+   "title": "LangGraph 1.2.18、エラー処理を修正",
+   "diagram_type": "infographic",
+   "icon": "cycle",
+   "stat": {
+    "value": "1.2.18",
+    "label": "2026-10-26 公開。スナップショット間隔 100 に"
+   },
+   "steps": [
+    "pip でアップデート",
+    "変更点を確認",
+    "必要なら間隔を 1000 に戻す"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "LangChain の LangGraph 1.2.18 が公開された"
+    },
+    {
+     "h": "何が変わる",
+     "t": "error_handler の回復と、止まった実行の最後のチェックポイント配信の修正が入った"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "長いスレッドの読み込みが速くなる(リリースノートの説明)"
+    },
+    {
+     "h": "注意",
+     "t": "スナップショットが増えて保存量が増える。戻すには snapshot_frequency=1000"
+    }
+   ],
+   "official_url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.18",
+   "source_date": "2026-10-26"
+  }
  ]
 }

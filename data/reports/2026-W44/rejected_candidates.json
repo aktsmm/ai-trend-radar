@@ -12,5 +12,6 @@
  "gemini-cli": "nightly ビルドのタグのみで、一次情報の本文を確認できなかった。",
  "survival-llm": "個人の小規模リポジトリで、公式な一次情報を確認できなかった。",
  "llama-cpp": "b11886 は変換処理の修正のみの自動ビルド番号の更新で、ニュースとして紹介する内容が弱い。",
- "cross": "AWS IAM の話題で、AI・ローカル LLM のトレンドとは無関係(『cross-region』などの語を同じキーワードにまとめた誤クラスタ)。"
+ "cross": "AWS IAM の話題で、AI・ローカル LLM のトレンドとは無関係(『cross-region』などの語を同じキーワードにまとめた誤クラスタ)。",
+ "embeddinggemma-2": "Hugging Face の論文ページと Ollama のカタログのみで、Google 自身の一次情報の本文を確認できなかった。"
 }

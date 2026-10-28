@@ -95,6 +95,9 @@ def main():
             for u in hops(url, raw):
                 pages.append(fetch(u)[0])
         card = hf_card_url(url)
+        for u in c.get("vendor_links", []):  # the vendor's own announcement found in the discussion (allowlisted domains only, see pending.vendor_links)
+            if all(p["url"] != u for p in pages):
+                pages.append(fetch(u)[0])
         if card and rec.get("text"):  # the model card usually links to the vendor's release blog: that page carries the announcement and its date
             readme_links = re.findall(r"\]\((https://[^)\s]+)\)", get_safe(card))
             vendor_hosts = [u for u in readme_links if "huggingface.co" not in up.urlparse(u).netloc and re.search(r"(blog|news|announce|release|introducing)", u, re.I)]

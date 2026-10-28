@@ -1,5 +1,13 @@
 [
  {
+  "term": "Apache 2.0 ライセンス",
+  "kind": "基礎",
+  "short": "商用利用もしやすい代表的なオープンライセンス",
+  "explain": "ソフトウェアやモデルを、商用を含めて自由に使い、改変し、再配布できる代表的なライセンス。著作権表示などの条件を守れば使えるので、企業でも採用しやすい。",
+  "entity": "beam",
+  "ref": "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/"
+ },
+ {
   "term": "LoRA",
   "kind": "仕組み",
   "short": "少ない追加パラメータだけで行う軽い調整",

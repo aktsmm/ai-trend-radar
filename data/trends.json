@@ -766,11 +766,11 @@
    "url_checks": {
     "https://ollama.com/blog/speech-models": {
      "status": 200,
-     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
     },
     "https://ollama.com/library/phonon": {
      "status": 200,
-     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
     }
    },
    "jp_reactions": [],
@@ -1307,7 +1307,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.310": {
      "status": 200,
-     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
     }
    },
    "jp_reactions": [
@@ -1876,11 +1876,11 @@
    "url_checks": {
     "https://www.liquid.ai/blog/lfm3": {
      "status": 200,
-     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
     },
     "https://huggingface.co/LiquidAI/LFM3-1.7B": {
      "status": 200,
-     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
     }
    },
    "jp_reactions": [],
@@ -2198,7 +2198,7 @@
    "url_checks": {
     "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/": {
      "status": 200,
-     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
     }
    },
    "jp_reactions": [
@@ -2395,12 +2395,46 @@
     }
    ],
    "official_urls": [
-    "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
-    "https://ollama.com/library/nemotron3"
+    "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
    ],
    "official_verified": true,
    "summary": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You  ― Nemotron 3.5 Bolt is NVIDIA’s compact vision-language model for local coding, reasoning, and tool use.。5ソースで言及(代表: 「NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent M」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "NVIDIA Nemotron 3.5 Transcribe 公開",
+     "diagram_type": "infographic",
+     "icon": "spark",
+     "stat": {
+      "value": "40 言語",
+      "label": "文字起こし対応(2026-10-28 NVIDIA 発表)"
+     },
+     "steps": [
+      "音声を用意",
+      "指示文で用途を指定",
+      "文字起こし・話者識別・翻訳"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "NVIDIA がオープンウェイトの音声認識モデル Nemotron 3.5 Transcribe を公開"
+      },
+      {
+       "h": "何が変わる",
+       "t": "文字起こし・話者識別・翻訳・音声への質問を 1 つのモデルで切り替えられる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "専門用語を指示に書き添えたり、Granary v2 と NeMo で追加学習したりできる"
+      },
+      {
+       "h": "注意",
+       "t": "録音済み音声向けでライブ配信は想定外。量子化版は近日公開"
+      }
+     ],
+     "official_url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+     "source_date": "2026-10-28"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 1.138,
     "reddit_localllama": 0.655,
@@ -2472,10 +2506,127 @@
    ],
    "display": "NVIDIA nemotron3",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "NVIDIA Nemotron 3.5 Transcribe and Granary v2",
+      "evidence_urls": [
+       "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+      ],
+      "evidence_published_at": "2026-10-28",
+      "result": "40 言語の文字起こし、31 言語の英語との翻訳、13 言語の話者識別を 1 つのモデルで行い、1 時間までの録音と 8 人までの話者に対応、有効パラメータは約 4B(全体 30B)、量子化版は近日公開と確認",
+      "retrieved_at": "2026-10-28T20:40:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。NVIDIA が 2026-10-28 に公式ブログで、オープンウェイトの音声認識モデル Nemotron 3.5 Transcribe と Granary v2 を発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary": {
+     "status": 200,
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "NVIDIA が 2026-10-28 に、オープンウェイトの音声認識モデル Nemotron 3.5 Transcribe を Hugging Face と ModelScope で公開したと発表した。",
+     "1 つのモデルで 40 言語の文字起こし、31 言語の英語との翻訳、13 言語の話者識別、音声への質問応答ができる。1 時間までの録音、8 人までの話者に対応。",
+     "全体 30B パラメータのうち 1 トークンあたり有効なのは約 4B。学習データ Granary v2 と調整用レシピも公開された。"
+    ],
+    "why_trending": "NVIDIA 公式の発表に加え、Hugging Face や LocalLLaMA、Ollama でも Nemotron 3.5 系のモデルが話題になっている。",
+    "what_changes": [
+     "文字起こし・話者識別・翻訳を、指示文を変えるだけで 1 つのモデルで切り替えられる",
+     "専門用語を指示に書き添えたり、追加学習で調整したりできる"
+    ],
+    "benefits": [
+     "会議録や通話の文字起こしに、誰が話したかまで付けられる",
+     "Hugging Face Open ASR Leaderboard の英語部門で、オープンウェイトの 1 位(発表の数字)"
+    ],
+    "caveats": [
+     "録音済み音声向けで、ライブのストリーミングは想定していない",
+     "量子化版とローカル実行用の NeMo-Speech.cpp は近日公開で、現時点では vLLM で動かす"
+    ],
+    "audience": "会議・通話・医療などの音声を文字起こししたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "NVIDIA が、文字起こし・話者識別・翻訳をこなすオープンな音声認識モデルを公開した。",
+     "stat": {
+      "value": "40 言語",
+      "label": "文字起こしに対応"
+     },
+     "steps": [
+      "音声を用意",
+      "指示文で用途を指定",
+      "結果を確認"
+     ],
+     "changes": [
+      "1 つのモデルで文字起こし・話者識別・翻訳・質問応答",
+      "専門用語の指定や追加学習で調整できる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "NVIDIA"
+      },
+      {
+       "k": "発表日",
+       "v": "2026-10-28"
+      },
+      {
+       "k": "規模",
+       "v": "30B(有効 約 4B)"
+      },
+      {
+       "k": "対応",
+       "v": "1 時間・8 人まで"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "会議・通話・医療などの音声を文字起こししたい開発者",
+     "benefits": [
+      "誰が話したかまで付けた文字起こしが得られる",
+      "英語の精度はオープンウェイトで 1 位(発表の数字)"
+     ],
+     "how_to": [
+      "Hugging Face のモデルカードで使い方を確認する",
+      "現時点では vLLM でモデルを動かす",
+      "専門用語は指示文に書き添える"
+     ],
+     "caveats": [
+      "録音済み音声向けで、ライブ配信は想定していない",
+      "量子化版とローカル実行用ツールは近日公開"
+     ],
+     "terms": [
+      {
+       "t": "話者識別",
+       "d": "誰がいつ話したかを区別して記録すること"
+      },
+      {
+       "t": "WER",
+       "d": "文字起こしの単語誤り率。低いほど正確"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Nemotron 3.5 Transcribe and Granary v2",
+      "publisher": "NVIDIA",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+      "date": "2026-10-28"
+     }
+    ]
+   }
   },
   {
    "rank": 8,
@@ -3298,7 +3449,7 @@
    "url_checks": {
     "https://www.kimi.ai/blog/kimi-k3-1-pro": {
      "status": 200,
-     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
     }
    },
    "jp_reactions": [],
@@ -3952,11 +4103,11 @@
    "url_checks": {
     "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6": {
      "status": 200,
-     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
     },
     "https://github.com/NVIDIA/OpenShell": {
      "status": 200,
-     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
     }
    },
    "jp_reactions": [],
@@ -4420,12 +4571,46 @@
     }
    ],
    "official_urls": [
-    "https://github.com/langchain-ai/langgraph/releases/tag/1.2.18",
-    "https://www.langchain.com/langgraph"
+    "https://github.com/langchain-ai/langgraph/releases/tag/1.2.18"
    ],
    "official_verified": true,
    "summary": "langgraph langgraph==1.2.18。3ソースで言及(代表: 「langgraph langgraph==1.2.18」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "LangGraph 1.2.18、エラー処理を修正",
+     "diagram_type": "infographic",
+     "icon": "cycle",
+     "stat": {
+      "value": "1.2.18",
+      "label": "2026-10-26 公開。スナップショット間隔 100 に"
+     },
+     "steps": [
+      "pip でアップデート",
+      "変更点を確認",
+      "必要なら間隔を 1000 に戻す"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "LangChain の LangGraph 1.2.18 が公開された"
+      },
+      {
+       "h": "何が変わる",
+       "t": "error_handler の回復と、止まった実行の最後のチェックポイント配信の修正が入った"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "長いスレッドの読み込みが速くなる(リリースノートの説明)"
+      },
+      {
+       "h": "注意",
+       "t": "スナップショットが増えて保存量が増える。戻すには snapshot_frequency=1000"
+      }
+     ],
+     "official_url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.18",
+     "source_date": "2026-10-26"
+    }
+   ],
    "score_breakdown": {
     "github_new": 0.313,
     "pypi": 0.454,
@@ -4459,10 +4644,127 @@
    "x_posts": [],
    "display": "LangGraph",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "langgraph 1.2.18 release notes",
+      "evidence_urls": [
+       "https://github.com/langchain-ai/langgraph/releases/tag/1.2.18"
+      ],
+      "evidence_published_at": "2026-10-26",
+      "result": "error_handler の回復と失敗タスク結果のストリーム修正、DeltaChannel のスナップショット間隔を 1000 から 100 更新に変更、interrupt_after 等で止めた実行の最後のチェックポイントを配信する修正を確認",
+      "retrieved_at": "2026-10-28T20:40:00+09:00"
+     }
+    ],
+    "selection_reason": "dev-tool 代表。LangChain の LangGraph 1.2.18 が 2026-10-26 に公開。エラー処理の修正とスナップショット頻度の既定値変更が入った。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://github.com/langchain-ai/langgraph/releases/tag/1.2.18": {
+     "status": 200,
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "LangChain の AI エージェント用フレームワーク LangGraph の 1.2.18 が 2026-10-26 に公開された。",
+     "error_handler がすべての経路で回復できるようにし、失敗したタスクの結果もストリームに流す修正が入った。",
+     "DeltaChannel の既定のスナップショット間隔が 1000 更新から 100 更新に変わった。長い会話の読み込みは速くなるが、保存量は増える。"
+    ],
+    "why_trending": "PyPI と GitHub のリリースで更新が続き、今週の開発ツール分野で上位に入った。",
+    "what_changes": [
+     "interrupt_after や再帰の上限で止まった実行の最後のチェックポイントも配信される",
+     "サブグラフの階層ごとにタグが重複する問題が直った"
+    ],
+    "benefits": [
+     "長いスレッドの読み込みが速くなる(リリースノートの説明)",
+     "旧来の動作は snapshot_frequency=1000 で維持できる"
+    ],
+    "caveats": [
+     "スナップショットが増えるため、保存容量が増える",
+     "バグ修正中心の更新で、新機能の追加は小さい"
+    ],
+    "audience": "LangGraph でエージェントを作り、運用している開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "LangGraph 1.2.18 は、エラー処理の修正とスナップショット間隔の変更を含む更新。",
+     "stat": {
+      "value": "1.2.18",
+      "label": "2026-10-26 公開"
+     },
+     "steps": [
+      "アップデート",
+      "変更点を確認",
+      "必要なら設定を戻す"
+     ],
+     "changes": [
+      "error_handler がすべての経路で回復できる",
+      "スナップショット間隔が 1000 から 100 更新に変更"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "LangChain"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-26"
+      },
+      {
+       "k": "版",
+       "v": "1.2.18"
+      },
+      {
+       "k": "種類",
+       "v": "リリースノート"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "LangGraph でエージェントを作り、運用している開発者",
+     "benefits": [
+      "長いスレッドの読み込みが速くなる(リリースノートの説明)",
+      "失敗したタスクの結果もストリームで受け取れる"
+     ],
+     "how_to": [
+      "リリースノートの変更点を確認する",
+      "新しい版にアップデートする",
+      "旧動作は snapshot_frequency=1000 で維持する"
+     ],
+     "caveats": [
+      "スナップショットが増え、保存量が増える",
+      "バグ修正が中心で、大きな新機能はない"
+     ],
+     "terms": [
+      {
+       "t": "チェックポイント",
+       "d": "エージェントの途中状態を保存しておく仕組み"
+      },
+      {
+       "t": "サブグラフ",
+       "d": "大きな処理の中に入れ子にした小さな処理の流れ"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "langgraph 1.2.18 リリースノート",
+      "publisher": "LangChain",
+      "url": "https://github.com/langchain-ai/langgraph/releases/tag/1.2.18",
+      "date": "2026-10-26"
+     }
+    ]
+   }
   },
   {
    "rank": 19,
@@ -4606,7 +4908,7 @@
    "url_checks": {
     "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/": {
      "status": 200,
-     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+     "checked_at": "2026-10-28T21:52:05.853636+00:00"
     }
    },
    "jp_reactions": [
@@ -5226,19 +5528,24 @@
    "id": "open-models-own-hands",
    "title": "オープンモデルを自分の環境で使いこなす",
    "confidence": "low",
-   "summary": "Ollama は音声モデルを Mac で動かせるようにし、SageMaker AI は Qwen3.8 27B を自社データで調整できるようにし、Liquid AI は約 1 GB で動く LFM3 の重みを公開した。いずれもオープンモデルを自分で扱う道具の拡充。",
+   "summary": "Ollama は音声モデルを Mac で動かせるようにし、SageMaker AI は Qwen3.8 を自社データで調整可能にし、Liquid AI は約 1 GB の LFM3、NVIDIA は調整用データ付きの音声認識モデルを公開した。",
    "background": [
-    "Ollama は Phonon を ollama run で動かせるようにし、AWS は SFT・DPO・RFT と LoRA でのサーバーレスな調整に対応し、Liquid AI は LFM3 を単一 GPU で調整できると発表した。",
-    "3 件の共通点で、モデルを借りるだけでなく自分用に動かし、調整したい需要が背景にあるかもしれない(見立て)。"
+    "Ollama は Phonon を ollama run で動かせるようにし、AWS は SFT・DPO・RFT と LoRA でのサーバーレスな調整に対応し、NVIDIA は Granary v2 と調整レシピも公開した。",
+    "4 件の共通点で、モデルを借りるだけでなく自分用に動かし、調整したい需要が背景にあるかもしれない(見立て)。"
    ],
    "entities": [
     "ollama",
     "qwen3",
     "lfm3",
     "kimi-k3",
-    "beam"
+    "beam",
+    "nemotron3"
    ],
    "signals": [
+    {
+     "entity": "nemotron3",
+     "note": "Nemotron 3.5 Transcribe は学習データ Granary v2 と調整用ツールも公開された"
+    },
     {
      "entity": "beam",
      "note": "Beam は Apache 2.0 で、SageMaker JumpStart から配備できる"
@@ -5265,7 +5572,8 @@
     "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
     "https://www.liquid.ai/blog/lfm3",
     "https://www.kimi.ai/blog/kimi-k3-1-pro",
-    "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/"
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
+    "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
    ]
   }
  ],
@@ -5283,6 +5591,7 @@
   "gemini-cli": "nightly ビルドのタグのみで、一次情報の本文を確認できなかった。",
   "survival-llm": "個人の小規模リポジトリで、公式な一次情報を確認できなかった。",
   "llama-cpp": "b11886 は変換処理の修正のみの自動ビルド番号の更新で、ニュースとして紹介する内容が弱い。",
-  "cross": "AWS IAM の話題で、AI・ローカル LLM のトレンドとは無関係(『cross-region』などの語を同じキーワードにまとめた誤クラスタ)。"
+  "cross": "AWS IAM の話題で、AI・ローカル LLM のトレンドとは無関係(『cross-region』などの語を同じキーワードにまとめた誤クラスタ)。",
+  "embeddinggemma-2": "Hugging Face の論文ページと Ollama のカタログのみで、Google 自身の一次情報の本文を確認できなかった。"
  }
 }

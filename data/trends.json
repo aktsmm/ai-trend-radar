@@ -898,11 +898,11 @@
    "url_checks": {
     "https://ollama.com/blog/speech-models": {
      "status": 200,
-     "checked_at": "2026-10-26T22:01:59.262409+00:00"
+     "checked_at": "2026-10-28T10:22:51.741517+00:00"
     },
     "https://ollama.com/library/phonon": {
      "status": 200,
-     "checked_at": "2026-10-26T22:01:59.262409+00:00"
+     "checked_at": "2026-10-28T10:22:51.741517+00:00"
     }
    },
    "jp_reactions": [],
@@ -1249,7 +1249,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.310": {
      "status": 200,
-     "checked_at": "2026-10-26T22:01:59.262409+00:00"
+     "checked_at": "2026-10-28T10:22:51.741517+00:00"
     }
    },
    "jp_reactions": [
@@ -1782,7 +1782,7 @@
    "url_checks": {
     "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/": {
      "status": 200,
-     "checked_at": "2026-10-26T22:01:59.262409+00:00"
+     "checked_at": "2026-10-28T10:22:51.741517+00:00"
     }
    },
    "jp_reactions": [],
@@ -2163,12 +2163,47 @@
     }
    ],
    "official_urls": [
-    "https://huggingface.co/LiquidAI/LFM3-1.7B",
-    "https://ollama.com/library/lfm3"
+    "https://www.liquid.ai/blog/lfm3",
+    "https://huggingface.co/LiquidAI/LFM3-1.7B"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "LiquidAI/LFM3-1.7B ― LFM3-1.7B is a tri-hybrid model for local agents and specialized applications.。6ソースで言及(代表: 「LiquidAI/LFM3-1.7B」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Liquid AI の LFM3、約 1 GB で動く小型モデル",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "約1GB",
+      "label": "LFM3-1.7B が 4 ビットで使うメモリ(2026-10-27 発表)"
+     },
+     "steps": [
+      "重みを Hugging Face で取得",
+      "GGUF や MLX を選ぶ",
+      "手元で実行・調整"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Liquid AI が文字・画像・音声などの小型モデル LFM3 を発表し、重みを公開"
+      },
+      {
+       "h": "何が変わる",
+       "t": "LFM3-1.7B は前世代の 2.6B より 35% 少ないパラメータで上回ると発表"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "256K の文脈長で、単一 GPU で自分用に調整できる"
+      },
+      {
+       "h": "注意",
+       "t": "小さいため、複雑なコーディングや多段の推論には非推奨とされる"
+      }
+     ],
+     "official_url": "https://www.liquid.ai/blog/lfm3",
+     "source_date": "2026-10-27"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 1.149,
     "hackernews": 0.711,
@@ -2212,10 +2247,149 @@
    "trend_label": "rising",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Introducing LFM3",
+      "evidence_urls": [
+       "https://www.liquid.ai/blog/lfm3"
+      ],
+      "evidence_published_at": "2026-10-27",
+      "result": "LFM3 は text・vision・audio・omni・decision の 6 モデルで、最初は 2B 級。LFM3-1.7B は LFM2.5-2.6B を 35% 少ないパラメータで上回ると発表。4 ビットで約 1 GB、コンテキスト 256K、単一 GPU で調整可能、重みは公開と確認",
+      "retrieved_at": "2026-10-28T19:20:00+09:00"
+     },
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "LFM3-1.7B model card",
+      "evidence_urls": [
+       "https://huggingface.co/LiquidAI/LFM3-1.7B"
+      ],
+      "evidence_published_at": "2026-10-27",
+      "result": "1.73B パラメータ、256K トークン、GGUF・MLX など複数形式、ライセンスは LFM Open License v1.0、小さいため複雑なコーディングや多段の推論には非推奨と確認",
+      "retrieved_at": "2026-10-28T19:20:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。Liquid AI が 2026-10-27 に公式ブログで LFM3 ファミリーを発表し、重みを Hugging Face で公開。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://www.liquid.ai/blog/lfm3": {
+     "status": 200,
+     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+    },
+    "https://huggingface.co/LiquidAI/LFM3-1.7B": {
+     "status": 200,
+     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Liquid AI が、新世代の小型モデル LFM3 を 2026-10-27 に発表した。文字・画像・音声などを 1 つの土台でそろえた、約 2B 級の 6 モデル。",
+     "中心の LFM3-1.7B はテキスト用で、4 ビットで約 1 GB のメモリに収まり、256K トークンの文脈長を持つ。",
+     "重みは Hugging Face などで公開され、GGUF・MLX など複数の形式から選べる。"
+    ],
+    "why_trending": "公式ブログと Hugging Face のモデルページで同日に公開され、手元の端末で動くエージェント向けの小型モデルとして注目されている。",
+    "what_changes": [
+     "スマホやノート PC でも動く大きさで、ツール呼び出しを前提に学習されたモデルが選べる",
+     "単一の GPU で、自分の用途に合わせた調整ができる",
+     "GGUF・MLX など、llama.cpp や Ollama、Apple Silicon 向けの形式が用意されている"
+    ],
+    "benefits": [
+     "LFM3-1.7B は前世代の LFM2.5-2.6B を 35% 少ないパラメータで上回ると発表(発表の数字)",
+     "8K トークンの入力時、同じ大きさの LFM2-1.2B より約 25% 速いと発表(発表の数字)"
+    ],
+    "caveats": [
+     "小さいため、複雑なコーディングや多段の推論には勧められていない",
+     "知識が必要な作業は、検索や RAG と組み合わせる前提",
+     "ライセンスは LFM Open License v1.0。使う前に条件を確認する"
+    ],
+    "audience": "端末上で動くエージェントや、特定用途向けの小型モデルを作りたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Liquid AI が小型モデル LFM3 を発表。LFM3-1.7B は 4 ビットで約 1 GB で動き、重みも公開されている。",
+     "stat": {
+      "value": "約1GB",
+      "label": "4 ビット時のメモリ(発表の数字)"
+     },
+     "steps": [
+      "Hugging Face で重みを取得",
+      "GGUF や MLX を選ぶ",
+      "手元で実行・調整"
+     ],
+     "changes": [
+      "文字・画像・音声などを 1 つの土台でそろえた 6 モデル",
+      "256K トークンの文脈長",
+      "単一 GPU で調整できる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Liquid AI"
+      },
+      {
+       "k": "発表日",
+       "v": "2026-10-27"
+      },
+      {
+       "k": "大きさ",
+       "v": "1.73B パラメータ"
+      },
+      {
+       "k": "ライセンス",
+       "v": "LFM Open License v1.0"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "端末上で動くエージェントや特定用途向けの小型モデルを作りたい開発者",
+     "benefits": [
+      "スマホやノート PC に収まる大きさで、ツール呼び出し向けに学習されたモデルを使える",
+      "自分のデータで、単一 GPU で調整できる"
+     ],
+     "how_to": [
+      "Hugging Face の LFM3-1.7B のページを開く",
+      "環境に合う形式(GGUF・MLX など)を選ぶ",
+      "モデルカードのサンプルで試し、必要なら TRL で調整する"
+     ],
+     "caveats": [
+      "小さいため、複雑なコーディングや多段の推論には非推奨とされる",
+      "知識が必要な作業は検索と組み合わせる"
+     ],
+     "terms": [
+      {
+       "t": "4 ビット",
+       "d": "重みを少ない桁で表して、メモリを節約する方法(量子化)"
+      },
+      {
+       "t": "GGUF",
+       "d": "llama.cpp などで使われる、ローカル実行向けのモデル形式"
+      },
+      {
+       "t": "ファインチューニング",
+       "d": "用途に合わせてモデルを追加で学習すること"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
+      "publisher": "Liquid AI",
+      "url": "https://www.liquid.ai/blog/lfm3",
+      "date": "2026-10-27"
+     }
+    ]
+   }
   },
   {
    "rank": 8,
@@ -4442,14 +4616,15 @@
    "id": "open-models-own-hands",
    "title": "オープンモデルを自分の環境で使いこなす",
    "confidence": "low",
-   "summary": "Ollama は音声モデルを Mac で動かせるようにし、SageMaker AI は Qwen3.8 27B を自社データで調整できるようにした。どちらもオープンモデルを自分で扱う道具の拡充。",
+   "summary": "Ollama は音声モデルを Mac で動かせるようにし、SageMaker AI は Qwen3.8 27B を自社データで調整できるようにし、Liquid AI は約 1 GB で動く LFM3 の重みを公開した。いずれもオープンモデルを自分で扱う道具の拡充。",
    "background": [
-    "Ollama は Phonon を ollama run で動かせるようにし、AWS は SFT・DPO・RFT と LoRA でのサーバーレスな調整に対応した。",
-    "2 件だけの共通点で、モデルを借りるだけでなく自分用に動かし、調整したい需要が背景にあるかもしれない(見立て)。"
+    "Ollama は Phonon を ollama run で動かせるようにし、AWS は SFT・DPO・RFT と LoRA でのサーバーレスな調整に対応し、Liquid AI は LFM3 を単一 GPU で調整できると発表した。",
+    "3 件の共通点で、モデルを借りるだけでなく自分用に動かし、調整したい需要が背景にあるかもしれない(見立て)。"
    ],
    "entities": [
     "ollama",
-    "qwen3"
+    "qwen3",
+    "lfm3"
    ],
    "signals": [
     {
@@ -4459,16 +4634,26 @@
     {
      "entity": "qwen3",
      "note": "Qwen3.8 27B を SFT・DPO・RFT で調整できる"
+    },
+    {
+     "entity": "lfm3",
+     "note": "LFM3-1.7B は 4 ビットで約 1 GB のメモリに収まる"
     }
    ],
    "refs": [
     "https://ollama.com/blog/speech-models",
-    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
+    "https://www.liquid.ai/blog/lfm3"
    ]
   }
  ],
  "rejected_candidates": {
   "minimax": "公式ページではなく OpenRouter のカタログ掲載のみで、MiniMax 自身の一次情報を確認できなかった。",
+  "gpt-6-1-terra": "公式ページの本文を取得できず、一次情報を確認できなかった。",
+  "openai-codex": "alpha 版のタグのみで、リリースノートに紹介できる内容がない。",
+  "vllm": "v0.33.0rc1 は CI テストの修正だけのリリース候補で、紹介する内容が弱い。",
+  "unsloth": "ベータ版のリリースノートのみで、公開日を確認できる一次情報が不足している。",
+  "qwen3-8": "同じ内容を entity qwen3 として今週すでに掲載済みのため、重複として見送る。",
   "llama-cpp": "b11886 は変換処理の修正のみの自動ビルド番号の更新で、ニュースとして紹介する内容が弱い。"
  }
 }

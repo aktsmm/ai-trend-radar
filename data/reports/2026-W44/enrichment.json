@@ -129,33 +129,33 @@
   }
  },
  "url_checks": {
-  "https://www.liquid.ai/blog/lfm3": {
-   "status": 200,
-   "checked_at": "2026-10-28T10:20:00+00:00"
-  },
-  "https://huggingface.co/LiquidAI/LFM3-1.7B": {
-   "status": 200,
-   "checked_at": "2026-10-28T10:20:00+00:00"
-  },
   "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/": {
    "status": 200,
-   "checked_at": "2026-10-26T22:01:59.262409+00:00"
+   "checked_at": "2026-10-28T10:22:51.741517+00:00"
   },
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.310": {
    "status": 200,
-   "checked_at": "2026-10-26T22:01:59.262409+00:00"
+   "checked_at": "2026-10-28T10:22:51.741517+00:00"
+  },
+  "https://huggingface.co/LiquidAI/LFM3-1.7B": {
+   "status": 200,
+   "checked_at": "2026-10-28T10:22:51.741517+00:00"
   },
   "https://ollama.com/blog/speech-models": {
    "status": 200,
-   "checked_at": "2026-10-26T22:01:59.262409+00:00"
+   "checked_at": "2026-10-28T10:22:51.741517+00:00"
   },
   "https://ollama.com/library/phonon": {
    "status": 200,
-   "checked_at": "2026-10-26T22:01:59.262409+00:00"
+   "checked_at": "2026-10-28T10:22:51.741517+00:00"
+  },
+  "https://www.liquid.ai/blog/lfm3": {
+   "status": 200,
+   "checked_at": "2026-10-28T10:22:51.741517+00:00"
   },
   "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/": {
    "status": 200,
-   "checked_at": "2026-10-26T22:01:59.262409+00:00"
+   "checked_at": "2026-10-28T10:22:51.741517+00:00"
   }
  }
 }

@@ -46,3 +46,5 @@ ledger の最新値は `data/raw/_official_ledger.json`(CI artifact)。
 
 - digest の事前取得(`analyze/prefetch.py`)は、Hugging Face のモデルページでは README(モデルカード)の本文を取り、カードに書かれたベンダーの公式ブログ(例: liquid.ai/blog/lfm3)も取得する。以前は HF ページ先頭の JSON 設定で本文枠が埋まり、LFM3 が『本文を確認できなかった』として却下された(2026-10-28)。
 
+- 候補の主 URL がカタログ(OpenRouter・Ollama・HF のカード)のとき、言及リンクのうち許可リストのベンダードメイン(`analyze/report.py` の `OFFICIAL_DOMAINS`)のページを `vendor_links` として事前取得し、digest が一次情報として使えるようにする。例: Kimi K3.1 Pro は OpenRouter が主 URL で『Moonshot の一次情報がない』と却下されたが、HN の言及に公式ブログ(kimi.ai/blog)があった(2026-10-28)。許可リスト外のドメインや、似た名前の偽ドメインは取得しない。
+

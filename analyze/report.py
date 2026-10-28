@@ -34,7 +34,8 @@ SOURCE_TYPE = {"gh_releases": "release_note", "hf_models": "model_card", "hf_pap
 OFFICIAL_TYPES = {"announcement", "release_note", "docs", "product_page"}
 OFFICIAL_DOMAINS = ("openai.com", "anthropic.com", "claude.com", "blog.google", "deepmind.google", "nvidia.com", "aws.amazon.com",
                     "microsoft.com", "devblogs.microsoft.com", "huggingface.co", "qwenlm.github.io", "mistral.ai", "ollama.com",
-                    "github.blog", "github.com")
+                    "github.blog", "github.com", "liquid.ai", "kimi.com", "kimi.ai", "moonshot.ai", "minimax.io", "z.ai", "allenai.org", "cohere.com",
+                    "together.ai", "x.ai", "qwen.ai", "deepseek.com", "ibm.com", "apple.com", "mistral.ai", "stability.ai", "bfl.ai", "blackforestlabs.ai")
 PROMO_RE = re.compile(r"airdrop|casino|free money|crack(ed)?|nsfw|uncensored|jailbreak|referral|100x|pump|giveaway", re.I)
 ENT_RE = re.compile(r"\b([A-Z][A-Za-z]*[0-9][\w.\-]*(?: [A-Z][a-z]+)?|[A-Z][a-z]+[A-Z]\w+|[A-Z][a-z]{2,} \d+(?:\.\d+)?(?: [A-Z][a-z]+)?)\b")
 

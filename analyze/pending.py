@@ -11,6 +11,25 @@ import json
 from collect.common import ROOT
 
 
+def vendor_links(t, limit=2):
+    """Links in this candidate's mentions that point at an allowlisted first-party domain, other than the primary page.
+
+    A model that ranks via a catalog page (e.g. OpenRouter) is often discussed on HN / Reddit with a link to the vendor's own announcement; that link is
+    the page to research. Only allowlisted vendor domains qualify, so an arbitrary link in a post is never fetched.
+    """
+    from urllib.parse import urlparse
+
+    from analyze.report import OFFICIAL_DOMAINS
+    seen, out = {t["primary"]["url"]}, []
+    for s in t["sources"]:
+        u = s["url"]
+        host = urlparse(u).netloc.lower().removeprefix("www.")
+        if u not in seen and u.startswith("https://") and any(host == d or host.endswith("." + d) for d in OFFICIAL_DOMAINS) and "huggingface.co" not in host:
+            seen.add(u)
+            out.append(u)
+    return out[:limit]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--week")
@@ -37,7 +56,8 @@ def main():
         out.append({"entity_id": t["entity_id"], "keyword": t["keyword"], "rank": t["rank"], "category": t["category"], "vendor": t.get("vendor"),
                     "primary": {"url": t["primary"]["url"], "title": t["primary"]["title"], "published_at": t["primary"]["published_at"],
                                 "source_type": t["primary"]["source_type"]},
-                    "mentions": [{"source": s["name"], "title": s["title"], "url": s["url"]} for s in t["sources"][:5]]})
+                    "mentions": [{"source": s["name"], "title": s["title"], "url": s["url"]} for s in t["sources"][:5]],
+                    "vendor_links": vendor_links(t)})
         if len(out) >= a.limit:
             break
     work = ROOT / ".work"

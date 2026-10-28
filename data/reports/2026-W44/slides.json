@@ -1,4 +1,37 @@
 {
+  "kimi-k3": [
+    {
+      "title": "Kimi K3.1 Pro、1M 文脈のオープン重み",
+      "diagram_type": "infographic",
+      "icon": "spark",
+      "stat": { "value": "65.7%", "label": "Terminal-Bench 4.0 の得点(発表の数字)" },
+      "steps": ["Kimi.ai / API で試す", "重みの公開を待つ", "自環境で動かす"],
+      "points": [
+        { "h": "何が起きた", "t": "Moonshot AI が K3.1 シリーズ第 1 弾の K3.1 Pro と高速版を発表" },
+        { "h": "何が変わる", "t": "K3 を追加学習し、コーディングや 3D、金融の能力が向上したとする" },
+        { "h": "嬉しいこと", "t": "1M トークンの文脈で、長いコードや資料をまとめて扱える" },
+        { "h": "注意", "t": "重みの公開は 11 月 4 日まで。数字は開発元の発表" }
+      ],
+      "official_url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+    }
+  ],
+  "cross": [
+    {
+      "title": "IAM Identity Center の ID がリージョン越え",
+      "diagram_type": "infographic",
+      "icon": "lock",
+      "stat": { "value": "追加料金なし", "label": "対応リージョンすべてで利用可(2026-10-26 発表)" },
+      "steps": ["対象サービスを確認", "TIP を設定", "監査ログを確認"],
+      "points": [
+        { "h": "何が起きた", "t": "信頼できる ID 伝播が、別リージョンのサービスにも使えるようになった" },
+        { "h": "何が変わる", "t": "以前は同一リージョン内のみ。広い IAM ロールか集約が必要だった" },
+        { "h": "嬉しいこと", "t": "個人単位の権限付与と、誰がアクセスしたかの監査ができる" },
+        { "h": "注意", "t": "対応サービスの詳細はユーザーガイドで確認する" }
+      ],
+      "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/",
+      "source_date": "2026-10-26"
+    }
+  ],
   "lfm3": [
     {
       "title": "Liquid AI の LFM3、約 1 GB で動く小型モデル",

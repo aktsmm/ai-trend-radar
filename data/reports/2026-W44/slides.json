@@ -1,4 +1,40 @@
 {
+  "lfm3": [
+    {
+      "title": "Liquid AI の LFM3、約 1 GB で動く小型モデル",
+      "diagram_type": "infographic",
+      "icon": "chip",
+      "stat": {
+        "value": "約1GB",
+        "label": "LFM3-1.7B が 4 ビットで使うメモリ(2026-10-27 発表)"
+      },
+      "steps": [
+        "重みを Hugging Face で取得",
+        "GGUF や MLX を選ぶ",
+        "手元で実行・調整"
+      ],
+      "points": [
+        {
+          "h": "何が起きた",
+          "t": "Liquid AI が文字・画像・音声などの小型モデル LFM3 を発表し、重みを公開"
+        },
+        {
+          "h": "何が変わる",
+          "t": "LFM3-1.7B は前世代の 2.6B より 35% 少ないパラメータで上回ると発表"
+        },
+        {
+          "h": "嬉しいこと",
+          "t": "256K の文脈長で、単一 GPU で自分用に調整できる"
+        },
+        {
+          "h": "注意",
+          "t": "小さいため、複雑なコーディングや多段の推論には非推奨とされる"
+        }
+      ],
+      "official_url": "https://www.liquid.ai/blog/lfm3",
+      "source_date": "2026-10-27"
+    }
+  ],
   "ollama": [
     {
       "title": "Ollama が音声モデルに対応、第 1 弾は Phonon",

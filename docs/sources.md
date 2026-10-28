@@ -43,3 +43,5 @@ ledger の最新値は `data/raw/_official_ledger.json`(CI artifact)。
 - 公式ブログのフィードがない発表元(例: Liquid AI)は、HF の新着・HN・llama.cpp などの言及経由で拾う。
 - digest が調べる順は、公式の一次情報(モデルカード等)がある `model` を順位より先にする(`analyze/pending.py`)。
 
+- digest の事前取得(`analyze/prefetch.py`)は、Hugging Face のモデルページでは README(モデルカード)の本文を取り、カードに書かれたベンダーの公式ブログ(例: liquid.ai/blog/lfm3)も取得する。以前は HF ページ先頭の JSON 設定で本文枠が埋まり、LFM3 が『本文を確認できなかった』として却下された(2026-10-28)。
+

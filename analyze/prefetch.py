@@ -31,6 +31,19 @@ def text_of(raw):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"(?s)<[^>]+>", " ", raw))).strip()
 
 
+def get_safe(url):
+    try:
+        return get(url, timeout=25, retries=1)
+    except Exception:
+        return ""
+
+
+def hf_card_url(url):
+    """huggingface.co/<org>/<model> pages are dominated by a JSON config blob; the model card text lives in the raw README."""
+    m = re.match(r"^https://huggingface\.co/([^/]+/[^/#?]+)/?$", url)
+    return f"https://huggingface.co/{m.group(1)}/raw/main/README.md" if m and m.group(1).split("/")[0] not in ("spaces", "datasets", "papers") else None
+
+
 def fetch(url):
     rec = {"url": url, "fetched_at": datetime.now(timezone.utc).isoformat(), "status": None}
     try:
@@ -44,6 +57,14 @@ def fetch(url):
         if m:
             rec["published_hint"] = m.group(1)[:40]
             break
+    card = hf_card_url(url)
+    if card:
+        try:
+            readme = get(card, timeout=25, retries=1)
+            rec["text"] = re.sub(r"\s+", " ", html.unescape(re.sub(r"(?s)<[^>]+>|!\[[^\]]*\]\([^)]*\)", " ", re.sub(r"(?s)^---.*?---", " ", readme)))).strip()[:MAX_TEXT]  # front matter, HTML and images dropped
+            return rec, raw
+        except Exception:
+            pass
     rec["text"] = text_of(raw)[:MAX_TEXT]
     return rec, raw
 
@@ -70,8 +91,14 @@ def main():
         pages, raw_main = [], ""
         rec, raw = fetch(url)
         pages.append(rec)
-        if raw and "github.com" not in url:
+        if raw and "github.com" not in url and "huggingface.co" not in url:  # HF pages only link to HF's own navigation; the vendor's blog is found via the model card below
             for u in hops(url, raw):
+                pages.append(fetch(u)[0])
+        card = hf_card_url(url)
+        if card and rec.get("text"):  # the model card usually links to the vendor's release blog: that page carries the announcement and its date
+            readme_links = re.findall(r"\]\((https://[^)\s]+)\)", get_safe(card))
+            vendor_hosts = [u for u in readme_links if "huggingface.co" not in up.urlparse(u).netloc and re.search(r"(blog|news|announce|release|introducing)", u, re.I)]
+            for u in list(dict.fromkeys(vendor_hosts))[:2]:
                 pages.append(fetch(u)[0])
         (out / f"{c['entity_id']}.json").write_text(json.dumps({"entity_id": c["entity_id"], "pages": pages}, ensure_ascii=False, indent=1), encoding="utf-8")
         print(c["entity_id"], [(p["url"][:60], p["status"]) for p in pages])

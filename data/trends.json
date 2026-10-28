@@ -1423,42 +1423,7 @@
    ],
    "official_verified": true,
    "summary": "AWS IAM Identity Center now supports cross-Region trusted identity propagation ― Trusted identity propagation carries a user's identity with their request, so AWS services can grant permissio。7ソースで言及(代表: 「AWS IAM Identity Center now supports cross-Region trusted id」)",
-   "slides": [
-    {
-     "title": "IAM Identity Center の ID がリージョン越え",
-     "diagram_type": "infographic",
-     "icon": "lock",
-     "stat": {
-      "value": "追加料金なし",
-      "label": "対応リージョンすべてで利用可(2026-10-26 発表)"
-     },
-     "steps": [
-      "対象サービスを確認",
-      "TIP を設定",
-      "監査ログを確認"
-     ],
-     "points": [
-      {
-       "h": "何が起きた",
-       "t": "信頼できる ID 伝播が、別リージョンのサービスにも使えるようになった"
-      },
-      {
-       "h": "何が変わる",
-       "t": "以前は同一リージョン内のみ。広い IAM ロールか集約が必要だった"
-      },
-      {
-       "h": "嬉しいこと",
-       "t": "個人単位の権限付与と、誰がアクセスしたかの監査ができる"
-      },
-      {
-       "h": "注意",
-       "t": "対応サービスの詳細はユーザーガイドで確認する"
-      }
-     ],
-     "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/",
-     "source_date": "2026-10-26"
-    }
-   ],
+   "slides": [],
    "score_breakdown": {
     "hf_papers": 0.788,
     "github_new": 0.543,
@@ -1500,21 +1465,8 @@
    "trend_label": "rising",
    "x_posts": [],
    "verification": {
-    "status": "verified",
-    "checks": [
-     {
-      "mcp_name": "page-capture",
-      "tool": "fetch",
-      "query": "AWS IAM Identity Center cross-Region trusted identity propagation",
-      "evidence_urls": [
-       "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/"
-      ],
-      "evidence_published_at": "2026-10-26",
-      "result": "利用者の ID を別リージョンのサービスへ伝播でき、追加料金なし、IAM Identity Center が使える全リージョンで提供と確認",
-      "retrieved_at": "2026-10-28T20:00:00+09:00"
-     }
-    ],
-    "selection_reason": "dev-tool 代表。AWS が 2026-10-26 に、IAM Identity Center の信頼できる ID 伝播がリージョンをまたげるようになったと発表。"
+    "status": "unverified",
+    "checks": []
    },
    "jp_reactions": [],
    "url_checks": {
@@ -1522,100 +1474,6 @@
      "status": 200,
      "checked_at": "2026-10-28T11:04:23.174165+00:00"
     }
-   },
-   "digest": {
-    "summary": [
-     "AWS が 2026-10-26 に、IAM Identity Center の信頼できる ID 伝播(TIP)がリージョンをまたげるようになったと発表した。",
-     "利用者の ID とグループ情報を、別リージョンの AWS サービスへ引き継げる。以前は同じリージョン内のサービスに限られていた。",
-     "追加料金はなく、IAM Identity Center が使えるすべてのリージョンで利用できる。"
-    ],
-    "why_trending": "AWS 公式の What's New で発表され、今週の開発ツール分野で取り上げられた。",
-    "what_changes": [
-     "別リージョンのサービスにも、利用者個人の ID を渡せる",
-     "広い IAM ロールや単一リージョンへの集約が不要になる"
-    ],
-    "benefits": [
-     "誰がどのリソースにアクセスしたかを、リージョンをまたいで監査できる",
-     "データと計算を別リージョンに置く構成を取りやすい"
-    ],
-    "caveats": [
-     "対応するサービスや設定の詳細は IAM Identity Center ユーザーガイドで確認が必要"
-    ],
-    "audience": "複数リージョンで AWS を運用するクラウド管理者"
-   },
-   "deck": {
-    "overview": {
-     "takeaway": "IAM Identity Center の信頼できる ID 伝播が、リージョンをまたげるようになった。",
-     "stat": {
-      "value": "追加料金なし",
-      "label": "対応する全リージョンで提供"
-     },
-     "steps": [
-      "対象サービスを確認",
-      "TIP を設定"
-     ],
-     "changes": [
-      "別リージョンのサービスへ個人の ID を渡せる",
-      "広い IAM ロールや単一リージョン集約が不要"
-     ],
-     "facts": [
-      {
-       "k": "提供元",
-       "v": "AWS"
-      },
-      {
-       "k": "発表日",
-       "v": "2026-10-26"
-      },
-      {
-       "k": "対象",
-       "v": "IAM Identity Center"
-      },
-      {
-       "k": "料金",
-       "v": "追加料金なし"
-      }
-     ],
-     "refs": [
-      "s1"
-     ]
-    },
-    "impact": {
-     "audience": "複数リージョンで AWS を運用するクラウド管理者",
-     "benefits": [
-      "個人とグループ単位で権限を付けられる",
-      "誰がどのリソースを使ったか監査できる"
-     ],
-     "how_to": [
-      "IAM Identity Center ユーザーガイドで手順を確認する",
-      "既存の信頼できる ID 伝播の構成を見直す"
-     ],
-     "caveats": [
-      "対応するサービスの範囲は公式ガイドで確認が必要"
-     ],
-     "terms": [
-      {
-       "t": "リージョン",
-       "d": "AWS のデータセンターが置かれた地理的な区域"
-      },
-      {
-       "t": "ID 伝播",
-       "d": "利用者の ID を、リクエストと一緒に別サービスへ渡す仕組み"
-      }
-     ],
-     "refs": [
-      "s1"
-     ]
-    },
-    "sources": [
-     {
-      "id": "s1",
-      "title": "IAM Identity Center now supports cross-Region TIP",
-      "publisher": "AWS",
-      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/",
-      "date": "2026-10-26"
-     }
-    ]
    }
   },
   {
@@ -4881,6 +4739,7 @@
   "coder": "Coder は AI モデルではなく開発環境ツールのパッチリリースで、紹介する内容が弱い。",
   "gemini-cli": "nightly ビルドのタグのみで、一次情報の本文を確認できなかった。",
   "survival-llm": "個人の小規模リポジトリで、公式な一次情報を確認できなかった。",
-  "llama-cpp": "b11886 は変換処理の修正のみの自動ビルド番号の更新で、ニュースとして紹介する内容が弱い。"
+  "llama-cpp": "b11886 は変換処理の修正のみの自動ビルド番号の更新で、ニュースとして紹介する内容が弱い。",
+  "cross": "AWS IAM の話題で、AI・ローカル LLM のトレンドとは無関係(『cross-region』などの語を同じキーワードにまとめた誤クラスタ)。"
  }
 }

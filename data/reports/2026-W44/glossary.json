@@ -1,34 +1,26 @@
 [
-  {
-    "term": "リージョン",
-    "kind": "基礎",
-    "short": "クラウドのデータセンターがある地理的な区域",
-    "explain": "AWS などのクラウドが、東京や米国東部のように地域ごとに設けているデータセンターの集まり。置く場所で遅延や法規制への対応、災害時の備えが変わる。",
-    "entity": "cross",
-    "ref": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/"
-  },
-  {
-    "term": "LoRA",
-    "kind": "仕組み",
-    "short": "少ない追加パラメータだけで行う軽い調整",
-    "explain": "元のモデルの重みは固定したまま、小さな追加部品だけを学習させる調整方法。フルで学習し直すより、必要なメモリと時間を大きく減らせる。",
-    "entity": "qwen3",
-    "ref": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
-  },
-  {
-    "term": "TTS(テキスト読み上げ)",
-    "kind": "基礎",
-    "short": "文字を音声に変える技術",
-    "explain": "入力した文章を、人の声のような音声に変える技術。AI の返答を耳で聞けるので、画面を見られない場面や、アクセシビリティの向上に役立つ。",
-    "entity": "ollama",
-    "ref": "https://ollama.com/blog/speech-models"
-  },
-  {
-    "term": "サーバーレス",
-    "kind": "基礎",
-    "short": "サーバーを自分で管理しない使い方",
-    "explain": "サーバーの準備や管理をクラウド側に任せ、使った分だけ支払う方式。利用者は機械の用意ではなく、データや処理の中身に集中できる。",
-    "entity": "qwen3",
-    "ref": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
-  }
+ {
+  "term": "LoRA",
+  "kind": "仕組み",
+  "short": "少ない追加パラメータだけで行う軽い調整",
+  "explain": "元のモデルの重みは固定したまま、小さな追加部品だけを学習させる調整方法。フルで学習し直すより、必要なメモリと時間を大きく減らせる。",
+  "entity": "qwen3",
+  "ref": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
+ },
+ {
+  "term": "TTS(テキスト読み上げ)",
+  "kind": "基礎",
+  "short": "文字を音声に変える技術",
+  "explain": "入力した文章を、人の声のような音声に変える技術。AI の返答を耳で聞けるので、画面を見られない場面や、アクセシビリティの向上に役立つ。",
+  "entity": "ollama",
+  "ref": "https://ollama.com/blog/speech-models"
+ },
+ {
+  "term": "サーバーレス",
+  "kind": "基礎",
+  "short": "サーバーを自分で管理しない使い方",
+  "explain": "サーバーの準備や管理をクラウド側に任せ、使った分だけ支払う方式。利用者は機械の用意ではなく、データや処理の中身に集中できる。",
+  "entity": "qwen3",
+  "ref": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
+ }
 ]

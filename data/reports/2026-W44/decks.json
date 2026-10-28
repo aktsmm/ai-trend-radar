@@ -1,318 +1,478 @@
 {
-  "kimi-k3": {
-    "overview": {
-      "takeaway": "Moonshot AI が 1M 文脈のオープンウェイトモデル Kimi K3.1 Pro を発表。",
-      "stat": { "value": "65.7%", "label": "Terminal-Bench 4.0(発表の数字)" },
-      "steps": ["Kimi.ai / API で試す", "重みの公開を待つ"],
-      "changes": [
-        "K3 の追加学習版で、コーディングや金融が向上",
-        "2〜3 倍速い Highspeed 版も提供"
-      ],
-      "facts": [
-        { "k": "提供元", "v": "Moonshot AI" },
-        { "k": "文脈長", "v": "1M トークン" },
-        { "k": "提供先", "v": "Kimi.ai / Kimi API など" },
-        { "k": "重み公開", "v": "11 月 4 日までに予定" }
-      ],
-      "refs": ["s1"]
+ "kimi-k3": {
+  "overview": {
+   "takeaway": "Moonshot AI が 1M 文脈のオープンウェイトモデル Kimi K3.1 Pro を発表。",
+   "stat": {
+    "value": "65.7%",
+    "label": "Terminal-Bench 4.0(発表の数字)"
+   },
+   "steps": [
+    "Kimi.ai / API で試す",
+    "重みの公開を待つ"
+   ],
+   "changes": [
+    "K3 の追加学習版で、コーディングや金融が向上",
+    "2〜3 倍速い Highspeed 版も提供"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Moonshot AI"
     },
-    "impact": {
-      "audience": "長いコードや資料を AI に任せたい開発者",
-      "benefits": [
-        "長大なコードベースや資料を一度に渡せる",
-        "高速版で対話の待ち時間を減らせる"
-      ],
-      "how_to": [
-        "Kimi.ai や Kimi API で K3.1 Pro を試す",
-        "重みの公開後に自環境での利用を検討する"
-      ],
-      "caveats": [
-        "重みは公開予定で、現時点では未公開",
-        "ベンチマークは開発元の発表の数字"
-      ],
-      "terms": [
-        { "t": "オープンウェイト", "d": "学習済みの重みが公開され、自分で動かせるモデル" },
-        { "t": "文脈長", "d": "一度に読み込める文章量。1M は約 100 万トークン" }
-      ],
-      "refs": ["s1"]
+    {
+     "k": "文脈長",
+     "v": "1M トークン"
     },
-    "sources": [
-      {
-        "id": "s1",
-        "title": "Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence",
-        "publisher": "Moonshot AI",
-        "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
-      }
-    ]
+    {
+     "k": "提供先",
+     "v": "Kimi.ai / Kimi API など"
+    },
+    {
+     "k": "重み公開",
+     "v": "11 月 4 日までに予定"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
   },
-  "cross": {
-    "overview": {
-      "takeaway": "IAM Identity Center の信頼できる ID 伝播が、リージョンをまたげるようになった。",
-      "stat": { "value": "追加料金なし", "label": "対応する全リージョンで提供" },
-      "steps": ["対象サービスを確認", "TIP を設定"],
-      "changes": [
-        "別リージョンのサービスへ個人の ID を渡せる",
-        "広い IAM ロールや単一リージョン集約が不要"
-      ],
-      "facts": [
-        { "k": "提供元", "v": "AWS" },
-        { "k": "発表日", "v": "2026-10-26" },
-        { "k": "対象", "v": "IAM Identity Center" },
-        { "k": "料金", "v": "追加料金なし" }
-      ],
-      "refs": ["s1"]
+  "impact": {
+   "audience": "長いコードや資料を AI に任せたい開発者",
+   "benefits": [
+    "長大なコードベースや資料を一度に渡せる",
+    "高速版で対話の待ち時間を減らせる"
+   ],
+   "how_to": [
+    "Kimi.ai や Kimi API で K3.1 Pro を試す",
+    "重みの公開後に自環境での利用を検討する"
+   ],
+   "caveats": [
+    "重みは公開予定で、現時点では未公開",
+    "ベンチマークは開発元の発表の数字"
+   ],
+   "terms": [
+    {
+     "t": "オープンウェイト",
+     "d": "学習済みの重みが公開され、自分で動かせるモデル"
     },
-    "impact": {
-      "audience": "複数リージョンで AWS を運用するクラウド管理者",
-      "benefits": [
-        "個人とグループ単位で権限を付けられる",
-        "誰がどのリソースを使ったか監査できる"
-      ],
-      "how_to": [
-        "IAM Identity Center ユーザーガイドで手順を確認する",
-        "既存の信頼できる ID 伝播の構成を見直す"
-      ],
-      "caveats": [
-        "対応するサービスの範囲は公式ガイドで確認が必要"
-      ],
-      "terms": [
-        { "t": "リージョン", "d": "AWS のデータセンターが置かれた地理的な区域" },
-        { "t": "ID 伝播", "d": "利用者の ID を、リクエストと一緒に別サービスへ渡す仕組み" }
-      ],
-      "refs": ["s1"]
-    },
-    "sources": [
-      {
-        "id": "s1",
-        "title": "IAM Identity Center now supports cross-Region TIP",
-        "publisher": "AWS",
-        "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/",
-        "date": "2026-10-26"
-      }
-    ]
+    {
+     "t": "文脈長",
+     "d": "一度に読み込める文章量。1M は約 100 万トークン"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
   },
-  "lfm3": {
-    "overview": {
-      "takeaway": "Liquid AI が小型モデル LFM3 を発表。LFM3-1.7B は 4 ビットで約 1 GB で動き、重みも公開されている。",
-      "stat": {
-        "value": "約1GB",
-        "label": "4 ビット時のメモリ(発表の数字)"
-      },
-      "steps": [
-        "Hugging Face で重みを取得",
-        "GGUF や MLX を選ぶ",
-        "手元で実行・調整"
-      ],
-      "changes": [
-        "文字・画像・音声などを 1 つの土台でそろえた 6 モデル",
-        "256K トークンの文脈長",
-        "単一 GPU で調整できる"
-      ],
-      "facts": [
-        {
-          "k": "提供元",
-          "v": "Liquid AI"
-        },
-        {
-          "k": "発表日",
-          "v": "2026-10-27"
-        },
-        {
-          "k": "大きさ",
-          "v": "1.73B パラメータ"
-        },
-        {
-          "k": "ライセンス",
-          "v": "LFM Open License v1.0"
-        }
-      ],
-      "refs": [
-        "s1"
-      ]
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence",
+    "publisher": "Moonshot AI",
+    "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+   }
+  ]
+ },
+ "lfm3": {
+  "overview": {
+   "takeaway": "Liquid AI が小型モデル LFM3 を発表。LFM3-1.7B は 4 ビットで約 1 GB で動き、重みも公開されている。",
+   "stat": {
+    "value": "約1GB",
+    "label": "4 ビット時のメモリ(発表の数字)"
+   },
+   "steps": [
+    "Hugging Face で重みを取得",
+    "GGUF や MLX を選ぶ",
+    "手元で実行・調整"
+   ],
+   "changes": [
+    "文字・画像・音声などを 1 つの土台でそろえた 6 モデル",
+    "256K トークンの文脈長",
+    "単一 GPU で調整できる"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Liquid AI"
     },
-    "impact": {
-      "audience": "端末上で動くエージェントや特定用途向けの小型モデルを作りたい開発者",
-      "benefits": [
-        "スマホやノート PC に収まる大きさで、ツール呼び出し向けに学習されたモデルを使える",
-        "自分のデータで、単一 GPU で調整できる"
-      ],
-      "how_to": [
-        "Hugging Face の LFM3-1.7B のページを開く",
-        "環境に合う形式(GGUF・MLX など)を選ぶ",
-        "モデルカードのサンプルで試し、必要なら TRL で調整する"
-      ],
-      "caveats": [
-        "小さいため、複雑なコーディングや多段の推論には非推奨とされる",
-        "知識が必要な作業は検索と組み合わせる"
-      ],
-      "terms": [
-        {
-          "t": "4 ビット",
-          "d": "重みを少ない桁で表して、メモリを節約する方法(量子化)"
-        },
-        {
-          "t": "GGUF",
-          "d": "llama.cpp などで使われる、ローカル実行向けのモデル形式"
-        },
-        {
-          "t": "ファインチューニング",
-          "d": "用途に合わせてモデルを追加で学習すること"
-        }
-      ],
-      "refs": [
-        "s1"
-      ]
+    {
+     "k": "発表日",
+     "v": "2026-10-27"
     },
-    "sources": [
-      {
-        "id": "s1",
-        "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
-        "publisher": "Liquid AI",
-        "url": "https://www.liquid.ai/blog/lfm3",
-        "date": "2026-10-27"
-      }
-    ]
+    {
+     "k": "大きさ",
+     "v": "1.73B パラメータ"
+    },
+    {
+     "k": "ライセンス",
+     "v": "LFM Open License v1.0"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
   },
-  "ollama": {
-    "overview": {
-      "takeaway": "Ollama が音声(読み上げ)モデルに対応。第 1 弾は Gradium の Phonon で、Mac から試せる。",
-      "stat": { "value": "35%", "label": "次点の実装より速い(M5 Max、発表の数字)" },
-      "steps": ["Ollama を更新", "ollama pull phonon", "ollama run phonon"],
-      "changes": ["テキストから音声を生成できる", "OpenAI 互換の音声 API で呼べる", "5 言語と複数の声に対応する"],
-      "facts": [
-        { "k": "提供元", "v": "Ollama / Gradium" },
-        { "k": "発表日", "v": "2026-10-24" },
-        { "k": "対応環境", "v": "Apple Silicon の Mac" },
-        { "k": "必要版", "v": "Ollama 0.40.11 以降" }
-      ],
-      "refs": ["s1"]
+  "impact": {
+   "audience": "端末上で動くエージェントや特定用途向けの小型モデルを作りたい開発者",
+   "benefits": [
+    "スマホやノート PC に収まる大きさで、ツール呼び出し向けに学習されたモデルを使える",
+    "自分のデータで、単一 GPU で調整できる"
+   ],
+   "how_to": [
+    "Hugging Face の LFM3-1.7B のページを開く",
+    "環境に合う形式(GGUF・MLX など)を選ぶ",
+    "モデルカードのサンプルで試し、必要なら TRL で調整する"
+   ],
+   "caveats": [
+    "小さいため、複雑なコーディングや多段の推論には非推奨とされる",
+    "知識が必要な作業は検索と組み合わせる"
+   ],
+   "terms": [
+    {
+     "t": "4 ビット",
+     "d": "重みを少ない桁で表して、メモリを節約する方法(量子化)"
     },
-    "impact": {
-      "audience": "ローカルで AI の返答を読み上げたい開発者",
-      "benefits": ["チャットの返答を、そのまま音声で聞ける", "OpenAI SDK の接続先を変えるだけで使える"],
-      "how_to": ["Ollama 0.40.11 以降を入れる", "`ollama pull phonon` でモデルを取得する", "`ollama run phonon \"Hello\" > speech.wav` で保存する"],
-      "caveats": ["今は Apple Silicon の Mac のみで、他は近日対応とされる", "40M のモデルは CC BY-NC 4.0 で非商用に限る"],
-      "terms": [
-        { "t": "TTS", "d": "文字を音声に変える技術(テキスト読み上げ)" },
-        { "t": "MLX", "d": "Apple が作った、Mac 向けの機械学習の基盤" },
-        { "t": "OpenAI 互換", "d": "OpenAI と同じ呼び方で使える API の形" }
-      ],
-      "refs": ["s1"]
+    {
+     "t": "GGUF",
+     "d": "llama.cpp などで使われる、ローカル実行向けのモデル形式"
     },
-    "sources": [
-      {
-        "id": "s1",
-        "title": "Speech models in Ollama",
-        "publisher": "Ollama",
-        "url": "https://ollama.com/blog/speech-models",
-        "date": "2026-10-24"
-      }
-    ]
+    {
+     "t": "ファインチューニング",
+     "d": "用途に合わせてモデルを追加で学習すること"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
   },
-  "flint": {
-    "overview": {
-      "takeaway": "エージェントが作るグラフを、読み手が操作して探れるようにする言語。Microsoft Research が紹介した。",
-      "stat": { "value": "4 種", "label": "連携先: グラフ・表・文章・アプリ" },
-      "steps": ["操作を指定", "コンパイラが変換", "グラフが更新"],
-      "changes": ["クリックなどを意味のあるイベントに変換", "高水準の指定で更新を書ける", "表や文章とグラフが連動する"],
-      "facts": [
-        { "k": "提供元", "v": "Microsoft Research" },
-        { "k": "公開日", "v": "2026-10-22" },
-        { "k": "種類", "v": "グラフ用の言語" },
-        { "k": "連携", "v": "Flint-MCP / MCP Apps" }
-      ],
-      "refs": ["s1"]
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Introducing LFM3: Every Modality for Specialized Intelligence",
+    "publisher": "Liquid AI",
+    "url": "https://www.liquid.ai/blog/lfm3",
+    "date": "2026-10-27"
+   }
+  ]
+ },
+ "ollama": {
+  "overview": {
+   "takeaway": "Ollama が音声(読み上げ)モデルに対応。第 1 弾は Gradium の Phonon で、Mac から試せる。",
+   "stat": {
+    "value": "35%",
+    "label": "次点の実装より速い(M5 Max、発表の数字)"
+   },
+   "steps": [
+    "Ollama を更新",
+    "ollama pull phonon",
+    "ollama run phonon"
+   ],
+   "changes": [
+    "テキストから音声を生成できる",
+    "OpenAI 互換の音声 API で呼べる",
+    "5 言語と複数の声に対応する"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Ollama / Gradium"
     },
-    "impact": {
-      "audience": "データ可視化をエージェントやアプリに組み込みたい開発者",
-      "benefits": ["エージェントのやり直しを減らせる(発表側の説明)", "選んだ範囲を次の質問の文脈にできる"],
-      "how_to": ["チャットでは Flint-MCP の設定手順に沿って導入する", "アプリは Flint Interactive Canvas で組み込む", "独自の操作は programming API で定義する"],
-      "caveats": ["公式ブログの紹介で、独自には検証していない", "導入には MCP の設定が必要"],
-      "terms": [
-        { "t": "MCP", "d": "AI と外部ツールをつなぐ共通の接続方式" },
-        { "t": "コンパイラ", "d": "人が書いた指定を、実行できる形へ変換する仕組み" }
-      ],
-      "refs": ["s1"]
+    {
+     "k": "発表日",
+     "v": "2026-10-24"
     },
-    "sources": [
-      {
-        "id": "s1",
-        "title": "Flint-interactive: A language for creating interactive data visualizations",
-        "publisher": "Microsoft Research",
-        "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
-        "date": "2026-10-22"
-      }
-    ]
+    {
+     "k": "対応環境",
+     "v": "Apple Silicon の Mac"
+    },
+    {
+     "k": "必要版",
+     "v": "Ollama 0.40.11 以降"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
   },
-  "claude-code": {
-    "overview": {
-      "takeaway": "Claude Code v2.1.310。Monitor ツールの対応拡大や、管理者向けの権限追加などが入った。",
-      "stat": { "value": "v2.1.310", "label": "リリースされた版" },
-      "steps": ["更新を確認", "リリースノートを読む", "設定を見直す"],
-      "changes": ["Monitor ツールが Bedrock・Vertex・Foundry でも使える", "Linux のサンドボックス警告に解除方法を表示", "MCP のタイムアウト時の通知を変更"],
-      "facts": [
-        { "k": "提供元", "v": "Anthropic" },
-        { "k": "公開日", "v": "2026-10-23" },
-        { "k": "種類", "v": "リリースノート" },
-        { "k": "対象", "v": "Claude Code 利用者" }
-      ],
-      "refs": ["s1"]
+  "impact": {
+   "audience": "ローカルで AI の返答を読み上げたい開発者",
+   "benefits": [
+    "チャットの返答を、そのまま音声で聞ける",
+    "OpenAI SDK の接続先を変えるだけで使える"
+   ],
+   "how_to": [
+    "Ollama 0.40.11 以降を入れる",
+    "`ollama pull phonon` でモデルを取得する",
+    "`ollama run phonon \"Hello\" > speech.wav` で保存する"
+   ],
+   "caveats": [
+    "今は Apple Silicon の Mac のみで、他は近日対応とされる",
+    "40M のモデルは CC BY-NC 4.0 で非商用に限る"
+   ],
+   "terms": [
+    {
+     "t": "TTS",
+     "d": "文字を音声に変える技術(テキスト読み上げ)"
     },
-    "impact": {
-      "audience": "Claude Code を使う開発者と、組織で管理する管理者",
-      "benefits": ["不具合の修正で、普段の作業が安定しやすい", "管理者がロール単位で権限を制御できる"],
-      "how_to": ["最新版に更新する", "リリースノートで自分の環境に関わる項目を確認する", "管理者はカスタムロールの権限を見直す"],
-      "caveats": ["細かな修正の集合で、大きな新機能の発表ではない", "リリースノートの内容で、独自には検証していない"],
-      "terms": [
-        { "t": "サンドボックス", "d": "外から隔離された安全な実行環境" },
-        { "t": "MCP", "d": "AI と外部ツールをつなぐ共通の接続方式" }
-      ],
-      "refs": ["s1"]
+    {
+     "t": "MLX",
+     "d": "Apple が作った、Mac 向けの機械学習の基盤"
     },
-    "sources": [
-      {
-        "id": "s1",
-        "title": "Release v2.1.310 · anthropics/claude-code",
-        "publisher": "GitHub",
-        "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
-        "date": "2026-10-23"
-      }
-    ]
+    {
+     "t": "OpenAI 互換",
+     "d": "OpenAI と同じ呼び方で使える API の形"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
   },
-  "qwen3": {
-    "overview": {
-      "takeaway": "SageMaker AI で Qwen3.8 27B などを、サーバーレスで自社データに合わせて調整できる。",
-      "stat": { "value": "4", "label": "提供リージョン数" },
-      "steps": ["データを用意", "手法を選ぶ", "調整ジョブを実行"],
-      "changes": ["SFT・DPO・RFT の手法に対応", "LoRA とフルファインチューニングを選べる", "インフラ管理は AWS が担う"],
-      "facts": [
-        { "k": "提供元", "v": "AWS" },
-        { "k": "発表日", "v": "2026-10-22" },
-        { "k": "対象", "v": "Qwen3.8 27B ほか" },
-        { "k": "地域", "v": "東京を含む 4 リージョン" }
-      ],
-      "refs": ["s1"]
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Speech models in Ollama",
+    "publisher": "Ollama",
+    "url": "https://ollama.com/blog/speech-models",
+    "date": "2026-10-24"
+   }
+  ]
+ },
+ "flint": {
+  "overview": {
+   "takeaway": "エージェントが作るグラフを、読み手が操作して探れるようにする言語。Microsoft Research が紹介した。",
+   "stat": {
+    "value": "4 種",
+    "label": "連携先: グラフ・表・文章・アプリ"
+   },
+   "steps": [
+    "操作を指定",
+    "コンパイラが変換",
+    "グラフが更新"
+   ],
+   "changes": [
+    "クリックなどを意味のあるイベントに変換",
+    "高水準の指定で更新を書ける",
+    "表や文章とグラフが連動する"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Microsoft Research"
     },
-    "impact": {
-      "audience": "自社データでオープンモデルを調整したい AWS の利用者",
-      "benefits": ["小さめのモデルで、コストと遅延を抑えやすい(AWS の説明)", "使った分だけの支払いで始められる"],
-      "how_to": ["SageMaker Studio の Models ページを開く", "調整ジョブを作る(Python SDK も可)", "データと評価を用意して実行する"],
-      "caveats": ["対応リージョンは 4 つに限られる", "モデル自体の新性能ではなく、調整の仕組みの対応"],
-      "terms": [
-        { "t": "LoRA", "d": "一部の追加パラメータだけを学習する軽い調整方法" },
-        { "t": "SFT", "d": "正解つきデータで追加学習する教師ありの調整" },
-        { "t": "DPO", "d": "好ましい答えの比較データで好みに合わせる調整" }
-      ],
-      "refs": ["s1"]
+    {
+     "k": "公開日",
+     "v": "2026-10-22"
     },
-    "sources": [
-      {
-        "id": "s1",
-        "title": "SageMaker AI: serverless customization for Muse Glimmer, Qwen3.8, Ministral 3",
-        "publisher": "AWS",
-        "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
-        "date": "2026-10-22"
-      }
-    ]
-  }
+    {
+     "k": "種類",
+     "v": "グラフ用の言語"
+    },
+    {
+     "k": "連携",
+     "v": "Flint-MCP / MCP Apps"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "データ可視化をエージェントやアプリに組み込みたい開発者",
+   "benefits": [
+    "エージェントのやり直しを減らせる(発表側の説明)",
+    "選んだ範囲を次の質問の文脈にできる"
+   ],
+   "how_to": [
+    "チャットでは Flint-MCP の設定手順に沿って導入する",
+    "アプリは Flint Interactive Canvas で組み込む",
+    "独自の操作は programming API で定義する"
+   ],
+   "caveats": [
+    "公式ブログの紹介で、独自には検証していない",
+    "導入には MCP の設定が必要"
+   ],
+   "terms": [
+    {
+     "t": "MCP",
+     "d": "AI と外部ツールをつなぐ共通の接続方式"
+    },
+    {
+     "t": "コンパイラ",
+     "d": "人が書いた指定を、実行できる形へ変換する仕組み"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Flint-interactive: A language for creating interactive data visualizations",
+    "publisher": "Microsoft Research",
+    "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+    "date": "2026-10-22"
+   }
+  ]
+ },
+ "claude-code": {
+  "overview": {
+   "takeaway": "Claude Code v2.1.310。Monitor ツールの対応拡大や、管理者向けの権限追加などが入った。",
+   "stat": {
+    "value": "v2.1.310",
+    "label": "リリースされた版"
+   },
+   "steps": [
+    "更新を確認",
+    "リリースノートを読む",
+    "設定を見直す"
+   ],
+   "changes": [
+    "Monitor ツールが Bedrock・Vertex・Foundry でも使える",
+    "Linux のサンドボックス警告に解除方法を表示",
+    "MCP のタイムアウト時の通知を変更"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Anthropic"
+    },
+    {
+     "k": "公開日",
+     "v": "2026-10-23"
+    },
+    {
+     "k": "種類",
+     "v": "リリースノート"
+    },
+    {
+     "k": "対象",
+     "v": "Claude Code 利用者"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "Claude Code を使う開発者と、組織で管理する管理者",
+   "benefits": [
+    "不具合の修正で、普段の作業が安定しやすい",
+    "管理者がロール単位で権限を制御できる"
+   ],
+   "how_to": [
+    "最新版に更新する",
+    "リリースノートで自分の環境に関わる項目を確認する",
+    "管理者はカスタムロールの権限を見直す"
+   ],
+   "caveats": [
+    "細かな修正の集合で、大きな新機能の発表ではない",
+    "リリースノートの内容で、独自には検証していない"
+   ],
+   "terms": [
+    {
+     "t": "サンドボックス",
+     "d": "外から隔離された安全な実行環境"
+    },
+    {
+     "t": "MCP",
+     "d": "AI と外部ツールをつなぐ共通の接続方式"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Release v2.1.310 · anthropics/claude-code",
+    "publisher": "GitHub",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.310",
+    "date": "2026-10-23"
+   }
+  ]
+ },
+ "qwen3": {
+  "overview": {
+   "takeaway": "SageMaker AI で Qwen3.8 27B などを、サーバーレスで自社データに合わせて調整できる。",
+   "stat": {
+    "value": "4",
+    "label": "提供リージョン数"
+   },
+   "steps": [
+    "データを用意",
+    "手法を選ぶ",
+    "調整ジョブを実行"
+   ],
+   "changes": [
+    "SFT・DPO・RFT の手法に対応",
+    "LoRA とフルファインチューニングを選べる",
+    "インフラ管理は AWS が担う"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "AWS"
+    },
+    {
+     "k": "発表日",
+     "v": "2026-10-22"
+    },
+    {
+     "k": "対象",
+     "v": "Qwen3.8 27B ほか"
+    },
+    {
+     "k": "地域",
+     "v": "東京を含む 4 リージョン"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "自社データでオープンモデルを調整したい AWS の利用者",
+   "benefits": [
+    "小さめのモデルで、コストと遅延を抑えやすい(AWS の説明)",
+    "使った分だけの支払いで始められる"
+   ],
+   "how_to": [
+    "SageMaker Studio の Models ページを開く",
+    "調整ジョブを作る(Python SDK も可)",
+    "データと評価を用意して実行する"
+   ],
+   "caveats": [
+    "対応リージョンは 4 つに限られる",
+    "モデル自体の新性能ではなく、調整の仕組みの対応"
+   ],
+   "terms": [
+    {
+     "t": "LoRA",
+     "d": "一部の追加パラメータだけを学習する軽い調整方法"
+    },
+    {
+     "t": "SFT",
+     "d": "正解つきデータで追加学習する教師ありの調整"
+    },
+    {
+     "t": "DPO",
+     "d": "好ましい答えの比較データで好みに合わせる調整"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "SageMaker AI: serverless customization for Muse Glimmer, Qwen3.8, Ministral 3",
+    "publisher": "AWS",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
+    "date": "2026-10-22"
+   }
+  ]
+ }
 }

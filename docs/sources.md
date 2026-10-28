@@ -36,3 +36,10 @@ ledger の最新値は `data/raw/_official_ledger.json`(CI artifact)。
 - `metric_semantics`: 同一repoの総スター差分=差分可能 / GitHub Trendingの週次スター=明示値 / HF trendingScore等=順位観測のみ / 公式発表・リリース=イベント。欠損は unknown。
 - 日次スナップショットが14日分たまるまでは `baseline` 表示(「上昇中」と呼ばない)。
 - 失敗した実行は既存の公開物(`data/reports/*`, `site/data.js`)を上書きしない(レポート生成が例外終了すると書き込み前に停止)。
+
+## 取りこぼし対策(2026-10-28)
+
+- `hf_models` は、トレンド上位 60 件に加えて、主要ベンダーの Hugging Face 組織(`collect/sources.py` の `HF_ORGS`)の直近の新着(likes 25 以上)も取る。トレンドに乗る前の発表(例: LiquidAI/LFM3 は 10/23 公開で、数日後にトレンド入り)を候補にするため。
+- 公式ブログのフィードがない発表元(例: Liquid AI)は、HF の新着・HN・llama.cpp などの言及経由で拾う。
+- digest が調べる順は、公式の一次情報(モデルカード等)がある `model` を順位より先にする(`analyze/pending.py`)。
+

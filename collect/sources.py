@@ -12,12 +12,31 @@ from .common import (SINCE_DATE, SINCE_TS, extract_x_urls, get, get_json, item, 
 AI_RE = re.compile(r"\b(ai|llm|llms|gpt|agent|agents|model|models|ollama|llama|claude|gemini|mcp|rag|diffusion|transformer|inference|gpu|local)\b", re.I)
 
 
+# Model makers whose releases matter even when they are not (yet) in the trending top 60 (e.g. LiquidAI/LFM3 was published on 10/23 and only
+# trended days later). Their newest models are collected too, ranked by recency so they do not distort the trending rank observation.
+HF_ORGS = ["LiquidAI", "Qwen", "meta-llama", "google", "mistralai", "microsoft", "nvidia", "deepseek-ai", "openai", "ibm-granite", "allenai",
+           "HuggingFaceTB", "zai-org", "moonshotai", "MiniMaxAI", "tencent", "apple", "stepfun-ai", "unsloth", "ByteDance-Seed", "CohereLabs"]
+
+
 def hf_models():
     d = get_json("https://huggingface.co/api/models?sort=trendingScore&limit=60")
-    return [item("hf_models", m["id"], f"https://huggingface.co/{m['id']}", m.get("pipeline_tag", ""),
-                 m.get("trendingScore", 0), "trendingScore", i + 1, m.get("createdAt"),
-                 likes=m.get("likes"), downloads=m.get("downloads"), tags=m.get("tags", [])[:15])
-            for i, m in enumerate(d)]
+    out = [item("hf_models", m["id"], f"https://huggingface.co/{m['id']}", m.get("pipeline_tag", ""),
+                m.get("trendingScore", 0), "trendingScore", i + 1, m.get("createdAt"),
+                likes=m.get("likes"), downloads=m.get("downloads"), tags=m.get("tags", [])[:15])
+           for i, m in enumerate(d)]
+    seen = {o["title"] for o in out}
+    for org in HF_ORGS:  # one failing org never breaks the source
+        try:
+            for m in get_json(f"https://huggingface.co/api/models?author={up.quote(org)}&sort=createdAt&direction=-1&limit=8"):
+                if m["id"] in seen or (m.get("createdAt") or "")[:10] < SINCE_DATE or (m.get("likes") or 0) < 25:
+                    continue  # tiny quantizations / re-uploads are not releases
+                seen.add(m["id"])
+                out.append(item("hf_models", m["id"], f"https://huggingface.co/{m['id']}", m.get("pipeline_tag", ""),
+                                m.get("trendingScore", 0), "trendingScore", None, m.get("createdAt"),
+                                likes=m.get("likes"), downloads=m.get("downloads"), tags=m.get("tags", [])[:15]))
+        except Exception:
+            continue
+    return out
 
 
 def hf_spaces():

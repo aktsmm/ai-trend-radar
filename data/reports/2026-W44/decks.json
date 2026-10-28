@@ -1,4 +1,245 @@
 {
+ "beam": {
+  "overview": {
+   "takeaway": "Reflection 初のオープンウェイトモデル Beam が、SageMaker JumpStart で使えるようになった。",
+   "stat": {
+    "value": "Apache 2.0",
+    "label": "Beam のライセンス"
+   },
+   "steps": [
+    "JumpStart で検索",
+    "重みの形式を選ぶ",
+    "エンドポイントに配備"
+   ],
+   "changes": [
+    "BF16・FP8・NVFP4 の 3 種類の重みから選べる",
+    "Trainium3 向けに最適化されている"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Reflection / AWS"
+    },
+    {
+     "k": "発表日",
+     "v": "2026-10-21"
+    },
+    {
+     "k": "提供先",
+     "v": "SageMaker JumpStart"
+    },
+    {
+     "k": "リージョン",
+     "v": "米国東部 2 か所"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "オープンウェイトモデルを自社データで調整したい AWS の利用者",
+   "benefits": [
+    "重みを確認・改変でき、自分の AWS アカウント内で動かせる",
+    "SageMaker の管理・監査の仕組みをそのまま使える"
+   ],
+   "how_to": [
+    "SageMaker Studio の JumpStart で Beam を検索する",
+    "BF16・FP8・NVFP4 から形式を選ぶ",
+    "マネージドなエンドポイントとして配備する"
+   ],
+   "caveats": [
+    "最初の提供は米国東部の 2 リージョンのみ",
+    "性能の説明は開発元の発表で、第三者の検証ではない"
+   ],
+   "terms": [
+    {
+     "t": "NVFP4",
+     "d": "NVIDIA の 4 ビット浮動小数点形式で、メモリを大きく節約する"
+    },
+    {
+     "t": "JumpStart",
+     "d": "SageMaker にある、学習済みモデルをすぐ配備できる置き場"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Beam model by Reflection on SageMaker JumpStart and Trainium",
+    "publisher": "AWS",
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
+    "date": "2026-10-21"
+   }
+  ]
+ },
+ "openshell": {
+  "overview": {
+   "takeaway": "NVIDIA の OpenShell は、自律型 AI エージェントを安全に動かす実行環境。v0.1.6 が公開された。",
+   "stat": {
+    "value": "v0.1.6",
+    "label": "2026-10-27 公開"
+   },
+   "steps": [
+    "install.sh で導入",
+    "sandbox を作成",
+    "ポリシーを宣言"
+   ],
+   "changes": [
+    "sandbox の一時停止・再開コマンドが追加",
+    "認可の拒否などを監査イベントとして記録",
+    "認証設定がないとゲートウェイが起動しない"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "NVIDIA"
+    },
+    {
+     "k": "公開日",
+     "v": "2026-10-27"
+    },
+    {
+     "k": "ライセンス",
+     "v": "Apache-2.0"
+    },
+    {
+     "k": "対応環境",
+     "v": "Linux / macOS (Apple Silicon)"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "impact": {
+   "audience": "AI エージェントを安全に動かしたい開発者・運用担当",
+   "benefits": [
+    "エージェントに実際の認証情報を渡さず、許可した接続先だけに使える",
+    "ポリシーの変更は事前に検証され、危険な変更は人の確認待ちになる"
+   ],
+   "how_to": [
+    "README の手順で install.sh を実行する",
+    "openshell sandbox create でサンドボックスを作る",
+    "Run Your First Agent の手順でエージェントを動かす"
+   ],
+   "caveats": [
+    "0.1.x の段階。更新は supervisor と実行環境を同時に行う",
+    "再開機能は対応ドライバーのみで、他は未実装エラーになる"
+   ],
+   "terms": [
+    {
+     "t": "サンドボックス",
+     "d": "プログラムの動ける範囲を隔離した安全な実行領域"
+    },
+    {
+     "t": "OCSF",
+     "d": "セキュリティのイベントを共通の形で記録するための仕様"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "OpenShell v0.1.6 リリースノート",
+    "publisher": "NVIDIA (GitHub)",
+    "url": "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6",
+    "date": "2026-10-27"
+   },
+   {
+    "id": "s2",
+    "title": "NVIDIA/OpenShell README",
+    "publisher": "NVIDIA (GitHub)",
+    "url": "https://github.com/NVIDIA/OpenShell"
+   }
+  ]
+ },
+ "nvidia-dgx-spark": {
+  "overview": {
+   "takeaway": "NVIDIA が DGX Spark 上で MoE モデルの推論を速める 3 つの手法を、実測値つきで紹介した。",
+   "stat": {
+    "value": "+42.5%",
+    "label": "GSM8K 全問での復号速度"
+   },
+   "steps": [
+    "Humming カーネル",
+    "FP8 の LM head",
+    "MTP 投機的デコード"
+   ],
+   "changes": [
+    "Humming の MoE カーネルで +9.3%",
+    "FP8 の LM head を加え累計 +21.7%",
+    "MTP で合成負荷では +185.1%"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "NVIDIA"
+    },
+    {
+     "k": "発表日",
+     "v": "2026-10-27"
+    },
+    {
+     "k": "対象モデル",
+     "v": "Ling-3.0-flash (124B MoE)"
+    },
+    {
+     "k": "遅延",
+     "v": "平均 24.5% 減(発表の数字)"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "DGX Spark でローカルに大きなモデルを動かす開発者",
+   "benefits": [
+    "メモリ帯域が律速の推論を、読み出し量の削減で速くできる",
+    "GSM8K 全問で精度の差は検出されなかったと発表"
+   ],
+   "how_to": [
+    "ブログのリンク先の Ling cookbook を開く",
+    "手順に沿って 3 つの最適化を有効にする",
+    "自分の負荷で速度と精度を測る"
+   ],
+   "caveats": [
+    "合成負荷の数字は他の用途の効果を保証しない",
+    "FP8 の LM head と MTP の併用は、共有の実装がないと逆に遅くなる"
+   ],
+   "terms": [
+    {
+     "t": "MoE",
+     "d": "入力ごとに一部の専門家だけを使う、効率のよいモデル構造"
+    },
+    {
+     "t": "投機的デコード",
+     "d": "先に複数トークンを予測し、まとめて検証して速くする方法"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "3 Ways to Boost MoE Inference on NVIDIA DGX Spark",
+    "publisher": "NVIDIA Technical Blog",
+    "url": "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/",
+    "date": "2026-10-27"
+   }
+  ]
+ },
  "kimi-k3": {
   "overview": {
    "takeaway": "Moonshot AI が 1M 文脈のオープンウェイトモデル Kimi K3.1 Pro を発表。",

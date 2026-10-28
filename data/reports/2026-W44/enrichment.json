@@ -3,6 +3,78 @@
  "selected_on": "2026-10-25",
  "selection_policy": "候補6件のうち、日付つきの一次情報の本文を確認できた4件(local-runtime 1 / model 1 / dev-tool 1 / research 1)。MiniMax は OpenRouter のカタログのみ、llama.cpp はビルド番号の更新のため見送り。",
  "entities": {
+  "beam": {
+   "selection_reason": "model 代表。AWS が 2026-10-21 に、Reflection 初のオープンウェイトモデル Beam の SageMaker JumpStart / Trainium 対応を発表。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Beam model by Reflection on Amazon SageMaker JumpStart and AWS Trainium",
+     "evidence_urls": [
+      "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/"
+     ],
+     "evidence_published_at": "2026-10-21",
+     "result": "Reflection 初のオープンウェイトモデル Beam が SageMaker JumpStart で提供開始、Trainium3 向けに最適化、Apache 2.0、BF16・FP8・NVFP4、米国東部 2 リージョンを確認",
+     "retrieved_at": "2026-10-28T20:30:00+09:00"
+    }
+   ]
+  },
+  "openshell": {
+   "selection_reason": "dev-tool 代表。NVIDIA 公式リポジトリの OpenShell v0.1.6 が 2026-10-27 に公開。AI エージェント用の安全な実行環境。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6",
+    "https://github.com/NVIDIA/OpenShell"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "OpenShell v0.1.6 release notes",
+     "evidence_urls": [
+      "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6"
+     ],
+     "evidence_published_at": "2026-10-27",
+     "result": "ゲートウェイは認証の設定がないと起動しなくなる変更、サンドボックスの一時停止・再開コマンド、OCSF 監査イベント、脆弱性対応の依存更新を確認",
+     "retrieved_at": "2026-10-28T20:30:00+09:00"
+    },
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "NVIDIA/OpenShell README",
+     "evidence_urls": [
+      "https://github.com/NVIDIA/OpenShell"
+     ],
+     "evidence_published_at": null,
+     "result": "自律型 AI エージェント向けの安全な実行環境で、ポリシーでファイル・システムコール・ネットワークを制限し、認証情報を渡さない仕組み、Apache-2.0 を確認",
+     "retrieved_at": "2026-10-28T20:30:00+09:00"
+    }
+   ]
+  },
+  "nvidia-dgx-spark": {
+   "selection_reason": "hardware 代表。NVIDIA 公式技術ブログが 2026-10-27 に DGX Spark 上での MoE 推論を高速化する 3 つの手法を公開。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "3 Ways to Boost MoE Inference on NVIDIA DGX Spark",
+     "evidence_urls": [
+      "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/"
+     ],
+     "evidence_published_at": "2026-10-27",
+     "result": "Ling-3.0-flash(124B・有効 5.1B の MoE)で、Humming カーネル +9.3%、FP8 の LM head で +21.7%、MTP 投機的デコードで +185.1%(合成負荷)、GSM8K 全問で +42.5% を確認",
+     "retrieved_at": "2026-10-28T20:30:00+09:00"
+    }
+   ]
+  },
   "kimi-k3": {
    "selection_reason": "model 代表。Moonshot AI が公式ブログで 1M トークン文脈のオープンウェイトモデル Kimi K3.1 Pro を発表。",
    "verification_status": "verified",
@@ -149,6 +221,22 @@
   }
  },
  "url_checks": {
+  "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/": {
+   "status": 200,
+   "checked_at": "2026-10-28T11:29:25+00:00"
+  },
+  "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6": {
+   "status": 200,
+   "checked_at": "2026-10-28T11:29:26+00:00"
+  },
+  "https://github.com/NVIDIA/OpenShell": {
+   "status": 200,
+   "checked_at": "2026-10-28T11:29:26+00:00"
+  },
+  "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/": {
+   "status": 200,
+   "checked_at": "2026-10-28T11:29:27+00:00"
+  },
   "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/": {
    "status": 200,
    "checked_at": "2026-10-28T11:04:23.174165+00:00"

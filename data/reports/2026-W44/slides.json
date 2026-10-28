@@ -66,5 +66,22 @@
       "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
       "source_date": "2026-10-22"
     }
+  ],
+  "unsloth": [
+    {
+      "title": "Unsloth v0.1.911-beta: 定時実行と Mac の高速化",
+      "diagram_type": "infographic",
+      "icon": "terminal",
+      "stat": { "value": "16%", "label": "Mac の MLX チャットが最大で速くなる(2026-10-26、発表の数字)" },
+      "steps": ["Scheduled を開く", "モデルと頻度を選ぶ", "答えがチャットに保存"],
+      "points": [
+        { "h": "何が起きた", "t": "Unsloth が v0.1.911-beta を公開。定時実行や MiniMax-M3.1-Flash への対応が入った" },
+        { "h": "何が変わる", "t": "プロンプトを毎日・毎週などで自動実行でき、設定はプリセットで保存できる" },
+        { "h": "嬉しいこと", "t": "複数 GPU への層の分割で、LoRA・QLoRA の学習が 1 枚あたり軽くなる" },
+        { "h": "注意", "t": "定時実行はアプリの起動中のみで、ツールや Web 検索は使えない" }
+      ],
+      "official_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta",
+      "source_date": "2026-10-26"
+    }
   ]
 }

@@ -22,19 +22,21 @@
     "id": "open-models-own-hands",
     "title": "オープンモデルを自分の環境で使いこなす",
     "confidence": "low",
-    "summary": "Ollama は音声モデルを Mac で動かせるようにし、SageMaker AI は Qwen3.8 27B を自社データで調整できるようにした。どちらもオープンモデルを自分で扱う道具の拡充。",
+    "summary": "Ollama は音声モデルを Mac で動かせるようにし、SageMaker AI は Qwen3.8 27B を自社データで調整できるようにした。Unsloth は手元の GPU や Mac で動かし、学習するための機能を足した。いずれもオープンモデルを自分で扱う道具の拡充。",
     "background": [
-      "Ollama は Phonon を ollama run で動かせるようにし、AWS は SFT・DPO・RFT と LoRA でのサーバーレスな調整に対応した。",
-      "2 件だけの共通点で、モデルを借りるだけでなく自分用に動かし、調整したい需要が背景にあるかもしれない(見立て)。"
+      "Ollama は Phonon を ollama run で動かせるようにし、AWS は SFT・DPO・RFT と LoRA でのサーバーレスな調整に対応し、Unsloth は複数 GPU での LoRA 学習と Mac の高速化を入れた。",
+      "3 件の共通点で、モデルを借りるだけでなく自分用に動かし、調整したい需要が背景にあるかもしれない(見立て)。"
     ],
-    "entities": ["ollama", "qwen3"],
+    "entities": ["ollama", "qwen3", "unsloth"],
     "signals": [
       { "entity": "ollama", "note": "Phonon を ollama run で Mac 上で動かせる" },
-      { "entity": "qwen3", "note": "Qwen3.8 27B を SFT・DPO・RFT で調整できる" }
+      { "entity": "qwen3", "note": "Qwen3.8 27B を SFT・DPO・RFT で調整できる" },
+      { "entity": "unsloth", "note": "層を複数 GPU に分けて LoRA・QLoRA の学習ができる" }
     ],
     "refs": [
       "https://ollama.com/blog/speech-models",
-      "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/"
+      "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
+      "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta"
     ]
   }
 ]

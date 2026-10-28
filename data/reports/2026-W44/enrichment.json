@@ -94,9 +94,33 @@
      "retrieved_at": "2026-10-26T03:31:00+09:00"
     }
    ]
+  },
+  "unsloth": {
+   "selection_reason": "local-runtime 代表。Unsloth が 2026-10-26 に公式 GitHub リリース v0.1.911-beta で、スケジュール実行や MiniMax-M3.1-Flash 対応などを公開。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "unsloth v0.1.911-beta release notes",
+     "evidence_urls": [
+      "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta"
+     ],
+     "evidence_published_at": "2026-10-26",
+     "result": "スケジュール実行、MiniMax-M3.1-Flash 対応、Mac の MLX 高速化、複数 GPU での LoRA 学習の分割、GRPO の高速化のリリースノートを確認",
+     "retrieved_at": "2026-10-28T19:10:00+09:00"
+    }
+   ]
   }
  },
  "url_checks": {
+  "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta": {
+   "status": 200,
+   "checked_at": "2026-10-28T10:04:13+00:00"
+  },
   "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/": {
    "status": 200,
    "checked_at": "2026-10-26T22:01:59.262409+00:00"

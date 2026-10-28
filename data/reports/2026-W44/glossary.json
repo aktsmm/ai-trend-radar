@@ -16,6 +16,14 @@
     "ref": "https://ollama.com/blog/speech-models"
   },
   {
+    "term": "MoE(専門家の混合)",
+    "kind": "仕組み",
+    "short": "入力ごとに一部の専門家だけ動かす構造",
+    "explain": "モデル内に複数の「専門家」部分を持ち、入力に応じて一部だけを使う構造。全体は大きくても、実際に計算する量が減るので、速度やコストを抑えやすい。",
+    "entity": "unsloth",
+    "ref": "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta"
+  },
+  {
     "term": "サーバーレス",
     "kind": "基礎",
     "short": "サーバーを自分で管理しない使い方",

@@ -140,5 +140,40 @@
         "date": "2026-10-22"
       }
     ]
+  },
+  "unsloth": {
+    "overview": {
+      "takeaway": "Unsloth v0.1.911-beta。プロンプトの定時実行、MiniMax-M3.1-Flash 対応、Mac の高速化などが入った。",
+      "stat": { "value": "16%", "label": "Mac の MLX チャットが最大で速くなる(発表の数字)" },
+      "steps": ["更新する", "Scheduled を開く", "モデルと頻度を選ぶ"],
+      "changes": ["プロンプトを定時に自動実行できる", "Run の設定をプリセットで保存できる", "複数 GPU に層を分けて LoRA 学習ができる"],
+      "facts": [
+        { "k": "提供元", "v": "Unsloth" },
+        { "k": "公開日", "v": "2026-10-26" },
+        { "k": "種類", "v": "リリースノート(ベータ)" },
+        { "k": "版", "v": "v0.1.911-beta" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "手元の PC や GPU でモデルを動かし、調整したい開発者",
+      "benefits": ["定型のプロンプトを自動で回し、結果をチャットで読める", "複数 GPU で、1 枚あたりのメモリ負担を減らして学習できる"],
+      "how_to": ["Unsloth を最新版に更新する", "サイドバーの More から Scheduled を開く", "学習を分けるなら UNSLOTH_TP_SIZE を設定し torchrun で起動する"],
+      "caveats": ["定時実行はアプリの起動中のみで、ツールや Web 検索は使えない", "リリースノートの内容で、独自には検証していない"],
+      "terms": [
+        { "t": "LoRA", "d": "一部の追加パラメータだけを学習する軽い調整方法" },
+        { "t": "MoE", "d": "入力ごとに一部の専門家だけを動かすモデルの構造" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Release v0.1.911-beta · unslothai/unsloth",
+        "publisher": "GitHub",
+        "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta",
+        "date": "2026-10-26"
+      }
+    ]
   }
 }

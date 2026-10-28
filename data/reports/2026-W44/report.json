@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-28T10:42:37.362833+00:00",
- "last_successful_report_at": "2026-10-28T10:42:37.362833+00:00",
+ "generated_at": "2026-10-28T11:28:14.277124+00:00",
+ "last_successful_report_at": "2026-10-28T11:28:14.277124+00:00",
  "window": {
   "from": "2026-10-21",
   "to": "2026-10-28",
@@ -18,13 +18,13 @@
    "ok": true,
    "count": 64,
    "group": "models",
-   "seconds": 0.6
+   "seconds": 0.5
   },
   "hf_spaces": {
    "ok": true,
    "count": 30,
    "group": "models",
-   "seconds": 0.1
+   "seconds": 0.0
   },
   "hf_papers": {
    "ok": true,
@@ -36,54 +36,54 @@
    "ok": true,
    "count": 120,
    "group": "tools",
-   "seconds": 4.8
+   "seconds": 4.7
   },
   "github_trending": {
    "ok": true,
-   "count": 13,
+   "count": 10,
    "group": "tools",
-   "seconds": 1.5
+   "seconds": 1.4
   },
   "hackernews": {
    "ok": true,
    "count": 109,
    "group": "community",
-   "seconds": 3.5
+   "seconds": 3.7
   },
   "reddit_localllama": {
    "ok": true,
    "count": 100,
    "group": "local-llm",
-   "seconds": 3.0
+   "seconds": 2.9
   },
   "reddit_ollama": {
-   "ok": false,
-   "error": "HTTPError: HTTP Error 429: Too Many Requests",
-   "group": "local-llm"
+   "ok": true,
+   "count": 50,
+   "group": "local-llm",
+   "seconds": 21.0
   },
   "reddit_ml": {
-   "ok": true,
-   "count": 41,
-   "group": "research",
-   "seconds": 42.0
+   "ok": false,
+   "error": "HTTPError: HTTP Error 429: Too Many Requests",
+   "group": "research"
   },
   "lobsters": {
    "ok": true,
    "count": 10,
    "group": "community",
-   "seconds": 0.3
+   "seconds": 0.4
   },
   "devto": {
    "ok": true,
    "count": 135,
    "group": "community",
-   "seconds": 0.5
+   "seconds": 0.7
   },
   "arxiv": {
    "ok": true,
    "count": 80,
    "group": "research",
-   "seconds": 0.5
+   "seconds": 1.0
   },
   "ollama": {
    "ok": true,
@@ -95,13 +95,13 @@
    "ok": true,
    "count": 6,
    "group": "vendor",
-   "seconds": 0.1
+   "seconds": 2.0
   },
   "pypi": {
    "ok": true,
    "count": 13,
    "group": "tools",
-   "seconds": 2.8
+   "seconds": 2.4
   },
   "bluesky": {
    "ok": true,
@@ -111,7 +111,7 @@
   },
   "official": {
    "ok": true,
-   "count": 160,
+   "count": 159,
    "group": "vendor"
   },
   "gh_releases": {
@@ -121,7 +121,7 @@
   },
   "x_watch": {
    "ok": true,
-   "count": 23,
+   "count": 12,
    "group": "community",
    "accounts": {
     "OpenAI": {
@@ -145,8 +145,8 @@
      "posts": 3
     },
     "NVIDIAAI": {
-     "ok": true,
-     "posts": 9
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "huggingface": {
      "ok": false,
@@ -169,8 +169,8 @@
      "posts": 0
     },
     "MistralAI": {
-     "ok": true,
-     "posts": 2
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     }
    }
   },
@@ -223,13 +223,13 @@
    "url": "https://blog.google/technology/ai/rss/"
   },
   "deepmind-blog": {
-   "ok": false,
-   "error": "ParseError: not well-formed (invalid token): line 1, column 0",
+   "ok": true,
+   "count": 2,
    "url": "https://deepmind.google/blog/rss.xml"
   },
   "nvidia-blog": {
    "ok": true,
-   "count": 12,
+   "count": 10,
    "url": "https://blogs.nvidia.com/feed/"
   },
   "nvidia-dev-blog": {
@@ -294,7 +294,7 @@
   },
   "nvidia-genai-blog": {
    "ok": true,
-   "count": 7,
+   "count": 6,
    "url": "https://blogs.nvidia.com/blog/category/generative-ai/feed/"
   },
   "ollama-blog": {
@@ -421,7 +421,7 @@
   },
   "watchlist": {
    "ok": true,
-   "count": 23,
+   "count": 12,
    "group": "community",
    "accounts": {
     "OpenAI": {
@@ -445,8 +445,8 @@
      "posts": 3
     },
     "NVIDIAAI": {
-     "ok": true,
-     "posts": 9
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "huggingface": {
      "ok": false,
@@ -469,12 +469,12 @@
      "posts": 0
     },
     "MistralAI": {
-     "ok": true,
-     "posts": 2
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     }
    }
   },
-  "posts_used": 32
+  "posts_used": 20
  },
  "trends": [
   {
@@ -517,7 +517,7 @@
      "name": "hf_models",
      "title": "Qwen/Qwen3.8-27B",
      "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
-     "metric": 323.0,
+     "metric": 325.0,
      "metric_name": "trendingScore"
     },
     {
@@ -556,6 +556,20 @@
      "metric_name": "rank"
     },
     {
+     "name": "reddit_ollama",
+     "title": "We just released our first quants for Qwen3.8-27B. Would love to hear what you think",
+     "url": "https://www.reddit.com/r/ollama/comments/1xcgpsn/we_just_released_our_first_quants_for_qwen3827b/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_ollama",
+     "title": "More Full Aider Polyglot run with the same Qwen3.8 125B MoE: The amount of weight is low calculated – the temperatures a",
+     "url": "https://www.reddit.com/r/ollama/comments/1xfxpzl/more_full_aider_polyglot_run_with_the_same_qwen38/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
      "name": "ollama",
      "title": "qwen3.8-flash-next",
      "url": "https://ollama.com/library/qwen3.8-flash-next",
@@ -590,7 +604,7 @@
     "github_new": 0.129,
     "hackernews": 0.864,
     "reddit_localllama": 1.5,
-    "reddit_ml": 0.344,
+    "reddit_ollama": 0.791,
     "devto": 0.0,
     "ollama": 0.632,
     "bluesky": 0.352,
@@ -603,11 +617,10 @@
    },
    "why": {
     "first_seen": "2026-08-05",
-    "peak_day": "2026-10-25",
+    "peak_day": "2026-10-26",
     "co_mentioned": [
-     "vLLM",
-     "llama.cpp",
-     "Unsloth"
+     "Unsloth",
+     "vLLM"
     ],
     "evidence": [
      {
@@ -654,7 +667,7 @@
     "local-llm",
     "tools"
    ],
-   "score": 84.0,
+   "score": 99.1,
    "vendor": "Ollama",
    "primary": {
     "url": "https://ollama.com/blog/speech-models",
@@ -728,6 +741,13 @@
    ],
    "sources": [
     {
+     "name": "reddit_ollama",
+     "title": "deepseek-v4.1-flash on Ollama Cloud built a walkable 3D Colosseum in 47 minutes for under a dollar",
+     "url": "https://www.reddit.com/r/ollama/comments/1xcko3w/deepseekv41flash_on_ollama_cloud_built_a_walkable/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
      "name": "devto",
      "title": "Running Claude Code with Ollama and Local Models",
      "url": "https://dev.to/mohammed_sebaa_2610/running-claude-code-with-ollama-and-local-models-4c49",
@@ -789,7 +809,7 @@
     "https://ollama.com/library/phonon"
    ],
    "official_verified": true,
-   "summary": "Speech models in Ollama ― Ollama now supports speech models, starting with Phonon from Gradium. Read text aloud in five languages and do。6ソースで言及(代表: 「Speech models in Ollama」)",
+   "summary": "Speech models in Ollama ― Ollama now supports speech models, starting with Phonon from Gradium. Read text aloud in five languages and do。7ソースで言及(代表: 「Speech models in Ollama」)",
    "slides": [
     {
      "title": "Ollama が音声モデルに対応、第 1 弾は Phonon",
@@ -828,6 +848,7 @@
    ],
    "score_breakdown": {
     "github_new": 0.761,
+    "reddit_ollama": 1.05,
     "devto": 0.426,
     "pypi": 0.41,
     "bluesky": 0.279,
@@ -841,29 +862,29 @@
    },
    "why": {
     "first_seen": "2026-10-21",
-    "peak_day": "2026-10-26",
+    "peak_day": "2026-10-27",
     "co_mentioned": [
      "Claude Code",
-     "phonon",
      "llama.cpp",
+     "phonon",
      "vLLM",
-     "OpenAI Codex"
+     "flint"
     ],
     "evidence": [
      {
-      "source": "github_new",
-      "title": "zeekk0/OpenSakura",
-      "url": "https://github.com/zeekk0/OpenSakura"
+      "source": "reddit_ollama",
+      "title": "Model Releases Oct 11 - 25",
+      "url": "https://www.reddit.com/r/ollama/comments/1xfk8wj/model_releases_oct_11_25/"
      },
      {
-      "source": "github_new",
-      "title": "Juliowiwiwiwi/Capri-Capricorn-The-Desktop-Construct",
-      "url": "https://github.com/Juliowiwiwiwi/Capri-Capricorn-The-Desktop-Construct"
+      "source": "reddit_ollama",
+      "title": "deepseek-v4.1-flash on Ollama Cloud built a walkable 3D Colosseum in 47 minutes for under a dollar",
+      "url": "https://www.reddit.com/r/ollama/comments/1xcko3w/deepseekv41flash_on_ollama_cloud_built_a_walkable/"
      },
      {
-      "source": "github_new",
-      "title": "devMarksKnobb/OllamaCode",
-      "url": "https://github.com/devMarksKnobb/OllamaCode"
+      "source": "reddit_ollama",
+      "title": "New Unofficial Ollama Code",
+      "url": "https://www.reddit.com/r/ollama/comments/1xgexhp/new_unofficial_ollama_code/"
      }
     ]
    },
@@ -902,11 +923,11 @@
    "url_checks": {
     "https://ollama.com/blog/speech-models": {
      "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
     },
     "https://ollama.com/library/phonon": {
      "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
     }
    },
    "digest": {
@@ -1017,461 +1038,6 @@
   },
   {
    "rank": 3,
-   "keyword": "llama.cpp",
-   "entity_id": "llama-cpp",
-   "kind": "release",
-   "category": "local-runtime",
-   "tags": [
-    "local-llm",
-    "tools"
-   ],
-   "score": 83.4,
-   "vendor": "ggml",
-   "primary": {
-    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11957",
-    "published_at": "2026-10-28T10:36:51+00:00",
-    "date_basis": "published",
-    "source_type": "release_note",
-    "title": "llama.cpp b11957",
-    "event_id": "77d3e0495e"
-   },
-   "events": [
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11957",
-     "published_at": "2026-10-28T10:36:51+00:00",
-     "source_type": "release_note",
-     "title": "llama.cpp b11957",
-     "vendor": "ggml",
-     "date_basis": "published",
-     "feed": "ggml-org/llama.cpp",
-     "event_id": "77d3e0495e"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11954",
-     "published_at": "2026-10-28T10:32:40+00:00",
-     "source_type": "release_note",
-     "title": "llama.cpp b11954",
-     "vendor": "ggml",
-     "date_basis": "published",
-     "feed": "ggml-org/llama.cpp",
-     "event_id": "12b3f8ca21"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11953",
-     "published_at": "2026-10-28T10:15:31+00:00",
-     "source_type": "release_note",
-     "title": "llama.cpp b11953",
-     "vendor": "ggml",
-     "date_basis": "published",
-     "feed": "ggml-org/llama.cpp",
-     "event_id": "c6f72ba36c"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11951",
-     "published_at": "2026-10-28T09:26:55+00:00",
-     "source_type": "release_note",
-     "title": "llama.cpp b11951",
-     "vendor": "ggml",
-     "date_basis": "published",
-     "feed": "ggml-org/llama.cpp",
-     "event_id": "446f57420c"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11952",
-     "published_at": "2026-10-28T08:12:22+00:00",
-     "source_type": "release_note",
-     "title": "llama.cpp b11952: vulkan: clamp A prefetch to end_k in coopmat1 int8 matmul (#30283)",
-     "vendor": "ggml",
-     "date_basis": "published",
-     "feed": "ggml-org/llama.cpp",
-     "event_id": "c73a865091"
-    }
-   ],
-   "sources": [
-    {
-     "name": "reddit_localllama",
-     "title": "8 GB GPU, 262K context 3.5 BPW Qwen-Flash-Next Coder 70 T/s using llama.cpp",
-     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xebdzl/8_gb_gpu_262k_context_35_bpw_qwenflashnext_coder/",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "pypi",
-     "title": "llama-cpp-python",
-     "url": "https://pypi.org/project/llama-cpp-python/",
-     "metric": 129132.0,
-     "metric_name": "downloads_week"
-    },
-    {
-     "name": "gh_releases",
-     "title": "llama.cpp b11957",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11957",
-     "metric": 1.0,
-     "metric_name": "release"
-    },
-    {
-     "name": "gh_releases",
-     "title": "llama.cpp b11954",
-     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11954",
-     "metric": 1.0,
-     "metric_name": "release"
-    }
-   ],
-   "official_urls": [
-    "https://github.com/ggml-org/llama.cpp/releases/tag/b11957",
-    "https://github.com/ggml-org/llama.cpp"
-   ],
-   "official_verified": true,
-   "summary": "llama.cpp b11957。7ソースで言及(代表: 「Vibecoding your own inference engine is easy they said」)",
-   "slides": [],
-   "score_breakdown": {
-    "github_new": 0.619,
-    "reddit_localllama": 1.31,
-    "reddit_ml": 0.03,
-    "devto": 0.139,
-    "pypi": 0.326,
-    "bluesky": 0.304,
-    "gh_releases": 0.9
-   },
-   "velocity": {
-    "hn_this_week": 1,
-    "hn_prev_week": 1,
-    "factor": 0.7
-   },
-   "why": {
-    "first_seen": "2026-10-21",
-    "peak_day": "2026-10-28",
-    "co_mentioned": [
-     "vLLM",
-     "Ollama",
-     "Qwen3.8"
-    ],
-    "evidence": [
-     {
-      "source": "reddit_localllama",
-      "title": "Vibecoding your own inference engine is easy they said",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xdh57e/vibecoding_your_own_inference_engine_is_easy_they/"
-     },
-     {
-      "source": "reddit_localllama",
-      "title": "8 GB GPU, 262K context 3.5 BPW Qwen-Flash-Next Coder 70 T/s using llama.cpp",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xebdzl/8_gb_gpu_262k_context_35_bpw_qwenflashnext_coder/"
-     },
-     {
-      "source": "github_new",
-      "title": "balaena01/gguf-neuron-explorer",
-      "url": "https://github.com/balaena01/gguf-neuron-explorer"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": null,
-   "trend_label": "rising",
-   "x_posts": [],
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": [
-    {
-     "site": "qiita",
-     "title": "分類器型ガードレール（Llama Guard 系）の閾値と誤検知の調整：P(unsafe) を取り出し、自分のデータで決める",
-     "url": "https://qiita.com/shalXXXX/items/b67969e3b5a01871be5e",
-     "date": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "rank": 4,
-   "keyword": "OpenAI Codex",
-   "entity_id": "openai-codex",
-   "kind": "release",
-   "category": "dev-tool",
-   "tags": [
-    "agents",
-    "tools"
-   ],
-   "score": 81.4,
-   "vendor": "OpenAI",
-   "primary": {
-    "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.2",
-    "published_at": "2026-10-26T15:40:14+00:00",
-    "date_basis": "published",
-    "source_type": "release_note",
-    "title": "codex rust-v0.165.0-alpha.2",
-    "event_id": "838cc6b01a"
-   },
-   "events": [
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.2",
-     "published_at": "2026-10-26T15:40:14+00:00",
-     "source_type": "release_note",
-     "title": "codex rust-v0.165.0-alpha.2",
-     "vendor": "OpenAI",
-     "date_basis": "published",
-     "feed": "openai/codex",
-     "event_id": "838cc6b01a"
-    }
-   ],
-   "sources": [
-    {
-     "name": "official",
-     "title": "Legora is building the agentic operating system for legal work",
-     "url": "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
-     "metric": 1.0,
-     "metric_name": "announcement"
-    },
-    {
-     "name": "official",
-     "title": "Retell uses OpenAI models to help power 100M monthly calls",
-     "url": "https://openai.com/index/retell-ai",
-     "metric": 1.0,
-     "metric_name": "announcement"
-    },
-    {
-     "name": "gh_releases",
-     "title": "codex rust-v0.165.0-alpha.2",
-     "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.2",
-     "metric": 1.0,
-     "metric_name": "release"
-    }
-   ],
-   "official_urls": [
-    "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.2",
-    "https://developers.openai.com/codex"
-   ],
-   "official_verified": true,
-   "summary": "codex rust-v0.165.0-alpha.2。6ソースで言及(代表: 「Graphify-Labs/graphify」)",
-   "slides": [],
-   "score_breakdown": {
-    "github_new": 1.35,
-    "github_trending": 1.116,
-    "reddit_ml": 0.454,
-    "devto": 0.069,
-    "official": 1.2,
-    "gh_releases": 0.6
-   },
-   "velocity": {
-    "hn_this_week": 0,
-    "hn_prev_week": 1,
-    "factor": 0.7
-   },
-   "why": {
-    "first_seen": "2026-10-21",
-    "peak_day": "2026-10-26",
-    "co_mentioned": [
-     "Claude Code",
-     "Ollama",
-     "Gemini CLI"
-    ],
-    "evidence": [
-     {
-      "source": "github_new",
-      "title": "t3dotgg/tstack",
-      "url": "https://github.com/t3dotgg/tstack"
-     },
-     {
-      "source": "github_new",
-      "title": "morganlinton/BeautifulRust",
-      "url": "https://github.com/morganlinton/BeautifulRust"
-     },
-     {
-      "source": "github_new",
-      "title": "andyhuo520/digital-human-koubo",
-      "url": "https://github.com/andyhuo520/digital-human-koubo"
-     }
-    ]
-   },
-   "related": [
-    "CodeRabbit"
-   ],
-   "resolved_repo": null,
-   "trend_label": "rising",
-   "x_posts": [],
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": [
-    {
-     "site": "qiita",
-     "title": "Codex Day 23徹底解説：利用枠リセットとiCloud Mail・Calendar連携の真相",
-     "url": "https://qiita.com/sponge841841/items/e7eaa2343139211ab790",
-     "date": "2026-10-28"
-    },
-    {
-     "site": "zenn",
-     "title": "OpenAI 互換 API で Structured Outputs を使う：JSON Schema 実践ガイド",
-     "url": "https://zenn.dev/modelflare_dev/articles/da010b921b8b68",
-     "date": "2026-10-28"
-    },
-    {
-     "site": "zenn",
-     "title": "Codex Day 22：GPT-6.1 Terraを徹底解説｜性能・API料金・Computer Use",
-     "url": "https://zenn.dev/sponge841841/articles/2026-10-27-codex-day22-gpt61-terra",
-     "date": "2026-10-28"
-    }
-   ]
-  },
-  {
-   "rank": 5,
-   "keyword": "Cross",
-   "entity_id": "cross",
-   "kind": "product",
-   "category": "dev-tool",
-   "tags": [
-    "agents",
-    "tools"
-   ],
-   "score": 80.8,
-   "vendor": null,
-   "primary": {
-    "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/",
-    "published_at": "2026-10-26T08:00:00+00:00",
-    "date_basis": "published",
-    "source_type": "release_note",
-    "title": "AWS IAM Identity Center now supports cross-Region trusted identity propagation",
-    "event_id": "636d390b7e"
-   },
-   "events": [
-    {
-     "kind": "announcement",
-     "source": "official",
-     "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/",
-     "published_at": "2026-10-26T08:00:00+00:00",
-     "source_type": "release_note",
-     "title": "AWS IAM Identity Center now supports cross-Region trusted identity propagation",
-     "vendor": "AWS",
-     "date_basis": "published",
-     "feed": "aws-whats-new",
-     "event_id": "636d390b7e"
-    },
-    {
-     "kind": "paper",
-     "source": "hf_papers",
-     "url": "https://huggingface.co/papers/2610.36466",
-     "published_at": "2026-10-27T00:00:00+00:00",
-     "source_type": "paper",
-     "title": "Nemotron-Labs-Diffusion-Uni: Elastic Self-Refining Unified Diffusion LLM with Cross-Paradigm On-Policy Distillation",
-     "vendor": null,
-     "date_basis": "published",
-     "feed": null,
-     "event_id": "3161cac556"
-    },
-    {
-     "kind": "paper",
-     "source": "hf_papers",
-     "url": "https://huggingface.co/papers/2610.36791",
-     "published_at": "2026-10-27T00:00:00+00:00",
-     "source_type": "paper",
-     "title": "RynnWorld-Latent: A Cross-Embodiment World Model Conditioned on Universal Latent Actions",
-     "vendor": null,
-     "date_basis": "published",
-     "feed": null,
-     "event_id": "8a06dd422f"
-    },
-    {
-     "kind": "paper",
-     "source": "hf_papers",
-     "url": "https://huggingface.co/papers/2610.36269",
-     "published_at": "2026-10-26T00:00:00+00:00",
-     "source_type": "paper",
-     "title": "Cross-modal Steering Vectors Exist Across Both Image and Text Generation",
-     "vendor": null,
-     "date_basis": "published",
-     "feed": null,
-     "event_id": "24752c9cf9"
-    }
-   ],
-   "sources": [
-    {
-     "name": "hackernews",
-     "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
-     "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
-     "metric": 179.0,
-     "metric_name": "points"
-    },
-    {
-     "name": "arxiv",
-     "title": "Collective Dynamics of Self-Reinforcement: How Cross-Task Coupling Drives Policy Collapse in Unsupervised RLVR",
-     "url": "http://arxiv.org/abs/2610.37553v1",
-     "metric": 1.0,
-     "metric_name": "paper"
-    },
-    {
-     "name": "official",
-     "title": "AWS IAM Identity Center now supports cross-Region trusted identity propagation",
-     "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/",
-     "metric": 1.0,
-     "metric_name": "announcement"
-    }
-   ],
-   "official_urls": [
-    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/"
-   ],
-   "official_verified": true,
-   "summary": "AWS IAM Identity Center now supports cross-Region trusted identity propagation ― Trusted identity propagation carries a user's identity with their request, so AWS services can grant permissio。7ソースで言及(代表: 「AWS IAM Identity Center now supports cross-Region trusted id」)",
-   "slides": [],
-   "score_breakdown": {
-    "hf_papers": 0.788,
-    "github_new": 0.543,
-    "hackernews": 0.741,
-    "reddit_localllama": 0.68,
-    "devto": 0.139,
-    "arxiv": 0.09,
-    "official": 0.8
-   },
-   "velocity": {
-    "hn_this_week": 4,
-    "hn_prev_week": 1,
-    "factor": 0.78
-   },
-   "why": {
-    "first_seen": "2026-10-20",
-    "peak_day": "2026-10-26",
-    "co_mentioned": [],
-    "evidence": [
-     {
-      "source": "hackernews",
-      "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
-      "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/"
-     },
-     {
-      "source": "reddit_localllama",
-      "title": "DeepSeek and MiniMax Clear China’s AI Export Rules for Overseas Open-Source Releases",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xcoelw/deepseek_and_minimax_clear_chinas_ai_export_rules/"
-     },
-     {
-      "source": "hf_papers",
-      "title": "OvisOCR3 Technical Report",
-      "url": "https://huggingface.co/papers/2610.33066"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": null,
-   "trend_label": "rising",
-   "x_posts": [],
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": []
-  },
-  {
-   "rank": 6,
    "keyword": "Claude Code",
    "entity_id": "claude-code",
    "kind": "release",
@@ -1480,7 +1046,7 @@
     "agents",
     "tools"
    ],
-   "score": 80.2,
+   "score": 85.0,
    "vendor": "Anthropic",
    "primary": {
     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.312",
@@ -1561,6 +1127,13 @@
      "metric_name": "points"
     },
     {
+     "name": "reddit_ollama",
+     "title": "HEY I tried making Claude code cli become more of a helper agent I tried making it as animated as I can and as expressiv",
+     "url": "https://www.reddit.com/r/ollama/comments/1xemv3b/hey_i_tried_making_claude_code_cli_become_more_of/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
      "name": "devto",
      "title": "Running Claude Code with Ollama and Local Models",
      "url": "https://dev.to/mohammed_sebaa_2610/running-claude-code-with-ollama-and-local-models-4c49",
@@ -1600,7 +1173,7 @@
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.310"
    ],
    "official_verified": true,
-   "summary": "claude-code v2.1.312。6ソースで言及(代表: 「stablyai/orca」)",
+   "summary": "claude-code v2.1.312。7ソースで言及(代表: 「Graphify-Labs/graphify」)",
    "slides": [
     {
      "title": "Claude Code v2.1.310 のリリース",
@@ -1639,10 +1212,11 @@
    ],
    "score_breakdown": {
     "github_new": 1.35,
-    "github_trending": 1.5,
+    "github_trending": 1.33,
     "hackernews": 0.48,
+    "reddit_ollama": 0.546,
     "devto": 0.429,
-    "bluesky": 0.31,
+    "bluesky": 0.309,
     "gh_releases": 0.9
    },
    "velocity": {
@@ -1700,7 +1274,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.310": {
      "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
     }
    },
    "digest": {
@@ -1806,12 +1380,6 @@
    "jp_reactions": [
     {
      "site": "qiita",
-     "title": "ClaudeとGPTの3モデルに同じ12問を5回ずつ投げた結果",
-     "url": "https://qiita.com/whitemarshall/items/a830c32677ffcb2defb4",
-     "date": "2026-10-28"
-    },
-    {
-     "site": "qiita",
      "title": "Claude Codeのデバッグ用スキル5選：SKILL.mdを読んで「直し方の縛り」を比べた",
      "url": "https://qiita.com/Skillselion/items/4e116fb1503cca2ef06b",
      "date": "2026-10-28"
@@ -1821,11 +1389,519 @@
      "title": "Auto mode時代のClaude Codeを守る。検証済み10キットで始めるセキュリティ対策【全員・チーム・組織別】",
      "url": "https://zenn.dev/sonicmoov/articles/67aaeb49be69ec",
      "date": "2026-10-28"
+    },
+    {
+     "site": "hatena",
+     "title": "素のClaude CodeとTDDで初見のお題に挑む ― TDDBC仙台11thのセッションログを公開します - t-wadaのブログ",
+     "url": "https://t-wada.hatenablog.jp/entry/red-green-tdd-with-claude-code-202610",
+     "date": "2026-10-28"
     }
    ]
   },
   {
-   "rank": 7,
+   "rank": 4,
+   "keyword": "llama.cpp",
+   "entity_id": "llama-cpp",
+   "kind": "release",
+   "category": "local-runtime",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "score": 82.0,
+   "vendor": "ggml",
+   "primary": {
+    "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11957",
+    "published_at": "2026-10-28T10:36:51+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "llama.cpp b11957",
+    "event_id": "77d3e0495e"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11957",
+     "published_at": "2026-10-28T10:36:51+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11957",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "feed": "ggml-org/llama.cpp",
+     "event_id": "77d3e0495e"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11954",
+     "published_at": "2026-10-28T10:32:40+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11954",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "feed": "ggml-org/llama.cpp",
+     "event_id": "12b3f8ca21"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11953",
+     "published_at": "2026-10-28T10:15:31+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11953",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "feed": "ggml-org/llama.cpp",
+     "event_id": "c6f72ba36c"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11951",
+     "published_at": "2026-10-28T09:26:55+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11951",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "feed": "ggml-org/llama.cpp",
+     "event_id": "446f57420c"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11952",
+     "published_at": "2026-10-28T08:12:22+00:00",
+     "source_type": "release_note",
+     "title": "llama.cpp b11952: vulkan: clamp A prefetch to end_k in coopmat1 int8 matmul (#30283)",
+     "vendor": "ggml",
+     "date_basis": "published",
+     "feed": "ggml-org/llama.cpp",
+     "event_id": "c73a865091"
+    }
+   ],
+   "sources": [
+    {
+     "name": "reddit_localllama",
+     "title": "8 GB GPU, 262K context 3.5 BPW Qwen-Flash-Next Coder 70 T/s using llama.cpp",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xebdzl/8_gb_gpu_262k_context_35_bpw_qwenflashnext_coder/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "reddit_ollama",
+     "title": "GitHub - pavansreddy/llmserver: A bash script that runs local LLMs on Linux with llama.cpp, vLLM or Ollama. It plans, ch",
+     "url": "https://www.reddit.com/r/ollama/comments/1xgxdn3/github_pavansreddyllmserver_a_bash_script_that/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "pypi",
+     "title": "llama-cpp-python",
+     "url": "https://pypi.org/project/llama-cpp-python/",
+     "metric": 129132.0,
+     "metric_name": "downloads_week"
+    },
+    {
+     "name": "gh_releases",
+     "title": "llama.cpp b11957",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11957",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "llama.cpp b11954",
+     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b11954",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/ggml-org/llama.cpp/releases/tag/b11957",
+    "https://github.com/ggml-org/llama.cpp"
+   ],
+   "official_verified": true,
+   "summary": "llama.cpp b11957。7ソースで言及(代表: 「Vibecoding your own inference engine is easy they said」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 0.625,
+    "reddit_localllama": 1.305,
+    "reddit_ollama": 0.308,
+    "devto": 0.139,
+    "pypi": 0.326,
+    "bluesky": 0.304,
+    "gh_releases": 0.9
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 1,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-21",
+    "peak_day": "2026-10-28",
+    "co_mentioned": [
+     "vLLM",
+     "Ollama"
+    ],
+    "evidence": [
+     {
+      "source": "reddit_localllama",
+      "title": "Vibecoding your own inference engine is easy they said",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xdh57e/vibecoding_your_own_inference_engine_is_easy_they/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "8 GB GPU, 262K context 3.5 BPW Qwen-Flash-Next Coder 70 T/s using llama.cpp",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xebdzl/8_gb_gpu_262k_context_35_bpw_qwenflashnext_coder/"
+     },
+     {
+      "source": "github_new",
+      "title": "balaena01/gguf-neuron-explorer",
+      "url": "https://github.com/balaena01/gguf-neuron-explorer"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [],
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": [
+    {
+     "site": "qiita",
+     "title": "分類器型ガードレール（Llama Guard 系）の閾値と誤検知の調整：P(unsafe) を取り出し、自分のデータで決める",
+     "url": "https://qiita.com/shalXXXX/items/b67969e3b5a01871be5e",
+     "date": "2026-10-28"
+    }
+   ]
+  },
+  {
+   "rank": 5,
+   "keyword": "flint",
+   "entity_id": "flint",
+   "kind": "paper",
+   "category": "research",
+   "tags": [
+    "research",
+    "models",
+    "local-llm"
+   ],
+   "score": 80.0,
+   "vendor": null,
+   "primary": {
+    "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+    "published_at": "2026-10-22T16:00:00+00:00",
+    "date_basis": "published",
+    "source_type": "announcement",
+    "title": "Flint-interactive: A language for creating interactive data visualizations",
+    "event_id": "75e4cf6c0e"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+     "published_at": "2026-10-22T16:00:00+00:00",
+     "source_type": "announcement",
+     "title": "Flint-interactive: A language for creating interactive data visualizations",
+     "vendor": "Microsoft",
+     "date_basis": "published",
+     "feed": "microsoft-research-blog",
+     "event_id": "75e4cf6c0e"
+    },
+    {
+     "kind": "model",
+     "source": "hf_models",
+     "url": "https://huggingface.co/RecursiveSI/flint",
+     "published_at": "2026-10-21T14:20:58+00:00",
+     "source_type": "model_card",
+     "title": "RecursiveSI/flint",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "d655cc0111"
+    },
+    {
+     "kind": "model",
+     "source": "openrouter",
+     "url": "https://openrouter.ai/recursive/flint-v1.0:free",
+     "published_at": "2026-10-21T22:46:05+00:00",
+     "source_type": "catalog",
+     "title": "recursive/flint-v1.0:free",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "f2d4f10c2c"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_models",
+     "title": "RecursiveSI/flint",
+     "url": "https://huggingface.co/RecursiveSI/flint",
+     "metric": 967.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "hf_models",
+     "title": "unsloth/flint-GGUF",
+     "url": "https://huggingface.co/unsloth/flint-GGUF",
+     "metric": 285.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Recursive Flint - the \"Qwen3.8 35B\" we've all been waiting for?",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xc23iq/recursive_flint_the_qwen38_35b_weve_all_been/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "ollama",
+     "title": "flint",
+     "url": "https://ollama.com/library/flint",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "openrouter",
+     "title": "recursive/flint-v1.0:free",
+     "url": "https://openrouter.ai/recursive/flint-v1.0:free",
+     "metric": 1.0,
+     "metric_name": "new_model"
+    },
+    {
+     "name": "official",
+     "title": "Flint-interactive: A language for creating interactive data visualizations",
+     "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "gh_releases",
+     "title": "ollama v0.40.9-rc2: flint: fix replies with thinking disabled (#19216)",
+     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.9-rc2",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "unsloth MOSS-Image, Flint & NVIDIA Bolt E4B",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.910-beta",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/"
+   ],
+   "official_verified": true,
+   "summary": "Flint-interactive: A language for creating interactive data visualizations ― Flint-interactive gives AI agents a language for creating interactive visualizations. Click a chart, filter da。7ソースで言及(代表: 「RecursiveSI/flint」)",
+   "slides": [
+    {
+     "title": "Flint-interactive: 操作できるグラフを作る言語",
+     "diagram_type": "infographic",
+     "icon": "layers",
+     "stat": {
+      "value": "4 種",
+      "label": "連携先: グラフ・表・文章・アプリ(2026-10-22)"
+     },
+     "steps": [
+      "操作を指定",
+      "コンパイラが変換",
+      "グラフが更新"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Microsoft Research が、対話的なグラフを作る言語 Flint-interactive を紹介した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "クリックなどの操作を意味のあるイベントにし、高水準の指定でグラフを更新する"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "エージェントがやり直す手間を減らし、グラフと表・文章を連動できる"
+      },
+      {
+       "h": "使い方",
+       "t": "チャットでは Flint-MCP と MCP Apps、アプリでは Flint Interactive Canvas を使う"
+      }
+     ],
+     "official_url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+     "source_date": "2026-10-22"
+    }
+   ],
+   "score_breakdown": {
+    "hf_models": 1.206,
+    "reddit_localllama": 0.65,
+    "reddit_ollama": 0.658,
+    "ollama": 0.53,
+    "openrouter": 0.18,
+    "official": 0.8,
+    "gh_releases": 0.75
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-20",
+    "peak_day": "2026-10-21",
+    "co_mentioned": [
+     "Unsloth",
+     "Ollama"
+    ],
+    "evidence": [
+     {
+      "source": "reddit_ollama",
+      "title": "Model Releases Oct 11 - 25",
+      "url": "https://www.reddit.com/r/ollama/comments/1xfk8wj/model_releases_oct_11_25/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "Recursive Flint - the \"Qwen3.8 35B\" we've all been waiting for?",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xc23iq/recursive_flint_the_qwen38_35b_weve_all_been/"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [],
+   "verification": {
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Flint-interactive Microsoft Research Blog",
+      "evidence_urls": [
+       "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/"
+      ],
+      "evidence_published_at": "2026-10-22T16:00:00+00:00",
+      "result": "AI エージェントが操作できるグラフを作る言語であること、Flint-MCP / MCP Apps での利用、コンパイラが操作を意味のあるイベントに変換する仕組みを確認",
+      "retrieved_at": "2026-10-26T03:31:00+09:00"
+     }
+    ],
+    "selection_reason": "research 代表。Microsoft Research が 2026-10-22 に公式ブログで Flint-interactive を紹介。"
+   },
+   "url_checks": {
+    "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/": {
+     "status": 200,
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Microsoft Research が、操作できるグラフを作る言語 Flint-interactive を 2026-10-22 のブログで紹介した。",
+     "AI エージェントが作るグラフを、クリック・絞り込み・拡大などで読み手が探れるようにする。操作の細かい処理はコンパイラが担う。",
+     "チャットでは Flint-MCP と MCP Apps 経由で使え、ダッシュボードなどのアプリにも組み込める。"
+    ],
+    "why_trending": "Microsoft Research の公式ブログで公開され、論文・研究分野で今週注目された。",
+    "what_changes": [
+     "グラフの操作を、低水準のコードなしで高水準の指定により書ける",
+     "グラフと表・文章・ウィジェットが連動する"
+    ],
+    "benefits": [
+     "エージェントが何度もやり直す手間とトークンを減らせる(発表側の説明)",
+     "選んだ範囲を次の質問の文脈として渡せる"
+    ],
+    "caveats": [
+     "公式ブログの紹介で、このサイトでは動作を検証していない",
+     "実際の使い方は MCP の設定手順に従う必要がある"
+    ],
+    "audience": "データ可視化をエージェントやアプリに組み込みたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "エージェントが作るグラフを、読み手が操作して探れるようにする言語。Microsoft Research が紹介した。",
+     "stat": {
+      "value": "4 種",
+      "label": "連携先: グラフ・表・文章・アプリ"
+     },
+     "steps": [
+      "操作を指定",
+      "コンパイラが変換",
+      "グラフが更新"
+     ],
+     "changes": [
+      "クリックなどを意味のあるイベントに変換",
+      "高水準の指定で更新を書ける",
+      "表や文章とグラフが連動する"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Microsoft Research"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-22"
+      },
+      {
+       "k": "種類",
+       "v": "グラフ用の言語"
+      },
+      {
+       "k": "連携",
+       "v": "Flint-MCP / MCP Apps"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "データ可視化をエージェントやアプリに組み込みたい開発者",
+     "benefits": [
+      "エージェントのやり直しを減らせる(発表側の説明)",
+      "選んだ範囲を次の質問の文脈にできる"
+     ],
+     "how_to": [
+      "チャットでは Flint-MCP の設定手順に沿って導入する",
+      "アプリは Flint Interactive Canvas で組み込む",
+      "独自の操作は programming API で定義する"
+     ],
+     "caveats": [
+      "公式ブログの紹介で、独自には検証していない",
+      "導入には MCP の設定が必要"
+     ],
+     "terms": [
+      {
+       "t": "MCP",
+       "d": "AI と外部ツールをつなぐ共通の接続方式"
+      },
+      {
+       "t": "コンパイラ",
+       "d": "人が書いた指定を、実行できる形へ変換する仕組み"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Flint-interactive: A language for creating interactive data visualizations",
+      "publisher": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+      "date": "2026-10-22"
+     }
+    ]
+   },
+   "jp_reactions": []
+  },
+  {
+   "rank": 6,
    "keyword": "LFM3",
    "entity_id": "lfm3",
    "kind": "model",
@@ -1834,7 +1910,7 @@
     "models",
     "local-llm"
    ],
-   "score": 77.4,
+   "score": 77.6,
    "vendor": "Liquid",
    "primary": {
     "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
@@ -1899,7 +1975,7 @@
      "name": "hf_models",
      "title": "LiquidAI/LFM3-1.7B",
      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
-     "metric": 268.0,
+     "metric": 274.0,
      "metric_name": "trendingScore"
     },
     {
@@ -2009,9 +2085,9 @@
     }
    ],
    "score_breakdown": {
-    "hf_models": 1.154,
+    "hf_models": 1.322,
     "hackernews": 0.712,
-    "reddit_localllama": 0.97,
+    "reddit_localllama": 0.968,
     "ollama": 0.9,
     "bluesky": 0.0,
     "official": 1.0
@@ -2022,7 +2098,7 @@
     "factor": 0.7
    },
    "why": {
-    "first_seen": "2026-10-19",
+    "first_seen": "2026-09-08",
     "peak_day": "2026-10-27",
     "co_mentioned": [],
     "evidence": [
@@ -2081,11 +2157,11 @@
    "url_checks": {
     "https://www.liquid.ai/blog/lfm3": {
      "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
     },
     "https://huggingface.co/LiquidAI/LFM3-1.7B": {
      "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
     }
    },
    "digest": {
@@ -2196,320 +2272,140 @@
    "jp_reactions": []
   },
   {
-   "rank": 8,
-   "keyword": "flint",
-   "entity_id": "flint",
-   "kind": "paper",
-   "category": "research",
+   "rank": 7,
+   "keyword": "OpenAI Codex",
+   "entity_id": "openai-codex",
+   "kind": "release",
+   "category": "dev-tool",
    "tags": [
-    "research",
-    "models",
-    "local-llm"
+    "agents",
+    "tools"
    ],
-   "score": 72.2,
-   "vendor": null,
+   "score": 70.3,
+   "vendor": "OpenAI",
    "primary": {
-    "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
-    "published_at": "2026-10-22T16:00:00+00:00",
+    "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.2",
+    "published_at": "2026-10-26T15:40:14+00:00",
     "date_basis": "published",
-    "source_type": "announcement",
-    "title": "Flint-interactive: A language for creating interactive data visualizations",
-    "event_id": "75e4cf6c0e"
+    "source_type": "release_note",
+    "title": "codex rust-v0.165.0-alpha.2",
+    "event_id": "838cc6b01a"
    },
    "events": [
     {
-     "kind": "announcement",
-     "source": "official",
-     "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
-     "published_at": "2026-10-22T16:00:00+00:00",
-     "source_type": "announcement",
-     "title": "Flint-interactive: A language for creating interactive data visualizations",
-     "vendor": "Microsoft",
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.2",
+     "published_at": "2026-10-26T15:40:14+00:00",
+     "source_type": "release_note",
+     "title": "codex rust-v0.165.0-alpha.2",
+     "vendor": "OpenAI",
      "date_basis": "published",
-     "feed": "microsoft-research-blog",
-     "event_id": "75e4cf6c0e"
-    },
-    {
-     "kind": "model",
-     "source": "hf_models",
-     "url": "https://huggingface.co/RecursiveSI/flint",
-     "published_at": "2026-10-21T14:20:58+00:00",
-     "source_type": "model_card",
-     "title": "RecursiveSI/flint",
-     "vendor": null,
-     "date_basis": "published",
-     "feed": null,
-     "event_id": "d655cc0111"
-    },
-    {
-     "kind": "model",
-     "source": "openrouter",
-     "url": "https://openrouter.ai/recursive/flint-v1.0:free",
-     "published_at": "2026-10-21T22:46:05+00:00",
-     "source_type": "catalog",
-     "title": "recursive/flint-v1.0:free",
-     "vendor": null,
-     "date_basis": "published",
-     "feed": null,
-     "event_id": "f2d4f10c2c"
+     "feed": "openai/codex",
+     "event_id": "838cc6b01a"
     }
    ],
    "sources": [
     {
-     "name": "hf_models",
-     "title": "RecursiveSI/flint",
-     "url": "https://huggingface.co/RecursiveSI/flint",
-     "metric": 964.0,
-     "metric_name": "trendingScore"
-    },
-    {
-     "name": "hf_models",
-     "title": "unsloth/flint-GGUF",
-     "url": "https://huggingface.co/unsloth/flint-GGUF",
-     "metric": 283.0,
-     "metric_name": "trendingScore"
-    },
-    {
-     "name": "reddit_localllama",
-     "title": "Recursive Flint - the \"Qwen3.8 35B\" we've all been waiting for?",
-     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xc23iq/recursive_flint_the_qwen38_35b_weve_all_been/",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "ollama",
-     "title": "flint",
-     "url": "https://ollama.com/library/flint",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "openrouter",
-     "title": "recursive/flint-v1.0:free",
-     "url": "https://openrouter.ai/recursive/flint-v1.0:free",
+     "name": "official",
+     "title": "Legora is building the agentic operating system for legal work",
+     "url": "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
      "metric": 1.0,
-     "metric_name": "new_model"
+     "metric_name": "announcement"
     },
     {
      "name": "official",
-     "title": "Flint-interactive: A language for creating interactive data visualizations",
-     "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
+     "title": "Retell uses OpenAI models to help power 100M monthly calls",
+     "url": "https://openai.com/index/retell-ai",
      "metric": 1.0,
      "metric_name": "announcement"
     },
     {
      "name": "gh_releases",
-     "title": "ollama v0.40.9-rc2: flint: fix replies with thinking disabled (#19216)",
-     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.9-rc2",
-     "metric": 1.0,
-     "metric_name": "release"
-    },
-    {
-     "name": "gh_releases",
-     "title": "unsloth MOSS-Image, Flint & NVIDIA Bolt E4B",
-     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.910-beta",
+     "title": "codex rust-v0.165.0-alpha.2",
+     "url": "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.2",
      "metric": 1.0,
      "metric_name": "release"
     }
    ],
    "official_urls": [
-    "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/"
+    "https://github.com/openai/codex/releases/tag/rust-v0.165.0-alpha.2",
+    "https://developers.openai.com/codex"
    ],
    "official_verified": true,
-   "summary": "Flint-interactive: A language for creating interactive data visualizations ― Flint-interactive gives AI agents a language for creating interactive visualizations. Click a chart, filter da。6ソースで言及(代表: 「RecursiveSI/flint」)",
-   "slides": [
-    {
-     "title": "Flint-interactive: 操作できるグラフを作る言語",
-     "diagram_type": "infographic",
-     "icon": "layers",
-     "stat": {
-      "value": "4 種",
-      "label": "連携先: グラフ・表・文章・アプリ(2026-10-22)"
-     },
-     "steps": [
-      "操作を指定",
-      "コンパイラが変換",
-      "グラフが更新"
-     ],
-     "points": [
-      {
-       "h": "何が起きた",
-       "t": "Microsoft Research が、対話的なグラフを作る言語 Flint-interactive を紹介した"
-      },
-      {
-       "h": "何が変わる",
-       "t": "クリックなどの操作を意味のあるイベントにし、高水準の指定でグラフを更新する"
-      },
-      {
-       "h": "嬉しいこと",
-       "t": "エージェントがやり直す手間を減らし、グラフと表・文章を連動できる"
-      },
-      {
-       "h": "使い方",
-       "t": "チャットでは Flint-MCP と MCP Apps、アプリでは Flint Interactive Canvas を使う"
-      }
-     ],
-     "official_url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
-     "source_date": "2026-10-22"
-    }
-   ],
+   "summary": "codex rust-v0.165.0-alpha.2。5ソースで言及(代表: 「Graphify-Labs/graphify」)",
+   "slides": [],
    "score_breakdown": {
-    "hf_models": 1.206,
-    "reddit_localllama": 0.65,
-    "ollama": 0.53,
-    "openrouter": 0.18,
-    "official": 0.8,
-    "gh_releases": 0.75
+    "github_new": 1.35,
+    "github_trending": 1.116,
+    "devto": 0.069,
+    "official": 1.2,
+    "gh_releases": 0.6
    },
    "velocity": {
-    "hn_this_week": 1,
-    "hn_prev_week": 0,
+    "hn_this_week": 0,
+    "hn_prev_week": 1,
     "factor": 0.7
    },
    "why": {
-    "first_seen": "2026-10-20",
-    "peak_day": "2026-10-21",
+    "first_seen": "2026-10-21",
+    "peak_day": "2026-10-26",
     "co_mentioned": [
-     "Unsloth"
+     "Claude Code",
+     "Ollama",
+     "Gemini CLI"
     ],
     "evidence": [
      {
-      "source": "reddit_localllama",
-      "title": "Recursive Flint - the \"Qwen3.8 35B\" we've all been waiting for?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xc23iq/recursive_flint_the_qwen38_35b_weve_all_been/"
+      "source": "github_new",
+      "title": "t3dotgg/tstack",
+      "url": "https://github.com/t3dotgg/tstack"
+     },
+     {
+      "source": "github_new",
+      "title": "morganlinton/BeautifulRust",
+      "url": "https://github.com/morganlinton/BeautifulRust"
+     },
+     {
+      "source": "github_new",
+      "title": "andyhuo520/digital-human-koubo",
+      "url": "https://github.com/andyhuo520/digital-human-koubo"
      }
     ]
    },
-   "related": [],
+   "related": [
+    "CodeRabbit"
+   ],
    "resolved_repo": null,
    "trend_label": "rising",
    "x_posts": [],
    "verification": {
-    "status": "verified",
-    "checks": [
-     {
-      "mcp_name": "page-capture",
-      "tool": "fetch",
-      "query": "Flint-interactive Microsoft Research Blog",
-      "evidence_urls": [
-       "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/"
-      ],
-      "evidence_published_at": "2026-10-22T16:00:00+00:00",
-      "result": "AI エージェントが操作できるグラフを作る言語であること、Flint-MCP / MCP Apps での利用、コンパイラが操作を意味のあるイベントに変換する仕組みを確認",
-      "retrieved_at": "2026-10-26T03:31:00+09:00"
-     }
-    ],
-    "selection_reason": "research 代表。Microsoft Research が 2026-10-22 に公式ブログで Flint-interactive を紹介。"
+    "status": "unverified",
+    "checks": []
    },
-   "url_checks": {
-    "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/": {
-     "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+   "jp_reactions": [
+    {
+     "site": "qiita",
+     "title": "Codex Day 23徹底解説：利用枠リセットとiCloud Mail・Calendar連携の真相",
+     "url": "https://qiita.com/sponge841841/items/e7eaa2343139211ab790",
+     "date": "2026-10-28"
+    },
+    {
+     "site": "zenn",
+     "title": "OpenAI 互換 API で Structured Outputs を使う：JSON Schema 実践ガイド",
+     "url": "https://zenn.dev/modelflare_dev/articles/da010b921b8b68",
+     "date": "2026-10-28"
+    },
+    {
+     "site": "zenn",
+     "title": "Codex Day 22：GPT-6.1 Terraを徹底解説｜性能・API料金・Computer Use",
+     "url": "https://zenn.dev/sponge841841/articles/2026-10-27-codex-day22-gpt61-terra",
+     "date": "2026-10-28"
     }
-   },
-   "digest": {
-    "summary": [
-     "Microsoft Research が、操作できるグラフを作る言語 Flint-interactive を 2026-10-22 のブログで紹介した。",
-     "AI エージェントが作るグラフを、クリック・絞り込み・拡大などで読み手が探れるようにする。操作の細かい処理はコンパイラが担う。",
-     "チャットでは Flint-MCP と MCP Apps 経由で使え、ダッシュボードなどのアプリにも組み込める。"
-    ],
-    "why_trending": "Microsoft Research の公式ブログで公開され、論文・研究分野で今週注目された。",
-    "what_changes": [
-     "グラフの操作を、低水準のコードなしで高水準の指定により書ける",
-     "グラフと表・文章・ウィジェットが連動する"
-    ],
-    "benefits": [
-     "エージェントが何度もやり直す手間とトークンを減らせる(発表側の説明)",
-     "選んだ範囲を次の質問の文脈として渡せる"
-    ],
-    "caveats": [
-     "公式ブログの紹介で、このサイトでは動作を検証していない",
-     "実際の使い方は MCP の設定手順に従う必要がある"
-    ],
-    "audience": "データ可視化をエージェントやアプリに組み込みたい開発者"
-   },
-   "deck": {
-    "overview": {
-     "takeaway": "エージェントが作るグラフを、読み手が操作して探れるようにする言語。Microsoft Research が紹介した。",
-     "stat": {
-      "value": "4 種",
-      "label": "連携先: グラフ・表・文章・アプリ"
-     },
-     "steps": [
-      "操作を指定",
-      "コンパイラが変換",
-      "グラフが更新"
-     ],
-     "changes": [
-      "クリックなどを意味のあるイベントに変換",
-      "高水準の指定で更新を書ける",
-      "表や文章とグラフが連動する"
-     ],
-     "facts": [
-      {
-       "k": "提供元",
-       "v": "Microsoft Research"
-      },
-      {
-       "k": "公開日",
-       "v": "2026-10-22"
-      },
-      {
-       "k": "種類",
-       "v": "グラフ用の言語"
-      },
-      {
-       "k": "連携",
-       "v": "Flint-MCP / MCP Apps"
-      }
-     ],
-     "refs": [
-      "s1"
-     ]
-    },
-    "impact": {
-     "audience": "データ可視化をエージェントやアプリに組み込みたい開発者",
-     "benefits": [
-      "エージェントのやり直しを減らせる(発表側の説明)",
-      "選んだ範囲を次の質問の文脈にできる"
-     ],
-     "how_to": [
-      "チャットでは Flint-MCP の設定手順に沿って導入する",
-      "アプリは Flint Interactive Canvas で組み込む",
-      "独自の操作は programming API で定義する"
-     ],
-     "caveats": [
-      "公式ブログの紹介で、独自には検証していない",
-      "導入には MCP の設定が必要"
-     ],
-     "terms": [
-      {
-       "t": "MCP",
-       "d": "AI と外部ツールをつなぐ共通の接続方式"
-      },
-      {
-       "t": "コンパイラ",
-       "d": "人が書いた指定を、実行できる形へ変換する仕組み"
-      }
-     ],
-     "refs": [
-      "s1"
-     ]
-    },
-    "sources": [
-     {
-      "id": "s1",
-      "title": "Flint-interactive: A language for creating interactive data visualizations",
-      "publisher": "Microsoft Research",
-      "url": "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/",
-      "date": "2026-10-22"
-     }
-    ]
-   },
-   "jp_reactions": []
+   ]
   },
   {
-   "rank": 9,
+   "rank": 8,
    "keyword": "vLLM",
    "entity_id": "vllm",
    "kind": "release",
@@ -2518,7 +2414,7 @@
     "local-llm",
     "tools"
    ],
-   "score": 62.0,
+   "score": 62.6,
    "vendor": "vLLM",
    "primary": {
     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.33.0rc1",
@@ -2563,10 +2459,24 @@
      "metric_name": "points"
     },
     {
+     "name": "reddit_ollama",
+     "title": "GitHub - pavansreddy/llmserver: A bash script that runs local LLMs on Linux with llama.cpp, vLLM or Ollama. It plans, ch",
+     "url": "https://www.reddit.com/r/ollama/comments/1xgxdn3/github_pavansreddyllmserver_a_bash_script_that/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
      "name": "devto",
      "title": "One Knob, 19x Latency: What I Learned Benchmarking vLLM on a Single GPU",
      "url": "https://dev.to/raihan-js/one-knob-19x-latency-what-i-learned-benchmarking-vllm-on-a-single-gpu-14bh",
      "metric": 4.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "devto",
+     "title": "Notes from a 2 AM On-Call: Why Our vLLM Semantic Router Dropped 40% of Requests Under Load",
+     "url": "https://dev.to/dave_mille/notes-from-a-2-am-on-call-why-our-vllm-semantic-router-dropped-40-of-requests-under-load-345",
+     "metric": 0.0,
      "metric_name": "reactions"
     },
     {
@@ -2603,13 +2513,14 @@
     "https://github.com/vllm-project/vllm"
    ],
    "official_verified": true,
-   "summary": "vllm v0.33.0rc1: [CI] Fix stale NVFP4 decode test selector on DGX Spark (#64107)。7ソースで言及(代表: 「Qwen4-27B PR found」)",
+   "summary": "vllm v0.33.0rc1: [CI] Fix stale NVFP4 decode test selector on DGX Spark (#64107)。8ソースで言及(代表: 「Qwen4-27B PR found」)",
    "slides": [],
    "score_breakdown": {
-    "github_new": 0.326,
+    "github_new": 0.325,
     "hackernews": 0.735,
-    "reddit_localllama": 0.998,
-    "devto": 0.179,
+    "reddit_localllama": 0.993,
+    "reddit_ollama": 0.224,
+    "devto": 0.161,
     "pypi": 0.366,
     "bluesky": 0.233,
     "gh_releases": 0.75
@@ -2663,147 +2574,170 @@
    ]
   },
   {
-   "rank": 10,
-   "keyword": "kimi-k3",
-   "entity_id": "kimi-k3",
-   "kind": "model",
-   "category": "model",
+   "rank": 9,
+   "keyword": "Unsloth",
+   "entity_id": "unsloth",
+   "kind": "release",
+   "category": "local-runtime",
    "tags": [
-    "models",
-    "local-llm"
+    "local-llm",
+    "tools"
    ],
-   "score": 59.4,
-   "vendor": "Moonshot",
+   "score": 60.1,
+   "vendor": "Unsloth",
    "primary": {
-    "url": "https://openrouter.ai/moonshotai/kimi-k3.1-pro",
-    "published_at": "2026-10-23T17:56:28+00:00",
+    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta",
+    "published_at": "2026-10-26T23:45:59+00:00",
     "date_basis": "published",
-    "source_type": "catalog",
-    "title": "moonshotai/kimi-k3.1-pro",
-    "event_id": "fd6587e3ba"
+    "source_type": "release_note",
+    "title": "unsloth Scheduled + MiniMax-M3.1-Flash + Perf Gains",
+    "event_id": "a31821ca14"
    },
    "events": [
     {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta",
+     "published_at": "2026-10-26T23:45:59+00:00",
+     "source_type": "release_note",
+     "title": "unsloth Scheduled + MiniMax-M3.1-Flash + Perf Gains",
+     "vendor": "Unsloth",
+     "date_basis": "published",
+     "feed": "unslothai/unsloth",
+     "event_id": "a31821ca14"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.910-beta",
+     "published_at": "2026-10-24T03:58:39+00:00",
+     "source_type": "release_note",
+     "title": "unsloth MOSS-Image, Flint & NVIDIA Bolt E4B",
+     "vendor": "Unsloth",
+     "date_basis": "published",
+     "feed": "unslothai/unsloth",
+     "event_id": "8182e3b44e"
+    },
+    {
      "kind": "model",
-     "source": "openrouter",
-     "url": "https://openrouter.ai/moonshotai/kimi-k3.1-pro",
-     "published_at": "2026-10-23T17:56:28+00:00",
-     "source_type": "catalog",
-     "title": "moonshotai/kimi-k3.1-pro",
+     "source": "hf_models",
+     "url": "https://huggingface.co/unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+     "published_at": "2026-10-23T09:47:55+00:00",
+     "source_type": "model_card",
+     "title": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
      "vendor": null,
      "date_basis": "published",
      "feed": null,
-     "event_id": "fd6587e3ba"
+     "event_id": "d1df30e50f"
     },
     {
-     "kind": "announcement",
-     "source": "official",
-     "url": "https://www.kimi.com/blog/kimi-k3-1-pro",
-     "published_at": "2026-10-24T00:00:00+00:00",
-     "source_type": "announcement",
-     "title": "Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence",
-     "vendor": "Moonshot AI",
+     "kind": "model",
+     "source": "hf_models",
+     "url": "https://huggingface.co/unsloth/MiniMax-M3.1-Flash-GGUF",
+     "published_at": "2026-10-23T04:20:27+00:00",
+     "source_type": "model_card",
+     "title": "unsloth/MiniMax-M3.1-Flash-GGUF",
+     "vendor": null,
      "date_basis": "published",
-     "feed": "kimi-blog",
-     "event_id": "6ad0f523fd"
+     "feed": null,
+     "event_id": "7bb57eefbc"
     }
    ],
    "sources": [
     {
-     "name": "hackernews",
-     "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
-     "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
-     "metric": 1093.0,
-     "metric_name": "points"
+     "name": "hf_models",
+     "title": "unsloth/flint-GGUF",
+     "url": "https://huggingface.co/unsloth/flint-GGUF",
+     "metric": 285.0,
+     "metric_name": "trendingScore"
     },
     {
-     "name": "reddit_localllama",
-     "title": "Kimi K3.1 removes cyberattack training data from open weight release",
-     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xecgrf/kimi_k31_removes_cyberattack_training_data_from/",
-     "metric": 0.0,
-     "metric_name": "rank"
+     "name": "hf_models",
+     "title": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+     "url": "https://huggingface.co/unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+     "metric": 134.0,
+     "metric_name": "trendingScore"
     },
     {
-     "name": "ollama",
-     "title": "kimi-k3",
-     "url": "https://ollama.com/library/kimi-k3",
-     "metric": 0.0,
-     "metric_name": "rank"
+     "name": "pypi",
+     "title": "unsloth",
+     "url": "https://pypi.org/project/unsloth/",
+     "metric": 172072.0,
+     "metric_name": "downloads_week"
     },
     {
-     "name": "openrouter",
-     "title": "moonshotai/kimi-k3.1-pro",
-     "url": "https://openrouter.ai/moonshotai/kimi-k3.1-pro",
+     "name": "gh_releases",
+     "title": "unsloth Scheduled + MiniMax-M3.1-Flash + Perf Gains",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta",
      "metric": 1.0,
-     "metric_name": "new_model"
+     "metric_name": "release"
     },
     {
-     "name": "official",
-     "title": "Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence",
-     "url": "https://www.kimi.com/blog/kimi-k3-1-pro",
+     "name": "gh_releases",
+     "title": "unsloth MOSS-Image, Flint & NVIDIA Bolt E4B",
+     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.910-beta",
      "metric": 1.0,
-     "metric_name": "announcement"
+     "metric_name": "release"
     }
    ],
    "official_urls": [
-    "https://ollama.com/library/kimi-k3",
-    "https://openrouter.ai/moonshotai/kimi-k3.1-pro"
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta",
+    "https://unsloth.ai/"
    ],
-   "official_verified": false,
-   "summary": "moonshotai/kimi-k3.1-pro ― Kimi K3 is an open-weight, native multimodal agentic model and our most capable model to date.。5ソースで言及(代表: 「Kimi K3.1 Pro and K3.1 Pro Highspeed」)",
+   "official_verified": true,
+   "summary": "unsloth Scheduled + MiniMax-M3.1-Flash + Perf Gains。5ソースで言及(代表: 「unsloth/flint-GGUF」)",
    "slides": [],
    "score_breakdown": {
-    "hackernews": 0.998,
-    "reddit_localllama": 0.91,
-    "ollama": 0.25,
-    "openrouter": 0.18,
-    "official": 0.8,
-    "x_aux": 0.174
+    "hf_models": 1.177,
+    "reddit_localllama": 0.62,
+    "reddit_ollama": 0.588,
+    "pypi": 0.333,
+    "gh_releases": 0.75
    },
    "velocity": {
-    "hn_this_week": 4,
-    "hn_prev_week": 1,
-    "factor": 0.78
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
    },
    "why": {
-    "first_seen": "2026-10-23",
-    "peak_day": "2026-10-23",
-    "co_mentioned": [],
+    "first_seen": "2026-08-13",
+    "peak_day": "2026-10-22",
+    "co_mentioned": [
+     "Qwen3.8",
+     "flint"
+    ],
     "evidence": [
      {
-      "source": "hackernews",
-      "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
-      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+      "source": "reddit_ollama",
+      "title": "We just released our first quants for Qwen3.8-27B. Would love to hear what you think",
+      "url": "https://www.reddit.com/r/ollama/comments/1xcgpsn/we_just_released_our_first_quants_for_qwen3827b/"
      },
      {
       "source": "reddit_localllama",
-      "title": "Kimi K3.1 removes cyberattack training data from open weight release",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xecgrf/kimi_k31_removes_cyberattack_training_data_from/"
+      "title": "Meta's 816B Muse Spark Open scores 39 on Artificial Analysis, the 180B Qwen3.8-Flash-Next scores 40. Score vs size for 11 open-weight models",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xcthj8/metas_816b_muse_spark_open_scores_39_on/"
      }
     ]
    },
    "related": [],
    "resolved_repo": null,
    "trend_label": "rising",
-   "x_posts": [
-    {
-     "url": "https://x.com/LuminaBench/status/2113217029675085963",
-     "author": "LuminaBench",
-     "likes": 1126,
-     "reposts": 55,
-     "views": 125935,
-     "text": "Kimi K3.1 vs Qwen 4: 3D helicopter\n\nSame prompt, takeoff/land, 3D assembly and exploded views, very similar gen time at around 15-20 minutes for both\n\nChina are not playing games anymore, these are ve",
-     "via": "link"
-    }
-   ],
+   "x_posts": [],
    "verification": {
     "status": "unverified",
     "checks": []
    },
-   "jp_reactions": []
+   "jp_reactions": [
+    {
+     "site": "hatena",
+     "title": "DeepSeek V4.1 Flash 1017をUnsloth PRで試す。これはほんとに使える - きしだのHatena",
+     "url": "https://nowokay.hatenablog.com/entry/2026/10/22/225112",
+     "date": "2026-10-22"
+    }
+   ]
   },
   {
-   "rank": 11,
+   "rank": 10,
    "keyword": "phonon",
    "entity_id": "phonon",
    "kind": "release",
@@ -2812,7 +2746,7 @@
     "models",
     "local-llm"
    ],
-   "score": 55.2,
+   "score": 59.1,
    "vendor": null,
    "primary": {
     "url": "https://github.com/fermionresearch/phonon/releases/tag/v0.2.15",
@@ -2907,10 +2841,11 @@
     "https://github.com/fermionresearch/phonon"
    ],
    "official_verified": true,
-   "summary": "fermionresearch/phonon fermion-research 0.2.15 ― Phonon is Gradium’s text-to-speech family. It turns written text into spoken audio as it generates, making it 。5ソースで言及(代表: 「Speech models in Ollama」)",
+   "summary": "fermionresearch/phonon fermion-research 0.2.15 ― Phonon is Gradium’s text-to-speech family. It turns written text into spoken audio as it generates, making it 。6ソースで言及(代表: 「Speech models in Ollama」)",
    "slides": [],
    "score_breakdown": {
     "hf_spaces": 0.332,
+    "reddit_ollama": 0.336,
     "ollama": 0.55,
     "bluesky": 0.047,
     "official": 0.8,
@@ -2927,7 +2862,13 @@
     "co_mentioned": [
      "Ollama"
     ],
-    "evidence": []
+    "evidence": [
+     {
+      "source": "reddit_ollama",
+      "title": "obsession with MLX only models",
+      "url": "https://www.reddit.com/r/ollama/comments/1xfekc7/obsession_with_mlx_only_models/"
+     }
+    ]
    },
    "related": [],
    "resolved_repo": {
@@ -2945,164 +2886,295 @@
    "jp_reactions": []
   },
   {
-   "rank": 12,
-   "keyword": "Unsloth",
-   "entity_id": "unsloth",
-   "kind": "release",
-   "category": "local-runtime",
+   "rank": 11,
+   "keyword": "kimi-k3",
+   "entity_id": "kimi-k3",
+   "kind": "model",
+   "category": "model",
    "tags": [
-    "local-llm",
-    "tools"
+    "models",
+    "local-llm"
    ],
-   "score": 52.7,
-   "vendor": "Unsloth",
+   "score": 58.0,
+   "vendor": "Moonshot",
    "primary": {
-    "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta",
-    "published_at": "2026-10-26T23:45:59+00:00",
+    "url": "https://openrouter.ai/moonshotai/kimi-k3.1-pro",
+    "published_at": "2026-10-23T17:56:28+00:00",
     "date_basis": "published",
-    "source_type": "release_note",
-    "title": "unsloth Scheduled + MiniMax-M3.1-Flash + Perf Gains",
-    "event_id": "a31821ca14"
+    "source_type": "catalog",
+    "title": "moonshotai/kimi-k3.1-pro",
+    "event_id": "fd6587e3ba"
    },
    "events": [
     {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta",
-     "published_at": "2026-10-26T23:45:59+00:00",
-     "source_type": "release_note",
-     "title": "unsloth Scheduled + MiniMax-M3.1-Flash + Perf Gains",
-     "vendor": "Unsloth",
-     "date_basis": "published",
-     "feed": "unslothai/unsloth",
-     "event_id": "a31821ca14"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.910-beta",
-     "published_at": "2026-10-24T03:58:39+00:00",
-     "source_type": "release_note",
-     "title": "unsloth MOSS-Image, Flint & NVIDIA Bolt E4B",
-     "vendor": "Unsloth",
-     "date_basis": "published",
-     "feed": "unslothai/unsloth",
-     "event_id": "8182e3b44e"
-    },
-    {
      "kind": "model",
-     "source": "hf_models",
-     "url": "https://huggingface.co/unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
-     "published_at": "2026-10-23T09:47:55+00:00",
-     "source_type": "model_card",
-     "title": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
+     "source": "openrouter",
+     "url": "https://openrouter.ai/moonshotai/kimi-k3.1-pro",
+     "published_at": "2026-10-23T17:56:28+00:00",
+     "source_type": "catalog",
+     "title": "moonshotai/kimi-k3.1-pro",
      "vendor": null,
      "date_basis": "published",
      "feed": null,
-     "event_id": "d1df30e50f"
+     "event_id": "fd6587e3ba"
     },
     {
-     "kind": "model",
-     "source": "hf_models",
-     "url": "https://huggingface.co/unsloth/MiniMax-M3.1-Flash-GGUF",
-     "published_at": "2026-10-23T04:20:27+00:00",
-     "source_type": "model_card",
-     "title": "unsloth/MiniMax-M3.1-Flash-GGUF",
-     "vendor": null,
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://www.kimi.com/blog/kimi-k3-1-pro",
+     "published_at": "2026-10-24T00:00:00+00:00",
+     "source_type": "announcement",
+     "title": "Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence",
+     "vendor": "Moonshot AI",
      "date_basis": "published",
-     "feed": null,
-     "event_id": "7bb57eefbc"
+     "feed": "kimi-blog",
+     "event_id": "6ad0f523fd"
     }
    ],
    "sources": [
     {
-     "name": "hf_models",
-     "title": "unsloth/flint-GGUF",
-     "url": "https://huggingface.co/unsloth/flint-GGUF",
-     "metric": 283.0,
-     "metric_name": "trendingScore"
+     "name": "hackernews",
+     "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+     "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
+     "metric": 1093.0,
+     "metric_name": "points"
     },
     {
-     "name": "hf_models",
-     "title": "unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
-     "url": "https://huggingface.co/unsloth/NVIDIA-Nemotron-3.5-Bolt-E4B-GGUF",
-     "metric": 134.0,
-     "metric_name": "trendingScore"
+     "name": "reddit_localllama",
+     "title": "Kimi K3.1 removes cyberattack training data from open weight release",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xecgrf/kimi_k31_removes_cyberattack_training_data_from/",
+     "metric": 0.0,
+     "metric_name": "rank"
     },
     {
-     "name": "pypi",
-     "title": "unsloth",
-     "url": "https://pypi.org/project/unsloth/",
-     "metric": 172072.0,
-     "metric_name": "downloads_week"
+     "name": "ollama",
+     "title": "kimi-k3",
+     "url": "https://ollama.com/library/kimi-k3",
+     "metric": 0.0,
+     "metric_name": "rank"
     },
     {
-     "name": "gh_releases",
-     "title": "unsloth Scheduled + MiniMax-M3.1-Flash + Perf Gains",
-     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta",
+     "name": "openrouter",
+     "title": "moonshotai/kimi-k3.1-pro",
+     "url": "https://openrouter.ai/moonshotai/kimi-k3.1-pro",
      "metric": 1.0,
-     "metric_name": "release"
+     "metric_name": "new_model"
     },
     {
-     "name": "gh_releases",
-     "title": "unsloth MOSS-Image, Flint & NVIDIA Bolt E4B",
-     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.910-beta",
+     "name": "official",
+     "title": "Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence",
+     "url": "https://www.kimi.com/blog/kimi-k3-1-pro",
      "metric": 1.0,
-     "metric_name": "release"
+     "metric_name": "announcement"
     }
    ],
    "official_urls": [
-    "https://github.com/unslothai/unsloth/releases/tag/v0.1.911-beta",
-    "https://unsloth.ai/"
+    "https://www.kimi.ai/blog/kimi-k3-1-pro"
    ],
    "official_verified": true,
-   "summary": "unsloth Scheduled + MiniMax-M3.1-Flash + Perf Gains。4ソースで言及(代表: 「unsloth/flint-GGUF」)",
-   "slides": [],
+   "summary": "moonshotai/kimi-k3.1-pro ― Kimi K3 is an open-weight, native multimodal agentic model and our most capable model to date.。5ソースで言及(代表: 「Kimi K3.1 Pro and K3.1 Pro Highspeed」)",
+   "slides": [
+    {
+     "title": "Kimi K3.1 Pro、1M 文脈のオープン重み",
+     "diagram_type": "infographic",
+     "icon": "spark",
+     "stat": {
+      "value": "65.7%",
+      "label": "Terminal-Bench 4.0 の得点(発表の数字)"
+     },
+     "steps": [
+      "Kimi.ai / API で試す",
+      "重みの公開を待つ",
+      "自環境で動かす"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Moonshot AI が K3.1 シリーズ第 1 弾の K3.1 Pro と高速版を発表"
+      },
+      {
+       "h": "何が変わる",
+       "t": "K3 を追加学習し、コーディングや 3D、金融の能力が向上したとする"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "1M トークンの文脈で、長いコードや資料をまとめて扱える"
+      },
+      {
+       "h": "注意",
+       "t": "重みの公開は 11 月 4 日まで。数字は開発元の発表"
+      }
+     ],
+     "official_url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+    }
+   ],
    "score_breakdown": {
-    "hf_models": 1.176,
-    "reddit_localllama": 0.62,
-    "pypi": 0.333,
-    "gh_releases": 0.75
+    "hackernews": 0.998,
+    "reddit_localllama": 0.91,
+    "ollama": 0.25,
+    "openrouter": 0.18,
+    "official": 0.8,
+    "x_aux": 0.174
    },
    "velocity": {
-    "hn_this_week": 0,
-    "hn_prev_week": 0,
-    "factor": 0.7
+    "hn_this_week": 4,
+    "hn_prev_week": 1,
+    "factor": 0.78
    },
    "why": {
-    "first_seen": "2026-08-13",
-    "peak_day": "2026-10-23",
-    "co_mentioned": [
-     "flint",
-     "Qwen3.8"
-    ],
+    "first_seen": "2026-10-23",
+    "peak_day": "2026-10-24",
+    "co_mentioned": [],
     "evidence": [
      {
+      "source": "hackernews",
+      "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+     },
+     {
       "source": "reddit_localllama",
-      "title": "Meta's 816B Muse Spark Open scores 39 on Artificial Analysis, the 180B Qwen3.8-Flash-Next scores 40. Score vs size for 11 open-weight models",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xcthj8/metas_816b_muse_spark_open_scores_39_on/"
+      "title": "Kimi K3.1 removes cyberattack training data from open weight release",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xecgrf/kimi_k31_removes_cyberattack_training_data_from/"
      }
     ]
    },
    "related": [],
    "resolved_repo": null,
    "trend_label": "rising",
-   "x_posts": [],
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": [
+   "x_posts": [
     {
-     "site": "hatena",
-     "title": "DeepSeek V4.1 Flash 1017をUnsloth PRで試す。これはほんとに使える - きしだのHatena",
-     "url": "https://nowokay.hatenablog.com/entry/2026/10/22/225112",
-     "date": "2026-10-22"
+     "url": "https://x.com/LuminaBench/status/2113217029675085963",
+     "author": "LuminaBench",
+     "likes": 1126,
+     "reposts": 55,
+     "views": 125949,
+     "text": "Kimi K3.1 vs Qwen 4: 3D helicopter\n\nSame prompt, takeoff/land, 3D assembly and exploded views, very similar gen time at around 15-20 minutes for both\n\nChina are not playing games anymore, these are ve",
+     "via": "link"
     }
-   ]
+   ],
+   "verification": {
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Kimi K3.1 Pro Tech Blog",
+      "evidence_urls": [
+       "https://www.kimi.ai/blog/kimi-k3-1-pro"
+      ],
+      "evidence_published_at": null,
+      "result": "K3.1 Pro と高速版 Highspeed を提供開始、1M トークン文脈、重みは 11/4 までに公開予定、Terminal-Bench 4.0 で 65.7%(発表の数字)を確認",
+      "retrieved_at": "2026-10-28T20:00:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。Moonshot AI が公式ブログで 1M トークン文脈のオープンウェイトモデル Kimi K3.1 Pro を発表。"
+   },
+   "url_checks": {
+    "https://www.kimi.ai/blog/kimi-k3-1-pro": {
+     "status": 200,
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Moonshot AI が、K3.1 シリーズ第 1 弾のオープンウェイトモデル Kimi K3.1 Pro を発表した。1M トークンの文脈長を持つ。",
+     "約 2〜3 倍速い Highspeed 版も同時に提供。Kimi.ai や Kimi API で使え、重みは 11 月 4 日までに公開予定とされる。",
+     "Terminal-Bench 4.0 で 65.7% を記録したと発表(発表の数字)。コーディングや 3D 制作、金融リサーチの向上をうたう。"
+    ],
+    "why_trending": "公式ブログに加え、OpenRouter や Ollama、Reddit でも話題になり、今週のモデル分野で上位。",
+    "what_changes": [
+     "K3 の追加学習版として、コーディングや金融の能力が向上",
+     "高速版 Highspeed で応答を速くできる",
+     "学習データからサイバー攻撃関連を除いて公開する方針"
+    ],
+    "benefits": [
+     "1M トークンの長い資料やコードをまとめて扱える",
+     "重みが公開されれば自分の環境で試せる(見込み)"
+    ],
+    "caveats": [
+     "重みの公開は 11 月 4 日までの予定で、現時点では未公開",
+     "ベンチマークの数字は開発元の発表で、第三者の検証ではない"
+    ],
+    "audience": "長いコードや資料を AI に任せたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Moonshot AI が 1M 文脈のオープンウェイトモデル Kimi K3.1 Pro を発表。",
+     "stat": {
+      "value": "65.7%",
+      "label": "Terminal-Bench 4.0(発表の数字)"
+     },
+     "steps": [
+      "Kimi.ai / API で試す",
+      "重みの公開を待つ"
+     ],
+     "changes": [
+      "K3 の追加学習版で、コーディングや金融が向上",
+      "2〜3 倍速い Highspeed 版も提供"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Moonshot AI"
+      },
+      {
+       "k": "文脈長",
+       "v": "1M トークン"
+      },
+      {
+       "k": "提供先",
+       "v": "Kimi.ai / Kimi API など"
+      },
+      {
+       "k": "重み公開",
+       "v": "11 月 4 日までに予定"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "長いコードや資料を AI に任せたい開発者",
+     "benefits": [
+      "長大なコードベースや資料を一度に渡せる",
+      "高速版で対話の待ち時間を減らせる"
+     ],
+     "how_to": [
+      "Kimi.ai や Kimi API で K3.1 Pro を試す",
+      "重みの公開後に自環境での利用を検討する"
+     ],
+     "caveats": [
+      "重みは公開予定で、現時点では未公開",
+      "ベンチマークは開発元の発表の数字"
+     ],
+     "terms": [
+      {
+       "t": "オープンウェイト",
+       "d": "学習済みの重みが公開され、自分で動かせるモデル"
+      },
+      {
+       "t": "文脈長",
+       "d": "一度に読み込める文章量。1M は約 100 万トークン"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence",
+      "publisher": "Moonshot AI",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+     }
+    ]
+   },
+   "jp_reactions": []
   },
   {
-   "rank": 13,
+   "rank": 12,
    "keyword": "Coder",
    "entity_id": "coder",
    "kind": "release",
@@ -3111,7 +3183,7 @@
     "models",
     "tools"
    ],
-   "score": 48.6,
+   "score": 47.5,
    "vendor": null,
    "primary": {
     "url": "https://github.com/coder/coder/releases/tag/v2.35.12",
@@ -3216,8 +3288,8 @@
    "summary": "coder/coder v2.35.12 ― 🎙️ Local, open-source voice agent that talks back AND acts (opens YouTube, searches, scrolls). Workshop starte。3ソースで言及(代表: 「Qwen3-Coder writes less secure code when told it's for a US 」)",
    "slides": [],
    "score_breakdown": {
-    "hf_models": 0.968,
-    "github_new": 0.333,
+    "hf_models": 0.967,
+    "github_new": 0.332,
     "hackernews": 0.784
    },
    "velocity": {
@@ -3227,7 +3299,7 @@
    },
    "why": {
     "first_seen": "2026-09-01",
-    "peak_day": "2026-09-01",
+    "peak_day": "2026-10-25",
     "co_mentioned": [],
     "evidence": [
      {
@@ -3258,7 +3330,7 @@
    "jp_reactions": []
   },
   {
-   "rank": 14,
+   "rank": 13,
    "keyword": "gpt-6.1-terra",
    "entity_id": "gpt-6-1-terra",
    "kind": "model",
@@ -3266,7 +3338,7 @@
    "tags": [
     "models"
    ],
-   "score": 47.9,
+   "score": 46.8,
    "vendor": "OpenAI",
    "primary": {
     "url": "https://openai.com/index/introducing-gpt-6-1-terra",
@@ -3441,7 +3513,7 @@
    ]
   },
   {
-   "rank": 15,
+   "rank": 14,
    "keyword": "Gemini CLI",
    "entity_id": "gemini-cli",
    "kind": "release",
@@ -3450,7 +3522,7 @@
     "agents",
     "tools"
    ],
-   "score": 46.5,
+   "score": 45.4,
    "vendor": "Google",
    "primary": {
     "url": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.67.0-nightly.20261028.gfa5c17365",
@@ -3570,6 +3642,116 @@
      }
     ]
    },
+   "related": [
+    "Genie 4"
+   ],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [],
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": [
+    {
+     "site": "hatena",
+     "title": "Googleが仮想世界をリアルタイムで生成するAI「Genie 4」を発表、人物の動きや会話もリアルに生成可能",
+     "url": "https://gigazine.net/news/20261028-google-genie-4/",
+     "date": "2026-10-28"
+    },
+    {
+     "site": "hatena",
+     "title": "Genie 4: A new generation of world simulation",
+     "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+     "date": "2026-10-27"
+    }
+   ]
+  },
+  {
+   "rank": 15,
+   "keyword": "beam",
+   "entity_id": "beam",
+   "kind": "model",
+   "category": "model",
+   "tags": [
+    "models",
+    "local-llm"
+   ],
+   "score": 43.4,
+   "vendor": null,
+   "primary": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
+    "published_at": "2026-10-21T15:00:00+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "Beam model by Reflection is now available on Amazon SageMaker JumpStart and AWS Trainium",
+    "event_id": "e6e4446708"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
+     "published_at": "2026-10-21T15:00:00+00:00",
+     "source_type": "release_note",
+     "title": "Beam model by Reflection is now available on Amazon SageMaker JumpStart and AWS Trainium",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "feed": "aws-whats-new",
+     "event_id": "e6e4446708"
+    }
+   ],
+   "sources": [
+    {
+     "name": "ollama",
+     "title": "beam",
+     "url": "https://ollama.com/library/beam",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "official",
+     "title": "Beam model by Reflection is now available on Amazon SageMaker JumpStart and AWS Trainium",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
+    "https://ollama.com/library/beam"
+   ],
+   "official_verified": true,
+   "summary": "Beam model by Reflection is now available on Amazon SageMaker JumpStart and AWS Trainium ― Beam, the first open weight model offered by US-based Reflection, is now available in Amazon SageMaker JumpSta。4ソースで言及(代表: 「Beam model by Reflection is now available on Amazon SageMake」)",
+   "slides": [],
+   "score_breakdown": {
+    "reddit_localllama": 0.62,
+    "reddit_ollama": 0.658,
+    "ollama": 0.5,
+    "official": 0.8
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 6,
+    "factor": 0.6
+   },
+   "why": {
+    "first_seen": "2026-10-21",
+    "peak_day": "2026-10-22",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "reddit_ollama",
+      "title": "Model Releases Oct 11 - 25",
+      "url": "https://www.reddit.com/r/ollama/comments/1xfk8wj/model_releases_oct_11_25/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "Meta's 816B Muse Spark Open scores 39 on Artificial Analysis, the 180B Qwen3.8-Flash-Next scores 40. Score vs size for 11 open-weight models",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xcthj8/metas_816b_muse_spark_open_scores_39_on/"
+     }
+    ]
+   },
    "related": [],
    "resolved_repo": null,
    "trend_label": "rising",
@@ -3582,6 +3764,148 @@
   },
   {
    "rank": 16,
+   "keyword": "OpenShell",
+   "entity_id": "openshell",
+   "kind": "release",
+   "category": "dev-tool",
+   "tags": [
+    "agents",
+    "tools"
+   ],
+   "score": 42.8,
+   "vendor": null,
+   "primary": {
+    "url": "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6",
+    "published_at": "2026-10-27T17:56:58+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "NVIDIA/OpenShell OpenShell v0.1.6",
+    "event_id": "1aa387bd8f"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6",
+     "published_at": "2026-10-27T17:56:58+00:00",
+     "source_type": "release_note",
+     "title": "NVIDIA/OpenShell OpenShell v0.1.6",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "1aa387bd8f"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6-pre.7",
+     "published_at": "2026-10-27T15:44:53+00:00",
+     "source_type": "release_note",
+     "title": "NVIDIA/OpenShell v0.1.6-pre.7: fix(ci): allow accepted protobuf breaks for v0.1.6 prereleases (#4976)",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "30822ea5e7"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/NVIDIA/OpenShell/releases/tag/sdk%2Fgo%2Fv0.1.6",
+     "published_at": "2026-10-27T15:44:53+00:00",
+     "source_type": "release_note",
+     "title": "NVIDIA/OpenShell sdk/go/v0.1.6: fix(ci): allow accepted protobuf breaks for v0.1.6 prereleases (#4976)",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "6a6d0197e0"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6-pre.6",
+     "published_at": "2026-10-27T04:28:39+00:00",
+     "source_type": "release_note",
+     "title": "NVIDIA/OpenShell v0.1.6-pre.6: feat(supervisor): recover shared instances with hash-based HA (#4864)",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "2c45e83846"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6-pre.5",
+     "published_at": "2026-10-26T14:04:16+00:00",
+     "source_type": "release_note",
+     "title": "NVIDIA/OpenShell v0.1.6-pre.5: fix(deps): update tokio and crypto-bigint security patches (#4924)",
+     "vendor": null,
+     "date_basis": "published",
+     "event_id": "beb347ba3b"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hackernews",
+     "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+     "url": "https://github.com/NVIDIA/OpenShell",
+     "metric": 507.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "NVIDIA/OpenShell: safe, private runtime for autonomous AI agents",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xcs9e2/nvidiaopenshell_safe_private_runtime_for/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6",
+    "https://github.com/NVIDIA/OpenShell"
+   ],
+   "official_verified": true,
+   "summary": "NVIDIA/OpenShell OpenShell v0.1.6 ― OpenShell is the safe, private runtime for autonomous AI agents.。3ソースで言及(代表: 「OpenShell – A safe, private runtime for fleets of autonomous」)",
+   "slides": [],
+   "score_breakdown": {
+    "hackernews": 0.889,
+    "reddit_localllama": 0.45,
+    "devto": 0.353
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-22",
+    "peak_day": "2026-10-22",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "hackernews",
+      "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+      "url": "https://github.com/NVIDIA/OpenShell"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "NVIDIA/OpenShell: safe, private runtime for autonomous AI agents",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xcs9e2/nvidiaopenshell_safe_private_runtime_for/"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": {
+    "url": "https://github.com/NVIDIA/OpenShell",
+    "created_at": "2026-02-24T22:52:22Z",
+    "stars": 20409,
+    "description": "OpenShell is the safe, private runtime for autonomous AI agents."
+   },
+   "trend_label": "rising",
+   "x_posts": [],
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": []
+  },
+  {
+   "rank": 17,
    "keyword": "survival-llm",
    "entity_id": "survival-llm",
    "kind": "repo",
@@ -3589,7 +3913,7 @@
    "tags": [
     "tools"
    ],
-   "score": 38.3,
+   "score": 37.5,
    "vendor": null,
    "primary": {
     "url": "https://github.com/anonnerdfrenzy/survival-llm/releases/tag/v0.3.4",
@@ -3661,14 +3985,14 @@
      "name": "github_new",
      "title": "anonnerdfrenzy/survival-llm",
      "url": "https://github.com/anonnerdfrenzy/survival-llm",
-     "metric": 235.0,
+     "metric": 245.0,
      "metric_name": "stars"
     },
     {
      "name": "hackernews",
      "title": "Survival LLM: AI assistant and emergency library that runs on your own computer",
      "url": "https://www.brangus.io/survival-llm",
-     "metric": 362.0,
+     "metric": 375.0,
      "metric_name": "points"
     }
    ],
@@ -3680,8 +4004,8 @@
    "summary": "anonnerdfrenzy/survival-llm Survival LLM 0.3.4 ― A free AI assistant and survival library that runs on your own computer, with no internet needed. Shows the so。2ソースで言及(代表: 「Survival LLM: AI assistant and emergency library that runs o」)",
    "slides": [],
    "score_breakdown": {
-    "github_new": 0.642,
-    "hackernews": 0.841
+    "github_new": 0.646,
+    "hackernews": 0.846
    },
    "velocity": {
     "hn_this_week": 1,
@@ -3709,109 +4033,9 @@
    "resolved_repo": {
     "url": "https://github.com/anonnerdfrenzy/survival-llm",
     "created_at": "2026-10-24T19:12:41Z",
-    "stars": 235,
+    "stars": 245,
     "description": "A free AI assistant and survival library that runs on your own computer, with no internet needed. Shows the source of every answer."
    },
-   "trend_label": "rising",
-   "x_posts": [],
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": []
-  },
-  {
-   "rank": 17,
-   "keyword": "Rollback",
-   "entity_id": "rollback",
-   "kind": "paper",
-   "category": "research",
-   "tags": [
-    "research"
-   ],
-   "score": 37.1,
-   "vendor": null,
-   "primary": {
-    "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-cloudformation-cdk/",
-    "published_at": "2026-10-22T17:30:00+00:00",
-    "date_basis": "published",
-    "source_type": "release_note",
-    "title": "AWS CloudFormation now simplifies stack update rollback operations",
-    "event_id": "67e2134408"
-   },
-   "events": [
-    {
-     "kind": "announcement",
-     "source": "official",
-     "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-cloudformation-cdk/",
-     "published_at": "2026-10-22T17:30:00+00:00",
-     "source_type": "release_note",
-     "title": "AWS CloudFormation now simplifies stack update rollback operations",
-     "vendor": "AWS",
-     "date_basis": "published",
-     "feed": "aws-whats-new",
-     "event_id": "67e2134408"
-    },
-    {
-     "kind": "paper",
-     "source": "hf_papers",
-     "url": "https://huggingface.co/papers/2610.36068",
-     "published_at": "2026-10-26T00:00:00+00:00",
-     "source_type": "paper",
-     "title": "Rollback: Experience Backtracking in World Models for Policy Improvement",
-     "vendor": null,
-     "date_basis": "published",
-     "feed": null,
-     "event_id": "9eb2b60e5b"
-    }
-   ],
-   "sources": [
-    {
-     "name": "hf_papers",
-     "title": "Rollback: Experience Backtracking in World Models for Policy Improvement",
-     "url": "https://huggingface.co/papers/2610.36068",
-     "metric": 49.0,
-     "metric_name": "upvotes"
-    },
-    {
-     "name": "official",
-     "title": "AWS CloudFormation now simplifies stack update rollback operations",
-     "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-cloudformation-cdk/",
-     "metric": 1.0,
-     "metric_name": "announcement"
-    }
-   ],
-   "official_urls": [
-    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-cloudformation-cdk/",
-    "https://huggingface.co/papers/2610.36068"
-   ],
-   "official_verified": true,
-   "summary": "AWS CloudFormation now simplifies stack update rollback operations ― AWS CloudFormation &nbsp;now makes it simpler to complete an update rollback and get back to deploying. An upd。3ソースで言及(代表: 「AWS CloudFormation now simplifies stack update rollback oper」)",
-   "slides": [],
-   "score_breakdown": {
-    "hf_papers": 0.611,
-    "bluesky": 0.047,
-    "official": 0.8
-   },
-   "velocity": {
-    "hn_this_week": 1,
-    "hn_prev_week": 1,
-    "factor": 0.7
-   },
-   "why": {
-    "first_seen": "2026-10-22",
-    "peak_day": "2026-10-22",
-    "co_mentioned": [],
-    "evidence": [
-     {
-      "source": "hf_papers",
-      "title": "Rollback: Experience Backtracking in World Models for Policy Improvement",
-      "url": "https://huggingface.co/papers/2610.36068"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": null,
    "trend_label": "rising",
    "x_posts": [],
    "verification": {
@@ -3830,7 +4054,7 @@
     "hardware",
     "local-llm"
    ],
-   "score": 24.9,
+   "score": 21.9,
    "vendor": "NVIDIA",
    "primary": {
     "url": "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/feed/",
@@ -3869,15 +4093,15 @@
    "sources": [
     {
      "name": "official",
-     "title": "Bringing the Spark to Europe: Local Intelligence Powers Next Wave of Agents",
-     "url": "https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark-station-sync/",
+     "title": "3 Ways to Boost MoE Inference on NVIDIA DGX Spark",
+     "url": "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/feed/",
      "metric": 1.0,
      "metric_name": "announcement"
     },
     {
      "name": "official",
-     "title": "3 Ways to Boost MoE Inference on NVIDIA DGX Spark",
-     "url": "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/feed/",
+     "title": "Running Frontier-Class AI Models Across 8 NVIDIA DGX Spark Nodes",
+     "url": "https://developer.nvidia.com/blog/running-frontier-class-ai-models-across-8-nvidia-dgx-spark-nodes/feed/",
      "metric": 1.0,
      "metric_name": "announcement"
     }
@@ -3887,10 +4111,10 @@
     "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
    ],
    "official_verified": true,
-   "summary": "3 Ways to Boost MoE Inference on NVIDIA DGX Spark ― Generating tokens faster starts with identifying what limits inference performance. In the batch-size-1 evalua。1ソースで言及(代表: 「Bringing the Spark to Europe: Local Intelligence Powers Next」)",
+   "summary": "3 Ways to Boost MoE Inference on NVIDIA DGX Spark ― Generating tokens faster starts with identifying what limits inference performance. In the batch-size-1 evalua。1ソースで言及(代表: 「3 Ways to Boost MoE Inference on NVIDIA DGX Spark」)",
    "slides": [],
    "score_breakdown": {
-    "official": 1.2
+    "official": 1.0
    },
    "velocity": {
     "hn_this_week": 0,
@@ -3898,8 +4122,8 @@
     "factor": 0.7
    },
    "why": {
-    "first_seen": "2026-10-21",
-    "peak_day": "2026-10-21",
+    "first_seen": "2026-10-22",
+    "peak_day": "2026-10-22",
     "co_mentioned": [],
     "evidence": []
    },
@@ -3923,7 +4147,7 @@
     "research",
     "models"
    ],
-   "score": 22.4,
+   "score": 21.8,
    "vendor": "Tencent",
    "primary": {
     "url": "https://huggingface.co/papers/2610.36729",
@@ -3959,7 +4183,7 @@
      "name": "hf_papers",
      "title": "Hy-Nomas: Towards Free-form Interactive World Generation",
      "url": "https://huggingface.co/papers/2610.36729",
-     "metric": 100.0,
+     "metric": 101.0,
      "metric_name": "upvotes"
     }
    ],
@@ -3972,7 +4196,7 @@
    "slides": [],
    "score_breakdown": {
     "hf_models": 0.667,
-    "hf_papers": 0.721
+    "hf_papers": 0.712
    },
    "velocity": {
     "hn_this_week": 1,
@@ -4003,54 +4227,62 @@
   },
   {
    "rank": 20,
-   "keyword": "fastapi",
-   "entity_id": "fastapi",
-   "kind": "repo",
-   "category": "github-trending",
+   "keyword": "PDRVLA",
+   "entity_id": "pdrvla",
+   "kind": "paper",
+   "category": "research",
    "tags": [
-    "tools"
+    "research"
    ],
-   "score": 14.3,
+   "score": 12.3,
    "vendor": null,
    "primary": {
-    "url": "https://github.com/fastapi/fastapi",
-    "published_at": null,
-    "date_basis": "observed",
-    "source_type": "trending",
-    "title": "fastapi/fastapi",
-    "event_id": "f7d185847b"
+    "url": "https://huggingface.co/papers/2610.37381",
+    "published_at": "2026-10-27T00:00:00+00:00",
+    "date_basis": "published",
+    "source_type": "paper",
+    "title": "PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations",
+    "event_id": "5099fb54f5"
    },
    "events": [
     {
-     "kind": "trending",
-     "source": "github_trending",
-     "url": "https://github.com/fastapi/fastapi",
-     "published_at": null,
-     "source_type": "trending",
-     "title": "fastapi/fastapi",
+     "kind": "paper",
+     "source": "hf_papers",
+     "url": "https://huggingface.co/papers/2610.37381",
+     "published_at": "2026-10-27T00:00:00+00:00",
+     "source_type": "paper",
+     "title": "PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations",
      "vendor": null,
-     "date_basis": "observed",
-     "event_id": "f7d185847b"
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "5099fb54f5"
     }
    ],
    "sources": [
     {
-     "name": "github_trending",
-     "title": "fastapi/fastapi",
-     "url": "https://github.com/fastapi/fastapi",
-     "metric": 1089.0,
-     "metric_name": "stars_week"
+     "name": "hf_papers",
+     "title": "PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations",
+     "url": "https://huggingface.co/papers/2610.37381",
+     "metric": 122.0,
+     "metric_name": "upvotes"
+    },
+    {
+     "name": "arxiv",
+     "title": "PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations",
+     "url": "http://arxiv.org/abs/2610.37381v1",
+     "metric": 1.0,
+     "metric_name": "paper"
     }
    ],
    "official_urls": [
-    "https://github.com/fastapi/fastapi"
+    "https://huggingface.co/papers/2610.37381"
    ],
    "official_verified": false,
-   "summary": "fastapi/fastapi ― Star fastapi / fastapi FastAPI framework, high performance, easy to learn, fast to code, ready for production。2ソースで言及(代表: 「fastapi/fastapi」)",
+   "summary": "PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations ― Vision--Language--Action (VLA) models generate robot actions from visual observations and language instruction。2ソースで言及(代表: 「PDRVLA: A Vision-Language-Action Model with Physical Dynamic」)",
    "slides": [],
    "score_breakdown": {
-    "github_new": 0.249,
-    "github_trending": 0.721
+    "hf_papers": 0.741,
+    "arxiv": 0.09
    },
    "velocity": {
     "hn_this_week": 0,
@@ -4058,19 +4290,14 @@
     "factor": 0.7
    },
    "why": {
-    "first_seen": "2026-10-22",
-    "peak_day": "2026-10-22",
+    "first_seen": "2026-10-27",
+    "peak_day": "2026-10-27",
     "co_mentioned": [],
     "evidence": [
      {
-      "source": "github_new",
-      "title": "BigGooseDun/JobFit-Studio",
-      "url": "https://github.com/BigGooseDun/JobFit-Studio"
-     },
-     {
-      "source": "github_new",
-      "title": "manishklach/InferenceFlow",
-      "url": "https://github.com/manishklach/InferenceFlow"
+      "source": "hf_papers",
+      "title": "PDRVLA: A Vision-Language-Action Model with Physical Dynamics Representations",
+      "url": "https://huggingface.co/papers/2610.37381"
      }
     ]
    },
@@ -4091,14 +4318,6 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "Terminal",
-   "reason": "no primary source dated inside the window"
-  },
-  {
-   "keyword": "Analysis",
-   "reason": "no primary source dated inside the window"
-  },
-  {
    "keyword": "minimax-m3",
    "reason": "no primary source dated inside the window"
   },
@@ -4107,15 +4326,15 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "nemotron3",
-   "reason": "no primary source dated inside the window"
-  },
-  {
    "keyword": "DeepSeek-V4.1-Flash",
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "Attention",
+   "keyword": "nemotron3",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "Terminal",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4123,15 +4342,15 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "NVIDIA Blackwell",
-   "reason": "no primary source dated inside the window"
-  },
-  {
-   "keyword": "Carbon-X",
-   "reason": "no primary source dated inside the window"
-  },
-  {
    "keyword": "nemotron-3.5-bolt",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "Attention",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "NVIDIA Blackwell",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4139,11 +4358,19 @@
    "reason": "no primary source dated inside the window"
   },
   {
+   "keyword": "embeddinggemma-2",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "qwen3.6",
+   "reason": "no primary source dated inside the window"
+  },
+  {
    "keyword": "MiniMax-H3",
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "Chinese",
+   "keyword": "muse-spark-open",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4155,7 +4382,19 @@
    "reason": "no primary source dated inside the window"
   },
   {
+   "keyword": "LM Studio",
+   "reason": "no primary source dated inside the window"
+  },
+  {
    "keyword": "LFM3-VL",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "LFM3-Audio",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "Carbon-X",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4167,23 +4406,11 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "embeddinggemma-2",
-   "reason": "no primary source dated inside the window"
-  },
-  {
-   "keyword": "Qwen-Image-2.1",
-   "reason": "no primary source dated inside the window"
-  },
-  {
    "keyword": "Plugin",
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "Opus 5.5",
-   "reason": "no primary source dated inside the window"
-  },
-  {
-   "keyword": "LoRA",
+   "keyword": "Qwen-Image-2.1",
    "reason": "no primary source dated inside the window"
   }
  ],
@@ -4192,6 +4419,7 @@
   "LiquidAI",
   "WorkSpaces",
   "SageMaker",
+  "Genie 4",
   "OpenSearch",
   "TorchNeuron",
   "LFM3-Omni",
@@ -4208,14 +4436,17 @@
   "PrivateLink",
   "Rerank 5",
   "RFD4-Proteina Using",
-  "ThinkingBox"
+  "ThinkingBox",
+  "Warfare 4"
  ],
  "stoplisted": [
   "Agent Skills",
+  "Analysis",
   "Anthropic",
   "Apple Silicon",
   "Benchmarking",
   "ChatGPT",
+  "Chinese",
   "Cursor",
   "DeepSeek",
   "Diffusion language models",
@@ -4234,9 +4465,10 @@
   "Quantization",
   "RAG",
   "Reinforcement learning (RLVR)",
+  "Rollback",
+  "Semantic",
   "Speculative decoding",
   "Test-time compute",
-  "Transformers",
   "Windows",
   "skills",
   "xAI"
@@ -4249,7 +4481,7 @@
    "links": [
     "https://www.anthropic.com/news/s1-sec"
    ],
-   "likes": 18065,
+   "likes": 18076,
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   },
   {
@@ -4269,7 +4501,7 @@
    "links": [
     "https://www.anthropic.com/research/early-progress-drug-development"
    ],
-   "likes": 8257,
+   "likes": 8378,
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   },
   {
@@ -4279,7 +4511,7 @@
    "links": [
     "https://www.anthropic.com/research/alignment-assessment-ukaisi"
    ],
-   "likes": 4484,
+   "likes": 4486,
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   },
   {
@@ -4303,33 +4535,13 @@
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   },
   {
-   "author": "NVIDIAAI",
-   "url": "https://x.com/NVIDIAAI/status/2113657112408785153",
-   "text": "Available now: NVIDIA Nemotron 3.5 Bolt E4B 4GB ⚡️\n\nOur newest small open model is built for local assistants, interactive characters and robots that can carry ",
-   "links": [
-    "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Bolt-E4B-4GB/"
-   ],
-   "likes": 2074,
-   "status": "unverified: needs official site / release note / GitHub Release corroboration"
-  },
-  {
-   "author": "MistralAI",
-   "url": "https://x.com/MistralAI/status/2112870261829603589",
-   "text": "Today we’re announcing a new collaboration with @nvidia to bring AI to industrial engineering: \n\n- faster simulation\n- open benchmarks and supporting datasets f",
-   "links": [
-    "https://mistral.ai/news/mistral-nvidia-ai-for-industrial-engineering"
-   ],
-   "likes": 2003,
-   "status": "unverified: needs official site / release note / GitHub Release corroboration"
-  },
-  {
    "author": "AnthropicAI",
    "url": "https://x.com/AnthropicAI/status/2115207004293853358",
    "text": "We're expanding our partnership with @USGSA. Under a new OneGov agreement, we are bringing Claude to federal, state, local, tribal, and territorial governments ",
    "links": [
     "https://www.anthropic.com/news/expanding-partnership-gsa"
    ],
-   "likes": 1650,
+   "likes": 1672,
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   }
  ],
@@ -4396,6 +4608,13 @@
    "url": "https://huggingface.co/blog/allenai/novelty-bench",
    "date": "2026-10-28",
    "feed": "huggingface-blog"
+  },
+  {
+   "vendor": "Google",
+   "title": "Genie 4: A new generation of world simulation",
+   "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+   "date": "2026-10-28",
+   "feed": "deepmind-blog"
   },
   {
    "vendor": "NVIDIA",
@@ -4489,13 +4708,6 @@
    "feed": "allenai-blog"
   },
   {
-   "vendor": "Google",
-   "title": "Empowering frontline maternal care with AI-assisted ultrasound",
-   "url": "https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/",
-   "date": "2026-10-22",
-   "feed": "google-research-blog"
-  },
-  {
    "vendor": "Cohere",
    "title": "Cohere Rerank 5",
    "url": "https://cohere.com/blog/rerank-5",
@@ -4503,5 +4715,5 @@
    "feed": "cohere-blog"
   }
  ],
- "candidates_pool": 116
+ "candidates_pool": 118
 }

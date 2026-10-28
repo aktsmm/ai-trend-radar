@@ -24,7 +24,7 @@ def light(t, prefix="", self_url=True):
     v = t.get("verification") or {}
     checked = max((c["retrieved_at"] for c in v.get("checks", [])), default=None)
     return {
-        "id": eid, "keyword": t["keyword"], "headline": (t.get("slides") or [{}])[0].get("title"), "vendor": t.get("vendor"),
+        "id": eid, "keyword": t["keyword"], "display": t.get("display", t["keyword"]), "headline": (t.get("slides") or [{}])[0].get("title"), "vendor": t.get("vendor"),
         "category": t["category"], "kind": t["kind"], "tags": t["tags"], "rank": t["rank"], "score": t["score"],
         "summary": (t.get("digest") or {}).get("summary", []), "published_at": t["primary"]["published_at"],
         "official_urls": t["official_urls"], "verification": {"status": v.get("status", "unverified"), "checked_at": checked},

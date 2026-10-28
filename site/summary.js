@@ -12,7 +12,7 @@
     const cats = Object.keys(by).sort((a, b) => by[b] - by[a]);
     const max = Math.max(1, ...Object.values(by));
     const vendors = new Set(pub.map(t => t.vendor).filter(Boolean)).size;
-    const name = e => (D.trends.find(t => t.entity_id === e) || { keyword: e }).keyword;
+    const name = e => { const t = D.trends.find(t => t.entity_id === e) || { keyword: e }; return t.display || t.keyword; };
     const w = D.window;
     return `<div class="sm">
       <div class="sm-head"><div><div class="sm-kick">AI Trend Radar</div><h1>今週の AI は、こんな 1 週間でした</h1></div><div class="sm-week">${esc(w.label)}<small>${esc(w.from)} 〜 ${esc(w.to)}</small></div></div>
@@ -22,14 +22,14 @@
           <h2>分野の内訳</h2>
           ${cats.map(c => `<div class="sm-bar"><span class="n">${esc(CAT[c] || c)}</span><span class="t"><i style="width:${Math.round(by[c] / max * 100)}%;background:${COL[c] || "#475569"}"></i></span><span class="v">${by[c]}</span></div>`).join("")}
           <h2 class="sm-h2b">今週の主な出来事</h2>
-          <ul class="sm-list">${pub.slice(0, 9).map(t => `<li><i style="background:${COL[t.category] || "#475569"}"></i><b>${esc(t.keyword)}</b> ${esc(((t.slides || [])[0] || {}).title || "")}</li>`).join("")}</ul>
+          <ul class="sm-list">${pub.slice(0, 9).map(t => `<li><i style="background:${COL[t.category] || "#475569"}"></i><b>${esc(t.display || t.keyword)}</b> ${esc(((t.slides || [])[0] || {}).title || "")}</li>`).join("")}</ul>
         </div>
         <div class="sm-right">
           <h2>今週のテーマ <small>共通する背景の見立て(AI の解釈)</small></h2>
           <div class="sm-themes">${th.map((x, i) => `<div class="sm-th"><div class="no">${i + 1}</div><div><h3>${esc(x.title)} <em>${esc(CONF[x.confidence])}</em></h3><p>${esc(x.summary)}</p><p class="bgl">${esc(x.background[0])}</p><div class="ch">${x.entities.map(e => `<span>${esc(name(e))}</span>`).join("")}</div></div></div>`).join("") || `<div class="sm-th"><div><p>今週はテーマをまだ作成していません。</p></div></div>`}</div>
         </div>
       </div>
-      <div class="sm-foot"><b>注目の項目</b> ${pub.slice(0, 8).map(t => `<span class="sm-pill" style="--c:${COL[t.category] || "#475569"}">${esc(t.keyword)}</span>`).join("")}</div>
+      <div class="sm-foot"><b>注目の項目</b> ${pub.slice(0, 8).map(t => `<span class="sm-pill" style="--c:${COL[t.category] || "#475569"}">${esc(t.display || t.keyword)}</span>`).join("")}</div>
     </div>`;
   };
 })();

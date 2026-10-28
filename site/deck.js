@@ -16,7 +16,7 @@
 
   function head(t, n, title) {
     const label = t.trend_label === "baseline" ? "今週の注目" : "上昇中";
-    return `<div class="d-head"><div class="d-chips"><span class="d-chip">${esc(t.category)}</span>${t.vendor ? `<span class="d-chip alt">${esc(t.vendor)}</span>` : ""}<span class="d-chip badge">${label}</span><span class="d-pager">${esc(t.keyword)} ・ ${n}/2</span></div><h1>${esc(title)}</h1></div>`;
+    return `<div class="d-head"><div class="d-chips"><span class="d-chip">${esc(t.category)}</span>${t.vendor ? `<span class="d-chip alt">${esc(t.vendor)}</span>` : ""}<span class="d-chip badge">${label}</span><span class="d-pager">${esc(t.display || t.keyword)} ・ ${n}/2</span></div><h1>${esc(title)}</h1></div>`;
   }
   function foot(t, refs) {
     const ver = (t.verification && t.verification.status) || "unverified";
@@ -53,7 +53,7 @@
       <div class="cv-note">各キーワード 2 枚(概要 / 影響・使い方)。内容は公式の一次情報で確認したもので、要約は AI の下書きを照合して掲載しています。ベンダーが発表した数字は独自には検証していません。</div></div>`;
   }
   function toc(D, list) {
-    return `<div class="dslide toc"><div class="d-head"><h1>目次</h1></div><div class="toc-body">${list.map((t, i) => `<div class="toc-row"><span class="toc-no">${i + 1}</span><span class="toc-kw">${esc(t.keyword)}</span><span class="d-chip alt">${esc(t.category)}</span><span class="toc-tk">${esc((t.slides[0] || {}).title || t.deck.overview.takeaway)}</span><span class="toc-pg">p.${3 + (D.themes && D.themes.length ? 1 : 0) + i * 2}</span></div>`).join("")}</div></div>`;
+    return `<div class="dslide toc"><div class="d-head"><h1>目次</h1></div><div class="toc-body">${list.map((t, i) => `<div class="toc-row"><span class="toc-no">${i + 1}</span><span class="toc-kw">${esc(t.display || t.keyword)}</span><span class="d-chip alt">${esc(t.category)}</span><span class="toc-tk">${esc((t.slides[0] || {}).title || t.deck.overview.takeaway)}</span><span class="toc-pg">p.${3 + (D.themes && D.themes.length ? 1 : 0) + i * 2}</span></div>`).join("")}</div></div>`;
   }
   function themes(D) {
     const th = D.themes || [];

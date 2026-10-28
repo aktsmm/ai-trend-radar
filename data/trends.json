@@ -655,7 +655,8 @@
      "url": "https://gigazine.net/news/20261027-concerning-behaviour-open-weight-ai-model/",
      "date": "2026-10-27"
     }
-   ]
+   ],
+   "display": "Qwen3.8"
   },
   {
    "rank": 2,
@@ -931,6 +932,7 @@
     }
    },
    "jp_reactions": [],
+   "display": "Ollama",
    "digest": {
     "summary": [
      "Ollama が、テキストを音声にする音声モデルに対応したと 2026-10-24 に発表した。最初のモデルは Gradium の小型 TTS ファミリー Phonon。",
@@ -1297,6 +1299,7 @@
      "date": "2026-10-28"
     }
    ],
+   "display": "Claude Code",
    "digest": {
     "summary": [
      "Anthropic の Claude Code が v2.1.310 を 2026-10-23 にリリースした。多数の修正と改善を含む更新。",
@@ -1578,7 +1581,8 @@
      "url": "https://qiita.com/shalXXXX/items/b67969e3b5a01871be5e",
      "date": "2026-10-28"
     }
-   ]
+   ],
+   "display": "ggml llama.cpp"
   },
   {
    "rank": 5,
@@ -1800,6 +1804,7 @@
     }
    },
    "jp_reactions": [],
+   "display": "flint",
    "digest": {
     "summary": [
      "Microsoft Research が、操作できるグラフを作る言語 Flint-interactive を 2026-10-22 のブログで紹介した。",
@@ -2165,6 +2170,7 @@
     }
    },
    "jp_reactions": [],
+   "display": "LFM3",
    "digest": {
     "summary": [
      "Liquid AI が、新世代の小型モデル LFM3 を 2026-10-27 に発表した。文字・画像・音声などを 1 つの土台でそろえた、約 2B 級の 6 モデル。",
@@ -2402,7 +2408,8 @@
      "url": "https://zenn.dev/sponge841841/articles/2026-10-27-codex-day22-gpt61-terra",
      "date": "2026-10-28"
     }
-   ]
+   ],
+   "display": "OpenAI Codex"
   },
   {
    "rank": 8,
@@ -2571,7 +2578,8 @@
      "url": "https://zenn.dev/ament3/articles/ai-digest-2026-10-26-2321",
      "date": "2026-10-28"
     }
-   ]
+   ],
+   "display": "vLLM"
   },
   {
    "rank": 9,
@@ -2734,7 +2742,8 @@
      "url": "https://nowokay.hatenablog.com/entry/2026/10/22/225112",
      "date": "2026-10-22"
     }
-   ]
+   ],
+   "display": "Unsloth"
   },
   {
    "rank": 10,
@@ -2883,7 +2892,8 @@
     "status": "unverified",
     "checks": []
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "display": "phonon"
   },
   {
    "rank": 11,
@@ -3076,6 +3086,7 @@
     }
    },
    "jp_reactions": [],
+   "display": "Moonshot kimi-k3",
    "digest": {
     "summary": [
      "Moonshot AI が、K3.1 シリーズ第 1 弾のオープンウェイトモデル Kimi K3.1 Pro を発表した。1M トークンの文脈長を持つ。",
@@ -3327,7 +3338,8 @@
     "status": "unverified",
     "checks": []
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "display": "Coder"
   },
   {
    "rank": 13,
@@ -3510,7 +3522,8 @@
      "url": "https://pc.watch.impress.co.jp/docs/news/2151399.html",
      "date": "2026-10-27"
     }
-   ]
+   ],
+   "display": "OpenAI gpt-6.1-terra"
   },
   {
    "rank": 14,
@@ -3665,7 +3678,8 @@
      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
      "date": "2026-10-27"
     }
-   ]
+   ],
+   "display": "Gemini CLI"
   },
   {
    "rank": 15,
@@ -3814,6 +3828,7 @@
      "checked_at": "2026-10-28T11:44:43.719766+00:00"
     }
    },
+   "display": "beam",
    "digest": {
     "summary": [
      "AWS が 2026-10-21 に、Reflection 初のオープンウェイトモデル Beam を Amazon SageMaker JumpStart で使えるようにしたと発表した。",
@@ -4123,6 +4138,7 @@
      "checked_at": "2026-10-28T11:44:43.719766+00:00"
     }
    },
+   "display": "OpenShell",
    "digest": {
     "summary": [
      "NVIDIA が公開する OpenShell は、自律型 AI エージェントを安全かつ非公開に動かすための実行環境。v0.1.6 が 2026-10-27 に公開された。",
@@ -4370,7 +4386,8 @@
     "status": "unverified",
     "checks": []
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "display": "survival-llm"
   },
   {
    "rank": 18,
@@ -4517,6 +4534,7 @@
      "checked_at": "2026-10-28T11:44:43.719766+00:00"
     }
    },
+   "display": "NVIDIA DGX Spark",
    "digest": {
     "summary": [
      "NVIDIA の技術ブログが 2026-10-27 に、DGX Spark 上で MoE モデルの推論を速める 3 つの手法を紹介した。",
@@ -4703,7 +4721,8 @@
     "status": "unverified",
     "checks": []
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "display": "Hy-Nomas"
   },
   {
    "rank": 20,
@@ -4789,7 +4808,8 @@
     "status": "unverified",
     "checks": []
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "display": "PDRVLA"
   }
  ],
  "pending": [

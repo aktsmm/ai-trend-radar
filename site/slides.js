@@ -35,7 +35,7 @@
     const n = [...s.stat.value].length, cls = n > 12 ? "xs" : n > 8 ? "sm" : "";
     return `<div class="slide infog cat-${esc(t.category)}">
       <div class="head">
-        <div class="chips"><span class="chip">${esc(t.category)}</span>${t.tags.slice(1).map(x => `<span class="chip alt">${esc(x)}</span>`).join("")}<span class="chip badge">${badge}</span><span class="pager">${esc(t.keyword)}</span></div>
+        <div class="chips"><span class="chip">${esc(t.category)}</span>${t.tags.slice(1).map(x => `<span class="chip alt">${esc(x)}</span>`).join("")}<span class="chip badge">${badge}</span><span class="pager">${esc(t.display || t.keyword)}</span></div>
         <h1>${esc(s.title)}</h1>
       </div>
       <div class="ibody">
@@ -61,7 +61,7 @@
       : `<ol class="cards n${s.bullets.length}">${s.bullets.map((b, k) => `<li><span class="num">${k + 1}</span><span>${md(b)}</span></li>`).join("")}</ol>`;
     return `<div class="slide cat-${esc(t.category)}">
       <div class="head">
-        <div class="chips"><span class="chip">${esc(t.category)}</span>${t.tags.slice(1).map(x => `<span class="chip alt">${esc(x)}</span>`).join("")}<span class="chip badge">${badge}</span><span class="pager">${esc(t.keyword)} ・ ${i + 1}/${t.slides.length}</span></div>
+        <div class="chips"><span class="chip">${esc(t.category)}</span>${t.tags.slice(1).map(x => `<span class="chip alt">${esc(x)}</span>`).join("")}<span class="chip badge">${badge}</span><span class="pager">${esc(t.display || t.keyword)} ・ ${i + 1}/${t.slides.length}</span></div>
         <h1>${esc(s.title)}</h1>
       </div>
       <div class="body ${two ? "" : "single"}">

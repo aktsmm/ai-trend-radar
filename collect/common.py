@@ -26,7 +26,11 @@ def get(url, headers=None, timeout=25, retries=1):
         try:
             req = urllib.request.Request(url, headers=h)
             with urllib.request.urlopen(req, timeout=timeout) as r:
-                return r.read().decode("utf-8", errors="replace")
+                body = r.read()
+                if body[:2] == b"\x1f\x8b":  # some servers gzip the body even though Accept-Encoding was not sent
+                    import gzip
+                    body = gzip.decompress(body)
+                return body.decode("utf-8", errors="replace")
         except urllib.error.HTTPError as e:
             last = e
             if e.code == 429 and i < retries:

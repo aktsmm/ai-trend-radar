@@ -89,3 +89,5 @@
 
 - 誤掲載の訂正: 自動マージは掲載の削除を拒否する(設計)。無関係な項目が載った場合は、該当 entity を digest / slides / decks / enrichment / glossary から外し、rejected_candidates.json に理由を書き、`data/stoplist.yml` の `generic` に語を足して手動で PR にする(2026-10-28: AWS IAM の話題が『Cross』という誤クラスタで載った)。
 
+- `collect.common.get` は gzip のまま返ってくる応答を展開する。Google DeepMind のフィードが W43・W44 の 2 週間、gzip のまま返って解析に失敗していた(`analyze.source_health` が見つけた)。収集元の健全性は `[source-health]` Issue として別に通知し、フルテストを赤にしない。
+

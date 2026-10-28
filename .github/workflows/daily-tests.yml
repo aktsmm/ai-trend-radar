@@ -36,7 +36,19 @@ jobs:
           python -m analyze.digest_gate
           python -m render.build_all --offline
           python -m unittest discover -s tests
-          python -m analyze.source_health
+      - name: Source health (its own issue, so a stale weekly ledger does not turn every daily test red)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          title="[source-health] 収集元に問題があります"
+          out=$(python -m analyze.source_health || true)
+          echo "$out"
+          open=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          if echo "$out" | grep -q "^SOURCE "; then
+            body=$(printf "公式フィード・ブログ一覧の健全性チェックが問題を見つけました(週次レポートの記録に基づく)。\n\n%s\n\n直したら、次の週次・中間更新のレポートで解消します。" "$(echo "$out" | grep "^SOURCE ")")
+            if [ -n "$open" ]; then gh issue comment "$open" --body "$body"; else gh issue create --title "$title" --body "$body"; fi
+          elif [ -n "$open" ]; then gh issue close "$open" --comment "収集元の問題は解消しました。"; fi
       - name: Open / update an issue on failure, close it on recovery
         run: |
           title="[daily-tests] master のフルテストが失敗しています"

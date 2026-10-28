@@ -444,6 +444,16 @@ def on_topic_filter(t):
     t["x_posts"] = [p for p in t["x_posts"] if hit(p["text"])]
 
 
+def display_name(keyword, vendor):
+    """Name shown to readers. Bare model / tool ids such as 'kimi-k3' or 'lfm2' say nothing to a newcomer, so the vendor is put in front when it is known and
+    not already part of the name. ``keyword`` stays the stable id used for links and files."""
+    if not vendor or not keyword or " " in keyword or not keyword[0].islower():
+        return keyword
+    if B.norm(vendor).strip() in B.norm(keyword) or B.norm(keyword).strip() in B.norm(vendor):
+        return keyword
+    return f"{vendor} {keyword}"
+
+
 def apply_enrichment(trends, label):
     """Merge Phase-2 MCP verification records and slide JSON (both committed under data/reports/<week>/). Others stay 'unverified'."""
     d = ROOT / "data" / "reports" / label
@@ -454,6 +464,8 @@ def apply_enrichment(trends, label):
     checks = enr.get("url_checks", {})
     for t in trends:
         on_topic_filter(t)
+        if "keyword" in t:
+            t["display"] = display_name(t["keyword"], t.get("vendor"))
         e = enr["entities"].get(t["entity_id"])
         t["verification"] = {"status": "unverified", "checks": []}
         if not e:

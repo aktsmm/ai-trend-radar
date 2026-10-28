@@ -37,7 +37,7 @@ def glossary_items(weeks):
     for e in base() + weekly():
         items.setdefault(_norm(e["term"]), {"term": e["term"], "short": e["short"], "explain": e["explain"], "kind": e["kind"], "appears_in": [],
                                             **({"source_url": e["ref"]} if e.get("ref") else {})})
-    titles = {t["entity_id"]: (w, t["keyword"]) for w, d in weeks for t in d["trends"]}
+    titles = {t["entity_id"]: (w, t.get("display", t["keyword"])) for w, d in weeks for t in d["trends"]}
     for e in weekly():
         if e["entity"] in titles:
             items[_norm(e["term"])]["appears_in"].append({"week": titles[e["entity"]][0], "id": e["entity"], "keyword": titles[e["entity"]][1]})
@@ -48,7 +48,7 @@ def glossary_items(weeks):
                 k = _norm(x["t"])
                 k = k if k in items else alias.get(k, k)
                 it = items.setdefault(k, {"term": x["t"], "short": x["d"], "explain": x["d"], "kind": "項目", "appears_in": []})
-                it["appears_in"].append({"week": label, "id": t["entity_id"], "keyword": t["keyword"]})
+                it["appears_in"].append({"week": label, "id": t["entity_id"], "keyword": t.get("display", t["keyword"])})
     out = list(items.values())
     out.sort(key=lambda i: ({"基礎": 0, "仕組み": 1, "項目": 2}.get(i["kind"], 3), i["term"]))
     return out

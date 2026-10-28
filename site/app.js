@@ -34,7 +34,7 @@ function badges(t) {
 }
 function altText(t) {
   const s = t.slides[0];
-  return `${t.keyword}の図解: ${s.title}。` + s.points.map(p => `${p.h}: ${p.t}`).join(" ");
+  return `${t.display || t.keyword}の図解: ${s.title}。` + s.points.map(p => `${p.h}: ${p.t}`).join(" ");
 }
 function card(t) {
   const g = t.digest, k = t.deck, s = t.slides[0], id = esc(t.entity_id);
@@ -42,14 +42,14 @@ function card(t) {
   return `<article class="card" id="k-${id}" aria-labelledby="h-${id}">
     <label class="sel"><input type="checkbox" class="selbox" data-id="${id}"${excluded.has(t.entity_id) ? "" : " checked"}> PDF / PowerPoint に含める</label>
     <span class="score" title="複数ソースでの言及の多さと新しさ(1位=100)">${t.score}<small> / 100</small></span>
-    <div class="kicker"><span class="rank">#${t.rank}</span><strong>${esc(t.keyword)}</strong><span class="tag">${esc(t.category)}</span><span class="tag">${esc(t.kind)}</span>${t.tags.map(x => `<span class="tag">${esc(x)}</span>`).join("")}${badges(t)}</div>
+    <div class="kicker"><span class="rank">#${t.rank}</span><strong>${esc(t.display || t.keyword)}</strong><span class="tag">${esc(t.category)}</span><span class="tag">${esc(t.kind)}</span>${t.tags.map(x => `<span class="tag">${esc(x)}</span>`).join("")}${badges(t)}</div>
     <h2 id="h-${id}">${(t.official_urls || [])[0] ? `<a class="tl" href="${esc(t.official_urls[0])}" rel="noopener" title="公式の発表を開く">${esc(s.title)}</a>` : esc(s.title)}</h2>
     <div class="sub">${esc(t.vendor || "")}${t.primary.published_at ? ` ・ 一次情報の公開 ${t.primary.published_at.slice(0, 10)}` : ""}${checked ? ` ・ 確認日 ${checked.slice(0, 10)}` : ""}</div>
     <div class="summary">${g.summary.map(x => `<p>${esc(x)}</p>`).join("")}</div>
     <div class="why">なぜ話題か: ${esc(g.why_trending)}${g.audience ? ` / 想定読者: ${esc(g.audience)}` : ""}</div>
     <div class="cols">${box("何が変わる", g.what_changes)}${box("嬉しいこと", g.benefits)}${box("注意点", g.caveats, "warn")}</div>
     <div class="row">
-      <button type="button" class="info" data-e="${id}" aria-label="図解を拡大: ${esc(t.keyword)}"><img src="assets/slides/${id}.png" width="1280" height="720" loading="lazy" alt="${esc(altText(t))}"></button>
+      <button type="button" class="info" data-e="${id}" aria-label="図解を拡大: ${esc(t.display || t.keyword)}"><img src="assets/slides/${id}.png" width="1280" height="720" loading="lazy" alt="${esc(altText(t))}"></button>
       <div class="side">
         <h3>出典 <small>(確認に使った一次情報)</small></h3>
         <ul>${k.sources.map(x => `<li>[${esc(x.id)}] ${esc(x.publisher)}: ${link(x.url, x.title)}${x.date ? ` (${esc(x.date)})` : ""}</li>`).join("")}</ul>

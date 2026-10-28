@@ -26,7 +26,7 @@ GitHub Pages から配信する、読み取り専用の静的 JSON です。認�
 
 ## 項目(light)のフィールド
 
-`id`、`keyword`、`headline`(カードの見出し)、`vendor`、`category`、`kind`、`tags`、`rank`、`score`、`summary`(概要の配列)、`published_at`(一次情報の公開日時)、`official_urls`、`verification`(`status`: verified / partially_verified / unverified、`checked_at`)、`urls`(関連ファイルの相対パス)。
+`id`、`keyword`(安定した識別子)、`display`(読者向けの表示名。`kimi-k3` のような名前にはベンダーを前置)、`headline`(カードの見出し)、`vendor`、`category`、`kind`、`tags`、`rank`、`score`、`summary`(概要の配列)、`published_at`(一次情報の公開日時)、`official_urls`、`verification`(`status`: verified / partially_verified / unverified、`checked_at`)、`urls`(関連ファイルの相対パス)。
 
 `keywords/<id>.json` には、上に加えて `digest`(`why_trending` / `what_changes` / `benefits` / `caveats` / `audience`)、`infographic`、`deck`(`overview` / `impact` / `sources`)、`verification.checks`、`mentions`、`jp_reactions` が入ります。
 

@@ -902,11 +902,11 @@
    "url_checks": {
     "https://ollama.com/blog/speech-models": {
      "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
     },
     "https://ollama.com/library/phonon": {
      "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
     }
    },
    "jp_reactions": [],
@@ -1423,7 +1423,42 @@
    ],
    "official_verified": true,
    "summary": "AWS IAM Identity Center now supports cross-Region trusted identity propagation ― Trusted identity propagation carries a user's identity with their request, so AWS services can grant permissio。7ソースで言及(代表: 「AWS IAM Identity Center now supports cross-Region trusted id」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "IAM Identity Center の ID がリージョン越え",
+     "diagram_type": "infographic",
+     "icon": "lock",
+     "stat": {
+      "value": "追加料金なし",
+      "label": "対応リージョンすべてで利用可(2026-10-26 発表)"
+     },
+     "steps": [
+      "対象サービスを確認",
+      "TIP を設定",
+      "監査ログを確認"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "信頼できる ID 伝播が、別リージョンのサービスにも使えるようになった"
+      },
+      {
+       "h": "何が変わる",
+       "t": "以前は同一リージョン内のみ。広い IAM ロールか集約が必要だった"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "個人単位の権限付与と、誰がアクセスしたかの監査ができる"
+      },
+      {
+       "h": "注意",
+       "t": "対応サービスの詳細はユーザーガイドで確認する"
+      }
+     ],
+     "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/",
+     "source_date": "2026-10-26"
+    }
+   ],
    "score_breakdown": {
     "hf_papers": 0.788,
     "github_new": 0.543,
@@ -1465,10 +1500,123 @@
    "trend_label": "rising",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "AWS IAM Identity Center cross-Region trusted identity propagation",
+      "evidence_urls": [
+       "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/"
+      ],
+      "evidence_published_at": "2026-10-26",
+      "result": "利用者の ID を別リージョンのサービスへ伝播でき、追加料金なし、IAM Identity Center が使える全リージョンで提供と確認",
+      "retrieved_at": "2026-10-28T20:00:00+09:00"
+     }
+    ],
+    "selection_reason": "dev-tool 代表。AWS が 2026-10-26 に、IAM Identity Center の信頼できる ID 伝播がリージョンをまたげるようになったと発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/": {
+     "status": 200,
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "AWS が 2026-10-26 に、IAM Identity Center の信頼できる ID 伝播(TIP)がリージョンをまたげるようになったと発表した。",
+     "利用者の ID とグループ情報を、別リージョンの AWS サービスへ引き継げる。以前は同じリージョン内のサービスに限られていた。",
+     "追加料金はなく、IAM Identity Center が使えるすべてのリージョンで利用できる。"
+    ],
+    "why_trending": "AWS 公式の What's New で発表され、今週の開発ツール分野で取り上げられた。",
+    "what_changes": [
+     "別リージョンのサービスにも、利用者個人の ID を渡せる",
+     "広い IAM ロールや単一リージョンへの集約が不要になる"
+    ],
+    "benefits": [
+     "誰がどのリソースにアクセスしたかを、リージョンをまたいで監査できる",
+     "データと計算を別リージョンに置く構成を取りやすい"
+    ],
+    "caveats": [
+     "対応するサービスや設定の詳細は IAM Identity Center ユーザーガイドで確認が必要"
+    ],
+    "audience": "複数リージョンで AWS を運用するクラウド管理者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "IAM Identity Center の信頼できる ID 伝播が、リージョンをまたげるようになった。",
+     "stat": {
+      "value": "追加料金なし",
+      "label": "対応する全リージョンで提供"
+     },
+     "steps": [
+      "対象サービスを確認",
+      "TIP を設定"
+     ],
+     "changes": [
+      "別リージョンのサービスへ個人の ID を渡せる",
+      "広い IAM ロールや単一リージョン集約が不要"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "AWS"
+      },
+      {
+       "k": "発表日",
+       "v": "2026-10-26"
+      },
+      {
+       "k": "対象",
+       "v": "IAM Identity Center"
+      },
+      {
+       "k": "料金",
+       "v": "追加料金なし"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "複数リージョンで AWS を運用するクラウド管理者",
+     "benefits": [
+      "個人とグループ単位で権限を付けられる",
+      "誰がどのリソースを使ったか監査できる"
+     ],
+     "how_to": [
+      "IAM Identity Center ユーザーガイドで手順を確認する",
+      "既存の信頼できる ID 伝播の構成を見直す"
+     ],
+     "caveats": [
+      "対応するサービスの範囲は公式ガイドで確認が必要"
+     ],
+     "terms": [
+      {
+       "t": "リージョン",
+       "d": "AWS のデータセンターが置かれた地理的な区域"
+      },
+      {
+       "t": "ID 伝播",
+       "d": "利用者の ID を、リクエストと一緒に別サービスへ渡す仕組み"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "IAM Identity Center now supports cross-Region TIP",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/",
+      "date": "2026-10-26"
+     }
+    ]
+   }
   },
   {
    "rank": 6,
@@ -1700,7 +1848,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.310": {
      "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
     }
    },
    "jp_reactions": [
@@ -2081,11 +2229,11 @@
    "url_checks": {
     "https://www.liquid.ai/blog/lfm3": {
      "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
     },
     "https://huggingface.co/LiquidAI/LFM3-1.7B": {
      "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
     }
    },
    "jp_reactions": [],
@@ -2404,7 +2552,7 @@
    "url_checks": {
     "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/": {
      "status": 200,
-     "checked_at": "2026-10-28T10:22:51.741517+00:00"
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
     }
    },
    "jp_reactions": [],
@@ -2746,12 +2894,45 @@
     }
    ],
    "official_urls": [
-    "https://ollama.com/library/kimi-k3",
-    "https://openrouter.ai/moonshotai/kimi-k3.1-pro"
+    "https://www.kimi.ai/blog/kimi-k3-1-pro"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "moonshotai/kimi-k3.1-pro ― Kimi K3 is an open-weight, native multimodal agentic model and our most capable model to date.。5ソースで言及(代表: 「Kimi K3.1 Pro and K3.1 Pro Highspeed」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Kimi K3.1 Pro、1M 文脈のオープン重み",
+     "diagram_type": "infographic",
+     "icon": "spark",
+     "stat": {
+      "value": "65.7%",
+      "label": "Terminal-Bench 4.0 の得点(発表の数字)"
+     },
+     "steps": [
+      "Kimi.ai / API で試す",
+      "重みの公開を待つ",
+      "自環境で動かす"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Moonshot AI が K3.1 シリーズ第 1 弾の K3.1 Pro と高速版を発表"
+      },
+      {
+       "h": "何が変わる",
+       "t": "K3 を追加学習し、コーディングや 3D、金融の能力が向上したとする"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "1M トークンの文脈で、長いコードや資料をまとめて扱える"
+      },
+      {
+       "h": "注意",
+       "t": "重みの公開は 11 月 4 日まで。数字は開発元の発表"
+      }
+     ],
+     "official_url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+    }
+   ],
    "score_breakdown": {
     "hackernews": 0.998,
     "reddit_localllama": 0.91,
@@ -2797,10 +2978,125 @@
     }
    ],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Kimi K3.1 Pro Tech Blog",
+      "evidence_urls": [
+       "https://www.kimi.ai/blog/kimi-k3-1-pro"
+      ],
+      "evidence_published_at": null,
+      "result": "K3.1 Pro と高速版 Highspeed を提供開始、1M トークン文脈、重みは 11/4 までに公開予定、Terminal-Bench 4.0 で 65.7%(発表の数字)を確認",
+      "retrieved_at": "2026-10-28T20:00:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。Moonshot AI が公式ブログで 1M トークン文脈のオープンウェイトモデル Kimi K3.1 Pro を発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://www.kimi.ai/blog/kimi-k3-1-pro": {
+     "status": 200,
+     "checked_at": "2026-10-28T11:04:23.174165+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Moonshot AI が、K3.1 シリーズ第 1 弾のオープンウェイトモデル Kimi K3.1 Pro を発表した。1M トークンの文脈長を持つ。",
+     "約 2〜3 倍速い Highspeed 版も同時に提供。Kimi.ai や Kimi API で使え、重みは 11 月 4 日までに公開予定とされる。",
+     "Terminal-Bench 4.0 で 65.7% を記録したと発表(発表の数字)。コーディングや 3D 制作、金融リサーチの向上をうたう。"
+    ],
+    "why_trending": "公式ブログに加え、OpenRouter や Ollama、Reddit でも話題になり、今週のモデル分野で上位。",
+    "what_changes": [
+     "K3 の追加学習版として、コーディングや金融の能力が向上",
+     "高速版 Highspeed で応答を速くできる",
+     "学習データからサイバー攻撃関連を除いて公開する方針"
+    ],
+    "benefits": [
+     "1M トークンの長い資料やコードをまとめて扱える",
+     "重みが公開されれば自分の環境で試せる(見込み)"
+    ],
+    "caveats": [
+     "重みの公開は 11 月 4 日までの予定で、現時点では未公開",
+     "ベンチマークの数字は開発元の発表で、第三者の検証ではない"
+    ],
+    "audience": "長いコードや資料を AI に任せたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Moonshot AI が 1M 文脈のオープンウェイトモデル Kimi K3.1 Pro を発表。",
+     "stat": {
+      "value": "65.7%",
+      "label": "Terminal-Bench 4.0(発表の数字)"
+     },
+     "steps": [
+      "Kimi.ai / API で試す",
+      "重みの公開を待つ"
+     ],
+     "changes": [
+      "K3 の追加学習版で、コーディングや金融が向上",
+      "2〜3 倍速い Highspeed 版も提供"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Moonshot AI"
+      },
+      {
+       "k": "文脈長",
+       "v": "1M トークン"
+      },
+      {
+       "k": "提供先",
+       "v": "Kimi.ai / Kimi API など"
+      },
+      {
+       "k": "重み公開",
+       "v": "11 月 4 日までに予定"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "長いコードや資料を AI に任せたい開発者",
+     "benefits": [
+      "長大なコードベースや資料を一度に渡せる",
+      "高速版で対話の待ち時間を減らせる"
+     ],
+     "how_to": [
+      "Kimi.ai や Kimi API で K3.1 Pro を試す",
+      "重みの公開後に自環境での利用を検討する"
+     ],
+     "caveats": [
+      "重みは公開予定で、現時点では未公開",
+      "ベンチマークは開発元の発表の数字"
+     ],
+     "terms": [
+      {
+       "t": "オープンウェイト",
+       "d": "学習済みの重みが公開され、自分で動かせるモデル"
+      },
+      {
+       "t": "文脈長",
+       "d": "一度に読み込める文章量。1M は約 100 万トークン"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence",
+      "publisher": "Moonshot AI",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+     }
+    ]
+   }
   },
   {
    "rank": 11,
@@ -4545,9 +4841,14 @@
    "entities": [
     "ollama",
     "qwen3",
-    "lfm3"
+    "lfm3",
+    "kimi-k3"
    ],
    "signals": [
+    {
+     "entity": "kimi-k3",
+     "note": "Kimi K3.1 Pro の重みは 11 月 4 日までに公開予定とされる"
+    },
     {
      "entity": "ollama",
      "note": "Phonon を ollama run で Mac 上で動かせる"
@@ -4564,7 +4865,8 @@
    "refs": [
     "https://ollama.com/blog/speech-models",
     "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
-    "https://www.liquid.ai/blog/lfm3"
+    "https://www.liquid.ai/blog/lfm3",
+    "https://www.kimi.ai/blog/kimi-k3-1-pro"
    ]
   }
  ],
@@ -4575,6 +4877,10 @@
   "vllm": "v0.33.0rc1 は CI テストの修正だけのリリース候補で、紹介する内容が弱い。",
   "unsloth": "ベータ版のリリースノートのみで、公開日を確認できる一次情報が不足している。",
   "qwen3-8": "同じ内容を entity qwen3 として今週すでに掲載済みのため、重複として見送る。",
+  "phonon": "同じ内容を entity ollama として今週すでに掲載済みのため、重複として見送る。",
+  "coder": "Coder は AI モデルではなく開発環境ツールのパッチリリースで、紹介する内容が弱い。",
+  "gemini-cli": "nightly ビルドのタグのみで、一次情報の本文を確認できなかった。",
+  "survival-llm": "個人の小規模リポジトリで、公式な一次情報を確認できなかった。",
   "llama-cpp": "b11886 は変換処理の修正のみの自動ビルド番号の更新で、ニュースとして紹介する内容が弱い。"
  }
 }

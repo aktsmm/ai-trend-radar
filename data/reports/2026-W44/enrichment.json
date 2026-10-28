@@ -159,6 +159,46 @@
     }
    ]
   },
+  "nemotron3": {
+   "selection_reason": "model 代表。NVIDIA が 2026-10-28 に公式ブログで、オープンウェイトの音声認識モデル Nemotron 3.5 Transcribe と Granary v2 を発表。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "NVIDIA Nemotron 3.5 Transcribe and Granary v2",
+     "evidence_urls": [
+      "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary"
+     ],
+     "evidence_published_at": "2026-10-28",
+     "result": "40 言語の文字起こし、31 言語の英語との翻訳、13 言語の話者識別を 1 つのモデルで行い、1 時間までの録音と 8 人までの話者に対応、有効パラメータは約 4B(全体 30B)、量子化版は近日公開と確認",
+     "retrieved_at": "2026-10-28T20:40:00+09:00"
+    }
+   ]
+  },
+  "langgraph": {
+   "selection_reason": "dev-tool 代表。LangChain の LangGraph 1.2.18 が 2026-10-26 に公開。エラー処理の修正とスナップショット頻度の既定値変更が入った。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://github.com/langchain-ai/langgraph/releases/tag/1.2.18"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "langgraph 1.2.18 release notes",
+     "evidence_urls": [
+      "https://github.com/langchain-ai/langgraph/releases/tag/1.2.18"
+     ],
+     "evidence_published_at": "2026-10-26",
+     "result": "error_handler の回復と失敗タスク結果のストリーム修正、DeltaChannel のスナップショット間隔を 1000 から 100 更新に変更、interrupt_after 等で止めた実行の最後のチェックポイントを配信する修正を確認",
+     "retrieved_at": "2026-10-28T20:40:00+09:00"
+    }
+   ]
+  },
   "flint": {
    "selection_reason": "research 代表。Microsoft Research が 2026-10-22 に公式ブログで Flint-interactive を紹介。",
    "verification_status": "verified",

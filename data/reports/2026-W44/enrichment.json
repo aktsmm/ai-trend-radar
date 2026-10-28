@@ -23,26 +23,6 @@
     }
    ]
   },
-  "cross": {
-   "selection_reason": "dev-tool 代表。AWS が 2026-10-26 に、IAM Identity Center の信頼できる ID 伝播がリージョンをまたげるようになったと発表。",
-   "verification_status": "verified",
-   "official_urls": [
-    "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/"
-   ],
-   "checks": [
-    {
-     "mcp_name": "page-capture",
-     "tool": "fetch",
-     "query": "AWS IAM Identity Center cross-Region trusted identity propagation",
-     "evidence_urls": [
-      "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/"
-     ],
-     "evidence_published_at": "2026-10-26",
-     "result": "利用者の ID を別リージョンのサービスへ伝播でき、追加料金なし、IAM Identity Center が使える全リージョンで提供と確認",
-     "retrieved_at": "2026-10-28T20:00:00+09:00"
-    }
-   ]
-  },
   "ollama": {
    "selection_reason": "TOP1。local-runtime 代表。2026-10-24 に公式ブログで音声(テキスト読み上げ)モデルへの対応を発表。",
    "verification_status": "verified",

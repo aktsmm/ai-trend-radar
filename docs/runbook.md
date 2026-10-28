@@ -86,3 +86,6 @@
 
 - `analyze.source_health`(daily-tests で毎日実行): 公式フィード・ブログ一覧が直近 3 週ずっと 0 件、または最新の週で取得に失敗した収集元を Issue にする。ページの構造変更で黙って 0 件になるのを検知する(2026-10-28 に、Qwen のブログ停止と GitHub リリースなしのリポジトリを実際に発見して入れ替えた)。たまにしか出さない発表元は `QUIET_OK` で除外。
 
+
+- 誤掲載の訂正: 自動マージは掲載の削除を拒否する(設計)。無関係な項目が載った場合は、該当 entity を digest / slides / decks / enrichment / glossary から外し、rejected_candidates.json に理由を書き、`data/stoplist.yml` の `generic` に語を足して手動で PR にする(2026-10-28: AWS IAM の話題が『Cross』という誤クラスタで載った)。
+

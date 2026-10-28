@@ -26,7 +26,8 @@
 | OK(HTML解析) | Anthropic news(RSSなし。`/news` 一覧の日付・タイトルを解析) |
 | OK(GitHub Releases) | ggml-org/llama.cpp, ollama/ollama, vllm-project/vllm, sgl-project/sglang, anthropics/claude-code, openai/codex, google-gemini/gemini-cli, QwenLM/Qwen3, huggingface/transformers, ml-explore/mlx, unslothai/unsloth, open-webui/open-webui, modelcontextprotocol/servers, microsoft/autogen, github/copilot-cli |
 | 失敗 | Google DeepMind blog(XMLではなくHTMLを返す→未対応), Meta AI blog(HTTP 400) |
-| 対象外 | Microsoft AI blog(HTTP 410 廃止)。**DeepSeek公式サイトは収集しない**(GitHub Releaseの`deepseek-ai/DeepSeek-V3`のみ) |
+| 対象外 | Microsoft AI blog(HTTP 410 廃止)。**DeepSeek公式サイトは収集しない**(Hugging Face の `deepseek-ai` 組織の新着で拾う)。Qwen は旧ブログ(qwenlm.github.io は 2025-09 で停止)と GitHub Release(リリースなし)をやめ、HF の `Qwen` 組織の新着で拾う。microsoft/autogen は後継の microsoft/agent-framework に置き換え |
+| OK(ブログ一覧のスクレイプ) | Liquid AI・Moonshot(Kimi)・MiniMax・Ai2・Cohere・Together AI のブログ一覧から記事リンクを取り、各記事ページの公開日で窓内を判定(`collect/official.py` の `BLOG_INDEXES`)。RSS がない発表元(例: LFM3)を言及頼みにしないため |
 
 ledger の最新値は `data/raw/_official_ledger.json`(CI artifact)。
 

@@ -22,7 +22,7 @@ FEEDS = [
     ("microsoft-foundry-blog", "Microsoft", "announcement", "https://devblogs.microsoft.com/foundry/feed/"),
     ("github-changelog", "Microsoft", "release_note", "https://github.blog/changelog/feed/"),
     ("huggingface-blog", "HuggingFace", "announcement", "https://huggingface.co/blog/feed.xml"),
-    ("qwen-blog", "Alibaba", "announcement", "https://qwenlm.github.io/blog/index.xml"),
+    # qwenlm.github.io stopped updating in 2025-09 and qwen.ai/blog is JS-rendered; Qwen releases are caught through the HF org (collect.sources.HF_ORGS).
     ("anthropic-news", "Anthropic", "announcement", "https://www.anthropic.com/news"),
     ("mistral-news", "Mistral", "announcement", "https://mistral.ai/news/rss"),
     # ai.meta.com/blog/rss/ was removed (404/400); the Meta newsroom feed is used instead, filtered to AI topics (AI_ONLY_FEEDS).
@@ -35,14 +35,33 @@ FEEDS = [
     ("ollama-blog", "Ollama", "announcement", "https://ollama.com/blog/rss.xml"),
 ]
 AI_ONLY_FEEDS = {"meta-newsroom"}
+# Vendors without an RSS feed: the blog index page is scraped for article links, and each new article's own page gives the date
+# (og / article:published_time / JSON-LD). Keeps launches like Liquid AI's LFM3 from depending on third-party mentions.
+# (blog_id, vendor, index_url, link_regex)
+BLOG_INDEXES = [
+    ("liquid-blog", "Liquid AI", "https://www.liquid.ai/blog", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
+    ("kimi-blog", "Moonshot AI", "https://www.kimi.com/blog", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
+    ("minimax-news", "MiniMax", "https://www.minimax.io/news", r'href="(/news/[a-z0-9][^"#?/]*)"'),
+    ("allenai-blog", "Ai2", "https://allenai.org/blog", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
+    ("cohere-blog", "Cohere", "https://cohere.com/blog", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
+    ("together-blog", "Together AI", "https://www.together.ai/blog", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
+]
+PAGE_DATE_RES = [re.compile(p, re.I) for p in (
+    r'property=["\']article:published_time["\']\s+content=["\']([^"\']+)', r'content=["\']([^"\']+)["\']\s+property=["\']article:published_time',
+    r'"datePublished"\s*:\s*"([^"]+)"', r'<time[^>]+datetime=["\']([^"\']+)', r'name=["\']date["\']\s+content=["\']([^"\']+)',
+    r'"dateModified"\s*:\s*"([^"]+)"',  # last resort: some sites only expose the modified date, which is never earlier than the announcement
+    r'>((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{1,2}, 20\d\d)<',  # a visible "Month D, YYYY" byline
+)]
+TITLE_RE = re.compile(r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\']([^"\']+)|<title>([^<]+)</title>', re.I)
 AI_RE = re.compile(r"\b(ai|llama|llm|model|models|agent|agents|superintelligence|glasses|smart glasses|gpu|inference)\b", re.I)
 # official GitHub repositories -> Releases atom
 GH_REPOS = [
     ("ggml-org/llama.cpp", "ggml"), ("ollama/ollama", "Ollama"), ("vllm-project/vllm", "vLLM"), ("sgl-project/sglang", "SGLang"),
     ("anthropics/claude-code", "Anthropic"), ("openai/codex", "OpenAI"), ("google-gemini/gemini-cli", "Google"),
-    ("QwenLM/Qwen3", "Alibaba"), ("deepseek-ai/DeepSeek-V3", "DeepSeek"), ("huggingface/transformers", "HuggingFace"),
+    ("huggingface/transformers", "HuggingFace"),  # Qwen / DeepSeek publish on HF (HF_ORGS), their GitHub repos have no releases
     ("ml-explore/mlx", "Apple"), ("unslothai/unsloth", "Unsloth"), ("open-webui/open-webui", "OpenWebUI"),
-    ("modelcontextprotocol/servers", "Anthropic"), ("microsoft/autogen", "Microsoft"), ("github/copilot-cli", "Microsoft"),
+    ("modelcontextprotocol/servers", "Anthropic"), ("microsoft/agent-framework", "Microsoft"), ("github/copilot-cli", "Microsoft"),
+    ("openai/openai-agents-python", "OpenAI"), ("langchain-ai/langgraph", "LangChain"),
 ]
 
 
@@ -57,7 +76,14 @@ def _dt(s):
         try:
             d = datetime.fromisoformat(s.replace("Z", "+00:00"))
         except Exception:
-            return None
+            for fmt in ("%B %d, %Y", "%b %d, %Y"):  # "October 27, 2026" / "Oct 27, 2026"
+                try:
+                    d = datetime.strptime(s, fmt)
+                    break
+                except Exception:
+                    continue
+            else:
+                return None
     if d.tzinfo is None:
         d = d.replace(tzinfo=timezone.utc)
     return d.astimezone(timezone.utc)
@@ -111,6 +137,30 @@ def fetch_feed(feed):
     return out
 
 
+def fetch_blog(blog):
+    """Scrape a blog index for article links (newest first); read each article page for its title and publication date. Only dated, in-window articles count."""
+    import html as _html
+    import urllib.parse as up
+    bid, vendor, index, rx = blog
+    page = get(index, timeout=30, retries=1)
+    links, out = [], []
+    for m in re.finditer(rx, page):
+        u = up.urljoin(index, m.group(1))
+        if u not in links and u.rstrip("/") != index.rstrip("/"):
+            links.append(u)
+    for u in links[:6]:  # the index lists newest first; older ones were collected on earlier days
+        try:
+            art = get(u, timeout=25, retries=1)
+        except Exception:
+            continue
+        pub = next((_dt(m.group(1)) for rx_ in PAGE_DATE_RES for m in [rx_.search(art)] if m and _dt(m.group(1))), None)
+        t = TITLE_RE.search(art)
+        title = strip_html(_html.unescape((t.group(1) or t.group(2)) if t else "")).split(" | ")[0].strip()
+        if pub and pub >= SINCE and title:
+            out.append(item("official", title, u, "", 1, "announcement", None, pub.isoformat(), vendor=vendor, source_type="announcement", feed=bid))
+    return out
+
+
 def fetch_release(repo_vendor):
     repo, vendor = repo_vendor
     out = []
@@ -127,15 +177,15 @@ def collect_official():
 
     def run(job):
         kind, arg = job
-        fid = arg[0] if kind == "feed" else arg[0]
-        url = arg[3] if kind == "feed" else f"https://github.com/{arg[0]}/releases.atom"
+        fid = arg[0]
+        url = arg[3] if kind == "feed" else arg[2] if kind == "blog" else f"https://github.com/{arg[0]}/releases.atom"
         try:
-            res = fetch_feed(arg) if kind == "feed" else fetch_release(arg)
+            res = fetch_feed(arg) if kind == "feed" else fetch_blog(arg) if kind == "blog" else fetch_release(arg)
             return fid, res, {"ok": True, "count": len(res), "url": url}
         except Exception as e:
             return fid, [], {"ok": False, "error": f"{type(e).__name__}: {e}"[:200], "url": url}
 
-    jobs = [("feed", f) for f in FEEDS] + [("rel", r) for r in GH_REPOS]
+    jobs = [("feed", f) for f in FEEDS] + [("blog", b) for b in BLOG_INDEXES] + [("rel", r) for r in GH_REPOS]
     with ThreadPoolExecutor(6) as ex:
         for fid, res, led in ex.map(run, jobs):
             items += res

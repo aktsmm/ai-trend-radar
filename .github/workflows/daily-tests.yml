@@ -36,6 +36,7 @@ jobs:
           python -m analyze.digest_gate
           python -m render.build_all --offline
           python -m unittest discover -s tests
+          python -m analyze.source_health
       - name: Open / update an issue on failure, close it on recovery
         run: |
           title="[daily-tests] master のフルテストが失敗しています"

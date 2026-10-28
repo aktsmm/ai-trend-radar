@@ -28,9 +28,12 @@ def main():
     if p.exists():
         done |= set(json.loads(p.read_text(encoding="utf-8")))
     out = []
-    for t in data["trends"]:
-        if t["entity_id"] in done or t.get("deck"):
-            continue
+    # Notable launches first: a model / release backed by a first-party source (official feed, release, HF model card) goes ahead of rank order,
+    # so a big announcement that ranks 7th is not left for a later run behind tools and repos.
+    first_party = {"announcement", "release_note", "model_card", "docs", "product_page"}
+    todo = [t for t in data["trends"] if t["entity_id"] not in done and not t.get("deck")]
+    todo.sort(key=lambda t: (0 if t["kind"] == "model" and t["primary"]["source_type"] in first_party else 1, t["rank"]))
+    for t in todo:
         out.append({"entity_id": t["entity_id"], "keyword": t["keyword"], "rank": t["rank"], "category": t["category"], "vendor": t.get("vendor"),
                     "primary": {"url": t["primary"]["url"], "title": t["primary"]["title"], "published_at": t["primary"]["published_at"],
                                 "source_type": t["primary"]["source_type"]},

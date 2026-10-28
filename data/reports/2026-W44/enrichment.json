@@ -223,55 +223,51 @@
  "url_checks": {
   "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/": {
    "status": 200,
-   "checked_at": "2026-10-28T11:29:25+00:00"
-  },
-  "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6": {
-   "status": 200,
-   "checked_at": "2026-10-28T11:29:26+00:00"
-  },
-  "https://github.com/NVIDIA/OpenShell": {
-   "status": 200,
-   "checked_at": "2026-10-28T11:29:26+00:00"
-  },
-  "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/": {
-   "status": 200,
-   "checked_at": "2026-10-28T11:29:27+00:00"
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
   },
   "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/": {
    "status": 200,
-   "checked_at": "2026-10-28T11:04:23.174165+00:00"
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
   },
-  "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/": {
+  "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/": {
    "status": 200,
-   "checked_at": "2026-10-28T11:04:23.174165+00:00"
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
+  },
+  "https://github.com/NVIDIA/OpenShell": {
+   "status": 200,
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
+  },
+  "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6": {
+   "status": 200,
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
   },
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.310": {
    "status": 200,
-   "checked_at": "2026-10-28T11:04:23.174165+00:00"
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
   },
   "https://huggingface.co/LiquidAI/LFM3-1.7B": {
    "status": 200,
-   "checked_at": "2026-10-28T11:04:23.174165+00:00"
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
   },
   "https://ollama.com/blog/speech-models": {
    "status": 200,
-   "checked_at": "2026-10-28T11:04:23.174165+00:00"
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
   },
   "https://ollama.com/library/phonon": {
    "status": 200,
-   "checked_at": "2026-10-28T11:04:23.174165+00:00"
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
   },
   "https://www.kimi.ai/blog/kimi-k3-1-pro": {
    "status": 200,
-   "checked_at": "2026-10-28T11:04:23.174165+00:00"
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
   },
   "https://www.liquid.ai/blog/lfm3": {
    "status": 200,
-   "checked_at": "2026-10-28T11:04:23.174165+00:00"
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
   },
   "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/": {
    "status": 200,
-   "checked_at": "2026-10-28T11:04:23.174165+00:00"
+   "checked_at": "2026-10-28T11:44:43.719766+00:00"
   }
  }
 }

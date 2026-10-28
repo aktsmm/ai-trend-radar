@@ -923,11 +923,11 @@
    "url_checks": {
     "https://ollama.com/blog/speech-models": {
      "status": 200,
-     "checked_at": "2026-10-28T11:04:23.174165+00:00"
+     "checked_at": "2026-10-28T11:44:43.719766+00:00"
     },
     "https://ollama.com/library/phonon": {
      "status": 200,
-     "checked_at": "2026-10-28T11:04:23.174165+00:00"
+     "checked_at": "2026-10-28T11:44:43.719766+00:00"
     }
    },
    "jp_reactions": [],
@@ -1274,7 +1274,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.310": {
      "status": 200,
-     "checked_at": "2026-10-28T11:04:23.174165+00:00"
+     "checked_at": "2026-10-28T11:44:43.719766+00:00"
     }
    },
    "jp_reactions": [
@@ -1796,7 +1796,7 @@
    "url_checks": {
     "https://www.microsoft.com/en-us/research/blog/flint-interactive-a-language-for-creating-interactive-data-visualizations/": {
      "status": 200,
-     "checked_at": "2026-10-28T11:04:23.174165+00:00"
+     "checked_at": "2026-10-28T11:44:43.719766+00:00"
     }
    },
    "jp_reactions": [],
@@ -2157,11 +2157,11 @@
    "url_checks": {
     "https://www.liquid.ai/blog/lfm3": {
      "status": 200,
-     "checked_at": "2026-10-28T11:04:23.174165+00:00"
+     "checked_at": "2026-10-28T11:44:43.719766+00:00"
     },
     "https://huggingface.co/LiquidAI/LFM3-1.7B": {
      "status": 200,
-     "checked_at": "2026-10-28T11:04:23.174165+00:00"
+     "checked_at": "2026-10-28T11:44:43.719766+00:00"
     }
    },
    "jp_reactions": [],
@@ -3072,7 +3072,7 @@
    "url_checks": {
     "https://www.kimi.ai/blog/kimi-k3-1-pro": {
      "status": 200,
-     "checked_at": "2026-10-28T11:04:23.174165+00:00"
+     "checked_at": "2026-10-28T11:44:43.719766+00:00"
     }
    },
    "jp_reactions": [],
@@ -3718,12 +3718,46 @@
     }
    ],
    "official_urls": [
-    "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
-    "https://ollama.com/library/beam"
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/"
    ],
    "official_verified": true,
    "summary": "Beam model by Reflection is now available on Amazon SageMaker JumpStart and AWS Trainium ― Beam, the first open weight model offered by US-based Reflection, is now available in Amazon SageMaker JumpSta。4ソースで言及(代表: 「Beam model by Reflection is now available on Amazon SageMake」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Reflection の Beam、SageMaker で提供開始",
+     "diagram_type": "infographic",
+     "icon": "cloud",
+     "stat": {
+      "value": "Apache 2.0",
+      "label": "Beam のライセンス(2026-10-21 AWS 発表)"
+     },
+     "steps": [
+      "JumpStart で Beam を検索",
+      "BF16 / FP8 / NVFP4 を選ぶ",
+      "エンドポイントに配備"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "AWS が Reflection 初のオープンウェイトモデル Beam を SageMaker JumpStart で提供開始"
+      },
+      {
+       "h": "何が変わる",
+       "t": "Trainium3 向けに最適化され、AWS 上で調整・配備しやすくなる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "重みを確認・改変でき、自分の AWS アカウント内でデータを保てる"
+      },
+      {
+       "h": "注意",
+       "t": "最初の提供は米国東部の 2 リージョンのみ"
+      }
+     ],
+     "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
+     "source_date": "2026-10-21"
+    }
+   ],
    "score_breakdown": {
     "reddit_localllama": 0.62,
     "reddit_ollama": 0.658,
@@ -3757,10 +3791,127 @@
    "trend_label": "rising",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Beam model by Reflection on Amazon SageMaker JumpStart and AWS Trainium",
+      "evidence_urls": [
+       "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/"
+      ],
+      "evidence_published_at": "2026-10-21",
+      "result": "Reflection 初のオープンウェイトモデル Beam が SageMaker JumpStart で提供開始、Trainium3 向けに最適化、Apache 2.0、BF16・FP8・NVFP4、米国東部 2 リージョンを確認",
+      "retrieved_at": "2026-10-28T20:30:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。AWS が 2026-10-21 に、Reflection 初のオープンウェイトモデル Beam の SageMaker JumpStart / Trainium 対応を発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/": {
+     "status": 200,
+     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "AWS が 2026-10-21 に、Reflection 初のオープンウェイトモデル Beam を Amazon SageMaker JumpStart で使えるようにしたと発表した。",
+     "Apache 2.0 ライセンスで、BF16・FP8・NVFP4 の 3 種類の重みから選べる。AWS Trainium3 向けにも最適化されている。",
+     "最初の提供リージョンは米国東部(バージニア北部)と米国東部(オハイオ)。JumpStart で「Beam」を検索して配備できる。"
+    ],
+    "why_trending": "AWS の公式発表に加え、Ollama のライブラリにも載り、今週のモデル分野で上位。",
+    "what_changes": [
+     "自社データで調整できるオープンウェイトモデルを、SageMaker のマネージドなエンドポイントで使える",
+     "Trainium3 上で動かす選択肢が増える"
+    ],
+    "benefits": [
+     "重みを確認・改変でき、自分の AWS アカウント内でデータを保てる(AWS の説明)",
+     "Ollama では ollama run beam:cloud で試せる(1M トークン文脈、501B パラメータの MoE)"
+    ],
+    "caveats": [
+     "SageMaker での提供は現時点で米国東部の 2 リージョンのみ",
+     "性能の記述は開発元の発表で、第三者の検証ではない"
+    ],
+    "audience": "オープンウェイトモデルを自社データで調整して使いたい AWS の利用者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Reflection 初のオープンウェイトモデル Beam が、SageMaker JumpStart で使えるようになった。",
+     "stat": {
+      "value": "Apache 2.0",
+      "label": "Beam のライセンス"
+     },
+     "steps": [
+      "JumpStart で検索",
+      "重みの形式を選ぶ",
+      "エンドポイントに配備"
+     ],
+     "changes": [
+      "BF16・FP8・NVFP4 の 3 種類の重みから選べる",
+      "Trainium3 向けに最適化されている"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Reflection / AWS"
+      },
+      {
+       "k": "発表日",
+       "v": "2026-10-21"
+      },
+      {
+       "k": "提供先",
+       "v": "SageMaker JumpStart"
+      },
+      {
+       "k": "リージョン",
+       "v": "米国東部 2 か所"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "オープンウェイトモデルを自社データで調整したい AWS の利用者",
+     "benefits": [
+      "重みを確認・改変でき、自分の AWS アカウント内で動かせる",
+      "SageMaker の管理・監査の仕組みをそのまま使える"
+     ],
+     "how_to": [
+      "SageMaker Studio の JumpStart で Beam を検索する",
+      "BF16・FP8・NVFP4 から形式を選ぶ",
+      "マネージドなエンドポイントとして配備する"
+     ],
+     "caveats": [
+      "最初の提供は米国東部の 2 リージョンのみ",
+      "性能の説明は開発元の発表で、第三者の検証ではない"
+     ],
+     "terms": [
+      {
+       "t": "NVFP4",
+       "d": "NVIDIA の 4 ビット浮動小数点形式で、メモリを大きく節約する"
+      },
+      {
+       "t": "JumpStart",
+       "d": "SageMaker にある、学習済みモデルをすぐ配備できる置き場"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Beam model by Reflection on SageMaker JumpStart and Trainium",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/",
+      "date": "2026-10-21"
+     }
+    ]
+   }
   },
   {
    "rank": 16,
@@ -3861,7 +4012,42 @@
    ],
    "official_verified": true,
    "summary": "NVIDIA/OpenShell OpenShell v0.1.6 ― OpenShell is the safe, private runtime for autonomous AI agents.。3ソースで言及(代表: 「OpenShell – A safe, private runtime for fleets of autonomous」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "NVIDIA OpenShell、AI エージェント用の安全な実行環境",
+     "diagram_type": "infographic",
+     "icon": "shield",
+     "stat": {
+      "value": "v0.1.6",
+      "label": "2026-10-27 公開。認証設定が必須に"
+     },
+     "steps": [
+      "install.sh で導入",
+      "sandbox create で作成",
+      "ポリシーで許可範囲を宣言"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "NVIDIA の OpenShell v0.1.6 が公開された"
+      },
+      {
+       "h": "何が変わる",
+       "t": "sandbox の一時停止・再開と、認可の拒否などを記録する監査イベントが入った"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "エージェントに実際の認証情報を渡さず、触れる範囲をポリシーで制限できる"
+      },
+      {
+       "h": "注意",
+       "t": "認証設定がないとゲートウェイが起動しない。更新は supervisor と同時に"
+      }
+     ],
+     "official_url": "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6",
+     "source_date": "2026-10-27"
+    }
+   ],
    "score_breakdown": {
     "hackernews": 0.889,
     "reddit_localllama": 0.45,
@@ -3899,10 +4085,152 @@
    "trend_label": "rising",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "OpenShell v0.1.6 release notes",
+      "evidence_urls": [
+       "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6"
+      ],
+      "evidence_published_at": "2026-10-27",
+      "result": "ゲートウェイは認証の設定がないと起動しなくなる変更、サンドボックスの一時停止・再開コマンド、OCSF 監査イベント、脆弱性対応の依存更新を確認",
+      "retrieved_at": "2026-10-28T20:30:00+09:00"
+     },
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "NVIDIA/OpenShell README",
+      "evidence_urls": [
+       "https://github.com/NVIDIA/OpenShell"
+      ],
+      "evidence_published_at": null,
+      "result": "自律型 AI エージェント向けの安全な実行環境で、ポリシーでファイル・システムコール・ネットワークを制限し、認証情報を渡さない仕組み、Apache-2.0 を確認",
+      "retrieved_at": "2026-10-28T20:30:00+09:00"
+     }
+    ],
+    "selection_reason": "dev-tool 代表。NVIDIA 公式リポジトリの OpenShell v0.1.6 が 2026-10-27 に公開。AI エージェント用の安全な実行環境。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6": {
+     "status": 200,
+     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+    },
+    "https://github.com/NVIDIA/OpenShell": {
+     "status": 200,
+     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "NVIDIA が公開する OpenShell は、自律型 AI エージェントを安全かつ非公開に動かすための実行環境。v0.1.6 が 2026-10-27 に公開された。",
+     "エージェントごとにサンドボックスを分け、ファイル・システムコール・ネットワークをポリシーで制限する。実際の認証情報はエージェントに渡さない。",
+     "v0.1.6 では sandbox suspend / resume の追加、OCSF 形式の監査イベント、依存ライブラリの脆弱性対応が入った。"
+    ],
+    "why_trending": "Hacker News と Reddit の LocalLLaMA で話題になり、GitHub の星は約 2 万と注目されている。",
+    "what_changes": [
+     "認証の設定がないとゲートウェイが起動しなくなった",
+     "sandbox suspend / resume コマンドで一時停止・再開できる",
+     "ゲートウェイが認可の拒否などを監査イベントとして記録する"
+    ],
+    "benefits": [
+     "エージェントに許可する範囲をポリシーで宣言し、実行時に強制できる",
+     "ポリシー変更は事前に検証され、危険なアクセスは人の確認待ちになる"
+    ],
+    "caveats": [
+     "0.1.x の段階で、アップグレード時は supervisor と実行環境を同時に更新する必要がある",
+     "再開機能は対応するドライバーのみ。それ以外は未実装エラーになる"
+    ],
+    "audience": "AI エージェントを社内や本番で安全に動かしたい開発者・運用担当"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "NVIDIA の OpenShell は、自律型 AI エージェントを安全に動かす実行環境。v0.1.6 が公開された。",
+     "stat": {
+      "value": "v0.1.6",
+      "label": "2026-10-27 公開"
+     },
+     "steps": [
+      "install.sh で導入",
+      "sandbox を作成",
+      "ポリシーを宣言"
+     ],
+     "changes": [
+      "sandbox の一時停止・再開コマンドが追加",
+      "認可の拒否などを監査イベントとして記録",
+      "認証設定がないとゲートウェイが起動しない"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "NVIDIA"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-27"
+      },
+      {
+       "k": "ライセンス",
+       "v": "Apache-2.0"
+      },
+      {
+       "k": "対応環境",
+       "v": "Linux / macOS (Apple Silicon)"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2"
+     ]
+    },
+    "impact": {
+     "audience": "AI エージェントを安全に動かしたい開発者・運用担当",
+     "benefits": [
+      "エージェントに実際の認証情報を渡さず、許可した接続先だけに使える",
+      "ポリシーの変更は事前に検証され、危険な変更は人の確認待ちになる"
+     ],
+     "how_to": [
+      "README の手順で install.sh を実行する",
+      "openshell sandbox create でサンドボックスを作る",
+      "Run Your First Agent の手順でエージェントを動かす"
+     ],
+     "caveats": [
+      "0.1.x の段階。更新は supervisor と実行環境を同時に行う",
+      "再開機能は対応ドライバーのみで、他は未実装エラーになる"
+     ],
+     "terms": [
+      {
+       "t": "サンドボックス",
+       "d": "プログラムの動ける範囲を隔離した安全な実行領域"
+      },
+      {
+       "t": "OCSF",
+       "d": "セキュリティのイベントを共通の形で記録するための仕様"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "OpenShell v0.1.6 リリースノート",
+      "publisher": "NVIDIA (GitHub)",
+      "url": "https://github.com/NVIDIA/OpenShell/releases/tag/v0.1.6",
+      "date": "2026-10-27"
+     },
+     {
+      "id": "s2",
+      "title": "NVIDIA/OpenShell README",
+      "publisher": "NVIDIA (GitHub)",
+      "url": "https://github.com/NVIDIA/OpenShell"
+     }
+    ]
+   }
   },
   {
    "rank": 17,
@@ -4107,12 +4435,46 @@
     }
    ],
    "official_urls": [
-    "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/feed/",
-    "https://www.nvidia.com/en-us/products/workstations/dgx-spark/"
+    "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/"
    ],
    "official_verified": true,
    "summary": "3 Ways to Boost MoE Inference on NVIDIA DGX Spark ― Generating tokens faster starts with identifying what limits inference performance. In the batch-size-1 evalua。1ソースで言及(代表: 「3 Ways to Boost MoE Inference on NVIDIA DGX Spark」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "DGX Spark で MoE 推論を速める 3 つの手法",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "+42.5%",
+      "label": "GSM8K 全問での復号速度の向上(2026-10-27 発表)"
+     },
+     "steps": [
+      "Humming の MoE カーネル",
+      "LM head を FP8 に量子化",
+      "MTP 投機的デコード"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "NVIDIA が DGX Spark 上で Ling-3.0-flash の推論を速める 3 手法を公開"
+      },
+      {
+       "h": "何が変わる",
+       "t": "律速の重み読み出しを減らし、合成負荷では最大 +185.1% の向上"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "遅延が 24.5% 減り、精度の差は検出されなかったと発表"
+      },
+      {
+       "h": "注意",
+       "t": "合成負荷の数字は他の用途を保証しない。FP8 と MTP の併用は要注意"
+      }
+     ],
+     "official_url": "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/",
+     "source_date": "2026-10-27"
+    }
+   ],
    "score_breakdown": {
     "official": 1.0
    },
@@ -4132,10 +4494,128 @@
    "trend_label": "rising",
    "x_posts": [],
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "3 Ways to Boost MoE Inference on NVIDIA DGX Spark",
+      "evidence_urls": [
+       "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/"
+      ],
+      "evidence_published_at": "2026-10-27",
+      "result": "Ling-3.0-flash(124B・有効 5.1B の MoE)で、Humming カーネル +9.3%、FP8 の LM head で +21.7%、MTP 投機的デコードで +185.1%(合成負荷)、GSM8K 全問で +42.5% を確認",
+      "retrieved_at": "2026-10-28T20:30:00+09:00"
+     }
+    ],
+    "selection_reason": "hardware 代表。NVIDIA 公式技術ブログが 2026-10-27 に DGX Spark 上での MoE 推論を高速化する 3 つの手法を公開。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/": {
+     "status": 200,
+     "checked_at": "2026-10-28T11:44:43.719766+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "NVIDIA の技術ブログが 2026-10-27 に、DGX Spark 上で MoE モデルの推論を速める 3 つの手法を紹介した。",
+     "例は Ling-3.0-flash(124B パラメータ、1 トークンあたり有効 5.1B)。Humming カーネルで +9.3%、FP8 の LM head で累計 +21.7%。",
+     "MTP 投機的デコードを加えると合成負荷で +185.1%。GSM8K 全問の評価では 3 つ合わせて +42.5%、精度の差は検出されなかった。"
+    ],
+    "why_trending": "NVIDIA 公式の技術ブログで 2 本続けて DGX Spark の活用例が公開された。",
+    "what_changes": [
+     "メモリ帯域が律速の推論を、重みの読み出し量の削減で速くできる",
+     "公式の Ling cookbook に手順とコードがある"
+    ],
+    "benefits": [
+     "手元の DGX Spark で、大きな MoE モデルを速く動かせる",
+     "GSM8K 全問で遅延が 24.5% 減ったと発表(発表の数字)"
+    ],
+    "caveats": [
+     "合成負荷の数字は他の用途の効果を保証しない",
+     "FP8 の LM head と MTP を併用するときは、draft との共有に注意しないと逆に遅くなる"
+    ],
+    "audience": "DGX Spark でローカルに大きなモデルを動かす開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "NVIDIA が DGX Spark 上で MoE モデルの推論を速める 3 つの手法を、実測値つきで紹介した。",
+     "stat": {
+      "value": "+42.5%",
+      "label": "GSM8K 全問での復号速度"
+     },
+     "steps": [
+      "Humming カーネル",
+      "FP8 の LM head",
+      "MTP 投機的デコード"
+     ],
+     "changes": [
+      "Humming の MoE カーネルで +9.3%",
+      "FP8 の LM head を加え累計 +21.7%",
+      "MTP で合成負荷では +185.1%"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "NVIDIA"
+      },
+      {
+       "k": "発表日",
+       "v": "2026-10-27"
+      },
+      {
+       "k": "対象モデル",
+       "v": "Ling-3.0-flash (124B MoE)"
+      },
+      {
+       "k": "遅延",
+       "v": "平均 24.5% 減(発表の数字)"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "DGX Spark でローカルに大きなモデルを動かす開発者",
+     "benefits": [
+      "メモリ帯域が律速の推論を、読み出し量の削減で速くできる",
+      "GSM8K 全問で精度の差は検出されなかったと発表"
+     ],
+     "how_to": [
+      "ブログのリンク先の Ling cookbook を開く",
+      "手順に沿って 3 つの最適化を有効にする",
+      "自分の負荷で速度と精度を測る"
+     ],
+     "caveats": [
+      "合成負荷の数字は他の用途の効果を保証しない",
+      "FP8 の LM head と MTP の併用は、共有の実装がないと逆に遅くなる"
+     ],
+     "terms": [
+      {
+       "t": "MoE",
+       "d": "入力ごとに一部の専門家だけを使う、効率のよいモデル構造"
+      },
+      {
+       "t": "投機的デコード",
+       "d": "先に複数トークンを予測し、まとめて検証して速くする方法"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "3 Ways to Boost MoE Inference on NVIDIA DGX Spark",
+      "publisher": "NVIDIA Technical Blog",
+      "url": "https://developer.nvidia.com/blog/3-ways-to-boost-moe-inference-on-nvidia-dgx-spark/",
+      "date": "2026-10-27"
+     }
+    ]
+   }
   },
   {
    "rank": 19,
@@ -4758,9 +5238,14 @@
     "ollama",
     "qwen3",
     "lfm3",
-    "kimi-k3"
+    "kimi-k3",
+    "beam"
    ],
    "signals": [
+    {
+     "entity": "beam",
+     "note": "Beam は Apache 2.0 で、SageMaker JumpStart から配備できる"
+    },
     {
      "entity": "kimi-k3",
      "note": "Kimi K3.1 Pro の重みは 11 月 4 日までに公開予定とされる"
@@ -4782,11 +5267,14 @@
     "https://ollama.com/blog/speech-models",
     "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
     "https://www.liquid.ai/blog/lfm3",
-    "https://www.kimi.ai/blog/kimi-k3-1-pro"
+    "https://www.kimi.ai/blog/kimi-k3-1-pro",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/reflection-beam-on-sagemaker-jumpstart-and-aws-trainium/"
    ]
   }
  ],
  "rejected_candidates": {
+  "hy-nomas": "Hugging Face の論文ページのみで、公式の一次情報の本文を確認できなかった。",
+  "pdrvla": "Hugging Face の論文ページのみで、公式の一次情報の本文を確認できなかった。",
   "minimax": "公式ページではなく OpenRouter のカタログ掲載のみで、MiniMax 自身の一次情報を確認できなかった。",
   "gpt-6-1-terra": "公式ページの本文を取得できず、一次情報を確認できなかった。",
   "openai-codex": "alpha 版のタグのみで、リリースノートに紹介できる内容がない。",

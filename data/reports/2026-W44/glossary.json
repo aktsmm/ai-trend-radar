@@ -1,5 +1,13 @@
 [
   {
+    "term": "リージョン",
+    "kind": "基礎",
+    "short": "クラウドのデータセンターがある地理的な区域",
+    "explain": "AWS などのクラウドが、東京や米国東部のように地域ごとに設けているデータセンターの集まり。置く場所で遅延や法規制への対応、災害時の備えが変わる。",
+    "entity": "cross",
+    "ref": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/"
+  },
+  {
     "term": "LoRA",
     "kind": "仕組み",
     "short": "少ない追加パラメータだけで行う軽い調整",

@@ -27,8 +27,9 @@
       "Ollama は Phonon を ollama run で動かせるようにし、AWS は SFT・DPO・RFT と LoRA でのサーバーレスな調整に対応し、Liquid AI は LFM3 を単一 GPU で調整できると発表した。",
       "3 件の共通点で、モデルを借りるだけでなく自分用に動かし、調整したい需要が背景にあるかもしれない(見立て)。"
     ],
-    "entities": ["ollama", "qwen3", "lfm3"],
+    "entities": ["ollama", "qwen3", "lfm3", "kimi-k3"],
     "signals": [
+      { "entity": "kimi-k3", "note": "Kimi K3.1 Pro の重みは 11 月 4 日までに公開予定とされる" },
       { "entity": "ollama", "note": "Phonon を ollama run で Mac 上で動かせる" },
       { "entity": "qwen3", "note": "Qwen3.8 27B を SFT・DPO・RFT で調整できる" },
       { "entity": "lfm3", "note": "LFM3-1.7B は 4 ビットで約 1 GB のメモリに収まる" }
@@ -36,7 +37,8 @@
     "refs": [
       "https://ollama.com/blog/speech-models",
       "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-sagemaker-muse-qwen-ministral/",
-      "https://www.liquid.ai/blog/lfm3"
+      "https://www.liquid.ai/blog/lfm3",
+      "https://www.kimi.ai/blog/kimi-k3-1-pro"
     ]
   }
 ]

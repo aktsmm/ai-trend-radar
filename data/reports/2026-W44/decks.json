@@ -1,4 +1,96 @@
 {
+  "kimi-k3": {
+    "overview": {
+      "takeaway": "Moonshot AI が 1M 文脈のオープンウェイトモデル Kimi K3.1 Pro を発表。",
+      "stat": { "value": "65.7%", "label": "Terminal-Bench 4.0(発表の数字)" },
+      "steps": ["Kimi.ai / API で試す", "重みの公開を待つ"],
+      "changes": [
+        "K3 の追加学習版で、コーディングや金融が向上",
+        "2〜3 倍速い Highspeed 版も提供"
+      ],
+      "facts": [
+        { "k": "提供元", "v": "Moonshot AI" },
+        { "k": "文脈長", "v": "1M トークン" },
+        { "k": "提供先", "v": "Kimi.ai / Kimi API など" },
+        { "k": "重み公開", "v": "11 月 4 日までに予定" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "長いコードや資料を AI に任せたい開発者",
+      "benefits": [
+        "長大なコードベースや資料を一度に渡せる",
+        "高速版で対話の待ち時間を減らせる"
+      ],
+      "how_to": [
+        "Kimi.ai や Kimi API で K3.1 Pro を試す",
+        "重みの公開後に自環境での利用を検討する"
+      ],
+      "caveats": [
+        "重みは公開予定で、現時点では未公開",
+        "ベンチマークは開発元の発表の数字"
+      ],
+      "terms": [
+        { "t": "オープンウェイト", "d": "学習済みの重みが公開され、自分で動かせるモデル" },
+        { "t": "文脈長", "d": "一度に読み込める文章量。1M は約 100 万トークン" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence",
+        "publisher": "Moonshot AI",
+        "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+      }
+    ]
+  },
+  "cross": {
+    "overview": {
+      "takeaway": "IAM Identity Center の信頼できる ID 伝播が、リージョンをまたげるようになった。",
+      "stat": { "value": "追加料金なし", "label": "対応する全リージョンで提供" },
+      "steps": ["対象サービスを確認", "TIP を設定"],
+      "changes": [
+        "別リージョンのサービスへ個人の ID を渡せる",
+        "広い IAM ロールや単一リージョン集約が不要"
+      ],
+      "facts": [
+        { "k": "提供元", "v": "AWS" },
+        { "k": "発表日", "v": "2026-10-26" },
+        { "k": "対象", "v": "IAM Identity Center" },
+        { "k": "料金", "v": "追加料金なし" }
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "複数リージョンで AWS を運用するクラウド管理者",
+      "benefits": [
+        "個人とグループ単位で権限を付けられる",
+        "誰がどのリソースを使ったか監査できる"
+      ],
+      "how_to": [
+        "IAM Identity Center ユーザーガイドで手順を確認する",
+        "既存の信頼できる ID 伝播の構成を見直す"
+      ],
+      "caveats": [
+        "対応するサービスの範囲は公式ガイドで確認が必要"
+      ],
+      "terms": [
+        { "t": "リージョン", "d": "AWS のデータセンターが置かれた地理的な区域" },
+        { "t": "ID 伝播", "d": "利用者の ID を、リクエストと一緒に別サービスへ渡す仕組み" }
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "title": "IAM Identity Center now supports cross-Region TIP",
+        "publisher": "AWS",
+        "url": "https://aws.amazon.com/about-aws/whats-new/2026/10/aws-iam-identity-center-cross-region-tip/",
+        "date": "2026-10-26"
+      }
+    ]
+  },
   "lfm3": {
     "overview": {
       "takeaway": "Liquid AI が小型モデル LFM3 を発表。LFM3-1.7B は 4 ビットで約 1 GB で動き、重みも公開されている。",

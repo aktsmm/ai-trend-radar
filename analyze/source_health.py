@@ -25,6 +25,8 @@ def findings():
     for fid, led in ledgers[-1].items():
         if fid not in current:
             continue
+        if fid not in ledgers[0] and len(ledgers) > 1:  # added recently: not enough history to call it silent
+            continue
         if led.get("ok") is False:
             out.append(f"{fid}: 最新の週で取得に失敗 ({led.get('error', '')[:80]})")
         elif len(ledgers) == WEEKS and fid not in QUIET_OK and all(l.get(fid, {}).get("count", 0) == 0 for l in ledgers):

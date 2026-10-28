@@ -104,3 +104,5 @@
 - 最新週のデータ(`data/trends.json`)は毎週変わり、掲載が 1〜数件のこともある。テストで特定のキーワード、件数、kind の分布を前提にしない。
 - 絞り込みなど複数件が要る確認は、`analyze.weeks.archive_weeks()` から条件に合う週を選ぶ(例: `tests/test_gated_download.py`)。固定の週(2026-W42)を読む既存のテストはそのままでよい。
 - 「まだ要約がない新しい週」の状態でもゲート・ビルド・テストが通ること(`tests/test_site_label.py`)。
+- 手書きの 4 ページ(index / about / archive / glossary)は、h1 が 1 つ、本文へ移動のスキップリンク、12px 未満の文字なし、を `tests/test_a11y.py` で守る。ページを足したら同じ形(h1・skip・`id` 付きの main)にする。
+

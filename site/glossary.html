@@ -8,11 +8,13 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%231c2b4a%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%276%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%272%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%272%27 fill=%27%232f5fd0%27/%3E%3C/svg%3E">
 </head>
 <body>
+<a class="skip" href="#main">本文へ移動</a>
 <header class="site-header"><div class="wrap">
   <a class="brand" href="index.html">AI Trend Radar</a>
   <nav aria-label="メニュー"><a href="index.html">最新ダイジェスト</a><a href="glossary.html" aria-current="page">用語・基礎</a><a href="archive.html">アーカイブ</a><a href="about.html">About</a><a href="api/v1/index.json">JSON API</a></nav>
 </div></header>
-<main class="wrap">
+<main class="wrap" id="main">
+  <h1 class="sr-only">用語・基礎</h1>
   <p class="lead">ダイジェストに出てくる言葉を、初心者向けにまとめた用語集です。「基礎」と「仕組み」は定番の言葉、「項目」は各キーワードのブリーフで使った用語です。正確な仕様や数値は、各項目の公式 URL を確認してください。</p>
   <div class="filters"><input id="q" type="search" placeholder="用語を検索" aria-label="用語を検索"> <select id="kind" aria-label="種類"><option value="">すべて</option><option>基礎</option><option>仕組み</option><option>項目</option></select></div>
   <div id="list" aria-live="polite">読み込み中…</div>

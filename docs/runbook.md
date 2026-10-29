@@ -106,3 +106,6 @@
 - 「まだ要約がない新しい週」の状態でもゲート・ビルド・テストが通ること(`tests/test_site_label.py`)。
 - 手書きの 4 ページ(index / about / archive / glossary)は、h1 が 1 つ、本文へ移動のスキップリンク、12px 未満の文字なし、を `tests/test_a11y.py` で守る。ページを足したら同じ形(h1・skip・`id` 付きの main)にする。
 
+- 分類・表示名の是正: enrichment の entity に `category` / `kind` / `display`(2〜40 文字)を書くと反映される(`digest_gate` が値を検査)。digest は一般語(Runtime / Copilot)や ID だけの名前に `display` を付け、研究ブログで発表されたフレームワークを paper にしない。過去週の誤りは該当週の enrichment.json を直接直す。
+- タッチ操作(`@media (pointer:coarse)`)では、ボタン・リンク・チェックボックスを 24px 以上(主要操作は 44px)にしている。`tests/test_a11y.py` が CSS ルールの存在を守る。
+

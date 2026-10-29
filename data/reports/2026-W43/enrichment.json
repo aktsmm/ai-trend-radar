@@ -61,7 +61,8 @@
      "result": "V4.1-Flash の更新版、ベンチマーク表、MIT ライセンス、1M 文脈、チャットテンプレートの扱いを確認",
      "retrieved_at": "2026-10-19T03:20:00+09:00"
     }
-   ]
+   ],
+   "display": "DeepSeek-V4.1-Flash-1017"
   },
   "nemotron3": {
    "selection_reason": "TOP6。NVIDIA 公式技術ブログ(2026-10-15)が Nemotron 3.5 Super VL を解説。",
@@ -201,7 +202,8 @@
      "result": "SageMaker JumpStart(US East の 2 リージョン)で提供、Trainium3 向けに最適化、Apache 2.0 を確認",
      "retrieved_at": "2026-10-19T07:25:00+09:00"
     }
-   ]
+   ],
+   "display": "Reflection Beam"
   },
   "unsloth": {
    "selection_reason": "local-runtime 枠。Unsloth の公式リリース(2026-10-15)で Muse Spark Open と Nemotron 3.5 をローカルで動かせるようになった。",
@@ -241,7 +243,10 @@
      "result": "Mac Studio 4 台で Muse Spark Open が毎秒 36 トークン超、RDMA over Thunderbolt の利用、M5 Ultra の TTFT が最大 4.6 倍(Apple の数字)を確認",
      "retrieved_at": "2026-10-19T07:55:00+09:00"
     }
-   ]
+   ],
+   "category": "local-runtime",
+   "kind": "product",
+   "display": "Apple MLX"
   },
   "hybrid": {
    "selection_reason": "model 枠。NVIDIA の公式技術ブログ(2026-10-12)が、ハイブリッドモデルの SSM 層を速くする ReplaySSM を解説。",
@@ -301,7 +306,8 @@
      "result": "企業・企業チーム・エージェントアプリ・組織の 4 階層で GET / PATCH が一般提供になったことを確認",
      "retrieved_at": "2026-10-22T04:33:00+09:00"
     }
-   ]
+   ],
+   "display": "GitHub Copilot"
   },
   "runtime": {
    "selection_reason": "NVIDIA 公式技術ブログ(2026-10-21)が、AI エージェントを実行時に守る NVIDIA Sentry を解説。",
@@ -321,7 +327,8 @@
      "result": "BlueField-4 DPU 上でホストから隔離して動くこと、DOCA Tower と DOCA Argus、OPA でのポリシー評価を確認",
      "retrieved_at": "2026-10-22T04:33:00+09:00"
     }
-   ]
+   ],
+   "display": "NVIDIA Sentry"
   }
  },
  "url_checks": {

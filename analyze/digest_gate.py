@@ -111,7 +111,13 @@ def check_entity(eid, digest, slides, deck, enrichment, window):
     if not ent or ent["verification_status"] == "unverified":
         return [f"{eid}: no verified enrichment record (generation requires a verified entity)"]
     idx = evidence_index(ent)
-    errs = _text_problems(eid, [digest, slides, deck])
+    errs = _text_problems(eid, [digest, slides, deck, ent.get("display")])
+    if "display" in ent and not (isinstance(ent["display"], str) and 2 <= len(ent["display"].strip()) <= 40):
+        errs.append(f"{eid}: enrichment.display must be a 2-40 character string")
+    if ent.get("category") not in (None, "model", "dev-tool", "local-runtime", "hardware", "research", "github-trending"):
+        errs.append(f"{eid}: unknown category {ent['category']!r}")
+    if ent.get("kind") not in (None, "model", "product", "release", "paper", "hardware", "repo"):
+        errs.append(f"{eid}: unknown kind {ent['kind']!r}")
     if digest is None:
         errs.append(f"{eid}: digest missing")
     else:

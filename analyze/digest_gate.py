@@ -29,6 +29,14 @@ FILES = {"digest": "digest.json", "slides": "slides.json", "decks": "decks.json"
 
 SECRET_RE = re.compile(r"(ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}|xox[bp]-[A-Za-z0-9-]{10,}|"
                        r"-----BEGIN [A-Z ]*PRIVATE KEY-----|(?i:api[_-]?key|secret|password|token)\s*[:=]\s*[A-Za-z0-9/+_-]{16,})")
+REUPLOAD_RE = re.compile(r"huggingface\.co/[^/\s]+/[^/\s]*(uncensor|abliterat|heretic|jailbreak|nsfw|dealign)", re.I)
+
+
+def reupload_problems(eid, urls):
+    """Third-party uncensored / abliterated re-uploads are never an official or evidence source for a digest."""
+    return [f"{eid}: {u} is a third-party uncensored/abliterated re-upload; use the vendor's own page" for u in sorted(set(urls)) if REUPLOAD_RE.search(u)]
+
+
 HTML_RE = re.compile(r"<\s*(script|iframe|img|object|embed|style|link)\b|javascript:", re.I)
 
 
@@ -118,6 +126,8 @@ def check_entity(eid, digest, slides, deck, enrichment, window):
         errs.append(f"{eid}: unknown category {ent['category']!r}")
     if ent.get("kind") not in (None, "model", "product", "release", "paper", "hardware", "repo"):
         errs.append(f"{eid}: unknown kind {ent['kind']!r}")
+    errs += reupload_problems(eid, [*idx, *(s.get("official_url") or "" for s in slides or []),
+                                    *(s["url"] for s in (deck or {}).get("sources", []))])
     if digest is None:
         errs.append(f"{eid}: digest missing")
     else:

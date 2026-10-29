@@ -13,6 +13,14 @@ class FillerTest(unittest.TestCase):
         x = "同じ文をそのまま二回書いている悪い例の文章です。"
         self.assertTrue(G.filler_problems("e", {"summary": [x, x], "why_trending": "理由は十分に長い一文として書いておきます。"}))
 
+    def test_reupload_rejected(self):
+        for u in ("https://huggingface.co/dealignai/DeepSeek-V4.1-Flash-1017-UNCENSORED-FP8",
+                  "https://huggingface.co/someone/Qwen-Abliterated-GGUF"):
+            self.assertEqual(len(G.reupload_problems("e", [u])), 1, u)
+
+    def test_vendor_pages_pass_reupload_gate(self):
+        self.assertEqual(G.reupload_problems("e", ["https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017", ""]), [])
+
 
 if __name__ == "__main__":
     unittest.main()

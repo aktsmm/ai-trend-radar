@@ -474,6 +474,8 @@ def apply_enrichment(trends, label):
         for k in ("category", "kind"):  # optional correction when the automatic classification is wrong
             if e.get(k):
                 t[k] = e[k]
+        if e.get("display"):  # optional reader-facing name when the keyword is generic (e.g. "Runtime") or an id
+            t["display"] = e["display"]
         t["official_urls"] = e["official_urls"]
         t["official_verified"] = e["verification_status"] in ("verified", "partially_verified")
         t["url_checks"] = {u: checks.get(u) for u in e["official_urls"]}

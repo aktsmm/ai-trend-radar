@@ -21,7 +21,8 @@
      "result": "Reflection 初のオープンウェイトモデル Beam が SageMaker JumpStart で提供開始、Trainium3 向けに最適化、Apache 2.0、BF16・FP8・NVFP4、米国東部 2 リージョンを確認",
      "retrieved_at": "2026-10-28T20:30:00+09:00"
     }
-   ]
+   ],
+   "display": "Reflection Beam"
   },
   "openshell": {
    "selection_reason": "dev-tool 代表。NVIDIA 公式リポジトリの OpenShell v0.1.6 が 2026-10-27 に公開。AI エージェント用の安全な実行環境。",
@@ -217,7 +218,8 @@
      "result": "AI エージェントが操作できるグラフを作る言語であること、Flint-MCP / MCP Apps での利用、コンパイラが操作を意味のあるイベントに変換する仕組みを確認",
      "retrieved_at": "2026-10-26T03:31:00+09:00"
     }
-   ]
+   ],
+   "display": "Flint-interactive"
   },
   "claude-code": {
    "selection_reason": "dev-tool 代表。Anthropic 公式の GitHub リリース v2.1.310 が 2026-10-23 に公開。",

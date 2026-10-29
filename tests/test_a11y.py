@@ -24,6 +24,12 @@ class A11yTest(unittest.TestCase):
         small = re.findall(r"font-size:\s*(?:[0-9]|1[01])(?:\.\d+)?px", css)
         self.assertEqual([], small)
 
+    def test_touch_targets_rule_exists(self):
+        css = (SITE / "style.css").read_text(encoding="utf-8")
+        m = re.search(r"@media \(pointer:coarse\)\{(.*)\}\s*$", css, re.S) or re.search(r"@media \(pointer:coarse\)\{(.*?)\}\}", css, re.S)
+        self.assertTrue(m, "coarse-pointer block")
+        for sel in ("button", "summary", "select", "table.cand a", ".chips a", "min-height:44px"):
+            self.assertIn(sel, m.group(1), sel)
 
 if __name__ == "__main__":
     unittest.main()

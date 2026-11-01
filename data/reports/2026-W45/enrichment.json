@@ -63,15 +63,15 @@
  "url_checks": {
   "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/": {
    "status": 200,
-   "checked_at": "2026-11-01T19:50:25+00:00"
+   "checked_at": "2026-11-01T20:44:07.705333+00:00"
   },
   "https://huggingface.co/blog/mistral-large4": {
    "status": 200,
-   "checked_at": "2026-11-01T19:50:23+00:00"
+   "checked_at": "2026-11-01T20:44:07.705333+00:00"
   },
   "https://mistral.ai/news/mistral-large-4-oss/": {
    "status": 200,
-   "checked_at": "2026-11-01T19:50:24+00:00"
+   "checked_at": "2026-11-01T20:44:07.705333+00:00"
   }
  }
 }

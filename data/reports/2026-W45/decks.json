@@ -1,0 +1,167 @@
+{
+ "mistral-large-4": {
+  "overview": {
+   "takeaway": "Mistral の旗艦モデル Mistral Large 4 の重みが公開され、自社環境で動かせるようになった。",
+   "stat": {
+    "value": "1M トークン",
+    "label": "文脈長(約 1 兆パラメータの MoE)"
+   },
+   "steps": [
+    "重みを入手",
+    "推論の強さを選ぶ",
+    "自社環境で実行"
+   ],
+   "changes": [
+    "low / medium / high の 3 つの推論モードから選べる",
+    "FP8・NVFP4 の公式版と GGUF 版が用意されている"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "Mistral AI"
+    },
+    {
+     "k": "公開日",
+     "v": "2026-10-29"
+    },
+    {
+     "k": "規模",
+     "v": "総計約 1T・有効約 49B"
+    },
+    {
+     "k": "入力",
+     "v": "テキストと画像"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "impact": {
+   "audience": "大型のオープンウェイトモデルを自社環境で動かしたい開発者・セキュリティ担当",
+   "benefits": [
+    "重みを手元に置き、利用方針と配備先を自分で決められる",
+    "推論の強さを選んで、性能と費用のバランスを調整できる"
+   ],
+   "how_to": [
+    "Hugging Face のモデルページで重みの形式を選ぶ",
+    "transformers・vLLM・llama.cpp のいずれかで実行する",
+    "まず推論モードを medium にして試す"
+   ],
+   "caveats": [
+    "ライセンスは MIT 派生で、サービス提供の用途に制限がある",
+    "約 1 兆パラメータで、動かすには大規模な GPU 環境が必要な見込み",
+    "性能の説明は開発元の発表で、第三者の検証ではない"
+   ],
+   "terms": [
+    {
+     "t": "MoE",
+     "d": "入力ごとに一部の専門家だけを使うモデル構造"
+    },
+    {
+     "t": "オープンウェイト",
+     "d": "重みが公開され、手元で動かせるモデル"
+    }
+   ],
+   "refs": [
+    "s1",
+    "s2"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "Mistral Large 4 (Le Chonk) is now open weight",
+    "publisher": "Mistral AI",
+    "url": "https://mistral.ai/news/mistral-large-4-oss/",
+    "date": "2026-10-29"
+   },
+   {
+    "id": "s2",
+    "title": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+    "publisher": "Hugging Face",
+    "url": "https://huggingface.co/blog/mistral-large4",
+    "date": "2026-10-29"
+   }
+  ]
+ },
+ "spark": {
+  "overview": {
+   "takeaway": "RTX Spark 搭載の Windows ノート PC が発売され、ノート PC でモデルとエージェントを動かしやすくなった。",
+   "stat": {
+    "value": "128GB",
+    "label": "統合メモリは最大"
+   },
+   "steps": [
+    "対応ノート PC を選ぶ",
+    "モデルを実行",
+    "GPU 配分を調整"
+   ],
+   "changes": [
+    "GPU と CPU が 1 つのメモリを共有する",
+    "NVIDIA App で背景のエージェントへの GPU 配分を選べる"
+   ],
+   "facts": [
+    {
+     "k": "提供元",
+     "v": "NVIDIA"
+    },
+    {
+     "k": "発表日",
+     "v": "2026-10-28"
+    },
+    {
+     "k": "価格",
+     "v": "2,599 ドルから"
+    },
+    {
+     "k": "発売元",
+     "v": "ASUS・Dell・HP など 6 社"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "impact": {
+   "audience": "ノート PC でモデルやエージェントをローカル実行したい開発者・クリエイター",
+   "benefits": [
+    "最大 128GB のメモリを共有でき、大きなモデルを載せやすい",
+    "クラウドと同じ CUDA で開発でき、展開先を選びやすい"
+   ],
+   "how_to": [
+    "対応するノート PC の構成(メモリ容量)を確認する",
+    "llama.cpp や vLLM で LFM3 などのモデルを動かす",
+    "NVIDIA App の System > Advanced で GPU 配分を設定する"
+   ],
+   "caveats": [
+    "価格は 2,599 ドルからで、気軽に買える価格帯ではない",
+    "GPU 配分には Windows の GPU スケジューリング設定が必要",
+    "性能の数字は NVIDIA の発表で、第三者の検証ではない"
+   ],
+   "terms": [
+    {
+     "t": "統合メモリ",
+     "d": "GPU と CPU が 1 つのメモリを共有する方式"
+    },
+    {
+     "t": "スーパーチップ",
+     "d": "GPU と CPU を 1 つにまとめたチップ"
+    }
+   ],
+   "refs": [
+    "s1"
+   ]
+  },
+  "sources": [
+   {
+    "id": "s1",
+    "title": "NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+    "publisher": "NVIDIA",
+    "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/",
+    "date": "2026-10-28"
+   }
+  ]
+ }
+}

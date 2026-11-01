@@ -1,0 +1,77 @@
+{
+ "week": "2026-W45",
+ "selected_on": "2026-11-02",
+ "selection_policy": "候補6件のうち、日付つきの一次情報の本文を確認できた2件(model 1 / hardware 1)。LFM3 は 2026-W44 で掲載済み、gpt-6-1-terra と openai-codex は本文を確認できず、mistral は重複のため見送り。",
+ "entities": {
+  "mistral-large-4": {
+   "selection_reason": "model 代表。Mistral AI が 2026-10-29 に公式ブログで、旗艦モデル Mistral Large 4 の重みの公開を発表。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://mistral.ai/news/mistral-large-4-oss/",
+    "https://huggingface.co/blog/mistral-large4"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Mistral Large 4 (Le Chonk) is now open weight",
+     "evidence_urls": [
+      "https://mistral.ai/news/mistral-large-4-oss/"
+     ],
+     "evidence_published_at": "2026-10-29",
+     "result": "約 1 兆パラメータのマルチモーダルモデルの重みを公開、low / medium / high の 3 つの推論モード、コーディングとサイバーセキュリティ向けの発表の数字を確認",
+     "retrieved_at": "2026-11-02T04:51:00+09:00"
+    },
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Welcome Le Chonk: Mistral Large 4 on Hugging Face",
+     "evidence_urls": [
+      "https://huggingface.co/blog/mistral-large4"
+     ],
+     "evidence_published_at": "2026-10-29",
+     "result": "MoE で総計約 1T・有効 49B パラメータ、文脈長 1M トークン、FP8 と NVFP4 の公式版、transformers・vLLM・llama.cpp の初日対応、ライセンスを確認",
+     "retrieved_at": "2026-11-02T04:51:00+09:00"
+    }
+   ],
+   "display": "Mistral Large 4"
+  },
+  "spark": {
+   "selection_reason": "hardware 代表。NVIDIA が 2026-10-28 に公式ブログで、RTX Spark 搭載の Windows ノート PC の発売と新しいモデル・エージェント機能を発表。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+     "evidence_urls": [
+      "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/"
+     ],
+     "evidence_published_at": "2026-10-28",
+     "result": "6 社からの発売、2,599 ドルから、最大 128GB の統合メモリと最大 1 ペタフロップスの FP4 性能、Nemotron 3.5 Transcribe と LFM3 への対応、NVIDIA App の GPU 配分機能を確認",
+     "retrieved_at": "2026-11-02T04:51:00+09:00"
+    }
+   ],
+   "category": "hardware",
+   "kind": "hardware",
+   "display": "NVIDIA RTX Spark"
+  }
+ },
+ "url_checks": {
+  "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/": {
+   "status": 200,
+   "checked_at": "2026-11-01T19:50:25+00:00"
+  },
+  "https://huggingface.co/blog/mistral-large4": {
+   "status": 200,
+   "checked_at": "2026-11-01T19:50:23+00:00"
+  },
+  "https://mistral.ai/news/mistral-large-4-oss/": {
+   "status": 200,
+   "checked_at": "2026-11-01T19:50:24+00:00"
+  }
+ }
+}

@@ -1,0 +1,18 @@
+[
+ {
+  "term": "統合メモリ",
+  "kind": "仕組み",
+  "short": "GPU と CPU が 1 つのメモリを共有する方式",
+  "explain": "GPU と CPU が同じメモリを分け合う方式。データを両者の間でコピーしなくてよく、大きなモデルを載せやすいので、ローカルで AI を動かす機器で重視される。",
+  "entity": "spark",
+  "ref": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/"
+ },
+ {
+  "term": "推論モード(reasoning)",
+  "kind": "仕組み",
+  "short": "答える前に考える量を選ぶ設定",
+  "explain": "モデルが答えを出す前にどれだけ時間をかけて考えるかを、low・medium・high のように選ぶ設定。深く考えるほど精度は上がりやすいが、時間と費用も増える。",
+  "entity": "mistral-large-4",
+  "ref": "https://mistral.ai/news/mistral-large-4-oss/"
+ }
+]

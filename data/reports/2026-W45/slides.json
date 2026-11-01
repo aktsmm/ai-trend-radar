@@ -1,0 +1,74 @@
+{
+ "mistral-large-4": [
+  {
+   "title": "Mistral Large 4、重みを公開",
+   "diagram_type": "infographic",
+   "icon": "layers",
+   "stat": {
+    "value": "1M トークン",
+    "label": "文脈長(2026-10-29 公開、約 1 兆パラメータの MoE)"
+   },
+   "steps": [
+    "重みを入手",
+    "推論の強さを選ぶ",
+    "自社環境で実行"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "Mistral が旗艦のマルチモーダルモデル Mistral Large 4 の重みを公開した"
+    },
+    {
+     "h": "何が変わる",
+     "t": "low / medium / high の推論モードを選んで、自社環境で動かせる"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "コーディングと防御側のセキュリティ向けと説明され、FP8・NVFP4 版もある"
+    },
+    {
+     "h": "注意",
+     "t": "独自ライセンスで、サービス提供の用途には制限がある"
+    }
+   ],
+   "official_url": "https://mistral.ai/news/mistral-large-4-oss/",
+   "source_date": "2026-10-29"
+  }
+ ],
+ "spark": [
+  {
+   "title": "NVIDIA RTX Spark ノート PC が発売",
+   "diagram_type": "infographic",
+   "icon": "chip",
+   "stat": {
+    "value": "128GB",
+    "label": "統合メモリは最大(2026-10-28 NVIDIA 発表)"
+   },
+   "steps": [
+    "対応ノート PC を選ぶ",
+    "llama.cpp や vLLM で実行",
+    "NVIDIA App で GPU 配分"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "RTX Spark 搭載の Windows ノート PC が 6 社から発売され、2,599 ドルから"
+    },
+    {
+     "h": "何が変わる",
+     "t": "GPU と CPU が 1 つのメモリを共有し、ノート PC でモデルを動かしやすい"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "LFM3 などに対応し、背景のエージェントへの GPU 配分も選べる"
+    },
+    {
+     "h": "注意",
+     "t": "価格は高めで、性能の数字は NVIDIA の発表"
+    }
+   ],
+   "official_url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/",
+   "source_date": "2026-10-28"
+  }
+ ]
+}

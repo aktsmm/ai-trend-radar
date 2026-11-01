@@ -1,0 +1,46 @@
+{
+ "mistral-large-4": {
+  "summary": [
+   "Mistral AI が 2026-10-29 に、旗艦のマルチモーダルモデル Mistral Large 4(愛称 Le Chonk)の重みを公開したと発表した。",
+   "約 1 兆パラメータの MoE で、1 回に動くのは約 490 億。文脈長は 100 万トークンで、テキストと画像を入力できる。",
+   "推論の強さを low / medium / high から選べ、既定は high。Hugging Face によると transformers・vLLM・llama.cpp が初日から対応した。"
+  ],
+  "why_trending": "Mistral と Hugging Face の公式発表に加え、Ollama にも載り、今週のモデル分野で上位。",
+  "what_changes": [
+   "旗艦級のモデルを、重みを手元に置いて自社環境で動かせる",
+   "推論の強さを段階で選び、性能と費用を調整できる"
+  ],
+  "benefits": [
+   "コーディングと防御側のサイバーセキュリティ向けと説明されている(Mistral の発表)",
+   "FP8 と NVFP4 の公式版に加え、GGUF 版も用意されている"
+  ],
+  "caveats": [
+   "ライセンスは MIT 派生の独自ライセンスで、モデルをサービスとして提供する用途に制限がある",
+   "総計約 1 兆パラメータのため、手元で動かすには大規模な GPU 環境が必要になる見込み",
+   "ベンチマークの数字は開発元の発表で、第三者の検証ではない"
+  ],
+  "audience": "大型のオープンウェイトモデルを自社環境で動かしたい開発者・セキュリティ担当"
+ },
+ "spark": {
+  "summary": [
+   "NVIDIA が 2026-10-28 に、RTX Spark 搭載の Windows ノート PC が ASUS・Dell・HP・Lenovo・Microsoft・MSI から発売中と発表した。価格は 2,599 ドルから。",
+   "Blackwell GPU と Grace CPU を 1 つのスーパーチップにまとめ、最大 128GB の統合メモリと最大 1 ペタフロップスの FP4 AI 性能を持つ(NVIDIA の説明)。",
+   "同じ発表で、音声認識モデル Nemotron 3.5 Transcribe、Liquid AI の LFM3、背景のエージェントと GPU を分け合う NVIDIA App の設定が紹介された。"
+  ],
+  "why_trending": "NVIDIA 公式ブログの発表に加え、dev.to でも RTX Spark 上での実行記事が出ており、ハードウェア分野で注目されている。",
+  "what_changes": [
+   "ノート PC 上で、CUDA を使ってモデルとエージェントをローカル実行できる",
+   "NVIDIA App で、前面のアプリと背景のエージェントへの GPU 配分を選べる"
+  ],
+  "benefits": [
+   "GPU と CPU が最大 128GB のメモリを共有し、大きなモデルを載せやすい(NVIDIA の説明)",
+   "クラウドと同じ CUDA で開発でき、展開先を選びやすい"
+  ],
+  "caveats": [
+   "価格は 2,599 ドルからで、気軽に買える価格帯ではない",
+   "GPU 配分の機能は、Windows でハードウェアアクセラレーション GPU スケジューリングの有効化が必要",
+   "性能の数字は NVIDIA の発表で、第三者の検証ではない"
+  ],
+  "audience": "ノート PC でモデルやエージェントをローカル実行したい開発者・クリエイター"
+ }
+}

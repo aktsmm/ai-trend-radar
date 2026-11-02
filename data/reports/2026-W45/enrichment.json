@@ -84,15 +84,19 @@
  "url_checks": {
   "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/": {
    "status": 200,
-   "checked_at": "2026-11-01T20:44:07.705333+00:00"
+   "checked_at": "2026-11-02T14:37:46.423130+00:00"
+  },
+  "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/": {
+   "status": 200,
+   "checked_at": "2026-11-02T14:37:46.423130+00:00"
   },
   "https://huggingface.co/blog/mistral-large4": {
    "status": 200,
-   "checked_at": "2026-11-01T20:44:07.705333+00:00"
+   "checked_at": "2026-11-02T14:37:46.423130+00:00"
   },
   "https://mistral.ai/news/mistral-large-4-oss/": {
    "status": 200,
-   "checked_at": "2026-11-01T20:44:07.705333+00:00"
+   "checked_at": "2026-11-02T14:37:46.423130+00:00"
   }
  }
 }

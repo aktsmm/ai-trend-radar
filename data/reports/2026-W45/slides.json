@@ -35,6 +35,42 @@
    "source_date": "2026-10-29"
   }
  ],
+ "gemini-4-carbon": [
+  {
+   "title": "Gemini 4 Carbon を発表",
+   "diagram_type": "infographic",
+   "icon": "shield",
+   "stat": {
+    "value": "88.2%",
+    "label": "SEC-bench Pro の結果(2026-10-28 Google 発表)"
+   },
+   "steps": [
+    "防御担当者に限定提供",
+    "パートナーへ拡大",
+    "一般向けに公開"
+   ],
+   "points": [
+    {
+     "h": "何が起きた",
+     "t": "Google DeepMind が次のフロンティアモデル Gemini 4 Carbon を発表した"
+    },
+    {
+     "h": "何が変わる",
+     "t": "脆弱性の発見から修正までと、長時間のコーディング作業を支援する"
+    },
+    {
+     "h": "嬉しいこと",
+     "t": "導入価格は入力 100 万トークンあたり 2 ドル、出力 10 ドル"
+    },
+    {
+     "h": "注意",
+     "t": "いまは一部の防御担当者のみ。数字は Google の発表"
+    }
+   ],
+   "official_url": "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/",
+   "source_date": "2026-10-28"
+  }
+ ],
  "spark": [
   {
    "title": "NVIDIA RTX Spark ノート PC が発売",

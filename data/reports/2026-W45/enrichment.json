@@ -58,6 +58,27 @@
    "category": "hardware",
    "kind": "hardware",
    "display": "NVIDIA RTX Spark"
+  },
+  "gemini-4-carbon": {
+   "selection_reason": "model 代表。Google DeepMind が 2026-10-28 に公式ブログで、次のフロンティアモデル Gemini 4 Carbon を発表。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Gemini 4 Carbon: our next frontier model",
+     "evidence_urls": [
+      "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/"
+     ],
+     "evidence_published_at": "2026-10-28",
+     "result": "サイバーセキュリティと長時間タスクに強いモデルであること、Artificial Analysis Intelligence Index v5.0 で 59 の 1 位、まず一部のサイバー防御担当者に限定提供、導入価格は入力 100 万トークンあたり 2 ドル・出力 10 ドルを確認",
+     "retrieved_at": "2026-11-02T23:22:00+09:00"
+    }
+   ],
+   "display": "Gemini 4 Carbon"
   }
  },
  "url_checks": {

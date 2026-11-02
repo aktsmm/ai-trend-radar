@@ -31,5 +31,24 @@ class A11yTest(unittest.TestCase):
         for sel in ("button", "summary", "select", "table.cand a", ".chips a", "min-height:44px"):
             self.assertIn(sel, m.group(1), sel)
 
+    def test_badge_and_chip_contrast_meets_aa(self):
+        def lum(h):
+            h = h.lstrip("#")
+            h = "".join(c * 2 for c in h) if len(h) == 3 else h
+            c = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]
+            c = [x / 12.92 if x <= .03928 else ((x + .055) / 1.055) ** 2.4 for x in c]
+            return .2126 * c[0] + .7152 * c[1] + .0722 * c[2]
+
+        css = (SITE / "style.css").read_text(encoding="utf-8")
+        pairs = re.findall(r"(\.(?:tag|badge(?:\.\w+)?)|\.chips button\[aria-pressed=true\])\s*\{([^}]*)\}", css)
+        self.assertGreaterEqual(len(pairs), 5)
+        for sel, body in pairs:
+            bg = re.search(r"background:\s*(#[0-9a-fA-F]{3,6})", body)
+            fg = re.search(r"(?<![-\w])color:\s*(#[0-9a-fA-F]{3,6})", body)
+            if not (bg and fg):
+                continue
+            hi, lo = sorted((lum(bg.group(1)), lum(fg.group(1))), reverse=True)
+            self.assertGreaterEqual((hi + .05) / (lo + .05), 4.5, f"{sel} {fg.group(1)} on {bg.group(1)}")
+
 if __name__ == "__main__":
     unittest.main()

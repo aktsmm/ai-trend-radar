@@ -2,6 +2,7 @@
 
 Item fields: source='official'|'gh_releases', vendor, source_type, feed, published (ISO), url, title.
 """
+import html
 import re
 import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
@@ -110,9 +111,51 @@ def parse_feed(xml_text):
 
 
 def parse_anthropic_news(html_text):
-    """HTML list page (no RSS): href + 'Mon D, YYYY' + category + title."""
-    cats = r"(?:Announcements|Policy|Product|Research|Societal impacts|Interpretability|Alignment|Customer stories|Economic Research|Engineering|Education|Safety)"
+    """HTML list page (no RSS), three layouts seen so far:
+    card: <time> then the card's /news/<slug> link with <h3>/<img alt> title;
+    row:  /news/<slug> link, then <time>, then a '<title> details' region (the link precedes the date);
+    old:  href + 'Mon D, YYYY' + category + title."""
+    categories = {"announcements", "product", "policy", "research", "features", "societal-impacts", "interpretability",
+                  "alignment", "customer-stories", "economic-research", "engineering", "education", "safety"}
     out, seen = [], set()
+    times = list(re.finditer(r"<time[^>]*>\s*([A-Z][a-z]{2} \d{1,2}, \d{4})\s*</time>", html_text))
+
+    def slugs(text):
+        # a category link's text is a single capitalised word ("Partnerships"); real posts have a title
+        def is_post(m):
+            label = re.match(r"[^>]*>\s*([^<]*)<", text[m.end():m.end() + 200])
+            return m.group(1).rsplit("/", 1)[1] not in categories and not (label and re.fullmatch(r"[A-Z][A-Za-z ]{2,24}", label.group(1).strip()) and len(label.group(1).split()) <= 2)
+        return [m for m in re.finditer(r'href="(/news/[^"#?/]+)"', text) if is_post(m)]
+
+    def clean(raw):
+        return html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", raw))).strip()[:160]
+
+    for i, t in enumerate(times):
+        end = times[i + 1].start() if i + 1 < len(times) else len(html_text)
+        after = html_text[t.end():min(end, t.end() + 3000)]
+        details = re.match(r'.{0,300}?aria-label="([^"]+?) details"', after, re.S)
+        first_link = slugs(after)[:1]
+        if details and (not first_link or details.start(1) < first_link[0].start()):
+            before = html_text[max(0, t.start() - 3000):t.start()]
+            prior = max((m.end() for m in re.finditer(r"<time[^>]*>[^<]*</time>", before)), default=0)
+            back = slugs(before[prior:])
+            if not back:
+                continue
+            slug, title = back[-1].group(1), clean(details.group(1))
+        elif first_link:
+            slug = first_link[0].group(1)
+            h3 = re.search(r"<h3[^>]*>(.*?)</h3>", after, re.S)
+            alt = re.search(r'<img[^>]*\balt="([^"]+)"', after)
+            title = clean(h3.group(1) if h3 else alt.group(1) if alt else "")
+        else:
+            continue
+        if not title or slug in seen:
+            continue
+        seen.add(slug)
+        out.append((title, "https://www.anthropic.com" + slug, _dt(datetime.strptime(t.group(1), "%b %d, %Y").isoformat()), ""))
+    if out:
+        return out
+    cats = r"(?:Announcements|Policy|Product|Research|Societal impacts|Interpretability|Alignment|Customer stories|Economic Research|Engineering|Education|Safety)"
     for m in re.finditer(r'href="(/news/[^"#?]+)"', html_text):
         slug = m.group(1)
         txt = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html_text[m.end():m.end() + 500])).strip()

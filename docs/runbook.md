@@ -88,6 +88,8 @@
 - `token-check`: 毎週月曜、`COPILOT_GITHUB_TOKEN` の有効性と期限を確認する。
 
 ## CI の注意
+- `tests/test_workflow_security.py`: 通常の workflow で `github.event.*` / `inputs.*` を `run:` に直接書くことと、`actions/*` `github/*` 以外の action の使用を拒否する(姉妹サイトと同じ検査)。値は `env:` 経由で渡す。gh-aw の `*.lock.yml` は対象外。
+- `tests/test_a11y.py` はバッジ・チップの文字色と背景色が WCAG AA(4.5:1)以上かも検査する。
 
 - フォント導入(apt)と `playwright install --with-deps` は、GitHub 側のミラーが固まって実行が 20 分以上止まることがある。1 回 120〜240 秒の上限、3 回までの再試行、ステップ全体 6〜10 分の上限を付け、自動マージのジョブ全体は 25 分で打ち切る。上限で落ちたら手動で再実行する。
 - ワークフローの YAML を直したら `python -c "import yaml; yaml.safe_load(open('<file>', encoding='utf-8'))"` で構文を確認する(`name:` の値にコロンがあると壊れる)。

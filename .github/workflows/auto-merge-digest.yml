@@ -51,10 +51,12 @@ jobs:
         timeout-minutes: 6
         run: for i in 1 2 3; do timeout 120 sudo apt-get update -qq && timeout 180 sudo apt-get install -y -qq fonts-noto-cjk && break; [ "$i" = 3 ] && exit 1; sleep 10; done
       - name: Validate and merge eligible PRs
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           set -u
           git config user.name github-actions; git config user.email github-actions@users.noreply.github.com
-          BASE="${{ github.event.repository.default_branch }}"
+          BASE="$DEFAULT_BRANCH"
           merged=0
           for n in $(gh pr list --state open --label data --label automation --json number,author,isDraft --jq '.[] | select(.isDraft|not) | select(.author.login|test("^(app/)?github-actions(\\[bot\\])?$")) | .number'); do
             echo "::group::PR #$n"
@@ -108,4 +110,6 @@ jobs:
           echo "MERGED=$merged" >> "$GITHUB_ENV"
       - name: Publish (build + deploy when enabled) after a merge, or after any digest run (it may have produced only the weekly report)
         if: env.MERGED != '0' || github.event_name == 'workflow_run'
-        run: gh workflow run pages.yml --ref "${{ github.event.repository.default_branch }}"
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: gh workflow run pages.yml --ref "$DEFAULT_BRANCH"

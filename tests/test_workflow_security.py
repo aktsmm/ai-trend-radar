@@ -32,6 +32,14 @@ def problems(name, text):
 
 
 class WorkflowSecurityTest(unittest.TestCase):
+    def test_auto_merge_cannot_swallow_a_failed_validation(self):
+        # the Actions shell is `bash -e` without pipefail: `validate | tee && ok=1` and a later PIPESTATUS read always gave ok=1,
+        # so a PR whose build reported OVERFLOW (or a failing test) was still merged
+        text = (DIR / "auto-merge-digest.yml").read_text(encoding="utf-8")
+        self.assertNotIn("PIPESTATUS", text)
+        self.assertNotRegex(text, r"validate\s+2>&1\s*\|\s*tee")
+        self.assertRegex(text, r"if validate > /tmp/validate\.log 2>&1; then ok=1; else ok=0; fi")
+
     def test_workflows_are_clean(self):
         found = []
         for f in sorted(DIR.glob("*.yml")):

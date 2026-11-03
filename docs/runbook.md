@@ -15,6 +15,7 @@
 | 症状 | 見る場所 | 対処 |
 | --- | --- | --- |
 | サイトが更新されない | Actions: `pages` の最新実行、`about.html` の実行状況 | 失敗ならログ確認 → `workflow_dispatch` で再実行。`PAGES_ENABLED` と Pages の設定(Source: GitHub Actions) |
+| `pages` / `daily-tests` が `OVERFLOW:` で失敗 | ログの `OVERFLOW:` 行(週・entity・deck/slide のページ) | スライド本文が枠に収まっていない。`render.build_site` をローカルで実行して `site/deck.css` か該当文言を直す。**自動マージはこの失敗を検出して止まるはず**(2026-11 に `validate \| tee` の終了コード取り違えで素通りした。`tests/test_workflow_security.py` が再発を防ぐ) |
 | 週次レポートが作られない | `radar` の最新実行、Issue「[watchdog]」 | 取得元の失敗は `api/v1/health.json` と `source_status`。落ちた定期実行は watchdog が再起動する(最後の成功から 30 時間) |
 | digest の PR が来ない | `digest` の実行ログ、Issue「[digest] dropped candidates」 | `COPILOT_GITHUB_TOKEN` の失効を疑う(`token-check` の Issue)。再発行して再実行。変更なしは `noop` で PR は出ない |
 | PR がマージされない | PR のコメント(原因の抜粋つき)、`auto-merge-digest` のログ | 下の「PR が止まったとき」 |

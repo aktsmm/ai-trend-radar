@@ -12,7 +12,7 @@
 .d-aud { margin:14px 44px 0; padding:10px 18px; background:#fff; border-left:8px solid var(--accent); border-radius:8px; font-size:24px; line-height:1.4; }
 .d-aud b { color:var(--accent); margin-right:12px; }
 .d-body { flex:1; min-height:0; padding:14px 44px 8px; display:grid; gap:18px; }
-.d-body.s1 { grid-template-columns:330px 1fr 310px; }
+.d-body.s1 { grid-template-columns:320px 1fr 370px; }
 .d-body.s2 { grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; }
 .d-col { min-width:0; display:flex; flex-direction:column; gap:10px; min-height:0; }
 .dslide h2 { margin:0 0 2px; font-size:20px; color:var(--accent); } .dslide h3 { margin:0 0 4px; font-size:16px; color:var(--muted); text-align:center; }
@@ -26,9 +26,9 @@
 .d-arrow { text-align:center; color:var(--accent); font-size:11px; line-height:1; }
 .d-card { flex:1; background:#fff; border:3px solid var(--accent); border-radius:16px; padding:10px 16px; display:flex; gap:14px; align-items:center; font-size:23px; line-height:1.4; }
 .d-num { flex:none; width:40px; height:40px; border-radius:50%; background:var(--accent); color:#fff; font-weight:800; font-size:22px; display:flex; align-items:center; justify-content:center; }
-.d-facts { width:100%; table-layout:fixed; border-collapse:separate; border-spacing:0 8px; font-size:20px; }
-.d-facts th { text-align:left; font-weight:700; background:var(--accent); color:#fff; padding:8px 12px; border-radius:10px 0 0 10px; width:112px; vertical-align:top; }
-.d-facts td { overflow-wrap:anywhere; background:#fff; padding:8px 12px; border:2px solid var(--accent); border-left:0; border-radius:0 10px 10px 0; line-height:1.35; }
+.d-facts { width:100%; table-layout:fixed; border-collapse:separate; border-spacing:0 6px; font-size:18px; }
+.d-facts th { text-align:left; font-weight:700; background:var(--accent); color:#fff; padding:6px 10px; border-radius:10px 0 0 10px; width:92px; vertical-align:top; }
+.d-facts td { overflow-wrap:anywhere; background:#fff; padding:6px 10px; border:2px solid var(--accent); border-left:0; border-radius:0 10px 10px 0; line-height:1.35; }
 .d-box { background:#fff; border:3px solid var(--accent); border-radius:16px; padding:8px 16px; overflow:hidden; min-height:0; }
 .d-box.warn { border-color:#c98a00; background:#fffaf0; } .d-box.warn h2 { color:#8a5a00; }
 .d-box ul, .d-box ol { margin:2px 0 0; padding-left:24px; font-size:18px; line-height:1.32; } .d-box li { margin-bottom:2px; }

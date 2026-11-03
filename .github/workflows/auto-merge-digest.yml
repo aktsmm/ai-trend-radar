@@ -79,8 +79,9 @@ jobs:
               python -m render.build_all --offline || return 1
               python -m unittest discover -s tests || return 1
             }
-            validate 2>&1 | tee /tmp/validate.log && ok=1 || ok=0
-            ok=$([ "${PIPESTATUS[0]}" = 0 ] && echo 1 || echo 0)
+            # the shell is `bash -e` without pipefail: `validate | tee` would always report tee's status, so use the exit status directly
+            if validate > /tmp/validate.log 2>&1; then ok=1; else ok=0; fi
+            cat /tmp/validate.log
             if [ $ok = 1 ]; then
               if gh pr merge "$n" --squash --match-head-commit "$oid"; then
                 merged=$((merged+1))

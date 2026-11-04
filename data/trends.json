@@ -1161,11 +1161,11 @@
    "url_checks": {
     "https://mistral.ai/news/mistral-large-4-oss/": {
      "status": 200,
-     "checked_at": "2026-11-02T14:37:46.423130+00:00"
+     "checked_at": "2026-11-04T22:06:00.092494+00:00"
     },
     "https://huggingface.co/blog/mistral-large4": {
      "status": 200,
-     "checked_at": "2026-11-02T14:37:46.423130+00:00"
+     "checked_at": "2026-11-04T22:06:00.092494+00:00"
     }
    },
    "jp_reactions": [],
@@ -1979,7 +1979,42 @@
    ],
    "official_verified": true,
    "summary": "New features for Amazon EC2 Capacity Manager ― Amazon EC2 Capacity Manager now offers real-time supportability checks and capacity fulfillment metrics. Real-。5ソースで言及(代表: 「New features for Amazon EC2 Capacity Manager」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "EC2 Capacity Manager に新機能",
+     "diagram_type": "infographic",
+     "icon": "cloud",
+     "stat": {
+      "value": "High/Med/Low",
+      "label": "supportability チェックの評価(2026-11-04 AWS 発表)"
+     },
+     "steps": [
+      "チェックを実行",
+      "評価を比べる",
+      "充足率を確認"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "AWS が EC2 Capacity Manager に supportability チェックと充足率メトリクスを追加"
+      },
+      {
+       "h": "何が変わる",
+       "t": "起動や予約をせずに、AZ とインスタンスタイプごとの取りやすさを比べられる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "要求量に対して届いた量を、組織・リージョン・タグ別に測れる"
+      },
+      {
+       "h": "注意",
+       "t": "AWS Unified Operations に含まれる機能で、対象プランの確認が必要"
+      }
+     ],
+     "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/ec2-capacity-manager-supportability-and-fulfillment/",
+     "source_date": "2026-11-04"
+    }
+   ],
    "score_breakdown": {
     "github_new": 0.622,
     "hackernews": 0.479,
@@ -2031,12 +2066,129 @@
      "via": "watchlist"
     }
    ],
-   "display": "Manager",
+   "display": "EC2 Capacity Manager",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "New features for Amazon EC2 Capacity Manager",
+      "evidence_urls": [
+       "https://aws.amazon.com/about-aws/whats-new/2026/11/ec2-capacity-manager-supportability-and-fulfillment/"
+      ],
+      "evidence_published_at": "2026-11-04",
+      "result": "リアルタイムの supportability チェック(High / Medium / Low の評価)と容量の充足率メトリクスの追加、AWS Unified Operations に含まれ全商用リージョンで利用可能なことを確認",
+      "retrieved_at": "2026-11-05T06:31:00+09:00"
+     }
+    ],
+    "selection_reason": "dev-tool 代表。AWS が 2026-11-04 の公式発表で、Amazon EC2 Capacity Manager の新機能を発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/ec2-capacity-manager-supportability-and-fulfillment/": {
+     "status": 200,
+     "checked_at": "2026-11-04T22:06:00.092494+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "AWS が 2026-11-04 に、Amazon EC2 Capacity Manager の新機能を発表した。",
+     "supportability チェックは、インスタンスタイプと AZ ごとに要求を支えられる度合いを High / Medium / Low で評価する。起動や予約はしない。",
+     "容量充足率メトリクスは、要求した量に対して実際に提供された量を示す。"
+    ],
+    "why_trending": "AWS の公式発表で、今週の開発・運用ツール分野で注目された。",
+    "what_changes": [
+     "容量を確保できそうな AZ とインスタンスタイプを事前に確認できる",
+     "組織・アカウント・リージョン・タグ別に充足率を測れる"
+    ],
+    "benefits": [
+     "インスタンスを起動せずに、容量の取りやすさを比べられる",
+     "分散の選び方が効いているかを、数字で振り返れる"
+    ],
+    "caveats": [
+     "AWS Unified Operations に含まれる機能で、そのサポートプランが対象",
+     "対象は商用リージョンで、金額などの詳細は公式の案内を確認する必要がある"
+    ],
+    "audience": "多数のワークロードを EC2 で運用する大企業のインフラ担当"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "EC2 Capacity Manager に、容量の取りやすさを事前に確認する機能が加わった。",
+     "stat": {
+      "value": "High/Med/Low",
+      "label": "supportability チェックの評価"
+     },
+     "steps": [
+      "チェックを実行",
+      "評価を比べる",
+      "充足率を確認"
+     ],
+     "changes": [
+      "起動や予約なしで AZ・タイプ別の評価が得られる",
+      "要求量に対する提供量を測れる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "AWS"
+      },
+      {
+       "k": "発表日",
+       "v": "2026-11-04"
+      },
+      {
+       "k": "対象",
+       "v": "全商用リージョン"
+      },
+      {
+       "k": "提供形態",
+       "v": "Unified Operations"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "多数のワークロードを EC2 で運用する大企業のインフラ担当",
+     "benefits": [
+      "容量を確保できそうな AZ とタイプを選びやすい",
+      "分散方針の効果を充足率で振り返れる"
+     ],
+     "how_to": [
+      "Capacity Manager のコンソールを開く",
+      "supportability チェックで評価を確認する",
+      "充足率メトリクスで結果を測る"
+     ],
+     "caveats": [
+      "AWS Unified Operations に含まれる機能",
+      "詳細は公式ブログとユーザーガイドで確認する"
+     ],
+     "terms": [
+      {
+       "t": "AZ",
+       "d": "同じリージョン内で独立した設備を持つ区画"
+      },
+      {
+       "t": "インスタンスタイプ",
+       "d": "EC2 の CPU やメモリの構成の種類"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "New features for Amazon EC2 Capacity Manager",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/ec2-capacity-manager-supportability-and-fulfillment/",
+      "date": "2026-11-04"
+     }
+    ]
+   }
   },
   {
    "rank": 8,
@@ -2244,7 +2396,42 @@
    ],
    "official_verified": true,
    "summary": "From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence ― Evaluating Microsoft Copilot at enterprise scale requires test data that captures the full complexity of real 。4ソースで言及(代表: 「From synthetic enterprise data evaluations to real Microsoft」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Copilot 評価用の合成データ基盤",
+     "diagram_type": "infographic",
+     "icon": "shield",
+     "stat": {
+      "value": "3 業界",
+      "label": "製薬・資本市場・IT の合成環境(2026-10-30 公開)"
+     },
+     "steps": [
+      "公開データで環境を作る",
+      "質問を自動生成",
+      "Copilot を評価"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Microsoft Research が Copilot 評価用の合成エンタープライズデータ基盤を紹介"
+      },
+      {
+       "h": "何が変わる",
+       "t": "顧客データを使わずに、現実的な企業環境で AI を評価できる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "6 段階の自動パイプラインで、業界別の評価クエリを大量に作れる"
+      },
+      {
+       "h": "注意",
+       "t": "Microsoft 社内の手法の紹介で、第三者の検証ではない"
+      }
+     ],
+     "official_url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+     "source_date": "2026-10-30"
+    }
+   ],
    "score_breakdown": {
     "hf_papers": 0.539,
     "devto": 0.385,
@@ -2272,12 +2459,128 @@
    "resolved_repo": null,
    "trend_label": "rising",
    "x_posts": [],
-   "display": "Synthetic",
+   "display": "Microsoft 合成評価データ基盤",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence",
+      "evidence_urls": [
+       "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/"
+      ],
+      "evidence_published_at": "2026-10-30",
+      "result": "顧客データを使わず、O*NET・求人情報・SEC 提出書類を元にした 3 業界の合成環境と、6 段階の自動クエリ生成で Copilot を評価する仕組みを確認",
+      "retrieved_at": "2026-11-05T06:31:00+09:00"
+     }
+    ],
+    "selection_reason": "research 代表。Microsoft Research が 2026-10-30 の公式ブログで、Copilot 評価用の合成エンタープライズデータ基盤を紹介。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/": {
+     "status": 200,
+     "checked_at": "2026-11-04T22:06:00.092494+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Microsoft Research が、Copilot の評価に使う Industry Evaluation Data Generation Platform を紹介した。",
+     "顧客データを使わず、O*NET・求人情報・SEC 提出書類などの公開データを元に合成の企業環境を作る。",
+     "製薬・資本市場・IT の 3 業界の環境で、6 段階の自動パイプラインが業界別の質問を作る。"
+    ],
+    "why_trending": "Microsoft Research の公式ブログで、AI の評価方法として今週話題。",
+    "what_changes": [
+     "機密を含む実データなしで、企業向け AI を現実的に評価できる",
+     "手作業では難しい数の評価用クエリを自動で作れる"
+    ],
+    "benefits": [
+     "会議・メール・文書が時間とともに変わる環境で、時間を意識した質問も試せる",
+     "汎用ベンチマークで見つかりにくい問題を、業界別の評価で探せる"
+    ],
+    "caveats": [
+     "Microsoft 社内の評価手法の紹介で、一般向けのツール提供とは書かれていない",
+     "手法は Microsoft 自身の説明で、第三者による検証ではない"
+    ],
+    "audience": "企業向け AI の品質評価やテストデータ作りに関わる担当者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Microsoft が、顧客データなしで Copilot を評価する合成データ基盤を紹介した。",
+     "stat": {
+      "value": "3 業界",
+      "label": "製薬・資本市場・IT の合成環境"
+     },
+     "steps": [
+      "公開データで環境を作る",
+      "質問を自動生成",
+      "Copilot を評価"
+     ],
+     "changes": [
+      "実データなしで企業向け AI を評価できる",
+      "6 段階の自動パイプラインで質問を作る"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Microsoft Research"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-10-30"
+      },
+      {
+       "k": "元データ",
+       "v": "O*NET・求人・SEC"
+      },
+      {
+       "k": "環境数",
+       "v": "3 業界"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "企業向け AI の品質評価やテストデータ作りに関わる担当者",
+     "benefits": [
+      "機密データを使わずに評価環境を用意できる",
+      "業界別の質問で、汎用ベンチマークで見えない問題を探せる"
+     ],
+     "how_to": [
+      "自社の業務を代表する公開データを選ぶ",
+      "合成環境と評価クエリを作る",
+      "AI の回答を評価する"
+     ],
+     "caveats": [
+      "Microsoft 社内の手法の紹介で、第三者の検証ではない"
+     ],
+     "terms": [
+      {
+       "t": "合成データ",
+       "d": "実データを使わず人工的に作ったデータ"
+      },
+      {
+       "t": "テナント",
+       "d": "ユーザーとデータを持つ、組織単位の独立した環境"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Synthetic enterprise data evaluations for Copilot",
+      "publisher": "Microsoft Research",
+      "url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+      "date": "2026-10-30"
+     }
+    ]
+   }
   },
   {
    "rank": 10,
@@ -2792,13 +3095,45 @@
     }
    ],
    "official_urls": [
-    "https://ollama.com/library/kimi-k3",
-    "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
-    "https://ollama.com/library/kimi-k3.1-pro"
+    "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "moonshotai/Kimi-K3.1-Pro ― Amazon Bedrock now offers in-country inference in India for Kimi K3, keeping processing within the Mumbai and 。5ソースで言及(代表: 「moonshotai/Kimi-K3.1-Pro」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Kimi K3.1 Pro、重みを公開",
+     "diagram_type": "infographic",
+     "icon": "layers",
+     "stat": {
+      "value": "100 万トークン",
+      "label": "文脈長(総計 2.8T・有効 104B の MoE)"
+     },
+     "steps": [
+      "重みを入手",
+      "ライセンスを確認",
+      "自社環境で実行"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Moonshot AI が Kimi K3.1 Pro の重みを Hugging Face で公開した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "テキストと画像を扱う大型モデルを、重みごと入手できる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "コーディングや金融調査の強化が、開発元から説明されている"
+      },
+      {
+       "h": "注意",
+       "t": "独自ライセンスで、動かすには大規模な GPU が必要な見込み"
+      }
+     ],
+     "official_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 0.92,
     "reddit_localllama": 0.92,
@@ -2847,12 +3182,129 @@
      "via": "watchlist"
     }
    ],
-   "display": "Moonshot kimi-k3",
+   "display": "Kimi K3.1 Pro",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "moonshotai/Kimi-K3.1-Pro model card",
+      "evidence_urls": [
+       "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+      ],
+      "result": "総計 2.8T・有効 104B パラメータの MoE、文脈長 1,048,576 トークン、テキストと画像の入力、MXFP4 の量子化対応学習、独自ライセンスでの重み公開を確認。ページに公開日の記載はない",
+      "retrieved_at": "2026-11-05T06:31:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。Moonshot AI が Kimi K3.1 Pro の重みを Hugging Face の公式モデルカードで公開。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://huggingface.co/moonshotai/Kimi-K3.1-Pro": {
+     "status": 200,
+     "checked_at": "2026-11-04T22:06:00.092494+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Moonshot AI が、オープンウェイトのマルチモーダルモデル Kimi K3.1 Pro の重みを Hugging Face で公開した。",
+     "総計 2.8T・有効 104B パラメータの MoE で、文脈長は約 100 万トークン。テキストと画像を入力できる。",
+     "長い文脈向けに注意機構の一部を Gated DSA に置き換え、重みは MXFP4 の量子化対応学習で作られている。"
+    ],
+    "why_trending": "Hugging Face と Ollama に並び、Reddit でもオープンウェイト公開が話題。",
+    "what_changes": [
+     "コーディングや金融分野の調査に強い大型モデルを、重みごと入手できる",
+     "Ollama 経由でも Kimi K3.1 Pro を試せる"
+    ],
+    "benefits": [
+     "文脈長が約 100 万トークンで、長い資料や大きなコードを一度に扱える",
+     "開発元は事実の正確さがK3より改善したと説明している"
+    ],
+    "caveats": [
+     "公開は Kimi K3.1 Pro License の下で、利用条件を事前に確認する必要がある",
+     "総計 2.8T パラメータで、手元で動かすには大規模な GPU 環境が必要な見込み",
+     "ベンチマークの数字は開発元の発表で、第三者の検証ではない"
+    ],
+    "audience": "大型のオープンウェイトモデルを評価・運用したい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Moonshot AI の大型モデル Kimi K3.1 Pro の重みが公開された。",
+     "stat": {
+      "value": "100 万トークン",
+      "label": "文脈長(総計 2.8T の MoE)"
+     },
+     "steps": [
+      "重みを入手",
+      "ライセンスを確認",
+      "自社環境で実行"
+     ],
+     "changes": [
+      "有効 104B パラメータの MoE を重みごと入手できる",
+      "テキストと画像を入力できる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Moonshot AI"
+      },
+      {
+       "k": "規模",
+       "v": "総計 2.8T・有効 104B"
+      },
+      {
+       "k": "入力",
+       "v": "テキストと画像"
+      },
+      {
+       "k": "量子化",
+       "v": "MXFP4 重み"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "大型のオープンウェイトモデルを評価・運用したい開発者",
+     "benefits": [
+      "長い資料や大きなコードを一度に扱える文脈長",
+      "重みを手元に置き、配備先を自分で決められる"
+     ],
+     "how_to": [
+      "モデルカードでライセンスの条件を読む",
+      "Ollama など対応する実行環境を選ぶ",
+      "小さなタスクから品質を試す"
+     ],
+     "caveats": [
+      "独自の Kimi K3.1 Pro License の条件を確認する",
+      "動かすには大規模な GPU 環境が必要な見込み",
+      "性能の数字は開発元の発表"
+     ],
+     "terms": [
+      {
+       "t": "MoE",
+       "d": "入力ごとに一部の専門家だけを使うモデル構造"
+      },
+      {
+       "t": "オープンウェイト",
+       "d": "重みが公開され、手元で動かせるモデル"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "moonshotai/Kimi-K3.1-Pro",
+      "publisher": "Hugging Face",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+     }
+    ]
+   }
   },
   {
    "rank": 14,
@@ -3302,7 +3754,7 @@
    "url_checks": {
     "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/": {
      "status": 200,
-     "checked_at": "2026-11-02T14:37:46.423130+00:00"
+     "checked_at": "2026-11-04T22:06:00.092494+00:00"
     }
    },
    "jp_reactions": [],
@@ -4218,17 +4670,23 @@
   {
    "id": "big-models-run-locally",
    "title": "大きなモデルを自分の手元で動かす",
-   "confidence": "low",
-   "summary": "Mistral は旗艦モデルの重みを公開し、NVIDIA は最大 128GB の統合メモリを持つノート PC を発売した。モデルを手元で動かす選択肢が、ソフトと機器の両方で広がった。",
+   "confidence": "medium",
+   "summary": "Mistral と Moonshot AI は大型モデルの重みを公開し、NVIDIA は最大 128GB の統合メモリを持つノート PC を発売した。モデルを手元で動かす選択肢が、ソフトと機器の両方で広がった。",
    "background": [
     "Mistral Large 4 は FP8・NVFP4・GGUF 版があり、RTX Spark は llama.cpp と vLLM での実行を紹介している。",
-    "2 件だけの共通点で、モデルを借りるだけでなく自分の環境で動かしたい需要が背景にあるかもしれない(見立て)。"
+    "Kimi K3.1 Pro も重みが公開され、Ollama でも提供されている。",
+    "3 件の共通点で、モデルを借りるだけでなく自分の環境で動かしたい需要が背景にあるかもしれない(見立て)。"
    ],
    "entities": [
     "mistral-large-4",
-    "spark"
+    "spark",
+    "kimi-k3"
    ],
    "signals": [
+    {
+     "entity": "kimi-k3",
+     "note": "総計 2.8T・有効 104B パラメータの MoE の重みが公開された"
+    },
     {
      "entity": "mistral-large-4",
      "note": "約 1 兆パラメータの MoE の重みが公開され、FP8・NVFP4・GGUF 版もある"
@@ -4239,12 +4697,16 @@
     }
    ],
    "refs": [
+    "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
     "https://mistral.ai/news/mistral-large-4-oss/",
     "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/"
    ]
   }
  ],
  "rejected_candidates": {
+  "vllm": "リリース候補版(rc)のタグで、今週あらためて紹介するほどの新しい内容がない。",
+  "bench": "第三者の研究機関の評価セットの紹介で、プロダクトやモデルの一次情報として紹介する対象ではない。",
+  "minecraft": "個人の小規模なリポジトリで、公式の一次情報を確認できなかった。",
   "lfm3": "同じ内容を 2026-W44 ですでに掲載済みのため、重複として見送る。",
   "mistral": "同じ内容を entity mistral-large-4 として今週すでに掲載したため、重複として見送る。",
   "gpt-6-1-terra": "一次情報の本文を確認できなかった。",

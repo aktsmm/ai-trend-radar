@@ -146,33 +146,33 @@
   }
  },
  "url_checks": {
-  "https://huggingface.co/moonshotai/Kimi-K3.1-Pro": {
-   "status": 200,
-   "checked_at": "2026-11-05T06:31:00+09:00"
-  },
   "https://aws.amazon.com/about-aws/whats-new/2026/11/ec2-capacity-manager-supportability-and-fulfillment/": {
    "status": 200,
-   "checked_at": "2026-11-05T06:31:00+09:00"
-  },
-  "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/": {
-   "status": 200,
-   "checked_at": "2026-11-05T06:31:00+09:00"
+   "checked_at": "2026-11-04T22:06:00.092494+00:00"
   },
   "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/": {
    "status": 200,
-   "checked_at": "2026-11-02T14:37:46.423130+00:00"
+   "checked_at": "2026-11-04T22:06:00.092494+00:00"
   },
   "https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/": {
    "status": 200,
-   "checked_at": "2026-11-02T14:37:46.423130+00:00"
+   "checked_at": "2026-11-04T22:06:00.092494+00:00"
   },
   "https://huggingface.co/blog/mistral-large4": {
    "status": 200,
-   "checked_at": "2026-11-02T14:37:46.423130+00:00"
+   "checked_at": "2026-11-04T22:06:00.092494+00:00"
+  },
+  "https://huggingface.co/moonshotai/Kimi-K3.1-Pro": {
+   "status": 200,
+   "checked_at": "2026-11-04T22:06:00.092494+00:00"
   },
   "https://mistral.ai/news/mistral-large-4-oss/": {
    "status": 200,
-   "checked_at": "2026-11-02T14:37:46.423130+00:00"
+   "checked_at": "2026-11-04T22:06:00.092494+00:00"
+  },
+  "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/": {
+   "status": 200,
+   "checked_at": "2026-11-04T22:06:00.092494+00:00"
   }
  }
 }

@@ -1,5 +1,13 @@
 [
  {
+  "term": "合成データ",
+  "kind": "基礎",
+  "short": "実データを使わず人工的に作ったデータ",
+  "explain": "実際のデータを使わず、ルールや公開情報を元に人工的に作ったデータ。個人情報や機密を含まないので、AI のテストや学習に安全に使いやすい。",
+  "entity": "synthetic",
+  "ref": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/"
+ },
+ {
   "term": "統合メモリ",
   "kind": "仕組み",
   "short": "GPU と CPU が 1 つのメモリを共有する方式",

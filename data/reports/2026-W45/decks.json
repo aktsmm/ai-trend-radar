@@ -1,4 +1,91 @@
 {
+ "kimi-k3": {
+  "overview": {
+   "takeaway": "Moonshot AI の大型モデル Kimi K3.1 Pro の重みが公開された。",
+   "stat": {"value": "100 万トークン", "label": "文脈長(総計 2.8T の MoE)"},
+   "steps": ["重みを入手", "ライセンスを確認", "自社環境で実行"],
+   "changes": ["有効 104B パラメータの MoE を重みごと入手できる", "テキストと画像を入力できる"],
+   "facts": [
+    {"k": "提供元", "v": "Moonshot AI"},
+    {"k": "規模", "v": "総計 2.8T・有効 104B"},
+    {"k": "入力", "v": "テキストと画像"},
+    {"k": "量子化", "v": "MXFP4 重み"}
+   ],
+   "refs": ["s1"]
+  },
+  "impact": {
+   "audience": "大型のオープンウェイトモデルを評価・運用したい開発者",
+   "benefits": ["長い資料や大きなコードを一度に扱える文脈長", "重みを手元に置き、配備先を自分で決められる"],
+   "how_to": ["モデルカードでライセンスの条件を読む", "Ollama など対応する実行環境を選ぶ", "小さなタスクから品質を試す"],
+   "caveats": ["独自の Kimi K3.1 Pro License の条件を確認する", "動かすには大規模な GPU 環境が必要な見込み", "性能の数字は開発元の発表"],
+   "terms": [
+    {"t": "MoE", "d": "入力ごとに一部の専門家だけを使うモデル構造"},
+    {"t": "オープンウェイト", "d": "重みが公開され、手元で動かせるモデル"}
+   ],
+   "refs": ["s1"]
+  },
+  "sources": [
+   {"id": "s1", "title": "moonshotai/Kimi-K3.1-Pro", "publisher": "Hugging Face", "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"}
+  ]
+ },
+ "manager": {
+  "overview": {
+   "takeaway": "EC2 Capacity Manager に、容量の取りやすさを事前に確認する機能が加わった。",
+   "stat": {"value": "High/Med/Low", "label": "supportability チェックの評価"},
+   "steps": ["チェックを実行", "評価を比べる", "充足率を確認"],
+   "changes": ["起動や予約なしで AZ・タイプ別の評価が得られる", "要求量に対する提供量を測れる"],
+   "facts": [
+    {"k": "提供元", "v": "AWS"},
+    {"k": "発表日", "v": "2026-11-04"},
+    {"k": "対象", "v": "全商用リージョン"},
+    {"k": "提供形態", "v": "Unified Operations"}
+   ],
+   "refs": ["s1"]
+  },
+  "impact": {
+   "audience": "多数のワークロードを EC2 で運用する大企業のインフラ担当",
+   "benefits": ["容量を確保できそうな AZ とタイプを選びやすい", "分散方針の効果を充足率で振り返れる"],
+   "how_to": ["Capacity Manager のコンソールを開く", "supportability チェックで評価を確認する", "充足率メトリクスで結果を測る"],
+   "caveats": ["AWS Unified Operations に含まれる機能", "詳細は公式ブログとユーザーガイドで確認する"],
+   "terms": [
+    {"t": "AZ", "d": "同じリージョン内で独立した設備を持つ区画"},
+    {"t": "インスタンスタイプ", "d": "EC2 の CPU やメモリの構成の種類"}
+   ],
+   "refs": ["s1"]
+  },
+  "sources": [
+   {"id": "s1", "title": "New features for Amazon EC2 Capacity Manager", "publisher": "AWS", "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/ec2-capacity-manager-supportability-and-fulfillment/", "date": "2026-11-04"}
+  ]
+ },
+ "synthetic": {
+  "overview": {
+   "takeaway": "Microsoft が、顧客データなしで Copilot を評価する合成データ基盤を紹介した。",
+   "stat": {"value": "3 業界", "label": "製薬・資本市場・IT の合成環境"},
+   "steps": ["公開データで環境を作る", "質問を自動生成", "Copilot を評価"],
+   "changes": ["実データなしで企業向け AI を評価できる", "6 段階の自動パイプラインで質問を作る"],
+   "facts": [
+    {"k": "提供元", "v": "Microsoft Research"},
+    {"k": "公開日", "v": "2026-10-30"},
+    {"k": "元データ", "v": "O*NET・求人・SEC"},
+    {"k": "環境数", "v": "3 業界"}
+   ],
+   "refs": ["s1"]
+  },
+  "impact": {
+   "audience": "企業向け AI の品質評価やテストデータ作りに関わる担当者",
+   "benefits": ["機密データを使わずに評価環境を用意できる", "業界別の質問で、汎用ベンチマークで見えない問題を探せる"],
+   "how_to": ["自社の業務を代表する公開データを選ぶ", "合成環境と評価クエリを作る", "AI の回答を評価する"],
+   "caveats": ["Microsoft 社内の手法の紹介で、第三者の検証ではない"],
+   "terms": [
+    {"t": "合成データ", "d": "実データを使わず人工的に作ったデータ"},
+    {"t": "テナント", "d": "ユーザーとデータを持つ、組織単位の独立した環境"}
+   ],
+   "refs": ["s1"]
+  },
+  "sources": [
+   {"id": "s1", "title": "Synthetic enterprise data evaluations for Copilot", "publisher": "Microsoft Research", "url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/", "date": "2026-10-30"}
+  ]
+ },
  "mistral-large-4": {
   "overview": {
    "takeaway": "Mistral の旗艦モデル Mistral Large 4 の重みが公開され、自社環境で動かせるようになった。",

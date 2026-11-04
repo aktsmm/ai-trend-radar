@@ -1,4 +1,54 @@
 {
+ "kimi-k3": [
+  {
+   "title": "Kimi K3.1 Pro、重みを公開",
+   "diagram_type": "infographic",
+   "icon": "layers",
+   "stat": {"value": "100 万トークン", "label": "文脈長(総計 2.8T・有効 104B の MoE)"},
+   "steps": ["重みを入手", "ライセンスを確認", "自社環境で実行"],
+   "points": [
+    {"h": "何が起きた", "t": "Moonshot AI が Kimi K3.1 Pro の重みを Hugging Face で公開した"},
+    {"h": "何が変わる", "t": "テキストと画像を扱う大型モデルを、重みごと入手できる"},
+    {"h": "嬉しいこと", "t": "コーディングや金融調査の強化が、開発元から説明されている"},
+    {"h": "注意", "t": "独自ライセンスで、動かすには大規模な GPU が必要な見込み"}
+   ],
+   "official_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+  }
+ ],
+ "manager": [
+  {
+   "title": "EC2 Capacity Manager に新機能",
+   "diagram_type": "infographic",
+   "icon": "cloud",
+   "stat": {"value": "High/Med/Low", "label": "supportability チェックの評価(2026-11-04 AWS 発表)"},
+   "steps": ["チェックを実行", "評価を比べる", "充足率を確認"],
+   "points": [
+    {"h": "何が起きた", "t": "AWS が EC2 Capacity Manager に supportability チェックと充足率メトリクスを追加"},
+    {"h": "何が変わる", "t": "起動や予約をせずに、AZ とインスタンスタイプごとの取りやすさを比べられる"},
+    {"h": "嬉しいこと", "t": "要求量に対して届いた量を、組織・リージョン・タグ別に測れる"},
+    {"h": "注意", "t": "AWS Unified Operations に含まれる機能で、対象プランの確認が必要"}
+   ],
+   "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/ec2-capacity-manager-supportability-and-fulfillment/",
+   "source_date": "2026-11-04"
+  }
+ ],
+ "synthetic": [
+  {
+   "title": "Copilot 評価用の合成データ基盤",
+   "diagram_type": "infographic",
+   "icon": "shield",
+   "stat": {"value": "3 業界", "label": "製薬・資本市場・IT の合成環境(2026-10-30 公開)"},
+   "steps": ["公開データで環境を作る", "質問を自動生成", "Copilot を評価"],
+   "points": [
+    {"h": "何が起きた", "t": "Microsoft Research が Copilot 評価用の合成エンタープライズデータ基盤を紹介"},
+    {"h": "何が変わる", "t": "顧客データを使わずに、現実的な企業環境で AI を評価できる"},
+    {"h": "嬉しいこと", "t": "6 段階の自動パイプラインで、業界別の評価クエリを大量に作れる"},
+    {"h": "注意", "t": "Microsoft 社内の手法の紹介で、第三者の検証ではない"}
+   ],
+   "official_url": "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+   "source_date": "2026-10-30"
+  }
+ ],
  "mistral-large-4": [
   {
    "title": "Mistral Large 4、重みを公開",

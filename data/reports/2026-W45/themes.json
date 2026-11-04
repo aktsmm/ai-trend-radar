@@ -2,18 +2,21 @@
   {
     "id": "big-models-run-locally",
     "title": "大きなモデルを自分の手元で動かす",
-    "confidence": "low",
-    "summary": "Mistral は旗艦モデルの重みを公開し、NVIDIA は最大 128GB の統合メモリを持つノート PC を発売した。モデルを手元で動かす選択肢が、ソフトと機器の両方で広がった。",
+    "confidence": "medium",
+    "summary": "Mistral と Moonshot AI は大型モデルの重みを公開し、NVIDIA は最大 128GB の統合メモリを持つノート PC を発売した。モデルを手元で動かす選択肢が、ソフトと機器の両方で広がった。",
     "background": [
       "Mistral Large 4 は FP8・NVFP4・GGUF 版があり、RTX Spark は llama.cpp と vLLM での実行を紹介している。",
-      "2 件だけの共通点で、モデルを借りるだけでなく自分の環境で動かしたい需要が背景にあるかもしれない(見立て)。"
+      "Kimi K3.1 Pro も重みが公開され、Ollama でも提供されている。",
+      "3 件の共通点で、モデルを借りるだけでなく自分の環境で動かしたい需要が背景にあるかもしれない(見立て)。"
     ],
-    "entities": ["mistral-large-4", "spark"],
+    "entities": ["mistral-large-4", "spark", "kimi-k3"],
     "signals": [
+      { "entity": "kimi-k3", "note": "総計 2.8T・有効 104B パラメータの MoE の重みが公開された" },
       { "entity": "mistral-large-4", "note": "約 1 兆パラメータの MoE の重みが公開され、FP8・NVFP4・GGUF 版もある" },
       { "entity": "spark", "note": "最大 128GB の統合メモリを持つノート PC が 2,599 ドルから発売" }
     ],
     "refs": [
+      "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
       "https://mistral.ai/news/mistral-large-4-oss/",
       "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/"
     ]

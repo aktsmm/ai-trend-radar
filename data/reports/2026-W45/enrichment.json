@@ -79,9 +79,85 @@
     }
    ],
    "display": "Gemini 4 Carbon"
+  },
+  "kimi-k3": {
+   "selection_reason": "model 代表。Moonshot AI が Kimi K3.1 Pro の重みを Hugging Face の公式モデルカードで公開。",
+   "verification_status": "partially_verified",
+   "official_urls": [
+    "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "moonshotai/Kimi-K3.1-Pro model card",
+     "evidence_urls": [
+      "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+     ],
+     "result": "総計 2.8T・有効 104B パラメータの MoE、文脈長 1,048,576 トークン、テキストと画像の入力、MXFP4 の量子化対応学習、独自ライセンスでの重み公開を確認。ページに公開日の記載はない",
+     "retrieved_at": "2026-11-05T06:31:00+09:00"
+    }
+   ],
+   "display": "Kimi K3.1 Pro",
+   "kind": "model"
+  },
+  "manager": {
+   "selection_reason": "dev-tool 代表。AWS が 2026-11-04 の公式発表で、Amazon EC2 Capacity Manager の新機能を発表。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/ec2-capacity-manager-supportability-and-fulfillment/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "New features for Amazon EC2 Capacity Manager",
+     "evidence_urls": [
+      "https://aws.amazon.com/about-aws/whats-new/2026/11/ec2-capacity-manager-supportability-and-fulfillment/"
+     ],
+     "evidence_published_at": "2026-11-04",
+     "result": "リアルタイムの supportability チェック(High / Medium / Low の評価)と容量の充足率メトリクスの追加、AWS Unified Operations に含まれ全商用リージョンで利用可能なことを確認",
+     "retrieved_at": "2026-11-05T06:31:00+09:00"
+    }
+   ],
+   "display": "EC2 Capacity Manager",
+   "kind": "product"
+  },
+  "synthetic": {
+   "selection_reason": "research 代表。Microsoft Research が 2026-10-30 の公式ブログで、Copilot 評価用の合成エンタープライズデータ基盤を紹介。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "From synthetic enterprise data evaluations to real Microsoft Copilot AI confidence",
+     "evidence_urls": [
+      "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/"
+     ],
+     "evidence_published_at": "2026-10-30",
+     "result": "顧客データを使わず、O*NET・求人情報・SEC 提出書類を元にした 3 業界の合成環境と、6 段階の自動クエリ生成で Copilot を評価する仕組みを確認",
+     "retrieved_at": "2026-11-05T06:31:00+09:00"
+    }
+   ],
+   "display": "Microsoft 合成評価データ基盤"
   }
  },
  "url_checks": {
+  "https://huggingface.co/moonshotai/Kimi-K3.1-Pro": {
+   "status": 200,
+   "checked_at": "2026-11-05T06:31:00+09:00"
+  },
+  "https://aws.amazon.com/about-aws/whats-new/2026/11/ec2-capacity-manager-supportability-and-fulfillment/": {
+   "status": 200,
+   "checked_at": "2026-11-05T06:31:00+09:00"
+  },
+  "https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/": {
+   "status": 200,
+   "checked_at": "2026-11-05T06:31:00+09:00"
+  },
   "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/": {
    "status": 200,
    "checked_at": "2026-11-02T14:37:46.423130+00:00"

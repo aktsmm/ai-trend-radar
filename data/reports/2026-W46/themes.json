@@ -1,0 +1,24 @@
+[
+  {
+    "id": "tuning-cost-and-control",
+    "title": "費用・速度・権限を細かく調整できるようにする",
+    "confidence": "low",
+    "summary": "動画生成、検索モデル、コーディング支援の 3 件で、使い方に合わせて費用や速度、確認の手間を調整する手段が加わった。",
+    "background": [
+      "Gemini Omni 1.2 Flash は 360p で下書きして良いものだけ高解像度に上げる流れと、30% の値下げを示した。",
+      "Cohere の検索モデルは Pro と Fast の使い分け、Claude Code は確認待ちを拒否して続ける設定を紹介・追加した。",
+      "3 件の共通点で、利用者が品質と費用、手間のバランスを自分で選びたい需要が背景にあるかもしれない(見立て)。"
+    ],
+    "entities": ["gemini-omni-1-2-flash", "openrouter", "claude-code"],
+    "signals": [
+      {"entity": "gemini-omni-1-2-flash", "note": "前版より 30% 値下げされ、720p で 1 秒あたり 0.07 ドルと発表された"},
+      {"entity": "openrouter", "note": "Pro で索引し Fast で検索する構成が、同じ埋め込み空間を共有するため可能と説明されている"},
+      {"entity": "claude-code", "note": "確認待ちの呼び出しを拒否して続行する permissions.denyInsteadOfPrompting 設定が加わった"}
+    ],
+    "refs": [
+      "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "https://cohere.com/blog/embed-rerank-5-openrouter",
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
+    ]
+  }
+]

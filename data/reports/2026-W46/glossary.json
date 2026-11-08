@@ -1,0 +1,26 @@
+[
+  {
+    "term": "埋め込み(エンベディング)",
+    "kind": "基礎",
+    "short": "文章を意味の近さで比べられる数値の列にしたもの",
+    "explain": "文章や画像を数値の列(ベクトル)に変えたもの。意味が近いほど数値も近くなるので、キーワードが違っても関連する文書を探せる。RAG などの検索で使われる。",
+    "entity": "openrouter",
+    "ref": "https://cohere.com/blog/embed-rerank-5-openrouter"
+  },
+  {
+    "term": "再ランク(リランク)",
+    "kind": "仕組み",
+    "short": "検索候補を質問と読み比べて並べ直す処理",
+    "explain": "最初の検索で集めた候補を、質問と一緒に読み直して関連度の高い順に並べ替える処理。最初の検索より精度が上がり、AI に渡す資料の質を保ちやすい。",
+    "entity": "openrouter",
+    "ref": "https://cohere.com/blog/embed-rerank-5-openrouter"
+  },
+  {
+    "term": "電子透かし(SynthID)",
+    "kind": "基礎",
+    "short": "生成物に埋め込む、見えない目印",
+    "explain": "AI が作った画像や動画に、人の目には見えない目印を埋め込む技術。後から AI 生成物かどうかを判別しやすくする。SynthID は Google の方式の名前。",
+    "entity": "gemini-omni-1-2-flash",
+    "ref": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+  }
+]

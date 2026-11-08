@@ -1,0 +1,53 @@
+{
+  "gemini-omni-1-2-flash": [
+    {
+      "title": "Gemini Omni 1.2 Flash、15 秒動画",
+      "diagram_type": "infographic",
+      "icon": "image",
+      "stat": {"value": "15 秒", "label": "動画の最長(前版は 10 秒)"},
+      "steps": ["下書きを作る", "会話で直す", "高解像度に上げる"],
+      "points": [
+        {"h": "何が起きた", "t": "Google が動画生成モデルを一般提供し、30% 値下げした"},
+        {"h": "何が変わる", "t": "15 秒の動画を作り、会話で何度も編集できる"},
+        {"h": "嬉しいこと", "t": "360p で下書きして、良いものだけ 4K まで上げられる"},
+        {"h": "注意", "t": "速い動きや複雑な物理は、開発中で苦手と説明されている"}
+      ],
+      "official_url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "source_date": "2026-11-05"
+    }
+  ],
+  "openrouter": [
+    {
+      "title": "Cohere の検索モデルが OpenRouter に",
+      "diagram_type": "infographic",
+      "icon": "plug",
+      "stat": {"value": "2 モデル", "label": "Embed 5 と Rerank 5 が同じ API で使える"},
+      "steps": ["索引を作る", "候補を検索", "再ランクして回答"],
+      "points": [
+        {"h": "何が起きた", "t": "Cohere の Embed 5 と Rerank 5 が OpenRouter で使えるようになった"},
+        {"h": "何が変わる", "t": "既存の API キーとクレジットで、検索用モデルも呼べる"},
+        {"h": "嬉しいこと", "t": "Pro で索引、Fast で質問と、同じ空間のまま使い分けられる"},
+        {"h": "注意", "t": "品質の数字は Cohere の発表で、自社データでの確認が要る"}
+      ],
+      "official_url": "https://cohere.com/blog/embed-rerank-5-openrouter",
+      "source_date": "2026-11-04"
+    }
+  ],
+  "claude-code": [
+    {
+      "title": "Claude Code v2.1.319",
+      "diagram_type": "infographic",
+      "icon": "terminal",
+      "stat": {"value": "v2.1.319", "label": "2026-11-06 のリリース"},
+      "steps": ["MCP を背景実行", "確認待ちを拒否", "結果を受け取る"],
+      "points": [
+        {"h": "何が起きた", "t": "Anthropic が Claude Code の新版をリリースした"},
+        {"h": "何が変わる", "t": "MCP のタスクが、すぐにバックグラウンドで動く"},
+        {"h": "嬉しいこと", "t": "確認待ちで止めず、拒否して作業を続ける設定が使える"},
+        {"h": "注意", "t": "テレメトリを切った自動モードは、確認できない呼び出しを拒否しうる"}
+      ],
+      "official_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+      "source_date": "2026-11-06"
+    }
+  ]
+}

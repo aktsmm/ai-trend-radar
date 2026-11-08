@@ -851,12 +851,46 @@
     }
    ],
    "official_urls": [
-    "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
-    "https://www.anthropic.com/claude-code"
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
    ],
    "official_verified": true,
    "summary": "claude-code v2.1.319 ― Run Claude Code as a remote agent on Amazon Bedrock AgentCore. Each coding task runs in its own isolated sessi。9ソースで言及(代表: 「Claude Code sends your email address to websites」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Claude Code v2.1.319",
+     "diagram_type": "infographic",
+     "icon": "terminal",
+     "stat": {
+      "value": "v2.1.319",
+      "label": "2026-11-06 のリリース"
+     },
+     "steps": [
+      "MCP を背景実行",
+      "確認待ちを拒否",
+      "結果を受け取る"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Anthropic が Claude Code の新版をリリースした"
+      },
+      {
+       "h": "何が変わる",
+       "t": "MCP のタスクが、すぐにバックグラウンドで動く"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "確認待ちで止めず、拒否して作業を続ける設定が使える"
+      },
+      {
+       "h": "注意",
+       "t": "テレメトリを切った自動モードは、確認できない呼び出しを拒否しうる"
+      }
+     ],
+     "official_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+     "source_date": "2026-11-06"
+    }
+   ],
    "score_breakdown": {
     "github_new": 1.285,
     "github_trending": 1.363,
@@ -918,8 +952,21 @@
    ],
    "display": "Claude Code",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "claude-code v2.1.319 release notes",
+      "evidence_urls": [
+       "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
+      ],
+      "evidence_published_at": "2026-11-06",
+      "result": "MCP タスクのバックグラウンド実行、permissions.denyInsteadOfPrompting 設定、CLAUDE_CODE_DISABLE_FEATURE_FLAGS 環境変数、/usage への期間別の支出表示の追加を確認。リリースは 11 月 6 日",
+      "retrieved_at": "2026-11-09T04:51:00+09:00"
+     }
+    ],
+    "selection_reason": "dev-tool 代表。Anthropic が公式リポジトリで Claude Code v2.1.319 をリリース。MCP タスクの背景実行や権限まわりの設定が加わった。"
    },
    "jp_reactions": [
     {
@@ -940,7 +987,111 @@
      "url": "https://zenn.dev/orivanai/articles/claude-code-projects-guide",
      "date": "2026-11-08"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.319": {
+     "status": 200,
+     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Anthropic が Claude Code v2.1.319 をリリースした。MCP サーバーの長い処理をバックグラウンドで扱えるようになった。",
+     "確認の待ちで止めず、その呼び出しを拒否して作業を続ける permissions.denyInsteadOfPrompting 設定が加わった。",
+     "機能フラグの取得だけを止める環境変数 CLAUDE_CODE_DISABLE_FEATURE_FLAGS も追加された。"
+    ],
+    "why_trending": "GitHub のリリースで、自動モードと権限まわりの変更が多く、利用者の注目が続いている。",
+    "what_changes": [
+     "MCP のタスクは、すぐにバックグラウンドへ移り、終わると Claude に結果が伝わる",
+     "ゲートウェイ配下の開発者は /usage で今日・今週・今月の支出を見られる"
+    ],
+    "benefits": [
+     "無人の実行で、確認待ちによる停止を避けられる",
+     "テレメトリを残したまま、機能フラグだけを止められる"
+    ],
+    "caveats": [
+     "テレメトリやフラグを切った自動モードは、確認できない呼び出しが確認または拒否される",
+     "支出の表示は、ゲートウェイがこの版以降で、支出上限がない場合に限られる"
+    ],
+    "audience": "Claude Code を日常的に使う開発者と、社内で運用する管理者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Claude Code v2.1.319 は、MCP の背景実行と権限まわりの設定を追加した。",
+     "stat": {
+      "value": "v2.1.319",
+      "label": "2026-11-06 のリリース"
+     },
+     "steps": [
+      "MCP を背景実行",
+      "確認待ちを拒否",
+      "結果を受け取る"
+     ],
+     "changes": [
+      "MCP のタスクがすぐ背景に移る",
+      "確認待ちの呼び出しを拒否できる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Anthropic"
+      },
+      {
+       "k": "版",
+       "v": "v2.1.319"
+      },
+      {
+       "k": "新設定",
+       "v": "denyInsteadOfPrompting"
+      },
+      {
+       "k": "環境変数",
+       "v": "DISABLE_FEATURE_FLAGS"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "Claude Code を日常的に使う開発者と、社内で運用する管理者",
+     "benefits": [
+      "無人の実行で、確認待ちの停止を避けられる",
+      "テレメトリを残して機能フラグだけ止められる"
+     ],
+     "how_to": [
+      "リリースノートで自分の設定への影響を読む",
+      "必要なら新しい設定を試す",
+      "自動モードの挙動を確認する"
+     ],
+     "caveats": [
+      "テレメトリを切った自動モードは、確認できない呼び出しを拒否しうる",
+      "支出表示は条件つき"
+     ],
+     "terms": [
+      {
+       "t": "MCP",
+       "d": "AI とツールをつなぐ共通の規格"
+      },
+      {
+       "t": "機能フラグ",
+       "d": "機能の有効・無効をサーバー側で切り替える仕組み"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "claude-code v2.1.319",
+      "publisher": "GitHub (Anthropic)",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
+      "date": "2026-11-06"
+     }
+    ]
+   }
   },
   {
    "rank": 3,
@@ -2227,7 +2378,42 @@
    ],
    "official_verified": true,
    "summary": "Cohere retrieval models on OpenRouter。5ソースで言及(代表: 「Deepseek alone accounted for 53% of all (27 trillion) tokens」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Cohere の検索モデルが OpenRouter に",
+     "diagram_type": "infographic",
+     "icon": "plug",
+     "stat": {
+      "value": "2 モデル",
+      "label": "Embed 5 と Rerank 5 が同じ API で使える"
+     },
+     "steps": [
+      "索引を作る",
+      "候補を検索",
+      "再ランクして回答"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Cohere の Embed 5 と Rerank 5 が OpenRouter で使えるようになった"
+      },
+      {
+       "h": "何が変わる",
+       "t": "既存の API キーとクレジットで、検索用モデルも呼べる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "Pro で索引、Fast で質問と、同じ空間のまま使い分けられる"
+      },
+      {
+       "h": "注意",
+       "t": "品質の数字は Cohere の発表で、自社データでの確認が要る"
+      }
+     ],
+     "official_url": "https://cohere.com/blog/embed-rerank-5-openrouter",
+     "source_date": "2026-11-04"
+    }
+   ],
    "score_breakdown": {
     "github_new": 0.84,
     "reddit_localllama": 0.86,
@@ -2268,12 +2454,129 @@
    "resolved_repo": null,
    "trend_label": "rising",
    "x_posts": [],
-   "display": "OpenRouter",
+   "display": "OpenRouter × Cohere",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Embed 5 and Rerank 5 now on OpenRouter",
+      "evidence_urls": [
+       "https://cohere.com/blog/embed-rerank-5-openrouter"
+      ],
+      "evidence_published_at": "2026-11-04",
+      "result": "Embed 5 と Rerank 5 が OpenRouter の同じ API キーとクレジットで使えること、Pro と Fast が同じ埋め込み空間を共有すること、Python での RAG 構成例、発表の数字(40 データセットで 98.4% と 96.6%)を確認",
+      "retrieved_at": "2026-11-09T04:51:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。Cohere が公式ブログで、検索用モデル Embed 5 と Rerank 5 が OpenRouter で使えるようになったと発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://cohere.com/blog/embed-rerank-5-openrouter": {
+     "status": 200,
+     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Cohere が、検索向けの埋め込みモデル Embed 5 と再ランクモデル Rerank 5 を OpenRouter で使えるようにした。",
+     "すでに OpenRouter を使っていれば、同じ API キーとクレジットで追加の SDK なしに呼び出せると説明されている。",
+     "公式ブログには、数十行の Python で、出典つきの回答をする RAG の構成例が載っている。"
+    ],
+    "why_trending": "OpenRouter 上の新しい検索モデルと、トークン利用量の話題が重なった。",
+    "what_changes": [
+     "検索用モデルも、チャット用モデルと同じ窓口でまとめて使える",
+     "文書の索引は高品質の Pro、質問は低遅延の Fast と使い分けられる"
+    ],
+    "benefits": [
+     "Pro と Fast は同じ埋め込み空間を共有するので、索引を作り直さず組み合わせられる",
+     "Rerank 5 のスコアは調整済みで、1 つのしきい値で弱い候補を除ける"
+    ],
+    "caveats": [
+     "98.4% と 96.6% は Cohere が 40 データセットで測った発表の数字",
+     "ブログの例は NumPy のメモリ内ストアで、本番では別の保存先が必要"
+    ],
+    "audience": "社内文書の検索や RAG を作る開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Cohere の検索モデル Embed 5 と Rerank 5 が OpenRouter で使える。",
+     "stat": {
+      "value": "2 モデル",
+      "label": "Embed 5 と Rerank 5"
+     },
+     "steps": [
+      "索引を作る",
+      "候補を検索",
+      "再ランクして回答"
+     ],
+     "changes": [
+      "同じ API キーとクレジットで呼べる",
+      "Pro で索引し、Fast で検索できる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Cohere"
+      },
+      {
+       "k": "経由",
+       "v": "OpenRouter の API"
+      },
+      {
+       "k": "ベクトル",
+       "v": "256〜2048 次元"
+      },
+      {
+       "k": "実装例",
+       "v": "Python の RAG"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "社内文書の検索や RAG を作る開発者",
+     "benefits": [
+      "検索もチャットも 1 つの窓口と請求にまとまる",
+      "再ランクのスコアを 1 つのしきい値で使える"
+     ],
+     "how_to": [
+      "OpenRouter の API キーを用意する",
+      "公式ブログの Python 例を動かす",
+      "自社文書で精度を確かめる"
+     ],
+     "caveats": [
+      "精度の数字は Cohere の発表",
+      "例のメモリ内ストアは本番向きではない"
+     ],
+     "terms": [
+      {
+       "t": "埋め込み",
+       "d": "文章を意味が近いほど近い数値の列にしたもの"
+      },
+      {
+       "t": "再ランク",
+       "d": "検索候補を質問と読み比べて並べ直す処理"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Embed 5 and Rerank 5 now on OpenRouter",
+      "publisher": "Cohere",
+      "url": "https://cohere.com/blog/embed-rerank-5-openrouter",
+      "date": "2026-11-04"
+     }
+    ]
+   }
   },
   {
    "rank": 11,
@@ -2902,12 +3205,47 @@
     }
    ],
    "official_urls": [
-    "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
-    "https://openrouter.ai/google/gemini-omni-1.2-flash"
+    "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+    "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/"
    ],
    "official_verified": true,
    "summary": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips ― Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lowe。3ソースで言及(代表: 「Gemini Omni 1.2 Flash: Fast and cost-effective with longer c」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Gemini Omni 1.2 Flash、15 秒動画",
+     "diagram_type": "infographic",
+     "icon": "image",
+     "stat": {
+      "value": "15 秒",
+      "label": "動画の最長(前版は 10 秒)"
+     },
+     "steps": [
+      "下書きを作る",
+      "会話で直す",
+      "高解像度に上げる"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Google が動画生成モデルを一般提供し、30% 値下げした"
+      },
+      {
+       "h": "何が変わる",
+       "t": "15 秒の動画を作り、会話で何度も編集できる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "360p で下書きして、良いものだけ 4K まで上げられる"
+      },
+      {
+       "h": "注意",
+       "t": "速い動きや複雑な物理は、開発中で苦手と説明されている"
+      }
+     ],
+     "official_url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+     "source_date": "2026-11-05"
+    }
+   ],
    "score_breakdown": {
     "hackernews": 0.738,
     "openrouter": 0.18,
@@ -2934,12 +3272,152 @@
    "resolved_repo": null,
    "trend_label": "rising",
    "x_posts": [],
-   "display": "Google gemini-omni-1.2-flash",
+   "display": "Gemini Omni 1.2 Flash",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Introducing Gemini Omni 1.2 Flash",
+      "evidence_urls": [
+       "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+      ],
+      "evidence_published_at": "2026-11-05",
+      "result": "最長 15 秒の動画生成、会話での複数回の編集、前版より 30% の値下げ(720p で 1 秒 0.07 ドル)、Gemini API と企業向け提供での一般提供、SynthID の透かしを確認",
+      "retrieved_at": "2026-11-09T04:51:00+09:00"
+     },
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "evidence_urls": [
+       "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/"
+      ],
+      "evidence_published_at": "2026-11-05",
+      "result": "同じ内容の DeepMind 側の公式ブログで、前版の 10 秒から 15 秒に延びたこと、3〜15 秒の 1 秒刻みの長さ指定を確認",
+      "retrieved_at": "2026-11-09T04:51:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。Google が公式ブログで、動画生成モデル Gemini Omni 1.2 Flash の一般提供と 30% の値下げを発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
+     "status": 200,
+     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+    },
+    "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/": {
+     "status": 200,
+     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Google が動画生成モデル Gemini Omni 1.2 Flash を発表した。Gemini API と企業向けの Gemini for business で一般提供されている。",
+     "動画の長さは前版の 10 秒から最長 15 秒になり、3〜15 秒を 1 秒刻みで指定できる。",
+     "生成した動画を会話で何度も直せる。価格は前版より 30% 下がり、720p で 1 秒あたり 0.07 ドルと発表された。"
+    ],
+    "why_trending": "公式ブログと Hacker News、OpenRouter に並び、15 秒の動画と値下げが話題。",
+    "what_changes": [
+     "背景や照明の差し替えを、作り直さずに会話で行える",
+     "キャラクターや商品画像を参照にして、15 秒の動画を作れる"
+    ],
+    "benefits": [
+     "360p や 720p で下書きし、気に入った動画を 1080p や 4K に上げられる",
+     "生成物には見えない SynthID の透かしが入る"
+    ],
+    "caveats": [
+     "速いスポーツの動きや複雑な物理は開発中で、まだ苦手と説明されている",
+     "改善点や価格は開発元の発表で、用途ごとの検証は別に必要"
+    ],
+    "audience": "広告や商品紹介の動画を大量に作る開発者・制作者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Google の動画生成モデルが 15 秒に対応し、30% 値下げして一般提供された。",
+     "stat": {
+      "value": "15 秒",
+      "label": "動画の最長(前版は 10 秒)"
+     },
+     "steps": [
+      "下書きを作る",
+      "会話で直す",
+      "高解像度に上げる"
+     ],
+     "changes": [
+      "3〜15 秒を 1 秒刻みで指定できる",
+      "動画を会話で何度も編集できる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Google"
+      },
+      {
+       "k": "価格",
+       "v": "720p で 0.07 ドル/秒"
+      },
+      {
+       "k": "値下げ",
+       "v": "前版より 30%"
+      },
+      {
+       "k": "提供先",
+       "v": "Gemini API ほか"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "広告や商品紹介の動画を大量に作る開発者・制作者",
+     "benefits": [
+      "低解像度で下書きし、良いものだけ 4K に上げられる",
+      "作り直さず、会話で背景や照明を変えられる"
+     ],
+     "how_to": [
+      "Google AI Studio で試す",
+      "価格と開発者向け文書を確認する",
+      "短いクリップから品質を確かめる"
+     ],
+     "caveats": [
+      "速い動きや複雑な物理は開発中で苦手",
+      "改善点は開発元の発表"
+     ],
+     "terms": [
+      {
+       "t": "参照への追従",
+       "d": "渡した画像や音声の特徴を保つこと"
+      },
+      {
+       "t": "SynthID",
+       "d": "生成物に入る、見えない電子透かし"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Introducing Gemini Omni 1.2 Flash",
+      "publisher": "Google",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "date": "2026-11-05"
+     },
+     {
+      "id": "s2",
+      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "publisher": "Google DeepMind",
+      "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
+      "date": "2026-11-05"
+     }
+    ]
+   }
   },
   {
    "rank": 16,
@@ -3720,6 +4198,46 @@
   }
  ],
  "candidates_pool": 110,
- "themes": [],
- "rejected_candidates": {}
+ "themes": [
+  {
+   "id": "tuning-cost-and-control",
+   "title": "費用・速度・権限を細かく調整できるようにする",
+   "confidence": "low",
+   "summary": "動画生成、検索モデル、コーディング支援の 3 件で、使い方に合わせて費用や速度、確認の手間を調整する手段が加わった。",
+   "background": [
+    "Gemini Omni 1.2 Flash は 360p で下書きして良いものだけ高解像度に上げる流れと、30% の値下げを示した。",
+    "Cohere の検索モデルは Pro と Fast の使い分け、Claude Code は確認待ちを拒否して続ける設定を紹介・追加した。",
+    "3 件の共通点で、利用者が品質と費用、手間のバランスを自分で選びたい需要が背景にあるかもしれない(見立て)。"
+   ],
+   "entities": [
+    "gemini-omni-1-2-flash",
+    "openrouter",
+    "claude-code"
+   ],
+   "signals": [
+    {
+     "entity": "gemini-omni-1-2-flash",
+     "note": "前版より 30% 値下げされ、720p で 1 秒あたり 0.07 ドルと発表された"
+    },
+    {
+     "entity": "openrouter",
+     "note": "Pro で索引し Fast で検索する構成が、同じ埋め込み空間を共有するため可能と説明されている"
+    },
+    {
+     "entity": "claude-code",
+     "note": "確認待ちの呼び出しを拒否して続行する permissions.denyInsteadOfPrompting 設定が加わった"
+    }
+   ],
+   "refs": [
+    "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+    "https://cohere.com/blog/embed-rerank-5-openrouter",
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
+   ]
+  }
+ ],
+ "rejected_candidates": {
+  "kimi-k3": "同じ Kimi K3.1 Pro の公開を 2026-W45 ですでに掲載済みのため、重複として見送る。",
+  "flash-1017": "第三者が量子化して再配布したモデルで、開発元の公式な一次情報ではない。",
+  "openai-codex": "公式ページの本文を取得できず、一次情報の本文を確認できなかった。"
+ }
 }

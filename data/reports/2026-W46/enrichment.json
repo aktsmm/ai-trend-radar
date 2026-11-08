@@ -1,76 +1,100 @@
 {
-  "week": "2026-W46",
-  "selected_on": "2026-11-08",
-  "selection_policy": "候補6件のうち、日付つきの一次情報の本文を確認できた3件(model 2 / dev-tool 1)を掲載。kimi-k3 は 2026-W45 で掲載済み、flash-1017 は第三者による量子化版の再配布、openai-codex は公式ページの本文を取得できず、いずれも見送り。",
-  "url_checks": {
-    "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {"status": 200, "checked_at": "2026-11-08T19:51:00+00:00"},
-    "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/": {"status": 200, "checked_at": "2026-11-08T19:51:00+00:00"},
-    "https://cohere.com/blog/embed-rerank-5-openrouter": {"status": 200, "checked_at": "2026-11-08T19:51:00+00:00"},
-    "https://github.com/anthropics/claude-code/releases/tag/v2.1.319": {"status": 200, "checked_at": "2026-11-08T19:51:00+00:00"}
+ "week": "2026-W46",
+ "selected_on": "2026-11-08",
+ "selection_policy": "候補6件のうち、日付つきの一次情報の本文を確認できた3件(model 2 / dev-tool 1)を掲載。kimi-k3 は 2026-W45 で掲載済み、flash-1017 は第三者による量子化版の再配布、openai-codex は公式ページの本文を取得できず、いずれも見送り。",
+ "url_checks": {
+  "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
+   "status": 200,
+   "checked_at": "2026-11-08T20:42:17.434870+00:00"
   },
-  "entities": {
-    "gemini-omni-1-2-flash": {
-      "selection_reason": "model 代表。Google が公式ブログで、動画生成モデル Gemini Omni 1.2 Flash の一般提供と 30% の値下げを発表。",
-      "verification_status": "verified",
-      "official_urls": [
-        "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-        "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/"
-      ],
-      "checks": [
-        {
-          "mcp_name": "page-capture",
-          "tool": "fetch",
-          "query": "Introducing Gemini Omni 1.2 Flash",
-          "evidence_urls": ["https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"],
-          "evidence_published_at": "2026-11-05",
-          "result": "最長 15 秒の動画生成、会話での複数回の編集、前版より 30% の値下げ(720p で 1 秒 0.07 ドル)、Gemini API と企業向け提供での一般提供、SynthID の透かしを確認",
-          "retrieved_at": "2026-11-09T04:51:00+09:00"
-        },
-        {
-          "mcp_name": "page-capture",
-          "tool": "fetch",
-          "query": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
-          "evidence_urls": ["https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/"],
-          "evidence_published_at": "2026-11-05",
-          "result": "同じ内容の DeepMind 側の公式ブログで、前版の 10 秒から 15 秒に延びたこと、3〜15 秒の 1 秒刻みの長さ指定を確認",
-          "retrieved_at": "2026-11-09T04:51:00+09:00"
-        }
-      ],
-      "display": "Gemini Omni 1.2 Flash"
-    },
-    "openrouter": {
-      "selection_reason": "model 代表。Cohere が公式ブログで、検索用モデル Embed 5 と Rerank 5 が OpenRouter で使えるようになったと発表。",
-      "verification_status": "verified",
-      "official_urls": ["https://cohere.com/blog/embed-rerank-5-openrouter"],
-      "checks": [
-        {
-          "mcp_name": "page-capture",
-          "tool": "fetch",
-          "query": "Embed 5 and Rerank 5 now on OpenRouter",
-          "evidence_urls": ["https://cohere.com/blog/embed-rerank-5-openrouter"],
-          "evidence_published_at": "2026-11-04",
-          "result": "Embed 5 と Rerank 5 が OpenRouter の同じ API キーとクレジットで使えること、Pro と Fast が同じ埋め込み空間を共有すること、Python での RAG 構成例、発表の数字(40 データセットで 98.4% と 96.6%)を確認",
-          "retrieved_at": "2026-11-09T04:51:00+09:00"
-        }
-      ],
-      "display": "OpenRouter × Cohere"
-    },
-    "claude-code": {
-      "selection_reason": "dev-tool 代表。Anthropic が公式リポジトリで Claude Code v2.1.319 をリリース。MCP タスクの背景実行や権限まわりの設定が加わった。",
-      "verification_status": "verified",
-      "official_urls": ["https://github.com/anthropics/claude-code/releases/tag/v2.1.319"],
-      "checks": [
-        {
-          "mcp_name": "page-capture",
-          "tool": "fetch",
-          "query": "claude-code v2.1.319 release notes",
-          "evidence_urls": ["https://github.com/anthropics/claude-code/releases/tag/v2.1.319"],
-          "evidence_published_at": "2026-11-06",
-          "result": "MCP タスクのバックグラウンド実行、permissions.denyInsteadOfPrompting 設定、CLAUDE_CODE_DISABLE_FEATURE_FLAGS 環境変数、/usage への期間別の支出表示の追加を確認。リリースは 11 月 6 日",
-          "retrieved_at": "2026-11-09T04:51:00+09:00"
-        }
-      ],
-      "display": "Claude Code"
-    }
+  "https://cohere.com/blog/embed-rerank-5-openrouter": {
+   "status": 200,
+   "checked_at": "2026-11-08T20:42:17.434870+00:00"
+  },
+  "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/": {
+   "status": 200,
+   "checked_at": "2026-11-08T20:42:17.434870+00:00"
+  },
+  "https://github.com/anthropics/claude-code/releases/tag/v2.1.319": {
+   "status": 200,
+   "checked_at": "2026-11-08T20:42:17.434870+00:00"
   }
+ },
+ "entities": {
+  "gemini-omni-1-2-flash": {
+   "selection_reason": "model 代表。Google が公式ブログで、動画生成モデル Gemini Omni 1.2 Flash の一般提供と 30% の値下げを発表。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+    "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Introducing Gemini Omni 1.2 Flash",
+     "evidence_urls": [
+      "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+     ],
+     "evidence_published_at": "2026-11-05",
+     "result": "最長 15 秒の動画生成、会話での複数回の編集、前版より 30% の値下げ(720p で 1 秒 0.07 ドル)、Gemini API と企業向け提供での一般提供、SynthID の透かしを確認",
+     "retrieved_at": "2026-11-09T04:51:00+09:00"
+    },
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+     "evidence_urls": [
+      "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/"
+     ],
+     "evidence_published_at": "2026-11-05",
+     "result": "同じ内容の DeepMind 側の公式ブログで、前版の 10 秒から 15 秒に延びたこと、3〜15 秒の 1 秒刻みの長さ指定を確認",
+     "retrieved_at": "2026-11-09T04:51:00+09:00"
+    }
+   ],
+   "display": "Gemini Omni 1.2 Flash"
+  },
+  "openrouter": {
+   "selection_reason": "model 代表。Cohere が公式ブログで、検索用モデル Embed 5 と Rerank 5 が OpenRouter で使えるようになったと発表。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://cohere.com/blog/embed-rerank-5-openrouter"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Embed 5 and Rerank 5 now on OpenRouter",
+     "evidence_urls": [
+      "https://cohere.com/blog/embed-rerank-5-openrouter"
+     ],
+     "evidence_published_at": "2026-11-04",
+     "result": "Embed 5 と Rerank 5 が OpenRouter の同じ API キーとクレジットで使えること、Pro と Fast が同じ埋め込み空間を共有すること、Python での RAG 構成例、発表の数字(40 データセットで 98.4% と 96.6%)を確認",
+     "retrieved_at": "2026-11-09T04:51:00+09:00"
+    }
+   ],
+   "display": "OpenRouter × Cohere"
+  },
+  "claude-code": {
+   "selection_reason": "dev-tool 代表。Anthropic が公式リポジトリで Claude Code v2.1.319 をリリース。MCP タスクの背景実行や権限まわりの設定が加わった。",
+   "verification_status": "verified",
+   "official_urls": [
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "claude-code v2.1.319 release notes",
+     "evidence_urls": [
+      "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
+     ],
+     "evidence_published_at": "2026-11-06",
+     "result": "MCP タスクのバックグラウンド実行、permissions.denyInsteadOfPrompting 設定、CLAUDE_CODE_DISABLE_FEATURE_FLAGS 環境変数、/usage への期間別の支出表示の追加を確認。リリースは 11 月 6 日",
+     "retrieved_at": "2026-11-09T04:51:00+09:00"
+    }
+   ],
+   "display": "Claude Code"
+  }
+ }
 }

@@ -398,6 +398,15 @@ def build_report(items, status, now, week=None, xposts=None, vel=None, stoplist=
 
     B.annotate_why(selected, items)
     trends = [entry(r, n + 1, mx, snapshots_n) for n, r in enumerate(selected)]
+    # The week's GitHub cards (analyze.github_top: top repos one card each, the rest bundled by field) replace the generic trending candidates,
+    # which are not limited to AI. Published entities stay.
+    from analyze import github_top
+    kept = [t for t in trends if t["category"] != "github-trending" or t["entity_id"] in pinned]
+    cards = github_top.card_trends(win["label"], {u for t in kept for u in [*t["official_urls"], t["primary"]["url"]]}, len(kept) + 1, "baseline" if snapshots_n < 14 else "rising")
+    if cards:
+        trends = kept + [c for c in cards if c["entity_id"] not in {t["entity_id"] for t in kept}]
+        for n, t in enumerate(trends):
+            t["rank"] = n + 1
     apply_enrichment(trends, win["label"])
     leads = x_leads(watch_posts or [], selected)
     return {

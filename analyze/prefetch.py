@@ -69,6 +69,24 @@ def fetch(url):
     return rec, raw
 
 
+GH_REPO_RE = re.compile(r"^https://github\.com/([\w.\-]+/[\w.\-]+)/?$")
+
+
+def readme_record(url):
+    """A github.com/<owner>/<repo> page is mostly navigation; the README is the first-party description. The record keeps the repo URL (the citable one)."""
+    m = GH_REPO_RE.match(url)
+    if not m:
+        return None
+    for name in ("README.md", "readme.md", "README.rst", "README"):
+        try:
+            raw = get(f"https://raw.githubusercontent.com/{m.group(1)}/HEAD/{name}", timeout=25, retries=1)
+        except Exception:
+            continue
+        text = re.sub(r"\s+", " ", html.unescape(re.sub(r"(?s)<[^>]+>|!\[[^\]]*\]\([^)]*\)", " ", raw))).strip()
+        return {"url": url, "fetched_at": datetime.now(timezone.utc).isoformat(), "status": 200, "text": text[:MAX_TEXT]}
+    return None
+
+
 def hops(base, raw, limit=3):
     host = up.urlparse(base).netloc
     out, seen = [], {base}
@@ -89,7 +107,15 @@ def main():
     for c in pend["candidates"]:
         url = c["primary"]["url"]
         pages, raw_main = [], ""
-        rec, raw = fetch(url)
+        if c.get("members"):  # a GitHub card: README of every repo it covers
+            for m in c["members"]:
+                pages.append(readme_record(m["url"]) or fetch(m["url"])[0])
+            (out / f"{c['entity_id']}.json").write_text(json.dumps({"entity_id": c["entity_id"], "pages": pages}, ensure_ascii=False, indent=1), encoding="utf-8")
+            print(c["entity_id"], [(p["url"][:60], p["status"]) for p in pages])
+            continue
+        rec, raw = readme_record(url) or (None, "")
+        if rec is None:
+            rec, raw = fetch(url)
         pages.append(rec)
         if raw and "github.com" not in url and "huggingface.co" not in url:  # HF pages only link to HF's own navigation; the vendor's blog is found via the model card below
             for u in hops(url, raw):

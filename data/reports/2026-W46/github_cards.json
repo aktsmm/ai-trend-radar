@@ -1,0 +1,130 @@
+[
+ {
+  "entity_id": "gh-vercel-labs-agent-desktop",
+  "keyword": "agent-desktop",
+  "mode": "single",
+  "tag": "coding-agent",
+  "members": [
+   {
+    "repo": "vercel-labs/agent-desktop",
+    "url": "https://github.com/vercel-labs/agent-desktop",
+    "description": "Computer use CLI for AI agents",
+    "stars_week": 13712,
+    "stars_total": 20324,
+    "language": "Rust"
+   }
+  ]
+ },
+ {
+  "entity_id": "gh-cloudflare-security-audit-skill",
+  "keyword": "security-audit-skill",
+  "mode": "single",
+  "tag": "coding-agent",
+  "members": [
+   {
+    "repo": "cloudflare/security-audit-skill",
+    "url": "https://github.com/cloudflare/security-audit-skill",
+    "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+    "stars_week": 10600,
+    "stars_total": 67859,
+    "language": "JavaScript"
+   }
+  ]
+ },
+ {
+  "entity_id": "gh-mattpocock-skills",
+  "keyword": "skills",
+  "mode": "single",
+  "tag": "coding-agent",
+  "members": [
+   {
+    "repo": "mattpocock/skills",
+    "url": "https://github.com/mattpocock/skills",
+    "description": "Skills for Real Engineers. Straight from my .agents directory.",
+    "stars_week": 9635,
+    "stars_total": 319553,
+    "language": "Shell"
+   }
+  ]
+ },
+ {
+  "entity_id": "gh-data-1",
+  "keyword": "データ・検索・知識 2件(GitHub 急上昇)",
+  "mode": "group",
+  "tag": "data",
+  "members": [
+   {
+    "repo": "NVIDIA/auto-ontology",
+    "url": "https://github.com/NVIDIA/auto-ontology",
+    "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM ",
+    "stars_week": 9327,
+    "stars_total": 10964,
+    "language": "Python"
+   },
+   {
+    "repo": "D4Vinci/Scrapling",
+    "url": "https://github.com/D4Vinci/Scrapling",
+    "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks",
+    "stars_week": 8342,
+    "stars_total": 100455,
+    "language": "Python"
+   }
+  ]
+ },
+ {
+  "entity_id": "gh-coding-agent-1",
+  "keyword": "コーディング支援・エージェント 3件(GitHub 急上昇)",
+  "mode": "group",
+  "tag": "coding-agent",
+  "members": [
+   {
+    "repo": "milind-soni/OpenMausBot",
+    "url": "https://github.com/milind-soni/OpenMausBot",
+    "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+    "stars_week": 7621,
+    "stars_total": 19535,
+    "language": "TypeScript"
+   },
+   {
+    "repo": "pbakaus/impeccable",
+    "url": "https://github.com/pbakaus/impeccable",
+    "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+    "stars_week": 7196,
+    "stars_total": 106768,
+    "language": "Rust"
+   },
+   {
+    "repo": "thedotmack/claude-mem",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Clau",
+    "stars_week": 6443,
+    "stars_total": 115334,
+    "language": "TypeScript"
+   }
+  ]
+ },
+ {
+  "entity_id": "gh-coding-agent-2",
+  "keyword": "コーディング支援・エージェント 2件(GitHub 急上昇)",
+  "mode": "group",
+  "tag": "coding-agent",
+  "members": [
+   {
+    "repo": "Nutlope/hallmark",
+    "url": "https://github.com/Nutlope/hallmark",
+    "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+    "stars_week": 6356,
+    "stars_total": 51675,
+    "language": "CSS"
+   },
+   {
+    "repo": "Donchitos/Claude-Code-Game-Studios",
+    "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+    "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+    "stars_week": 5235,
+    "stars_total": 37471,
+    "language": "Shell"
+   }
+  ]
+ }
+]

@@ -952,7 +952,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.319": {
      "status": 200,
-     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
     }
    },
    "jp_reactions": [
@@ -2029,7 +2029,7 @@
    "url_checks": {
     "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta": {
      "status": 200,
-     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
     }
    },
    "jp_reactions": [],
@@ -2324,7 +2324,7 @@
    "url_checks": {
     "https://cohere.com/blog/embed-rerank-5-openrouter": {
      "status": 200,
-     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
     }
    },
    "jp_reactions": [],
@@ -2541,12 +2541,47 @@
     }
    ],
    "official_urls": [
-    "https://openrouter.ai/anthropic/claude-fable-5.2",
-    "https://openrouter.ai/anthropic/claude-fable-5.2:batch"
+    "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+    "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "anthropic/claude-fable-5.2 ― Claude Fable 5.2 and Claude Mythos 5.2 are now available on Amazon Bedrock and Claude Platform on AWS. Learn w。4ソースで言及(代表: 「Claude Fable 5.2 and Mythos 5.2」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Claude Fable 5.2 が値下げで公開",
+     "diagram_type": "infographic",
+     "icon": "spark",
+     "stat": {
+      "value": "最大 30%",
+      "label": "前版より出力が速い"
+     },
+     "steps": [
+      "難題を任せる",
+      "長時間で実行",
+      "結果を確認"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Anthropic が最上位モデルの新版 Fable 5.2 を公開した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "入力 8 ドル、出力 40 ドル(100 万トークン)に下がった"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "速度を最大 2.5 倍にする高速モードが選べる"
+      },
+      {
+       "h": "注意",
+       "t": "多くの作業は Opus 5.5 から始めるよう勧められている"
+      }
+     ],
+     "official_url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+     "source_date": "2026-11-09"
+    }
+   ],
    "score_breakdown": {
     "hackernews": 0.862,
     "openrouter": 0.225,
@@ -2587,10 +2622,34 @@
      "via": "watchlist"
     }
    ],
-   "display": "Anthropic claude-fable-5.2",
+   "display": "Claude Fable 5.2",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Claude Fable 5.2 and Mythos 5.2",
+      "evidence_urls": [
+       "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+      ],
+      "evidence_published_at": "2026-11-09",
+      "result": "Fable 5.2 が前版より最大 30% 速く、価格は入力 100 万トークン 8 ドル・出力 40 ドル、2.5 倍速の高速モードは 16 ドル・80 ドル。日常用途には Opus 5.5 を勧めると記載されていることを確認",
+      "retrieved_at": "2026-11-10T05:50:00+09:00"
+     },
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Introducing Claude Fable 5.2 on AWS",
+      "evidence_urls": [
+       "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/"
+      ],
+      "evidence_published_at": "2026-11-09",
+      "result": "Amazon Bedrock と Claude Platform on AWS で Fable 5.2 が使えること、保持期間と人による安全レビューが既定で必要な Covered Model であることを確認",
+      "retrieved_at": "2026-11-10T05:50:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。Anthropic が公式ブログで、最上位モデル Claude Fable 5.2 を値下げして公開したと発表。"
    },
    "jp_reactions": [
     {
@@ -2611,7 +2670,124 @@
      "url": "https://zenn.dev/nekonote328/articles/claude-code-figma-mcp",
      "date": "2026-11-09"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://www.anthropic.com/claude-fable-and-mythos-5-2": {
+     "status": 200,
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
+    },
+    "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/": {
+     "status": 200,
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Anthropic が、最上位モデルの新版 Claude Fable 5.2 を公開した。コーディングや推論、画像の理解が前版より良くなったと説明されている。",
+     "前版より出力が最大 30% 速く、価格は入力 100 万トークン 8 ドル、出力 40 ドルに下がった。速度を最大 2.5 倍にする高速モードもある。",
+     "Amazon Bedrock などでも使える。同じモデルの Mythos 5.2 は、セキュリティや生命科学の審査を通った組織向け。"
+    ],
+    "why_trending": "公式発表と Hacker News、OpenRouter、AWS が同じ日に並び、値下げと性能向上が話題。",
+    "what_changes": [
+     "最も難しい技術作業向けのモデルが、前版より安く速く使える",
+     "高速モードで、速さを優先する使い方を選べる"
+    ],
+    "benefits": [
+     "FrontierCode 2.0 で 49.1% と、前版の 32.4% を上回ったと発表された",
+     "大規模なコード移行や研究のような長い作業を任せやすい"
+    ],
+    "caveats": [
+     "性能の数字は Anthropic の発表で、自分の作業での確認が要る",
+     "ほとんどの作業では、Opus 5.5 から始めるよう勧められている",
+     "AWS では保持と人による安全レビューが既定で必要"
+    ],
+    "audience": "大規模なコード移行や、長時間の研究タスクを任せたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Anthropic の最上位モデル Fable 5.2 が、前版より速く安く公開された。",
+     "stat": {
+      "value": "最大 30%",
+      "label": "前版より出力が速い"
+     },
+     "steps": [
+      "難題を任せる",
+      "長時間で実行",
+      "結果を確認"
+     ],
+     "changes": [
+      "入力 8 ドル、出力 40 ドル(100 万トークン)",
+      "速度が最大 2.5 倍の高速モードがある"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Anthropic"
+      },
+      {
+       "k": "価格",
+       "v": "入力 8 ドル/出力 40 ドル"
+      },
+      {
+       "k": "高速モード",
+       "v": "16 ドル/80 ドル"
+      },
+      {
+       "k": "提供先",
+       "v": "Bedrock ほか"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "大規模なコード移行や、長時間の研究タスクを任せたい開発者",
+     "benefits": [
+      "難しい作業に使える最上位モデルを、前版より安く使える",
+      "Amazon Bedrock からも呼び出せる"
+     ],
+     "how_to": [
+      "公式ブログで性能と価格を確認する",
+      "まず Opus 5.5 で試して比べる",
+      "AWS では保持設定を先に行う"
+     ],
+     "caveats": [
+      "性能の数字は Anthropic の発表",
+      "ほとんどの作業は Opus 5.5 から始める想定"
+     ],
+     "terms": [
+      {
+       "t": "高速モード",
+       "d": "料金が上がる代わりに出力が速くなる選択肢"
+      },
+      {
+       "t": "Mythos 5.2",
+       "d": "同じモデルで、審査を通った組織向けの版"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Claude Fable 5.2 and Mythos 5.2",
+      "publisher": "Anthropic",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "date": "2026-11-09"
+     },
+     {
+      "id": "s2",
+      "title": "Introducing Claude Fable 5.2 on AWS",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/",
+      "date": "2026-11-09"
+     }
+    ]
+   }
   },
   {
    "rank": 10,
@@ -2835,12 +3011,46 @@
     }
    ],
    "official_urls": [
-    "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/feed/",
-    "https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/"
+    "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/"
    ],
    "official_verified": true,
    "summary": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs ― When deploying diffusion models in design tools, image editors, and visual production workflows, developers mu。3ソースで言及(代表: 「RTX 5090 with 64GB and 96GB VRAM 'confirmed' by US GPU repai」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "FLUX 3 Klein を Blackwell で高速化",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "最大 3.46 倍",
+      "label": "B200 1 枚で Base を高速化(発表)"
+     },
+     "steps": [
+      "NVFP4 を使う",
+      "最適化を重ねる",
+      "GPU を増やす"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "NVIDIA が画像生成モデルの高速化手順を技術ブログで公開した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "NVFP4 で BF16 より最大 1.62 倍速くなる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "B200 8 枚で、中央値 14.90 秒が 3.00 秒になった"
+      },
+      {
+       "h": "注意",
+       "t": "数字は NVIDIA の測定で、画質は最適化で変わる"
+      }
+     ],
+     "official_url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/",
+     "source_date": "2026-11-06"
+    }
+   ],
    "score_breakdown": {
     "hackernews": 0.592,
     "reddit_localllama": 1.14,
@@ -2877,10 +3087,23 @@
    "resolved_repo": null,
    "trend_label": "rising",
    "x_posts": [],
-   "display": "NVIDIA Blackwell",
+   "display": "NVIDIA Blackwell × FLUX 3 Klein",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
+      "evidence_urls": [
+       "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/"
+      ],
+      "evidence_published_at": "2026-11-06",
+      "result": "NVFP4 で BF16 比 最大 1.62 倍(文章から画像)、B200 1 枚で最適化を重ねると Base が最大 3.46 倍、B200 8 枚で中央値 14.90 秒が 3.00 秒になることを確認",
+      "retrieved_at": "2026-11-10T05:50:00+09:00"
+     }
+    ],
+    "selection_reason": "hardware 代表。NVIDIA が公式の技術ブログで、画像生成モデル FLUX 3 Image Klein を Blackwell GPU で高速化する方法を公開。"
    },
    "jp_reactions": [
     {
@@ -2901,7 +3124,111 @@
      "url": "https://github.com/NVIDIA/auto-ontology",
      "date": "2026-11-03"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/": {
+     "status": 200,
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "NVIDIA が、画像生成モデル FLUX 3 Image Klein を Blackwell GPU で速く動かす方法を技術ブログで公開した。",
+     "TensorRT LLM VisualGen の NVFP4 により、B200 1 枚で BF16 より最大 1.62 倍速くなると発表された。",
+     "最適化を重ねると、2048×2048 で Base が最大 3.46 倍速くなる。B200 8 枚では中央値 14.90 秒が 3.00 秒になった。"
+    ],
+    "why_trending": "公式ブログで、画像生成の高速化の手順と数字が詳しく出た。",
+    "what_changes": [
+     "画像生成モデルを、NVFP4 の設定ひとつで速くできる",
+     "キャッシュやスパース注意などで、さらに高速化できる"
+    ],
+    "benefits": [
+     "手順と YAML 設定が公開されていて、同じ構成を試せる",
+     "速度と画質の変化が、段階ごとに比較されている"
+    ],
+    "caveats": [
+     "数字は NVIDIA の測定で、B200 での結果",
+     "画質は最適化で変わるため、自分の用途での確認が要る"
+    ],
+    "audience": "画像生成を製品やツールに組み込み、遅延を減らしたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "FLUX 3 Image Klein を Blackwell GPU で速く動かす手順を NVIDIA が公開した。",
+     "stat": {
+      "value": "最大 3.46 倍",
+      "label": "B200 1 枚での高速化(発表)"
+     },
+     "steps": [
+      "NVFP4 を使う",
+      "最適化を重ねる",
+      "GPU を増やす"
+     ],
+     "changes": [
+      "NVFP4 で BF16 より最大 1.62 倍速い",
+      "B200 8 枚で 14.90 秒が 3.00 秒に"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "NVIDIA"
+      },
+      {
+       "k": "対象",
+       "v": "FLUX 3 Image Klein"
+      },
+      {
+       "k": "実行環境",
+       "v": "TensorRT LLM"
+      },
+      {
+       "k": "測定機",
+       "v": "B200"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "画像生成を製品やツールに組み込み、遅延を減らしたい開発者",
+     "benefits": [
+      "設定ひとつで NVFP4 に切り替えられる",
+      "手順と YAML 設定が公開されている"
+     ],
+     "how_to": [
+      "公式ブログの FLUX 3 の例を動かす",
+      "NVFP4 から始めて速度を測る",
+      "画質の変化を見て最適化を選ぶ"
+     ],
+     "caveats": [
+      "数字は NVIDIA の測定",
+      "最適化で出力が変わるため確認が要る"
+     ],
+     "terms": [
+      {
+       "t": "NVFP4",
+       "d": "4 ビットの浮動小数点で計算を軽くする形式"
+      },
+      {
+       "t": "デノイズ",
+       "d": "拡散モデルがノイズから画像を作る反復の処理"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
+      "publisher": "NVIDIA",
+      "url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/",
+      "date": "2026-11-06"
+     }
+    ]
+   }
   },
   {
    "rank": 12,
@@ -3122,7 +3449,7 @@
    "url_checks": {
     "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/": {
      "status": 200,
-     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
     }
    },
    "jp_reactions": [
@@ -3296,12 +3623,46 @@
     }
    ],
    "official_urls": [
-    "https://github.com/sgl-project/sglang/releases/tag/v0.5.23",
-    "https://github.com/sgl-project/sglang"
+    "https://github.com/sgl-project/sglang/releases/tag/v0.5.23"
    ],
    "official_verified": true,
    "summary": "sglang v0.5.23。6ソースで言及(代表: 「Benchmarking Qwen3.8-27B across 6 inference engines: GGUF vs」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "SGLang v0.5.23",
+     "diagram_type": "infographic",
+     "icon": "layers",
+     "stat": {
+      "value": "1007 件",
+      "label": "このリリースに入った PR"
+     },
+     "steps": [
+      "新モデル対応",
+      "MoE を省メモリ化",
+      "TPU でも動作"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "LLM の推論基盤 SGLang が新版をリリースした"
+      },
+      {
+       "h": "何が変わる",
+       "t": "GPU メモリより大きい MoE を 1 枚の GPU で動かせる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "Google TPU7x や量子化 MoE の LoRA にも対応した"
+      },
+      {
+       "h": "注意",
+       "t": "Paged Experts はオプトインで、速度は発表の数字"
+      }
+     ],
+     "official_url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.23",
+     "source_date": "2026-11-03"
+    }
+   ],
    "score_breakdown": {
     "github_new": 0.0,
     "hackernews": 0.637,
@@ -3343,17 +3704,134 @@
    "x_posts": [],
    "display": "SGLang",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "sglang v0.5.23 release notes",
+      "evidence_urls": [
+       "https://github.com/sgl-project/sglang/releases/tag/v0.5.23"
+      ],
+      "evidence_published_at": "2026-11-03",
+      "result": "1007 件の PR・257 人の貢献、GPU メモリを超える MoE を 1 枚の GPU で動かす Paged Experts(オプトイン)、Google TPU7x 対応、量子化 MoE での LoRA 提供の追加を確認。リリースは UTC の 11 月 2 日 22:14",
+      "retrieved_at": "2026-11-10T05:50:00+09:00"
+     }
+    ],
+    "selection_reason": "local-runtime 代表。SGLang が公式リポジトリで v0.5.23 をリリース。新モデル対応や MoE の省メモリ実行などを発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://github.com/sgl-project/sglang/releases/tag/v0.5.23": {
+     "status": 200,
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "LLM を高速に動かすオープンソースの基盤 SGLang が、v0.5.23 をリリースした。1007 件の PR と 257 人が関わったと記載されている。",
+     "GPU のメモリより大きい MoE モデルを 1 枚の GPU で動かす Paged Experts を、オプトインで追加した。",
+     "Google TPU7x への対応や、量子化した MoE モデルでの LoRA の提供も加わった。"
+    ],
+    "why_trending": "GitHub のリリースに新モデル対応と高速化がまとまり、推論基盤として注目された。",
+    "what_changes": [
+     "大きな MoE モデルを、1 枚の民生用 GPU でも動かせる",
+     "Google TPU7x でも SGLang を動かせる"
+    ],
+    "benefits": [
+     "Paged Experts は CPU へのオフロードより最大 30 倍速いと発表された",
+     "FLUX.3 Image Klein など新しいモデルの動かし方が案内されている"
+    ],
+    "caveats": [
+     "Paged Experts と新しい LoRA エンジンはオプトイン",
+     "速度の数字は開発元の発表で、環境により異なる"
+    ],
+    "audience": "自前の GPU や TPU で LLM を提供・運用する開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "SGLang v0.5.23 は、大きな MoE の省メモリ実行や TPU 対応を加えた。",
+     "stat": {
+      "value": "1007 件",
+      "label": "このリリースに入った PR"
+     },
+     "steps": [
+      "新モデル対応",
+      "MoE を省メモリ化",
+      "TPU でも動作"
+     ],
+     "changes": [
+      "GPU メモリ超の MoE を 1 枚で動かせる",
+      "Google TPU7x と量子化 MoE の LoRA に対応"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "SGLang"
+      },
+      {
+       "k": "版",
+       "v": "v0.5.23"
+      },
+      {
+       "k": "貢献者",
+       "v": "257 人"
+      },
+      {
+       "k": "導入",
+       "v": "uv pip install"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "自前の GPU や TPU で LLM を提供・運用する開発者",
+     "benefits": [
+      "Paged Experts は CPU 退避より最大 30 倍速いと発表",
+      "新しいモデルの動かし方が案内されている"
+     ],
+     "how_to": [
+      "公式の導入コマンドか Docker で入れる",
+      "対応モデルの手順を確認する",
+      "オプトインの機能は小さく試す"
+     ],
+     "caveats": [
+      "Paged Experts と LoRA の新機能はオプトイン",
+      "速度の数字は開発元の発表"
+     ],
+     "terms": [
+      {
+       "t": "MoE",
+       "d": "入力ごとに一部の専門家だけを使うモデル構造"
+      },
+      {
+       "t": "LoRA",
+       "d": "モデル全体でなく小さな追加部分だけを学習する手法"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "SGLang v0.5.23 release notes",
+      "publisher": "GitHub (SGLang)",
+      "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.23",
+      "date": "2026-11-03"
+     }
+    ]
+   }
   },
   {
    "rank": 14,
    "keyword": "Bench",
    "entity_id": "bench",
-   "kind": "product",
-   "category": "dev-tool",
+   "kind": "repo",
+   "category": "research",
    "tags": [
     "agents",
     "tools"
@@ -3434,7 +3912,42 @@
    ],
    "official_verified": true,
    "summary": "CWE-bench v2: More coverage, quality, and transparency ― Mathematical modeling turns an open-ended real-world problem into assumptions, a model, a solution, and a defe。4ソースで言及(代表: 「CWE-bench v2: More coverage, quality, and transparency」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "CWE-bench v2 の公開版",
+     "diagram_type": "infographic",
+     "icon": "shield",
+     "stat": {
+      "value": "100 タスク",
+      "label": "91 種類の CWE を網羅"
+     },
+     "steps": [
+      "リポジトリを渡す",
+      "弱点を修正",
+      "自動で採点"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Collinear AI がセキュリティ修正のベンチマークを公開した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "弱点の修正力を、共通の基準で比べられる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "採点は自動で、誰でも結果を再現できる"
+      },
+      {
+       "h": "注意",
+       "t": "データセットは承認制で、利用条件への同意が要る"
+      }
+     ],
+     "official_url": "https://huggingface.co/blog/cwe-bench",
+     "source_date": "2026-11-03"
+    }
+   ],
    "score_breakdown": {
     "hf_papers": 0.499,
     "github_new": 0.0,
@@ -3492,12 +4005,129 @@
      "via": "link"
     }
    ],
-   "display": "Bench",
+   "display": "CWE-bench v2",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "CWE-bench v2: More coverage, quality, and transparency",
+      "evidence_urls": [
+       "https://huggingface.co/blog/cwe-bench"
+      ],
+      "evidence_published_at": "2026-11-03",
+      "result": "公開 100 タスク・91 種の CWE、評価した 11 モデルで首位 Gemini 4 Argon が pass@1 67.8%、データセットは承認制であることを確認",
+      "retrieved_at": "2026-11-10T05:50:00+09:00"
+     }
+    ],
+    "selection_reason": "research 代表。Collinear AI が Hugging Face の公式ブログで、セキュリティ修正を測るベンチマーク CWE-bench v2 の公開版を発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://huggingface.co/blog/cwe-bench": {
+     "status": 200,
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Collinear AI が、セキュリティの弱点を見つけて直せるかを測るベンチマーク CWE-bench v2 の公開版を発表した。",
+     "公開版は 100 タスクで、91 種類の CWE にまたがる。採点はプログラムで行われ、誰でも同じ結果を再現できる。",
+     "評価した 11 モデルでは、Gemini 4 Argon が pass@1 67.8% で首位、Claude Opus 5.5 が 67.3% で続いた。"
+    ],
+    "why_trending": "公式ブログで、防御向けの AI を測る公開ベンチマークが更新された。",
+    "what_changes": [
+     "コードの弱点修正を、共通の基準で比べられる",
+     "同じ環境を、防御用エージェントの訓練にも使える"
+    ],
+    "benefits": [
+     "採点が自動で、追加費用なしに再現できる",
+     "1 回の実行で 4 回の試行を回す設定が、公式に案内されている"
+    ],
+    "caveats": [
+     "データセットは承認制で、利用条件への同意が要る",
+     "結果は Collinear AI の公開した値で、評価した 11 モデルに限られる"
+    ],
+    "audience": "コード修正やセキュリティ向けの AI エージェントを評価する開発者・研究者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "セキュリティ修正の力を測る CWE-bench v2 の公開版が出た。",
+     "stat": {
+      "value": "100 タスク",
+      "label": "91 種類の CWE を網羅"
+     },
+     "steps": [
+      "リポジトリを渡す",
+      "弱点を修正",
+      "自動で採点"
+     ],
+     "changes": [
+      "弱点修正を共通の基準で比べられる",
+      "同じ環境を防御用 AI の訓練にも使える"
+     ],
+     "facts": [
+      {
+       "k": "公開元",
+       "v": "Collinear AI"
+      },
+      {
+       "k": "タスク",
+       "v": "100"
+      },
+      {
+       "k": "首位",
+       "v": "Gemini 4 Argon"
+      },
+      {
+       "k": "pass@1",
+       "v": "67.8%"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "コード修正やセキュリティ向けの AI を評価する開発者・研究者",
+     "benefits": [
+      "採点が自動で、追加費用なしに再現できる",
+      "コマンド 1 つで Hub から実行できる"
+     ],
+     "how_to": [
+      "データセットの利用条件に同意する",
+      "公式ブログの harbor run を試す",
+      "自分のモデルの結果を共有する"
+     ],
+     "caveats": [
+      "データセットは承認制",
+      "結果は評価した 11 モデルに限られる"
+     ],
+     "terms": [
+      {
+       "t": "CWE",
+       "d": "ソフトウェアの弱点の種類を分類した共通の番号"
+      },
+      {
+       "t": "pass@1",
+       "d": "1 回の試行で課題を解けた割合"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "CWE-bench v2: More coverage, quality, and transparency",
+      "publisher": "Collinear AI (Hugging Face)",
+      "url": "https://huggingface.co/blog/cwe-bench",
+      "date": "2026-11-03"
+     }
+    ]
+   }
   },
   {
    "rank": 15,
@@ -3763,7 +4393,7 @@
    "url_checks": {
     "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/": {
      "status": 200,
-     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
     }
    },
    "jp_reactions": [
@@ -4172,11 +4802,11 @@
    "url_checks": {
     "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
      "status": 200,
-     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
     },
     "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/": {
      "status": 200,
-     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+     "checked_at": "2026-11-09T20:53:58.473871+00:00"
     }
    },
    "jp_reactions": [
@@ -4745,140 +5375,180 @@
    "title": "Single-shot and agentic retrieval with Amazon Bedrock Managed Knowledge Base",
    "url": "https://aws.amazon.com/blogs/machine-learning/single-shot-and-agentic-retrieval-with-amazon-bedrock-managed-knowledge-base/",
    "date": "2026-11-10",
-   "feed": "aws-ml-blog"
+   "feed": "aws-ml-blog",
+   "title_ja": "Bedrock マネージド ナレッジベースの単発検索とエージェント検索",
+   "summary": "Amazon Bedrock Managed Knowledge Base が、単発の RAG と検索のみのリクエストに対応した。maxAgentIteration で検索の手間を調整する方法を解説している。"
   },
   {
    "vendor": "Microsoft",
    "title": "When one pass isn’t enough: agentic mode in Azure Content Understanding",
    "url": "https://devblogs.microsoft.com/foundry/when-one-pass-isnt-enough-agentic-mode-in-azure-content-understanding/",
    "date": "2026-11-10",
-   "feed": "microsoft-foundry-blog"
+   "feed": "microsoft-foundry-blog",
+   "title_ja": "Azure Content Understanding のエージェントモード",
+   "summary": "文書の分析では通常は一度の処理で済むが、難しい作業向けにエージェントモードがある。標準モードとの使い分けを紹介している。"
   },
   {
    "vendor": "NVIDIA",
    "title": "Make a Robot Arm Feel Weightless with NVIDIA Holoscan 5",
    "url": "https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/feed/",
    "date": "2026-11-10",
-   "feed": "nvidia-dev-blog"
+   "feed": "nvidia-dev-blog",
+   "title_ja": "NVIDIA Holoscan 5 でロボットアームを軽く感じさせる",
+   "summary": ""
   },
   {
    "vendor": "AWS",
    "title": "Pluggable Agentic AI Framework: A seven-layer composable enterprise agentic AI reference architecture on Amazon Bedrock AgentCore",
    "url": "https://aws.amazon.com/blogs/machine-learning/pluggable-agentic-ai-framework-a-seven-layer-composable-enterprise-agentic-ai-reference-architecture-on-amazon-bedrock-agentcore/",
    "date": "2026-11-10",
-   "feed": "aws-ml-blog"
+   "feed": "aws-ml-blog",
+   "title_ja": "Bedrock AgentCore 上の七層のエージェント AI 参照構成",
+   "summary": "企業のエージェント AI を試作から本番へ進めるための、七層の参照アーキテクチャを紹介している。各層の契約が安定していて、層ごとに技術を入れ替えられるという。"
   },
   {
    "vendor": "OpenAI",
    "title": "ChatGPT Enterprise now available in AWS Marketplace",
    "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
    "date": "2026-11-10",
-   "feed": "openai-news"
+   "feed": "openai-news",
+   "title_ja": "ChatGPT Enterprise が AWS Marketplace で利用可能に",
+   "summary": "ChatGPT Enterprise が AWS Marketplace から購入できるようになった。既存の AWS の購買・請求の関係を使えるため、調達を簡単にしたい組織が対象。"
   },
   {
    "vendor": "AWS",
    "title": "How CrossnoKaye grounds physical AI with Amazon Bedrock AgentCore",
    "url": "https://aws.amazon.com/blogs/machine-learning/how-crossnokaye-grounds-physical-ai-with-amazon-bedrock-agentcore/",
    "date": "2026-11-10",
-   "feed": "aws-ml-blog"
+   "feed": "aws-ml-blog",
+   "title_ja": "CrossnoKaye が Bedrock AgentCore でフィジカル AI を支える方法",
+   "summary": "CrossnoKaye が Amazon Bedrock AgentCore で、重工業向けのフィジカル AI を実現した事例。ATLAS と AURA が稼働中の工場のデータに基づいて AI に推論させ、隔離された環境で Python を動かす。"
   },
   {
    "vendor": "HuggingFace",
    "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
    "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
    "date": "2026-11-10",
-   "feed": "huggingface-blog"
+   "feed": "huggingface-blog",
+   "title_ja": "Nemotron-Personas-Finance-Japan: 日本の人口と金融の合成データセット",
+   "summary": ""
   },
   {
    "vendor": "HuggingFace",
    "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
    "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
    "date": "2026-11-09",
-   "feed": "huggingface-blog"
+   "feed": "huggingface-blog",
+   "title_ja": "専門家をまとめて残す HOPE(高次の枝刈り)",
+   "summary": ""
   },
   {
    "vendor": "Meta",
    "title": "Expanding Teen Account Protections to Teens Around the World",
    "url": "https://about.fb.com/news/2026/11/expanding-teen-account-protections-to-teens-around-the-world/",
    "date": "2026-11-09",
-   "feed": "meta-newsroom"
+   "feed": "meta-newsroom",
+   "title_ja": "ティーンアカウントの保護を世界中のティーンへ拡大",
+   "summary": "Meta が AI による年齢推定の技術を世界に広げる。Instagram で、さらに数百万人のティーンをティーンアカウントの保護の対象にする。"
   },
   {
    "vendor": "NVIDIA",
    "title": "NVIDIA Announces New Planned Investments in Korean Startups at the MSIT-NVIDIA AI Startup Partnership Forum",
    "url": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/",
    "date": "2026-11-09",
-   "feed": "nvidia-blog"
+   "feed": "nvidia-blog",
+   "title_ja": "NVIDIA、韓国のスタートアップへの新たな投資計画を発表",
+   "summary": "韓国の科学技術情報通信部と NVIDIA が、COEX でスタートアップ連携フォーラムを開いた。基盤モデルやフィジカル AI などの 20 社以上の韓国スタートアップと会った。"
   },
   {
    "vendor": "OpenAI",
    "title": "Kuken Industries searches 70 years of drawings in minutes",
    "url": "https://openai.com/index/kuken",
    "date": "2026-11-09",
-   "feed": "openai-news"
+   "feed": "openai-news",
+   "title_ja": "Kuken Industries、70年分の図面を数分で検索",
+   "summary": "Kuken Industries が OpenAI API を使い、冷却塔の 70 年分の図面を検索している。修理に必要な図面を、一時間近くかかっていたところ 4.5 分で見つけられるという。"
   },
   {
    "vendor": "NVIDIA",
    "title": "Korea Advances Physical AI Across Industries With NVIDIA",
    "url": "https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/",
    "date": "2026-11-09",
-   "feed": "nvidia-blog"
+   "feed": "nvidia-blog",
+   "title_ja": "NVIDIA と進める韓国のフィジカル AI の産業展開",
+   "summary": "NVIDIA が、製造や工学に強い韓国のフィジカル AI の取り組みを支援している。半導体製造からロボット、自動運転まで、高速計算や AI、シミュレーションが使われている。"
   },
   {
    "vendor": "Microsoft",
    "title": "Copilot code review: API management and review overview updates",
    "url": "https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates",
    "date": "2026-11-07",
-   "feed": "github-changelog"
+   "feed": "github-changelog",
+   "title_ja": "Copilot コードレビュー: API 管理とレビュー概要の更新",
+   "summary": "GitHub Copilot のコードレビューの設定を、REST と GraphQL の API で管理できるようになった。企業のポリシーから個別のリポジトリまで対象で、レビュー概要のコメントも短くなった。"
   },
   {
    "vendor": "Microsoft",
    "title": "Copilot impact dashboard adds chat and VS Code agent usage",
    "url": "https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage",
    "date": "2026-11-07",
-   "feed": "github-changelog"
+   "feed": "github-changelog",
+   "title_ja": "Copilot の影響ダッシュボードにチャットと VS Code エージェントの利用を追加",
+   "summary": "Copilot impact dashboard の Agent adoption チャートに、Copilot Chat と VS Code の Agents ウィンドウが加わった。九種類の Copilot の使い方での利用状況を見られる。"
   },
   {
    "vendor": "HuggingFace",
    "title": "ToyBlocks: A controlled world for robot learning and evaluation",
    "url": "https://huggingface.co/blog/allenai/toyblocks",
    "date": "2026-11-06",
-   "feed": "huggingface-blog"
+   "feed": "huggingface-blog",
+   "title_ja": "ToyBlocks: ロボット学習と評価のための制御された世界",
+   "summary": ""
   },
   {
    "vendor": "OpenAI",
    "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
    "url": "https://openai.com/index/partnering-with-hacktron",
    "date": "2026-11-06",
-   "feed": "openai-news"
+   "feed": "openai-news",
+   "title_ja": "Hacktron と提携し OpenAI のシステムの脆弱性を探す",
+   "summary": "OpenAI が Hacktron と提携し、脆弱性の発見や外部サービスとの接続のテストを行う。最先端の AI も使って、防御を強化する。"
   },
   {
    "vendor": "Mistral",
    "title": "Le Chonk brings the brains. Studio puts it to work.",
    "url": "https://mistral.ai/news/build-with-studio/",
    "date": "2026-11-05",
-   "feed": "mistral-news"
+   "feed": "mistral-news",
+   "title_ja": "Le Chonk が頭脳を担い、Studio が実務を担う",
+   "summary": "Mistral Studio と Le Chonk で、企業向けのエージェントやワークフロー、アプリを速く作って展開できる。モデルやデータ、インフラを自分で管理できると説明している。"
   },
   {
    "vendor": "Google",
    "title": "Agile Deliberation: How AI helps humans define the gray areas",
    "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
    "date": "2026-11-05",
-   "feed": "google-research-blog"
+   "feed": "google-research-blog",
+   "title_ja": "Agile Deliberation: AI が人のグレーゾーンの定義を助ける方法",
+   "summary": ""
   },
   {
    "vendor": "Google",
    "title": "Agentic cheminformatics with Google Antigravity",
    "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
    "date": "2026-11-04",
-   "feed": "deepmind-blog"
+   "feed": "deepmind-blog",
+   "title_ja": "Google Antigravity によるエージェント型ケモインフォマティクス",
+   "summary": "Google Antigravity と Cheminformatics Skills を使い、創薬の作業を速める方法を紹介している。化合物の検索や、新しい環状の分子の提案ができる。"
   },
   {
    "vendor": "Ai2",
    "title": "StateBench: Testing how language models track state changes over long documents",
    "url": "https://allenai.org/blog/statebench",
    "date": "2026-11-03",
-   "feed": "allenai-blog"
+   "feed": "allenai-blog",
+   "title_ja": "StateBench: 長い文書での状態変化を言語モデルが追えるかを測る",
+   "summary": ""
   }
  ],
  "candidates_pool": 111,
@@ -4930,9 +5600,19 @@
    "entities": [
     "auto",
     "nemotron3",
-    "unsloth"
+    "unsloth",
+    "nvidia-blackwell",
+    "sglang"
    ],
    "signals": [
+    {
+     "entity": "nvidia-blackwell",
+     "note": "NVFP4 により、B200 1 枚で BF16 より最大 1.62 倍速くなると発表された"
+    },
+    {
+     "entity": "sglang",
+     "note": "GPU メモリを超える MoE を 1 枚の GPU で動かす Paged Experts がオプトインで加わった"
+    },
     {
      "entity": "auto",
      "note": "GPU を複数の Pod で共有でき、条件に合う最安のインスタンスが起動される"
@@ -4949,7 +5629,37 @@
    "refs": [
     "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
     "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
-    "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta"
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
+    "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/",
+    "https://github.com/sgl-project/sglang/releases/tag/v0.5.23"
+   ]
+  },
+  {
+   "id": "price-down-and-faster",
+   "title": "新しい版で値下げと高速化が同時に進む",
+   "confidence": "low",
+   "summary": "動画生成と最上位の言語モデルの 2 件で、新版が前版より安く、または速くなったと発表された。",
+   "background": [
+    "Gemini Omni 1.2 Flash は前版より 30% の値下げ、Claude Fable 5.2 は前版より出力が最大 30% 速く、価格も下がったと発表された。",
+    "利用が広がるなかで、高性能モデルの使いやすさを価格と速度で上げたい意図があるのかもしれない(見立て)。2 件だけなので傾向とは言い切れない。"
+   ],
+   "entities": [
+    "gemini-omni-1-2-flash",
+    "claude-fable-5-2"
+   ],
+   "signals": [
+    {
+     "entity": "gemini-omni-1-2-flash",
+     "note": "前版より 30% 値下げされ、720p で 1 秒あたり 0.07 ドルと発表された"
+    },
+    {
+     "entity": "claude-fable-5-2",
+     "note": "前版より出力が最大 30% 速く、入力 100 万トークン 8 ドル、出力 40 ドルに下がった"
+    }
+   ],
+   "refs": [
+    "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+    "https://www.anthropic.com/claude-fable-and-mythos-5-2"
    ]
   }
  ],
@@ -4959,6 +5669,8 @@
   "openai-codex": "公式ページの本文を取得できず、一次情報の本文を確認できなかった。",
   "ollama": "公式のリリースはリリース候補(プレリリース)で、今週の新機能として紹介できる内容に乏しいため見送る。",
   "llama-cpp": "ビルド番号が上がっただけの定期リリースで、取り上げる新機能を確認できなかった。",
+  "lfm3": "公式の発表ページを確認できず、取得できたのはカタログと配布ページのみで、一次情報の本文を確認できなかった。",
+  "mythos-5-2": "Claude Fable 5.2 と同じ発表・同じモデルで、審査制の版のため、重複として見送る。",
   "optimization": "一般的な語で、広告の顧客事例ページ以外に一次情報の本文を確認できなかった。"
  }
 }

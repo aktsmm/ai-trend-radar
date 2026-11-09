@@ -5,51 +5,63 @@
  "url_checks": {
   "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   },
   "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   },
   "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   },
   "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   },
   "https://cohere.com/blog/embed-rerank-5-openrouter": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   },
   "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   },
   "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   },
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.319": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+  },
+  "https://github.com/cloudflare/security-audit-skill": {
+   "status": 200,
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+  },
+  "https://github.com/mattpocock/skills": {
+   "status": 200,
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   },
   "https://github.com/sgl-project/sglang/releases/tag/v0.5.23": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   },
   "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+  },
+  "https://github.com/vercel-labs/agent-desktop": {
+   "status": 200,
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   },
   "https://huggingface.co/blog/cwe-bench": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   },
   "https://www.anthropic.com/claude-fable-and-mythos-5-2": {
    "status": 200,
-   "checked_at": "2026-11-09T20:53:58.473871+00:00"
+   "checked_at": "2026-11-09T21:16:50.859308+00:00"
   }
  },
  "entities": {
@@ -303,13 +315,17 @@
    "category": "github-trending",
    "kind": "repo",
    "display": "agent-desktop",
-   "official_urls": ["https://github.com/vercel-labs/agent-desktop"],
+   "official_urls": [
+    "https://github.com/vercel-labs/agent-desktop"
+   ],
    "checks": [
     {
      "mcp_name": "page-capture",
      "tool": "fetch",
      "query": "vercel-labs/agent-desktop README",
-     "evidence_urls": ["https://github.com/vercel-labs/agent-desktop"],
+     "evidence_urls": [
+      "https://github.com/vercel-labs/agent-desktop"
+     ],
      "result": "アクセシビリティツリーを JSON で返し ref で操作する CLI で、3 OS 対応、モデル非内蔵、私的内容への注意を README で確認",
      "retrieved_at": "2026-11-10T06:00:00+09:00"
     }
@@ -321,13 +337,17 @@
    "category": "github-trending",
    "kind": "repo",
    "display": "security-audit-skill",
-   "official_urls": ["https://github.com/cloudflare/security-audit-skill"],
+   "official_urls": [
+    "https://github.com/cloudflare/security-audit-skill"
+   ],
    "checks": [
     {
      "mcp_name": "page-capture",
      "tool": "fetch",
      "query": "cloudflare/security-audit-skill README",
-     "evidence_urls": ["https://github.com/cloudflare/security-audit-skill"],
+     "evidence_urls": [
+      "https://github.com/cloudflare/security-audit-skill"
+     ],
      "result": "6 段階の監査手順、確定・要確認・却下の記録、サンドボックス要件、MIT ライセンスを README で確認",
      "retrieved_at": "2026-11-10T06:00:00+09:00"
     }
@@ -339,13 +359,17 @@
    "category": "github-trending",
    "kind": "repo",
    "display": "mattpocock/skills",
-   "official_urls": ["https://github.com/mattpocock/skills"],
+   "official_urls": [
+    "https://github.com/mattpocock/skills"
+   ],
    "checks": [
     {
      "mcp_name": "page-capture",
      "tool": "fetch",
      "query": "mattpocock/skills README",
-     "evidence_urls": ["https://github.com/mattpocock/skills"],
+     "evidence_urls": [
+      "https://github.com/mattpocock/skills"
+     ],
      "result": "導入方法、/setup-matt-pocock-skills、/grill-me などの用途、プラグインと手動導入の注意を README で確認",
      "retrieved_at": "2026-11-10T06:00:00+09:00"
     }

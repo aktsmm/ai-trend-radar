@@ -374,6 +374,103 @@
      "retrieved_at": "2026-11-10T06:00:00+09:00"
     }
    ]
+  },
+  "cpu-arc": {
+   "selection_reason": "research 代表。LLM の推論過程を CPU で動く再利用部品にする手法 CPU-ARC の論文。",
+   "verification_status": "partially_verified",
+   "category": "research",
+   "kind": "paper",
+   "display": "CPU-ARC",
+   "official_urls": [
+    "https://huggingface.co/papers/2611.09891"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
+     "evidence_urls": [
+      "https://huggingface.co/papers/2611.09891"
+     ],
+     "evidence_published_at": "2026-11-09",
+     "result": "論文の要旨で、推論の跡から CPU で動く推論キャッシュ(ARC)を作る手法、難しい数学・科学課題で最先端 LLM と同等、呼び出しが 16〜291 倍安いという発表を確認",
+     "retrieved_at": "2026-11-10T06:30:00+09:00"
+    }
+   ]
+  },
+  "gh-data-1": {
+   "selection_reason": "GitHub 急上昇のリポジトリ 2 件。データに意味づけをする NVIDIA/auto-ontology と、Web 情報を集める D4Vinci/Scrapling。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "GitHub 急上昇: データ・検索ツール 2 件",
+   "official_urls": [
+    "https://github.com/NVIDIA/auto-ontology",
+    "https://github.com/D4Vinci/Scrapling"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "NVIDIA/auto-ontology と D4Vinci/Scrapling の README",
+     "evidence_urls": [
+      "https://github.com/NVIDIA/auto-ontology",
+      "https://github.com/D4Vinci/Scrapling"
+     ],
+     "result": "auto-ontology の役割・Apache-2.0・NVIDIA API キーが要ること、Scrapling の取得・解析・巡回機能と MCP サーバーを README で確認",
+     "retrieved_at": "2026-11-10T06:30:00+09:00"
+    }
+   ]
+  },
+  "gh-coding-agent-1": {
+   "selection_reason": "GitHub 急上昇のリポジトリ 3 件。エージェントをチャットで使う OpenMausBot、設計用スキルの impeccable、記憶を引き継ぐ claude-mem。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "GitHub 急上昇: コーディング支援 3 件",
+   "official_urls": [
+    "https://github.com/milind-soni/OpenMausBot",
+    "https://github.com/pbakaus/impeccable",
+    "https://github.com/thedotmack/claude-mem"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "OpenMausBot / impeccable / claude-mem の README",
+     "evidence_urls": [
+      "https://github.com/milind-soni/OpenMausBot",
+      "https://github.com/pbakaus/impeccable",
+      "https://github.com/thedotmack/claude-mem"
+     ],
+     "result": "各 README で、手元で動くボットをチャットで使う仕組み、デザイン用コマンドと検出ルール、セッションをまたぐ記憶の仕組みと導入方法を確認",
+     "retrieved_at": "2026-11-10T06:30:00+09:00"
+    }
+   ]
+  },
+  "gh-coding-agent-2": {
+   "selection_reason": "GitHub 急上昇のリポジトリ 2 件。デザインスキルの Hallmark と、ゲーム制作の Claude-Code-Game-Studios。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "GitHub 急上昇: エージェント用スキル 2 件",
+   "official_urls": [
+    "https://github.com/Nutlope/hallmark",
+    "https://github.com/Donchitos/Claude-Code-Game-Studios"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Nutlope/hallmark と Claude-Code-Game-Studios の README",
+     "evidence_urls": [
+      "https://github.com/Nutlope/hallmark",
+      "https://github.com/Donchitos/Claude-Code-Game-Studios"
+     ],
+     "result": "Hallmark の 50 テーマと品質ゲート、Game Studios の質問から試作ゲームまでの流れを README で確認",
+     "retrieved_at": "2026-11-10T06:30:00+09:00"
+    }
+   ]
   }
  }
 }

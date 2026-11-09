@@ -216,5 +216,70 @@
       ],
       "official_url": "https://github.com/mattpocock/skills"
     }
+  ],
+  "cpu-arc": [
+    {
+      "title": "CPU-ARC、推論を CPU に再利用",
+      "diagram_type": "infographic",
+      "icon": "chip",
+      "stat": {"value": "16〜291 倍", "label": "元のモデルより安い呼び出し(発表の数字)"},
+      "steps": ["LLM が解く", "推論をキャッシュ化", "CPU で再利用"],
+      "points": [
+        {"h": "何が起きた", "t": "LLM の推論の跡から、CPU で動く推論キャッシュ(ARC)を作る手法の論文が出た"},
+        {"h": "何が変わる", "t": "一度解いた種類の問題は、LLM をほとんど使わず効率よく解ける"},
+        {"h": "強み", "t": "難しい数学・科学課題で最先端 LLM と同等と、論文は述べている"},
+        {"h": "注意", "t": "著者の発表で第三者の検証ではない。要旨のみ確認した"}
+      ],
+      "official_url": "https://huggingface.co/papers/2611.09891",
+      "source_date": "2026-11-09"
+    }
+  ],
+  "gh-data-1": [
+    {
+      "title": "データ・検索ツール 2 件が急上昇",
+      "diagram_type": "infographic",
+      "icon": "layers",
+      "stat": {"value": "9,327", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["auto-ontology: 意味づけ", "Scrapling: 情報収集"],
+      "points": [
+        {"h": "ontology", "t": "データの意味の層を作り、エージェントが正しい数字で答えられるようにする。NVIDIA 製"},
+        {"h": "Scrapling", "t": "取得から巡回までを 1 つで行う Python のスクレイピング。MCP サーバーもある"},
+        {"h": "試し方", "t": "auto-ontology は Docker Compose と API キーで、Scrapling は Python から"},
+        {"h": "注意", "t": "スター数は注目度で、品質ではない。収集は対象サイトの規約を守る"}
+      ],
+      "official_url": "https://github.com/NVIDIA/auto-ontology"
+    }
+  ],
+  "gh-coding-agent-1": [
+    {
+      "title": "コーディング支援 3 件が急上昇",
+      "diagram_type": "infographic",
+      "icon": "terminal",
+      "stat": {"value": "7,621", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["OpenMausBot: チャット", "impeccable: デザイン", "claude-mem: 記憶"],
+      "points": [
+        {"h": "MausBot", "t": "手元の Claude や Codex をボットとしてチャットで使えるアプリ"},
+        {"h": "impeccable", "t": "polish や critique などの言葉で、デザイン作業を導き点検する"},
+        {"h": "claude-mem", "t": "作業を記録し要約して、次のセッションに文脈を渡す"},
+        {"h": "注意", "t": "スター数は注目度。手元の PC 操作を任せる範囲は慎重に決める"}
+      ],
+      "official_url": "https://github.com/milind-soni/OpenMausBot"
+    }
+  ],
+  "gh-coding-agent-2": [
+    {
+      "title": "エージェント用スキル 2 件が急上昇",
+      "diagram_type": "infographic",
+      "icon": "spark",
+      "stat": {"value": "6,356", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["Hallmark: デザイン", "Game Studios: ゲーム"],
+      "points": [
+        {"h": "Hallmark", "t": "AI らしく見えないページを作らせるデザイン用スキル。50 のテーマがある"},
+        {"h": "ゲーム制作", "t": "質問から企画書、ブラウザで遊べる試作ゲームまで進める"},
+        {"h": "試し方", "t": "Claude Code などで開き、/prototype や /hallmark のコマンドで始める"},
+        {"h": "注意", "t": "スター数は注目度で、品質ではない。人が遊んだ確認は別に必要"}
+      ],
+      "official_url": "https://github.com/Nutlope/hallmark"
+    }
   ]
 }

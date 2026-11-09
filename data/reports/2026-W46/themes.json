@@ -30,8 +30,10 @@
       "EKS は GPU の共有と条件指定、Nemotron は小さな GPU 構成で動く NVFP4 版、Unsloth は 2 枚の GPU での分担を示した。",
       "GPU の確保が負担になりやすく、手持ちの資源を効率よく使いたい需要が背景にあるかもしれない(見立て)。"
     ],
-    "entities": ["auto", "nemotron3", "unsloth"],
+    "entities": ["auto", "nemotron3", "unsloth", "nvidia-blackwell", "sglang"],
     "signals": [
+      {"entity": "nvidia-blackwell", "note": "NVFP4 により、B200 1 枚で BF16 より最大 1.62 倍速くなると発表された"},
+      {"entity": "sglang", "note": "GPU メモリを超える MoE を 1 枚の GPU で動かす Paged Experts がオプトインで加わった"},
       {"entity": "auto", "note": "GPU を複数の Pod で共有でき、条件に合う最安のインスタンスが起動される"},
       {"entity": "nemotron3", "note": "NVFP4 版は G7 インスタンスで動き、BF16 版は P5en を使う"},
       {"entity": "unsloth", "note": "同じ NVIDIA GPU 2 枚で、SDXL などが約 1.5〜1.8 倍速くなると発表された"}
@@ -39,7 +41,28 @@
     "refs": [
       "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
       "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
-      "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta"
+      "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
+      "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/",
+      "https://github.com/sgl-project/sglang/releases/tag/v0.5.23"
+    ]
+  },
+  {
+    "id": "price-down-and-faster",
+    "title": "新しい版で値下げと高速化が同時に進む",
+    "confidence": "low",
+    "summary": "動画生成と最上位の言語モデルの 2 件で、新版が前版より安く、または速くなったと発表された。",
+    "background": [
+      "Gemini Omni 1.2 Flash は前版より 30% の値下げ、Claude Fable 5.2 は前版より出力が最大 30% 速く、価格も下がったと発表された。",
+      "利用が広がるなかで、高性能モデルの使いやすさを価格と速度で上げたい意図があるのかもしれない(見立て)。2 件だけなので傾向とは言い切れない。"
+    ],
+    "entities": ["gemini-omni-1-2-flash", "claude-fable-5-2"],
+    "signals": [
+      {"entity": "gemini-omni-1-2-flash", "note": "前版より 30% 値下げされ、720p で 1 秒あたり 0.07 ドルと発表された"},
+      {"entity": "claude-fable-5-2", "note": "前版より出力が最大 30% 速く、入力 100 万トークン 8 ドル、出力 40 ドルに下がった"}
+    ],
+    "refs": [
+      "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "https://www.anthropic.com/claude-fable-and-mythos-5-2"
     ]
   }
 ]

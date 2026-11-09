@@ -38,5 +38,13 @@
     "explain": "Kubernetes でコンテナを動かすときの最小の単位。1 つ以上のコンテナをまとめたもので、GPU などの機器はこの単位で要求して割り当てられる。",
     "entity": "auto",
     "ref": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/"
+  },
+  {
+    "term": "拡散モデル",
+    "kind": "仕組み",
+    "short": "ノイズから少しずつ画像を作り上げる生成方式",
+    "explain": "ノイズだらけの状態から、何度も少しずつ整えて画像や動画を作る生成の方式。繰り返しの回数が多いほど時間がかかるため、高速化の工夫が重要になる。",
+    "entity": "nvidia-blackwell",
+    "ref": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/"
   }
 ]

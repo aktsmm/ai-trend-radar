@@ -100,5 +100,73 @@
       "official_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
       "source_date": "2026-11-06"
     }
+  ],
+  "claude-fable-5-2": [
+    {
+      "title": "Claude Fable 5.2 が値下げで公開",
+      "diagram_type": "infographic",
+      "icon": "spark",
+      "stat": {"value": "最大 30%", "label": "前版より出力が速い"},
+      "steps": ["難題を任せる", "長時間で実行", "結果を確認"],
+      "points": [
+        {"h": "何が起きた", "t": "Anthropic が最上位モデルの新版 Fable 5.2 を公開した"},
+        {"h": "何が変わる", "t": "入力 8 ドル、出力 40 ドル(100 万トークン)に下がった"},
+        {"h": "嬉しいこと", "t": "速度を最大 2.5 倍にする高速モードが選べる"},
+        {"h": "注意", "t": "多くの作業は Opus 5.5 から始めるよう勧められている"}
+      ],
+      "official_url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "source_date": "2026-11-09"
+    }
+  ],
+  "nvidia-blackwell": [
+    {
+      "title": "FLUX 3 Klein を Blackwell で高速化",
+      "diagram_type": "infographic",
+      "icon": "chip",
+      "stat": {"value": "最大 3.46 倍", "label": "B200 1 枚で Base を高速化(発表)"},
+      "steps": ["NVFP4 を使う", "最適化を重ねる", "GPU を増やす"],
+      "points": [
+        {"h": "何が起きた", "t": "NVIDIA が画像生成モデルの高速化手順を技術ブログで公開した"},
+        {"h": "何が変わる", "t": "NVFP4 で BF16 より最大 1.62 倍速くなる"},
+        {"h": "嬉しいこと", "t": "B200 8 枚で、中央値 14.90 秒が 3.00 秒になった"},
+        {"h": "注意", "t": "数字は NVIDIA の測定で、画質は最適化で変わる"}
+      ],
+      "official_url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/",
+      "source_date": "2026-11-06"
+    }
+  ],
+  "sglang": [
+    {
+      "title": "SGLang v0.5.23",
+      "diagram_type": "infographic",
+      "icon": "layers",
+      "stat": {"value": "1007 件", "label": "このリリースに入った PR"},
+      "steps": ["新モデル対応", "MoE を省メモリ化", "TPU でも動作"],
+      "points": [
+        {"h": "何が起きた", "t": "LLM の推論基盤 SGLang が新版をリリースした"},
+        {"h": "何が変わる", "t": "GPU メモリより大きい MoE を 1 枚の GPU で動かせる"},
+        {"h": "嬉しいこと", "t": "Google TPU7x や量子化 MoE の LoRA にも対応した"},
+        {"h": "注意", "t": "Paged Experts はオプトインで、速度は発表の数字"}
+      ],
+      "official_url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.23",
+      "source_date": "2026-11-03"
+    }
+  ],
+  "bench": [
+    {
+      "title": "CWE-bench v2 の公開版",
+      "diagram_type": "infographic",
+      "icon": "shield",
+      "stat": {"value": "100 タスク", "label": "91 種類の CWE を網羅"},
+      "steps": ["リポジトリを渡す", "弱点を修正", "自動で採点"],
+      "points": [
+        {"h": "何が起きた", "t": "Collinear AI がセキュリティ修正のベンチマークを公開した"},
+        {"h": "何が変わる", "t": "弱点の修正力を、共通の基準で比べられる"},
+        {"h": "嬉しいこと", "t": "採点は自動で、誰でも結果を再現できる"},
+        {"h": "注意", "t": "データセットは承認制で、利用条件への同意が要る"}
+      ],
+      "official_url": "https://huggingface.co/blog/cwe-bench",
+      "source_date": "2026-11-03"
+    }
   ]
 }

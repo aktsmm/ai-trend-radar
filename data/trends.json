@@ -983,7 +983,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.319": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "jp_reactions": [
@@ -1888,7 +1888,7 @@
    "url_checks": {
     "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "jp_reactions": [],
@@ -2249,11 +2249,11 @@
    "url_checks": {
     "https://www.anthropic.com/claude-fable-and-mythos-5-2": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     },
     "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "jp_reactions": [
@@ -2576,7 +2576,7 @@
    "url_checks": {
     "https://cohere.com/blog/embed-rerank-5-openrouter": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "jp_reactions": [],
@@ -2833,7 +2833,7 @@
    "url_checks": {
     "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "jp_reactions": [
@@ -3278,7 +3278,7 @@
    "url_checks": {
     "https://huggingface.co/blog/cwe-bench": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "jp_reactions": [],
@@ -3731,11 +3731,11 @@
    "url_checks": {
     "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     },
     "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "jp_reactions": [
@@ -4001,7 +4001,7 @@
    "url_checks": {
     "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "jp_reactions": [
@@ -4324,7 +4324,7 @@
    "url_checks": {
     "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "jp_reactions": [
@@ -4734,7 +4734,7 @@
    "url_checks": {
     "https://github.com/sgl-project/sglang/releases/tag/v0.5.23": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "jp_reactions": [],
@@ -5063,9 +5063,44 @@
    "official_urls": [
     "https://huggingface.co/papers/2611.09891"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse ― Large language models reinvent the wheel all the time. They conflate task-solving with the execution of the so。2ソースで言及(代表: 「CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reus」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "CPU-ARC、推論を CPU に再利用",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "16〜291 倍",
+      "label": "元のモデルより安い呼び出し(発表の数字)"
+     },
+     "steps": [
+      "LLM が解く",
+      "推論をキャッシュ化",
+      "CPU で再利用"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "LLM の推論の跡から、CPU で動く推論キャッシュ(ARC)を作る手法の論文が出た"
+      },
+      {
+       "h": "何が変わる",
+       "t": "一度解いた種類の問題は、LLM をほとんど使わず効率よく解ける"
+      },
+      {
+       "h": "強み",
+       "t": "難しい数学・科学課題で最先端 LLM と同等と、論文は述べている"
+      },
+      {
+       "h": "注意",
+       "t": "著者の発表で第三者の検証ではない。要旨のみ確認した"
+      }
+     ],
+     "official_url": "https://huggingface.co/papers/2611.09891",
+     "source_date": "2026-11-09"
+    }
+   ],
    "score_breakdown": {
     "hf_papers": 0.349,
     "arxiv": 0.09
@@ -5093,10 +5128,126 @@
    "x_posts": [],
    "display": "CPU-ARC",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
+      "evidence_urls": [
+       "https://huggingface.co/papers/2611.09891"
+      ],
+      "evidence_published_at": "2026-11-09",
+      "result": "論文の要旨で、推論の跡から CPU で動く推論キャッシュ(ARC)を作る手法、難しい数学・科学課題で最先端 LLM と同等、呼び出しが 16〜291 倍安いという発表を確認",
+      "retrieved_at": "2026-11-10T06:30:00+09:00"
+     }
+    ],
+    "selection_reason": "research 代表。LLM の推論過程を CPU で動く再利用部品にする手法 CPU-ARC の論文。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://huggingface.co/papers/2611.09891": {
+     "status": 200,
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "CPU-ARC は、LLM が一度解いた問題の推論の跡から、CPU で実行できる「推論キャッシュ(ARC)」を作る手法の論文。",
+     "LLM は問題ごとに最初から解き直しがちだが、解き方が分かった後の適用は LLM をほとんど使わず効率よくできる、という考え方に基づく。",
+     "論文は、難しい数学・科学の課題で最先端の LLM と同等の性能で、呼び出しが元のモデルより 16〜291 倍安いと述べている(発表の数字)。"
+    ],
+    "why_trending": "Hugging Face の論文ページに 11 月 9 日付で掲載された研究。",
+    "what_changes": [
+     "同じ種類の問題を、LLM を呼ばず CPU で繰り返し解く道が示された",
+     "実行の過程を説明でき、継続して学習させられると述べられている"
+    ],
+    "benefits": [
+     "呼び出し費用を大きく下げられる可能性がある(論文の発表の数字)",
+     "入力の少しの違いに強いと述べられている"
+    ],
+    "caveats": [
+     "論文の要旨で確認した段階で、実際の製品や公開コードの有無は確認していない",
+     "性能と費用の数字は著者の発表で、第三者の検証ではない"
+    ],
+    "audience": "LLM の運用費用を抑えたい研究者・開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "LLM の推論の跡から CPU で動く推論キャッシュを作り、同種の問題を安く解く手法の論文。",
+     "stat": {
+      "value": "16〜291 倍",
+      "label": "呼び出しが元のモデルより安い(発表の数字)"
+     },
+     "steps": [
+      "LLM が解く",
+      "キャッシュ化",
+      "CPU で再利用"
+     ],
+     "changes": [
+      "解き方が分かった問題は LLM なしに近い形で実行",
+      "説明でき、継続して学習できると述べられている"
+     ],
+     "facts": [
+      {
+       "k": "手法",
+       "v": "ARC(推論キャッシュ)"
+      },
+      {
+       "k": "実行場所",
+       "v": "CPU"
+      },
+      {
+       "k": "性能",
+       "v": "最先端 LLM と同等"
+      },
+      {
+       "k": "掲載",
+       "v": "Hugging Face 論文"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "LLM の運用費用を抑えたい研究者・開発者",
+     "benefits": [
+      "呼び出し費用を下げられる可能性がある",
+      "実行の過程を説明できると述べられている"
+     ],
+     "how_to": [
+      "論文の要旨を読む",
+      "自分の繰り返し課題に当てはまるか検討する"
+     ],
+     "caveats": [
+      "要旨のみ確認した段階で、実装の公開は未確認",
+      "数字は著者の発表で第三者の検証ではない"
+     ],
+     "terms": [
+      {
+       "t": "推論キャッシュ",
+       "d": "一度解いた手順を保存して再利用する仕組み"
+      },
+      {
+       "t": "CPU",
+       "d": "一般的なコンピューターの演算装置。GPU より手軽"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse",
+      "publisher": "Hugging Face",
+      "url": "https://huggingface.co/papers/2611.09891",
+      "date": "2026-11-09"
+     }
+    ]
+   }
   },
   {
    "rank": 21,
@@ -5246,7 +5397,7 @@
    "url_checks": {
     "https://github.com/vercel-labs/agent-desktop": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "digest": {
@@ -5476,7 +5627,7 @@
    "url_checks": {
     "https://github.com/cloudflare/security-audit-skill": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "digest": {
@@ -5708,7 +5859,7 @@
    "url_checks": {
     "https://github.com/mattpocock/skills": {
      "status": 200,
-     "checked_at": "2026-11-09T21:16:50.859308+00:00"
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
     }
    },
    "digest": {
@@ -5865,9 +6016,42 @@
     "https://github.com/NVIDIA/auto-ontology",
     "https://github.com/D4Vinci/Scrapling"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "GitHub 急上昇(週間): NVIDIA/auto-ontology(+9,327★): Auto Ontology is a Python framework for building semantic, g / D4Vinci/Scrapling(+8,342★): 🕷️ The BEST Web Scraping framework that handles everything f",
-   "slides": [],
+   "slides": [
+    {
+     "title": "データ・検索ツール 2 件が急上昇",
+     "diagram_type": "infographic",
+     "icon": "layers",
+     "stat": {
+      "value": "9,327",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "auto-ontology: 意味づけ",
+      "Scrapling: 情報収集"
+     ],
+     "points": [
+      {
+       "h": "ontology",
+       "t": "データの意味の層を作り、エージェントが正しい数字で答えられるようにする。NVIDIA 製"
+      },
+      {
+       "h": "Scrapling",
+       "t": "取得から巡回までを 1 つで行う Python のスクレイピング。MCP サーバーもある"
+      },
+      {
+       "h": "試し方",
+       "t": "auto-ontology は Docker Compose と API キーで、Scrapling は Python から"
+      },
+      {
+       "h": "注意",
+       "t": "スター数は注目度で、品質ではない。収集は対象サイトの規約を守る"
+      }
+     ],
+     "official_url": "https://github.com/NVIDIA/auto-ontology"
+    }
+   ],
    "score_breakdown": {
     "github_trending": 17669.0
    },
@@ -5902,10 +6086,23 @@
      "language": "Python"
     }
    ],
-   "display": "データ・検索・知識 2件(GitHub 急上昇)",
+   "display": "GitHub 急上昇: データ・検索ツール 2 件",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "NVIDIA/auto-ontology と D4Vinci/Scrapling の README",
+      "evidence_urls": [
+       "https://github.com/NVIDIA/auto-ontology",
+       "https://github.com/D4Vinci/Scrapling"
+      ],
+      "result": "auto-ontology の役割・Apache-2.0・NVIDIA API キーが要ること、Scrapling の取得・解析・巡回機能と MCP サーバーを README で確認",
+      "retrieved_at": "2026-11-10T06:30:00+09:00"
+     }
+    ],
+    "selection_reason": "GitHub 急上昇のリポジトリ 2 件。データに意味づけをする NVIDIA/auto-ontology と、Web 情報を集める D4Vinci/Scrapling。"
    },
    "jp_reactions": [
     {
@@ -5926,7 +6123,121 @@
      "url": "https://github.com/govijr/terminal-mac",
      "date": "2026-11-04"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://github.com/NVIDIA/auto-ontology": {
+     "status": 200,
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+    },
+    "https://github.com/D4Vinci/Scrapling": {
+     "status": 200,
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "NVIDIA/auto-ontology は、企業のデータに「何を意味するか」の層(オントロジー)を作り、エージェントが正しい数字で答えられるようにするオープンなライブラリ。",
+     "D4Vinci/Scrapling は、1 回の取得から大規模な巡回まで扱える Python のウェブスクレイピング用フレームワークで、AI エージェント向けの MCP サーバーもある。",
+     "前者は社内データの意味づけ、後者はウェブの情報収集と、データをエージェントに渡す入口と出口の違いがある。"
+    ],
+    "why_trending": "GitHub Trending で今週 auto-ontology が 9,327、Scrapling が 8,342 スター増えた(注目度の目安で、品質や安全性の保証ではない)。",
+    "what_changes": [
+     "auto-ontology は、指標の定義を揃え、回答に由来(SQL と手順)を付けて返す",
+     "Scrapling は、取得・解析・巡回・書き出しを 1 つのライブラリで済ませられる"
+    ],
+    "benefits": [
+     "データの意味が揃い、エージェントの回答を元データと照らして確認しやすい",
+     "ウェブの情報を JSON や CSV などで集める作業を短く書ける"
+    ],
+    "caveats": [
+     "auto-ontology は NVIDIA の API キーと Docker などの準備が要り、外部の貢献は受け付けていない",
+     "Scrapling は対象サイトの規約や robots.txt を守って使う必要がある"
+    ],
+    "audience": "社内データ活用やウェブ情報の収集をエージェントで進めたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "データの意味づけ(auto-ontology)と情報収集(Scrapling)の 2 つの道具が注目された。",
+     "stat": {
+      "value": "9,327",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "auto-ontology: 意味づけ",
+      "Scrapling: 情報収集"
+     ],
+     "changes": [
+      "回答に SQL と手順が付き、確認しやすい",
+      "取得から書き出しまでを 1 つで書ける"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "NVIDIA / D4Vinci"
+      },
+      {
+       "k": "言語",
+       "v": "Python"
+      },
+      {
+       "k": "ライセンス",
+       "v": "Apache-2.0(auto-ontology)"
+      },
+      {
+       "k": "連携",
+       "v": "MCP 対応"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2"
+     ]
+    },
+    "impact": {
+     "audience": "社内データ活用やウェブ収集をエージェントで進めたい開発者",
+     "benefits": [
+      "指標の定義が揃い、回答を照合しやすい",
+      "収集結果を JSON や CSV で出せる"
+     ],
+     "how_to": [
+      "auto-ontology は Docker Compose と API キーで起動",
+      "Scrapling は Python から Fetcher で取得する"
+     ],
+     "caveats": [
+      "auto-ontology は NVIDIA の API キーが要る",
+      "スター数は注目度で、品質ではない",
+      "収集は対象サイトの規約を守る"
+     ],
+     "terms": [
+      {
+       "t": "オントロジー",
+       "d": "データの言葉と関係を整理した意味の地図"
+      },
+      {
+       "t": "スクレイピング",
+       "d": "ウェブページから情報を自動で集めること"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "NVIDIA/auto-ontology (README)",
+      "publisher": "GitHub",
+      "url": "https://github.com/NVIDIA/auto-ontology"
+     },
+     {
+      "id": "s2",
+      "title": "D4Vinci/Scrapling (README)",
+      "publisher": "GitHub",
+      "url": "https://github.com/D4Vinci/Scrapling"
+     }
+    ]
+   }
   },
   {
    "rank": 25,
@@ -5997,9 +6308,43 @@
     "https://github.com/pbakaus/impeccable",
     "https://github.com/thedotmack/claude-mem"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "GitHub 急上昇(週間): milind-soni/OpenMausBot(+7,621★): Open-source Grok Bot alternative with a virtual machine that / pbakaus/impeccable(+7,196★): The design vocabulary for your coding agent. Steer with poli / thedotmack/claude-mem(+6,443★): Persistent Context Across Sessions for Every Agent – Capture",
-   "slides": [],
+   "slides": [
+    {
+     "title": "コーディング支援 3 件が急上昇",
+     "diagram_type": "infographic",
+     "icon": "terminal",
+     "stat": {
+      "value": "7,621",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "OpenMausBot: チャット",
+      "impeccable: デザイン",
+      "claude-mem: 記憶"
+     ],
+     "points": [
+      {
+       "h": "MausBot",
+       "t": "手元の Claude や Codex をボットとしてチャットで使えるアプリ"
+      },
+      {
+       "h": "impeccable",
+       "t": "polish や critique などの言葉で、デザイン作業を導き点検する"
+      },
+      {
+       "h": "claude-mem",
+       "t": "作業を記録し要約して、次のセッションに文脈を渡す"
+      },
+      {
+       "h": "注意",
+       "t": "スター数は注目度。手元の PC 操作を任せる範囲は慎重に決める"
+      }
+     ],
+     "official_url": "https://github.com/milind-soni/OpenMausBot"
+    }
+   ],
    "score_breakdown": {
     "github_trending": 21260.0
    },
@@ -6042,10 +6387,24 @@
      "language": "TypeScript"
     }
    ],
-   "display": "コーディング支援・エージェント 3件(GitHub 急上昇)",
+   "display": "GitHub 急上昇: コーディング支援 3 件",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "OpenMausBot / impeccable / claude-mem の README",
+      "evidence_urls": [
+       "https://github.com/milind-soni/OpenMausBot",
+       "https://github.com/pbakaus/impeccable",
+       "https://github.com/thedotmack/claude-mem"
+      ],
+      "result": "各 README で、手元で動くボットをチャットで使う仕組み、デザイン用コマンドと検出ルール、セッションをまたぐ記憶の仕組みと導入方法を確認",
+      "retrieved_at": "2026-11-10T06:30:00+09:00"
+     }
+    ],
+    "selection_reason": "GitHub 急上昇のリポジトリ 3 件。エージェントをチャットで使う OpenMausBot、設計用スキルの impeccable、記憶を引き継ぐ claude-mem。"
    },
    "jp_reactions": [
     {
@@ -6066,7 +6425,136 @@
      "url": "https://github.com/govijr/terminal-mac",
      "date": "2026-11-04"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://github.com/milind-soni/OpenMausBot": {
+     "status": 200,
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+    },
+    "https://github.com/pbakaus/impeccable": {
+     "status": 200,
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+    },
+    "https://github.com/thedotmack/claude-mem": {
+     "status": 200,
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "OpenMausBot は、ローカルの Claude や Codex などを、個性を持つボットとしてチャットアプリで使えるオープンソースのアプリ。",
+     "impeccable は、`polish` や `critique` などの言葉で、エージェントのデザイン作業を導き、点検する道具。",
+     "claude-mem は、エージェントの作業を記録して要約し、次のセッションに必要な文脈を渡す記憶の仕組み。"
+    ],
+    "why_trending": "GitHub Trending で今週 OpenMausBot が 7,621、impeccable が 7,196、claude-mem が 6,443 スター増えた(注目度の目安で、品質の保証ではない)。",
+    "what_changes": [
+     "ボットを連絡先のように呼び出し、作業を見て必要な承認だけ行える",
+     "デザインの指示を決まった言葉で出し、AI らしい典型的な崩れを検出できる",
+     "前のセッションの記憶が次に引き継がれる"
+    ],
+    "benefits": [
+     "指示や文脈の再説明が減り、同じ失敗の繰り返しを避けやすい",
+     "デザインの良し悪しを具体的な指摘で確認できる"
+    ],
+    "caveats": [
+     "OpenMausBot は手元の PC の操作を任せられるため、許可の範囲を慎重に決める",
+     "claude-mem は導入時にブラウザでのサインインが要り、観察役の利用は有料プランに続く試用がある",
+     "スター数は注目度で、品質ではない"
+    ],
+    "audience": "コーディングエージェントを日常的に使う開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "チャット、デザイン、記憶の 3 つでコーディングエージェントを補う道具が注目された。",
+     "stat": {
+      "value": "7,621",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "OpenMausBot: チャット",
+      "impeccable: デザイン",
+      "claude-mem: 記憶"
+     ],
+     "changes": [
+      "手元のエージェントをボットとして呼び出せる",
+      "デザイン指示と点検、セッション間の記憶を足せる"
+     ],
+     "facts": [
+      {
+       "k": "MausBot",
+       "v": "TypeScript"
+      },
+      {
+       "k": "impeccable",
+       "v": "62 の検出ルール"
+      },
+      {
+       "k": "claude-mem",
+       "v": "記憶を引き継ぐ"
+      },
+      {
+       "k": "対応",
+       "v": "Claude Code など"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2",
+      "s3"
+     ]
+    },
+    "impact": {
+     "audience": "コーディングエージェントを日常的に使う開発者",
+     "benefits": [
+      "説明のやり直しが減る",
+      "デザインの指摘が具体的になる"
+     ],
+     "how_to": [
+      "impeccable は npx impeccable install",
+      "claude-mem は npx claude-mem install"
+     ],
+     "caveats": [
+      "手元の PC 操作を任せる範囲は慎重に決める",
+      "claude-mem はサインインと試用の案内がある",
+      "スター数は注目度で、品質ではない"
+     ],
+     "terms": [
+      {
+       "t": "スキル",
+       "d": "エージェントに特定の作業手順を教える指示書"
+      },
+      {
+       "t": "セッション",
+       "d": "エージェントとの 1 回のやり取りのまとまり"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2",
+      "s3"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "milind-soni/OpenMausBot (README)",
+      "publisher": "GitHub",
+      "url": "https://github.com/milind-soni/OpenMausBot"
+     },
+     {
+      "id": "s2",
+      "title": "pbakaus/impeccable (README)",
+      "publisher": "GitHub",
+      "url": "https://github.com/pbakaus/impeccable"
+     },
+     {
+      "id": "s3",
+      "title": "thedotmack/claude-mem (README)",
+      "publisher": "GitHub",
+      "url": "https://github.com/thedotmack/claude-mem"
+     }
+    ]
+   }
   },
   {
    "rank": 26,
@@ -6125,9 +6613,42 @@
     "https://github.com/Nutlope/hallmark",
     "https://github.com/Donchitos/Claude-Code-Game-Studios"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "GitHub 急上昇(週間): Nutlope/hallmark(+6,356★): Anti-AI-slop design skill for Claude Code, Cursor, and Codex / Donchitos/Claude-Code-Game-Studios(+5,235★): Turn Claude Code into a full game dev studio — 49 AI agents,",
-   "slides": [],
+   "slides": [
+    {
+     "title": "エージェント用スキル 2 件が急上昇",
+     "diagram_type": "infographic",
+     "icon": "spark",
+     "stat": {
+      "value": "6,356",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "Hallmark: デザイン",
+      "Game Studios: ゲーム"
+     ],
+     "points": [
+      {
+       "h": "Hallmark",
+       "t": "AI らしく見えないページを作らせるデザイン用スキル。50 のテーマがある"
+      },
+      {
+       "h": "ゲーム制作",
+       "t": "質問から企画書、ブラウザで遊べる試作ゲームまで進める"
+      },
+      {
+       "h": "試し方",
+       "t": "Claude Code などで開き、/prototype や /hallmark のコマンドで始める"
+      },
+      {
+       "h": "注意",
+       "t": "スター数は注目度で、品質ではない。人が遊んだ確認は別に必要"
+      }
+     ],
+     "official_url": "https://github.com/Nutlope/hallmark"
+    }
+   ],
    "score_breakdown": {
     "github_trending": 11591.0
    },
@@ -6162,10 +6683,23 @@
      "language": "Shell"
     }
    ],
-   "display": "コーディング支援・エージェント 2件(GitHub 急上昇)",
+   "display": "GitHub 急上昇: エージェント用スキル 2 件",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Nutlope/hallmark と Claude-Code-Game-Studios の README",
+      "evidence_urls": [
+       "https://github.com/Nutlope/hallmark",
+       "https://github.com/Donchitos/Claude-Code-Game-Studios"
+      ],
+      "result": "Hallmark の 50 テーマと品質ゲート、Game Studios の質問から試作ゲームまでの流れを README で確認",
+      "retrieved_at": "2026-11-10T06:30:00+09:00"
+     }
+    ],
+    "selection_reason": "GitHub 急上昇のリポジトリ 2 件。デザインスキルの Hallmark と、ゲーム制作の Claude-Code-Game-Studios。"
    },
    "jp_reactions": [
     {
@@ -6186,7 +6720,122 @@
      "url": "https://github.com/govijr/terminal-mac",
      "date": "2026-11-04"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://github.com/Nutlope/hallmark": {
+     "status": 200,
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+    },
+    "https://github.com/Donchitos/Claude-Code-Game-Studios": {
+     "status": 200,
+     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Hallmark は、Claude Code や Codex などで、AI が作ったように見えないページを作らせるデザイン用スキル。Together AI が作った。",
+     "Claude-Code-Game-Studios は、質問に答えると 1 ページの企画書を作り、ブラウザで遊べる試作ゲームまで作る流れを備えたリポジトリ。",
+     "どちらもコーディングエージェントに専門の手順を足す部品で、前者はデザインの品質、後者はゲーム制作が対象。"
+    ],
+    "why_trending": "GitHub Trending で今週 Hallmark が 6,356、Game Studios が 5,235 スター増えた(注目度の目安で、品質の保証ではない)。",
+    "what_changes": [
+     "Hallmark は 50 のテーマから選び、ブラウザで検査して仕上げる",
+     "Game Studios は、アイデアの一言から質問、企画書、試作の順に進む"
+    ],
+    "benefits": [
+     "どこかで見たようなデザインを避けた画面を作りやすい",
+     "ゲームのアイデアを、短い手順で遊べる形にできる"
+    ],
+    "caveats": [
+     "どちらも Claude Code などの契約と利用枠が前提になる",
+     "Game Studios の自動チェックは「人が遊んだ検証」ではないと README が述べている",
+     "スター数は注目度で、品質ではない"
+    ],
+    "audience": "画面づくりやゲーム試作をエージェントに任せたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "デザイン(Hallmark)とゲーム制作(Game Studios)のエージェント用手順が注目された。",
+     "stat": {
+      "value": "6,356",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "Hallmark: デザイン",
+      "Game Studios: ゲーム"
+     ],
+     "changes": [
+      "AI らしくないページを作らせる",
+      "質問から試作ゲームまで進める"
+     ],
+     "facts": [
+      {
+       "k": "Hallmark",
+       "v": "50 テーマ"
+      },
+      {
+       "k": "作者",
+       "v": "Together AI"
+      },
+      {
+       "k": "ゲーム制作",
+       "v": "ブラウザゲーム"
+      },
+      {
+       "k": "対応",
+       "v": "Claude Code など"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2"
+     ]
+    },
+    "impact": {
+     "audience": "画面づくりやゲーム試作をエージェントに任せたい開発者",
+     "benefits": [
+      "ありがちなデザインを避けやすい",
+      "アイデアを遊べる形にできる"
+     ],
+     "how_to": [
+      "Claude Code などで各リポジトリを使う",
+      "/prototype でゲームの案を伝える"
+     ],
+     "caveats": [
+      "エージェントの契約や利用枠が前提",
+      "人が遊んだ確認は別に必要",
+      "スター数は注目度で、品質ではない"
+     ],
+     "terms": [
+      {
+       "t": "スキル",
+       "d": "エージェントに特定の作業手順を教える指示書"
+      },
+      {
+       "t": "プロトタイプ",
+       "d": "動きを確かめるための試作品"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Nutlope/hallmark (README)",
+      "publisher": "GitHub",
+      "url": "https://github.com/Nutlope/hallmark"
+     },
+     {
+      "id": "s2",
+      "title": "Donchitos/Claude-Code-Game-Studios (README)",
+      "publisher": "GitHub",
+      "url": "https://github.com/Donchitos/Claude-Code-Game-Studios"
+     }
+    ]
+   }
   }
  ],
  "pending": [
@@ -6712,15 +7361,17 @@
    "id": "agent-skills-and-tools",
    "title": "エージェントに「手順」と「手」を与える部品が注目される",
    "confidence": "low",
-   "summary": "GitHub 急上昇の 3 件が、エージェント用の手順書(スキル)や、デスクトップ操作の道具だった。",
+   "summary": "GitHub 急上昇の 7 件が、エージェント用の手順書(スキル)や、操作・記憶・デザインを補う部品だった。",
    "background": [
-    "agent-desktop は画面操作の道具、security-audit は監査の手順、mattpocock/skills は日常開発の手順を、エージェントに足す部品として公開している。",
+    "agent-desktop は画面操作、security-audit は監査、mattpocock/skills は日常開発、claude-mem は記憶、Hallmark はデザインの手順や部品をエージェントに足す。",
     "モデルそのものより、エージェントに任せる作業を定型化する部品への関心が高まっているのかもしれない(見立て)。スター数は注目度で、品質の保証ではない。"
    ],
    "entities": [
     "gh-vercel-labs-agent-desktop",
     "gh-cloudflare-security-audit-skill",
-    "gh-mattpocock-skills"
+    "gh-mattpocock-skills",
+    "gh-coding-agent-1",
+    "gh-coding-agent-2"
    ],
    "signals": [
     {
@@ -6734,12 +7385,22 @@
     {
      "entity": "gh-mattpocock-skills",
      "note": "小さく組み合わせやすく、どのモデルでも使えるスキル集と説明されている"
+    },
+    {
+     "entity": "gh-coding-agent-1",
+     "note": "claude-mem は作業を記録して次のセッションに文脈を渡す仕組みと説明されている"
+    },
+    {
+     "entity": "gh-coding-agent-2",
+     "note": "Hallmark は 50 のテーマを備えたデザイン用スキルと説明されている"
     }
    ],
    "refs": [
     "https://github.com/vercel-labs/agent-desktop",
     "https://github.com/cloudflare/security-audit-skill",
-    "https://github.com/mattpocock/skills"
+    "https://github.com/mattpocock/skills",
+    "https://github.com/thedotmack/claude-mem",
+    "https://github.com/Nutlope/hallmark"
    ]
   }
  ],

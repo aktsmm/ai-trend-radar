@@ -5,63 +5,95 @@
  "url_checks": {
   "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://cohere.com/blog/embed-rerank-5-openrouter": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
+  },
+  "https://github.com/D4Vinci/Scrapling": {
+   "status": 200,
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
+  },
+  "https://github.com/Donchitos/Claude-Code-Game-Studios": {
+   "status": 200,
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
+  },
+  "https://github.com/NVIDIA/auto-ontology": {
+   "status": 200,
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
+  },
+  "https://github.com/Nutlope/hallmark": {
+   "status": 200,
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.319": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://github.com/cloudflare/security-audit-skill": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://github.com/mattpocock/skills": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
+  },
+  "https://github.com/milind-soni/OpenMausBot": {
+   "status": 200,
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
+  },
+  "https://github.com/pbakaus/impeccable": {
+   "status": 200,
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://github.com/sgl-project/sglang/releases/tag/v0.5.23": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
+  },
+  "https://github.com/thedotmack/claude-mem": {
+   "status": 200,
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://github.com/vercel-labs/agent-desktop": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://huggingface.co/blog/cwe-bench": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
+  },
+  "https://huggingface.co/papers/2611.09891": {
+   "status": 200,
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   },
   "https://www.anthropic.com/claude-fable-and-mythos-5-2": {
    "status": 200,
-   "checked_at": "2026-11-09T21:16:50.859308+00:00"
+   "checked_at": "2026-11-09T21:43:52.110711+00:00"
   }
  },
  "entities": {

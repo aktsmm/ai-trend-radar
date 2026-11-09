@@ -20,5 +20,26 @@
       "https://cohere.com/blog/embed-rerank-5-openrouter",
       "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
     ]
+  },
+  {
+    "id": "gpu-use-flexibility",
+    "title": "限られた GPU を柔軟に使い切る",
+    "confidence": "low",
+    "summary": "EKS の GPU 割り当て、Nemotron の 4 ビット版、Unsloth の 2 GPU 対応の 3 件で、GPU を無駄なく使う手段が加わった。",
+    "background": [
+      "EKS は GPU の共有と条件指定、Nemotron は小さな GPU 構成で動く NVFP4 版、Unsloth は 2 枚の GPU での分担を示した。",
+      "GPU の確保が負担になりやすく、手持ちの資源を効率よく使いたい需要が背景にあるかもしれない(見立て)。"
+    ],
+    "entities": ["auto", "nemotron3", "unsloth"],
+    "signals": [
+      {"entity": "auto", "note": "GPU を複数の Pod で共有でき、条件に合う最安のインスタンスが起動される"},
+      {"entity": "nemotron3", "note": "NVFP4 版は G7 インスタンスで動き、BF16 版は P5en を使う"},
+      {"entity": "unsloth", "note": "同じ NVIDIA GPU 2 枚で、SDXL などが約 1.5〜1.8 倍速くなると発表された"}
+    ],
+    "refs": [
+      "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
+      "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+      "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta"
+    ]
   }
 ]

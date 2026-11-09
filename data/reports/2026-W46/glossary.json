@@ -22,5 +22,21 @@
     "explain": "AI が作った画像や動画に、人の目には見えない目印を埋め込む技術。後から AI 生成物かどうかを判別しやすくする。SynthID は Google の方式の名前。",
     "entity": "gemini-omni-1-2-flash",
     "ref": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+  },
+  {
+    "term": "Kubernetes",
+    "kind": "基礎",
+    "short": "多数のアプリをまとめて動かし管理する基盤",
+    "explain": "コンテナ化したアプリを、複数のサーバーにまたがって配置・増減・再起動してくれるオープンソースの管理基盤。AI の学習や推論の環境でも広く使われる。",
+    "entity": "auto",
+    "ref": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/"
+  },
+  {
+    "term": "Pod",
+    "kind": "仕組み",
+    "short": "Kubernetes でアプリを動かす最小の単位",
+    "explain": "Kubernetes でコンテナを動かすときの最小の単位。1 つ以上のコンテナをまとめたもので、GPU などの機器はこの単位で要求して割り当てられる。",
+    "entity": "auto",
+    "ref": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/"
   }
 ]

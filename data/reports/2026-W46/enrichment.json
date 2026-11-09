@@ -95,6 +95,75 @@
     }
    ],
    "display": "Claude Code"
+  },
+  "auto": {
+   "selection_reason": "dev-tool 代表。AWS が公式の What's New で、Amazon EKS Auto Mode と Karpenter の Dynamic Resource Allocation(GPU・EFA)対応を発表。",
+   "verification_status": "verified",
+   "category": "dev-tool",
+   "kind": "release",
+   "display": "Amazon EKS Auto Mode",
+   "official_urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Amazon EKS Auto Mode and Karpenter now support Dynamic Resource Allocation",
+     "evidence_urls": [
+      "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/"
+     ],
+     "evidence_published_at": "2026-11-09",
+     "result": "NVIDIA GPU と EFA の DRA 対応、ResourceClaim による指定、Karpenter による最安インスタンスの自動起動、Auto Mode は Kubernetes 1.36 以降で利用可能、GovCloud と中国リージョンは対象外であることを確認",
+     "retrieved_at": "2026-11-10T05:05:00+09:00"
+    }
+   ]
+  },
+  "nemotron3": {
+   "selection_reason": "model 代表。AWS が公式ブログで、NVIDIA の視覚言語モデル Nemotron 3.5 Super VL の SageMaker JumpStart での提供開始を発表。",
+   "verification_status": "verified",
+   "category": "model",
+   "kind": "model",
+   "display": "NVIDIA Nemotron 3.5 Super VL",
+   "official_urls": [
+    "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
+     "evidence_urls": [
+      "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/"
+     ],
+     "evidence_published_at": "2026-11-09",
+     "result": "120B 総パラメータ・12B アクティブの MoE、最大 100 万トークンの文脈、画像・動画・テキスト入力、NVFP4 と BF16 の 2 種、OpenMDW ライセンス、測定値(63〜141 トークン/秒)を確認",
+     "retrieved_at": "2026-11-10T05:05:00+09:00"
+    }
+   ]
+  },
+  "unsloth": {
+   "selection_reason": "local-runtime 代表。Unsloth が公式リポジトリで v0.1.916-beta をリリース。チャット操作の高速化や 2 GPU での画像・動画生成の高速化を発表。",
+   "verification_status": "verified",
+   "category": "local-runtime",
+   "kind": "release",
+   "display": "Unsloth",
+   "official_urls": [
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "unsloth v0.1.916-beta release notes",
+     "evidence_urls": [
+      "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta"
+     ],
+     "evidence_published_at": "2026-11-06",
+     "result": "長い会話での入力・検索の高速化、2 枚の NVIDIA GPU での画像・動画生成の高速化、チャットごとのブラウザと浮動ブラウザ、ダウンロード速度の上限設定の追加を確認。リリースは 11 月 6 日",
+     "retrieved_at": "2026-11-10T05:05:00+09:00"
+    }
+   ]
   }
  }
 }

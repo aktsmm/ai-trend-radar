@@ -979,7 +979,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.319": {
      "status": 200,
-     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
     }
    },
    "jp_reactions": [
@@ -1950,12 +1950,46 @@
     }
    ],
    "official_urls": [
-    "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
-    "https://unsloth.ai/"
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta"
    ],
    "official_verified": true,
    "summary": "unsloth Large Performance Fixes。4ソースで言及(代表: 「unsloth/Qwen3.8-Flash-Next-GGUF」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Unsloth v0.1.916-beta、性能改善",
+     "diagram_type": "infographic",
+     "icon": "spark",
+     "stat": {
+      "value": "1.5〜1.8倍",
+      "label": "2 GPU での画像生成の速度(発表)"
+     },
+     "steps": [
+      "GPU 2 枚を使う",
+      "画像・動画を生成",
+      "待ち時間を短縮"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Unsloth が長い会話や画像・動画生成を速くしたベータ版を出した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "同じ NVIDIA GPU 2 枚で、SDXL などが約 1.5〜1.8 倍速くなる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "チャットごとのブラウザや、動かせる浮動ブラウザが使える"
+      },
+      {
+       "h": "注意",
+       "t": "速度の数字は開発元の発表で、環境により異なる"
+      }
+     ],
+     "official_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
+     "source_date": "2026-11-06"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 0.985,
     "reddit_localllama": 1.047,
@@ -2006,10 +2040,127 @@
    ],
    "display": "Unsloth",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "unsloth v0.1.916-beta release notes",
+      "evidence_urls": [
+       "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta"
+      ],
+      "evidence_published_at": "2026-11-06",
+      "result": "長い会話での入力・検索の高速化、2 枚の NVIDIA GPU での画像・動画生成の高速化、チャットごとのブラウザと浮動ブラウザ、ダウンロード速度の上限設定の追加を確認。リリースは 11 月 6 日",
+      "retrieved_at": "2026-11-10T05:05:00+09:00"
+     }
+    ],
+    "selection_reason": "local-runtime 代表。Unsloth が公式リポジトリで v0.1.916-beta をリリース。チャット操作の高速化や 2 GPU での画像・動画生成の高速化を発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta": {
+     "status": 200,
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Unsloth が v0.1.916-beta をリリースした。長い会話での入力や検索、チャットの削除が速くなったと説明されている。",
+     "同じ NVIDIA GPU が 2 枚あると、SDXL などの画像・動画生成が約 1.5〜1.8 倍速くなると発表された。",
+     "チャットごとに別のブラウザを使え、動かして大きさを変えられる浮動ブラウザも加わった。"
+    ],
+    "why_trending": "Unsloth の公式リリースで、性能改善と Qwen3.8-Flash 向けの更新が重なって話題になった。",
+    "what_changes": [
+     "長い履歴のチャットでも、入力や検索が重くなりにくい",
+     "2 枚の GPU で画像・動画生成の待ち時間を縮められる"
+    ],
+    "benefits": [
+     "オーナーはモデルのダウンロード速度に上限を設定できる",
+     "単一ファイルの画像モデルや、OpenAI 互換接続でのカスタムヘッダーが使える"
+    ],
+    "caveats": [
+     "速度の数字は開発元の発表で、環境により異なる",
+     "ベータ版のため、動作は自分の環境で確認が要る"
+    ],
+    "audience": "手元の GPU で LLM や画像生成を動かし、ファインチューニングする人"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Unsloth v0.1.916-beta は、長い会話と 2 GPU の画像・動画生成を速くした。",
+     "stat": {
+      "value": "1.5〜1.8倍",
+      "label": "2 GPU での画像生成の速度(発表)"
+     },
+     "steps": [
+      "GPU 2 枚を使う",
+      "画像・動画を生成",
+      "待ち時間を短縮"
+     ],
+     "changes": [
+      "長い会話での入力と検索が速くなる",
+      "チャットごとに別のブラウザを使える"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Unsloth"
+      },
+      {
+       "k": "版",
+       "v": "v0.1.916-beta"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-11-06"
+      },
+      {
+       "k": "ライセンス",
+       "v": "無料・オープンソース"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "手元の GPU で LLM や画像生成を動かし、調整する人",
+     "benefits": [
+      "同じ GPU が 2 枚あれば、画像生成を速くできる",
+      "ダウンロード速度の上限を設定できる"
+     ],
+     "how_to": [
+      "Unsloth Desktop を公式のリリースから入手する",
+      "手元のモデルで動作を試す",
+      "2 GPU 構成なら速度を比べる"
+     ],
+     "caveats": [
+      "速度の数字は開発元の発表",
+      "ベータ版のため環境で確認が要る"
+     ],
+     "terms": [
+      {
+       "t": "GGUF",
+       "d": "手元の PC で動かしやすいモデルの配布形式"
+      },
+      {
+       "t": "LoRA",
+       "d": "モデル全体でなく一部だけを追加学習する軽い手法"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Unsloth v0.1.916-beta: Large Performance Fixes",
+      "publisher": "GitHub (Unsloth)",
+      "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
+      "date": "2026-11-06"
+     }
+    ]
+   }
   },
   {
    "rank": 8,
@@ -2203,7 +2354,7 @@
    "url_checks": {
     "https://cohere.com/blog/embed-rerank-5-openrouter": {
      "status": 200,
-     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
     }
    },
    "jp_reactions": [],
@@ -2600,8 +2751,8 @@
    "rank": 11,
    "keyword": "auto",
    "entity_id": "auto",
-   "kind": "model",
-   "category": "model",
+   "kind": "release",
+   "category": "dev-tool",
    "tags": [
     "models"
    ],
@@ -2714,12 +2865,46 @@
     }
    ],
    "official_urls": [
-    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
-    "https://openrouter.ai/openrouter/auto"
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/"
    ],
    "official_verified": true,
    "summary": "Amazon EKS Auto Mode and Karpenter now support Dynamic Resource Allocation ― Amazon Elastic Kubernetes Service (Amazon EKS) now supports Dynamic Resource Allocation (DRA) for NVIDIA GPUs 。5ソースで言及(代表: 「NVIDIA/auto-ontology」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "EKS が GPU の動的割り当てに対応",
+     "diagram_type": "infographic",
+     "icon": "cloud",
+     "stat": {
+      "value": "DRA",
+      "label": "GPU と EFA を宣言で割り当て"
+     },
+     "steps": [
+      "要求を宣言",
+      "最安を起動",
+      "Pod に割り当て"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "EKS Auto Mode と Karpenter が GPU・EFA の DRA に対応した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "機種や配置の条件を ResourceClaim で宣言し、GPU を共有できる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "Karpenter が条件に合う最安のインスタンスを自動で起動する"
+      },
+      {
+       "h": "注意",
+       "t": "Auto Mode は Kubernetes 1.36 以降で、GovCloud と中国は対象外"
+      }
+     ],
+     "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
+     "source_date": "2026-11-09"
+    }
+   ],
    "score_breakdown": {
     "github_new": 0.817,
     "github_trending": 0.948,
@@ -2760,10 +2945,23 @@
    "resolved_repo": null,
    "trend_label": "rising",
    "x_posts": [],
-   "display": "auto",
+   "display": "Amazon EKS Auto Mode",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Amazon EKS Auto Mode and Karpenter now support Dynamic Resource Allocation",
+      "evidence_urls": [
+       "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/"
+      ],
+      "evidence_published_at": "2026-11-09",
+      "result": "NVIDIA GPU と EFA の DRA 対応、ResourceClaim による指定、Karpenter による最安インスタンスの自動起動、Auto Mode は Kubernetes 1.36 以降で利用可能、GovCloud と中国リージョンは対象外であることを確認",
+      "retrieved_at": "2026-11-10T05:05:00+09:00"
+     }
+    ],
+    "selection_reason": "dev-tool 代表。AWS が公式の What's New で、Amazon EKS Auto Mode と Karpenter の Dynamic Resource Allocation(GPU・EFA)対応を発表。"
    },
    "jp_reactions": [
     {
@@ -2772,7 +2970,110 @@
      "url": "https://github.com/NVIDIA/auto-ontology",
      "date": "2026-11-03"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/": {
+     "status": 200,
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "AWS が、Amazon EKS Auto Mode と Karpenter で Kubernetes の Dynamic Resource Allocation(DRA)に対応したと発表した。",
+     "NVIDIA の GPU と EFA ネットワークデバイスについて、必要な属性を ResourceClaim で指定でき、GPU を複数の Pod で共有できる。",
+     "Karpenter が条件に合う最安のインスタンスを自動で起動する。Auto Mode には NVIDIA と EFA の DRA ドライバーが組み込まれている。"
+    ],
+    "why_trending": "AWS の公式発表で、AI の学習や推論に使う GPU の割り当てが話題になった。",
+    "what_changes": [
+     "GPU の機種や構成を、ResourceClaim で宣言して要求できる",
+     "分散学習や推論で、PCIe の配置がそろった GPU と EFA を指定できる"
+    ],
+    "benefits": [
+     "GPU を Pod 間で共有でき、需要に応じてインスタンスが自動で増減する",
+     "Auto Mode では DRA ドライバーが組み込み済みで、自分で入れなくてよい"
+    ],
+    "caveats": [
+     "Auto Mode での利用は Kubernetes 1.36 以降で、GovCloud と中国リージョンは対象外",
+     "移行中は、DRA とデバイスプラグインを同じ種類のデバイスで同じノードに混在できない"
+    ],
+    "audience": "EKS で GPU を使う AI の学習・推論基盤の運用者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "EKS Auto Mode と Karpenter が、GPU と EFA の動的割り当て(DRA)に対応した。",
+     "stat": {
+      "value": "DRA",
+      "label": "GPU と EFA を宣言で割り当て"
+     },
+     "steps": [
+      "要求を宣言",
+      "最安を起動",
+      "Pod に割り当て"
+     ],
+     "changes": [
+      "ResourceClaim で機種や配置を指定できる",
+      "GPU を複数の Pod で共有できる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "AWS"
+      },
+      {
+       "k": "対象",
+       "v": "NVIDIA GPU と EFA"
+      },
+      {
+       "k": "Auto Mode",
+       "v": "Kubernetes 1.36 以降"
+      },
+      {
+       "k": "対象外",
+       "v": "GovCloud と中国"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "EKS で GPU を使う AI の学習・推論基盤の運用者",
+     "benefits": [
+      "GPU の共有と、需要に応じた自動スケールを両立できる",
+      "Auto Mode は DRA ドライバーが組み込み済み"
+     ],
+     "how_to": [
+      "EKS ユーザーガイドの DRA の文書を読む",
+      "ResourceClaim を定義する",
+      "Pod の設定から要求する"
+     ],
+     "caveats": [
+      "DRA とデバイスプラグインは、同じ種類のデバイスで同じノードに混在できない"
+     ],
+     "terms": [
+      {
+       "t": "DRA",
+       "d": "GPU などの機器を属性で指定して割り当てる Kubernetes の仕組み"
+      },
+      {
+       "t": "EFA",
+       "d": "AWS の高速なネットワークデバイス"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Amazon EKS Auto Mode and Karpenter now support Dynamic Resource Allocation",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
+      "date": "2026-11-09"
+     }
+    ]
+   }
   },
   {
    "rank": 12,
@@ -3240,11 +3541,11 @@
    "url_checks": {
     "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
      "status": 200,
-     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
     },
     "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/": {
      "status": 200,
-     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
     }
    },
    "jp_reactions": [
@@ -3433,12 +3734,46 @@
     }
    ],
    "official_urls": [
-    "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
-    "https://ollama.com/library/nemotron3"
+    "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/"
    ],
    "official_verified": true,
    "summary": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart ― NVIDIA Nemotron 3.5 Super VL, a 120B-parameter multimodal vision-language model, is now available in Amazon Sa。3ソースで言及(代表: 「nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Nemotron 3.5 Super VL が JumpStart に",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "100万",
+      "label": "文脈の最大トークン数"
+     },
+     "steps": [
+      "JumpStart で選ぶ",
+      "NVFP4 か BF16",
+      "画像・動画を入力"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "NVIDIA の視覚言語モデルが SageMaker JumpStart で使えるようになった"
+      },
+      {
+       "h": "何が変わる",
+       "t": "総 120B・実働 12B の MoE が、画像・動画・テキストを扱う"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "NVFP4 版は G7、BF16 版は追加学習向けで、用途で選べる"
+      },
+      {
+       "h": "注意",
+       "t": "性能値は AWS の測定で、版どうしの純粋な比較ではない"
+      }
+     ],
+     "official_url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+     "source_date": "2026-11-09"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 0.822,
     "ollama": 0.56,
@@ -3461,10 +3796,23 @@
    "resolved_repo": null,
    "trend_label": "rising",
    "x_posts": [],
-   "display": "NVIDIA nemotron3",
+   "display": "NVIDIA Nemotron 3.5 Super VL",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
+      "evidence_urls": [
+       "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/"
+      ],
+      "evidence_published_at": "2026-11-09",
+      "result": "120B 総パラメータ・12B アクティブの MoE、最大 100 万トークンの文脈、画像・動画・テキスト入力、NVFP4 と BF16 の 2 種、OpenMDW ライセンス、測定値(63〜141 トークン/秒)を確認",
+      "retrieved_at": "2026-11-10T05:05:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。AWS が公式ブログで、NVIDIA の視覚言語モデル Nemotron 3.5 Super VL の SageMaker JumpStart での提供開始を発表。"
    },
    "jp_reactions": [
     {
@@ -3473,7 +3821,111 @@
      "url": "https://www.techno-edge.net/article/2026/11/06/5679.html",
      "date": "2026-11-07"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/": {
+     "status": 200,
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "AWS が、NVIDIA の視覚言語モデル Nemotron 3.5 Super VL を Amazon SageMaker JumpStart で使えるようにしたと発表した。",
+     "画像・動画・テキストを入力にして文章を出力する。総パラメータ 120B のうち実際に使うのは 12B の MoE 構成で、文脈は最大 100 万トークン。",
+     "最適化された NVFP4 版と、カスタマイズ向けの BF16 版の 2 種類が提供される。ライセンスは OpenMDW 1.1。"
+    ],
+    "why_trending": "AWS の公式ブログで提供開始が発表され、Ollama の Nemotron 3.5 系列とも並んで話題になった。",
+    "what_changes": [
+     "SageMaker Studio や Python SDK から、数ステップで画像・動画対応のモデルを配備できる",
+     "文書の読み取りや画面操作、動画の質問応答などを 1 つのモデルで扱える"
+    ],
+    "benefits": [
+     "NVFP4 版は G7 インスタンスで動き、小さめの GPU 構成から始められる",
+     "BF16 版の重みで、追加学習や独自の量子化もできる"
+    ],
+    "caveats": [
+     "63〜141 トークン/秒などの性能値は AWS の測定で、構成が違うため版どうしの比較ではない",
+     "JumpStart の配備では 1 リクエストに画像 1 枚と動画 1 本まで。ml.g7 の割当は新規アカウントでは 0 から"
+    ],
+    "audience": "文書処理や画面操作エージェントを作る、AWS 利用の開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "NVIDIA の視覚言語モデル Nemotron 3.5 Super VL が SageMaker JumpStart で使える。",
+     "stat": {
+      "value": "100万",
+      "label": "文脈の最大トークン数"
+     },
+     "steps": [
+      "JumpStart で選ぶ",
+      "NVFP4 か BF16",
+      "画像・動画を入力"
+     ],
+     "changes": [
+      "画像・動画・テキストを入力に文章を出力する",
+      "NVFP4 版と BF16 版から選べる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "NVIDIA / AWS"
+      },
+      {
+       "k": "規模",
+       "v": "120B(実働 12B)"
+      },
+      {
+       "k": "入力",
+       "v": "画像・動画・テキスト"
+      },
+      {
+       "k": "ライセンス",
+       "v": "OpenMDW 1.1"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "文書処理や画面操作エージェントを作る、AWS 利用の開発者",
+     "benefits": [
+      "NVFP4 版は G7 インスタンスで動かせる",
+      "BF16 版で追加学習や独自の量子化ができる"
+     ],
+     "how_to": [
+      "SageMaker Studio の JumpStart で検索する",
+      "ml.g7 の割当の引き上げを申請する",
+      "SDK から配備して試す"
+     ],
+     "caveats": [
+      "性能値は AWS の測定で、版どうしの純粋な比較ではない",
+      "1 リクエストに画像 1 枚と動画 1 本まで"
+     ],
+     "terms": [
+      {
+       "t": "MoE",
+       "d": "入力ごとに一部の専門家だけを使う構成"
+      },
+      {
+       "t": "NVFP4",
+       "d": "4 ビットで重みを表す NVIDIA の量子化形式"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+      "date": "2026-11-09"
+     }
+    ]
+   }
   },
   {
    "rank": 16,
@@ -4374,11 +4826,48 @@
     "https://cohere.com/blog/embed-rerank-5-openrouter",
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.319"
    ]
+  },
+  {
+   "id": "gpu-use-flexibility",
+   "title": "限られた GPU を柔軟に使い切る",
+   "confidence": "low",
+   "summary": "EKS の GPU 割り当て、Nemotron の 4 ビット版、Unsloth の 2 GPU 対応の 3 件で、GPU を無駄なく使う手段が加わった。",
+   "background": [
+    "EKS は GPU の共有と条件指定、Nemotron は小さな GPU 構成で動く NVFP4 版、Unsloth は 2 枚の GPU での分担を示した。",
+    "GPU の確保が負担になりやすく、手持ちの資源を効率よく使いたい需要が背景にあるかもしれない(見立て)。"
+   ],
+   "entities": [
+    "auto",
+    "nemotron3",
+    "unsloth"
+   ],
+   "signals": [
+    {
+     "entity": "auto",
+     "note": "GPU を複数の Pod で共有でき、条件に合う最安のインスタンスが起動される"
+    },
+    {
+     "entity": "nemotron3",
+     "note": "NVFP4 版は G7 インスタンスで動き、BF16 版は P5en を使う"
+    },
+    {
+     "entity": "unsloth",
+     "note": "同じ NVIDIA GPU 2 枚で、SDXL などが約 1.5〜1.8 倍速くなると発表された"
+    }
+   ],
+   "refs": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
+    "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta"
+   ]
   }
  ],
  "rejected_candidates": {
   "kimi-k3": "同じ Kimi K3.1 Pro の公開を 2026-W45 ですでに掲載済みのため、重複として見送る。",
   "flash-1017": "第三者が量子化して再配布したモデルで、開発元の公式な一次情報ではない。",
-  "openai-codex": "公式ページの本文を取得できず、一次情報の本文を確認できなかった。"
+  "openai-codex": "公式ページの本文を取得できず、一次情報の本文を確認できなかった。",
+  "ollama": "公式のリリースはリリース候補(プレリリース)で、今週の新機能として紹介できる内容に乏しいため見送る。",
+  "llama-cpp": "ビルド番号が上がっただけの定期リリースで、取り上げる新機能を確認できなかった。",
+  "optimization": "一般的な語で、広告の顧客事例ページ以外に一次情報の本文を確認できなかった。"
  }
 }

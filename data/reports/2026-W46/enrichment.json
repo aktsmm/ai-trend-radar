@@ -3,21 +3,33 @@
  "selected_on": "2026-11-08",
  "selection_policy": "候補6件のうち、日付つきの一次情報の本文を確認できた3件(model 2 / dev-tool 1)を掲載。kimi-k3 は 2026-W45 で掲載済み、flash-1017 は第三者による量子化版の再配布、openai-codex は公式ページの本文を取得できず、いずれも見送り。",
  "url_checks": {
+  "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/": {
+   "status": 200,
+   "checked_at": "2026-11-09T20:19:19.648423+00:00"
+  },
+  "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/": {
+   "status": 200,
+   "checked_at": "2026-11-09T20:19:19.648423+00:00"
+  },
   "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
    "status": 200,
-   "checked_at": "2026-11-08T20:42:17.434870+00:00"
+   "checked_at": "2026-11-09T20:19:19.648423+00:00"
   },
   "https://cohere.com/blog/embed-rerank-5-openrouter": {
    "status": 200,
-   "checked_at": "2026-11-08T20:42:17.434870+00:00"
+   "checked_at": "2026-11-09T20:19:19.648423+00:00"
   },
   "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/": {
    "status": 200,
-   "checked_at": "2026-11-08T20:42:17.434870+00:00"
+   "checked_at": "2026-11-09T20:19:19.648423+00:00"
   },
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.319": {
    "status": 200,
-   "checked_at": "2026-11-08T20:42:17.434870+00:00"
+   "checked_at": "2026-11-09T20:19:19.648423+00:00"
+  },
+  "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta": {
+   "status": 200,
+   "checked_at": "2026-11-09T20:19:19.648423+00:00"
   }
  },
  "entities": {

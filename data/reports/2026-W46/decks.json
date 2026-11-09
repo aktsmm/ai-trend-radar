@@ -290,5 +290,92 @@
     "sources": [
       {"id": "s1", "title": "CWE-bench v2: More coverage, quality, and transparency", "publisher": "Collinear AI (Hugging Face)", "url": "https://huggingface.co/blog/cwe-bench", "date": "2026-11-03"}
     ]
+  },
+  "gh-vercel-labs-agent-desktop": {
+    "overview": {
+      "takeaway": "AI エージェントにデスクトップアプリを操作させる CLI「agent-desktop」が注目された。",
+      "stat": {"value": "13,712", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["画面を読む", "ref で操作", "再度読んで確認"],
+      "changes": ["画像でなくアクセシビリティ情報の JSON で画面を渡す", "要素ごとの ref を指定してクリックや入力をする"],
+      "facts": [
+        {"k": "対応 OS", "v": "macOS / Windows / Linux"},
+        {"k": "形態", "v": "CLI と C ライブラリ"},
+        {"k": "言語", "v": "Rust"},
+        {"k": "ライセンス", "v": "Apache-2.0"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "デスクトップアプリを操作するエージェントを作る開発者",
+      "benefits": ["ブラウザ以外のアプリも自動化の対象にできる", "操作後に画面を読み直し、結果を確認できる"],
+      "how_to": ["npm install -g agent-desktop で入れる", "agent-desktop status で対応状況を見る", "snapshot で ref を取り click で操作する"],
+      "caveats": ["画面の内容は私的情報を含むので公開ログに残さない", "スター数は注目度で、品質や安全性ではない"],
+      "terms": [
+        {"t": "アクセシビリティ情報", "d": "OS が支援技術向けに出す画面部品の情報"},
+        {"t": "ref", "d": "操作できる要素に付く参照番号"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "vercel-labs/agent-desktop (README)", "publisher": "GitHub", "url": "https://github.com/vercel-labs/agent-desktop"}
+    ]
+  },
+  "gh-cloudflare-security-audit-skill": {
+    "overview": {
+      "takeaway": "Cloudflare のセキュリティ監査スキルが、エージェントによる段階的な脆弱性監査として注目された。",
+      "stat": {"value": "10,600", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["調査して探す", "別の目で反証", "検証して報告"],
+      "changes": ["6 段階の流れで監査を進める", "確定・要確認・却下に分けて記録する"],
+      "facts": [
+        {"k": "提供元", "v": "Cloudflare"},
+        {"k": "段階", "v": "6 フェーズ"},
+        {"k": "出力", "v": "findings.json と報告書"},
+        {"k": "ライセンス", "v": "MIT"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "自社コードの脆弱性を点検したい開発者・セキュリティ担当者",
+      "benefits": ["確認済みの問題と疑いが分かれて読める", "結果が機械で読める形でも残る"],
+      "how_to": ["npx skills add でスキルを入れる", "エージェントで対象コードを開く", "「security audit this codebase」と頼む"],
+      "caveats": ["コード実行には外部通信を止めたサンドボックスが要る", "スター数は注目度で、品質や安全性ではない", "権限のあるコードだけを対象にする"],
+      "terms": [
+        {"t": "スキル", "d": "エージェントに特定の作業手順を教える指示書"},
+        {"t": "サンドボックス", "d": "外部から隔離した安全な実行環境"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "cloudflare/security-audit-skill (README)", "publisher": "GitHub", "url": "https://github.com/cloudflare/security-audit-skill"}
+    ]
+  },
+  "gh-mattpocock-skills": {
+    "overview": {
+      "takeaway": "mattpocock/skills は、実務向けのエージェント用スキルを小さく集めた公開リポジトリ。",
+      "stat": {"value": "9,635", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["スキルを入れる", "setup を実行", "grill-me で整理"],
+      "changes": ["作る前にエージェントから質問を受ける", "共有用語集で回答を短くする"],
+      "facts": [
+        {"k": "作者", "v": "Matt Pocock"},
+        {"k": "対応", "v": "Claude Code / Codex など"},
+        {"k": "言語", "v": "Shell"},
+        {"k": "特徴", "v": "小さく組み合わせ可能"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "コーディングエージェントの指示の出し方を整えたい開発者",
+      "benefits": ["手を加えて自分用に使える", "どのモデルでも使えると説明されている"],
+      "how_to": ["使うエージェント向けのコマンドで入れる", "/setup-matt-pocock-skills を 1 回実行する", "作業前に /grill-me を使う"],
+      "caveats": ["プラグインと skills.sh の併用はスキルが二重になる", "スター数は注目度で、品質ではない"],
+      "terms": [
+        {"t": "スキル", "d": "エージェントに特定の作業手順を教える指示書"},
+        {"t": "用語集", "d": "プロジェクト固有の言葉を共有する文書"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "mattpocock/skills (README)", "publisher": "GitHub", "url": "https://github.com/mattpocock/skills"}
+    ]
   }
 }

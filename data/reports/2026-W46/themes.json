@@ -64,5 +64,26 @@
       "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
       "https://www.anthropic.com/claude-fable-and-mythos-5-2"
     ]
+  },
+  {
+    "id": "agent-skills-and-tools",
+    "title": "エージェントに「手順」と「手」を与える部品が注目される",
+    "confidence": "low",
+    "summary": "GitHub 急上昇の 3 件が、エージェント用の手順書(スキル)や、デスクトップ操作の道具だった。",
+    "background": [
+      "agent-desktop は画面操作の道具、security-audit は監査の手順、mattpocock/skills は日常開発の手順を、エージェントに足す部品として公開している。",
+      "モデルそのものより、エージェントに任せる作業を定型化する部品への関心が高まっているのかもしれない(見立て)。スター数は注目度で、品質の保証ではない。"
+    ],
+    "entities": ["gh-vercel-labs-agent-desktop", "gh-cloudflare-security-audit-skill", "gh-mattpocock-skills"],
+    "signals": [
+      {"entity": "gh-vercel-labs-agent-desktop", "note": "OS のアクセシビリティ情報を JSON で返し、ref を指定してアプリを操作する"},
+      {"entity": "gh-cloudflare-security-audit-skill", "note": "調査から報告まで 6 段階で進める監査スキルとして説明されている"},
+      {"entity": "gh-mattpocock-skills", "note": "小さく組み合わせやすく、どのモデルでも使えるスキル集と説明されている"}
+    ],
+    "refs": [
+      "https://github.com/vercel-labs/agent-desktop",
+      "https://github.com/cloudflare/security-audit-skill",
+      "https://github.com/mattpocock/skills"
+    ]
   }
 ]

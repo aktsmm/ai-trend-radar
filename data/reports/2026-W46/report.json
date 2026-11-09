@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-09T20:02:58.947929+00:00",
- "last_successful_report_at": "2026-11-09T20:02:58.947929+00:00",
+ "generated_at": "2026-11-09T20:45:03.164940+00:00",
+ "last_successful_report_at": "2026-11-09T20:45:03.164940+00:00",
  "window": {
   "from": "2026-11-03",
   "to": "2026-11-10",
@@ -18,7 +18,7 @@
    "ok": true,
    "count": 60,
    "group": "models",
-   "seconds": 1.9
+   "seconds": 1.0
   },
   "hf_spaces": {
    "ok": true,
@@ -30,25 +30,25 @@
    "ok": true,
    "count": 40,
    "group": "research",
-   "seconds": 0.3
+   "seconds": 0.2
   },
   "github_new": {
    "ok": true,
    "count": 120,
    "group": "tools",
-   "seconds": 5.7
+   "seconds": 7.5
   },
   "github_trending": {
    "ok": true,
    "count": 14,
    "group": "tools",
-   "seconds": 1.6
+   "seconds": 1.8
   },
   "hackernews": {
    "ok": true,
-   "count": 106,
+   "count": 105,
    "group": "community",
-   "seconds": 31.0
+   "seconds": 4.5
   },
   "reddit_localllama": {
    "ok": true,
@@ -60,7 +60,7 @@
    "ok": true,
    "count": 50,
    "group": "local-llm",
-   "seconds": 36.5
+   "seconds": 21.1
   },
   "reddit_ml": {
    "ok": false,
@@ -77,19 +77,19 @@
    "ok": true,
    "count": 132,
    "group": "community",
-   "seconds": 6.1
+   "seconds": 0.8
   },
   "arxiv": {
    "ok": true,
    "count": 80,
    "group": "research",
-   "seconds": 2.4
+   "seconds": 0.4
   },
   "ollama": {
    "ok": true,
    "count": 60,
    "group": "local-llm",
-   "seconds": 0.4
+   "seconds": 0.2
   },
   "openrouter": {
    "ok": true,
@@ -101,17 +101,17 @@
    "ok": true,
    "count": 13,
    "group": "tools",
-   "seconds": 3.7
+   "seconds": 2.0
   },
   "bluesky": {
    "ok": true,
    "count": 171,
    "group": "community",
-   "seconds": 0.6
+   "seconds": 2.5
   },
   "official": {
    "ok": true,
-   "count": 164,
+   "count": 168,
    "group": "vendor"
   },
   "gh_releases": {
@@ -123,32 +123,32 @@
    "ok": true,
    "count": 30,
    "group": "tools",
-   "seconds": 4.6
+   "seconds": 5.4
   },
   "x_watch": {
    "ok": true,
-   "count": 51,
+   "count": 38,
    "group": "community",
    "accounts": {
     "OpenAI": {
-     "ok": true,
-     "posts": 6
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "AnthropicAI": {
      "ok": true,
      "posts": 5
     },
     "GoogleAI": {
-     "ok": true,
-     "posts": 1
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "MSFTResearch": {
      "ok": true,
      "posts": 5
     },
     "awscloud": {
-     "ok": true,
-     "posts": 3
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "NVIDIAAI": {
      "ok": true,
@@ -163,12 +163,12 @@
      "posts": 6
     },
     "ggerganov": {
-     "ok": true,
-     "posts": 2
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "Alibaba_Qwen": {
-     "ok": true,
-     "posts": 1
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "deepseek_ai": {
      "ok": true,
@@ -187,7 +187,7 @@
   },
   "jp_reaction": {
    "ok": true,
-   "count": 112,
+   "count": 114,
    "group": "community-ja",
    "feeds": {
     "https://zenn.dev/topics/llm/feed": {
@@ -196,7 +196,7 @@
     },
     "https://zenn.dev/topics/ai/feed": {
      "ok": true,
-     "count": 15
+     "count": 16
     },
     "https://qiita.com/tags/llm/feed": {
      "ok": true,
@@ -204,7 +204,7 @@
     },
     "https://qiita.com/tags/ai/feed": {
      "ok": true,
-     "count": 2
+     "count": 3
     },
     "https://b.hatena.ne.jp/search/tag?q=LLM&mode=rss": {
      "ok": true,
@@ -250,12 +250,12 @@
   },
   "aws-whats-new": {
    "ok": true,
-   "count": 54,
+   "count": 56,
    "url": "https://aws.amazon.com/about-aws/whats-new/recent/feed/"
   },
   "microsoft-foundry-blog": {
    "ok": true,
-   "count": 3,
+   "count": 4,
    "url": "https://devblogs.microsoft.com/foundry/feed/"
   },
   "github-changelog": {
@@ -285,7 +285,7 @@
   },
   "google-research-blog": {
    "ok": true,
-   "count": 2,
+   "count": 3,
    "url": "https://research.google/blog/rss/"
   },
   "microsoft-research-blog": {
@@ -427,28 +427,28 @@
   },
   "watchlist": {
    "ok": true,
-   "count": 51,
+   "count": 38,
    "group": "community",
    "accounts": {
     "OpenAI": {
-     "ok": true,
-     "posts": 6
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "AnthropicAI": {
      "ok": true,
      "posts": 5
     },
     "GoogleAI": {
-     "ok": true,
-     "posts": 1
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "MSFTResearch": {
      "ok": true,
      "posts": 5
     },
     "awscloud": {
-     "ok": true,
-     "posts": 3
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "NVIDIAAI": {
      "ok": true,
@@ -463,12 +463,12 @@
      "posts": 6
     },
     "ggerganov": {
-     "ok": true,
-     "posts": 2
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "Alibaba_Qwen": {
-     "ok": true,
-     "posts": 1
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "deepseek_ai": {
      "ok": true,
@@ -480,7 +480,7 @@
     }
    }
   },
-  "posts_used": 62
+  "posts_used": 49
  },
  "trends": [
   {
@@ -519,6 +519,18 @@
     {
      "kind": "release",
      "source": "gh_releases",
+     "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.7",
+     "published_at": "2026-11-09T20:06:55+00:00",
+     "source_type": "release_note",
+     "title": "codex rust-v0.169.0-alpha.7",
+     "vendor": "OpenAI",
+     "date_basis": "published",
+     "feed": "openai/codex",
+     "event_id": "df5563fd6f"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
      "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.5",
      "published_at": "2026-11-09T07:29:29+00:00",
      "source_type": "release_note",
@@ -551,18 +563,6 @@
      "date_basis": "published",
      "feed": "openai/codex",
      "event_id": "86767918f0"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/openai/codex/releases/tag/rust-v0.168.0-alpha.5",
-     "published_at": "2026-11-05T17:06:54+00:00",
-     "source_type": "release_note",
-     "title": "codex rust-v0.168.0-alpha.5",
-     "vendor": "OpenAI",
-     "date_basis": "published",
-     "feed": "openai/codex",
-     "event_id": "f169bb2ae6"
     }
    ],
    "sources": [
@@ -596,15 +596,15 @@
     },
     {
      "name": "gh_releases",
-     "title": "codex rust-v0.169.0-alpha.5",
-     "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.5",
+     "title": "codex rust-v0.169.0-alpha.7",
+     "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.7",
      "metric": 1.0,
      "metric_name": "release"
     },
     {
      "name": "gh_releases",
-     "title": "codex rust-v0.169.0-alpha.4",
-     "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.4",
+     "title": "codex rust-v0.169.0-alpha.5",
+     "url": "https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.5",
      "metric": 1.0,
      "metric_name": "release"
     }
@@ -617,15 +617,14 @@
    "summary": "Cult.fit builds operational muscle with Codex ― Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done。8ソースで言及(代表: 「thedotmack/claude-mem」)",
    "slides": [],
    "score_breakdown": {
-    "hf_papers": 0.651,
+    "hf_papers": 0.648,
     "github_new": 1.264,
     "github_trending": 1.137,
     "hackernews": 1.41,
     "reddit_localllama": 0.57,
-    "reddit_ollama": 0.56,
+    "reddit_ollama": 0.574,
     "official": 1.2,
-    "gh_releases": 0.9,
-    "x_aux": 0.446
+    "gh_releases": 0.9
    },
    "velocity": {
     "hn_this_week": 2,
@@ -659,37 +658,24 @@
    },
    "related": [
     "GovCloud",
-    "Images 2.6",
-    "DevRev"
+    "DevRev",
+    "Images 2.6"
    ],
    "resolved_repo": null,
    "trend_label": "rising",
-   "x_posts": [
-    {
-     "url": "https://x.com/OpenAI/status/2117692475775258785",
-     "author": "OpenAI",
-     "likes": 8427,
-     "reposts": 754,
-     "views": 1394450,
-     "text": "ChatGPT and Codex are helping engineers build for the physical world.\n\nWe’re sharing our progress across mechanical design, electrical engineering, and simulation—from helping our hardware teams itera",
-     "via": "watchlist"
-    },
-    {
-     "url": "https://x.com/guilleflorvs/status/2117379073785696395",
-     "author": "guilleflorvs",
-     "likes": 7796,
-     "reposts": 691,
-     "views": 1006480,
-     "text": "BREAKING: Revolut moved ~2,000 engineers onto self-hosted GLM for coding and pushed Claude Code and Codex to the exception list.\n\nPer David Abitbol, who leads AI ops there: 56 Nvidia B200s, a blended ",
-     "via": "link"
-    }
-   ],
+   "x_posts": [],
    "display": "OpenAI Codex",
    "verification": {
     "status": "unverified",
     "checks": []
    },
    "jp_reactions": [
+    {
+     "site": "zenn",
+     "title": "常時稼働のAI秘書を自宅のノートPCで5か月動かして分かったこと【OpenAI dotsと比べて】",
+     "url": "https://zenn.dev/hifn/articles/home-server-ai-secretary-dot",
+     "date": "2026-11-09"
+    },
     {
      "site": "hatena",
      "title": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
@@ -708,7 +694,7 @@
     "agents",
     "tools"
    ],
-   "score": 87.9,
+   "score": 90.2,
    "vendor": "Anthropic",
    "primary": {
     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
@@ -791,14 +777,14 @@
      "name": "hackernews",
      "title": "Claude Code sends your email address to websites",
      "url": "https://github.com/anthropics/claude-code/issues/107757",
-     "metric": 1609.0,
+     "metric": 1610.0,
      "metric_name": "points"
     },
     {
      "name": "hackernews",
      "title": "Goldman Sachs is pulling Claude Code from its bankers and traders",
      "url": "https://www.thestateofai.com/news/goldman-sachs-claude-code-traders-bankers",
-     "metric": 873.0,
+     "metric": 874.0,
      "metric_name": "points"
     },
     {
@@ -833,7 +819,7 @@
      "name": "bluesky",
      "title": "oh cool something potentially up my all--\n\n> used \"Claude Code to aid in my coding and learning development\"\n\nevery time",
      "url": "https://bsky.app/profile/aurahack.ca/post/3mzvlnvxurc23",
-     "metric": 352.0,
+     "metric": 456.0,
      "metric_name": "likes+2*reposts"
     },
     {
@@ -904,13 +890,12 @@
     "github_trending": 1.359,
     "hackernews": 1.5,
     "reddit_localllama": 0.635,
-    "reddit_ollama": 0.756,
+    "reddit_ollama": 0.759,
     "devto": 0.423,
     "arxiv": 0.09,
-    "bluesky": 0.351,
+    "bluesky": 0.365,
     "official": 0.8,
-    "gh_releases": 0.9,
-    "x_aux": 0.221
+    "gh_releases": 0.9
    },
    "velocity": {
     "hn_this_week": 19,
@@ -942,22 +927,10 @@
      }
     ]
    },
-   "related": [
-    "Haiku 5.5"
-   ],
+   "related": [],
    "resolved_repo": null,
    "trend_label": "rising",
-   "x_posts": [
-    {
-     "url": "https://x.com/guilleflorvs/status/2117379073785696395",
-     "author": "guilleflorvs",
-     "likes": 7796,
-     "reposts": 691,
-     "views": 1006480,
-     "text": "BREAKING: Revolut moved ~2,000 engineers onto self-hosted GLM for coding and pushed Claude Code and Codex to the exception list.\n\nPer David Abitbol, who leads AI ops there: 56 Nvidia B200s, a blended ",
-     "via": "link"
-    }
-   ],
+   "x_posts": [],
    "display": "Claude Code",
    "verification": {
     "status": "verified",
@@ -979,7 +952,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.319": {
      "status": 200,
-     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
     }
    },
    "digest": {
@@ -1111,7 +1084,7 @@
     "local-llm",
     "tools"
    ],
-   "score": 69.4,
+   "score": 73.5,
    "vendor": "Ollama",
    "primary": {
     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16-rc0",
@@ -1253,7 +1226,7 @@
     "reddit_ollama": 1.05,
     "devto": 0.251,
     "pypi": 0.412,
-    "bluesky": 0.289,
+    "bluesky": 0.288,
     "gh_releases": 0.9,
     "x_aux": 0.5
    },
@@ -1295,9 +1268,9 @@
     {
      "url": "https://x.com/ollama/status/2118068379378651192",
      "author": "ollama",
-     "likes": 754,
+     "likes": 753,
      "reposts": 46,
-     "views": 100601,
+     "views": 100613,
      "text": "Kimi K3.1 Pro from @Kimi_Moonshot is now available on Ollama Cloud.\n\n🔒 Hosted in the US with full zero data retention.\n\n2.8T total parameters with 104B activated, designed for coding, 3D creation, fin",
      "via": "watchlist"
     },
@@ -1306,7 +1279,7 @@
      "author": "ollama",
      "likes": 481,
      "reposts": 33,
-     "views": 21920,
+     "views": 21924,
      "text": "Kimi K3.1 Pro rolling out on Ollama Cloud shortly. \n\nUS based. Zero data retention.",
      "via": "watchlist"
     },
@@ -1315,7 +1288,7 @@
      "author": "ollama",
      "likes": 236,
      "reposts": 21,
-     "views": 15586,
+     "views": 15588,
      "text": "Open models were the first to do the sensitive work, like private documents and government data.\n\nNow, with full zero data retention and more capable models, Ollama is making them the default for ente",
      "via": "watchlist"
     }
@@ -1337,7 +1310,7 @@
     "local-llm",
     "tools"
    ],
-   "score": 64.7,
+   "score": 66.8,
    "vendor": "ggml",
    "primary": {
     "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12233",
@@ -1461,14 +1434,14 @@
    "summary": "llama.cpp b12233。7ソースで言及(代表: 「Qwen3.8-27B has become unuseable recently」)",
    "slides": [],
    "score_breakdown": {
-    "github_new": 0.547,
-    "reddit_localllama": 1.368,
+    "github_new": 0.546,
+    "reddit_localllama": 1.375,
     "reddit_ollama": 0.644,
     "devto": 0.0,
     "pypi": 0.325,
-    "bluesky": 0.242,
+    "bluesky": 0.241,
     "gh_releases": 0.9,
-    "x_aux": 0.294
+    "x_aux": 0.163
    },
    "velocity": {
     "hn_this_week": 0,
@@ -1479,8 +1452,7 @@
     "first_seen": "2026-11-03",
     "peak_day": "2026-11-09",
     "co_mentioned": [
-     "Ollama",
-     "Strata"
+     "Ollama"
     ],
     "evidence": [
      {
@@ -1503,17 +1475,7 @@
    "related": [],
    "resolved_repo": null,
    "trend_label": "rising",
-   "x_posts": [
-    {
-     "url": "https://x.com/ggerganov/status/2118019102757589069",
-     "author": "ggerganov",
-     "likes": 220,
-     "reposts": 17,
-     "views": 7441,
-     "text": "llama.cpp is featured in the Github Octoverse report\n\nThe project remains consistently one of the top open-source projects on Github over the last few years. An attestation to it's great quality and a",
-     "via": "watchlist"
-    }
-   ],
+   "x_posts": [],
    "display": "ggml llama.cpp",
    "verification": {
     "status": "unverified",
@@ -1530,159 +1492,6 @@
   },
   {
    "rank": 5,
-   "keyword": "kimi-k3",
-   "entity_id": "kimi-k3",
-   "kind": "model",
-   "category": "model",
-   "tags": [
-    "models",
-    "local-llm"
-   ],
-   "score": 57.9,
-   "vendor": "Moonshot",
-   "primary": {
-    "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock",
-    "published_at": "2026-11-06T22:47:00+00:00",
-    "date_basis": "published",
-    "source_type": "release_note",
-    "title": "Kimi K3.1 Pro (Highspeed) now available on Amazon Bedrock",
-    "event_id": "a565967e1f"
-   },
-   "events": [
-    {
-     "kind": "announcement",
-     "source": "official",
-     "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock",
-     "published_at": "2026-11-06T22:47:00+00:00",
-     "source_type": "release_note",
-     "title": "Kimi K3.1 Pro (Highspeed) now available on Amazon Bedrock",
-     "vendor": "AWS",
-     "date_basis": "published",
-     "feed": "aws-whats-new",
-     "event_id": "a565967e1f"
-    }
-   ],
-   "sources": [
-    {
-     "name": "hf_models",
-     "title": "moonshotai/Kimi-K3.1-Pro",
-     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
-     "metric": 583.5,
-     "metric_name": "trendingScore"
-    },
-    {
-     "name": "reddit_localllama",
-     "title": "Kimi-K3.1-Pro is now open-weights",
-     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xnrhvb/kimik31pro_is_now_openweights/",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "ollama",
-     "title": "kimi-k3.1-pro",
-     "url": "https://ollama.com/library/kimi-k3.1-pro",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "ollama",
-     "title": "kimi-k3",
-     "url": "https://ollama.com/library/kimi-k3",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "official",
-     "title": "Kimi K3.1 Pro (Highspeed) now available on Amazon Bedrock",
-     "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock",
-     "metric": 1.0,
-     "metric_name": "announcement"
-    }
-   ],
-   "official_urls": [
-    "https://aws.amazon.com/about-aws/whats-new/2026/11/moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock",
-    "https://ollama.com/library/kimi-k3",
-    "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
-   ],
-   "official_verified": true,
-   "summary": "Kimi K3.1 Pro (Highspeed) now available on Amazon Bedrock ― Today, Kimi K3.1 Pro from Moonshot AI is available on Amazon Bedrock, expanding our open weight model portfoli。5ソースで言及(代表: 「Kimi-K3.1-Pro is now open-weights」)",
-   "slides": [],
-   "score_breakdown": {
-    "hf_models": 0.946,
-    "reddit_localllama": 1.235,
-    "devto": 0.127,
-    "ollama": 0.637,
-    "official": 0.8,
-    "x_aux": 0.493
-   },
-   "velocity": {
-    "hn_this_week": 1,
-    "hn_prev_week": 1,
-    "factor": 0.7
-   },
-   "why": {
-    "first_seen": "2026-11-02",
-    "peak_day": "2026-11-06",
-    "co_mentioned": [],
-    "evidence": [
-     {
-      "source": "reddit_localllama",
-      "title": "Kimi-K3.1-Pro is now open-weights",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xnrhvb/kimik31pro_is_now_openweights/"
-     },
-     {
-      "source": "reddit_localllama",
-      "title": "Latest Open-Source Labs are gutting away cybersecurity and reverse-engineering capabilities",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xp9jt1/latest_opensource_labs_are_gutting_away/"
-     },
-     {
-      "source": "reddit_localllama",
-      "title": "Kimi K3.1 is likely benchmaxxed (with some proof)",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xnu6y1/kimi_k31_is_likely_benchmaxxed_with_some_proof/"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": null,
-   "trend_label": "rising",
-   "x_posts": [
-    {
-     "url": "https://x.com/JSchaeff3r/status/2117613618065793160",
-     "author": "JSchaeff3r",
-     "likes": 1032,
-     "reposts": 90,
-     "views": 169069,
-     "text": "Kimi K3.1 recalls instructions it was never given on Terminal Bench. They match the hidden tests. K3.1 while solving: \"Instructions likely distilled pitfalls from previous agents.\" 🤯\n\nWhen we edit a t",
-     "via": "link"
-    },
-    {
-     "url": "https://x.com/ollama/status/2118068379378651192",
-     "author": "ollama",
-     "likes": 754,
-     "reposts": 46,
-     "views": 100601,
-     "text": "Kimi K3.1 Pro from @Kimi_Moonshot is now available on Ollama Cloud.\n\n🔒 Hosted in the US with full zero data retention.\n\n2.8T total parameters with 104B activated, designed for coding, 3D creation, fin",
-     "via": "watchlist"
-    },
-    {
-     "url": "https://x.com/ollama/status/2118017270739878316",
-     "author": "ollama",
-     "likes": 481,
-     "reposts": 33,
-     "views": 21920,
-     "text": "Kimi K3.1 Pro rolling out on Ollama Cloud shortly. \n\nUS based. Zero data retention.",
-     "via": "watchlist"
-    }
-   ],
-   "display": "Moonshot kimi-k3",
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": []
-  },
-  {
-   "rank": 6,
    "keyword": "Optimization",
    "entity_id": "optimization",
    "kind": "product",
@@ -1691,7 +1500,7 @@
     "agents",
     "tools"
    ],
-   "score": 54.5,
+   "score": 64.9,
    "vendor": null,
    "primary": {
     "url": "https://openai.com/ads/customers/flipsnack",
@@ -1756,14 +1565,14 @@
      "name": "hf_papers",
      "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
      "url": "https://huggingface.co/papers/2611.08483",
-     "metric": 10.0,
+     "metric": 11.0,
      "metric_name": "upvotes"
     },
     {
      "name": "hf_papers",
      "title": "Steerable Multi-Objective Group-Relative Preference Optimization with Jointly Trained Low-Rank Adapters",
      "url": "https://huggingface.co/papers/2611.09634",
-     "metric": 5.0,
+     "metric": 7.0,
      "metric_name": "upvotes"
     },
     {
@@ -1772,6 +1581,13 @@
      "url": "https://github.com/shayan878/llm-inference-optimization",
      "metric": 0.0,
      "metric_name": "stars"
+    },
+    {
+     "name": "hackernews",
+     "title": "A primer on GPUs and kernel optimization",
+     "url": "https://www.nabo.dev/blogs/kernel-primer",
+     "metric": 30.0,
+     "metric_name": "points"
     },
     {
      "name": "bluesky",
@@ -1799,14 +1615,15 @@
     "https://openai.com/ads/customers/flipsnack"
    ],
    "official_verified": true,
-   "summary": "Flipsnack grows product signups with conversion optimization ― Flipsnack focused its ChatGPT Ads campaigns on getting people to try its product, growing registrations while 。6ソースで言及(代表: 「Flipsnack grows product signups with conversion optimization」)",
+   "summary": "Flipsnack grows product signups with conversion optimization ― Flipsnack focused its ChatGPT Ads campaigns on getting people to try its product, growing registrations while 。7ソースで言及(代表: 「Flipsnack grows product signups with conversion optimization」)",
    "slides": [],
    "score_breakdown": {
-    "hf_papers": 0.61,
+    "hf_papers": 0.638,
     "github_new": 0.0,
-    "reddit_localllama": 0.698,
+    "hackernews": 0.465,
+    "reddit_localllama": 0.705,
     "arxiv": 0.157,
-    "bluesky": 0.104,
+    "bluesky": 0.103,
     "official": 0.8
    },
    "velocity": {
@@ -1848,6 +1665,159 @@
    "jp_reactions": []
   },
   {
+   "rank": 6,
+   "keyword": "kimi-k3",
+   "entity_id": "kimi-k3",
+   "kind": "model",
+   "category": "model",
+   "tags": [
+    "models",
+    "local-llm"
+   ],
+   "score": 61.3,
+   "vendor": "Moonshot",
+   "primary": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock",
+    "published_at": "2026-11-06T22:47:00+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "Kimi K3.1 Pro (Highspeed) now available on Amazon Bedrock",
+    "event_id": "a565967e1f"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock",
+     "published_at": "2026-11-06T22:47:00+00:00",
+     "source_type": "release_note",
+     "title": "Kimi K3.1 Pro (Highspeed) now available on Amazon Bedrock",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "feed": "aws-whats-new",
+     "event_id": "a565967e1f"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_models",
+     "title": "moonshotai/Kimi-K3.1-Pro",
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+     "metric": 584.5,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "Kimi-K3.1-Pro is now open-weights",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xnrhvb/kimik31pro_is_now_openweights/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "ollama",
+     "title": "kimi-k3.1-pro",
+     "url": "https://ollama.com/library/kimi-k3.1-pro",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "ollama",
+     "title": "kimi-k3",
+     "url": "https://ollama.com/library/kimi-k3",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "official",
+     "title": "Kimi K3.1 Pro (Highspeed) now available on Amazon Bedrock",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/moonshot-ai-kimi-k3-1-pro-on-amazon-bedrock",
+    "https://ollama.com/library/kimi-k3",
+    "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+   ],
+   "official_verified": true,
+   "summary": "Kimi K3.1 Pro (Highspeed) now available on Amazon Bedrock ― Today, Kimi K3.1 Pro from Moonshot AI is available on Amazon Bedrock, expanding our open weight model portfoli。5ソースで言及(代表: 「Kimi-K3.1-Pro is now open-weights」)",
+   "slides": [],
+   "score_breakdown": {
+    "hf_models": 0.946,
+    "reddit_localllama": 1.238,
+    "devto": 0.127,
+    "ollama": 0.637,
+    "official": 0.8,
+    "x_aux": 0.493
+   },
+   "velocity": {
+    "hn_this_week": 1,
+    "hn_prev_week": 1,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-11-02",
+    "peak_day": "2026-11-06",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "reddit_localllama",
+      "title": "Kimi-K3.1-Pro is now open-weights",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xnrhvb/kimik31pro_is_now_openweights/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "Latest Open-Source Labs are gutting away cybersecurity and reverse-engineering capabilities",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xp9jt1/latest_opensource_labs_are_gutting_away/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "Kimi K3.1 is likely benchmaxxed (with some proof)",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xnu6y1/kimi_k31_is_likely_benchmaxxed_with_some_proof/"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [
+    {
+     "url": "https://x.com/JSchaeff3r/status/2117613618065793160",
+     "author": "JSchaeff3r",
+     "likes": 1032,
+     "reposts": 90,
+     "views": 169099,
+     "text": "Kimi K3.1 recalls instructions it was never given on Terminal Bench. They match the hidden tests. K3.1 while solving: \"Instructions likely distilled pitfalls from previous agents.\" 🤯\n\nWhen we edit a t",
+     "via": "link"
+    },
+    {
+     "url": "https://x.com/ollama/status/2118068379378651192",
+     "author": "ollama",
+     "likes": 753,
+     "reposts": 46,
+     "views": 100613,
+     "text": "Kimi K3.1 Pro from @Kimi_Moonshot is now available on Ollama Cloud.\n\n🔒 Hosted in the US with full zero data retention.\n\n2.8T total parameters with 104B activated, designed for coding, 3D creation, fin",
+     "via": "watchlist"
+    },
+    {
+     "url": "https://x.com/ollama/status/2118017270739878316",
+     "author": "ollama",
+     "likes": 481,
+     "reposts": 33,
+     "views": 21924,
+     "text": "Kimi K3.1 Pro rolling out on Ollama Cloud shortly. \n\nUS based. Zero data retention.",
+     "via": "watchlist"
+    }
+   ],
+   "display": "Moonshot kimi-k3",
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": []
+  },
+  {
    "rank": 7,
    "keyword": "Unsloth",
    "entity_id": "unsloth",
@@ -1857,7 +1827,7 @@
     "local-llm",
     "tools"
    ],
-   "score": 49.5,
+   "score": 52.5,
    "vendor": "Unsloth",
    "primary": {
     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
@@ -1950,15 +1920,49 @@
     }
    ],
    "official_urls": [
-    "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
-    "https://unsloth.ai/"
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta"
    ],
    "official_verified": true,
    "summary": "unsloth Large Performance Fixes。4ソースで言及(代表: 「unsloth/Qwen3.8-Flash-Next-GGUF」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Unsloth v0.1.916-beta、性能改善",
+     "diagram_type": "infographic",
+     "icon": "spark",
+     "stat": {
+      "value": "1.5〜1.8倍",
+      "label": "2 GPU での画像生成の速度(発表)"
+     },
+     "steps": [
+      "GPU 2 枚を使う",
+      "画像・動画を生成",
+      "待ち時間を短縮"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Unsloth が長い会話や画像・動画生成を速くしたベータ版を出した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "同じ NVIDIA GPU 2 枚で、SDXL などが約 1.5〜1.8 倍速くなる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "チャットごとのブラウザや、動かせる浮動ブラウザが使える"
+      },
+      {
+       "h": "注意",
+       "t": "速度の数字は開発元の発表で、環境により異なる"
+      }
+     ],
+     "official_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
+     "source_date": "2026-11-06"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 0.985,
-    "reddit_localllama": 1.047,
+    "reddit_localllama": 1.062,
     "pypi": 0.33,
     "gh_releases": 0.9,
     "x_aux": 0.191
@@ -1999,15 +2003,132 @@
      "author": "UnslothAI",
      "likes": 2188,
      "reposts": 216,
-     "views": 247445,
+     "views": 247488,
      "text": "We’re releasing new Qwen3.8-Flash-Next GGUFs with 15% higher accuracy.\n\nUnsloth Dynamic V3.1 outperforms others by >15% on Terminal Bench, DeepSWE & more benchmarks (256K context).\n\nRun on 32GB+ RAM s",
      "via": "link"
     }
    ],
    "display": "Unsloth",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "unsloth v0.1.916-beta release notes",
+      "evidence_urls": [
+       "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta"
+      ],
+      "evidence_published_at": "2026-11-06",
+      "result": "長い会話での入力・検索の高速化、2 枚の NVIDIA GPU での画像・動画生成の高速化、チャットごとのブラウザと浮動ブラウザ、ダウンロード速度の上限設定の追加を確認。リリースは 11 月 6 日",
+      "retrieved_at": "2026-11-10T05:05:00+09:00"
+     }
+    ],
+    "selection_reason": "local-runtime 代表。Unsloth が公式リポジトリで v0.1.916-beta をリリース。チャット操作の高速化や 2 GPU での画像・動画生成の高速化を発表。"
+   },
+   "url_checks": {
+    "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta": {
+     "status": 200,
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Unsloth が v0.1.916-beta をリリースした。長い会話での入力や検索、チャットの削除が速くなったと説明されている。",
+     "同じ NVIDIA GPU が 2 枚あると、SDXL などの画像・動画生成が約 1.5〜1.8 倍速くなると発表された。",
+     "チャットごとに別のブラウザを使え、動かして大きさを変えられる浮動ブラウザも加わった。"
+    ],
+    "why_trending": "Unsloth の公式リリースで、性能改善と Qwen3.8-Flash 向けの更新が重なって話題になった。",
+    "what_changes": [
+     "長い履歴のチャットでも、入力や検索が重くなりにくい",
+     "2 枚の GPU で画像・動画生成の待ち時間を縮められる"
+    ],
+    "benefits": [
+     "オーナーはモデルのダウンロード速度に上限を設定できる",
+     "単一ファイルの画像モデルや、OpenAI 互換接続でのカスタムヘッダーが使える"
+    ],
+    "caveats": [
+     "速度の数字は開発元の発表で、環境により異なる",
+     "ベータ版のため、動作は自分の環境で確認が要る"
+    ],
+    "audience": "手元の GPU で LLM や画像生成を動かし、ファインチューニングする人"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Unsloth v0.1.916-beta は、長い会話と 2 GPU の画像・動画生成を速くした。",
+     "stat": {
+      "value": "1.5〜1.8倍",
+      "label": "2 GPU での画像生成の速度(発表)"
+     },
+     "steps": [
+      "GPU 2 枚を使う",
+      "画像・動画を生成",
+      "待ち時間を短縮"
+     ],
+     "changes": [
+      "長い会話での入力と検索が速くなる",
+      "チャットごとに別のブラウザを使える"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Unsloth"
+      },
+      {
+       "k": "版",
+       "v": "v0.1.916-beta"
+      },
+      {
+       "k": "公開日",
+       "v": "2026-11-06"
+      },
+      {
+       "k": "ライセンス",
+       "v": "無料・オープンソース"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "手元の GPU で LLM や画像生成を動かし、調整する人",
+     "benefits": [
+      "同じ GPU が 2 枚あれば、画像生成を速くできる",
+      "ダウンロード速度の上限を設定できる"
+     ],
+     "how_to": [
+      "Unsloth Desktop を公式のリリースから入手する",
+      "手元のモデルで動作を試す",
+      "2 GPU 構成なら速度を比べる"
+     ],
+     "caveats": [
+      "速度の数字は開発元の発表",
+      "ベータ版のため環境で確認が要る"
+     ],
+     "terms": [
+      {
+       "t": "GGUF",
+       "d": "手元の PC で動かしやすいモデルの配布形式"
+      },
+      {
+       "t": "LoRA",
+       "d": "モデル全体でなく一部だけを追加学習する軽い手法"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Unsloth v0.1.916-beta: Large Performance Fixes",
+      "publisher": "GitHub (Unsloth)",
+      "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
+      "date": "2026-11-06"
+     }
+    ]
    },
    "jp_reactions": []
   },
@@ -2021,7 +2142,7 @@
     "models",
     "tools"
    ],
-   "score": 42.5,
+   "score": 45.1,
    "vendor": null,
    "primary": {
     "url": "https://cohere.com/blog/embed-rerank-5-openrouter",
@@ -2149,7 +2270,7 @@
    ],
    "score_breakdown": {
     "github_new": 0.758,
-    "reddit_localllama": 0.86,
+    "reddit_localllama": 0.87,
     "devto": 0.227,
     "openrouter": 0.225,
     "official": 0.8
@@ -2203,7 +2324,7 @@
    "url_checks": {
     "https://cohere.com/blog/embed-rerank-5-openrouter": {
      "status": 200,
-     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
     }
    },
    "digest": {
@@ -2308,126 +2429,187 @@
   },
   {
    "rank": 9,
-   "keyword": "NVIDIA Blackwell",
-   "entity_id": "nvidia-blackwell",
-   "kind": "hardware",
-   "category": "hardware",
+   "keyword": "claude-fable-5.2",
+   "entity_id": "claude-fable-5-2",
+   "kind": "model",
+   "category": "model",
    "tags": [
-    "hardware"
+    "models"
    ],
-   "score": 39.5,
-   "vendor": "NVIDIA",
+   "score": 41.8,
+   "vendor": "Anthropic",
    "primary": {
-    "url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/feed/",
-    "published_at": "2026-11-06T22:20:20+00:00",
+    "url": "https://openrouter.ai/anthropic/claude-fable-5.2",
+    "published_at": "2026-11-09T19:49:41+00:00",
     "date_basis": "published",
-    "source_type": "announcement",
-    "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
-    "event_id": "585e4faf0d"
+    "source_type": "catalog",
+    "title": "anthropic/claude-fable-5.2",
+    "event_id": "1b90dc15d3"
    },
    "events": [
     {
+     "kind": "model",
+     "source": "openrouter",
+     "url": "https://openrouter.ai/anthropic/claude-fable-5.2",
+     "published_at": "2026-11-09T19:49:41+00:00",
+     "source_type": "catalog",
+     "title": "anthropic/claude-fable-5.2",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "1b90dc15d3"
+    },
+    {
+     "kind": "model",
+     "source": "openrouter",
+     "url": "https://openrouter.ai/anthropic/claude-fable-5.2:batch",
+     "published_at": "2026-11-09T19:49:41+00:00",
+     "source_type": "catalog",
+     "title": "anthropic/claude-fable-5.2:batch",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "fef4fc33ef"
+    },
+    {
      "kind": "announcement",
      "source": "official",
-     "url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/feed/",
-     "published_at": "2026-11-06T22:20:20+00:00",
+     "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/",
+     "published_at": "2026-11-09T20:04:37+00:00",
      "source_type": "announcement",
-     "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
-     "vendor": "NVIDIA",
+     "title": "Introducing Claude Fable 5.2 on AWS",
+     "vendor": "AWS",
      "date_basis": "published",
-     "feed": "nvidia-dev-blog",
-     "event_id": "585e4faf0d"
+     "feed": "aws-ml-blog",
+     "event_id": "89c16e7f15"
+    },
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/claude-fable-5-2-aws-govcloud/",
+     "published_at": "2026-11-09T18:30:00+00:00",
+     "source_type": "release_note",
+     "title": "Claude Fable 5.2 is now available on AWS GovCloud (US)",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "feed": "aws-whats-new",
+     "event_id": "c09853e8de"
     }
    ],
    "sources": [
     {
      "name": "hackernews",
-     "title": "RTX 5090 Street Prices Top $9k as Nvidia GPU Costs Climb",
-     "url": "https://aroundprague.cz/en/news/us/rtx-5090-street-prices-top-9-000-as-nvidia-gpu-costs-climb",
-     "metric": 78.0,
+     "title": "Claude Fable 5.2 and Mythos 5.2",
+     "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+     "metric": 580.0,
      "metric_name": "points"
     },
     {
-     "name": "reddit_localllama",
-     "title": "NVIDIA RTX PRO 5500 Blackwell appears at $17,999 MSRP, higher than RTX PRO 6000 at $16,000 MSRP set some months ago by N",
-     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xojryw/nvidia_rtx_pro_5500_blackwell_appears_at_17999/",
-     "metric": 0.0,
-     "metric_name": "rank"
+     "name": "openrouter",
+     "title": "anthropic/claude-fable-5.2",
+     "url": "https://openrouter.ai/anthropic/claude-fable-5.2",
+     "metric": 1.0,
+     "metric_name": "new_model"
+    },
+    {
+     "name": "openrouter",
+     "title": "anthropic/claude-fable-5.2:batch",
+     "url": "https://openrouter.ai/anthropic/claude-fable-5.2:batch",
+     "metric": 1.0,
+     "metric_name": "new_model"
+    },
+    {
+     "name": "bluesky",
+     "title": "Claude Fable 5.2",
+     "url": "https://bsky.app/profile/sungkim.bsky.social/post/3mzvnaedbe22o",
+     "metric": 22.0,
+     "metric_name": "likes+2*reposts"
     },
     {
      "name": "official",
-     "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
-     "url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/feed/",
+     "title": "Introducing Claude Fable 5.2 on AWS",
+     "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "official",
+     "title": "Claude Fable 5.2 is now available on AWS GovCloud (US)",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/claude-fable-5-2-aws-govcloud/",
      "metric": 1.0,
      "metric_name": "announcement"
     }
    ],
    "official_urls": [
-    "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/feed/",
-    "https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/"
+    "https://openrouter.ai/anthropic/claude-fable-5.2",
+    "https://openrouter.ai/anthropic/claude-fable-5.2:batch"
    ],
-   "official_verified": true,
-   "summary": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs ― When deploying diffusion models in design tools, image editors, and visual production workflows, developers mu。3ソースで言及(代表: 「RTX 5090 with 64GB and 96GB VRAM 'confirmed' by US GPU repai」)",
+   "official_verified": false,
+   "summary": "anthropic/claude-fable-5.2 ― Claude Fable 5.2 and Claude Mythos 5.2 are now available on Amazon Bedrock and Claude Platform on AWS. Learn w。4ソースで言及(代表: 「Claude Fable 5.2 and Mythos 5.2」)",
    "slides": [],
    "score_breakdown": {
-    "hackernews": 0.592,
-    "reddit_localllama": 1.133,
-    "official": 0.8
+    "hackernews": 0.862,
+    "openrouter": 0.225,
+    "bluesky": 0.187,
+    "official": 1.0,
+    "x_aux": 0.216
    },
    "velocity": {
-    "hn_this_week": 0,
+    "hn_this_week": 4,
     "hn_prev_week": 0,
-    "factor": 0.7
+    "factor": 1.0
    },
    "why": {
-    "first_seen": "2026-11-03",
-    "peak_day": "2026-11-03",
-    "co_mentioned": [],
+    "first_seen": "2026-11-09",
+    "peak_day": "2026-11-09",
+    "co_mentioned": [
+     "Mythos 5.2"
+    ],
     "evidence": [
      {
-      "source": "reddit_localllama",
-      "title": "RTX 5090 with 64GB and 96GB VRAM 'confirmed' by US GPU repair tech",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xmqq2a/rtx_5090_with_64gb_and_96gb_vram_confirmed_by_us/"
-     },
-     {
-      "source": "reddit_localllama",
-      "title": "NVIDIA RTX PRO 5500 Blackwell appears at $17,999 MSRP, higher than RTX PRO 6000 at $16,000 MSRP set some months ago by NVIDIA - VideoCardz",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xojryw/nvidia_rtx_pro_5500_blackwell_appears_at_17999/"
-     },
-     {
       "source": "hackernews",
-      "title": "RTX 5090 Street Prices Top $9k as Nvidia GPU Costs Climb",
-      "url": "https://aroundprague.cz/en/news/us/rtx-5090-street-prices-top-9-000-as-nvidia-gpu-costs-climb"
+      "title": "Claude Fable 5.2 and Mythos 5.2",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
      }
     ]
    },
    "related": [],
    "resolved_repo": null,
    "trend_label": "rising",
-   "x_posts": [],
-   "display": "NVIDIA Blackwell",
+   "x_posts": [
+    {
+     "url": "https://x.com/AnthropicAI/status/2119867707546071125",
+     "author": "AnthropicAI",
+     "likes": 8889,
+     "reposts": 565,
+     "views": 332325,
+     "text": "Claude Fable 5.2 and Claude Mythos 5.2 are available now:",
+     "via": "watchlist"
+    }
+   ],
+   "display": "Anthropic claude-fable-5.2",
    "verification": {
     "status": "unverified",
     "checks": []
    },
    "jp_reactions": [
     {
-     "site": "hatena",
-     "title": "NVIDIA、フアンCEOへの中国スパイ工作疑惑で独立調査 本人は不倫認め謝罪",
-     "url": "https://www.itmedia.co.jp/news/article/2611/09/2000002998/",
-     "date": "2026-11-08"
+     "site": "zenn",
+     "title": "Grok Botの代わりに、手元のClaude Code CLIをそのままチャットのバックエンドにしてみた",
+     "url": "https://zenn.dev/matsushima_a/articles/day-041-openmausbot-claude-cli",
+     "date": "2026-11-09"
     },
     {
-     "site": "hatena",
-     "title": "数百ページのPDF文書を一括解析できるローカルAI「Unlimited OCR 2」、NVIDIA開発の文字起こし音声AI「Nemotron 3.5 Trans",
-     "url": "https://www.techno-edge.net/article/2026/11/06/5679.html",
-     "date": "2026-11-07"
+     "site": "zenn",
+     "title": "Amazon Bedrockのバッチ推論をClaude Opus 5で試す",
+     "url": "https://zenn.dev/smori/articles/bedrock-batch-inference-handson",
+     "date": "2026-11-09"
     },
     {
-     "site": "hatena",
-     "title": "GitHub - NVIDIA/auto-ontology: Auto Ontology is a Python framework for building ",
-     "url": "https://github.com/NVIDIA/auto-ontology",
-     "date": "2026-11-03"
+     "site": "zenn",
+     "title": "Webデザイナーが Figma と Claude Code を MCP でつないで、デザインからアプリを作った話（2026年11月）",
+     "url": "https://zenn.dev/nekonote328/articles/claude-code-figma-mcp",
+     "date": "2026-11-09"
     }
    ]
   },
@@ -2441,7 +2623,7 @@
     "models",
     "local-llm"
    ],
-   "score": 39.4,
+   "score": 41.7,
    "vendor": "Liquid",
    "primary": {
     "url": "https://openrouter.ai/liquid/lfm-3-1.7b",
@@ -2482,14 +2664,14 @@
      "name": "hf_models",
      "title": "LiquidAI/LFM3-1.7B",
      "url": "https://huggingface.co/LiquidAI/LFM3-1.7B",
-     "metric": 152.5,
+     "metric": 151.5,
      "metric_name": "trendingScore"
     },
     {
      "name": "hf_models",
      "title": "LiquidAI/LFM3-Omni-2B",
      "url": "https://huggingface.co/LiquidAI/LFM3-Omni-2B",
-     "metric": 116.0,
+     "metric": 115.0,
      "metric_name": "trendingScore"
     },
     {
@@ -2551,9 +2733,9 @@
    "summary": "liquid/lfm-3-1.7b ― LFM3-1.7B is a tri-hybrid model for local agents and specialized applications.。6ソースで言及(代表: 「LiquidAI/LFM3-1.7B」)",
    "slides": [],
    "score_breakdown": {
-    "hf_models": 0.925,
-    "hf_spaces": 0.337,
-    "reddit_localllama": 0.463,
+    "hf_models": 0.923,
+    "hf_spaces": 0.336,
+    "reddit_localllama": 0.473,
     "reddit_ollama": 0.448,
     "ollama": 0.9,
     "openrouter": 0.225
@@ -2598,14 +2780,139 @@
   },
   {
    "rank": 11,
+   "keyword": "NVIDIA Blackwell",
+   "entity_id": "nvidia-blackwell",
+   "kind": "hardware",
+   "category": "hardware",
+   "tags": [
+    "hardware"
+   ],
+   "score": 41.3,
+   "vendor": "NVIDIA",
+   "primary": {
+    "url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/feed/",
+    "published_at": "2026-11-06T22:20:20+00:00",
+    "date_basis": "published",
+    "source_type": "announcement",
+    "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
+    "event_id": "585e4faf0d"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/feed/",
+     "published_at": "2026-11-06T22:20:20+00:00",
+     "source_type": "announcement",
+     "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
+     "vendor": "NVIDIA",
+     "date_basis": "published",
+     "feed": "nvidia-dev-blog",
+     "event_id": "585e4faf0d"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hackernews",
+     "title": "RTX 5090 Street Prices Top $9k as Nvidia GPU Costs Climb",
+     "url": "https://aroundprague.cz/en/news/us/rtx-5090-street-prices-top-9-000-as-nvidia-gpu-costs-climb",
+     "metric": 78.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "reddit_localllama",
+     "title": "NVIDIA RTX PRO 5500 Blackwell appears at $17,999 MSRP, higher than RTX PRO 6000 at $16,000 MSRP set some months ago by N",
+     "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xojryw/nvidia_rtx_pro_5500_blackwell_appears_at_17999/",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "official",
+     "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
+     "url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/feed/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/feed/",
+    "https://www.nvidia.com/en-us/data-center/technologies/blackwell-architecture/"
+   ],
+   "official_verified": true,
+   "summary": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs ― When deploying diffusion models in design tools, image editors, and visual production workflows, developers mu。3ソースで言及(代表: 「RTX 5090 with 64GB and 96GB VRAM 'confirmed' by US GPU repai」)",
+   "slides": [],
+   "score_breakdown": {
+    "hackernews": 0.592,
+    "reddit_localllama": 1.14,
+    "official": 0.8
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-11-03",
+    "peak_day": "2026-11-05",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "reddit_localllama",
+      "title": "RTX 5090 with 64GB and 96GB VRAM 'confirmed' by US GPU repair tech",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xmqq2a/rtx_5090_with_64gb_and_96gb_vram_confirmed_by_us/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "NVIDIA RTX PRO 5500 Blackwell appears at $17,999 MSRP, higher than RTX PRO 6000 at $16,000 MSRP set some months ago by NVIDIA - VideoCardz",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xojryw/nvidia_rtx_pro_5500_blackwell_appears_at_17999/"
+     },
+     {
+      "source": "hackernews",
+      "title": "RTX 5090 Street Prices Top $9k as Nvidia GPU Costs Climb",
+      "url": "https://aroundprague.cz/en/news/us/rtx-5090-street-prices-top-9-000-as-nvidia-gpu-costs-climb"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [],
+   "display": "NVIDIA Blackwell",
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": [
+    {
+     "site": "hatena",
+     "title": "NVIDIA、フアンCEOへの中国スパイ工作疑惑で独立調査 本人は不倫認め謝罪",
+     "url": "https://www.itmedia.co.jp/news/article/2611/09/2000002998/",
+     "date": "2026-11-08"
+    },
+    {
+     "site": "hatena",
+     "title": "数百ページのPDF文書を一括解析できるローカルAI「Unlimited OCR 2」、NVIDIA開発の文字起こし音声AI「Nemotron 3.5 Trans",
+     "url": "https://www.techno-edge.net/article/2026/11/06/5679.html",
+     "date": "2026-11-07"
+    },
+    {
+     "site": "hatena",
+     "title": "GitHub - NVIDIA/auto-ontology: Auto Ontology is a Python framework for building ",
+     "url": "https://github.com/NVIDIA/auto-ontology",
+     "date": "2026-11-03"
+    }
+   ]
+  },
+  {
+   "rank": 12,
    "keyword": "auto",
    "entity_id": "auto",
-   "kind": "model",
-   "category": "model",
+   "kind": "release",
+   "category": "dev-tool",
    "tags": [
     "models"
    ],
-   "score": 36.6,
+   "score": 38.7,
    "vendor": null,
    "primary": {
     "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
@@ -2714,14 +3021,48 @@
     }
    ],
    "official_urls": [
-    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
-    "https://openrouter.ai/openrouter/auto"
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/"
    ],
    "official_verified": true,
    "summary": "Amazon EKS Auto Mode and Karpenter now support Dynamic Resource Allocation ― Amazon Elastic Kubernetes Service (Amazon EKS) now supports Dynamic Resource Allocation (DRA) for NVIDIA GPUs 。5ソースで言及(代表: 「NVIDIA/auto-ontology」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "EKS が GPU の動的割り当てに対応",
+     "diagram_type": "infographic",
+     "icon": "cloud",
+     "stat": {
+      "value": "DRA",
+      "label": "GPU と EFA を宣言で割り当て"
+     },
+     "steps": [
+      "要求を宣言",
+      "最安を起動",
+      "Pod に割り当て"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "EKS Auto Mode と Karpenter が GPU・EFA の DRA に対応した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "機種や配置の条件を ResourceClaim で宣言し、GPU を共有できる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "Karpenter が条件に合う最安のインスタンスを自動で起動する"
+      },
+      {
+       "h": "注意",
+       "t": "Auto Mode は Kubernetes 1.36 以降で、GovCloud と中国は対象外"
+      }
+     ],
+     "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
+     "source_date": "2026-11-09"
+    }
+   ],
    "score_breakdown": {
-    "github_new": 0.817,
+    "github_new": 0.816,
     "github_trending": 0.948,
     "reddit_ollama": 0.308,
     "openrouter": 0.225,
@@ -2734,7 +3075,7 @@
    },
    "why": {
     "first_seen": "2026-11-05",
-    "peak_day": "2026-11-05",
+    "peak_day": "2026-11-08",
     "co_mentioned": [
      "OpenRouter"
     ],
@@ -2760,10 +3101,126 @@
    "resolved_repo": null,
    "trend_label": "rising",
    "x_posts": [],
-   "display": "auto",
+   "display": "Amazon EKS Auto Mode",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Amazon EKS Auto Mode and Karpenter now support Dynamic Resource Allocation",
+      "evidence_urls": [
+       "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/"
+      ],
+      "evidence_published_at": "2026-11-09",
+      "result": "NVIDIA GPU と EFA の DRA 対応、ResourceClaim による指定、Karpenter による最安インスタンスの自動起動、Auto Mode は Kubernetes 1.36 以降で利用可能、GovCloud と中国リージョンは対象外であることを確認",
+      "retrieved_at": "2026-11-10T05:05:00+09:00"
+     }
+    ],
+    "selection_reason": "dev-tool 代表。AWS が公式の What's New で、Amazon EKS Auto Mode と Karpenter の Dynamic Resource Allocation(GPU・EFA)対応を発表。"
+   },
+   "url_checks": {
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/": {
+     "status": 200,
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "AWS が、Amazon EKS Auto Mode と Karpenter で Kubernetes の Dynamic Resource Allocation(DRA)に対応したと発表した。",
+     "NVIDIA の GPU と EFA ネットワークデバイスについて、必要な属性を ResourceClaim で指定でき、GPU を複数の Pod で共有できる。",
+     "Karpenter が条件に合う最安のインスタンスを自動で起動する。Auto Mode には NVIDIA と EFA の DRA ドライバーが組み込まれている。"
+    ],
+    "why_trending": "AWS の公式発表で、AI の学習や推論に使う GPU の割り当てが話題になった。",
+    "what_changes": [
+     "GPU の機種や構成を、ResourceClaim で宣言して要求できる",
+     "分散学習や推論で、PCIe の配置がそろった GPU と EFA を指定できる"
+    ],
+    "benefits": [
+     "GPU を Pod 間で共有でき、需要に応じてインスタンスが自動で増減する",
+     "Auto Mode では DRA ドライバーが組み込み済みで、自分で入れなくてよい"
+    ],
+    "caveats": [
+     "Auto Mode での利用は Kubernetes 1.36 以降で、GovCloud と中国リージョンは対象外",
+     "移行中は、DRA とデバイスプラグインを同じ種類のデバイスで同じノードに混在できない"
+    ],
+    "audience": "EKS で GPU を使う AI の学習・推論基盤の運用者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "EKS Auto Mode と Karpenter が、GPU と EFA の動的割り当て(DRA)に対応した。",
+     "stat": {
+      "value": "DRA",
+      "label": "GPU と EFA を宣言で割り当て"
+     },
+     "steps": [
+      "要求を宣言",
+      "最安を起動",
+      "Pod に割り当て"
+     ],
+     "changes": [
+      "ResourceClaim で機種や配置を指定できる",
+      "GPU を複数の Pod で共有できる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "AWS"
+      },
+      {
+       "k": "対象",
+       "v": "NVIDIA GPU と EFA"
+      },
+      {
+       "k": "Auto Mode",
+       "v": "Kubernetes 1.36 以降"
+      },
+      {
+       "k": "対象外",
+       "v": "GovCloud と中国"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "EKS で GPU を使う AI の学習・推論基盤の運用者",
+     "benefits": [
+      "GPU の共有と、需要に応じた自動スケールを両立できる",
+      "Auto Mode は DRA ドライバーが組み込み済み"
+     ],
+     "how_to": [
+      "EKS ユーザーガイドの DRA の文書を読む",
+      "ResourceClaim を定義する",
+      "Pod の設定から要求する"
+     ],
+     "caveats": [
+      "DRA とデバイスプラグインは、同じ種類のデバイスで同じノードに混在できない"
+     ],
+     "terms": [
+      {
+       "t": "DRA",
+       "d": "GPU などの機器を属性で指定して割り当てる Kubernetes の仕組み"
+      },
+      {
+       "t": "EFA",
+       "d": "AWS の高速なネットワークデバイス"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Amazon EKS Auto Mode and Karpenter now support Dynamic Resource Allocation",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
+      "date": "2026-11-09"
+     }
+    ]
    },
    "jp_reactions": [
     {
@@ -2775,7 +3232,7 @@
    ]
   },
   {
-   "rank": 12,
+   "rank": 13,
    "keyword": "SGLang",
    "entity_id": "sglang",
    "kind": "release",
@@ -2784,7 +3241,7 @@
     "local-llm",
     "tools"
    ],
-   "score": 36.3,
+   "score": 38.4,
    "vendor": "SGLang",
    "primary": {
     "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.23",
@@ -2892,7 +3349,7 @@
    "jp_reactions": []
   },
   {
-   "rank": 13,
+   "rank": 14,
    "keyword": "Bench",
    "entity_id": "bench",
    "kind": "product",
@@ -2901,7 +3358,7 @@
     "agents",
     "tools"
    ],
-   "score": 35.2,
+   "score": 37.3,
    "vendor": null,
    "primary": {
     "url": "https://huggingface.co/blog/cwe-bench",
@@ -2979,9 +3436,9 @@
    "summary": "CWE-bench v2: More coverage, quality, and transparency ― Mathematical modeling turns an open-ended real-world problem into assumptions, a model, a solution, and a defe。4ソースで言及(代表: 「CWE-bench v2: More coverage, quality, and transparency」)",
    "slides": [],
    "score_breakdown": {
-    "hf_papers": 0.501,
+    "hf_papers": 0.499,
     "github_new": 0.0,
-    "reddit_localllama": 0.53,
+    "reddit_localllama": 0.54,
     "official": 0.8,
     "x_aux": 0.5
    },
@@ -3021,7 +3478,7 @@
      "author": "UnslothAI",
      "likes": 2188,
      "reposts": 216,
-     "views": 247445,
+     "views": 247488,
      "text": "We’re releasing new Qwen3.8-Flash-Next GGUFs with 15% higher accuracy.\n\nUnsloth Dynamic V3.1 outperforms others by >15% on Terminal Bench, DeepSWE & more benchmarks (256K context).\n\nRun on 32GB+ RAM s",
      "via": "link"
     },
@@ -3030,7 +3487,7 @@
      "author": "JSchaeff3r",
      "likes": 1032,
      "reposts": 90,
-     "views": 169069,
+     "views": 169099,
      "text": "Kimi K3.1 recalls instructions it was never given on Terminal Bench. They match the hidden tests. K3.1 while solving: \"Instructions likely distilled pitfalls from previous agents.\" 🤯\n\nWhen we edit a t",
      "via": "link"
     }
@@ -3043,7 +3500,493 @@
    "jp_reactions": []
   },
   {
-   "rank": 14,
+   "rank": 15,
+   "keyword": "Mythos 5.2",
+   "entity_id": "mythos-5-2",
+   "kind": "product",
+   "category": "dev-tool",
+   "tags": [
+    "agents",
+    "tools"
+   ],
+   "score": 36.0,
+   "vendor": null,
+   "primary": {
+    "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/bedrock-claude-mythos-5-2-govcloud/",
+    "published_at": "2026-11-09T18:30:00+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "Amazon Bedrock now offers Claude Mythos 5.2 to Eligible Customers in AWS GovCloud (US)",
+    "event_id": "8006719db9"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/bedrock-claude-mythos-5-2-govcloud/",
+     "published_at": "2026-11-09T18:30:00+00:00",
+     "source_type": "release_note",
+     "title": "Amazon Bedrock now offers Claude Mythos 5.2 to Eligible Customers in AWS GovCloud (US)",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "feed": "aws-whats-new",
+     "event_id": "8006719db9"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hackernews",
+     "title": "Claude Fable 5.2 and Mythos 5.2",
+     "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+     "metric": 580.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "bluesky",
+     "title": "Fable 5.2 and Mythos 5.2 live",
+     "url": "https://bsky.app/profile/peark.es/post/3mzvmerglg22n",
+     "metric": 43.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "official",
+     "title": "Introducing Claude Fable 5.2 on AWS",
+     "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "official",
+     "title": "Amazon Bedrock now offers Claude Mythos 5.2 to Eligible Customers in AWS GovCloud (US)",
+     "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/bedrock-claude-mythos-5-2-govcloud/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/bedrock-claude-mythos-5-2-govcloud/"
+   ],
+   "official_verified": true,
+   "summary": "Amazon Bedrock now offers Claude Mythos 5.2 to Eligible Customers in AWS GovCloud (US) ― Amazon Bedrock, the platform for building generative AI applications and agents at production scale, now offer。3ソースで言及(代表: 「Claude Fable 5.2 and Mythos 5.2」)",
+   "slides": [],
+   "score_breakdown": {
+    "hackernews": 0.862,
+    "bluesky": 0.226,
+    "official": 1.0,
+    "x_aux": 0.216
+   },
+   "velocity": {
+    "hn_this_week": 2,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-11-09",
+    "peak_day": "2026-11-09",
+    "co_mentioned": [
+     "claude-fable-5.2"
+    ],
+    "evidence": [
+     {
+      "source": "hackernews",
+      "title": "Claude Fable 5.2 and Mythos 5.2",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [
+    {
+     "url": "https://x.com/AnthropicAI/status/2119867707546071125",
+     "author": "AnthropicAI",
+     "likes": 8889,
+     "reposts": 565,
+     "views": 332325,
+     "text": "Claude Fable 5.2 and Claude Mythos 5.2 are available now:",
+     "via": "watchlist"
+    }
+   ],
+   "display": "Mythos 5.2",
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": []
+  },
+  {
+   "rank": 16,
+   "keyword": "nemotron3",
+   "entity_id": "nemotron3",
+   "kind": "model",
+   "category": "model",
+   "tags": [
+    "models",
+    "local-llm"
+   ],
+   "score": 32.7,
+   "vendor": "NVIDIA",
+   "primary": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+    "published_at": "2026-11-09T20:01:20+00:00",
+    "date_basis": "published",
+    "source_type": "announcement",
+    "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
+    "event_id": "35ccb3163a"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+     "published_at": "2026-11-09T20:01:20+00:00",
+     "source_type": "announcement",
+     "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
+     "vendor": "AWS",
+     "date_basis": "published",
+     "feed": "aws-ml-blog",
+     "event_id": "35ccb3163a"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_models",
+     "title": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+     "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+     "metric": 253.0,
+     "metric_name": "trendingScore"
+    },
+    {
+     "name": "ollama",
+     "title": "nemotron-3.5-bolt",
+     "url": "https://ollama.com/library/nemotron-3.5-bolt",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "ollama",
+     "title": "nemotron-3.5-super",
+     "url": "https://ollama.com/library/nemotron-3.5-super",
+     "metric": 0.0,
+     "metric_name": "rank"
+    },
+    {
+     "name": "official",
+     "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
+     "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/"
+   ],
+   "official_verified": true,
+   "summary": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart ― NVIDIA Nemotron 3.5 Super VL, a 120B-parameter multimodal vision-language model, is now available in Amazon Sa。3ソースで言及(代表: 「nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B」)",
+   "slides": [
+    {
+     "title": "Nemotron 3.5 Super VL が JumpStart に",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "100万",
+      "label": "文脈の最大トークン数"
+     },
+     "steps": [
+      "JumpStart で選ぶ",
+      "NVFP4 か BF16",
+      "画像・動画を入力"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "NVIDIA の視覚言語モデルが SageMaker JumpStart で使えるようになった"
+      },
+      {
+       "h": "何が変わる",
+       "t": "総 120B・実働 12B の MoE が、画像・動画・テキストを扱う"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "NVFP4 版は G7、BF16 版は追加学習向けで、用途で選べる"
+      },
+      {
+       "h": "注意",
+       "t": "性能値は AWS の測定で、版どうしの純粋な比較ではない"
+      }
+     ],
+     "official_url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+     "source_date": "2026-11-09"
+    }
+   ],
+   "score_breakdown": {
+    "hf_models": 0.822,
+    "ollama": 0.56,
+    "official": 0.8
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-10-07",
+    "peak_day": "2026-11-09",
+    "co_mentioned": [],
+    "evidence": []
+   },
+   "related": [
+    "nemotron-3.5-super"
+   ],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [],
+   "display": "NVIDIA Nemotron 3.5 Super VL",
+   "verification": {
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
+      "evidence_urls": [
+       "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/"
+      ],
+      "evidence_published_at": "2026-11-09",
+      "result": "120B 総パラメータ・12B アクティブの MoE、最大 100 万トークンの文脈、画像・動画・テキスト入力、NVFP4 と BF16 の 2 種、OpenMDW ライセンス、測定値(63〜141 トークン/秒)を確認",
+      "retrieved_at": "2026-11-10T05:05:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。AWS が公式ブログで、NVIDIA の視覚言語モデル Nemotron 3.5 Super VL の SageMaker JumpStart での提供開始を発表。"
+   },
+   "url_checks": {
+    "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/": {
+     "status": 200,
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "AWS が、NVIDIA の視覚言語モデル Nemotron 3.5 Super VL を Amazon SageMaker JumpStart で使えるようにしたと発表した。",
+     "画像・動画・テキストを入力にして文章を出力する。総パラメータ 120B のうち実際に使うのは 12B の MoE 構成で、文脈は最大 100 万トークン。",
+     "最適化された NVFP4 版と、カスタマイズ向けの BF16 版の 2 種類が提供される。ライセンスは OpenMDW 1.1。"
+    ],
+    "why_trending": "AWS の公式ブログで提供開始が発表され、Ollama の Nemotron 3.5 系列とも並んで話題になった。",
+    "what_changes": [
+     "SageMaker Studio や Python SDK から、数ステップで画像・動画対応のモデルを配備できる",
+     "文書の読み取りや画面操作、動画の質問応答などを 1 つのモデルで扱える"
+    ],
+    "benefits": [
+     "NVFP4 版は G7 インスタンスで動き、小さめの GPU 構成から始められる",
+     "BF16 版の重みで、追加学習や独自の量子化もできる"
+    ],
+    "caveats": [
+     "63〜141 トークン/秒などの性能値は AWS の測定で、構成が違うため版どうしの比較ではない",
+     "JumpStart の配備では 1 リクエストに画像 1 枚と動画 1 本まで。ml.g7 の割当は新規アカウントでは 0 から"
+    ],
+    "audience": "文書処理や画面操作エージェントを作る、AWS 利用の開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "NVIDIA の視覚言語モデル Nemotron 3.5 Super VL が SageMaker JumpStart で使える。",
+     "stat": {
+      "value": "100万",
+      "label": "文脈の最大トークン数"
+     },
+     "steps": [
+      "JumpStart で選ぶ",
+      "NVFP4 か BF16",
+      "画像・動画を入力"
+     ],
+     "changes": [
+      "画像・動画・テキストを入力に文章を出力する",
+      "NVFP4 版と BF16 版から選べる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "NVIDIA / AWS"
+      },
+      {
+       "k": "規模",
+       "v": "120B(実働 12B)"
+      },
+      {
+       "k": "入力",
+       "v": "画像・動画・テキスト"
+      },
+      {
+       "k": "ライセンス",
+       "v": "OpenMDW 1.1"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "文書処理や画面操作エージェントを作る、AWS 利用の開発者",
+     "benefits": [
+      "NVFP4 版は G7 インスタンスで動かせる",
+      "BF16 版で追加学習や独自の量子化ができる"
+     ],
+     "how_to": [
+      "SageMaker Studio の JumpStart で検索する",
+      "ml.g7 の割当の引き上げを申請する",
+      "SDK から配備して試す"
+     ],
+     "caveats": [
+      "性能値は AWS の測定で、版どうしの純粋な比較ではない",
+      "1 リクエストに画像 1 枚と動画 1 本まで"
+     ],
+     "terms": [
+      {
+       "t": "MoE",
+       "d": "入力ごとに一部の専門家だけを使う構成"
+      },
+      {
+       "t": "NVFP4",
+       "d": "4 ビットで重みを表す NVIDIA の量子化形式"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+      "date": "2026-11-09"
+     }
+    ]
+   },
+   "jp_reactions": [
+    {
+     "site": "hatena",
+     "title": "数百ページのPDF文書を一括解析できるローカルAI「Unlimited OCR 2」、NVIDIA開発の文字起こし音声AI「Nemotron 3.5 Trans",
+     "url": "https://www.techno-edge.net/article/2026/11/06/5679.html",
+     "date": "2026-11-07"
+    }
+   ]
+  },
+  {
+   "rank": 17,
+   "keyword": "Transcription",
+   "entity_id": "transcription",
+   "kind": "paper",
+   "category": "research",
+   "tags": [
+    "research",
+    "tools"
+   ],
+   "score": 32.2,
+   "vendor": null,
+   "primary": {
+    "url": "https://huggingface.co/papers/2611.06043",
+    "published_at": "2026-11-04T06:46:50+00:00",
+    "date_basis": "published",
+    "source_type": "paper",
+    "title": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
+    "event_id": "bf4f26db0e"
+   },
+   "events": [
+    {
+     "kind": "paper",
+     "source": "hf_papers",
+     "url": "https://huggingface.co/papers/2611.06043",
+     "published_at": "2026-11-04T06:46:50+00:00",
+     "source_type": "paper",
+     "title": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "bf4f26db0e"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hf_papers",
+     "title": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
+     "url": "https://huggingface.co/papers/2611.06043",
+     "metric": 18.0,
+     "metric_name": "upvotes"
+    }
+   ],
+   "official_urls": [],
+   "official_verified": false,
+   "summary": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription ― Streaming speech recognition is increasingly consumed by machines, such as translators and voice agents, that 。5ソースで言及(代表: 「What can I realistically do with local AI on a Mac mini M5 P」)",
+   "slides": [],
+   "score_breakdown": {
+    "hf_papers": 0.573,
+    "github_new": 0.451,
+    "reddit_ollama": 0.672,
+    "devto": 0.0,
+    "ollama": 0.04,
+    "x_aux": 0.273
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 1,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-11-03",
+    "peak_day": "2026-11-06",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "reddit_ollama",
+      "title": "What can I realistically do with local AI on a Mac mini M5 Pro (48GB)?",
+      "url": "https://www.reddit.com/r/ollama/comments/1xr3fqq/what_can_i_realistically_do_with_local_ai_on_a/"
+     },
+     {
+      "source": "hf_papers",
+      "title": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
+      "url": "https://huggingface.co/papers/2611.06043"
+     },
+     {
+      "source": "github_new",
+      "title": "tancheng33/tingo",
+      "url": "https://github.com/tancheng33/tingo"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [
+    {
+     "url": "https://x.com/MistralAI/status/2119651192737259701",
+     "author": "MistralAI",
+     "likes": 314,
+     "reposts": 27,
+     "views": 20635,
+     "text": "What does real-time transcription look like in a live setting?\n\n🎙We used Voxtral 3 Transcribe at AI Engineer Paris to capture every main-stage talk in real time. We boosted accuracy with context biasi",
+     "via": "watchlist"
+    },
+    {
+     "url": "https://x.com/MistralAI/status/2119822323838832777",
+     "author": "MistralAI",
+     "likes": 191,
+     "reposts": 18,
+     "views": 10533,
+     "text": "What does real-time transcription look like in a live setting?\n\nWe used Voxtral Transcribe 3 at AI Engineer Paris to capture every main-stage talk in real time. \n\nWe boosted accuracy with context bias",
+     "via": "watchlist"
+    }
+   ],
+   "display": "Transcription",
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": []
+  },
+  {
+   "rank": 18,
    "keyword": "gemini-omni-1.2-flash",
    "entity_id": "gemini-omni-1-2-flash",
    "kind": "model",
@@ -3051,7 +3994,7 @@
    "tags": [
     "models"
    ],
-   "score": 31.6,
+   "score": 30.8,
    "vendor": "Google",
    "primary": {
     "url": "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/",
@@ -3174,8 +4117,7 @@
    "score_breakdown": {
     "hackernews": 0.801,
     "openrouter": 0.18,
-    "official": 1.0,
-    "x_aux": 0.195
+    "official": 1.0
    },
    "velocity": {
     "hn_this_week": 2,
@@ -3197,17 +4139,7 @@
    "related": [],
    "resolved_repo": null,
    "trend_label": "rising",
-   "x_posts": [
-    {
-     "url": "https://x.com/GoogleAI/status/2118389961426874879",
-     "author": "GoogleAI",
-     "likes": 2554,
-     "reposts": 245,
-     "views": 326040,
-     "text": "Meet Gemini Omni 1.2 Flash ⚡️\n\nWe’ve made the model more cost-effective, bumped the video generation and editing limit up to 15 seconds, and made updates to how scenes hold together over time. We've a",
-     "via": "watchlist"
-    }
-   ],
+   "x_posts": [],
    "display": "Gemini Omni 1.2 Flash",
    "verification": {
     "status": "verified",
@@ -3240,11 +4172,11 @@
    "url_checks": {
     "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
      "status": 200,
-     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
     },
     "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/": {
      "status": 200,
-     "checked_at": "2026-11-08T20:42:17.434870+00:00"
+     "checked_at": "2026-11-09T20:19:19.648423+00:00"
     }
    },
    "digest": {
@@ -3369,375 +4301,7 @@
    ]
   },
   {
-   "rank": 15,
-   "keyword": "nemotron3",
-   "entity_id": "nemotron3",
-   "kind": "model",
-   "category": "model",
-   "tags": [
-    "models",
-    "local-llm"
-   ],
-   "score": 30.9,
-   "vendor": "NVIDIA",
-   "primary": {
-    "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
-    "published_at": "2026-11-09T20:01:20+00:00",
-    "date_basis": "published",
-    "source_type": "announcement",
-    "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
-    "event_id": "35ccb3163a"
-   },
-   "events": [
-    {
-     "kind": "announcement",
-     "source": "official",
-     "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
-     "published_at": "2026-11-09T20:01:20+00:00",
-     "source_type": "announcement",
-     "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
-     "vendor": "AWS",
-     "date_basis": "published",
-     "feed": "aws-ml-blog",
-     "event_id": "35ccb3163a"
-    }
-   ],
-   "sources": [
-    {
-     "name": "hf_models",
-     "title": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-     "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
-     "metric": 252.5,
-     "metric_name": "trendingScore"
-    },
-    {
-     "name": "ollama",
-     "title": "nemotron-3.5-bolt",
-     "url": "https://ollama.com/library/nemotron-3.5-bolt",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "ollama",
-     "title": "nemotron-3.5-super",
-     "url": "https://ollama.com/library/nemotron-3.5-super",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "official",
-     "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart",
-     "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
-     "metric": 1.0,
-     "metric_name": "announcement"
-    }
-   ],
-   "official_urls": [
-    "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
-    "https://ollama.com/library/nemotron3"
-   ],
-   "official_verified": true,
-   "summary": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart ― NVIDIA Nemotron 3.5 Super VL, a 120B-parameter multimodal vision-language model, is now available in Amazon Sa。3ソースで言及(代表: 「nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B」)",
-   "slides": [],
-   "score_breakdown": {
-    "hf_models": 0.822,
-    "ollama": 0.56,
-    "official": 0.8
-   },
-   "velocity": {
-    "hn_this_week": 0,
-    "hn_prev_week": 0,
-    "factor": 0.7
-   },
-   "why": {
-    "first_seen": "2026-10-07",
-    "peak_day": "2026-10-07",
-    "co_mentioned": [],
-    "evidence": []
-   },
-   "related": [
-    "nemotron-3.5-super"
-   ],
-   "resolved_repo": null,
-   "trend_label": "rising",
-   "x_posts": [],
-   "display": "NVIDIA nemotron3",
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": [
-    {
-     "site": "hatena",
-     "title": "数百ページのPDF文書を一括解析できるローカルAI「Unlimited OCR 2」、NVIDIA開発の文字起こし音声AI「Nemotron 3.5 Trans",
-     "url": "https://www.techno-edge.net/article/2026/11/06/5679.html",
-     "date": "2026-11-07"
-    }
-   ]
-  },
-  {
-   "rank": 16,
-   "keyword": "Transcription",
-   "entity_id": "transcription",
-   "kind": "paper",
-   "category": "research",
-   "tags": [
-    "research",
-    "tools"
-   ],
-   "score": 29.8,
-   "vendor": null,
-   "primary": {
-    "url": "https://huggingface.co/papers/2611.06043",
-    "published_at": "2026-11-04T06:46:50+00:00",
-    "date_basis": "published",
-    "source_type": "paper",
-    "title": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
-    "event_id": "bf4f26db0e"
-   },
-   "events": [
-    {
-     "kind": "paper",
-     "source": "hf_papers",
-     "url": "https://huggingface.co/papers/2611.06043",
-     "published_at": "2026-11-04T06:46:50+00:00",
-     "source_type": "paper",
-     "title": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
-     "vendor": null,
-     "date_basis": "published",
-     "feed": null,
-     "event_id": "bf4f26db0e"
-    }
-   ],
-   "sources": [
-    {
-     "name": "hf_papers",
-     "title": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
-     "url": "https://huggingface.co/papers/2611.06043",
-     "metric": 12.0,
-     "metric_name": "upvotes"
-    }
-   ],
-   "official_urls": [],
-   "official_verified": false,
-   "summary": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription ― Streaming speech recognition is increasingly consumed by machines, such as translators and voice agents, that 。5ソースで言及(代表: 「What can I realistically do with local AI on a Mac mini M5 P」)",
-   "slides": [],
-   "score_breakdown": {
-    "hf_papers": 0.501,
-    "github_new": 0.452,
-    "reddit_ollama": 0.672,
-    "devto": 0.0,
-    "ollama": 0.04,
-    "x_aux": 0.271
-   },
-   "velocity": {
-    "hn_this_week": 0,
-    "hn_prev_week": 1,
-    "factor": 0.7
-   },
-   "why": {
-    "first_seen": "2026-11-03",
-    "peak_day": "2026-11-06",
-    "co_mentioned": [],
-    "evidence": [
-     {
-      "source": "reddit_ollama",
-      "title": "What can I realistically do with local AI on a Mac mini M5 Pro (48GB)?",
-      "url": "https://www.reddit.com/r/ollama/comments/1xr3fqq/what_can_i_realistically_do_with_local_ai_on_a/"
-     },
-     {
-      "source": "hf_papers",
-      "title": "Confucius4-R2T2: A Stable-Prefix Streaming ASR Model for Real Real-Time Transcription",
-      "url": "https://huggingface.co/papers/2611.06043"
-     },
-     {
-      "source": "github_new",
-      "title": "tancheng33/tingo",
-      "url": "https://github.com/tancheng33/tingo"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": null,
-   "trend_label": "rising",
-   "x_posts": [
-    {
-     "url": "https://x.com/MistralAI/status/2119651192737259701",
-     "author": "MistralAI",
-     "likes": 311,
-     "reposts": 27,
-     "views": 20408,
-     "text": "What does real-time transcription look like in a live setting?\n\n🎙We used Voxtral 3 Transcribe at AI Engineer Paris to capture every main-stage talk in real time. We boosted accuracy with context biasi",
-     "via": "watchlist"
-    },
-    {
-     "url": "https://x.com/MistralAI/status/2119822323838832777",
-     "author": "MistralAI",
-     "likes": 181,
-     "reposts": 16,
-     "views": 10069,
-     "text": "What does real-time transcription look like in a live setting?\n\nWe used Voxtral Transcribe 3 at AI Engineer Paris to capture every main-stage talk in real time. \n\nWe boosted accuracy with context bias",
-     "via": "watchlist"
-    }
-   ],
-   "display": "Transcription",
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": []
-  },
-  {
-   "rank": 17,
-   "keyword": "Strata",
-   "entity_id": "strata",
-   "kind": "release",
-   "category": "local-runtime",
-   "tags": [
-    "local-llm",
-    "tools"
-   ],
-   "score": 29.1,
-   "vendor": null,
-   "primary": {
-    "url": "https://github.com/Niko1221/Strata/releases/tag/v0.2.13",
-    "published_at": "2026-11-09T17:48:26+00:00",
-    "date_basis": "published",
-    "source_type": "release_note",
-    "title": "Niko1221/Strata Strata 0.2.13",
-    "event_id": "66361763d7"
-   },
-   "events": [
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.2.13",
-     "published_at": "2026-11-09T17:48:26+00:00",
-     "source_type": "release_note",
-     "title": "Niko1221/Strata Strata 0.2.13",
-     "vendor": null,
-     "date_basis": "published",
-     "event_id": "66361763d7"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.2.13.1",
-     "published_at": "2026-11-09T17:45:46+00:00",
-     "source_type": "release_note",
-     "title": "Niko1221/Strata v0.2.13.1",
-     "vendor": null,
-     "date_basis": "published",
-     "event_id": "5f0d713d29"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.2.12",
-     "published_at": "2026-11-07T08:54:40+00:00",
-     "source_type": "release_note",
-     "title": "Niko1221/Strata Strata 0.2.12",
-     "vendor": null,
-     "date_basis": "published",
-     "event_id": "cff2a4ddf8"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.2.11",
-     "published_at": "2026-11-05T12:49:59+00:00",
-     "source_type": "release_note",
-     "title": "Niko1221/Strata Strata 0.2.11",
-     "vendor": null,
-     "date_basis": "published",
-     "event_id": "02044f1197"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/Niko1221/Strata/releases/tag/v0.2.10",
-     "published_at": "2026-11-02T23:52:47+00:00",
-     "source_type": "release_note",
-     "title": "Niko1221/Strata Strata 0.2.10",
-     "vendor": null,
-     "date_basis": "published",
-     "event_id": "2749e065ee"
-    }
-   ],
-   "sources": [
-    {
-     "name": "github_new",
-     "title": "givfei5-hash/hw-dashboard",
-     "url": "https://github.com/givfei5-hash/hw-dashboard",
-     "metric": 2.0,
-     "metric_name": "stars"
-    }
-   ],
-   "official_urls": [
-    "https://github.com/Niko1221/Strata/releases/tag/v0.2.13",
-    "https://github.com/Niko1221/Strata"
-   ],
-   "official_verified": true,
-   "summary": "Niko1221/Strata Strata 0.2.13 ― Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, O。2ソースで言及(代表: 「What do people with normal hardware : 32GB ram 16GB VRAM run」)",
-   "slides": [],
-   "score_breakdown": {
-    "github_new": 0.164,
-    "reddit_localllama": 1.015
-   },
-   "velocity": {
-    "hn_this_week": 0,
-    "hn_prev_week": 0,
-    "factor": 0.7
-   },
-   "why": {
-    "first_seen": "2026-11-03",
-    "peak_day": "2026-11-04",
-    "co_mentioned": [
-     "llama.cpp"
-    ],
-    "evidence": [
-     {
-      "source": "reddit_localllama",
-      "title": "What do people with normal hardware : 32GB ram 16GB VRAM run?",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xn2jyz/what_do_people_with_normal_hardware_32gb_ram_16gb/"
-     },
-     {
-      "source": "reddit_localllama",
-      "title": "llama_moe_cache: run missed experts on CPU, add tuning script by am17an · Pull Request #30966 · ggml-org/llama.cpp",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xqacka/llama_moe_cache_run_missed_experts_on_cpu_add/"
-     },
-     {
-      "source": "reddit_localllama",
-      "title": "Strata is the shit",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xmt6kb/strata_is_the_shit/"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": {
-    "url": "https://github.com/Niko1221/Strata",
-    "created_at": "2026-09-24T16:40:20Z",
-    "stars": 42449,
-    "description": "Qwen3.8-Flash-Next on any consumer hardware: one-click install for Windows / Linux. Strata inference engine, OpenAI/Anthropic API on localhost, optional image input."
-   },
-   "trend_label": "rising",
-   "x_posts": [],
-   "display": "Strata",
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": [
-    {
-     "site": "hatena",
-     "title": "ローカルAI最強エンジン「Strata」初心者向けガイド【チャットAIで動画やマンガを自動生成】 | ちもろぐ",
-     "url": "https://chimolog.co/strata-guide/",
-     "date": "2026-11-04"
-    }
-   ]
-  },
-  {
-   "rank": 18,
+   "rank": 19,
    "keyword": "t3code",
    "entity_id": "t3code",
    "kind": "repo",
@@ -3745,7 +4309,7 @@
    "tags": [
     "tools"
    ],
-   "score": 10.6,
+   "score": 11.2,
    "vendor": null,
    "primary": {
     "url": "https://github.com/pingdotgg/t3code",
@@ -3809,7 +4373,7 @@
    "jp_reactions": []
   },
   {
-   "rank": 19,
+   "rank": 20,
    "keyword": "Scrapling",
    "entity_id": "scrapling",
    "kind": "repo",
@@ -3817,7 +4381,7 @@
    "tags": [
     "tools"
    ],
-   "score": 10.0,
+   "score": 10.6,
    "vendor": null,
    "primary": {
     "url": "https://github.com/D4Vinci/Scrapling",
@@ -3881,7 +4445,7 @@
    "jp_reactions": []
   },
   {
-   "rank": 20,
+   "rank": 21,
    "keyword": "CPU-ARC",
    "entity_id": "cpu-arc",
    "kind": "paper",
@@ -3889,7 +4453,7 @@
    "tags": [
     "research"
    ],
-   "score": 5.7,
+   "score": 6.0,
    "vendor": null,
    "primary": {
     "url": "https://huggingface.co/papers/2611.09891",
@@ -3936,7 +4500,7 @@
    "summary": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse ― Large language models reinvent the wheel all the time. They conflate task-solving with the execution of the so。2ソースで言及(代表: 「CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reus」)",
    "slides": [],
    "score_breakdown": {
-    "hf_papers": 0.35,
+    "hf_papers": 0.349,
     "arxiv": 0.09
    },
    "velocity": {
@@ -3986,11 +4550,11 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "vLLM",
+   "keyword": "Hugging",
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "Hugging",
+   "keyword": "vLLM",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4014,11 +4578,11 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "Silicon",
+   "keyword": "Qwen 4",
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "Qwen 4",
+   "keyword": "Silicon",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4066,7 +4630,7 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "QwenLM",
+   "keyword": "Ultra",
    "reason": "no primary source dated inside the window"
   }
  ],
@@ -4077,7 +4641,6 @@
   "EC2 Capacity",
   "GovCloud",
   "SageMaker",
-  "Images 2.6",
   "S3 Tables",
   "CodeConnections",
   "CodeQL",
@@ -4086,8 +4649,8 @@
   "DevRev",
   "DocumentDB",
   "DynamoDB",
-  "Haiku 5.5",
   "Holoscan 5",
+  "Images 2.6",
   "MediaConvert",
   "NeMo",
   "OpenSearch",
@@ -4125,23 +4688,13 @@
  ],
  "leads_unverified": [
   {
-   "author": "OpenAI",
-   "url": "https://x.com/OpenAI/status/2118390190246879554",
-   "text": "Introducing GPT‑6 Cyber: a major advance in security research that pairs stronger capabilities with better model alignment.\n\nThe model powered the Linux kernel ",
-   "links": [
-    "https://openai.com/index/introducing-gpt-6-cyber/"
-   ],
-   "likes": 21402,
-   "status": "unverified: needs official site / release note / GitHub Release corroboration"
-  },
-  {
    "author": "AnthropicAI",
    "url": "https://x.com/AnthropicAI/status/2118814753154064501",
    "text": "Memory is what allows Claude to learn from experience. In a new Engineering Blog post, we share how “dreaming” helps Claude organize what it’s learned, correct ",
    "links": [
     "https://www.anthropic.com/research/components-of-agent-memory"
    ],
-   "likes": 14083,
+   "likes": 14089,
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   },
   {
@@ -4166,16 +4719,6 @@
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   },
   {
-   "author": "OpenAI",
-   "url": "https://x.com/OpenAI/status/2118782708767965238",
-   "text": "A new way to measure how AI agents handle the routine analyses of wet-lab science—BioBasicsBench.\n\nDeveloped with Ligo, a biotech company focused on enzyme desi",
-   "links": [
-    "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/"
-   ],
-   "likes": 3737,
-   "status": "unverified: needs official site / release note / GitHub Release corroboration"
-  },
-  {
    "author": "AnthropicAI",
    "url": "https://x.com/AnthropicAI/status/2118792930211107115",
    "text": "New on our Science Blog: How AI is beginning to change scientific modeling.\n\nScientific models help researchers explain and predict real-world systems—like how ",
@@ -4192,151 +4735,171 @@
    "links": [
     "https://blogs.nvidia.com/ai-day-seoul-2026/"
    ],
-   "likes": 472,
+   "likes": 478,
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   }
  ],
  "official_highlights": [
   {
+   "vendor": "AWS",
+   "title": "Single-shot and agentic retrieval with Amazon Bedrock Managed Knowledge Base",
+   "url": "https://aws.amazon.com/blogs/machine-learning/single-shot-and-agentic-retrieval-with-amazon-bedrock-managed-knowledge-base/",
+   "date": "2026-11-10",
+   "feed": "aws-ml-blog",
+   "excerpt": "Amazon Bedrock Managed Knowledge Base now supports single-shot RAG and retrieval-only requests through AgenticRetrieveStream, alongside agentic retrieval. This post explains how the maxAgentIteration parameter matches retrieval effort to each request, using an illustrative internal banking policy as"
+  },
+  {
+   "vendor": "Microsoft",
+   "title": "When one pass isn’t enough: agentic mode in Azure Content Understanding",
+   "url": "https://devblogs.microsoft.com/foundry/when-one-pass-isnt-enough-agentic-mode-in-azure-content-understanding/",
+   "date": "2026-11-10",
+   "feed": "microsoft-foundry-blog",
+   "excerpt": "Most document analysis takes one efficient pass. Learn how agentic mode gives AI a document-native harness for the hardest tasks, and when to choose it over standard mode. “Some books are to be tasted, others to be swallowed, and some few to be chewed and digested.” Francis Bacon, “Of Studies”, 1625"
+  },
+  {
    "vendor": "NVIDIA",
    "title": "Make a Robot Arm Feel Weightless with NVIDIA Holoscan 5",
    "url": "https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/feed/",
    "date": "2026-11-10",
-   "feed": "nvidia-dev-blog"
+   "feed": "nvidia-dev-blog",
+   "excerpt": "Picture guiding a robot arm by hand while its motors supply just enough torque to support its weight and keep the robot upright. This simple interaction, a..."
   },
   {
    "vendor": "AWS",
    "title": "Pluggable Agentic AI Framework: A seven-layer composable enterprise agentic AI reference architecture on Amazon Bedrock AgentCore",
    "url": "https://aws.amazon.com/blogs/machine-learning/pluggable-agentic-ai-framework-a-seven-layer-composable-enterprise-agentic-ai-reference-architecture-on-amazon-bedrock-agentcore/",
    "date": "2026-11-10",
-   "feed": "aws-ml-blog"
+   "feed": "aws-ml-blog",
+   "excerpt": "A seven-layer composable reference architecture for taking enterprise agentic AI from prototype to production on Amazon Bedrock AgentCore. Each layer has a stable contract, so you can swap technologies at any layer without redesigning the rest of the stack."
   },
   {
    "vendor": "OpenAI",
    "title": "ChatGPT Enterprise now available in AWS Marketplace",
    "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
    "date": "2026-11-10",
-   "feed": "openai-news"
+   "feed": "openai-news",
+   "excerpt": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships."
   },
   {
    "vendor": "AWS",
    "title": "How CrossnoKaye grounds physical AI with Amazon Bedrock AgentCore",
    "url": "https://aws.amazon.com/blogs/machine-learning/how-crossnokaye-grounds-physical-ai-with-amazon-bedrock-agentcore/",
    "date": "2026-11-10",
-   "feed": "aws-ml-blog"
-  },
-  {
-   "vendor": "AWS",
-   "title": "Professional work deserves professional tools. Meet AWS Quick.",
-   "url": "https://aws.amazon.com/blogs/machine-learning/professional-work-deserves-professional-tools-meet-aws-quick/",
-   "date": "2026-11-10",
-   "feed": "aws-ml-blog"
+   "feed": "aws-ml-blog",
+   "excerpt": "CrossnoKaye brought physical AI to heavy industry with Amazon Bedrock AgentCore. Its ATLAS platform and AURA agentic system ground AI reasoning in live plant data and run verifiable Python in isolated AgentCore sandboxes, giving plant engineers checkable, math-backed answers instead of model guesses"
   },
   {
    "vendor": "HuggingFace",
    "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
    "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
    "date": "2026-11-10",
-   "feed": "huggingface-blog"
+   "feed": "huggingface-blog",
+   "excerpt": ""
   },
   {
    "vendor": "HuggingFace",
    "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
    "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
    "date": "2026-11-09",
-   "feed": "huggingface-blog"
+   "feed": "huggingface-blog",
+   "excerpt": ""
   },
   {
    "vendor": "Meta",
    "title": "Expanding Teen Account Protections to Teens Around the World",
    "url": "https://about.fb.com/news/2026/11/expanding-teen-account-protections-to-teens-around-the-world/",
    "date": "2026-11-09",
-   "feed": "meta-newsroom"
+   "feed": "meta-newsroom",
+   "excerpt": "We’re expanding our AI age-estimation technology globally to place millions more teens in Teen Account protections on Instagram. The post Expanding Teen Account Protections to Teens Around the World appeared first on Meta Newsroom ."
   },
   {
    "vendor": "NVIDIA",
    "title": "NVIDIA Announces New Planned Investments in Korean Startups at the MSIT-NVIDIA AI Startup Partnership Forum",
    "url": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/",
    "date": "2026-11-09",
-   "feed": "nvidia-blog"
+   "feed": "nvidia-blog",
+   "excerpt": "Korea’s Ministry of Science and ICT and NVIDIA hosted the MSIT-NVIDIA AI Startup Partnership Forum at COEX. Ryu Je-myung, vice minister of science and ICT, joined NVIDIA leaders to meet with over 20 Korean startups across foundation models, physical AI, AI infrastructure and AI semiconductors. NVIDI"
   },
   {
    "vendor": "OpenAI",
    "title": "Kuken Industries searches 70 years of drawings in minutes",
    "url": "https://openai.com/index/kuken",
    "date": "2026-11-09",
-   "feed": "openai-news"
+   "feed": "openai-news",
+   "excerpt": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour."
   },
   {
    "vendor": "NVIDIA",
    "title": "Korea Advances Physical AI Across Industries With NVIDIA",
    "url": "https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/",
    "date": "2026-11-09",
-   "feed": "nvidia-blog"
+   "feed": "nvidia-blog",
+   "excerpt": "Tapping into the country’s strengths in manufacturing and engineering, NVIDIA is helping advance Korea’s physical AI ecosystem. The country’s industry leaders are applying accelerated computing, AI and simulation to everything from semiconductor manufacturing to robotics and autonomous vehicles. The"
   },
   {
    "vendor": "Microsoft",
    "title": "Copilot code review: API management and review overview updates",
    "url": "https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates",
    "date": "2026-11-07",
-   "feed": "github-changelog"
+   "feed": "github-changelog",
+   "excerpt": "You can now manage GitHub Copilot code review settings through the REST and GraphQL APIs, from enterprise policy down to individual repositories. Copilot&#8217;s review overview comment is now more compact,&#8230; The post Copilot code review: API management and review overview updates appeared firs"
   },
   {
    "vendor": "Microsoft",
    "title": "Copilot impact dashboard adds chat and VS Code agent usage",
    "url": "https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage",
    "date": "2026-11-07",
-   "feed": "github-changelog"
-  },
-  {
-   "vendor": "Microsoft",
-   "title": "GitHub Copilot weekly releases — November 2",
-   "url": "https://github.blog/changelog/2026-11-06-github-copilot-weekly-releases-november-2",
-   "date": "2026-11-07",
-   "feed": "github-changelog"
+   "feed": "github-changelog",
+   "excerpt": "The Agent adoption chart in the Copilot impact dashboard now includes Copilot Chat and the VS Code Agents window, so you can see engagement across nine Copilot experiences. The adoption&#8230; The post Copilot impact dashboard adds chat and VS Code agent usage appeared first on The GitHub Blog ."
   },
   {
    "vendor": "HuggingFace",
    "title": "ToyBlocks: A controlled world for robot learning and evaluation",
    "url": "https://huggingface.co/blog/allenai/toyblocks",
    "date": "2026-11-06",
-   "feed": "huggingface-blog"
+   "feed": "huggingface-blog",
+   "excerpt": ""
   },
   {
    "vendor": "OpenAI",
    "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
    "url": "https://openai.com/index/partnering-with-hacktron",
    "date": "2026-11-06",
-   "feed": "openai-news"
+   "feed": "openai-news",
+   "excerpt": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI."
   },
   {
    "vendor": "Mistral",
    "title": "Le Chonk brings the brains. Studio puts it to work.",
    "url": "https://mistral.ai/news/build-with-studio/",
    "date": "2026-11-05",
-   "feed": "mistral-news"
+   "feed": "mistral-news",
+   "excerpt": "Build and deploy enterprise agents, workflows and apps faster with Mistral Studio and Le Chonk full control over your models, data and infrastructure."
   },
   {
    "vendor": "Google",
    "title": "Agile Deliberation: How AI helps humans define the gray areas",
    "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
    "date": "2026-11-05",
-   "feed": "google-research-blog"
+   "feed": "google-research-blog",
+   "excerpt": "Data Mining & Modeling"
   },
   {
    "vendor": "Google",
    "title": "Agentic cheminformatics with Google Antigravity",
    "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
    "date": "2026-11-04",
-   "feed": "deepmind-blog"
+   "feed": "deepmind-blog",
+   "excerpt": "Learn how Google Antigravity and our Cheminformatics Skills accelerate drug discovery workflows, search compounds, and propose novel rigidified macrocycles."
   },
   {
    "vendor": "Ai2",
    "title": "StateBench: Testing how language models track state changes over long documents",
    "url": "https://allenai.org/blog/statebench",
    "date": "2026-11-03",
-   "feed": "allenai-blog"
+   "feed": "allenai-blog",
+   "excerpt": ""
   }
  ],
- "candidates_pool": 110
+ "candidates_pool": 111
 }

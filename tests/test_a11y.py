@@ -50,5 +50,14 @@ class A11yTest(unittest.TestCase):
             hi, lo = sorted((lum(bg.group(1)), lum(fg.group(1))), reverse=True)
             self.assertGreaterEqual((hi + .05) / (lo + .05), 4.5, f"{sel} {fg.group(1)} on {bg.group(1)}")
 
+class SummaryLayoutTest(unittest.TestCase):
+    def test_entity_chips_are_capped_and_truncated(self):
+        # long display names (e.g. GitHub bundle cards) and 5 chips per theme overflowed the fixed-height weekly summary image
+        js = (SITE / "summary.js").read_text(encoding="utf-8")
+        css = (SITE / "summary.css").read_text(encoding="utf-8")
+        self.assertIn("x.entities.slice(0, 3)", js)
+        self.assertRegex(css, r"\.sm-th \.ch span \{[^}]*text-overflow:\s*ellipsis")
+
+
 if __name__ == "__main__":
     unittest.main()

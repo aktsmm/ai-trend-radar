@@ -278,7 +278,8 @@ def official_highlights(items, trends, win, per_vendor=3, limit=24):
             continue
         seen.add(title.lower())
         per[v] = per.get(v, 0) + 1
-        out.append({"vendor": v, "title": title[:140], "url": it["url"], "date": dt.astimezone(JST).strftime("%Y-%m-%d"), "feed": it.get("feed")})
+        excerpt = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", it.get("text") or "")).strip()[:300]  # grounding for the Japanese summary; apply drops it from the site data
+        out.append({"vendor": v, "title": title[:140], "url": it["url"], "date": dt.astimezone(JST).strftime("%Y-%m-%d"), "feed": it.get("feed"), "excerpt": excerpt})
         if len(out) >= limit:
             break
     return out

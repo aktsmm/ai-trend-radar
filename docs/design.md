@@ -107,7 +107,7 @@ GitHub 急上昇(`site/github.html`、`api/v1/github.json`): キーワード単�
 | 観点 | 仕組み | 確認する値 |
 | --- | --- | --- |
 | 製品・モデル・リリースの網羅 | 収集元 19 種、上位 20 件(カテゴリ枠つき) | `api/v1/health.json` の取得成否、カテゴリ分布 |
-| ポリシー・安全性・研究・事業の発表 | `official_highlights`: 主要ベンダーの公式フィードのうち、掲載項目に含まれない発表をタイトルのみで一覧(要約なし) | `api/v1/highlights.json` |
+| ポリシー・安全性・研究・事業の発表 | `official_highlights`: 主要ベンダーの公式フィードのうち、掲載項目に含まれない発表を一覧。digest が `highlights_ja.json` に邦題(`title_ja`)と 2〜3 行の要約(`summary`)を書く。要約の根拠はフィードの本文抜粋(`excerpt`、report.json のみ)だけで、ゲートが URL・文字数・「要約中の数字が原題か抜粋にあること」・抜粋なしでの要約を検査する。抜粋が薄いものは邦題のみ | `api/v1/highlights.json` |
 | 公開日が確認できない人気の話題 | `pending`(保留)を観測候補に表示 | `candidates.json` の `held_no_dated_source` |
 | 共通する背景 | `themes.json`: 掲載項目を横断した 2〜4 件の見立て。signals(根拠の項目)と refs(出典)を必須にし、ゲートが構造と出典を検査 | `api/v1/themes.json` |
 | 日本語の反応 | Zenn / Qiita / はてブ(表示のみ) | 各カードの「日本語の反応」 |

@@ -32,6 +32,19 @@ def problems(name, text):
 
 
 class WorkflowSecurityTest(unittest.TestCase):
+    def test_every_public_page_and_its_local_assets_are_deployed(self):
+        # pages.yml copies an explicit list into _site; a page missing from it builds fine and 404s on the live site
+        root = DIR.parent.parent
+        deployed = (DIR / "pages.yml").read_text(encoding="utf-8")
+        copied = set(re.findall(r"site/([\w.\-]+)", deployed))
+        missing = []
+        for page in ("index.html", "about.html", "archive.html", "glossary.html", "github.html"):
+            html = (root / "site" / page).read_text(encoding="utf-8")
+            for name in [page, *re.findall(r'(?:src|href)="([\w\-]+\.(?:js|css))"', html)]:
+                if name not in copied:
+                    missing.append(f"{page}: {name}")
+        self.assertEqual(missing, [], "not copied to _site by pages.yml")
+
     def test_auto_merge_cannot_swallow_a_failed_validation(self):
         # the Actions shell is `bash -e` without pipefail: `validate | tee && ok=1` and a later PIPESTATUS read always gave ok=1,
         # so a PR whose build reported OVERFLOW (or a failing test) was still merged

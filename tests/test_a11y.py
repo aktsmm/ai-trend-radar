@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / "site"
-PAGES = ("index.html", "about.html", "archive.html", "glossary.html")
+PAGES = ("index.html", "about.html", "archive.html", "glossary.html", "github.html")
 
 
 class A11yTest(unittest.TestCase):

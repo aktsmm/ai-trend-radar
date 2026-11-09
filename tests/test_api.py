@@ -64,7 +64,7 @@ class SiteTests(unittest.TestCase):
         build_once()
 
     def test_html_links_resolve_to_built_files(self):
-        for page in ("index.html", "archive.html", "about.html", "glossary.html"):
+        for page in ("index.html", "archive.html", "about.html", "glossary.html", "github.html"):
             html = (SITE / page).read_text(encoding="utf-8")
             for ref in re.findall(r'(?:href|src)="([^"#$]+?)"', html):
                 if ref.startswith(("http", "mailto", "data:")) or "${" in ref:

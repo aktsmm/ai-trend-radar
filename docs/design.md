@@ -64,6 +64,8 @@ flowchart LR
 
 `site/index.html`(依存なしの静的サイト)。ヘッダーのナビ、検索、カテゴリの絞り込み(`aria-pressed`)、「観測候補」の別枠、図解は `<img>` + 日本語の代替テキスト、拡大は `<dialog>`(Esc で閉じ、フォーカスを戻す)、PDF / PPTX / JSON のダウンロード、取得状態・出典・注意書きのフッター。モバイルは 1 カラムに折り返す。
 
+GitHub 急上昇(`site/github.html`、`api/v1/github.json`): キーワード単位の digest とは別の「まとめ面」。GitHub Trending(週間)から AI 関連 repo だけを機械的に抜き出し、今週増えたスター数で上位 10 件を並べる(`collect/gh_weekly.py` → `analyze/github_top.py` → `data/reports/<週>/github_top.json`)。スターは話題の目安であり品質の保証ではない旨を常時表示する。一次情報の裏取りをするカードは、従来どおり digest の `github-trending` カテゴリ(上位の一部)に限る。分類(分野タグ)は決定的なキーワード規則で、LLM は使わない。
+
 確認状態の表示は 3 つを分ける: 「一次情報確認済み」(内容を公式情報で確認)、「リンク到達確認」(HTTP 200 を確認した日。内容の正しさではない)、要約は AI 下書き + 照合。
 
 ## 7. ワークフローと権限

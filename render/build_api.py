@@ -68,6 +68,8 @@ def main():
     dump(API / "health.json", {**base, "sources": {"total": len(st), "ok": len(st) - len(bad), "failed": bad},
                               "published": len(items), "candidates": len(cand), "pending_without_primary_date": len(data.get("pending", [])),
                               "x_search_ok": bool((data.get("x_integration") or {}).get("search", {}) and data["x_integration"]["search"].get("ok"))})
+    from analyze import github_top
+    dump(API / "github.json", {**base, **github_top.api_payload()})
     old = []
     for w, d in W.archive_weeks():
         if w == week:
@@ -86,7 +88,7 @@ def main():
         **{k: base[k] for k in ("version", "snapshot_at", "data_at")}, "latest_week": week,
         "weeks": weeks_info,
         "endpoints": {"latest": "api/v1/latest.json", "week": "api/v1/weeks/{week}.json", "keyword": "api/v1/keywords/{id}.json",
-                      "category": "api/v1/categories/{category}.json", "candidates": "api/v1/candidates.json", "highlights": "api/v1/highlights.json", "themes": "api/v1/themes.json", "glossary": "api/v1/glossary.json", "health": "api/v1/health.json"},
+                      "category": "api/v1/categories/{category}.json", "candidates": "api/v1/candidates.json", "highlights": "api/v1/highlights.json", "themes": "api/v1/themes.json", "glossary": "api/v1/glossary.json", "github": "api/v1/github.json", "health": "api/v1/health.json"},
         "downloads": {"all": "downloads/trends.json"},
         "notes": ["読み取り専用の静的 JSON です。任意条件の検索 API はありません(静的ファイルのため)。",
                   "要約・図解・ブリーフは AI の下書きを一次情報と照合したものです。ベンダー発表の数字は独自には検証していません。",

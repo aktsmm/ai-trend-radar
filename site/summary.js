@@ -26,7 +26,7 @@
         </div>
         <div class="sm-right">
           <h2>今週のテーマ <small>共通する背景の見立て(AI の解釈)</small></h2>
-          <div class="sm-themes">${th.map((x, i) => `<div class="sm-th"><div class="no">${i + 1}</div><div><h3>${esc(x.title)} <em>${esc(CONF[x.confidence])}</em></h3><p>${esc(x.summary)}</p><p class="bgl">${esc(x.background[0])}</p><div class="ch">${x.entities.map(e => `<span>${esc(name(e))}</span>`).join("")}</div></div></div>`).join("") || `<div class="sm-th"><div><p>今週はテーマをまだ作成していません。</p></div></div>`}</div>
+          <div class="sm-themes">${th.map((x, i) => `<div class="sm-th"><div class="no">${i + 1}</div><div><h3>${esc(x.title)} <em>${esc(CONF[x.confidence])}</em></h3><p>${esc(x.summary)}</p><p class="bgl">${esc(x.background[0])}</p><div class="ch">${x.entities.slice(0, 3).map(e => `<span>${esc(name(e))}</span>`).join("")}${x.entities.length > 3 ? `<span>+${x.entities.length - 3}</span>` : ""}</div></div></div>`).join("") || `<div class="sm-th"><div><p>今週はテーマをまだ作成していません。</p></div></div>`}</div>
         </div>
       </div>
       <div class="sm-foot"><b>注目の項目</b> ${pub.slice(0, 8).map(t => `<span class="sm-pill" style="--c:${COL[t.category] || "#475569"}">${esc(t.display || t.keyword)}</span>`).join("")}</div>

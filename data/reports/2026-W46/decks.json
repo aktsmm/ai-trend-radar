@@ -86,5 +86,92 @@
     "sources": [
       {"id": "s1", "title": "claude-code v2.1.319", "publisher": "GitHub (Anthropic)", "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319", "date": "2026-11-06"}
     ]
+  },
+  "auto": {
+    "overview": {
+      "takeaway": "EKS Auto Mode と Karpenter が、GPU と EFA の動的割り当て(DRA)に対応した。",
+      "stat": {"value": "DRA", "label": "GPU と EFA を宣言で割り当て"},
+      "steps": ["要求を宣言", "最安を起動", "Pod に割り当て"],
+      "changes": ["ResourceClaim で機種や配置を指定できる", "GPU を複数の Pod で共有できる"],
+      "facts": [
+        {"k": "提供元", "v": "AWS"},
+        {"k": "対象", "v": "NVIDIA GPU と EFA"},
+        {"k": "Auto Mode", "v": "Kubernetes 1.36 以降"},
+        {"k": "対象外", "v": "GovCloud と中国"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "EKS で GPU を使う AI の学習・推論基盤の運用者",
+      "benefits": ["GPU の共有と、需要に応じた自動スケールを両立できる", "Auto Mode は DRA ドライバーが組み込み済み"],
+      "how_to": ["EKS ユーザーガイドの DRA の文書を読む", "ResourceClaim を定義する", "Pod の設定から要求する"],
+      "caveats": ["DRA とデバイスプラグインは、同じ種類のデバイスで同じノードに混在できない"],
+      "terms": [
+        {"t": "DRA", "d": "GPU などの機器を属性で指定して割り当てる Kubernetes の仕組み"},
+        {"t": "EFA", "d": "AWS の高速なネットワークデバイス"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "Amazon EKS Auto Mode and Karpenter now support Dynamic Resource Allocation", "publisher": "AWS", "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/", "date": "2026-11-09"}
+    ]
+  },
+  "nemotron3": {
+    "overview": {
+      "takeaway": "NVIDIA の視覚言語モデル Nemotron 3.5 Super VL が SageMaker JumpStart で使える。",
+      "stat": {"value": "100万", "label": "文脈の最大トークン数"},
+      "steps": ["JumpStart で選ぶ", "NVFP4 か BF16", "画像・動画を入力"],
+      "changes": ["画像・動画・テキストを入力に文章を出力する", "NVFP4 版と BF16 版から選べる"],
+      "facts": [
+        {"k": "提供元", "v": "NVIDIA / AWS"},
+        {"k": "規模", "v": "120B(実働 12B)"},
+        {"k": "入力", "v": "画像・動画・テキスト"},
+        {"k": "ライセンス", "v": "OpenMDW 1.1"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "文書処理や画面操作エージェントを作る、AWS 利用の開発者",
+      "benefits": ["NVFP4 版は G7 インスタンスで動かせる", "BF16 版で追加学習や独自の量子化ができる"],
+      "how_to": ["SageMaker Studio の JumpStart で検索する", "ml.g7 の割当の引き上げを申請する", "SDK から配備して試す"],
+      "caveats": ["性能値は AWS の測定で、版どうしの純粋な比較ではない", "1 リクエストに画像 1 枚と動画 1 本まで"],
+      "terms": [
+        {"t": "MoE", "d": "入力ごとに一部の専門家だけを使う構成"},
+        {"t": "NVFP4", "d": "4 ビットで重みを表す NVIDIA の量子化形式"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "NVIDIA Nemotron 3.5 Super VL is now available in Amazon SageMaker JumpStart", "publisher": "AWS", "url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/", "date": "2026-11-09"}
+    ]
+  },
+  "unsloth": {
+    "overview": {
+      "takeaway": "Unsloth v0.1.916-beta は、長い会話と 2 GPU の画像・動画生成を速くした。",
+      "stat": {"value": "1.5〜1.8倍", "label": "2 GPU での画像生成の速度(発表)"},
+      "steps": ["GPU 2 枚を使う", "画像・動画を生成", "待ち時間を短縮"],
+      "changes": ["長い会話での入力と検索が速くなる", "チャットごとに別のブラウザを使える"],
+      "facts": [
+        {"k": "提供元", "v": "Unsloth"},
+        {"k": "版", "v": "v0.1.916-beta"},
+        {"k": "公開日", "v": "2026-11-06"},
+        {"k": "ライセンス", "v": "無料・オープンソース"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "手元の GPU で LLM や画像生成を動かし、調整する人",
+      "benefits": ["同じ GPU が 2 枚あれば、画像生成を速くできる", "ダウンロード速度の上限を設定できる"],
+      "how_to": ["Unsloth Desktop を公式のリリースから入手する", "手元のモデルで動作を試す", "2 GPU 構成なら速度を比べる"],
+      "caveats": ["速度の数字は開発元の発表", "ベータ版のため環境で確認が要る"],
+      "terms": [
+        {"t": "GGUF", "d": "手元の PC で動かしやすいモデルの配布形式"},
+        {"t": "LoRA", "d": "モデル全体でなく一部だけを追加学習する軽い手法"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "Unsloth v0.1.916-beta: Large Performance Fixes", "publisher": "GitHub (Unsloth)", "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta", "date": "2026-11-06"}
+    ]
   }
 }

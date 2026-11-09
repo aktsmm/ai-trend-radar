@@ -61,5 +61,68 @@
       "支出の表示は、ゲートウェイがこの版以降で、支出上限がない場合に限られる"
     ],
     "audience": "Claude Code を日常的に使う開発者と、社内で運用する管理者"
+  },
+  "auto": {
+    "summary": [
+      "AWS が、Amazon EKS Auto Mode と Karpenter で Kubernetes の Dynamic Resource Allocation(DRA)に対応したと発表した。",
+      "NVIDIA の GPU と EFA ネットワークデバイスについて、必要な属性を ResourceClaim で指定でき、GPU を複数の Pod で共有できる。",
+      "Karpenter が条件に合う最安のインスタンスを自動で起動する。Auto Mode には NVIDIA と EFA の DRA ドライバーが組み込まれている。"
+    ],
+    "why_trending": "AWS の公式発表で、AI の学習や推論に使う GPU の割り当てが話題になった。",
+    "what_changes": [
+      "GPU の機種や構成を、ResourceClaim で宣言して要求できる",
+      "分散学習や推論で、PCIe の配置がそろった GPU と EFA を指定できる"
+    ],
+    "benefits": [
+      "GPU を Pod 間で共有でき、需要に応じてインスタンスが自動で増減する",
+      "Auto Mode では DRA ドライバーが組み込み済みで、自分で入れなくてよい"
+    ],
+    "caveats": [
+      "Auto Mode での利用は Kubernetes 1.36 以降で、GovCloud と中国リージョンは対象外",
+      "移行中は、DRA とデバイスプラグインを同じ種類のデバイスで同じノードに混在できない"
+    ],
+    "audience": "EKS で GPU を使う AI の学習・推論基盤の運用者"
+  },
+  "nemotron3": {
+    "summary": [
+      "AWS が、NVIDIA の視覚言語モデル Nemotron 3.5 Super VL を Amazon SageMaker JumpStart で使えるようにしたと発表した。",
+      "画像・動画・テキストを入力にして文章を出力する。総パラメータ 120B のうち実際に使うのは 12B の MoE 構成で、文脈は最大 100 万トークン。",
+      "最適化された NVFP4 版と、カスタマイズ向けの BF16 版の 2 種類が提供される。ライセンスは OpenMDW 1.1。"
+    ],
+    "why_trending": "AWS の公式ブログで提供開始が発表され、Ollama の Nemotron 3.5 系列とも並んで話題になった。",
+    "what_changes": [
+      "SageMaker Studio や Python SDK から、数ステップで画像・動画対応のモデルを配備できる",
+      "文書の読み取りや画面操作、動画の質問応答などを 1 つのモデルで扱える"
+    ],
+    "benefits": [
+      "NVFP4 版は G7 インスタンスで動き、小さめの GPU 構成から始められる",
+      "BF16 版の重みで、追加学習や独自の量子化もできる"
+    ],
+    "caveats": [
+      "63〜141 トークン/秒などの性能値は AWS の測定で、構成が違うため版どうしの比較ではない",
+      "JumpStart の配備では 1 リクエストに画像 1 枚と動画 1 本まで。ml.g7 の割当は新規アカウントでは 0 から"
+    ],
+    "audience": "文書処理や画面操作エージェントを作る、AWS 利用の開発者"
+  },
+  "unsloth": {
+    "summary": [
+      "Unsloth が v0.1.916-beta をリリースした。長い会話での入力や検索、チャットの削除が速くなったと説明されている。",
+      "同じ NVIDIA GPU が 2 枚あると、SDXL などの画像・動画生成が約 1.5〜1.8 倍速くなると発表された。",
+      "チャットごとに別のブラウザを使え、動かして大きさを変えられる浮動ブラウザも加わった。"
+    ],
+    "why_trending": "Unsloth の公式リリースで、性能改善と Qwen3.8-Flash 向けの更新が重なって話題になった。",
+    "what_changes": [
+      "長い履歴のチャットでも、入力や検索が重くなりにくい",
+      "2 枚の GPU で画像・動画生成の待ち時間を縮められる"
+    ],
+    "benefits": [
+      "オーナーはモデルのダウンロード速度に上限を設定できる",
+      "単一ファイルの画像モデルや、OpenAI 互換接続でのカスタムヘッダーが使える"
+    ],
+    "caveats": [
+      "速度の数字は開発元の発表で、環境により異なる",
+      "ベータ版のため、動作は自分の環境で確認が要る"
+    ],
+    "audience": "手元の GPU で LLM や画像生成を動かし、ファインチューニングする人"
   }
 }

@@ -49,5 +49,56 @@
       "official_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.319",
       "source_date": "2026-11-06"
     }
+  ],
+  "auto": [
+    {
+      "title": "EKS が GPU の動的割り当てに対応",
+      "diagram_type": "infographic",
+      "icon": "cloud",
+      "stat": {"value": "DRA", "label": "GPU と EFA を宣言で割り当て"},
+      "steps": ["要求を宣言", "最安を起動", "Pod に割り当て"],
+      "points": [
+        {"h": "何が起きた", "t": "EKS Auto Mode と Karpenter が GPU・EFA の DRA に対応した"},
+        {"h": "何が変わる", "t": "機種や配置の条件を ResourceClaim で宣言し、GPU を共有できる"},
+        {"h": "嬉しいこと", "t": "Karpenter が条件に合う最安のインスタンスを自動で起動する"},
+        {"h": "注意", "t": "Auto Mode は Kubernetes 1.36 以降で、GovCloud と中国は対象外"}
+      ],
+      "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-eks-auto-mode-karpenter-dra/",
+      "source_date": "2026-11-09"
+    }
+  ],
+  "nemotron3": [
+    {
+      "title": "Nemotron 3.5 Super VL が JumpStart に",
+      "diagram_type": "infographic",
+      "icon": "chip",
+      "stat": {"value": "100万", "label": "文脈の最大トークン数"},
+      "steps": ["JumpStart で選ぶ", "NVFP4 か BF16", "画像・動画を入力"],
+      "points": [
+        {"h": "何が起きた", "t": "NVIDIA の視覚言語モデルが SageMaker JumpStart で使えるようになった"},
+        {"h": "何が変わる", "t": "総 120B・実働 12B の MoE が、画像・動画・テキストを扱う"},
+        {"h": "嬉しいこと", "t": "NVFP4 版は G7、BF16 版は追加学習向けで、用途で選べる"},
+        {"h": "注意", "t": "性能値は AWS の測定で、版どうしの純粋な比較ではない"}
+      ],
+      "official_url": "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
+      "source_date": "2026-11-09"
+    }
+  ],
+  "unsloth": [
+    {
+      "title": "Unsloth v0.1.916-beta、性能改善",
+      "diagram_type": "infographic",
+      "icon": "spark",
+      "stat": {"value": "1.5〜1.8倍", "label": "2 GPU での画像生成の速度(発表)"},
+      "steps": ["GPU 2 枚を使う", "画像・動画を生成", "待ち時間を短縮"],
+      "points": [
+        {"h": "何が起きた", "t": "Unsloth が長い会話や画像・動画生成を速くしたベータ版を出した"},
+        {"h": "何が変わる", "t": "同じ NVIDIA GPU 2 枚で、SDXL などが約 1.5〜1.8 倍速くなる"},
+        {"h": "嬉しいこと", "t": "チャットごとのブラウザや、動かせる浮動ブラウザが使える"},
+        {"h": "注意", "t": "速度の数字は開発元の発表で、環境により異なる"}
+      ],
+      "official_url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
+      "source_date": "2026-11-06"
+    }
   ]
 }

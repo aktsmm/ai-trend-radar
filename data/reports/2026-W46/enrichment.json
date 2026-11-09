@@ -296,6 +296,60 @@
      "retrieved_at": "2026-11-10T05:50:00+09:00"
     }
    ]
+  },
+  "gh-vercel-labs-agent-desktop": {
+   "selection_reason": "GitHub 急上昇のリポジトリ。デスクトップアプリを AI エージェントが操作する CLI。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "agent-desktop",
+   "official_urls": ["https://github.com/vercel-labs/agent-desktop"],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "vercel-labs/agent-desktop README",
+     "evidence_urls": ["https://github.com/vercel-labs/agent-desktop"],
+     "result": "アクセシビリティツリーを JSON で返し ref で操作する CLI で、3 OS 対応、モデル非内蔵、私的内容への注意を README で確認",
+     "retrieved_at": "2026-11-10T06:00:00+09:00"
+    }
+   ]
+  },
+  "gh-cloudflare-security-audit-skill": {
+   "selection_reason": "GitHub 急上昇のリポジトリ。Cloudflare が公開した、エージェント用の脆弱性監査スキル。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "security-audit-skill",
+   "official_urls": ["https://github.com/cloudflare/security-audit-skill"],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "cloudflare/security-audit-skill README",
+     "evidence_urls": ["https://github.com/cloudflare/security-audit-skill"],
+     "result": "6 段階の監査手順、確定・要確認・却下の記録、サンドボックス要件、MIT ライセンスを README で確認",
+     "retrieved_at": "2026-11-10T06:00:00+09:00"
+    }
+   ]
+  },
+  "gh-mattpocock-skills": {
+   "selection_reason": "GitHub 急上昇のリポジトリ。開発者が日常で使うエージェント用スキルの集合。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "mattpocock/skills",
+   "official_urls": ["https://github.com/mattpocock/skills"],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "mattpocock/skills README",
+     "evidence_urls": ["https://github.com/mattpocock/skills"],
+     "result": "導入方法、/setup-matt-pocock-skills、/grill-me などの用途、プラグインと手動導入の注意を README で確認",
+     "retrieved_at": "2026-11-10T06:00:00+09:00"
+    }
+   ]
   }
  }
 }

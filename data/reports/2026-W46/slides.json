@@ -168,5 +168,53 @@
       "official_url": "https://huggingface.co/blog/cwe-bench",
       "source_date": "2026-11-03"
     }
+  ],
+  "gh-vercel-labs-agent-desktop": [
+    {
+      "title": "agent-desktop、アプリ操作をエージェントに",
+      "diagram_type": "infographic",
+      "icon": "terminal",
+      "stat": {"value": "13,712", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["画面を読む", "ref で操作", "再度読んで確認"],
+      "points": [
+        {"h": "何が起きた", "t": "デスクトップアプリを OS のアクセシビリティ情報で操作する CLI が注目された"},
+        {"h": "何が変わる", "t": "画像認識に頼らず、要素ごとの ref を JSON で受け取って操作できる"},
+        {"h": "試し方", "t": "npm install -g agent-desktop のあと、agent-desktop status で確認する"},
+        {"h": "注意", "t": "スター数は注目度で、品質や安全性ではない。画面の内容は私的情報を含む"}
+      ],
+      "official_url": "https://github.com/vercel-labs/agent-desktop"
+    }
+  ],
+  "gh-cloudflare-security-audit-skill": [
+    {
+      "title": "security-audit、段階的な脆弱性監査",
+      "diagram_type": "infographic",
+      "icon": "shield",
+      "stat": {"value": "10,600", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["調査して探す", "別の目で反証", "検証して報告"],
+      "points": [
+        {"h": "何が起きた", "t": "Cloudflare がエージェント用の監査スキルを公開し、注目された"},
+        {"h": "何が変わる", "t": "6 段階の流れで、確定・要確認・却下に分けた記録と報告書を作る"},
+        {"h": "試し方", "t": "npx skills add でスキルを入れ、「security audit this codebase」と頼む"},
+        {"h": "注意", "t": "スター数は注目度の目安。コード実行には外部通信を止めたサンドボックスが要る"}
+      ],
+      "official_url": "https://github.com/cloudflare/security-audit-skill"
+    }
+  ],
+  "gh-mattpocock-skills": [
+    {
+      "title": "mattpocock/skills、エージェント用スキル集",
+      "diagram_type": "infographic",
+      "icon": "layers",
+      "stat": {"value": "9,635", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["スキルを入れる", "setup を実行", "grill-me で整理"],
+      "points": [
+        {"h": "何が起きた", "t": "開発者が日常で使うエージェント用スキルの集合が注目された"},
+        {"h": "何が変わる", "t": "作る前に質問を受けて認識を合わせ、用語集で回答の冗長さを減らす"},
+        {"h": "試し方", "t": "各エージェント向けのコマンドで入れ、/setup-matt-pocock-skills を 1 回実行"},
+        {"h": "注意", "t": "スター数は注目度で、品質ではない。プラグインと手動導入の併用は二重になる"}
+      ],
+      "official_url": "https://github.com/mattpocock/skills"
+    }
   ]
 }

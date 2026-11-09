@@ -377,5 +377,125 @@
     "sources": [
       {"id": "s1", "title": "mattpocock/skills (README)", "publisher": "GitHub", "url": "https://github.com/mattpocock/skills"}
     ]
+  },
+  "cpu-arc": {
+    "overview": {
+      "takeaway": "LLM の推論の跡から CPU で動く推論キャッシュを作り、同種の問題を安く解く手法の論文。",
+      "stat": {"value": "16〜291 倍", "label": "呼び出しが元のモデルより安い(発表の数字)"},
+      "steps": ["LLM が解く", "キャッシュ化", "CPU で再利用"],
+      "changes": ["解き方が分かった問題は LLM なしに近い形で実行", "説明でき、継続して学習できると述べられている"],
+      "facts": [
+        {"k": "手法", "v": "ARC(推論キャッシュ)"},
+        {"k": "実行場所", "v": "CPU"},
+        {"k": "性能", "v": "最先端 LLM と同等"},
+        {"k": "掲載", "v": "Hugging Face 論文"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "LLM の運用費用を抑えたい研究者・開発者",
+      "benefits": ["呼び出し費用を下げられる可能性がある", "実行の過程を説明できると述べられている"],
+      "how_to": ["論文の要旨を読む", "自分の繰り返し課題に当てはまるか検討する"],
+      "caveats": ["要旨のみ確認した段階で、実装の公開は未確認", "数字は著者の発表で第三者の検証ではない"],
+      "terms": [
+        {"t": "推論キャッシュ", "d": "一度解いた手順を保存して再利用する仕組み"},
+        {"t": "CPU", "d": "一般的なコンピューターの演算装置。GPU より手軽"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "CPU-ARC: Agentic Reasoning Caching for on-CPU Reasoning Reuse", "publisher": "Hugging Face", "url": "https://huggingface.co/papers/2611.09891", "date": "2026-11-09"}
+    ]
+  },
+  "gh-data-1": {
+    "overview": {
+      "takeaway": "データの意味づけ(auto-ontology)と情報収集(Scrapling)の 2 つの道具が注目された。",
+      "stat": {"value": "9,327", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["auto-ontology: 意味づけ", "Scrapling: 情報収集"],
+      "changes": ["回答に SQL と手順が付き、確認しやすい", "取得から書き出しまでを 1 つで書ける"],
+      "facts": [
+        {"k": "提供元", "v": "NVIDIA / D4Vinci"},
+        {"k": "言語", "v": "Python"},
+        {"k": "ライセンス", "v": "Apache-2.0(auto-ontology)"},
+        {"k": "連携", "v": "MCP 対応"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "impact": {
+      "audience": "社内データ活用やウェブ収集をエージェントで進めたい開発者",
+      "benefits": ["指標の定義が揃い、回答を照合しやすい", "収集結果を JSON や CSV で出せる"],
+      "how_to": ["auto-ontology は Docker Compose と API キーで起動", "Scrapling は Python から Fetcher で取得する"],
+      "caveats": ["auto-ontology は NVIDIA の API キーが要る", "スター数は注目度で、品質ではない", "収集は対象サイトの規約を守る"],
+      "terms": [
+        {"t": "オントロジー", "d": "データの言葉と関係を整理した意味の地図"},
+        {"t": "スクレイピング", "d": "ウェブページから情報を自動で集めること"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "sources": [
+      {"id": "s1", "title": "NVIDIA/auto-ontology (README)", "publisher": "GitHub", "url": "https://github.com/NVIDIA/auto-ontology"},
+      {"id": "s2", "title": "D4Vinci/Scrapling (README)", "publisher": "GitHub", "url": "https://github.com/D4Vinci/Scrapling"}
+    ]
+  },
+  "gh-coding-agent-1": {
+    "overview": {
+      "takeaway": "チャット、デザイン、記憶の 3 つでコーディングエージェントを補う道具が注目された。",
+      "stat": {"value": "7,621", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["OpenMausBot: チャット", "impeccable: デザイン", "claude-mem: 記憶"],
+      "changes": ["手元のエージェントをボットとして呼び出せる", "デザイン指示と点検、セッション間の記憶を足せる"],
+      "facts": [
+        {"k": "MausBot", "v": "TypeScript"},
+        {"k": "impeccable", "v": "62 の検出ルール"},
+        {"k": "claude-mem", "v": "記憶を引き継ぐ"},
+        {"k": "対応", "v": "Claude Code など"}
+      ],
+      "refs": ["s1", "s2", "s3"]
+    },
+    "impact": {
+      "audience": "コーディングエージェントを日常的に使う開発者",
+      "benefits": ["説明のやり直しが減る", "デザインの指摘が具体的になる"],
+      "how_to": ["impeccable は npx impeccable install", "claude-mem は npx claude-mem install"],
+      "caveats": ["手元の PC 操作を任せる範囲は慎重に決める", "claude-mem はサインインと試用の案内がある", "スター数は注目度で、品質ではない"],
+      "terms": [
+        {"t": "スキル", "d": "エージェントに特定の作業手順を教える指示書"},
+        {"t": "セッション", "d": "エージェントとの 1 回のやり取りのまとまり"}
+      ],
+      "refs": ["s1", "s2", "s3"]
+    },
+    "sources": [
+      {"id": "s1", "title": "milind-soni/OpenMausBot (README)", "publisher": "GitHub", "url": "https://github.com/milind-soni/OpenMausBot"},
+      {"id": "s2", "title": "pbakaus/impeccable (README)", "publisher": "GitHub", "url": "https://github.com/pbakaus/impeccable"},
+      {"id": "s3", "title": "thedotmack/claude-mem (README)", "publisher": "GitHub", "url": "https://github.com/thedotmack/claude-mem"}
+    ]
+  },
+  "gh-coding-agent-2": {
+    "overview": {
+      "takeaway": "デザイン(Hallmark)とゲーム制作(Game Studios)のエージェント用手順が注目された。",
+      "stat": {"value": "6,356", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["Hallmark: デザイン", "Game Studios: ゲーム"],
+      "changes": ["AI らしくないページを作らせる", "質問から試作ゲームまで進める"],
+      "facts": [
+        {"k": "Hallmark", "v": "50 テーマ"},
+        {"k": "作者", "v": "Together AI"},
+        {"k": "ゲーム制作", "v": "ブラウザゲーム"},
+        {"k": "対応", "v": "Claude Code など"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "impact": {
+      "audience": "画面づくりやゲーム試作をエージェントに任せたい開発者",
+      "benefits": ["ありがちなデザインを避けやすい", "アイデアを遊べる形にできる"],
+      "how_to": ["Claude Code などで各リポジトリを使う", "/prototype でゲームの案を伝える"],
+      "caveats": ["エージェントの契約や利用枠が前提", "人が遊んだ確認は別に必要", "スター数は注目度で、品質ではない"],
+      "terms": [
+        {"t": "スキル", "d": "エージェントに特定の作業手順を教える指示書"},
+        {"t": "プロトタイプ", "d": "動きを確かめるための試作品"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "sources": [
+      {"id": "s1", "title": "Nutlope/hallmark (README)", "publisher": "GitHub", "url": "https://github.com/Nutlope/hallmark"},
+      {"id": "s2", "title": "Donchitos/Claude-Code-Game-Studios (README)", "publisher": "GitHub", "url": "https://github.com/Donchitos/Claude-Code-Game-Studios"}
+    ]
   }
 }

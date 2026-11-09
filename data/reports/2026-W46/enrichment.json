@@ -176,6 +176,106 @@
      "retrieved_at": "2026-11-10T05:05:00+09:00"
     }
    ]
+  },
+  "claude-fable-5-2": {
+   "selection_reason": "model 代表。Anthropic が公式ブログで、最上位モデル Claude Fable 5.2 を値下げして公開したと発表。",
+   "verification_status": "verified",
+   "display": "Claude Fable 5.2",
+   "official_urls": [
+    "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+    "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Claude Fable 5.2 and Mythos 5.2",
+     "evidence_urls": [
+      "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+     ],
+     "evidence_published_at": "2026-11-09",
+     "result": "Fable 5.2 が前版より最大 30% 速く、価格は入力 100 万トークン 8 ドル・出力 40 ドル、2.5 倍速の高速モードは 16 ドル・80 ドル。日常用途には Opus 5.5 を勧めると記載されていることを確認",
+     "retrieved_at": "2026-11-10T05:50:00+09:00"
+    },
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Introducing Claude Fable 5.2 on AWS",
+     "evidence_urls": [
+      "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/"
+     ],
+     "evidence_published_at": "2026-11-09",
+     "result": "Amazon Bedrock と Claude Platform on AWS で Fable 5.2 が使えること、保持期間と人による安全レビューが既定で必要な Covered Model であることを確認",
+     "retrieved_at": "2026-11-10T05:50:00+09:00"
+    }
+   ]
+  },
+  "nvidia-blackwell": {
+   "selection_reason": "hardware 代表。NVIDIA が公式の技術ブログで、画像生成モデル FLUX 3 Image Klein を Blackwell GPU で高速化する方法を公開。",
+   "verification_status": "verified",
+   "display": "NVIDIA Blackwell × FLUX 3 Klein",
+   "official_urls": [
+    "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs",
+     "evidence_urls": [
+      "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/"
+     ],
+     "evidence_published_at": "2026-11-06",
+     "result": "NVFP4 で BF16 比 最大 1.62 倍(文章から画像)、B200 1 枚で最適化を重ねると Base が最大 3.46 倍、B200 8 枚で中央値 14.90 秒が 3.00 秒になることを確認",
+     "retrieved_at": "2026-11-10T05:50:00+09:00"
+    }
+   ]
+  },
+  "sglang": {
+   "selection_reason": "local-runtime 代表。SGLang が公式リポジトリで v0.5.23 をリリース。新モデル対応や MoE の省メモリ実行などを発表。",
+   "verification_status": "verified",
+   "category": "local-runtime",
+   "kind": "release",
+   "display": "SGLang",
+   "official_urls": [
+    "https://github.com/sgl-project/sglang/releases/tag/v0.5.23"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "sglang v0.5.23 release notes",
+     "evidence_urls": [
+      "https://github.com/sgl-project/sglang/releases/tag/v0.5.23"
+     ],
+     "evidence_published_at": "2026-11-03",
+     "result": "1007 件の PR・257 人の貢献、GPU メモリを超える MoE を 1 枚の GPU で動かす Paged Experts(オプトイン)、Google TPU7x 対応、量子化 MoE での LoRA 提供の追加を確認。リリースは UTC の 11 月 2 日 22:14",
+     "retrieved_at": "2026-11-10T05:50:00+09:00"
+    }
+   ]
+  },
+  "bench": {
+   "selection_reason": "research 代表。Collinear AI が Hugging Face の公式ブログで、セキュリティ修正を測るベンチマーク CWE-bench v2 の公開版を発表。",
+   "verification_status": "verified",
+   "category": "research",
+   "kind": "repo",
+   "display": "CWE-bench v2",
+   "official_urls": [
+    "https://huggingface.co/blog/cwe-bench"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "CWE-bench v2: More coverage, quality, and transparency",
+     "evidence_urls": [
+      "https://huggingface.co/blog/cwe-bench"
+     ],
+     "evidence_published_at": "2026-11-03",
+     "result": "公開 100 タスク・91 種の CWE、評価した 11 モデルで首位 Gemini 4 Argon が pass@1 67.8%、データセットは承認制であることを確認",
+     "retrieved_at": "2026-11-10T05:50:00+09:00"
+    }
+   ]
   }
  }
 }

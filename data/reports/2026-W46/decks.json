@@ -173,5 +173,122 @@
     "sources": [
       {"id": "s1", "title": "Unsloth v0.1.916-beta: Large Performance Fixes", "publisher": "GitHub (Unsloth)", "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta", "date": "2026-11-06"}
     ]
+  },
+  "claude-fable-5-2": {
+    "overview": {
+      "takeaway": "Anthropic の最上位モデル Fable 5.2 が、前版より速く安く公開された。",
+      "stat": {"value": "最大 30%", "label": "前版より出力が速い"},
+      "steps": ["難題を任せる", "長時間で実行", "結果を確認"],
+      "changes": ["入力 8 ドル、出力 40 ドル(100 万トークン)", "速度が最大 2.5 倍の高速モードがある"],
+      "facts": [
+        {"k": "提供元", "v": "Anthropic"},
+        {"k": "価格", "v": "入力 8 ドル/出力 40 ドル"},
+        {"k": "高速モード", "v": "16 ドル/80 ドル"},
+        {"k": "提供先", "v": "Bedrock ほか"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "大規模なコード移行や、長時間の研究タスクを任せたい開発者",
+      "benefits": ["難しい作業に使える最上位モデルを、前版より安く使える", "Amazon Bedrock からも呼び出せる"],
+      "how_to": ["公式ブログで性能と価格を確認する", "まず Opus 5.5 で試して比べる", "AWS では保持設定を先に行う"],
+      "caveats": ["性能の数字は Anthropic の発表", "ほとんどの作業は Opus 5.5 から始める想定"],
+      "terms": [
+        {"t": "高速モード", "d": "料金が上がる代わりに出力が速くなる選択肢"},
+        {"t": "Mythos 5.2", "d": "同じモデルで、審査を通った組織向けの版"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "sources": [
+      {"id": "s1", "title": "Claude Fable 5.2 and Mythos 5.2", "publisher": "Anthropic", "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2", "date": "2026-11-09"},
+      {"id": "s2", "title": "Introducing Claude Fable 5.2 on AWS", "publisher": "AWS", "url": "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/", "date": "2026-11-09"}
+    ]
+  },
+  "nvidia-blackwell": {
+    "overview": {
+      "takeaway": "FLUX 3 Image Klein を Blackwell GPU で速く動かす手順を NVIDIA が公開した。",
+      "stat": {"value": "最大 3.46 倍", "label": "B200 1 枚での高速化(発表)"},
+      "steps": ["NVFP4 を使う", "最適化を重ねる", "GPU を増やす"],
+      "changes": ["NVFP4 で BF16 より最大 1.62 倍速い", "B200 8 枚で 14.90 秒が 3.00 秒に"],
+      "facts": [
+        {"k": "提供元", "v": "NVIDIA"},
+        {"k": "対象", "v": "FLUX 3 Image Klein"},
+        {"k": "実行環境", "v": "TensorRT LLM"},
+        {"k": "測定機", "v": "B200"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "画像生成を製品やツールに組み込み、遅延を減らしたい開発者",
+      "benefits": ["設定ひとつで NVFP4 に切り替えられる", "手順と YAML 設定が公開されている"],
+      "how_to": ["公式ブログの FLUX 3 の例を動かす", "NVFP4 から始めて速度を測る", "画質の変化を見て最適化を選ぶ"],
+      "caveats": ["数字は NVIDIA の測定", "最適化で出力が変わるため確認が要る"],
+      "terms": [
+        {"t": "NVFP4", "d": "4 ビットの浮動小数点で計算を軽くする形式"},
+        {"t": "デノイズ", "d": "拡散モデルがノイズから画像を作る反復の処理"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "Speed Up Image Generation with FLUX 3 Image Klein on NVIDIA Blackwell GPUs", "publisher": "NVIDIA", "url": "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/", "date": "2026-11-06"}
+    ]
+  },
+  "sglang": {
+    "overview": {
+      "takeaway": "SGLang v0.5.23 は、大きな MoE の省メモリ実行や TPU 対応を加えた。",
+      "stat": {"value": "1007 件", "label": "このリリースに入った PR"},
+      "steps": ["新モデル対応", "MoE を省メモリ化", "TPU でも動作"],
+      "changes": ["GPU メモリ超の MoE を 1 枚で動かせる", "Google TPU7x と量子化 MoE の LoRA に対応"],
+      "facts": [
+        {"k": "提供元", "v": "SGLang"},
+        {"k": "版", "v": "v0.5.23"},
+        {"k": "貢献者", "v": "257 人"},
+        {"k": "導入", "v": "uv pip install"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "自前の GPU や TPU で LLM を提供・運用する開発者",
+      "benefits": ["Paged Experts は CPU 退避より最大 30 倍速いと発表", "新しいモデルの動かし方が案内されている"],
+      "how_to": ["公式の導入コマンドか Docker で入れる", "対応モデルの手順を確認する", "オプトインの機能は小さく試す"],
+      "caveats": ["Paged Experts と LoRA の新機能はオプトイン", "速度の数字は開発元の発表"],
+      "terms": [
+        {"t": "MoE", "d": "入力ごとに一部の専門家だけを使うモデル構造"},
+        {"t": "LoRA", "d": "モデル全体でなく小さな追加部分だけを学習する手法"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "SGLang v0.5.23 release notes", "publisher": "GitHub (SGLang)", "url": "https://github.com/sgl-project/sglang/releases/tag/v0.5.23", "date": "2026-11-03"}
+    ]
+  },
+  "bench": {
+    "overview": {
+      "takeaway": "セキュリティ修正の力を測る CWE-bench v2 の公開版が出た。",
+      "stat": {"value": "100 タスク", "label": "91 種類の CWE を網羅"},
+      "steps": ["リポジトリを渡す", "弱点を修正", "自動で採点"],
+      "changes": ["弱点修正を共通の基準で比べられる", "同じ環境を防御用 AI の訓練にも使える"],
+      "facts": [
+        {"k": "公開元", "v": "Collinear AI"},
+        {"k": "タスク", "v": "100"},
+        {"k": "首位", "v": "Gemini 4 Argon"},
+        {"k": "pass@1", "v": "67.8%"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "コード修正やセキュリティ向けの AI を評価する開発者・研究者",
+      "benefits": ["採点が自動で、追加費用なしに再現できる", "コマンド 1 つで Hub から実行できる"],
+      "how_to": ["データセットの利用条件に同意する", "公式ブログの harbor run を試す", "自分のモデルの結果を共有する"],
+      "caveats": ["データセットは承認制", "結果は評価した 11 モデルに限られる"],
+      "terms": [
+        {"t": "CWE", "d": "ソフトウェアの弱点の種類を分類した共通の番号"},
+        {"t": "pass@1", "d": "1 回の試行で課題を解けた割合"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "CWE-bench v2: More coverage, quality, and transparency", "publisher": "Collinear AI (Hugging Face)", "url": "https://huggingface.co/blog/cwe-bench", "date": "2026-11-03"}
+    ]
   }
 }

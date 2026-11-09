@@ -7,7 +7,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 
-from . import jp, official, x_watch
+from . import gh_weekly, jp, official, x_watch
 from .common import NOW, RAW, ROOT, save_raw
 from .sources import SOURCES
 
@@ -82,6 +82,16 @@ def snapshot():
     (d / f"{snap['date']}.json").write_text(json.dumps(snap, ensure_ascii=False), encoding="utf-8")
 
 
+def run_github_weekly(status):
+    t = time.time()
+    try:
+        r = gh_weekly.collect()
+        status["github_weekly"] = {"ok": True, "count": len(r["items"]), "group": "tools", "seconds": round(time.time() - t, 1)}
+    except Exception as e:
+        status["github_weekly"] = {"ok": False, "error": f"{type(e).__name__}: {e}"[:300], "group": "tools"}
+    print("github_weekly", status["github_weekly"])
+
+
 def main():
     status = {}
     with ThreadPoolExecutor(6) as ex:
@@ -90,6 +100,7 @@ def main():
                 status[name] = st
                 print(name, st)
     run_official(status)
+    run_github_weekly(status)
     run_x(status)
     run_jp(status)
     print({k: v.get("ok") for k, v in status.items()})

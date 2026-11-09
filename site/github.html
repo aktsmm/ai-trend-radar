@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>今週の GitHub 急上昇 AI repo - AI Trend Radar</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%231c2b4a%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%276%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%272%27/%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%272%27 fill=%27%232f5fd0%27/%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="index.html">AI Trend Radar</a>
+  <nav aria-label="メニュー"><a href="index.html">最新ダイジェスト</a><a href="github.html" aria-current="page">GitHub 急上昇</a><a href="glossary.html">用語・基礎</a><a href="archive.html">アーカイブ</a><a href="about.html">About</a><a href="api/v1/index.json">JSON API</a></nav>
+</div></header>
+<main class="wrap" id="main">
+  <h1 class="sr-only">今週の GitHub 急上昇 AI repo</h1>
+  <p class="lead">GitHub Trending(週間)から AI 関連の repo だけを抜き出し、<b>今週増えたスター数</b>で並べました。スター数は話題の目安で、品質や安全性の保証ではありません。使う前に各 repo の README とライセンスを確認してください。</p>
+  <div class="filters"><label>週 <select id="week" aria-label="週の切り替え"></select></label> <span id="tags" class="chips" role="group" aria-label="分野で絞り込み"></span></div>
+  <p id="meta" class="lead" aria-live="polite"></p>
+  <ol id="list" class="gh-list" aria-live="polite"><li>読み込み中…</li></ol>
+</main>
+<script src="github.js"></script>
+</body>
+</html>

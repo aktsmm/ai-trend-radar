@@ -20,6 +20,10 @@ def findings():
     if not ledgers:
         return []
     out = []
+    latest = json.loads(reports[-1].read_text(encoding="utf-8")) if reports else {}
+    gw = latest.get("source_status", {}).get("github_weekly")
+    if gw and gw.get("ok") is False:
+        out.append(f"github_weekly: 最新の週で取得に失敗 ({gw.get('error', '')[:80]})(GitHub Trending のページ構造が変わった可能性)")
     from collect import official as O
     current = {f[0] for f in O.FEEDS} | {b[0] for b in O.BLOG_INDEXES} | {r[0] for r in O.GH_REPOS}  # sources retired from the code are not judged
     for fid, led in ledgers[-1].items():

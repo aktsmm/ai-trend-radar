@@ -33,6 +33,7 @@ jobs:
         env: { PYTHONIOENCODING: utf-8, GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}", BRAVE_API_KEY: "${{ secrets.BRAVE_API_KEY }}" }
         run: |
           python -m analyze.report
+          python -m analyze.github_top
           python -m analyze.apply
           python -m analyze.validate
       - name: Commit (durable daily snapshots + weekly report)

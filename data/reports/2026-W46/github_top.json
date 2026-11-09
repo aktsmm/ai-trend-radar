@@ -1,0 +1,172 @@
+{
+ "week": "2026-W46",
+ "generated_at": "2026-11-09T19:53:42Z",
+ "metric": "stars gained this week (github.com/trending, AI-filtered)",
+ "pages_ok": 5,
+ "pages_total": 5,
+ "excluded_count": 29,
+ "items": [
+  {
+   "rank": 1,
+   "repo": "vercel-labs/agent-desktop",
+   "url": "https://github.com/vercel-labs/agent-desktop",
+   "stars_week": 13712,
+   "stars_total": 20324,
+   "language": "Rust",
+   "topics": [
+    "accessibility",
+    "accessibility-api",
+    "ai-agents",
+    "automation",
+    "cli",
+    "computer-use",
+    "computer-use-agent",
+    "computer-use-agents"
+   ],
+   "description": "Computer use CLI for AI agents",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 2,
+   "repo": "cloudflare/security-audit-skill",
+   "url": "https://github.com/cloudflare/security-audit-skill",
+   "stars_week": 10600,
+   "stars_total": 67859,
+   "language": "JavaScript",
+   "topics": [],
+   "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 3,
+   "repo": "mattpocock/skills",
+   "url": "https://github.com/mattpocock/skills",
+   "stars_week": 9635,
+   "stars_total": 319553,
+   "language": "Shell",
+   "topics": [],
+   "description": "Skills for Real Engineers. Straight from my .agents directory.",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 4,
+   "repo": "NVIDIA/auto-ontology",
+   "url": "https://github.com/NVIDIA/auto-ontology",
+   "stars_week": 9327,
+   "stars_total": 10964,
+   "language": "Python",
+   "topics": [],
+   "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM ",
+   "one_liner": null,
+   "tag": "data"
+  },
+  {
+   "rank": 5,
+   "repo": "D4Vinci/Scrapling",
+   "url": "https://github.com/D4Vinci/Scrapling",
+   "stars_week": 8342,
+   "stars_total": 100455,
+   "language": "Python",
+   "topics": [
+    "ai",
+    "ai-scraping",
+    "automation",
+    "crawler",
+    "crawling",
+    "crawling-python",
+    "data",
+    "data-extraction"
+   ],
+   "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks",
+   "one_liner": null,
+   "tag": "data"
+  },
+  {
+   "rank": 6,
+   "repo": "milind-soni/OpenMausBot",
+   "url": "https://github.com/milind-soni/OpenMausBot",
+   "stars_week": 7621,
+   "stars_total": 19535,
+   "language": "TypeScript",
+   "topics": [
+    "ai-agents",
+    "claude-code",
+    "codex",
+    "computer-use",
+    "docker",
+    "electron",
+    "grok",
+    "grok-bot"
+   ],
+   "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 7,
+   "repo": "pbakaus/impeccable",
+   "url": "https://github.com/pbakaus/impeccable",
+   "stars_week": 7196,
+   "stars_total": 106768,
+   "language": "Rust",
+   "topics": [
+    "agent-skills",
+    "ai",
+    "anti-slop",
+    "design",
+    "slop"
+   ],
+   "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 8,
+   "repo": "thedotmack/claude-mem",
+   "url": "https://github.com/thedotmack/claude-mem",
+   "stars_week": 6443,
+   "stars_total": 115334,
+   "language": "TypeScript",
+   "topics": [
+    "ai",
+    "ai-agents",
+    "ai-memory",
+    "anthropic",
+    "artificial-intelligence",
+    "chromadb",
+    "claude",
+    "claude-agent-sdk"
+   ],
+   "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Clau",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 9,
+   "repo": "Nutlope/hallmark",
+   "url": "https://github.com/Nutlope/hallmark",
+   "stars_week": 6356,
+   "stars_total": 51675,
+   "language": "CSS",
+   "topics": [],
+   "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 10,
+   "repo": "Donchitos/Claude-Code-Game-Studios",
+   "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+   "stars_week": 5235,
+   "stars_total": 37471,
+   "language": "Shell",
+   "topics": [],
+   "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
+   "one_liner": null,
+   "tag": "coding-agent"
+  }
+ ]
+}

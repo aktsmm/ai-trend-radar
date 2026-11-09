@@ -15,6 +15,7 @@
 
 | 症状 | 見る場所 | 対処 |
 | --- | --- | --- |
+| 「今週の公式発表」に邦題・要約が付かない | PR の `data/reports/<週>/highlights_ja.json`、digest のログ | digest が `.work/pending.json` の `highlights[]` から書く(ゲート `check_highlights`: URL・文字数・要約中の数字が原題/抜粋にあること)。`report.json` に `excerpt` が無い古い週は要約なし(邦題のみ)。radar を再実行して report を作り直してから digest を動かす |
 | `github.html` が空・古い | `radar` のログの `github_weekly`、Issue `[source-health]` | GitHub Trending のページ構造が変わると取得 0 件で失敗する。`tests/test_github_top.py` の fixture と `collect/gh_weekly.parse_trending` を実ページに合わせて直す。失敗時は前週のファイルがそのまま残る |
 | サイトが更新されない | Actions: `pages` の最新実行、`about.html` の実行状況 | 失敗ならログ確認 → `workflow_dispatch` で再実行。`PAGES_ENABLED` と Pages の設定(Source: GitHub Actions) |
 | `pages` / `daily-tests` が `OVERFLOW:` で失敗 | ログの `OVERFLOW:` 行(週・entity・deck/slide のページ) | スライド本文が枠に収まっていない。`render.build_site` をローカルで実行して `site/deck.css` か該当文言を直す。**自動マージはこの失敗を検出して止まるはず**(2026-11 に `validate \| tee` の終了コード取り違えで素通りした。`tests/test_workflow_security.py` が再発を防ぐ) |

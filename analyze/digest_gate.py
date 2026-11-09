@@ -222,6 +222,54 @@ def check_glossary(items, enrichment, decks, base_terms=()):
     return errs
 
 
+JA_RE = re.compile(r"[぀-ヿ一-鿿]")
+NUM_RE = re.compile(r"\d[\d,.]*\d|\d")
+
+
+def check_highlights(items, report_highlights):
+    """Japanese title + short summary for the week's official announcements (official_highlights in report.json).
+    The summary may only restate the feed excerpt: it needs an excerpt, carries no URL, and every number in it must appear in the title / excerpt."""
+    errs = []
+    if not isinstance(items, list):
+        return ["highlights_ja: must be a list"]
+    src = {h["url"]: h for h in report_highlights}
+    if len(items) > 24:
+        errs.append("highlights_ja: at most 24 entries")
+    seen = set()
+    for it in items:
+        who = f"highlights_ja {str(it.get('url', '?'))[:60]}"
+        if not isinstance(it, dict) or set(it) != {"url", "title_ja", "summary"}:
+            errs.append(f"{who}: keys must be exactly url, title_ja, summary")
+            continue
+        h = src.get(it["url"])
+        if h is None:
+            errs.append(f"{who}: not one of this week's official highlights")
+            continue
+        if it["url"] in seen:
+            errs.append(f"{who}: duplicate")
+        seen.add(it["url"])
+        title, summary = it["title_ja"], it["summary"]
+        if not isinstance(title, str) or not 4 <= len(title) <= 60 or not JA_RE.search(title):
+            errs.append(f"{who}: title_ja must be 4-60 characters and Japanese")
+        if not isinstance(summary, str):
+            errs.append(f"{who}: summary must be a string")
+            continue
+        errs += _text_problems(who, it)
+        if summary:
+            excerpt = h.get("excerpt") or ""
+            if len(excerpt) < 40:
+                errs.append(f"{who}: summary needs a feed excerpt of at least 40 characters (leave it empty and keep only the title)")
+            if not 30 <= len(summary) <= 200:
+                errs.append(f"{who}: summary must be 30-200 characters")
+            if re.search(r"https?://|www\.", summary):
+                errs.append(f"{who}: summary must not contain a URL")
+            known = {n.replace(",", "") for n in NUM_RE.findall(h["title"] + " " + excerpt)}
+            for n in NUM_RE.findall(summary):
+                if n.replace(",", "") not in known:
+                    errs.append(f"{who}: number {n} is not in the feed title / excerpt")
+    return errs
+
+
 def check_batch(proposal, enrichment, window, current=None):
     """Returns (accepted_entity_ids, problems). `current` enables the diff-based change cap and deletion check."""
     keys = set(proposal["digest"]) | set(proposal["slides"]) | set(proposal["decks"])
@@ -272,6 +320,10 @@ def main(argv=None):
     if gp.exists():
         from analyze import glossary
         problems += check_glossary(json.loads(gp.read_text(encoding="utf-8")), enr, proposal["decks"], glossary.known_terms(exclude_week=a.week))
+    hp = Path(a.proposal or wk) / "highlights_ja.json"
+    if hp.exists():
+        report = json.loads((wk / "report.json").read_text(encoding="utf-8")) if (wk / "report.json").exists() else {}
+        problems += check_highlights(json.loads(hp.read_text(encoding="utf-8")), report.get("official_highlights", []))
     for p in problems:
         print("REJECT", p, file=sys.stderr)
     print(f"accepted {len(ok)} entities; {len(problems)} problem(s)")

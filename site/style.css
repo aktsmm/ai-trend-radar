@@ -85,3 +85,7 @@ small{font-size:12px}
 .gh-rank{flex:none;min-width:2.2em;text-align:center;font-weight:800;color:var(--blue);font-size:20px}
 .gh-stars{font-size:13px;color:var(--muted)}
 .gh-item p{margin:4px 0 0}
+
+.hl-orig{font-size:12px;color:var(--muted)}
+.hl-sum{font-size:14px;margin-top:2px}
+.nw{white-space:nowrap}

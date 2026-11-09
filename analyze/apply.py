@@ -26,6 +26,13 @@ def main():
     rp = ROOT / "data" / "reports" / d["window"]["label"] / "report.json"
     if rp.exists():
         d["official_highlights"] = json.loads(rp.read_text(encoding="utf-8")).get("official_highlights", d.get("official_highlights", []))
+    hj = ROOT / "data" / "reports" / d["window"]["label"] / "highlights_ja.json"
+    ja = {h["url"]: h for h in json.loads(hj.read_text(encoding="utf-8"))} if hj.exists() else {}
+    for h in d.get("official_highlights", []):
+        h.pop("excerpt", None)  # grounding text for the gate only; not needed on the site
+        if h["url"] in ja:
+            h["title_ja"] = str(ja[h["url"]].get("title_ja") or "")[:60]
+            h["summary"] = str(ja[h["url"]].get("summary") or "")[:200]
     tp = ROOT / "data" / "reports" / d["window"]["label"] / "themes.json"
     d["themes"] = json.loads(tp.read_text(encoding="utf-8")) if tp.exists() else []
     d["rejected_candidates"] = json.loads((ROOT / "data" / "reports" / d["window"]["label"] / "rejected_candidates.json").read_text(encoding="utf-8")) \

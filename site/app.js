@@ -92,9 +92,9 @@ if (TH.length) {
     <details class="ev"><summary>根拠にした項目と出典</summary><div class="chips">${th.signals.map(s => `<a href="#k-${esc(s.entity)}" title="${esc(s.note)}">${esc((byId[s.entity] || {keyword: s.entity}).keyword)}</a>`).join("")}<span class="src">出典: ${th.refs.map((u, i) => link(u, `[${i + 1}]`)).join(" ")}</span></div></details></div>`).join("");
 }
 const hl = D.official_highlights || [];
-$("hlsum").textContent = `今週の公式発表(タイトルのみ) ${hl.length}件`;
+$("hlsum").textContent = `今週の公式発表 ${hl.length}件`;
 try { const k = "trendradar.hl.open", el = $("hl"); if (localStorage.getItem(k) === "0") el.open = false; el.addEventListener("toggle", () => localStorage.setItem(k, el.open ? "1" : "0")); } catch (e) { /* storage unavailable: keep the default */ }
-$("hllist").innerHTML = hl.length ? `<table class="cand"><thead><tr><th>日付</th><th>発表元</th><th>タイトル</th></tr></thead><tbody>${hl.map(x => `<tr><td>${esc(x.date)}</td><td>${esc(x.vendor)}</td><td>${link(x.url, x.title)}</td></tr>`).join("")}</tbody></table>` : `<div class="empty">該当なし</div>`;
+$("hllist").innerHTML = hl.length ? `<table class="cand"><thead><tr><th>日付</th><th>発表元</th><th>タイトル</th></tr></thead><tbody>${hl.map(x => `<tr><td class="nw">${esc(x.date)}</td><td class="nw">${esc(x.vendor)}</td><td>${x.title_ja ? `${link(x.url, x.title_ja)}<div class="hl-orig">${esc(x.title)}</div>${x.summary ? `<div class="hl-sum">${esc(x.summary)}</div>` : ""}` : link(x.url, x.title)}</td></tr>`).join("")}</tbody></table>` : `<div class="empty">該当なし</div>`;
 render();
 function chosen() { return (window.__visible || []).filter(id => !excluded.has(id)); }
 function syncBar() {

@@ -60,9 +60,16 @@ def main():
                     "vendor_links": vendor_links(t)})
         if len(out) >= a.limit:
             break
+    # official announcements that are not published items: the digest writes a Japanese title + short summary for the ones without one yet
+    highlights = []
+    rp, hp = wk / "report.json", wk / "highlights_ja.json"
+    if rp.exists():
+        have = {h["url"] for h in json.loads(hp.read_text(encoding="utf-8"))} if hp.exists() else set()
+        highlights = [{k: h.get(k) for k in ("url", "title", "vendor", "date", "excerpt")}
+                      for h in json.loads(rp.read_text(encoding="utf-8")).get("official_highlights", []) if h["url"] not in have]
     work = ROOT / ".work"
     work.mkdir(exist_ok=True)
-    (work / "pending.json").write_text(json.dumps({"week": a.week, "window": data["window"], "candidates": out}, ensure_ascii=False, indent=1), encoding="utf-8")
+    (work / "pending.json").write_text(json.dumps({"week": a.week, "window": data["window"], "candidates": out, "highlights": highlights}, ensure_ascii=False, indent=1), encoding="utf-8")
     print(len(out), "pending candidates ->", work / "pending.json")
 
 

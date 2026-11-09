@@ -5,7 +5,7 @@
 ## 流れ
 
 1. `radar`: 毎日 05:00 JST に収集・スナップショット。月曜 00:30 JST に週次レポート、木曜 00:30 JST に中間更新(掲載済みは固定し、新しい候補だけ追加)→ コミット。GitHub の定期実行は数時間遅れる・落ちることがある。
-   - 同じ実行で `collect.gh_weekly` が GitHub Trending(週間、全体+python/typescript/rust/go)から AI 関連 repo だけを抜き出し(topics と説明文の語、総スター 500 未満は除外)、`analyze.github_top` が `data/reports/<週>/github_top.json`(上位 10 件、今週増えたスター数順)を書く。サイトは `github.html`(`api/v1/github.json`)。日本語の一言解説 `one_liner` は未設定なら原文(英語)の説明だけを出す。
+   - 同じ実行で `collect.gh_weekly` が GitHub Trending(週間、全体+python/typescript/rust/go)から AI 関連 repo だけを抜き出し(topics と説明文の語、総スター 500 未満は除外)、`analyze.github_top` が `data/reports/<週>/github_top.json`(上位 10 件、今週増えたスター数順)を書く。サイトは `github.html`(`api/v1/github.json`)。上位はカード化して最新ダイジェストにも載せる(`github_cards.json`: 上位 3 件は 1 件 1 カード、残りは分野ごとに 2〜3 件。週ごとに固定、`analyze.github_top` は `analyze.report` より前に動く)。日本語の一言解説 `one_liner` は未設定なら原文(英語)の説明だけを出す。
 2. レポート後に `digest`(gh-aw)を起動。未処理の候補を調べ、JSON を作り、`digest_gate` を通し(失敗なら最大 5 回修正)、PR を作る。毎回、その週の全掲載項目を見直してテーマも書き直す。
 3. `auto-merge-digest` が、**信頼できるコード(既定ブランチ)** で許可リスト・ゲート・テスト・ビルドを検証して自動マージ。PR のコードは実行しない。PR を開いたとき・30 分ごと(対象 PR がなければ軽い事前チェックで終了)・手動で動く。ボット作成の PR では PR 起動が発火しないことがあり、定期確認が本線。
 4. `pages` がビルドして公開(`PAGES_ENABLED=true` のとき)。公開サイトの週は「掲載ありの最新週」(`analyze.weeks.site_label`)で、新しい週は digest が merge されるまで前の週のまま。

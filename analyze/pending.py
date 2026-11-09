@@ -52,8 +52,17 @@ def main():
     first_party = {"announcement", "release_note", "model_card", "docs", "product_page"}
     todo = [t for t in data["trends"] if t["entity_id"] not in done and not t.get("deck")]
     todo.sort(key=lambda t: (0 if t["kind"] == "model" and t["primary"]["source_type"] in first_party else 1, t["rank"]))
+    # the week's GitHub cards must not starve behind models / tools: reserve up to 3 of the slots for them
+    gh = [t for t in todo if t["category"] == "github-trending"]
+    rest = [t for t in todo if t["category"] != "github-trending"]
+    reserve = min(len(gh), 3, a.limit)
+    pick = {id(t) for t in rest[:max(0, a.limit - reserve)] + gh[:reserve]}
     for t in todo:
-        out.append({"entity_id": t["entity_id"], "keyword": t["keyword"], "rank": t["rank"], "category": t["category"], "vendor": t.get("vendor"),
+        if len(pick) < a.limit:
+            pick.add(id(t))
+    todo = [t for t in todo if id(t) in pick]
+    for t in todo:
+        out.append({"entity_id": t["entity_id"], "members": t.get("members"), "keyword": t["keyword"], "rank": t["rank"], "category": t["category"], "vendor": t.get("vendor"),
                     "primary": {"url": t["primary"]["url"], "title": t["primary"]["title"], "published_at": t["primary"]["published_at"],
                                 "source_type": t["primary"]["source_type"]},
                     "mentions": [{"source": s["name"], "title": s["title"], "url": s["url"]} for s in t["sources"][:5]],

@@ -66,6 +66,8 @@ flowchart LR
 
 GitHub 急上昇(`site/github.html`、`api/v1/github.json`): キーワード単位の digest とは別の「まとめ面」。GitHub Trending(週間)から AI 関連 repo だけを機械的に抜き出し、今週増えたスター数で上位 10 件を並べる(`collect/gh_weekly.py` → `analyze/github_top.py` → `data/reports/<週>/github_top.json`)。スターは話題の目安であり品質の保証ではない旨を常時表示する。一次情報の裏取りをするカードは、従来どおり digest の `github-trending` カテゴリ(上位の一部)に限る。分類(分野タグ)は決定的なキーワード規則で、LLM は使わない。
 
+**GitHub 急上昇のカード化**: 同じ週の上位 repo は、トップの最新ダイジェストに他の項目と同じ形式のカード(要約・図解 1 枚・ブリーフ 2 枚)として載せる。nalyze/github_top.plan_cards が機械的に分ける: 上位 3 件は 1 repo 1 カード、残りは分野(コーディング支援・データ・実行基盤など)ごとに 2〜3 件ずつ(4 件なら 2+2、5 件なら 3+2、1 件だけの分野はその他に寄せる)。計画は週ごとに data/reports/<週>/github_cards.json に固定し、週中の更新で組み替えない。nalyze.report が計画を category=github-trending の trend として追加し(AI 以外を含む従来の trending 候補は置き換える)、nalyze.pending が最大 3 枠を確保、nalyze.prefetch が各 repo の README を取得して、digest が README だけを根拠に書く。repo には公開日がないため日付は付けず、検証状態は「一次情報(README)で部分確認」とし、スターは注目度の指標であって品質の保証ではないと明記する。
+
 確認状態の表示は 3 つを分ける: 「一次情報確認済み」(内容を公式情報で確認)、「リンク到達確認」(HTTP 200 を確認した日。内容の正しさではない)、要約は AI 下書き + 照合。
 
 ## 7. ワークフローと権限

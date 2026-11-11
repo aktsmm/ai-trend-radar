@@ -1,17 +1,53 @@
 {
  "week": "2026-W46",
- "generated_at": "2026-11-09T21:09:29Z",
+ "generated_at": "2026-11-11T22:11:56Z",
  "metric": "stars gained this week (github.com/trending, AI-filtered)",
  "pages_ok": 5,
  "pages_total": 5,
- "excluded_count": 29,
+ "excluded_count": 28,
  "items": [
   {
    "rank": 1,
+   "repo": "cloudflare/security-audit-skill",
+   "url": "https://github.com/cloudflare/security-audit-skill",
+   "stars_week": 10967,
+   "stars_total": 70289,
+   "language": "JavaScript",
+   "topics": [],
+   "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 2,
+   "repo": "mattpocock/skills",
+   "url": "https://github.com/mattpocock/skills",
+   "stars_week": 9872,
+   "stars_total": 321950,
+   "language": "Shell",
+   "topics": [],
+   "description": "Skills for Real Engineers. Straight from my .agents directory.",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 3,
+   "repo": "NVIDIA/auto-ontology",
+   "url": "https://github.com/NVIDIA/auto-ontology",
+   "stars_week": 9621,
+   "stars_total": 11808,
+   "language": "Python",
+   "topics": [],
+   "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM ",
+   "one_liner": null,
+   "tag": "data"
+  },
+  {
+   "rank": 4,
    "repo": "vercel-labs/agent-desktop",
    "url": "https://github.com/vercel-labs/agent-desktop",
-   "stars_week": 13712,
-   "stars_total": 20358,
+   "stars_week": 9502,
+   "stars_total": 22010,
    "language": "Rust",
    "topics": [
     "accessibility",
@@ -28,68 +64,11 @@
    "tag": "coding-agent"
   },
   {
-   "rank": 2,
-   "repo": "cloudflare/security-audit-skill",
-   "url": "https://github.com/cloudflare/security-audit-skill",
-   "stars_week": 10600,
-   "stars_total": 67936,
-   "language": "JavaScript",
-   "topics": [],
-   "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-   "one_liner": null,
-   "tag": "coding-agent"
-  },
-  {
-   "rank": 3,
-   "repo": "mattpocock/skills",
-   "url": "https://github.com/mattpocock/skills",
-   "stars_week": 9635,
-   "stars_total": 319613,
-   "language": "Shell",
-   "topics": [],
-   "description": "Skills for Real Engineers. Straight from my .agents directory.",
-   "one_liner": null,
-   "tag": "coding-agent"
-  },
-  {
-   "rank": 4,
-   "repo": "NVIDIA/auto-ontology",
-   "url": "https://github.com/NVIDIA/auto-ontology",
-   "stars_week": 9327,
-   "stars_total": 10977,
-   "language": "Python",
-   "topics": [],
-   "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM ",
-   "one_liner": null,
-   "tag": "data"
-  },
-  {
    "rank": 5,
-   "repo": "D4Vinci/Scrapling",
-   "url": "https://github.com/D4Vinci/Scrapling",
-   "stars_week": 8342,
-   "stars_total": 100485,
-   "language": "Python",
-   "topics": [
-    "ai",
-    "ai-scraping",
-    "automation",
-    "crawler",
-    "crawling",
-    "crawling-python",
-    "data",
-    "data-extraction"
-   ],
-   "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks",
-   "one_liner": null,
-   "tag": "data"
-  },
-  {
-   "rank": 6,
    "repo": "milind-soni/OpenMausBot",
    "url": "https://github.com/milind-soni/OpenMausBot",
-   "stars_week": 7621,
-   "stars_total": 19565,
+   "stars_week": 8951,
+   "stars_total": 21204,
    "language": "TypeScript",
    "topics": [
     "ai-agents",
@@ -106,11 +85,44 @@
    "tag": "coding-agent"
   },
   {
+   "rank": 6,
+   "repo": "meta/astryx",
+   "url": "https://github.com/meta/astryx",
+   "stars_week": 8384,
+   "stars_total": 24814,
+   "language": "TypeScript",
+   "topics": [],
+   "description": "An open source design system that's fully customizable and agent ready",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
    "rank": 7,
+   "repo": "D4Vinci/Scrapling",
+   "url": "https://github.com/D4Vinci/Scrapling",
+   "stars_week": 7291,
+   "stars_total": 101613,
+   "language": "Python",
+   "topics": [
+    "ai",
+    "ai-scraping",
+    "automation",
+    "crawler",
+    "crawling",
+    "crawling-python",
+    "data",
+    "data-extraction"
+   ],
+   "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks",
+   "one_liner": null,
+   "tag": "data"
+  },
+  {
+   "rank": 8,
    "repo": "pbakaus/impeccable",
    "url": "https://github.com/pbakaus/impeccable",
-   "stars_week": 7196,
-   "stars_total": 106803,
+   "stars_week": 6288,
+   "stars_total": 108266,
    "language": "Rust",
    "topics": [
     "agent-skills",
@@ -124,11 +136,25 @@
    "tag": "coding-agent"
   },
   {
-   "rank": 8,
+   "rank": 9,
+   "repo": "anthropics/skills",
+   "url": "https://github.com/anthropics/skills",
+   "stars_week": 5014,
+   "stars_total": 193081,
+   "language": "Python",
+   "topics": [
+    "agent-skills"
+   ],
+   "description": "Public repository for Agent Skills",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 10,
    "repo": "thedotmack/claude-mem",
    "url": "https://github.com/thedotmack/claude-mem",
-   "stars_week": 6443,
-   "stars_total": 115359,
+   "stars_week": 4473,
+   "stars_total": 116206,
    "language": "TypeScript",
    "topics": [
     "ai",
@@ -141,39 +167,6 @@
     "claude-agent-sdk"
    ],
    "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Clau",
-   "one_liner": null,
-   "tag": "coding-agent"
-  },
-  {
-   "rank": 9,
-   "repo": "Nutlope/hallmark",
-   "url": "https://github.com/Nutlope/hallmark",
-   "stars_week": 6356,
-   "stars_total": 51702,
-   "language": "CSS",
-   "topics": [],
-   "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-   "one_liner": null,
-   "tag": "coding-agent"
-  },
-  {
-   "rank": 10,
-   "repo": "Donchitos/Claude-Code-Game-Studios",
-   "url": "https://github.com/Donchitos/Claude-Code-Game-Studios",
-   "stars_week": 5235,
-   "stars_total": 37492,
-   "language": "Shell",
-   "topics": [
-    "ai-agents",
-    "ai-assisted-development",
-    "anthropic",
-    "claude",
-    "claude-code",
-    "game-design",
-    "game-development",
-    "gamedev"
-   ],
-   "description": "Turn Claude Code into a full game dev studio — 49 AI agents, 72 workflow skills, and a complete coordination system mirroring real studio hierarchy.",
    "one_liner": null,
    "tag": "coding-agent"
   }

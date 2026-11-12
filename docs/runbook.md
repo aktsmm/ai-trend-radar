@@ -16,6 +16,7 @@
 | 症状 | 見る場所 | 対処 |
 | --- | --- | --- |
 | 「今週の公式発表」に邦題・要約が付かない | PR の `data/reports/<週>/highlights_ja.json`、digest のログ | digest が `.work/pending.json` の `highlights[]` から書く(ゲート `check_highlights`: URL・文字数・要約中の数字が原題/抜粋にあること)。`report.json` に `excerpt` が無い古い週は要約なし(邦題のみ)。radar を再実行して report を作り直してから digest を動かす |
+| `[watchdog] pages が失敗しています` / `[watchdog] AI Trend Radar — weekly brief drafting が失敗しています` | Issue の「原因の抜粋」と実行ログ | watchdog の `fast-alert` が、pages / digest の実行が失敗で終わった時点で動く。直前の実行も失敗、またはログに `REJECT` / `OVERFLOW` / 例外がある(再実行では直らない)ときだけ Issue を出す(同名の Issue が開いていればコメントを追記)。定期の watchdog(6 時間ごと、実際は数時間遅れる)は一時的な失敗の再実行だけを担当する。コードの修正は人か AI が行う(自動では書き換えない) |
 | `github.html` が空・古い | `radar` のログの `github_weekly`、Issue `[source-health]` | GitHub Trending のページ構造が変わると取得 0 件で失敗する。`tests/test_github_top.py` の fixture と `collect/gh_weekly.parse_trending` を実ページに合わせて直す。失敗時は前週のファイルがそのまま残る |
 | サイトが更新されない | Actions: `pages` の最新実行、`about.html` の実行状況 | 失敗ならログ確認 → `workflow_dispatch` で再実行。`PAGES_ENABLED` と Pages の設定(Source: GitHub Actions) |
 | `pages` / `daily-tests` が `OVERFLOW:` で失敗 | ログの `OVERFLOW:` 行(週・entity・deck/slide のページ) | スライド本文が枠に収まっていない。`render.build_site` をローカルで実行して `site/deck.css` か該当文言を直す。**自動マージはこの失敗を検出して止まるはず**(2026-11 に `validate \| tee` の終了コード取り違えで素通りした。`tests/test_workflow_security.py` が再発を防ぐ) |

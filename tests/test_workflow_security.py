@@ -32,6 +32,20 @@ def problems(name, text):
 
 
 class WorkflowSecurityTest(unittest.TestCase):
+    def test_watchdog_alerts_immediately_on_a_failed_publishing_run(self):
+        # the scheduled watchdog runs every 6 h and is often hours late; a failed pages / digest run must raise an issue when it ends
+        text = (DIR / "watchdog.yml").read_text(encoding="utf-8").replace("\r\n", "\n")
+        self.assertIn("workflow_run:", text)
+        self.assertIn("types: [completed]", text)
+        self.assertIn("fast-alert:", text)
+        self.assertRegex(text, r"workflows: \[\"pages\", \"AI Trend Radar")
+        # workflow_run matches the workflows by their `name:`; a rename would silently disable the alert
+        for wf, nm in (("pages.yml", "pages"), ("digest.lock.yml", "AI Trend Radar — weekly brief drafting")):
+            self.assertRegex((DIR / wf).read_text(encoding="utf-8"), r"(?m)^name:\s*[\"\x27]?" + re.escape(nm) + r"[\"\x27]?\s*$")
+        # the scheduled job must not run for workflow_run events (it would retry/re-dispatch on every completion)
+        guard = text[text.index("  guard:"):]
+        self.assertIn("github.event_name != ", guard[:200])
+
     def test_radar_gates_the_regenerated_report_before_committing(self):
         # radar rewrites data/reports/<week>/report.json; committing it unchecked is how a stale translation file reached master and Pages failed
         text = (DIR / "radar.yml").read_text(encoding="utf-8").replace("\r\n", "\n")

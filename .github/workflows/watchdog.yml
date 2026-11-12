@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
+  workflow_run:  # react the moment a publishing run ends in failure instead of waiting for the next (often hours-late) scheduled check
+    workflows: ["pages", "AI Trend Radar — weekly brief drafting"]
+    types: [completed]
 permissions:
   actions: write
   contents: read
@@ -13,7 +16,30 @@ concurrency:
   group: watchdog
   cancel-in-progress: false
 jobs:
+  fast-alert:
+    if: github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      NAME: ${{ github.event.workflow_run.name }}
+      RUN_ID: ${{ github.event.workflow_run.id }}
+      RUN_URL: ${{ github.event.workflow_run.html_url }}
+    steps:
+      - name: Open an issue when the failure is not transient (repeated, or a deterministic gate failure)
+        run: |
+          # a retry that fails the same way is a code or data problem; so is a gate rejection or an overflow in the build
+          prev=$(gh run list -R "$REPO" --workflow "$NAME" --status completed --limit 3 --json databaseId,conclusion --jq "[.[] | select(.databaseId != $RUN_ID)] | .[0].conclusion // \"none\"")
+          gate=$(gh run view "$RUN_ID" -R "$REPO" --log-failed 2>/dev/null | grep -E "REJECT|OVERFLOW|Traceback|Error:|ValueError|KeyError" | sed -E "s/^[^Z]*Z //" | sort -u | head -8 | cut -c1-220)
+          if [ "$prev" != "failure" ] && [ -z "$gate" ]; then echo "first failure without a deterministic signature: leaving it to the retry"; exit 0; fi
+          title="[watchdog] ${NAME} が失敗しています"
+          open=$(gh issue list -R "$REPO" --state open --search "\"$title\" in:title" --json number --jq ".[0].number // empty")
+          fence='```'
+          body=$(printf "%s の実行が失敗しました(直前の実行: %s)。再実行では直らない種類の失敗の可能性が高いです(コードまたはデータ側)。\n\n実行ログ: %s\n\n原因の抜粋:\n%s\n%s\n%s\n" "$NAME" "$prev" "$RUN_URL" "$fence" "${gate:-(抜粋できませんでした。ログを確認してください)}" "$fence")
+          if [ -n "$open" ]; then gh issue comment "$open" -R "$REPO" --body "$body" || true; else gh issue create -R "$REPO" --title "$title" --body "$body" || true; fi
   guard:
+    if: github.event_name != 'workflow_run'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:

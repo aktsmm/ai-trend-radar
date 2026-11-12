@@ -46,6 +46,15 @@ class WorkflowSecurityTest(unittest.TestCase):
         guard = text[text.index("  guard:"):]
         self.assertIn("github.event_name != ", guard[:200])
 
+    def test_generated_prs_are_selected_by_label_not_by_branch_name(self):
+        # digest branches have been named digest/<week>-... and digest-<week>-...; a head: prefix search missed one form and PRs sat unnoticed
+        for f in sorted(DIR.glob("*.yml")):
+            if f.name.endswith(".lock.yml"):
+                continue
+            self.assertNotRegex(f.read_text(encoding="utf-8"), r"head:digest", f.name)
+        watchdog = (DIR / "watchdog.yml").read_text(encoding="utf-8")
+        self.assertIn("--label data --label automation", watchdog)
+
     def test_radar_gates_the_regenerated_report_before_committing(self):
         # radar rewrites data/reports/<week>/report.json; committing it unchecked is how a stale translation file reached master and Pages failed
         text = (DIR / "radar.yml").read_text(encoding="utf-8").replace("\r\n", "\n")

@@ -18,5 +18,9 @@
   {"url": "https://mistral.ai/news/build-with-studio/", "title_ja": "Le Chonk が頭脳を担い、Studio が実務を担う", "summary": "Mistral Studio と Le Chonk で、企業向けのエージェントやワークフロー、アプリを速く作って展開できる。モデルやデータ、インフラを自分で管理できると説明している。"},
   {"url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/", "title_ja": "Agile Deliberation: AI が人のグレーゾーンの定義を助ける方法", "summary": ""},
   {"url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/", "title_ja": "Google Antigravity によるエージェント型ケモインフォマティクス", "summary": "Google Antigravity と Cheminformatics Skills を使い、創薬の作業を速める方法を紹介している。化合物の検索や、新しい環状の分子の提案ができる。"},
-  {"url": "https://allenai.org/blog/statebench", "title_ja": "StateBench: 長い文書での状態変化を言語モデルが追えるかを測る", "summary": ""}
+  {"url": "https://allenai.org/blog/statebench", "title_ja": "StateBench: 長い文書での状態変化を言語モデルが追えるかを測る", "summary": ""},
+  {"url": "https://devblogs.microsoft.com/foundry/content-understanding-adds-gpt-5-6-gpt-6-and-gpt-6-1-choose-the-right-model-for-your-workload/", "title_ja": "Content Understanding が GPT-5.6、GPT-6、GPT-6.1 に対応", "summary": "Azure Content Understanding が GPT-5.6、GPT-6、GPT-6.1 の各モデルに対応した。文書、テキスト、音声、動画の処理で選べるモデルが増える。"},
+  {"url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/", "title_ja": "Gemini Decisions API: 速くて較正されたマルチモーダルの判断", "summary": "Google が Gemini Decisions API を発表した。モデル Gemini Decision を使い、速く較正されたマルチモーダルの判断を行う。"},
+  {"url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/", "title_ja": "AlphaGenome 2: 細胞が DNA を読む仕組みから病気を理解する", "summary": "AlphaGenome 2 は、DNA の配列やその変化が、特定のヒトの細胞や病気にどう影響するかを予測する。"},
+  {"url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/", "title_ja": "休眠ニューロンの再プログラムで AI エージェントにバックドアを仕込む手法", "summary": "Microsoft の研究者が Lazarus というバックドア手法を見つけた。モデルの休眠ニューロンを書き換え、隠しトリガーで悪意あるコマンドを実行させる。"}
 ]

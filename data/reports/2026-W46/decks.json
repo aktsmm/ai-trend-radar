@@ -497,5 +497,95 @@
       {"id": "s1", "title": "Nutlope/hallmark (README)", "publisher": "GitHub", "url": "https://github.com/Nutlope/hallmark"},
       {"id": "s2", "title": "Donchitos/Claude-Code-Game-Studios (README)", "publisher": "GitHub", "url": "https://github.com/Donchitos/Claude-Code-Game-Studios"}
     ]
+  },
+  "studio": {
+    "overview": {
+      "takeaway": "Mistral Studio に管理型エージェントとアプリが加わり、企業の業務へ載せやすくなった。",
+      "stat": {"value": "3 種類", "label": "エージェント・ワークフロー・アプリ"},
+      "steps": ["モデルをつなぐ", "エージェントを作る", "1 コマンドで展開"],
+      "changes": ["スキルやサンドボックスを備えたエージェントを作れる", "ワークフローにイベントのきっかけと流れの図が加わった"],
+      "facts": [
+        {"k": "提供元", "v": "Mistral"},
+        {"k": "展開先", "v": "クラウド / VPC / オンプレ"},
+        {"k": "連携", "v": "コネクタと MCP サーバー"},
+        {"k": "追加", "v": "観測と評価の機能"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "社内の業務にエージェントを載せたい企業の開発者",
+      "benefits": ["実行基盤を自作せず、エージェントの中身に集中できる", "データの置き場所を選べ、機密の扱いを検討しやすい"],
+      "how_to": ["公式ブログで機能と導入例を読む", "Mistral MCP server と手元のコーディングエージェントを試す", "小さな業務から展開する"],
+      "caveats": ["導入効果は Mistral と顧客の説明", "エージェントが使えるツールとデータの境界は自分で決める"],
+      "terms": [
+        {"t": "管理型エージェント", "d": "実行基盤を提供側が運用してくれるエージェント"},
+        {"t": "ワークフロー", "d": "処理の流れと人の承認などを決めた手順"},
+        {"t": "VPC", "d": "クラウド内に作る、自分専用の閉じたネットワーク"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "Le Chonk brings the brains. Studio puts it to work.", "publisher": "Mistral AI", "url": "https://mistral.ai/news/build-with-studio/", "date": "2026-11-05"}
+    ]
+  },
+  "macaq": {
+    "overview": {
+      "takeaway": "Huawei が、モデルを軽くする量子化ツール MACaQ を公開した。既存の GGUF の改善にも使える。",
+      "stat": {"value": "64 分", "label": "122B モデルの量子化(README の数字)"},
+      "steps": ["モデルを選ぶ", "量子化する", "動かす"],
+      "changes": ["テキスト・画像・動画・音声のモデルを同じ方式で量子化できる", "既存の GGUF を MACaQ-R で磨き直せる"],
+      "facts": [
+        {"k": "提供元", "v": "Huawei"},
+        {"k": "対応", "v": "llama.cpp / vLLM ほか"},
+        {"k": "形式", "v": "2〜4 ビット GGUF など"},
+        {"k": "ライセンス", "v": "Apache 2.0"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "ローカルや自社環境で大きなモデルを軽く動かしたい開発者",
+      "benefits": ["Qwen3.6-35B-A3B で同じ 22.36 GB のまま KL が小さい(発表の数字)", "vLLM の W4A4 で生成が BF16 比 2.58 倍(発表の数字)"],
+      "how_to": ["README で使うバックエンドを選ぶ", "バックエンドごとに Python 3.12 の環境を作る", "各 README の手順で量子化する"],
+      "caveats": ["数字は開発元の測定で、自分の用途での確認が必要", "Ascend での全体の実行には実行環境側の統合が要る"],
+      "terms": [
+        {"t": "量子化", "d": "数値を少ないビットで表し、モデルを小さくする方法"},
+        {"t": "GGUF", "d": "llama.cpp で使うモデルのファイル形式"},
+        {"t": "KL(KL ダイバージェンス)", "d": "元のモデルとの出力の違いを表す指標。小さいほど近い"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "huawei-csl/MACaQ (README)", "publisher": "GitHub", "url": "https://github.com/huawei-csl/MACaQ"}
+    ]
+  },
+  "tree-ising": {
+    "overview": {
+      "takeaway": "LLM を使わず、重みのビット操作だけで言語モデルの不具合を直す手法が提案された。",
+      "stat": {"value": "54.6%", "label": "MATH-500 の正答率(論文の数字)"},
+      "steps": ["不具合の向きを測る", "Ising 問題にする", "重みを直す"],
+      "changes": ["順伝播 4 回で済み、GPU 費用は約 0.90 ドルと報告された", "変更する重みが 13〜17% 少ない"],
+      "facts": [
+        {"k": "種別", "v": "論文"},
+        {"k": "対象", "v": "Qwen3.5-0.8B / 2B"},
+        {"k": "比較", "v": "エージェントの修復 51.7%"},
+        {"k": "解法", "v": "焼きなまし法など"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "小さなモデルの不具合の修正や、重みの編集に関心のある研究者",
+      "benefits": ["エージェントに 158 ターンかけさせずに済む可能性がある", "Qwen3.5-2B の GSM8K が 21.6% から 69.4% と報告"],
+      "how_to": ["論文ページの要旨を読む", "紹介されている GitHub リポジトリを確認する", "小さなモデルで試す"],
+      "caveats": ["論文の主張で、査読済みかは未確認", "確認されたのは小さなモデルと数学の評価のみ"],
+      "terms": [
+        {"t": "Ising 問題", "d": "多数の二択を組み合わせて最適な配置を探す問題"},
+        {"t": "BF16", "d": "モデルの重みでよく使う、16 ビットの数値の形式"},
+        {"t": "順伝播", "d": "入力をモデルに通して出力を得る計算"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits", "publisher": "Hugging Face Papers", "url": "https://huggingface.co/papers/2611.14210", "date": "2026-11-11"}
+    ]
   }
 }

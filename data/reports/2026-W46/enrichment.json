@@ -503,6 +503,74 @@
      "retrieved_at": "2026-11-10T06:30:00+09:00"
     }
    ]
+  },
+  "studio": {
+   "selection_reason": "dev-tool 代表。Mistral が公式ブログで、企業向け AI 基盤 Mistral Studio の管理型エージェント、ワークフロー、アプリ機能の拡充を発表。",
+   "verification_status": "verified",
+   "category": "dev-tool",
+   "kind": "product",
+   "display": "Mistral Studio",
+   "official_urls": [
+    "https://mistral.ai/news/build-with-studio/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Le Chonk brings the brains. Studio puts it to work.",
+     "evidence_urls": [
+      "https://mistral.ai/news/build-with-studio/"
+     ],
+     "evidence_published_at": "2026-11-05",
+     "result": "管理型エージェント、ワークフロー、アプリの追加、クラウド・VPC・オンプレミスでの展開、Mistral MCP server からの 1 コマンドでの展開、導入企業の名前を確認",
+     "retrieved_at": "2026-11-12T22:50:00+09:00"
+    }
+   ]
+  },
+  "macaq": {
+   "selection_reason": "local-runtime 代表。Huawei の研究チームが、テキスト・画像・動画・音声のモデルを量子化する MACaQ を公式リポジトリで公開。",
+   "verification_status": "partially_verified",
+   "category": "local-runtime",
+   "kind": "product",
+   "display": "MACaQ(モデルの量子化ツール)",
+   "official_urls": [
+    "https://github.com/huawei-csl/MACaQ"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "huawei-csl/MACaQ README",
+     "evidence_urls": [
+      "https://github.com/huawei-csl/MACaQ"
+     ],
+     "result": "llama.cpp・vLLM・Diffusers・PyTorch 向けの量子化、MACaQ-R による既存 GGUF の改善、Qwen3.6-35B-A3B での KL 値の比較、Apache License 2.0 を README で確認。公開日は取得できなかった",
+     "retrieved_at": "2026-11-12T22:50:00+09:00"
+    }
+   ]
+  },
+  "tree-ising": {
+   "selection_reason": "research 代表。言語モデルの重みを少数のビット操作で直す手法 Tree-Ising の論文が Hugging Face の論文ページで公開された。",
+   "verification_status": "partially_verified",
+   "category": "research",
+   "kind": "paper",
+   "display": "Tree-Ising",
+   "official_urls": [
+    "https://huggingface.co/papers/2611.14210"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits",
+     "evidence_urls": [
+      "https://huggingface.co/papers/2611.14210"
+     ],
+     "evidence_published_at": "2026-11-11",
+     "result": "要旨で、MATH-500 の 54.6% 対 51.7%、順伝播 4 回、GPU 費用約 0.90 ドル、Qwen3.5-2B の GSM8K 21.6% から 69.4% を確認。論文の主張で、査読済みかは確認できていない",
+     "retrieved_at": "2026-11-12T22:50:00+09:00"
+    }
+   ]
   }
  }
 }

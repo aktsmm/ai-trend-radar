@@ -281,5 +281,55 @@
       ],
       "official_url": "https://github.com/Nutlope/hallmark"
     }
+  ],
+  "studio": [
+    {
+      "title": "Mistral Studio に管理型エージェント",
+      "diagram_type": "infographic",
+      "icon": "layers",
+      "stat": {"value": "3 種類", "label": "エージェント・ワークフロー・アプリを同じ基盤で"},
+      "steps": ["モデルをつなぐ", "エージェントを作る", "1 コマンドで展開"],
+      "points": [
+        {"h": "何が起きた", "t": "Mistral が企業向け基盤 Studio に、管理型エージェントとアプリ機能を加えた"},
+        {"h": "何が変わる", "t": "スキルやサンドボックスを備えたエージェントを、実行基盤ごと任せられる"},
+        {"h": "嬉しいこと", "t": "クラウド、自社 VPC、オンプレミスのどれにでも展開できる"},
+        {"h": "注意", "t": "導入効果は Mistral と顧客の説明。任せる範囲の境界は自分で決める"}
+      ],
+      "official_url": "https://mistral.ai/news/build-with-studio/",
+      "source_date": "2026-11-05"
+    }
+  ],
+  "macaq": [
+    {
+      "title": "MACaQ: モデルを軽くする量子化",
+      "diagram_type": "infographic",
+      "icon": "chip",
+      "stat": {"value": "64 分", "label": "122B モデルの量子化時間(README の数字)"},
+      "steps": ["モデルを選ぶ", "量子化する", "llama.cpp や vLLM で動かす"],
+      "points": [
+        {"h": "何が起きた", "t": "Huawei が、テキストや画像、動画、音声のモデルを量子化するツールを公開した"},
+        {"h": "何が変わる", "t": "既存の GGUF を磨き直す MACaQ-R で、標準の llama.cpp のまま品質を上げられる"},
+        {"h": "嬉しいこと", "t": "Qwen3.6-35B-A3B で、同じ 22.36 GB のまま KL が小さくなったと発表"},
+        {"h": "注意", "t": "数字は開発元の測定。バックエンドごとの環境づくりが必要"}
+      ],
+      "official_url": "https://github.com/huawei-csl/MACaQ"
+    }
+  ],
+  "tree-ising": [
+    {
+      "title": "Tree-Ising: 重みをビット単位で直す",
+      "diagram_type": "infographic",
+      "icon": "spark",
+      "stat": {"value": "54.6%", "label": "MATH-500 の正答率(エージェントの修復は 51.7%)"},
+      "steps": ["不具合の向きを測る", "Ising 問題にする", "符号と桁を直す"],
+      "points": [
+        {"h": "何が起きた", "t": "LLM を使わず、重みの符号反転と桁ずらしでモデルを直す手法の論文が出た"},
+        {"h": "何が変わる", "t": "順伝播 4 回、GPU 費用は約 0.90 ドルで、エージェントによる修復に並ぶ結果と主張"},
+        {"h": "嬉しいこと", "t": "変更する重みが 13〜17% 少なく、小さな修正で済む"},
+        {"h": "注意", "t": "論文の主張で、小さなモデルと数学の評価のみ。査読は未確認"}
+      ],
+      "official_url": "https://huggingface.co/papers/2611.14210",
+      "source_date": "2026-11-11"
+    }
   ]
 }

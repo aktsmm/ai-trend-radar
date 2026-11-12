@@ -724,7 +724,7 @@
    "url_checks": {
     "https://github.com/anthropics/claude-code/releases/tag/v2.1.319": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [
@@ -1730,11 +1730,11 @@
    "url_checks": {
     "https://www.anthropic.com/claude-fable-and-mythos-5-2": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     },
     "https://aws.amazon.com/blogs/machine-learning/introducing-claude-fable-5-2-on-aws/": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [
@@ -2229,7 +2229,7 @@
    "url_checks": {
     "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [],
@@ -2783,7 +2783,7 @@
    "url_checks": {
     "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [
@@ -2974,7 +2974,42 @@
    ],
    "official_verified": true,
    "summary": "Le Chonk brings the brains. Studio puts it to work. ― Amazon SageMaker AI now supports IAM Identity Center (IdC) multi-region replication, enabling you to deploy Sa。5ソースで言及(代表: 「Donchitos/Claude-Code-Game-Studios」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Mistral Studio に管理型エージェント",
+     "diagram_type": "infographic",
+     "icon": "layers",
+     "stat": {
+      "value": "3 種類",
+      "label": "エージェント・ワークフロー・アプリを同じ基盤で"
+     },
+     "steps": [
+      "モデルをつなぐ",
+      "エージェントを作る",
+      "1 コマンドで展開"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Mistral が企業向け基盤 Studio に、管理型エージェントとアプリ機能を加えた"
+      },
+      {
+       "h": "何が変わる",
+       "t": "スキルやサンドボックスを備えたエージェントを、実行基盤ごと任せられる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "クラウド、自社 VPC、オンプレミスのどれにでも展開できる"
+      },
+      {
+       "h": "注意",
+       "t": "導入効果は Mistral と顧客の説明。任せる範囲の境界は自分で決める"
+      }
+     ],
+     "official_url": "https://mistral.ai/news/build-with-studio/",
+     "source_date": "2026-11-05"
+    }
+   ],
    "score_breakdown": {
     "github_new": 0.851,
     "github_trending": 0.884,
@@ -3028,12 +3063,135 @@
      "via": "watchlist"
     }
    ],
-   "display": "Studio",
+   "display": "Mistral Studio",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Le Chonk brings the brains. Studio puts it to work.",
+      "evidence_urls": [
+       "https://mistral.ai/news/build-with-studio/"
+      ],
+      "evidence_published_at": "2026-11-05",
+      "result": "管理型エージェント、ワークフロー、アプリの追加、クラウド・VPC・オンプレミスでの展開、Mistral MCP server からの 1 コマンドでの展開、導入企業の名前を確認",
+      "retrieved_at": "2026-11-12T22:50:00+09:00"
+     }
+    ],
+    "selection_reason": "dev-tool 代表。Mistral が公式ブログで、企業向け AI 基盤 Mistral Studio の管理型エージェント、ワークフロー、アプリ機能の拡充を発表。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://mistral.ai/news/build-with-studio/": {
+     "status": 200,
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Mistral が、企業向け AI 基盤 Mistral Studio に、管理型エージェントとアプリ、ワークフローなどの新機能を加えたと発表した。",
+     "エージェントは、手順をまとめたスキルやコードを動かすサンドボックス、作業を任せるサブエージェントを備えられる。",
+     "クラウド、自社の VPC、オンプレミスのどこにでも展開でき、Mistral MCP server から 1 コマンドで Studio に展開できると説明されている。"
+    ],
+    "why_trending": "Mistral の新しい大型モデルと同時に発表され、企業向けにエージェントを本番へ載せる基盤として注目された。",
+    "what_changes": [
+     "エージェント、ワークフロー、アプリを同じ基盤で作って動かせる",
+     "ワークフローにイベントのきっかけと、流れを見渡せる図が加わった",
+     "エージェントの動きの観測と評価の機能も加わった"
+    ],
+    "benefits": [
+     "実行の仕組みを自分で作らず、エージェントの中身に集中できる",
+     "データの置き場所を選べるので、機密の扱いに制約がある組織でも検討しやすい"
+    ],
+    "caveats": [
+     "発表の数字や導入効果は Mistral と顧客の説明で、自社で再現できるとは限らない",
+     "エージェントに任せる範囲は、使えるツールとデータの境界を決めて管理する必要がある",
+     "料金や提供条件は公式ページで別に確認する"
+    ],
+    "audience": "社内の業務にエージェントを載せたい企業の開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Mistral Studio に管理型エージェントとアプリが加わり、企業の業務へ載せやすくなった。",
+     "stat": {
+      "value": "3 種類",
+      "label": "エージェント・ワークフロー・アプリ"
+     },
+     "steps": [
+      "モデルをつなぐ",
+      "エージェントを作る",
+      "1 コマンドで展開"
+     ],
+     "changes": [
+      "スキルやサンドボックスを備えたエージェントを作れる",
+      "ワークフローにイベントのきっかけと流れの図が加わった"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Mistral"
+      },
+      {
+       "k": "展開先",
+       "v": "クラウド / VPC / オンプレ"
+      },
+      {
+       "k": "連携",
+       "v": "コネクタと MCP サーバー"
+      },
+      {
+       "k": "追加",
+       "v": "観測と評価の機能"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "社内の業務にエージェントを載せたい企業の開発者",
+     "benefits": [
+      "実行基盤を自作せず、エージェントの中身に集中できる",
+      "データの置き場所を選べ、機密の扱いを検討しやすい"
+     ],
+     "how_to": [
+      "公式ブログで機能と導入例を読む",
+      "Mistral MCP server と手元のコーディングエージェントを試す",
+      "小さな業務から展開する"
+     ],
+     "caveats": [
+      "導入効果は Mistral と顧客の説明",
+      "エージェントが使えるツールとデータの境界は自分で決める"
+     ],
+     "terms": [
+      {
+       "t": "管理型エージェント",
+       "d": "実行基盤を提供側が運用してくれるエージェント"
+      },
+      {
+       "t": "ワークフロー",
+       "d": "処理の流れと人の承認などを決めた手順"
+      },
+      {
+       "t": "VPC",
+       "d": "クラウド内に作る、自分専用の閉じたネットワーク"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Le Chonk brings the brains. Studio puts it to work.",
+      "publisher": "Mistral AI",
+      "url": "https://mistral.ai/news/build-with-studio/",
+      "date": "2026-11-05"
+     }
+    ]
+   }
   },
   {
    "rank": 12,
@@ -3684,11 +3842,11 @@
    "url_checks": {
     "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     },
     "https://deepmind.google/blog/gemini-omni-12-flash-fast-and-cost-effective-with-longer-clips/": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [
@@ -3967,7 +4125,7 @@
    "url_checks": {
     "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [
@@ -4093,8 +4251,8 @@
    "rank": 17,
    "keyword": "MACaQ",
    "entity_id": "macaq",
-   "kind": "paper",
-   "category": "research",
+   "kind": "product",
+   "category": "local-runtime",
    "tags": [
     "research"
    ],
@@ -4176,12 +4334,45 @@
     }
    ],
    "official_urls": [
-    "https://huggingface.co/papers/2611.10649",
     "https://github.com/huawei-csl/MACaQ"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "huawei-csl/MACaQ ― Weight-activation quantization can reduce the memory and compute cost of neural-network inference, but recent 。4ソースで言及(代表: 「MACaQ: Fast, Model Agnostic Calibrated Quantization for Low-」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "MACaQ: モデルを軽くする量子化",
+     "diagram_type": "infographic",
+     "icon": "chip",
+     "stat": {
+      "value": "64 分",
+      "label": "122B モデルの量子化時間(README の数字)"
+     },
+     "steps": [
+      "モデルを選ぶ",
+      "量子化する",
+      "llama.cpp や vLLM で動かす"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Huawei が、テキストや画像、動画、音声のモデルを量子化するツールを公開した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "既存の GGUF を磨き直す MACaQ-R で、標準の llama.cpp のまま品質を上げられる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "Qwen3.6-35B-A3B で、同じ 22.36 GB のまま KL が小さくなったと発表"
+      },
+      {
+       "h": "注意",
+       "t": "数字は開発元の測定。バックエンドごとの環境づくりが必要"
+      }
+     ],
+     "official_url": "https://github.com/huawei-csl/MACaQ"
+    }
+   ],
    "score_breakdown": {
     "hf_papers": 0.56,
     "github_new": 0.495,
@@ -4227,12 +4418,132 @@
    },
    "trend_label": "rising",
    "x_posts": [],
-   "display": "MACaQ",
+   "display": "MACaQ(モデルの量子化ツール)",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "huawei-csl/MACaQ README",
+      "evidence_urls": [
+       "https://github.com/huawei-csl/MACaQ"
+      ],
+      "result": "llama.cpp・vLLM・Diffusers・PyTorch 向けの量子化、MACaQ-R による既存 GGUF の改善、Qwen3.6-35B-A3B での KL 値の比較、Apache License 2.0 を README で確認。公開日は取得できなかった",
+      "retrieved_at": "2026-11-12T22:50:00+09:00"
+     }
+    ],
+    "selection_reason": "local-runtime 代表。Huawei の研究チームが、テキスト・画像・動画・音声のモデルを量子化する MACaQ を公式リポジトリで公開。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://github.com/huawei-csl/MACaQ": {
+     "status": 200,
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Huawei の研究チームが、AI モデルを軽くする量子化ツール MACaQ を公開した。テキスト、画像、動画、音声のモデルに使えると説明されている。",
+     "llama.cpp 向けは 2〜4 ビットの GGUF、vLLM 向けは W4A4 または重みのみの形式で出力できる。ライセンスは Apache License 2.0。",
+     "既存の GGUF を磨き直す MACaQ-R も同時に公開され、標準の llama.cpp でそのまま動くと説明されている。"
+    ],
+    "why_trending": "既存の人気 GGUF より品質が良いという主張が、ローカル LLM の界隈で話題になった。",
+    "what_changes": [
+     "モデルの種類ごとに別の道具を探さず、同じ方式で量子化できる",
+     "手持ちの GGUF を、形式を変えずに品質改善できる"
+    ],
+    "benefits": [
+     "Qwen3.6-35B-A3B で、同じ 22.36 GB のまま Unsloth の版より KL が小さい(発表の数字)",
+     "Qwen3.8-27B の vLLM では、BF16 比で読み込み 2.33 倍、生成 2.58 倍(発表の数字)"
+    ],
+    "caveats": [
+     "数字は開発元の README の測定で、手元のモデルと用途での確認が必要",
+     "バックエンドごとに Python 環境を分ける必要があり、手順はやや専門的",
+     "Ascend 向けのカーネルは別のプルリクエストで、全体の実行には実行環境側の統合が要る"
+    ],
+    "audience": "ローカルや自社環境で大きなモデルを軽く動かしたい開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Huawei が、モデルを軽くする量子化ツール MACaQ を公開した。既存の GGUF の改善にも使える。",
+     "stat": {
+      "value": "64 分",
+      "label": "122B モデルの量子化(README の数字)"
+     },
+     "steps": [
+      "モデルを選ぶ",
+      "量子化する",
+      "動かす"
+     ],
+     "changes": [
+      "テキスト・画像・動画・音声のモデルを同じ方式で量子化できる",
+      "既存の GGUF を MACaQ-R で磨き直せる"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Huawei"
+      },
+      {
+       "k": "対応",
+       "v": "llama.cpp / vLLM ほか"
+      },
+      {
+       "k": "形式",
+       "v": "2〜4 ビット GGUF など"
+      },
+      {
+       "k": "ライセンス",
+       "v": "Apache 2.0"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "ローカルや自社環境で大きなモデルを軽く動かしたい開発者",
+     "benefits": [
+      "Qwen3.6-35B-A3B で同じ 22.36 GB のまま KL が小さい(発表の数字)",
+      "vLLM の W4A4 で生成が BF16 比 2.58 倍(発表の数字)"
+     ],
+     "how_to": [
+      "README で使うバックエンドを選ぶ",
+      "バックエンドごとに Python 3.12 の環境を作る",
+      "各 README の手順で量子化する"
+     ],
+     "caveats": [
+      "数字は開発元の測定で、自分の用途での確認が必要",
+      "Ascend での全体の実行には実行環境側の統合が要る"
+     ],
+     "terms": [
+      {
+       "t": "量子化",
+       "d": "数値を少ないビットで表し、モデルを小さくする方法"
+      },
+      {
+       "t": "GGUF",
+       "d": "llama.cpp で使うモデルのファイル形式"
+      },
+      {
+       "t": "KL(KL ダイバージェンス)",
+       "d": "元のモデルとの出力の違いを表す指標。小さいほど近い"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "huawei-csl/MACaQ (README)",
+      "publisher": "GitHub",
+      "url": "https://github.com/huawei-csl/MACaQ"
+     }
+    ]
+   }
   },
   {
    "rank": 18,
@@ -4408,7 +4719,7 @@
    "url_checks": {
     "https://cohere.com/blog/embed-rerank-5-openrouter": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [],
@@ -4563,9 +4874,44 @@
    "official_urls": [
     "https://huggingface.co/papers/2611.14210"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits ― Weight-space programming, introduced in recent MIT work by Takehi et al., enables a frontier LLM agent to read。2ソースで言及(代表: 「Tree-Ising: Repairing Language Models with Bit-Level Ising E」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Tree-Ising: 重みをビット単位で直す",
+     "diagram_type": "infographic",
+     "icon": "spark",
+     "stat": {
+      "value": "54.6%",
+      "label": "MATH-500 の正答率(エージェントの修復は 51.7%)"
+     },
+     "steps": [
+      "不具合の向きを測る",
+      "Ising 問題にする",
+      "符号と桁を直す"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "LLM を使わず、重みの符号反転と桁ずらしでモデルを直す手法の論文が出た"
+      },
+      {
+       "h": "何が変わる",
+       "t": "順伝播 4 回、GPU 費用は約 0.90 ドルで、エージェントによる修復に並ぶ結果と主張"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "変更する重みが 13〜17% 少なく、小さな修正で済む"
+      },
+      {
+       "h": "注意",
+       "t": "論文の主張で、小さなモデルと数学の評価のみ。査読は未確認"
+      }
+     ],
+     "official_url": "https://huggingface.co/papers/2611.14210",
+     "source_date": "2026-11-11"
+    }
+   ],
    "score_breakdown": {
     "hf_papers": 0.8,
     "arxiv": 0.09
@@ -4593,10 +4939,132 @@
    "x_posts": [],
    "display": "Tree-Ising",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits",
+      "evidence_urls": [
+       "https://huggingface.co/papers/2611.14210"
+      ],
+      "evidence_published_at": "2026-11-11",
+      "result": "要旨で、MATH-500 の 54.6% 対 51.7%、順伝播 4 回、GPU 費用約 0.90 ドル、Qwen3.5-2B の GSM8K 21.6% から 69.4% を確認。論文の主張で、査読済みかは確認できていない",
+      "retrieved_at": "2026-11-12T22:50:00+09:00"
+     }
+    ],
+    "selection_reason": "research 代表。言語モデルの重みを少数のビット操作で直す手法 Tree-Ising の論文が Hugging Face の論文ページで公開された。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://huggingface.co/papers/2611.14210": {
+     "status": 200,
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "言語モデルの重みを、符号の反転と 2 の冪の桁ずらしだけで直す手法 Tree-Ising の論文が公開された。",
+     "重みの行ごとに小さな Ising 問題を作って GPU で解く。LLM は使わず、順伝播は 4 回で済み、GPU 費用は約 0.90 ドルと書かれている。",
+     "MIT の研究が示したエージェントによる修復(51.7%)に対し、MATH-500 で 54.6% だったと論文は主張している。"
+    ],
+    "why_trending": "LLM のエージェントより安く、少ない変更でモデルの不具合を直せるという主張が注目された。",
+    "what_changes": [
+     "モデルの重みの修復を、数学的な最適化問題として解けるようになる",
+     "エージェントに 158 ターンかけさせる方法に代わる選択肢が示された"
+    ],
+    "benefits": [
+     "変更する重みが 13〜17% 少なく、ビット反転は約 2.2〜2.3 分の 1(論文の数字)",
+     "Qwen3.5-2B の GSM8K が 21.6% から 69.4% に上がったと報告されている"
+    ],
+    "caveats": [
+     "論文の主張で、査読を経た結果かは確認できていない",
+     "確認されているのは小さなモデルと数学の問題で、他の用途への効果は分からない",
+     "重みを直接書き換えるので、本番のモデルに使う前に別の検証が要る"
+    ],
+    "audience": "小さなモデルの不具合の修正や、重みの編集に関心のある研究者・開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "LLM を使わず、重みのビット操作だけで言語モデルの不具合を直す手法が提案された。",
+     "stat": {
+      "value": "54.6%",
+      "label": "MATH-500 の正答率(論文の数字)"
+     },
+     "steps": [
+      "不具合の向きを測る",
+      "Ising 問題にする",
+      "重みを直す"
+     ],
+     "changes": [
+      "順伝播 4 回で済み、GPU 費用は約 0.90 ドルと報告された",
+      "変更する重みが 13〜17% 少ない"
+     ],
+     "facts": [
+      {
+       "k": "種別",
+       "v": "論文"
+      },
+      {
+       "k": "対象",
+       "v": "Qwen3.5-0.8B / 2B"
+      },
+      {
+       "k": "比較",
+       "v": "エージェントの修復 51.7%"
+      },
+      {
+       "k": "解法",
+       "v": "焼きなまし法など"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "小さなモデルの不具合の修正や、重みの編集に関心のある研究者",
+     "benefits": [
+      "エージェントに 158 ターンかけさせずに済む可能性がある",
+      "Qwen3.5-2B の GSM8K が 21.6% から 69.4% と報告"
+     ],
+     "how_to": [
+      "論文ページの要旨を読む",
+      "紹介されている GitHub リポジトリを確認する",
+      "小さなモデルで試す"
+     ],
+     "caveats": [
+      "論文の主張で、査読済みかは未確認",
+      "確認されたのは小さなモデルと数学の評価のみ"
+     ],
+     "terms": [
+      {
+       "t": "Ising 問題",
+       "d": "多数の二択を組み合わせて最適な配置を探す問題"
+      },
+      {
+       "t": "BF16",
+       "d": "モデルの重みでよく使う、16 ビットの数値の形式"
+      },
+      {
+       "t": "順伝播",
+       "d": "入力をモデルに通して出力を得る計算"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Tree-Ising: Repairing Language Models with Bit-Level Ising Edits",
+      "publisher": "Hugging Face Papers",
+      "url": "https://huggingface.co/papers/2611.14210",
+      "date": "2026-11-11"
+     }
+    ]
+   }
   },
   {
    "rank": 20,
@@ -4813,7 +5281,7 @@
    "url_checks": {
     "https://github.com/vercel-labs/agent-desktop": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [
@@ -5056,7 +5524,7 @@
    "url_checks": {
     "https://github.com/cloudflare/security-audit-skill": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [],
@@ -5288,7 +5756,7 @@
    "url_checks": {
     "https://github.com/mattpocock/skills": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [],
@@ -5537,11 +6005,11 @@
    "url_checks": {
     "https://github.com/NVIDIA/auto-ontology": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     },
     "https://github.com/D4Vinci/Scrapling": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [
@@ -5827,15 +6295,15 @@
    "url_checks": {
     "https://github.com/milind-soni/OpenMausBot": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     },
     "https://github.com/pbakaus/impeccable": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     },
     "https://github.com/thedotmack/claude-mem": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [
@@ -6110,11 +6578,11 @@
    "url_checks": {
     "https://github.com/Nutlope/hallmark": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     },
     "https://github.com/Donchitos/Claude-Code-Game-Studios": {
      "status": 200,
-     "checked_at": "2026-11-09T21:43:52.110711+00:00"
+     "checked_at": "2026-11-12T13:53:36.855575+00:00"
     }
    },
    "jp_reactions": [
@@ -6542,14 +7010,18 @@
    "title": "Content Understanding adds GPT-5.6, GPT-6, and GPT-6.1: Choose the right model for your workload",
    "url": "https://devblogs.microsoft.com/foundry/content-understanding-adds-gpt-5-6-gpt-6-and-gpt-6-1-choose-the-right-model-for-your-workload/",
    "date": "2026-11-12",
-   "feed": "microsoft-foundry-blog"
+   "feed": "microsoft-foundry-blog",
+   "title_ja": "Content Understanding が GPT-5.6、GPT-6、GPT-6.1 に対応",
+   "summary": "Azure Content Understanding が GPT-5.6、GPT-6、GPT-6.1 の各モデルに対応した。文書、テキスト、音声、動画の処理で選べるモデルが増える。"
   },
   {
    "vendor": "Google",
    "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
    "date": "2026-11-12",
-   "feed": "google-ai-blog"
+   "feed": "google-ai-blog",
+   "title_ja": "Gemini Decisions API: 速くて較正されたマルチモーダルの判断",
+   "summary": "Google が Gemini Decisions API を発表した。モデル Gemini Decision を使い、速く較正されたマルチモーダルの判断を行う。"
   },
   {
    "vendor": "NVIDIA",
@@ -6563,7 +7035,9 @@
    "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
    "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
    "date": "2026-11-12",
-   "feed": "deepmind-blog"
+   "feed": "deepmind-blog",
+   "title_ja": "AlphaGenome 2: 細胞が DNA を読む仕組みから病気を理解する",
+   "summary": "AlphaGenome 2 は、DNA の配列やその変化が、特定のヒトの細胞や病気にどう影響するかを予測する。"
   },
   {
    "vendor": "OpenAI",
@@ -6612,7 +7086,9 @@
    "title": "Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents",
    "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
    "date": "2026-11-11",
-   "feed": "microsoft-research-blog"
+   "feed": "microsoft-research-blog",
+   "title_ja": "休眠ニューロンの再プログラムで AI エージェントにバックドアを仕込む手法",
+   "summary": "Microsoft の研究者が Lazarus というバックドア手法を見つけた。モデルの休眠ニューロンを書き換え、隠しトリガーで悪意あるコマンドを実行させる。"
   },
   {
    "vendor": "Google",
@@ -6909,9 +7385,14 @@
     "nemotron3",
     "unsloth",
     "nvidia-blackwell",
-    "sglang"
+    "sglang",
+    "macaq"
    ],
    "signals": [
+    {
+     "entity": "macaq",
+     "note": "Qwen3.6-35B-A3B の GGUF を同じ 22.36 GB のまま改善する MACaQ-R が公開された"
+    },
     {
      "entity": "nvidia-blackwell",
      "note": "NVFP4 により、B200 1 枚で BF16 より最大 1.62 倍速くなると発表された"
@@ -6938,7 +7419,8 @@
     "https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-5-super-vl-is-now-available-in-amazon-sagemaker-jumpstart/",
     "https://github.com/unslothai/unsloth/releases/tag/v0.1.916-beta",
     "https://developer.nvidia.com/blog/speed-up-image-generation-with-flux-3-image-klein-on-nvidia-blackwell-gpus/",
-    "https://github.com/sgl-project/sglang/releases/tag/v0.5.23"
+    "https://github.com/sgl-project/sglang/releases/tag/v0.5.23",
+    "https://github.com/huawei-csl/MACaQ"
    ]
   },
   {
@@ -7027,6 +7509,9 @@
   "strata": "個人の小さなリポジトリのリリースで、取り上げる一次情報として十分な内容を確認できなかった。",
   "frontier3dbench": "取得できたのは論文ページのコメント中心の内容で、一次情報の本文を確認できなかった。",
   "muir": "論文ページの要約のみで、数値の根拠となる一次情報の本文を確認できなかった。",
+  "minimax": "取得できたのはプロンプト拡張モデルのカードとカタログのみで、公式の発表ページと日付を確認できなかった。",
+  "vllm": "リリース候補で、取得できた本文に取り上げる新機能の説明がなかった。",
+  "langgraph": "CLI のパッチ版のリリースで、取り上げる新機能を確認できなかった。",
   "optimization": "一般的な語で、広告の顧客事例ページ以外に一次情報の本文を確認できなかった。"
  }
 }

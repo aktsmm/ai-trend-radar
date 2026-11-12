@@ -113,7 +113,8 @@ def main():
             (out / f"{c['entity_id']}.json").write_text(json.dumps({"entity_id": c["entity_id"], "pages": pages}, ensure_ascii=False, indent=1), encoding="utf-8")
             print(c["entity_id"], [(p["url"][:60], p["status"]) for p in pages])
             continue
-        rec, raw = readme_record(url) or (None, "")
+        rec = readme_record(url)  # a plain repo URL: the README is the description; no HTML to follow
+        raw = ""
         if rec is None:
             rec, raw = fetch(url)
         pages.append(rec)

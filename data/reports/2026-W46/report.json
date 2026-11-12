@@ -6707,6 +6707,158 @@
    "date": "2026-11-06",
    "feed": "allenai-blog",
    "excerpt": ""
+  },
+  {
+   "vendor": "Mistral",
+   "title": "Le Chonk brings the brains. Studio puts it to work.",
+   "url": "https://mistral.ai/news/build-with-studio/",
+   "date": "2026-11-05",
+   "feed": "mistral-news",
+   "excerpt": "Build and deploy enterprise agents, workflows and apps faster with Mistral Studio and Le Chonk full control over your models, data and infrastructure."
+  },
+  {
+   "vendor": "AWS",
+   "title": "Single-shot and agentic retrieval with Amazon Bedrock Managed Knowledge Base",
+   "url": "https://aws.amazon.com/blogs/machine-learning/single-shot-and-agentic-retrieval-with-amazon-bedrock-managed-knowledge-base/",
+   "date": "2026-11-10",
+   "feed": "aws-ml-blog",
+   "excerpt": "Amazon Bedrock Managed Knowledge Base now supports single-shot RAG and retrieval-only requests through AgenticRetrieveStream, alongside agentic retrieval. This post explains how the maxAgentIteration parameter matches retrieval effort to each request, using an illustrative internal banking policy as"
+  },
+  {
+   "vendor": "Microsoft",
+   "title": "Copilot code review: API management and review overview updates",
+   "url": "https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates",
+   "date": "2026-11-07",
+   "feed": "github-changelog",
+   "excerpt": "You can now manage GitHub Copilot code review settings through the REST and GraphQL APIs, from enterprise policy down to individual repositories. Copilot&#8217;s review overview comment is now more compact,&#8230; The post Copilot code review: API management and review overview updates appeared firs"
+  },
+  {
+   "vendor": "NVIDIA",
+   "title": "Korea Advances Physical AI Across Industries With NVIDIA",
+   "url": "https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/",
+   "date": "2026-11-09",
+   "feed": "nvidia-blog",
+   "excerpt": "Tapping into the country’s strengths in manufacturing and engineering, NVIDIA is helping advance Korea’s physical AI ecosystem. The country’s industry leaders are applying accelerated computing, AI and simulation to everything from semiconductor manufacturing to robotics and autonomous vehicles. The"
+  },
+  {
+   "vendor": "Microsoft",
+   "title": "When one pass isn’t enough: agentic mode in Azure Content Understanding",
+   "url": "https://devblogs.microsoft.com/foundry/when-one-pass-isnt-enough-agentic-mode-in-azure-content-understanding/",
+   "date": "2026-11-10",
+   "feed": "microsoft-foundry-blog",
+   "excerpt": "Most document analysis takes one efficient pass. Learn how agentic mode gives AI a document-native harness for the hardest tasks, and when to choose it over standard mode. “Some books are to be tasted, others to be swallowed, and some few to be chewed and digested.” Francis Bacon, “Of Studies”, 1625"
+  },
+  {
+   "vendor": "OpenAI",
+   "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+   "url": "https://openai.com/index/partnering-with-hacktron",
+   "date": "2026-11-06",
+   "feed": "openai-news",
+   "excerpt": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI."
+  },
+  {
+   "vendor": "AWS",
+   "title": "How CrossnoKaye grounds physical AI with Amazon Bedrock AgentCore",
+   "url": "https://aws.amazon.com/blogs/machine-learning/how-crossnokaye-grounds-physical-ai-with-amazon-bedrock-agentcore/",
+   "date": "2026-11-10",
+   "feed": "aws-ml-blog",
+   "excerpt": "CrossnoKaye brought physical AI to heavy industry with Amazon Bedrock AgentCore. Its ATLAS platform and AURA agentic system ground AI reasoning in live plant data and run verifiable Python in isolated AgentCore sandboxes, giving plant engineers checkable, math-backed answers instead of model guesses"
+  },
+  {
+   "vendor": "AWS",
+   "title": "Pluggable Agentic AI Framework: A seven-layer composable enterprise agentic AI reference architecture on Amazon Bedrock AgentCore",
+   "url": "https://aws.amazon.com/blogs/machine-learning/pluggable-agentic-ai-framework-a-seven-layer-composable-enterprise-agentic-ai-reference-architecture-on-amazon-bedrock-agentcore/",
+   "date": "2026-11-10",
+   "feed": "aws-ml-blog",
+   "excerpt": "A seven-layer composable reference architecture for taking enterprise agentic AI from prototype to production on Amazon Bedrock AgentCore. Each layer has a stable contract, so you can swap technologies at any layer without redesigning the rest of the stack."
+  },
+  {
+   "vendor": "NVIDIA",
+   "title": "Make a Robot Arm Feel Weightless with NVIDIA Holoscan 5",
+   "url": "https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/feed/",
+   "date": "2026-11-10",
+   "feed": "nvidia-dev-blog",
+   "excerpt": "Picture guiding a robot arm by hand while its motors supply just enough torque to support its weight and keep the robot upright. This simple interaction, a..."
+  },
+  {
+   "vendor": "OpenAI",
+   "title": "Kuken Industries searches 70 years of drawings in minutes",
+   "url": "https://openai.com/index/kuken",
+   "date": "2026-11-09",
+   "feed": "openai-news",
+   "excerpt": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour."
+  },
+  {
+   "vendor": "Microsoft",
+   "title": "Copilot impact dashboard adds chat and VS Code agent usage",
+   "url": "https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage",
+   "date": "2026-11-07",
+   "feed": "github-changelog",
+   "excerpt": "The Agent adoption chart in the Copilot impact dashboard now includes Copilot Chat and the VS Code Agents window, so you can see engagement across nine Copilot experiences. The adoption&#8230; The post Copilot impact dashboard adds chat and VS Code agent usage appeared first on The GitHub Blog ."
+  },
+  {
+   "vendor": "Google",
+   "title": "Agentic cheminformatics with Google Antigravity",
+   "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+   "date": "2026-11-04",
+   "feed": "deepmind-blog",
+   "excerpt": "Learn how Google Antigravity and our Cheminformatics Skills accelerate drug discovery workflows, search compounds, and propose novel rigidified macrocycles."
+  },
+  {
+   "vendor": "OpenAI",
+   "title": "ChatGPT Enterprise now available in AWS Marketplace",
+   "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+   "date": "2026-11-10",
+   "feed": "openai-news",
+   "excerpt": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships."
+  },
+  {
+   "vendor": "Google",
+   "title": "Agile Deliberation: How AI helps humans define the gray areas",
+   "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+   "date": "2026-11-05",
+   "feed": "google-research-blog",
+   "excerpt": "Data Mining & Modeling"
+  },
+  {
+   "vendor": "NVIDIA",
+   "title": "NVIDIA Announces New Planned Investments in Korean Startups at the MSIT-NVIDIA AI Startup Partnership Forum",
+   "url": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/",
+   "date": "2026-11-09",
+   "feed": "nvidia-blog",
+   "excerpt": "Korea’s Ministry of Science and ICT and NVIDIA hosted the MSIT-NVIDIA AI Startup Partnership Forum at COEX. Ryu Je-myung, vice minister of science and ICT, joined NVIDIA leaders to meet with over 20 Korean startups across foundation models, physical AI, AI infrastructure and AI semiconductors. NVIDI"
+  },
+  {
+   "vendor": "HuggingFace",
+   "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+   "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+   "date": "2026-11-10",
+   "feed": "huggingface-blog",
+   "excerpt": ""
+  },
+  {
+   "vendor": "HuggingFace",
+   "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+   "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+   "date": "2026-11-09",
+   "feed": "huggingface-blog",
+   "excerpt": ""
+  },
+  {
+   "vendor": "HuggingFace",
+   "title": "ToyBlocks: A controlled world for robot learning and evaluation",
+   "url": "https://huggingface.co/blog/allenai/toyblocks",
+   "date": "2026-11-06",
+   "feed": "huggingface-blog",
+   "excerpt": ""
+  },
+  {
+   "vendor": "Ai2",
+   "title": "StateBench: Testing how language models track state changes over long documents",
+   "url": "https://allenai.org/blog/statebench",
+   "date": "2026-11-03",
+   "feed": "allenai-blog",
+   "excerpt": ""
   }
  ],
  "candidates_pool": 112

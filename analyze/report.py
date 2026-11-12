@@ -261,6 +261,20 @@ BROAD_FEEDS = {"meta-newsroom", "aws-whats-new", "github-changelog", "nvidia-blo
 AI_TITLE_RE = re.compile(r"\b(ai|a\.i\.|llm|gpt|gemini|claude|copilot|agent|agents|agentic|model|models|neural|inference|machine learning|generative|robot|robotics|gpu|mcp|bedrock|sagemaker|diffusion|openai|anthropic|deepseek|qwen|llama|mistral)\b", re.I)
 
 
+def pinned_highlights(week, current):
+    """Announcements that already have a Japanese title / summary (data/reports/<week>/highlights_ja.json) stay in the list after the rolling
+    window moves past them, with the feed excerpt they were written from (taken from the previous report of the week). Otherwise a regenerated
+    report would drop them and the gate would refuse the committed translations as no longer part of the week."""
+    d = ROOT / "data" / "reports" / week
+    try:
+        ja = {h["url"] for h in json.loads((d / "highlights_ja.json").read_text(encoding="utf-8"))}
+        old = json.loads((d / "report.json").read_text(encoding="utf-8")).get("official_highlights", [])
+    except (OSError, ValueError, KeyError, TypeError):
+        return []
+    have = {h["url"] for h in current}
+    return [h for h in old if h.get("url") in ja and h["url"] not in have]
+
+
 def official_highlights(items, trends, win, per_vendor=3, limit=24):
     """Vendor announcements (first-party feeds) in the window that are not already a published trend: title / vendor / date / link only.
     This keeps policy, safety, research and business news in view without a generated summary (nothing to verify beyond the title)."""
@@ -422,7 +436,7 @@ def build_report(items, status, now, week=None, xposts=None, vel=None, stoplist=
         "pending": [{"keyword": r["c"]["name"], "reason": "no primary source dated inside the window"} for r in sorted(pending, key=lambda r: -r["pre"])[:25]],
         "rejected": rejected, "merged_vendor_duplicates": merged, "stoplisted": sorted(set(dropped_stop)),
         "leads_unverified": leads,
-        "official_highlights": official_highlights(items, trends, win),
+        "official_highlights": (lambda cur: cur + pinned_highlights(win["label"], cur))(official_highlights(items, trends, win)),
         "candidates_pool": len(results),
     }
 

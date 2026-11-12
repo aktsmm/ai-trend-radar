@@ -32,6 +32,13 @@ def problems(name, text):
 
 
 class WorkflowSecurityTest(unittest.TestCase):
+    def test_radar_gates_the_regenerated_report_before_committing(self):
+        # radar rewrites data/reports/<week>/report.json; committing it unchecked is how a stale translation file reached master and Pages failed
+        text = (DIR / "radar.yml").read_text(encoding="utf-8").replace("\r\n", "\n")
+        report = text.index("Weekly report")
+        commit = text.index("Commit (durable")
+        self.assertIn("python -m analyze.digest_gate", text[report:commit])
+
     def test_every_public_page_and_its_local_assets_are_deployed(self):
         # pages.yml copies an explicit list into _site; a page missing from it builds fine and 404s on the live site
         root = DIR.parent.parent

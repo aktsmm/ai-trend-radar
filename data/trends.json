@@ -6685,6 +6685,177 @@
    "url": "https://allenai.org/blog/toyblocks",
    "date": "2026-11-06",
    "feed": "allenai-blog"
+  },
+  {
+   "vendor": "Mistral",
+   "title": "Le Chonk brings the brains. Studio puts it to work.",
+   "url": "https://mistral.ai/news/build-with-studio/",
+   "date": "2026-11-05",
+   "feed": "mistral-news",
+   "title_ja": "Le Chonk が頭脳を担い、Studio が実務を担う",
+   "summary": "Mistral Studio と Le Chonk で、企業向けのエージェントやワークフロー、アプリを速く作って展開できる。モデルやデータ、インフラを自分で管理できると説明している。"
+  },
+  {
+   "vendor": "AWS",
+   "title": "Single-shot and agentic retrieval with Amazon Bedrock Managed Knowledge Base",
+   "url": "https://aws.amazon.com/blogs/machine-learning/single-shot-and-agentic-retrieval-with-amazon-bedrock-managed-knowledge-base/",
+   "date": "2026-11-10",
+   "feed": "aws-ml-blog",
+   "title_ja": "Bedrock マネージド ナレッジベースの単発検索とエージェント検索",
+   "summary": "Amazon Bedrock Managed Knowledge Base が、単発の RAG と検索のみのリクエストに対応した。maxAgentIteration で検索の手間を調整する方法を解説している。"
+  },
+  {
+   "vendor": "Microsoft",
+   "title": "Copilot code review: API management and review overview updates",
+   "url": "https://github.blog/changelog/2026-11-06-copilot-code-review-api-management-and-review-overview-updates",
+   "date": "2026-11-07",
+   "feed": "github-changelog",
+   "title_ja": "Copilot コードレビュー: API 管理とレビュー概要の更新",
+   "summary": "GitHub Copilot のコードレビューの設定を、REST と GraphQL の API で管理できるようになった。企業のポリシーから個別のリポジトリまで対象で、レビュー概要のコメントも短くなった。"
+  },
+  {
+   "vendor": "NVIDIA",
+   "title": "Korea Advances Physical AI Across Industries With NVIDIA",
+   "url": "https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/",
+   "date": "2026-11-09",
+   "feed": "nvidia-blog",
+   "title_ja": "NVIDIA と進める韓国のフィジカル AI の産業展開",
+   "summary": "NVIDIA が、製造や工学に強い韓国のフィジカル AI の取り組みを支援している。半導体製造からロボット、自動運転まで、高速計算や AI、シミュレーションが使われている。"
+  },
+  {
+   "vendor": "Microsoft",
+   "title": "When one pass isn’t enough: agentic mode in Azure Content Understanding",
+   "url": "https://devblogs.microsoft.com/foundry/when-one-pass-isnt-enough-agentic-mode-in-azure-content-understanding/",
+   "date": "2026-11-10",
+   "feed": "microsoft-foundry-blog",
+   "title_ja": "Azure Content Understanding のエージェントモード",
+   "summary": "文書の分析では通常は一度の処理で済むが、難しい作業向けにエージェントモードがある。標準モードとの使い分けを紹介している。"
+  },
+  {
+   "vendor": "OpenAI",
+   "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+   "url": "https://openai.com/index/partnering-with-hacktron",
+   "date": "2026-11-06",
+   "feed": "openai-news",
+   "title_ja": "Hacktron と提携し OpenAI のシステムの脆弱性を探す",
+   "summary": "OpenAI が Hacktron と提携し、脆弱性の発見や外部サービスとの接続のテストを行う。最先端の AI も使って、防御を強化する。"
+  },
+  {
+   "vendor": "AWS",
+   "title": "How CrossnoKaye grounds physical AI with Amazon Bedrock AgentCore",
+   "url": "https://aws.amazon.com/blogs/machine-learning/how-crossnokaye-grounds-physical-ai-with-amazon-bedrock-agentcore/",
+   "date": "2026-11-10",
+   "feed": "aws-ml-blog",
+   "title_ja": "CrossnoKaye が Bedrock AgentCore でフィジカル AI を支える方法",
+   "summary": "CrossnoKaye が Amazon Bedrock AgentCore で、重工業向けのフィジカル AI を実現した事例。ATLAS と AURA が稼働中の工場のデータに基づいて AI に推論させ、隔離された環境で Python を動かす。"
+  },
+  {
+   "vendor": "AWS",
+   "title": "Pluggable Agentic AI Framework: A seven-layer composable enterprise agentic AI reference architecture on Amazon Bedrock AgentCore",
+   "url": "https://aws.amazon.com/blogs/machine-learning/pluggable-agentic-ai-framework-a-seven-layer-composable-enterprise-agentic-ai-reference-architecture-on-amazon-bedrock-agentcore/",
+   "date": "2026-11-10",
+   "feed": "aws-ml-blog",
+   "title_ja": "Bedrock AgentCore 上の七層のエージェント AI 参照構成",
+   "summary": "企業のエージェント AI を試作から本番へ進めるための、七層の参照アーキテクチャを紹介している。各層の契約が安定していて、層ごとに技術を入れ替えられるという。"
+  },
+  {
+   "vendor": "NVIDIA",
+   "title": "Make a Robot Arm Feel Weightless with NVIDIA Holoscan 5",
+   "url": "https://developer.nvidia.com/blog/make-a-robot-arm-feel-weightless-with-nvidia-holoscan-5/feed/",
+   "date": "2026-11-10",
+   "feed": "nvidia-dev-blog",
+   "title_ja": "NVIDIA Holoscan 5 でロボットアームを軽く感じさせる",
+   "summary": ""
+  },
+  {
+   "vendor": "OpenAI",
+   "title": "Kuken Industries searches 70 years of drawings in minutes",
+   "url": "https://openai.com/index/kuken",
+   "date": "2026-11-09",
+   "feed": "openai-news",
+   "title_ja": "Kuken Industries、70年分の図面を数分で検索",
+   "summary": "Kuken Industries が OpenAI API を使い、冷却塔の 70 年分の図面を検索している。修理に必要な図面を、一時間近くかかっていたところ 4.5 分で見つけられるという。"
+  },
+  {
+   "vendor": "Microsoft",
+   "title": "Copilot impact dashboard adds chat and VS Code agent usage",
+   "url": "https://github.blog/changelog/2026-11-06-copilot-impact-dashboard-adds-chat-and-vs-code-agent-usage",
+   "date": "2026-11-07",
+   "feed": "github-changelog",
+   "title_ja": "Copilot の影響ダッシュボードにチャットと VS Code エージェントの利用を追加",
+   "summary": "Copilot impact dashboard の Agent adoption チャートに、Copilot Chat と VS Code の Agents ウィンドウが加わった。九種類の Copilot の使い方での利用状況を見られる。"
+  },
+  {
+   "vendor": "Google",
+   "title": "Agentic cheminformatics with Google Antigravity",
+   "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+   "date": "2026-11-04",
+   "feed": "deepmind-blog",
+   "title_ja": "Google Antigravity によるエージェント型ケモインフォマティクス",
+   "summary": "Google Antigravity と Cheminformatics Skills を使い、創薬の作業を速める方法を紹介している。化合物の検索や、新しい環状の分子の提案ができる。"
+  },
+  {
+   "vendor": "OpenAI",
+   "title": "ChatGPT Enterprise now available in AWS Marketplace",
+   "url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+   "date": "2026-11-10",
+   "feed": "openai-news",
+   "title_ja": "ChatGPT Enterprise が AWS Marketplace で利用可能に",
+   "summary": "ChatGPT Enterprise が AWS Marketplace から購入できるようになった。既存の AWS の購買・請求の関係を使えるため、調達を簡単にしたい組織が対象。"
+  },
+  {
+   "vendor": "Google",
+   "title": "Agile Deliberation: How AI helps humans define the gray areas",
+   "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+   "date": "2026-11-05",
+   "feed": "google-research-blog",
+   "title_ja": "Agile Deliberation: AI が人のグレーゾーンの定義を助ける方法",
+   "summary": ""
+  },
+  {
+   "vendor": "NVIDIA",
+   "title": "NVIDIA Announces New Planned Investments in Korean Startups at the MSIT-NVIDIA AI Startup Partnership Forum",
+   "url": "https://blogs.nvidia.com/blog/korean-startup-investments-msit/",
+   "date": "2026-11-09",
+   "feed": "nvidia-blog",
+   "title_ja": "NVIDIA、韓国のスタートアップへの新たな投資計画を発表",
+   "summary": "韓国の科学技術情報通信部と NVIDIA が、COEX でスタートアップ連携フォーラムを開いた。基盤モデルやフィジカル AI などの 20 社以上の韓国スタートアップと会った。"
+  },
+  {
+   "vendor": "HuggingFace",
+   "title": "Nemotron-Personas-Finance-Japan: A Synthetic Dataset Capturing Japan's Demographics and Financial Context",
+   "url": "https://huggingface.co/blog/nvidia/nemotron-personas-finance-japan",
+   "date": "2026-11-10",
+   "feed": "huggingface-blog",
+   "title_ja": "Nemotron-Personas-Finance-Japan: 日本の人口と金融の合成データセット",
+   "summary": ""
+  },
+  {
+   "vendor": "HuggingFace",
+   "title": "Your Experts Have Partners. There's HOPE for Keeping Them Together",
+   "url": "https://huggingface.co/blog/amazon/higher-order-pruning-experts",
+   "date": "2026-11-09",
+   "feed": "huggingface-blog",
+   "title_ja": "専門家をまとめて残す HOPE(高次の枝刈り)",
+   "summary": ""
+  },
+  {
+   "vendor": "HuggingFace",
+   "title": "ToyBlocks: A controlled world for robot learning and evaluation",
+   "url": "https://huggingface.co/blog/allenai/toyblocks",
+   "date": "2026-11-06",
+   "feed": "huggingface-blog",
+   "title_ja": "ToyBlocks: ロボット学習と評価のための制御された世界",
+   "summary": ""
+  },
+  {
+   "vendor": "Ai2",
+   "title": "StateBench: Testing how language models track state changes over long documents",
+   "url": "https://allenai.org/blog/statebench",
+   "date": "2026-11-03",
+   "feed": "allenai-blog",
+   "title_ja": "StateBench: 長い文書での状態変化を言語モデルが追えるかを測る",
+   "summary": ""
   }
  ],
  "candidates_pool": 112,

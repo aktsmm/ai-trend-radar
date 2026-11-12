@@ -36,6 +36,9 @@ jobs:
           python -m analyze.report
           python -m analyze.apply
           python -m analyze.validate
+          # the regenerated report must still satisfy the gate that Pages and the auto-merge run (a window that moved on once left committed
+          # translations without their source and stopped publishing); fail here instead of committing data that breaks the deploy
+          python -m analyze.digest_gate
       - name: Commit (durable daily snapshots + weekly report)
         id: commit
         run: |

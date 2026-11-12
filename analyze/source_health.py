@@ -11,7 +11,8 @@ from collect.common import ROOT
 
 WEEKS = 3
 # feeds that legitimately publish rarely: they are only reported when they fail, never for being quiet
-QUIET_OK = {"minimax-news", "together-blog", "deepmind-blog", "google-ai-blog", "meta-newsroom", "apple-ml-research"}
+QUIET_OK = {"minimax-news", "together-blog", "deepmind-blog", "google-ai-blog", "meta-newsroom", "apple-ml-research",
+             "ml-explore/mlx"}  # mlx tags a release every 2-4 weeks (v0.32.4 on 2026-10-14): three quiet weeks are normal, not a markup change
 
 
 def findings():

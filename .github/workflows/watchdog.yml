@@ -78,7 +78,8 @@ jobs:
           gh workflow run digest.lock.yml -R "$REPO" -f week="$WEEK"
       - name: Unstick digest PRs (re-run auto-merge once; open an issue if still open after 24 h)
         run: |
-          gh pr list -R "$REPO" --state open --search "head:digest/" --json number,createdAt,headRefName --jq '.[] | "\(.number) \(.createdAt)"' | while read n created; do
+          # select by label like auto-merge-digest does: branch names vary (digest/..., digest-...), and a prefix search silently missed the newer ones
+          gh pr list -R "$REPO" --state open --label data --label automation --json number,createdAt,headRefName --jq '.[] | "\(.number) \(.createdAt)"' | while read n created; do
             age=$(( ($(date +%s) - $(date -d "$created" +%s)) / 3600 ))
             echo "digest PR #$n open for ${age} h"
             if [ "$age" -ge 4 ]; then gh workflow run auto-merge-digest.yml -R "$REPO" >/dev/null 2>&1 || true; fi

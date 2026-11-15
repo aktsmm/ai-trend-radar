@@ -1,0 +1,128 @@
+{
+  "week": "2026-W47",
+  "selected_on": "2026-11-16",
+  "selection_policy": "候補6件のうち、一次情報の本文を確認できた5件(model 2 / github-trending 3)を掲載。glm-5-3 は NVIDIA の利用手順の記事で、開発元の発表ではないため見送り。",
+  "entities": {
+    "gemini-4-hydrogen": {
+      "selection_reason": "model 代表。Google が公式ブログで、速さと効率を重視した Gemini 4 Hydrogen を発表し、Gemini API や Google 検索などで提供開始。",
+      "verification_status": "verified",
+      "official_urls": [
+        "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+        "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+        "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/"
+      ],
+      "display": "Gemini 4 Hydrogen",
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "Introducing Gemini 4 Hydrogen",
+          "evidence_urls": [
+            "https://deepmind.google/blog/introducing-gemini-4-hydrogen/"
+          ],
+          "evidence_published_at": "2026-11-12",
+          "result": "コーディングとエージェント向けの高速モデルであること、100 万トークンの文脈、入力 1.50 ドル・出力 7.50 ドル(100 万トークンあたり)、4 段階の思考レベル、Antigravity の Orchestrator を確認",
+          "retrieved_at": "2026-11-16T05:30:00+09:00"
+        },
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+          "evidence_urls": [
+            "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/"
+          ],
+          "evidence_published_at": "2026-11-12",
+          "result": "Google 検索に Gemini 4 Hydrogen が導入され、複数の質問を同時に調べ、表や画像で答えると説明されていることを確認",
+          "retrieved_at": "2026-11-16T05:30:00+09:00"
+        }
+      ]
+    },
+    "deepseek-v4-1-flash": {
+      "selection_reason": "model 代表。AWS が公式発表で、DeepSeek-V4.1-Flash などのオープンウェイトモデルを SageMaker JumpStart で提供開始と発表。",
+      "verification_status": "partially_verified",
+      "official_urls": [
+        "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/"
+      ],
+      "display": "DeepSeek-V4.1-Flash",
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "DeepSeek-V4-Pro, DeepSeek-V4-Flash, and DeepSeek-V4.1-Flash models now available on Amazon SageMaker JumpStart",
+          "evidence_urls": [
+            "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/"
+          ],
+          "evidence_published_at": "2026-11-11",
+          "result": "3 モデルが MIT ライセンスのオープンウェイト MoE であること、V4.1-Flash の 100 万トークン文脈と最大出力 384K、SageMaker JumpStart での提供を確認(DeepSeek 自身の発表ではなく AWS の発表)",
+          "retrieved_at": "2026-11-16T05:30:00+09:00"
+        }
+      ]
+    },
+    "gh-meta-astryx": {
+      "selection_reason": "GitHub 急上昇のリポジトリ。Meta が公開した、人と AI エージェントが同じ手順で使えるデザインシステム。",
+      "verification_status": "partially_verified",
+      "category": "github-trending",
+      "kind": "repo",
+      "display": "meta/astryx",
+      "official_urls": [
+        "https://github.com/meta/astryx"
+      ],
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "meta/astryx README",
+          "evidence_urls": [
+            "https://github.com/meta/astryx"
+          ],
+          "result": "150 以上のコンポーネント、React 19 以上が必要、ベータ版、CLI、MIT ライセンスを README で確認",
+          "retrieved_at": "2026-11-16T05:30:00+09:00"
+        }
+      ]
+    },
+    "gh-pingdotgg-t3code": {
+      "selection_reason": "GitHub 急上昇のリポジトリ。Claude Code や Codex など複数のコーディングエージェントを 1 つの画面で操作できるオープンソースのアプリ。",
+      "verification_status": "partially_verified",
+      "category": "github-trending",
+      "kind": "repo",
+      "display": "pingdotgg/t3code",
+      "official_urls": [
+        "https://github.com/pingdotgg/t3code"
+      ],
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "pingdotgg/t3code README",
+          "evidence_urls": [
+            "https://github.com/pingdotgg/t3code"
+          ],
+          "result": "対応エージェント、デスクトップ・Web・スマホ対応、スレッドごとの worktree、MIT ライセンス、導入手順を README で確認",
+          "retrieved_at": "2026-11-16T05:30:00+09:00"
+        }
+      ]
+    },
+    "gh-milind-soni-openmausbot": {
+      "selection_reason": "GitHub 急上昇のリポジトリ。複数の AI ボットをチャットアプリのように使える、オープンソースの個人エージェント。",
+      "verification_status": "partially_verified",
+      "category": "github-trending",
+      "kind": "repo",
+      "display": "OpenMausBot",
+      "official_urls": [
+        "https://github.com/milind-soni/OpenMausBot"
+      ],
+      "checks": [
+        {
+          "mcp_name": "page-capture",
+          "tool": "fetch",
+          "query": "milind-soni/OpenMausBot README",
+          "evidence_urls": [
+            "https://github.com/milind-soni/OpenMausBot"
+          ],
+          "result": "自分の PC 上の claude / codex CLI を使うこと、実行前の承認カード、Apache 2.0、独立したプロジェクトで各社と無関係との記載を README で確認",
+          "retrieved_at": "2026-11-16T05:30:00+09:00"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "term": "思考レベル",
+    "kind": "仕組み",
+    "short": "モデルが考える深さを選ぶ設定",
+    "explain": "AI が答える前にどれだけ時間をかけて考えるかの設定。深くするほど難しい問題に強くなる一方、待ち時間と費用が増える。用途に合わせて選ぶ。",
+    "entity": "gemini-4-hydrogen",
+    "ref": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/"
+  },
+  {
+    "term": "デザインシステム",
+    "kind": "基礎",
+    "short": "画面の部品と作り方の決まりの集まり",
+    "explain": "ボタンや表などの画面部品と、色や余白などの決まりをまとめたもの。誰が作っても見た目と使い心地が揃い、開発も速くなる。",
+    "entity": "gh-meta-astryx",
+    "ref": "https://github.com/meta/astryx"
+  },
+  {
+    "term": "OAuth",
+    "kind": "仕組み",
+    "short": "パスワードを渡さずに連携を許可する方式",
+    "explain": "アプリに自分のパスワードを教えず、必要な範囲だけ別のサービスの利用を許可する仕組み。許可はあとから取り消せるため、連携が安全になる。",
+    "entity": "gh-milind-soni-openmausbot",
+    "ref": "https://github.com/milind-soni/OpenMausBot"
+  }
+]

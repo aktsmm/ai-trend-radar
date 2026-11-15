@@ -1,0 +1,84 @@
+{
+  "gemini-4-hydrogen": [
+    {
+      "title": "Gemini 4 Hydrogen、速さ重視",
+      "diagram_type": "infographic",
+      "icon": "spark",
+      "stat": {"value": "100 万トークン", "label": "文脈の長さ(価格は全域で一律)"},
+      "steps": ["思考レベルを選ぶ", "Hydrogen が実行", "検索や API で使う"],
+      "points": [
+        {"h": "何が起きた", "t": "Google が、速さと効率を重視した Gemini 4 Hydrogen を発表した"},
+        {"h": "何が変わる", "t": "Orchestrator が、Carbon などの上位モデルと自動で使い分ける"},
+        {"h": "嬉しいこと", "t": "旧版 3.8 Flash より、2.5 倍速く終わると発表された"},
+        {"h": "注意", "t": "性能の数字は Google の発表。自分の作業で確かめる"}
+      ],
+      "official_url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+      "source_date": "2026-11-12"
+    }
+  ],
+  "deepseek-v4-1-flash": [
+    {
+      "title": "DeepSeek V4.1 Flash が AWS に",
+      "diagram_type": "infographic",
+      "icon": "cloud",
+      "stat": {"value": "3 モデル", "label": "SageMaker JumpStart で提供"},
+      "steps": ["JumpStart を開く", "モデルを選ぶ", "自分の環境に導入"],
+      "points": [
+        {"h": "何が起きた", "t": "AWS が DeepSeek の 3 モデルを SageMaker JumpStart で提供開始した"},
+        {"h": "何が変わる", "t": "オープンウェイトの大型モデルを、数クリックで導入できる"},
+        {"h": "嬉しいこと", "t": "MIT ライセンスで、100 万トークンの文脈に対応すると説明されている"},
+        {"h": "注意", "t": "AWS の発表で、DeepSeek 自身の発表ではない"}
+      ],
+      "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/",
+      "source_date": "2026-11-11"
+    }
+  ],
+  "gh-meta-astryx": [
+    {
+      "title": "Astryx、人も AI も使うデザイン部品",
+      "diagram_type": "infographic",
+      "icon": "layers",
+      "stat": {"value": "13,660", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["パッケージを入れる", "テーマを選ぶ", "部品を使う"],
+      "points": [
+        {"h": "何が起きた", "t": "Meta が、社内で育てたデザインシステムをオープンソースで公開した"},
+        {"h": "何が変わる", "t": "150 以上の部品を、人も AI も同じ文書と CLI で使える"},
+        {"h": "試し方", "t": "npm install で本体とテーマを入れ、CSS を読み込む"},
+        {"h": "注意", "t": "スター数は注目度の目安。ベータ版で React 19 以上が必要"}
+      ],
+      "official_url": "https://github.com/meta/astryx"
+    }
+  ],
+  "gh-pingdotgg-t3code": [
+    {
+      "title": "T3 Code、エージェントの操作盤",
+      "diagram_type": "infographic",
+      "icon": "terminal",
+      "stat": {"value": "9,668", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["アプリを入れる", "エージェントにログイン", "スレッドで指示"],
+      "points": [
+        {"h": "何が起きた", "t": "複数のコーディングエージェントを操作する、オープンソースのアプリが注目された"},
+        {"h": "何が変わる", "t": "Claude Code や Codex を 1 つの画面で切り替えて使える"},
+        {"h": "試し方", "t": "brew や winget で入れるか、npx t3@latest を実行する"},
+        {"h": "注意", "t": "スター数は注目度の目安。エージェントに許す操作は自分で決める"}
+      ],
+      "official_url": "https://github.com/pingdotgg/t3code"
+    }
+  ],
+  "gh-milind-soni-openmausbot": [
+    {
+      "title": "OpenMausBot、ボットのチーム",
+      "diagram_type": "infographic",
+      "icon": "plug",
+      "stat": {"value": "6,413", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["アプリを入れる", "ボットを作る", "許可カードで承認"],
+      "points": [
+        {"h": "何が起きた", "t": "AI ボットをチャットのように使える、オープンソースのアプリが注目された"},
+        {"h": "何が変わる", "t": "ボットごとにモデルやアプリ連携を変え、連絡先のように使い分ける"},
+        {"h": "試し方", "t": "公式サイトか Releases からアプリを入れ、手元の claude や codex を使う"},
+        {"h": "注意", "t": "スター数は注目度の目安。PC の操作を許す範囲は慎重に決める"}
+      ],
+      "official_url": "https://github.com/milind-soni/OpenMausBot"
+    }
+  ]
+}

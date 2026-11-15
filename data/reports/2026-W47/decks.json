@@ -1,0 +1,148 @@
+{
+  "gemini-4-hydrogen": {
+    "overview": {
+      "takeaway": "Google が、速さ重視の Gemini 4 Hydrogen を Gemini API や検索などで提供し始めた。",
+      "stat": {"value": "100 万トークン", "label": "文脈の長さ(価格は全域で一律)"},
+      "steps": ["思考レベルを選ぶ", "Hydrogen が実行", "検索や API で使う"],
+      "changes": ["思考レベルを 4 段階から選べる", "Orchestrator が複数モデルを自動で使い分ける"],
+      "facts": [
+        {"k": "提供元", "v": "Google"},
+        {"k": "入力価格", "v": "100 万トークン 1.50 ドル"},
+        {"k": "出力価格", "v": "100 万トークン 7.50 ドル"},
+        {"k": "提供先", "v": "Gemini API、検索ほか"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "コーディング支援やエージェントを作る開発者、Gemini を日常で使う人",
+      "benefits": ["旧版 3.8 Flash より 2.5 倍速いと発表された", "検索で、複数の質問を同時に調べて表で答える"],
+      "how_to": ["Google AI Studio や Gemini API で試す", "思考レベルを変えて速さと品質を比べる", "Gemini アプリや検索で使ってみる"],
+      "caveats": ["性能や速度の数字は Google の発表", "難しい推論は上位の Carbon や Argon 向け"],
+      "terms": [
+        {"t": "思考レベル", "d": "考える深さの設定。深いほど遅く高価"},
+        {"t": "Orchestrator", "d": "作業中にモデルを自動で切り替える Antigravity の機能"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "sources": [
+      {"id": "s1", "title": "Introducing Gemini 4 Hydrogen", "publisher": "Google DeepMind", "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/", "date": "2026-11-12"},
+      {"id": "s2", "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen", "publisher": "Google", "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/", "date": "2026-11-12"}
+    ]
+  },
+  "deepseek-v4-1-flash": {
+    "overview": {
+      "takeaway": "DeepSeek の 3 つのオープンウェイトモデルが、AWS の SageMaker JumpStart で使える。",
+      "stat": {"value": "3 モデル", "label": "V4-Pro、V4-Flash、V4.1-Flash"},
+      "steps": ["JumpStart を開く", "モデルを選ぶ", "自分の環境に導入"],
+      "changes": ["数クリックで AWS 上に導入できる", "3 つとも MIT ライセンスと説明されている"],
+      "facts": [
+        {"k": "提供元", "v": "AWS(開発は DeepSeek)"},
+        {"k": "方式", "v": "MoE のオープンウェイト"},
+        {"k": "文脈長", "v": "100 万トークン"},
+        {"k": "ライセンス", "v": "MIT"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "AWS 上で LLM を動かしたい開発者・基盤担当者",
+      "benefits": ["自前のサーバー構築なしで大型モデルを試せる", "MIT ライセンスで利用条件を確認しやすい"],
+      "how_to": ["SageMaker コンソールで JumpStart を開く", "または Python SDK でモデルを導入する"],
+      "caveats": ["AWS の発表で、DeepSeek 自身の発表は未確認", "費用と品質は自分の用途で測る"],
+      "terms": [
+        {"t": "MoE", "d": "必要な専門家だけを動かして計算を減らす方式"},
+        {"t": "オープンウェイト", "d": "学習済みの重みが公開され、自分で動かせること"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "DeepSeek-V4-Pro, V4-Flash, V4.1-Flash now on Amazon SageMaker JumpStart", "publisher": "AWS", "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/", "date": "2026-11-11"}
+    ]
+  },
+  "gh-meta-astryx": {
+    "overview": {
+      "takeaway": "Meta が、人も AI も同じ手順で使えるデザインシステム Astryx を公開した。",
+      "stat": {"value": "13,660", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["パッケージを入れる", "テーマを選ぶ", "部品を使う"],
+      "changes": ["150 以上の部品と CLI がまとまっている", "テーマは CSS 変数の上書きで変えられる"],
+      "facts": [
+        {"k": "公開元", "v": "Meta"},
+        {"k": "状態", "v": "ベータ版"},
+        {"k": "必要環境", "v": "React 19 以上"},
+        {"k": "ライセンス", "v": "MIT"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "React で画面を作る開発者・デザイナー",
+      "benefits": ["統一された見た目の画面を早く作れる", "既存のスタイルの書き方のまま上書きできる"],
+      "how_to": ["npm install で本体とテーマを入れる", "CSS を読み込み、テーマを設定する", "astryx の CLI で部品の文書を見る"],
+      "caveats": ["ベータ版で、仕様が変わる可能性がある", "スター数は注目度で、品質の保証ではない"],
+      "terms": [
+        {"t": "デザインシステム", "d": "画面の部品と作り方の決まりをまとめたもの"},
+        {"t": "StyleX", "d": "Astryx が内部で使うスタイルの書き方"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "meta/astryx", "publisher": "GitHub", "url": "https://github.com/meta/astryx"}
+    ]
+  },
+  "gh-pingdotgg-t3code": {
+    "overview": {
+      "takeaway": "T3 Code は、複数のコーディングエージェントを 1 画面で操作するオープンソースのアプリ。",
+      "stat": {"value": "9,668", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["アプリを入れる", "エージェントにログイン", "スレッドで指示"],
+      "changes": ["Claude Code や Codex を切り替えて使える", "スマホからも次の手順を承認できる"],
+      "facts": [
+        {"k": "公開元", "v": "pingdotgg"},
+        {"k": "対応", "v": "Claude Code、Codex ほか"},
+        {"k": "端末", "v": "PC、Web、スマホ"},
+        {"k": "ライセンス", "v": "MIT"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "複数のコーディングエージェントを併用する開発者",
+      "benefits": ["途中でモデルを変えたり、作業を渡したりできる", "差分確認から PR 作成まで 1 か所で進む"],
+      "how_to": ["brew や winget で入れるか npx t3@latest を実行", "claude auth login などでエージェントにログイン"],
+      "caveats": ["ログイン済みのエージェントが 1 つ要る", "許す操作は権限モードの文書で確認する"],
+      "terms": [
+        {"t": "worktree", "d": "同じ Git リポジトリの別作業用フォルダ"},
+        {"t": "ACP", "d": "エージェントをつなぐための共通の取り決め"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "pingdotgg/t3code", "publisher": "GitHub", "url": "https://github.com/pingdotgg/t3code"}
+    ]
+  },
+  "gh-milind-soni-openmausbot": {
+    "overview": {
+      "takeaway": "OpenMausBot は、AI ボットの一団をチャット感覚で使えるオープンソースのアプリ。",
+      "stat": {"value": "6,413", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["アプリを入れる", "ボットを作る", "許可カードで承認"],
+      "changes": ["ボットごとにモデルやアプリ連携を持つ", "危険な操作は許可・拒否のカードで確認する"],
+      "facts": [
+        {"k": "作者", "v": "milind-soni"},
+        {"k": "動作", "v": "手元の claude / codex"},
+        {"k": "保存先", "v": "~/.openmausbot"},
+        {"k": "ライセンス", "v": "Apache 2.0"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "複数のエージェントをチャット感覚で使い分けたい人",
+      "benefits": ["既存のログインや契約をそのまま使える", "Gmail や Slack などを OAuth で連携できる"],
+      "how_to": ["Releases から自分の OS 向けを入れる", "手元の claude や codex の CLI を使う設定にする"],
+      "caveats": ["PC の操作を許す機能は範囲を慎重に決める", "各社とは無関係の独立したプロジェクト"],
+      "terms": [
+        {"t": "OAuth", "d": "パスワードを渡さずアプリ連携を許可する方式"},
+        {"t": "CLI", "d": "文字で操作するコマンドラインの道具"}
+      ],
+      "refs": ["s1"]
+    },
+    "sources": [
+      {"id": "s1", "title": "milind-soni/OpenMausBot", "publisher": "GitHub", "url": "https://github.com/milind-soni/OpenMausBot"}
+    ]
+  }
+}

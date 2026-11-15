@@ -1621,12 +1621,47 @@
    ],
    "official_urls": [
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
-    "https://openrouter.ai/google/gemini-4-hydrogen",
-    "https://openrouter.ai/google/gemini-4-hydrogen:batch"
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+    "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/"
    ],
    "official_verified": true,
    "summary": "Introducing Gemini 4 Hydrogen ― We are bringing Gemini 4 Hydrogen to Google Search globally to provide you with more helpful, visual, and intu。4ソースで言及(代表: 「Google Search gets a major upgrade with Gemini 4 Hydrogen」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Gemini 4 Hydrogen、速さ重視",
+     "diagram_type": "infographic",
+     "icon": "spark",
+     "stat": {
+      "value": "100 万トークン",
+      "label": "文脈の長さ(価格は全域で一律)"
+     },
+     "steps": [
+      "思考レベルを選ぶ",
+      "Hydrogen が実行",
+      "検索や API で使う"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Google が、速さと効率を重視した Gemini 4 Hydrogen を発表した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "Orchestrator が、Carbon などの上位モデルと自動で使い分ける"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "旧版 3.8 Flash より、2.5 倍速く終わると発表された"
+      },
+      {
+       "h": "注意",
+       "t": "性能の数字は Google の発表。自分の作業で確かめる"
+      }
+     ],
+     "official_url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+     "source_date": "2026-11-12"
+    }
+   ],
    "score_breakdown": {
     "hackernews": 0.952,
     "devto": 0.27,
@@ -1672,10 +1707,34 @@
      "via": "watchlist"
     }
    ],
-   "display": "Google gemini-4-hydrogen",
+   "display": "Gemini 4 Hydrogen",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Introducing Gemini 4 Hydrogen",
+      "evidence_urls": [
+       "https://deepmind.google/blog/introducing-gemini-4-hydrogen/"
+      ],
+      "evidence_published_at": "2026-11-12",
+      "result": "コーディングとエージェント向けの高速モデルであること、100 万トークンの文脈、入力 1.50 ドル・出力 7.50 ドル(100 万トークンあたり)、4 段階の思考レベル、Antigravity の Orchestrator を確認",
+      "retrieved_at": "2026-11-16T05:30:00+09:00"
+     },
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+      "evidence_urls": [
+       "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/"
+      ],
+      "evidence_published_at": "2026-11-12",
+      "result": "Google 検索に Gemini 4 Hydrogen が導入され、複数の質問を同時に調べ、表や画像で答えると説明されていることを確認",
+      "retrieved_at": "2026-11-16T05:30:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。Google が公式ブログで、速さと効率を重視した Gemini 4 Hydrogen を発表し、Gemini API や Google 検索などで提供開始。"
    },
    "jp_reactions": [
     {
@@ -1684,7 +1743,127 @@
      "url": "https://forest.watch.impress.co.jp/docs/news/2156117.html",
      "date": "2026-11-13"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://deepmind.google/blog/introducing-gemini-4-hydrogen/": {
+     "status": 200,
+     "checked_at": "2026-11-15T22:39:26.405741+00:00"
+    },
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/": {
+     "status": 200,
+     "checked_at": "2026-11-15T22:39:26.405741+00:00"
+    },
+    "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/": {
+     "status": 200,
+     "checked_at": "2026-11-15T22:39:26.405741+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Google が、速さと効率を重視した Gemini 4 Hydrogen を発表した。日常のコーディングや、エージェントによる作業向けのモデル。",
+     "Gemini API、Google AI Studio、Gemini アプリ、Google 検索などで使える。価格は 100 万トークンの文脈全体で一律、入力 100 万トークンあたり 1.50 ドル、出力 7.50 ドルと発表された。",
+     "Antigravity の新機能 Orchestrator は、Carbon や Hydrogen などのモデルを 1 つの作業の中で自動で切り替える。"
+    ],
+    "why_trending": "Google の公式ブログと Hacker News、OpenRouter に並び、検索を含む幅広い提供が話題。",
+    "what_changes": [
+     "思考レベルを low から xhigh の 4 段階で選び、速さと品質を調整できる",
+     "Orchestrator が、難しい判断と実行でモデルを使い分ける"
+    ],
+    "benefits": [
+     "旧版 3.8 Flash より、高の設定で 2.5 倍速く作業を終えると発表された",
+     "Google 検索で、複数の質問を同時に調べ、表や画像で答えが返る"
+    ],
+    "caveats": [
+     "速度や性能の数字は Google の発表。自分の作業での確認が必要",
+     "最上位の Carbon や Argon とは役割が違い、難しい推論は上位モデル向けと説明されている"
+    ],
+    "audience": "コーディング支援やエージェントを作る開発者、Gemini を日常で使う人"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Google が、速さ重視の Gemini 4 Hydrogen を Gemini API や検索などで提供し始めた。",
+     "stat": {
+      "value": "100 万トークン",
+      "label": "文脈の長さ(価格は全域で一律)"
+     },
+     "steps": [
+      "思考レベルを選ぶ",
+      "Hydrogen が実行",
+      "検索や API で使う"
+     ],
+     "changes": [
+      "思考レベルを 4 段階から選べる",
+      "Orchestrator が複数モデルを自動で使い分ける"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Google"
+      },
+      {
+       "k": "入力価格",
+       "v": "100 万トークン 1.50 ドル"
+      },
+      {
+       "k": "出力価格",
+       "v": "100 万トークン 7.50 ドル"
+      },
+      {
+       "k": "提供先",
+       "v": "Gemini API、検索ほか"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "コーディング支援やエージェントを作る開発者、Gemini を日常で使う人",
+     "benefits": [
+      "旧版 3.8 Flash より 2.5 倍速いと発表された",
+      "検索で、複数の質問を同時に調べて表で答える"
+     ],
+     "how_to": [
+      "Google AI Studio や Gemini API で試す",
+      "思考レベルを変えて速さと品質を比べる",
+      "Gemini アプリや検索で使ってみる"
+     ],
+     "caveats": [
+      "性能や速度の数字は Google の発表",
+      "難しい推論は上位の Carbon や Argon 向け"
+     ],
+     "terms": [
+      {
+       "t": "思考レベル",
+       "d": "考える深さの設定。深いほど遅く高価"
+      },
+      {
+       "t": "Orchestrator",
+       "d": "作業中にモデルを自動で切り替える Antigravity の機能"
+      }
+     ],
+     "refs": [
+      "s1",
+      "s2"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "Introducing Gemini 4 Hydrogen",
+      "publisher": "Google DeepMind",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+      "date": "2026-11-12"
+     },
+     {
+      "id": "s2",
+      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen",
+      "publisher": "Google",
+      "url": "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/",
+      "date": "2026-11-12"
+     }
+    ]
+   }
   },
   {
    "rank": 7,
@@ -2773,13 +2952,46 @@
     }
    ],
    "official_urls": [
-    "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/",
-    "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-    "https://ollama.com/library/deepseek-v4.1-flash"
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/"
    ],
    "official_verified": true,
    "summary": "DeepSeek-V4-Pro, DeepSeek-V4-Flash, and DeepSeek-V4.1-Flash models now available on Amazon ― DeepSeek's DeepSeek-V4-Pro, DeepSeek-V4-Flash, and DeepSeek-V4.1-Flash models are now available on Amazon Sage。4ソースで言及(代表: 「DeepSeek-V4-Pro, DeepSeek-V4-Flash, and DeepSeek-V4.1-Flash 」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "DeepSeek V4.1 Flash が AWS に",
+     "diagram_type": "infographic",
+     "icon": "cloud",
+     "stat": {
+      "value": "3 モデル",
+      "label": "SageMaker JumpStart で提供"
+     },
+     "steps": [
+      "JumpStart を開く",
+      "モデルを選ぶ",
+      "自分の環境に導入"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "AWS が DeepSeek の 3 モデルを SageMaker JumpStart で提供開始した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "オープンウェイトの大型モデルを、数クリックで導入できる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "MIT ライセンスで、100 万トークンの文脈に対応すると説明されている"
+      },
+      {
+       "h": "注意",
+       "t": "AWS の発表で、DeepSeek 自身の発表ではない"
+      }
+     ],
+     "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/",
+     "source_date": "2026-11-11"
+    }
+   ],
    "score_breakdown": {
     "hf_models": 0.798,
     "reddit_localllama": 0.738,
@@ -2821,8 +3033,21 @@
    "x_posts": [],
    "display": "DeepSeek-V4.1-Flash",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "DeepSeek-V4-Pro, DeepSeek-V4-Flash, and DeepSeek-V4.1-Flash models now available on Amazon SageMaker JumpStart",
+      "evidence_urls": [
+       "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/"
+      ],
+      "evidence_published_at": "2026-11-11",
+      "result": "3 モデルが MIT ライセンスのオープンウェイト MoE であること、V4.1-Flash の 100 万トークン文脈と最大出力 384K、SageMaker JumpStart での提供を確認(DeepSeek 自身の発表ではなく AWS の発表)",
+      "retrieved_at": "2026-11-16T05:30:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。AWS が公式発表で、DeepSeek-V4.1-Flash などのオープンウェイトモデルを SageMaker JumpStart で提供開始と発表。"
    },
    "jp_reactions": [
     {
@@ -2831,7 +3056,110 @@
      "url": "https://zenn.dev/caphtech/articles/qwen38-zh-ban",
      "date": "2026-11-14"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/": {
+     "status": 200,
+     "checked_at": "2026-11-15T22:39:26.405741+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "AWS が、DeepSeek-V4-Pro、V4-Flash、V4.1-Flash の 3 モデルを Amazon SageMaker JumpStart で使えるようにしたと発表した。",
+     "3 つとも MIT ライセンスのオープンウェイトで、必要な部分だけ動かす MoE 方式。V4.1-Flash は画像などにも対応し、文脈長は 100 万トークン、最大出力は 384K と説明されている。",
+     "SageMaker のコンソールか Python SDK から、数クリックで自分の AWS アカウントに導入できる。"
+    ],
+    "why_trending": "Hugging Face や Ollama、OpenRouter でも並び、AWS での提供開始が話題。",
+    "what_changes": [
+     "自前でサーバーを組まなくても、AWS 上でオープンウェイトの大型モデルを試せる",
+     "V4.1-Flash は、速く安く動かす用途を狙ったモデルとされている"
+    ],
+    "benefits": [
+     "MIT ライセンスのため、商用利用の条件を確認しやすい",
+     "すでに AWS を使っているチームは、同じ環境で導入できる"
+    ],
+    "caveats": [
+     "これは AWS の発表で、DeepSeek 自身の発表ページは確認できていない",
+     "性能の表現は発表の文言。実際のコストと品質は自分で測る必要がある"
+    ],
+    "audience": "AWS 上で LLM を動かしたい開発者・基盤担当者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "DeepSeek の 3 つのオープンウェイトモデルが、AWS の SageMaker JumpStart で使える。",
+     "stat": {
+      "value": "3 モデル",
+      "label": "V4-Pro、V4-Flash、V4.1-Flash"
+     },
+     "steps": [
+      "JumpStart を開く",
+      "モデルを選ぶ",
+      "自分の環境に導入"
+     ],
+     "changes": [
+      "数クリックで AWS 上に導入できる",
+      "3 つとも MIT ライセンスと説明されている"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "AWS(開発は DeepSeek)"
+      },
+      {
+       "k": "方式",
+       "v": "MoE のオープンウェイト"
+      },
+      {
+       "k": "文脈長",
+       "v": "100 万トークン"
+      },
+      {
+       "k": "ライセンス",
+       "v": "MIT"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "AWS 上で LLM を動かしたい開発者・基盤担当者",
+     "benefits": [
+      "自前のサーバー構築なしで大型モデルを試せる",
+      "MIT ライセンスで利用条件を確認しやすい"
+     ],
+     "how_to": [
+      "SageMaker コンソールで JumpStart を開く",
+      "または Python SDK でモデルを導入する"
+     ],
+     "caveats": [
+      "AWS の発表で、DeepSeek 自身の発表は未確認",
+      "費用と品質は自分の用途で測る"
+     ],
+     "terms": [
+      {
+       "t": "MoE",
+       "d": "必要な専門家だけを動かして計算を減らす方式"
+      },
+      {
+       "t": "オープンウェイト",
+       "d": "学習済みの重みが公開され、自分で動かせること"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "DeepSeek-V4-Pro, V4-Flash, V4.1-Flash now on Amazon SageMaker JumpStart",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/",
+      "date": "2026-11-11"
+     }
+    ]
+   }
   },
   {
    "rank": 14,
@@ -3504,9 +3832,43 @@
    "official_urls": [
     "https://github.com/meta/astryx"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "GitHub 急上昇(週間): meta/astryx(+13,660★): An open source design system that's fully customizable and a",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Astryx、人も AI も使うデザイン部品",
+     "diagram_type": "infographic",
+     "icon": "layers",
+     "stat": {
+      "value": "13,660",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "パッケージを入れる",
+      "テーマを選ぶ",
+      "部品を使う"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Meta が、社内で育てたデザインシステムをオープンソースで公開した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "150 以上の部品を、人も AI も同じ文書と CLI で使える"
+      },
+      {
+       "h": "試し方",
+       "t": "npm install で本体とテーマを入れ、CSS を読み込む"
+      },
+      {
+       "h": "注意",
+       "t": "スター数は注目度の目安。ベータ版で React 19 以上が必要"
+      }
+     ],
+     "official_url": "https://github.com/meta/astryx"
+    }
+   ],
    "score_breakdown": {
     "github_trending": 13660.0
    },
@@ -3533,12 +3895,127 @@
      "language": "TypeScript"
     }
    ],
-   "display": "astryx",
+   "display": "meta/astryx",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "meta/astryx README",
+      "evidence_urls": [
+       "https://github.com/meta/astryx"
+      ],
+      "result": "150 以上のコンポーネント、React 19 以上が必要、ベータ版、CLI、MIT ライセンスを README で確認",
+      "retrieved_at": "2026-11-16T05:30:00+09:00"
+     }
+    ],
+    "selection_reason": "GitHub 急上昇のリポジトリ。Meta が公開した、人と AI エージェントが同じ手順で使えるデザインシステム。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://github.com/meta/astryx": {
+     "status": 200,
+     "checked_at": "2026-11-15T22:39:26.405741+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Astryx は、Meta が公開したオープンソースのデザインシステム。ボタンや表など、画面の部品を 150 以上まとめて提供する。",
+     "社内で 8 年かけて育てたもので、13,000 以上のアプリで使われていると README に書かれている。",
+     "人と AI アシスタントが同じ文書と CLI で作業できるよう設計されている。現在はベータ版。"
+    ],
+    "why_trending": "GitHub Trending で今週 13,660 スターを集めた(注目度の目安で、品質や安全性の保証ではない)。",
+    "what_changes": [
+     "React の部品を入れるだけで、統一された見た目の画面を作れる",
+     "AI コーディング支援にも、同じ部品の使い方を参照させられる"
+    ],
+    "benefits": [
+     "テーマは CSS 変数の上書きで変えられ、本体をコピーして改造する必要がない",
+     "Tailwind や CSS Modules など、今使っているスタイルの書き方のまま上書きできる"
+    ],
+    "caveats": [
+     "React 19 以上が必要で、現在はベータ版",
+     "チャート関連のパッケージは canary 版のみで、安定版はまだない"
+    ],
+    "audience": "React で画面を作る開発者・デザイナー"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Meta が、人も AI も同じ手順で使えるデザインシステム Astryx を公開した。",
+     "stat": {
+      "value": "13,660",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "パッケージを入れる",
+      "テーマを選ぶ",
+      "部品を使う"
+     ],
+     "changes": [
+      "150 以上の部品と CLI がまとまっている",
+      "テーマは CSS 変数の上書きで変えられる"
+     ],
+     "facts": [
+      {
+       "k": "公開元",
+       "v": "Meta"
+      },
+      {
+       "k": "状態",
+       "v": "ベータ版"
+      },
+      {
+       "k": "必要環境",
+       "v": "React 19 以上"
+      },
+      {
+       "k": "ライセンス",
+       "v": "MIT"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "React で画面を作る開発者・デザイナー",
+     "benefits": [
+      "統一された見た目の画面を早く作れる",
+      "既存のスタイルの書き方のまま上書きできる"
+     ],
+     "how_to": [
+      "npm install で本体とテーマを入れる",
+      "CSS を読み込み、テーマを設定する",
+      "astryx の CLI で部品の文書を見る"
+     ],
+     "caveats": [
+      "ベータ版で、仕様が変わる可能性がある",
+      "スター数は注目度で、品質の保証ではない"
+     ],
+     "terms": [
+      {
+       "t": "デザインシステム",
+       "d": "画面の部品と作り方の決まりをまとめたもの"
+      },
+      {
+       "t": "StyleX",
+       "d": "Astryx が内部で使うスタイルの書き方"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "meta/astryx",
+      "publisher": "GitHub",
+      "url": "https://github.com/meta/astryx"
+     }
+    ]
+   }
   },
   {
    "rank": 20,
@@ -3585,9 +4062,43 @@
    "official_urls": [
     "https://github.com/pingdotgg/t3code"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "GitHub 急上昇(週間): pingdotgg/t3code(+9,668★): The best way to control Claude Code, Codex and more from any",
-   "slides": [],
+   "slides": [
+    {
+     "title": "T3 Code、エージェントの操作盤",
+     "diagram_type": "infographic",
+     "icon": "terminal",
+     "stat": {
+      "value": "9,668",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "アプリを入れる",
+      "エージェントにログイン",
+      "スレッドで指示"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "複数のコーディングエージェントを操作する、オープンソースのアプリが注目された"
+      },
+      {
+       "h": "何が変わる",
+       "t": "Claude Code や Codex を 1 つの画面で切り替えて使える"
+      },
+      {
+       "h": "試し方",
+       "t": "brew や winget で入れるか、npx t3@latest を実行する"
+      },
+      {
+       "h": "注意",
+       "t": "スター数は注目度の目安。エージェントに許す操作は自分で決める"
+      }
+     ],
+     "official_url": "https://github.com/pingdotgg/t3code"
+    }
+   ],
    "score_breakdown": {
     "github_trending": 9668.0
    },
@@ -3614,12 +4125,127 @@
      "language": "TypeScript"
     }
    ],
-   "display": "t3code",
+   "display": "pingdotgg/t3code",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "pingdotgg/t3code README",
+      "evidence_urls": [
+       "https://github.com/pingdotgg/t3code"
+      ],
+      "result": "対応エージェント、デスクトップ・Web・スマホ対応、スレッドごとの worktree、MIT ライセンス、導入手順を README で確認",
+      "retrieved_at": "2026-11-16T05:30:00+09:00"
+     }
+    ],
+    "selection_reason": "GitHub 急上昇のリポジトリ。Claude Code や Codex など複数のコーディングエージェントを 1 つの画面で操作できるオープンソースのアプリ。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://github.com/pingdotgg/t3code": {
+     "status": 200,
+     "checked_at": "2026-11-15T22:39:26.405741+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "T3 Code は、自分の PC で動くコーディングエージェントを 1 つの画面から操作できる、オープンソースのアプリ。",
+     "Claude Code、Codex、Cursor、OpenCode など多くのエージェントに対応する。トークンは再販売せず、すでにログインしている契約を使う。",
+     "デスクトップ、Web、スマホから同じスレッドを見られ、机でも外出先でも次の手順を承認できる。"
+    ],
+    "why_trending": "GitHub Trending で今週 9,668 スターを集めた(注目度の目安で、品質や安全性の保証ではない)。",
+    "what_changes": [
+     "エージェントごとに別の画面を開かず、1 か所で切り替えて使える",
+     "スレッドごとに Git の worktree を使い、差分の確認から PR 作成まで進められる"
+    ],
+    "benefits": [
+     "スレッドの途中でモデルを変えたり、Claude から Codex に作業を渡したりできる",
+     "MIT ライセンスで、方針が合わなければフォークできる"
+    ],
+    "caveats": [
+     "利用には、ログイン済みのエージェントが 1 つ以上必要",
+     "エージェントに許す操作は、権限モードの文書を読んで決める",
+     "メンテナーは、レビューの余力が限られると述べている"
+    ],
+    "audience": "複数のコーディングエージェントを併用する開発者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "T3 Code は、複数のコーディングエージェントを 1 画面で操作するオープンソースのアプリ。",
+     "stat": {
+      "value": "9,668",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "アプリを入れる",
+      "エージェントにログイン",
+      "スレッドで指示"
+     ],
+     "changes": [
+      "Claude Code や Codex を切り替えて使える",
+      "スマホからも次の手順を承認できる"
+     ],
+     "facts": [
+      {
+       "k": "公開元",
+       "v": "pingdotgg"
+      },
+      {
+       "k": "対応",
+       "v": "Claude Code、Codex ほか"
+      },
+      {
+       "k": "端末",
+       "v": "PC、Web、スマホ"
+      },
+      {
+       "k": "ライセンス",
+       "v": "MIT"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "複数のコーディングエージェントを併用する開発者",
+     "benefits": [
+      "途中でモデルを変えたり、作業を渡したりできる",
+      "差分確認から PR 作成まで 1 か所で進む"
+     ],
+     "how_to": [
+      "brew や winget で入れるか npx t3@latest を実行",
+      "claude auth login などでエージェントにログイン"
+     ],
+     "caveats": [
+      "ログイン済みのエージェントが 1 つ要る",
+      "許す操作は権限モードの文書で確認する"
+     ],
+     "terms": [
+      {
+       "t": "worktree",
+       "d": "同じ Git リポジトリの別作業用フォルダ"
+      },
+      {
+       "t": "ACP",
+       "d": "エージェントをつなぐための共通の取り決め"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "pingdotgg/t3code",
+      "publisher": "GitHub",
+      "url": "https://github.com/pingdotgg/t3code"
+     }
+    ]
+   }
   },
   {
    "rank": 21,
@@ -3666,9 +4292,43 @@
    "official_urls": [
     "https://github.com/milind-soni/OpenMausBot"
    ],
-   "official_verified": false,
+   "official_verified": true,
    "summary": "GitHub 急上昇(週間): milind-soni/OpenMausBot(+6,413★): Open-source Grok Bot alternative with a virtual machine that",
-   "slides": [],
+   "slides": [
+    {
+     "title": "OpenMausBot、ボットのチーム",
+     "diagram_type": "infographic",
+     "icon": "plug",
+     "stat": {
+      "value": "6,413",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "アプリを入れる",
+      "ボットを作る",
+      "許可カードで承認"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "AI ボットをチャットのように使える、オープンソースのアプリが注目された"
+      },
+      {
+       "h": "何が変わる",
+       "t": "ボットごとにモデルやアプリ連携を変え、連絡先のように使い分ける"
+      },
+      {
+       "h": "試し方",
+       "t": "公式サイトか Releases からアプリを入れ、手元の claude や codex を使う"
+      },
+      {
+       "h": "注意",
+       "t": "スター数は注目度の目安。PC の操作を許す範囲は慎重に決める"
+      }
+     ],
+     "official_url": "https://github.com/milind-soni/OpenMausBot"
+    }
+   ],
    "score_breakdown": {
     "github_trending": 6413.0
    },
@@ -3697,10 +4357,124 @@
    ],
    "display": "OpenMausBot",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "milind-soni/OpenMausBot README",
+      "evidence_urls": [
+       "https://github.com/milind-soni/OpenMausBot"
+      ],
+      "result": "自分の PC 上の claude / codex CLI を使うこと、実行前の承認カード、Apache 2.0、独立したプロジェクトで各社と無関係との記載を README で確認",
+      "retrieved_at": "2026-11-16T05:30:00+09:00"
+     }
+    ],
+    "selection_reason": "GitHub 急上昇のリポジトリ。複数の AI ボットをチャットアプリのように使える、オープンソースの個人エージェント。"
    },
-   "jp_reactions": []
+   "jp_reactions": [],
+   "url_checks": {
+    "https://github.com/milind-soni/OpenMausBot": {
+     "status": 200,
+     "checked_at": "2026-11-15T22:39:26.405741+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "OpenMausBot は、AI ボットの一団をチャットアプリのように使えるオープンソースのアプリ。ボットごとに性格やモデル、アプリ連携を持つ。",
+     "中身は自分の PC にある claude や codex の CLI で、既存のログインや契約をそのまま使う。データは自分の PC の ~/.openmausbot に保存される。",
+     "独立したプロジェクトで、xAI、Meta、OpenAI、Manus とは無関係と README に書かれている。"
+    ],
+    "why_trending": "GitHub Trending で今週 6,413 スターを集めた(注目度の目安で、品質や安全性の保証ではない)。",
+    "what_changes": [
+     "仕事ごとに別のボットを作り、連絡先のように話しかけて使い分けられる",
+     "ボットが危険な操作をする前に、許可・拒否のカードが表示される"
+    ],
+    "benefits": [
+     "Gmail や Slack など多数のアプリを、OAuth で連携して使える",
+     "Apache 2.0 のライセンスで、中身を確認できる"
+    ],
+    "caveats": [
+     "ボットに自分の PC の操作を許す機能は、許可の範囲をよく確認してから使う",
+     "Ubuntu の Wayland では、PC の操作機能は無効と書かれている"
+    ],
+    "audience": "複数のエージェントをチャット感覚で使い分けたい人"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "OpenMausBot は、AI ボットの一団をチャット感覚で使えるオープンソースのアプリ。",
+     "stat": {
+      "value": "6,413",
+      "label": "今週の増加スター(GitHub Trending)"
+     },
+     "steps": [
+      "アプリを入れる",
+      "ボットを作る",
+      "許可カードで承認"
+     ],
+     "changes": [
+      "ボットごとにモデルやアプリ連携を持つ",
+      "危険な操作は許可・拒否のカードで確認する"
+     ],
+     "facts": [
+      {
+       "k": "作者",
+       "v": "milind-soni"
+      },
+      {
+       "k": "動作",
+       "v": "手元の claude / codex"
+      },
+      {
+       "k": "保存先",
+       "v": "~/.openmausbot"
+      },
+      {
+       "k": "ライセンス",
+       "v": "Apache 2.0"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "複数のエージェントをチャット感覚で使い分けたい人",
+     "benefits": [
+      "既存のログインや契約をそのまま使える",
+      "Gmail や Slack などを OAuth で連携できる"
+     ],
+     "how_to": [
+      "Releases から自分の OS 向けを入れる",
+      "手元の claude や codex の CLI を使う設定にする"
+     ],
+     "caveats": [
+      "PC の操作を許す機能は範囲を慎重に決める",
+      "各社とは無関係の独立したプロジェクト"
+     ],
+     "terms": [
+      {
+       "t": "OAuth",
+       "d": "パスワードを渡さずアプリ連携を許可する方式"
+      },
+      {
+       "t": "CLI",
+       "d": "文字で操作するコマンドラインの道具"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "milind-soni/OpenMausBot",
+      "publisher": "GitHub",
+      "url": "https://github.com/milind-soni/OpenMausBot"
+     }
+    ]
+   }
   },
   {
    "rank": 22,
@@ -4330,171 +5104,285 @@
    "title": "Production MLOps at GS Caltex with Amazon SageMaker Canvas, part 1",
    "url": "https://aws.amazon.com/blogs/machine-learning/production-mlops-at-gs-caltex-with-amazon-sagemaker-canvas-part-1/",
    "date": "2026-11-14",
-   "feed": "aws-ml-blog"
+   "feed": "aws-ml-blog",
+   "title_ja": "GS Caltex の Amazon SageMaker Canvas による本番 MLOps(前編)",
+   "summary": "GS Caltex が、ノーコードで作ったモデルを Amazon SageMaker Pipelines につなぎ、本番で動かす事例を紹介している。ML エンジニアが検証済みの前処理やモデルを再利用できる。"
   },
   {
    "vendor": "AWS",
    "title": "Route coding agent requests to the right model on Amazon Bedrock with NVIDIA NeMo Switchyard",
    "url": "https://aws.amazon.com/blogs/machine-learning/route-coding-agent-requests-to-the-right-model-on-amazon-bedrock-with-nvidia-nemo-switchyard/",
    "date": "2026-11-14",
-   "feed": "aws-ml-blog"
+   "feed": "aws-ml-blog",
+   "title_ja": "NVIDIA NeMo Switchyard で Bedrock のモデルを使い分ける",
+   "summary": "コーディングエージェントの依頼を、適したモデルに振り分ける方法を解説している。AWS CDK で LiteLLM とルーティング用プラグインを配備し、解決したタスクあたりの費用を測る。"
   },
   {
    "vendor": "AWS",
    "title": "Architecture patterns for fast session startup on Amazon Bedrock AgentCore runtime",
    "url": "https://aws.amazon.com/blogs/machine-learning/architecture-patterns-for-fast-session-startup-on-amazon-bedrock-agentcore-runtime/",
    "date": "2026-11-14",
-   "feed": "aws-ml-blog"
+   "feed": "aws-ml-blog",
+   "title_ja": "Bedrock AgentCore ランタイムのセッション高速起動パターン",
+   "summary": "AgentCore ランタイム V2 は、初期化済みの環境を保存して新しいセッションごとに復元する。起動の仕組みと時間の測り方、最初のリクエストの負荷を減らすパターンを説明している。"
   },
   {
    "vendor": "NVIDIA",
    "title": "Run GPU-Powered Black Hole Interferometry with NVIDIA cuPhoton",
    "url": "https://developer.nvidia.com/blog/run-gpu-powered-black-hole-interferometry-with-nvidia-cuphoton/feed/",
    "date": "2026-11-14",
-   "feed": "nvidia-dev-blog"
+   "feed": "nvidia-dev-blog",
+   "title_ja": "NVIDIA cuPhoton で GPU を使ったブラックホール干渉計測",
+   "summary": ""
   },
   {
    "vendor": "HuggingFace",
    "title": "Build a Robot Pick-and-Place Simulation with SimReady Assets",
    "url": "https://huggingface.co/blog/nvidia/simready-assets-robot-pick-and-place",
    "date": "2026-11-14",
-   "feed": "huggingface-blog"
+   "feed": "huggingface-blog",
+   "title_ja": "SimReady アセットでロボットのピック&プレース simulation を作る",
+   "summary": ""
   },
   {
    "vendor": "HuggingFace",
    "title": "XYBench: Helping with the problem behind the question",
    "url": "https://huggingface.co/blog/allenai/xybench",
    "date": "2026-11-14",
-   "feed": "huggingface-blog"
+   "feed": "huggingface-blog",
+   "title_ja": "XYBench: 質問の裏にある問題を助ける",
+   "summary": ""
   },
   {
    "vendor": "OpenAI",
    "title": "Introducing ChatGPT Wallet",
    "url": "https://openai.com/index/introducing-chatgpt-wallet",
    "date": "2026-11-14",
-   "feed": "openai-news"
+   "feed": "openai-news",
+   "title_ja": "ChatGPT Wallet の紹介",
+   "summary": "ChatGPT Wallet は、ChatGPT Work、Codex、dots のエージェントが購入を行うための仕組み。利用者の承認と、既存のカード保護を使うと説明されている。"
   },
   {
    "vendor": "HuggingFace",
    "title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
    "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
    "date": "2026-11-13",
-   "feed": "huggingface-blog"
+   "feed": "huggingface-blog",
+   "title_ja": "llama.cpp v1.0.0: ローカル AI の土台を強化",
+   "summary": ""
   },
   {
    "vendor": "Cohere",
    "title": "Cohere Expands Sovereign AI Platform with AISLE and cubic",
    "url": "https://cohere.com/blog/cohere-expands-its-sovereign-ai-platform-with-aisle-and-cubic",
    "date": "2026-11-13",
-   "feed": "cohere-blog"
+   "feed": "cohere-blog",
+   "title_ja": "Cohere がソブリン AI 基盤に AISLE と cubic を追加",
+   "summary": ""
   },
   {
    "vendor": "NVIDIA",
    "title": "How AI Is Helping Care Teams Get Patients the Right Care, Sooner",
    "url": "https://blogs.nvidia.com/blog/how-ai-is-helping-care-teams/",
    "date": "2026-11-13",
-   "feed": "nvidia-blog"
+   "feed": "nvidia-blog",
+   "title_ja": "AI が医療チームを支援し患者を早く適切な医療へ",
+   "summary": "小児研究からスマート病院まで、AI が医療チームの日常業務を減らし、患者と向き合う時間を増やしている。治験の候補者探しや、放射線科医の支援などの例が紹介されている。"
   },
   {
    "vendor": "Microsoft",
    "title": "Manage AI Scan for repositories using the REST API",
    "url": "https://github.blog/changelog/2026-11-13-manage-ai-scan-for-repositories-using-the-rest-api",
    "date": "2026-11-13",
-   "feed": "github-changelog"
+   "feed": "github-changelog",
+   "title_ja": "REST API でリポジトリの AI Scan を管理",
+   "summary": "GitHub のコードスキャンの AI Scan を、REST API で組織やリポジトリ単位でオンやオフにできるようになった。パブリックプレビューとして提供される。"
   },
   {
    "vendor": "OpenAI",
    "title": "Shield helps technicians hand off legacy portal work with OpenAI",
    "url": "https://openai.com/business/customer-stories/shield",
    "date": "2026-11-13",
-   "feed": "openai-news"
+   "feed": "openai-news",
+   "title_ja": "Shield が OpenAI でレガシーポータル作業を引き継ぐ",
+   "summary": "Shield は OpenAI を使い、IT 技術者が古いポータルでする作業を引き継いでいる。Forge エージェントがシステムを操作し、技術者は判断が要る問題に集中できる。"
   },
   {
    "vendor": "Microsoft",
    "title": "Microsoft Research Focus – Edition #98",
    "url": "https://www.microsoft.com/en-us/research/podcast/microsoft-research-focus-edition-98/",
    "date": "2026-11-13",
-   "feed": "microsoft-research-blog"
+   "feed": "microsoft-research-blog",
+   "title_ja": "Microsoft Research Focus 第 98 号",
+   "summary": "Microsoft Research の最新情報を紹介するポッドキャスト。AI による万能翻訳や、31 年来の数学の難問での進展、AI コーディングエージェントの高速化などを取り上げている。"
   },
   {
    "vendor": "OpenAI",
    "title": "How Amplitude ships product improvements in 1–2 days with OpenAI",
    "url": "https://openai.com/business/customer-stories/amplitude",
    "date": "2026-11-13",
-   "feed": "openai-news"
+   "feed": "openai-news",
+   "title_ja": "Amplitude が OpenAI で 1〜2 日で製品を改善",
+   "summary": "Amplitude は主に OpenAI のモデルで、製品エージェント Wave を作った。Wave は作るべきものを見つけ、コーディングエージェントでの出荷を支え、効果を測る。"
   },
   {
    "vendor": "Cohere",
    "title": "Welcoming Jaya Baloo as Cohere’s First CISO",
    "url": "https://cohere.com/blog/cohere-welcomes-jaya-baloo-as-first-ciso",
    "date": "2026-11-12",
-   "feed": "cohere-blog"
+   "feed": "cohere-blog",
+   "title_ja": "Jaya Baloo 氏を Cohere 初の CISO に迎える",
+   "summary": ""
   },
   {
    "vendor": "Apple",
    "title": "Theoretical Limits of Language Model Alignment",
    "url": "https://machinelearning.apple.com/research/theoretical-limits-alignment",
    "date": "2026-11-12",
-   "feed": "apple-ml-research"
+   "feed": "apple-ml-research",
+   "title_ja": "言語モデルのアラインメントの理論的限界",
+   "summary": "言語モデルのアラインメントは、基盤モデルの能力を保ちつつ、出力を人間の好みに近づける手法。強化学習と best-of-N が代表的な方法として挙げられている。"
   },
   {
    "vendor": "Microsoft",
    "title": "Content Understanding adds GPT-6.1, 6, and 5.6: Choose the right model for your workload",
    "url": "https://devblogs.microsoft.com/foundry/content-understanding-adds-gpt-5-6-gpt-6-and-gpt-6-1-choose-the-right-model-for-your-workload/",
    "date": "2026-11-12",
-   "feed": "microsoft-foundry-blog"
+   "feed": "microsoft-foundry-blog",
+   "title_ja": "Content Understanding に GPT-6.1、6、5.6 が追加",
+   "summary": "Azure Content Understanding が、GPT-5.6、GPT-6、GPT-6.1 の各モデルに対応した。文書、テキスト、音声、動画の作業で選べるモデルが増えた。"
   },
   {
    "vendor": "Google",
    "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
    "date": "2026-11-12",
-   "feed": "google-ai-blog"
+   "feed": "google-ai-blog",
+   "title_ja": "Gemini Decisions API: 速く較正されたマルチモーダル判断",
+   "summary": "Google が Gemini Decisions API を発表した。Gemini Decision モデルを使い、画像など複数の種類の情報から、速く較正された判断を出すための API。"
   },
   {
    "vendor": "NVIDIA",
    "title": "Validating GPU Platforms with Runtime AI Inventory via the NVIDIA DSX AI Factory",
    "url": "https://developer.nvidia.com/blog/validating-gpu-platforms-with-runtime-ai-inventory-via-the-nvidia-dsx-ai-factory/feed/",
    "date": "2026-11-12",
-   "feed": "nvidia-dev-blog"
+   "feed": "nvidia-dev-blog",
+   "title_ja": "NVIDIA DSX AI Factory で GPU 基盤を実行時の AI 一覧で検証",
+   "summary": "NVIDIA Dynamo、Kubeflow、Slurm で AI の作業を動かすとき、実際に何が動いているかの把握が必要になる。その可視化に取り組む内容。"
   },
   {
    "vendor": "Google",
    "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
    "url": "https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease/",
    "date": "2026-11-12",
-   "feed": "deepmind-blog"
+   "feed": "deepmind-blog",
+   "title_ja": "AlphaGenome 2: 細胞が DNA を読む仕組みを解き明かす",
+   "summary": "AlphaGenome 2 は、DNA の配列やその変異が、特定の細胞の種類や病気にどう影響するかを予測する。"
   },
   {
    "vendor": "Google",
    "title": "Gemini Intelligence: New features, on more devices",
    "url": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
    "date": "2026-11-11",
-   "feed": "google-ai-blog"
+   "feed": "google-ai-blog",
+   "title_ja": "Gemini Intelligence: 新機能がより多くの端末に",
+   "summary": "Gemini Intelligence が、より多くの端末に順次提供される。広がった機能で、できることが増える。"
   },
   {
    "vendor": "Anthropic",
    "title": "Anthropic launches roadshow for proposed initial public offering",
    "url": "https://www.anthropic.com/news/roadshow-launch",
    "date": "2026-11-10",
-   "feed": "anthropic-news"
+   "feed": "anthropic-news",
+   "title_ja": "Anthropic が IPO 計画のロードショーを開始",
+   "summary": ""
   },
   {
    "vendor": "Apple",
    "title": "Evaluating the Evaluators: Investigating LLM Judges for Personalized Writing Style Assessment",
    "url": "https://machinelearning.apple.com/research/evaluating-evaluators-llm-judges",
    "date": "2026-11-10",
-   "feed": "apple-ml-research"
+   "feed": "apple-ml-research",
+   "title_ja": "評価者を評価する: 文体評価での LLM 審査員の検証",
+   "summary": "NeurIPS 2026 のワークショップで採択された論文。利用者の好みの文体が分かっているとき、LLM を審査員にする評価がどこまで使えるかを調べている。"
   },
   {
    "vendor": "Apple",
    "title": "On the Importance of Gating: Memorization vs. In-Context Learning in State Space Models",
    "url": "https://machinelearning.apple.com/research/gating-memorization-in-context",
    "date": "2026-11-10",
-   "feed": "apple-ml-research"
+   "feed": "apple-ml-research",
+   "title_ja": "ゲーティングの重要性: 状態空間モデルの記憶と文脈内学習",
+   "summary": "状態空間モデル(SSM)は、Transformer の代わりになる方式で、一定のメモリと線形の計算で系列を扱える。ただし、一部の課題では Transformer に及ばない。"
   }
  ],
  "candidates_pool": 111,
- "themes": [],
- "rejected_candidates": {}
+ "themes": [
+  {
+   "id": "agents-with-many-tools",
+   "title": "複数のエージェントやモデルを束ねて使う",
+   "confidence": "medium",
+   "summary": "Gemini 4 Hydrogen、T3 Code、OpenMausBot の 3 件で、1 つのモデルやツールに頼らず、複数を使い分ける仕組みが示された。",
+   "background": [
+    "Google の Orchestrator はモデルを自動で切り替え、T3 Code は複数のエージェントを 1 画面で操作する。",
+    "OpenMausBot は、ボットごとにモデルや連携を変えられる。",
+    "用途ごとに道具を選びたい需要が背景にあるかもしれない(見立て)。"
+   ],
+   "entities": [
+    "gemini-4-hydrogen",
+    "gh-pingdotgg-t3code",
+    "gh-milind-soni-openmausbot"
+   ],
+   "signals": [
+    {
+     "entity": "gemini-4-hydrogen",
+     "note": "Orchestrator が Carbon や Hydrogen などのモデルを同じ作業で切り替える"
+    },
+    {
+     "entity": "gh-pingdotgg-t3code",
+     "note": "Claude Code や Codex など多くのエージェントを 1 つの画面で操作できる"
+    },
+    {
+     "entity": "gh-milind-soni-openmausbot",
+     "note": "ボットごとに別のモデルやアプリ連携を持てる"
+    }
+   ],
+   "refs": [
+    "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+    "https://github.com/pingdotgg/t3code",
+    "https://github.com/milind-soni/OpenMausBot"
+   ]
+  },
+  {
+   "id": "open-weights-reach-clouds",
+   "title": "大手クラウドがモデルを手軽に提供",
+   "confidence": "low",
+   "summary": "Gemini 4 Hydrogen と DeepSeek-V4.1-Flash の 2 件で、大手のサービスから手軽にモデルを使える形での提供が発表された。",
+   "background": [
+    "Google は API、検索、アプリなど幅広い窓口で提供し、AWS は数クリックで導入できる形にした。",
+    "2 件だけの共通点で、導入の手間を減らしたい需要が背景にあるかもしれない(見立て)。"
+   ],
+   "entities": [
+    "gemini-4-hydrogen",
+    "deepseek-v4-1-flash"
+   ],
+   "signals": [
+    {
+     "entity": "gemini-4-hydrogen",
+     "note": "Gemini API、Gemini アプリ、Google 検索などで提供される"
+    },
+    {
+     "entity": "deepseek-v4-1-flash",
+     "note": "SageMaker JumpStart で数クリックで導入できると説明されている"
+    }
+   ],
+   "refs": [
+    "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
+    "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/"
+   ]
+  }
+ ],
+ "rejected_candidates": {
+  "glm-5-3": "NVIDIA の技術解説で、開発元 Z.ai の発表ではないため、一次情報の本文を確認できなかった。"
+ }
 }

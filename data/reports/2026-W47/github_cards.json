@@ -1,0 +1,130 @@
+[
+ {
+  "entity_id": "gh-meta-astryx",
+  "keyword": "astryx",
+  "mode": "single",
+  "tag": "coding-agent",
+  "members": [
+   {
+    "repo": "meta/astryx",
+    "url": "https://github.com/meta/astryx",
+    "description": "An open source design system that's fully customizable and agent ready",
+    "stars_week": 13660,
+    "stars_total": 28750,
+    "language": "TypeScript"
+   }
+  ]
+ },
+ {
+  "entity_id": "gh-pingdotgg-t3code",
+  "keyword": "t3code",
+  "mode": "single",
+  "tag": "coding-agent",
+  "members": [
+   {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code",
+    "description": "The best way to control Claude Code, Codex and more from any computer or phone",
+    "stars_week": 9668,
+    "stars_total": 61401,
+    "language": "TypeScript"
+   }
+  ]
+ },
+ {
+  "entity_id": "gh-milind-soni-openmausbot",
+  "keyword": "OpenMausBot",
+  "mode": "single",
+  "tag": "coding-agent",
+  "members": [
+   {
+    "repo": "milind-soni/OpenMausBot",
+    "url": "https://github.com/milind-soni/OpenMausBot",
+    "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+    "stars_week": 6413,
+    "stars_total": 23264,
+    "language": "TypeScript"
+   }
+  ]
+ },
+ {
+  "entity_id": "gh-coding-agent-1",
+  "keyword": "コーディング支援・エージェント 3件(GitHub 急上昇)",
+  "mode": "group",
+  "tag": "coding-agent",
+  "members": [
+   {
+    "repo": "anthropics/skills",
+    "url": "https://github.com/anthropics/skills",
+    "description": "Public repository for Agent Skills",
+    "stars_week": 6220,
+    "stars_total": 195279,
+    "language": "Python"
+   },
+   {
+    "repo": "google/elephant-goldfish-model",
+    "url": "https://github.com/google/elephant-goldfish-model",
+    "description": "Open-source plugin for designing and reviewing software with agents",
+    "stars_week": 5539,
+    "stars_total": 19664,
+    "language": "Python"
+   },
+   {
+    "repo": "vercel-labs/agent-desktop",
+    "url": "https://github.com/vercel-labs/agent-desktop",
+    "description": "Computer use CLI for AI agents",
+    "stars_week": 5171,
+    "stars_total": 24149,
+    "language": "Rust"
+   }
+  ]
+ },
+ {
+  "entity_id": "gh-coding-agent-2",
+  "keyword": "コーディング支援・エージェント 2件(GitHub 急上昇)",
+  "mode": "group",
+  "tag": "coding-agent",
+  "members": [
+   {
+    "repo": "vercel-labs/agent-browser",
+    "url": "https://github.com/vercel-labs/agent-browser",
+    "description": "Browser automation CLI for AI agents",
+    "stars_week": 4601,
+    "stars_total": 51552,
+    "language": "Rust"
+   },
+   {
+    "repo": "ZhuLinsen/daily_stock_analysis",
+    "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+    "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-fr",
+    "stars_week": 4526,
+    "stars_total": 72468,
+    "language": "Python"
+   }
+  ]
+ },
+ {
+  "entity_id": "gh-coding-agent-3",
+  "keyword": "コーディング支援・エージェント 2件(GitHub 急上昇)",
+  "mode": "group",
+  "tag": "coding-agent",
+  "members": [
+   {
+    "repo": "GoogleChrome/modern-web-guidance-src",
+    "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+    "description": "Keep your coding agent up to date with the latest web best practices",
+    "stars_week": 4363,
+    "stars_total": 7002,
+    "language": "TypeScript"
+   },
+   {
+    "repo": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "description": "Production-grade engineering skills for AI coding agents.",
+    "stars_week": 3670,
+    "stars_total": 117878,
+    "language": "JavaScript"
+   }
+  ]
+ }
+]

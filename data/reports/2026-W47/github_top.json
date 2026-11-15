@@ -1,0 +1,183 @@
+{
+ "week": "2026-W47",
+ "generated_at": "2026-11-15T20:27:59Z",
+ "metric": "stars gained this week (github.com/trending, AI-filtered)",
+ "pages_ok": 5,
+ "pages_total": 5,
+ "excluded_count": 20,
+ "items": [
+  {
+   "rank": 1,
+   "repo": "meta/astryx",
+   "url": "https://github.com/meta/astryx",
+   "stars_week": 13660,
+   "stars_total": 28750,
+   "language": "TypeScript",
+   "topics": [],
+   "description": "An open source design system that's fully customizable and agent ready",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 2,
+   "repo": "pingdotgg/t3code",
+   "url": "https://github.com/pingdotgg/t3code",
+   "stars_week": 9668,
+   "stars_total": 61401,
+   "language": "TypeScript",
+   "topics": [
+    "agent-orchestration",
+    "agents",
+    "ai",
+    "chatgpt",
+    "claude",
+    "claude-code",
+    "code",
+    "vibe-coding"
+   ],
+   "description": "The best way to control Claude Code, Codex and more from any computer or phone",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 3,
+   "repo": "milind-soni/OpenMausBot",
+   "url": "https://github.com/milind-soni/OpenMausBot",
+   "stars_week": 6413,
+   "stars_total": 23264,
+   "language": "TypeScript",
+   "topics": [
+    "ai-agents",
+    "claude-code",
+    "codex",
+    "computer-use",
+    "docker",
+    "electron",
+    "grok",
+    "grok-bot"
+   ],
+   "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 4,
+   "repo": "anthropics/skills",
+   "url": "https://github.com/anthropics/skills",
+   "stars_week": 6220,
+   "stars_total": 195279,
+   "language": "Python",
+   "topics": [
+    "agent-skills"
+   ],
+   "description": "Public repository for Agent Skills",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 5,
+   "repo": "google/elephant-goldfish-model",
+   "url": "https://github.com/google/elephant-goldfish-model",
+   "stars_week": 5539,
+   "stars_total": 19664,
+   "language": "Python",
+   "topics": [
+    "agent-skills",
+    "ai-agents",
+    "antigravity",
+    "claude-code",
+    "claude-code-plugin",
+    "claude-skills",
+    "codex",
+    "codex-plugin"
+   ],
+   "description": "Open-source plugin for designing and reviewing software with agents",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 6,
+   "repo": "vercel-labs/agent-desktop",
+   "url": "https://github.com/vercel-labs/agent-desktop",
+   "stars_week": 5171,
+   "stars_total": 24149,
+   "language": "Rust",
+   "topics": [
+    "accessibility",
+    "accessibility-api",
+    "ai-agents",
+    "automation",
+    "cli",
+    "computer-use",
+    "computer-use-agent",
+    "computer-use-agents"
+   ],
+   "description": "Computer use CLI for AI agents",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 7,
+   "repo": "vercel-labs/agent-browser",
+   "url": "https://github.com/vercel-labs/agent-browser",
+   "stars_week": 4601,
+   "stars_total": 51552,
+   "language": "Rust",
+   "topics": [],
+   "description": "Browser automation CLI for AI agents",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 8,
+   "repo": "ZhuLinsen/daily_stock_analysis",
+   "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+   "stars_week": 4526,
+   "stars_total": 72468,
+   "language": "Python",
+   "topics": [
+    "a-stock",
+    "ai-agent",
+    "aigc",
+    "llm",
+    "quant",
+    "quantitative-finance",
+    "quantitative-trading"
+   ],
+   "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。 LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-fr",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 9,
+   "repo": "GoogleChrome/modern-web-guidance-src",
+   "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+   "stars_week": 4363,
+   "stars_total": 7002,
+   "language": "TypeScript",
+   "topics": [],
+   "description": "Keep your coding agent up to date with the latest web best practices",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 10,
+   "repo": "addyosmani/agent-skills",
+   "url": "https://github.com/addyosmani/agent-skills",
+   "stars_week": 3670,
+   "stars_total": 117878,
+   "language": "JavaScript",
+   "topics": [
+    "agent-skills",
+    "antigravity",
+    "claude-code",
+    "codex",
+    "cursor",
+    "skills"
+   ],
+   "description": "Production-grade engineering skills for AI coding agents.",
+   "one_liner": null,
+   "tag": "coding-agent"
+  }
+ ]
+}

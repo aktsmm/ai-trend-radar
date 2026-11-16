@@ -189,6 +189,28 @@ def fetch_feed(feed):
 fetch_feed.last = {}
 
 
+SITEMAP_EXTRA = 5  # at most this many articles that only the sitemap knows about are read per blog
+
+
+def sitemap_recent(index, rx, known):
+    """Recent article URLs from the site's sitemap.xml (lastmod inside the window) that the index page did not list. An index can silently
+    narrow (liquid.ai/blog -> /news/models listed model posts only); the sitemap is an independent list of what the site published.
+    Returns [] when there is no sitemap or no lastmod."""
+    import urllib.parse as up
+    try:
+        xml = get(up.urljoin(index, "/sitemap.xml"), timeout=30, retries=1)
+    except Exception:
+        return []
+    found = []
+    for loc, tail in re.findall(r"<loc>\s*([^<]+?)\s*</loc>([^<]*(?:<(?!loc>)[^<]*)*)", xml):
+        mod = re.search(r"<lastmod>\s*([^<]+?)\s*</lastmod>", tail)
+        when = _dt(mod.group(1)) if mod else None
+        path = up.urlparse(loc).path
+        if when and when >= SINCE and re.search(rx, f'href="{path}"') and loc.rstrip("/") not in {k.rstrip("/") for k in known}:
+            found.append((when, loc))
+    return [loc for _, loc in sorted(found, reverse=True)][:SITEMAP_EXTRA]
+
+
 def fetch_blog(blog):
     """Scrape a blog index for article links (newest first); read each article page for its title and publication date. Only dated, in-window articles count."""
     import html as _html
@@ -200,7 +222,9 @@ def fetch_blog(blog):
         u = up.urljoin(index, m.group(1))
         if u not in links and u.rstrip("/") != index.rstrip("/"):
             links.append(u)
-    for u in links[:6]:  # the index lists newest first; older ones were collected on earlier days
+    extra = sitemap_recent(index, rx, links)  # in-window articles the index does not list (see sitemap_recent)
+    sitemap_only = 0
+    for u in links[:6] + extra:  # the index lists newest first; older ones were collected on earlier days
         try:
             art = get(u, timeout=25, retries=1)
         except Exception:
@@ -212,8 +236,10 @@ def fetch_blog(blog):
         title = strip_html(_html.unescape((t.group(1) or t.group(2)) if t else "")).split(" | ")[0].strip()
         if pub and pub >= SINCE and title:
             out.append(item("official", title, u, "", 1, "announcement", None, pub.isoformat(), vendor=vendor, source_type="announcement", feed=bid))
+            sitemap_only += u in extra
     # what the ledger needs to tell a quiet source from a broken one: links found on the page, the newest article date seen, and where the index really led
-    fetch_blog.last[bid] = {"links": len(links), "newest": newest.strftime("%Y-%m-%d") if newest else None, "final_url": final_url(index)}
+    fetch_blog.last[bid] = {"links": len(links), "newest": newest.strftime("%Y-%m-%d") if newest else None, "final_url": final_url(index),
+                            "sitemap_only": sitemap_only}
     return out
 
 

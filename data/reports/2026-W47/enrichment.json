@@ -1,7 +1,7 @@
 {
  "week": "2026-W47",
  "selected_on": "2026-11-16",
- "selection_policy": "候補6件のうち、一次情報の本文を確認できた5件(model 2 / github-trending 3)を掲載。glm-5-3 は NVIDIA の利用手順の記事で、開発元の発表ではないため見送り。",
+ "selection_policy": "候補6件のうち、一次情報の本文を確認できた5件(model 2 / github-trending 3)を掲載。追記分は候補6件のうち5件(model 1 / dev-tool 1 / github-trending 3)を掲載し、llama.cpp はビルド番号のリリースページしか確認できず見送り。glm-5-3 は NVIDIA の利用手順の記事で、開発元の発表ではないため見送り。",
  "entities": {
   "gemini-4-hydrogen": {
    "selection_reason": "model 代表。Google が公式ブログで、速さと効率を重視した Gemini 4 Hydrogen を発表し、Gemini API や Google 検索などで提供開始。",
@@ -121,6 +121,147 @@
      ],
      "result": "自分の PC 上の claude / codex CLI を使うこと、実行前の承認カード、Apache 2.0、独立したプロジェクトで各社と無関係との記載を README で確認",
      "retrieved_at": "2026-11-16T05:30:00+09:00"
+    }
+   ]
+  },
+  "claude-fable-5-2": {
+   "selection_reason": "model 代表。Anthropic が公式ブログで Claude Fable 5.2 / Mythos 5.2 を発表し、価格を下げ、速度を上げたと説明。AWS GovCloud でも提供開始。",
+   "verification_status": "verified",
+   "display": "Claude Fable 5.2",
+   "official_urls": [
+    "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/claude-fable-5-2-aws-govcloud/"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Claude Fable 5.2 and Mythos 5.2",
+     "evidence_urls": [
+      "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+     ],
+     "evidence_published_at": "2026-11-09",
+     "result": "Fable と Mythos が同じ基盤モデルであること、前版より最大 30% 速く低価格(入力 8 ドル・出力 40 ドル/100 万トークン)、高速モードの価格、サイバーと生物の保護機能を確認",
+     "retrieved_at": "2026-11-16T18:05:00+09:00"
+    },
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Claude Fable 5.2 is now available on AWS GovCloud (US)",
+     "evidence_urls": [
+      "https://aws.amazon.com/about-aws/whats-new/2026/11/claude-fable-5-2-aws-govcloud/"
+     ],
+     "result": "AWS GovCloud (US) での提供開始と、安全監視のためのデータ保持が必要な対象モデルである旨を確認(AWS の発表)",
+     "retrieved_at": "2026-11-16T18:05:00+09:00"
+    }
+   ]
+  },
+  "copilot": {
+   "selection_reason": "dev-tool 代表。GitHub が公式 changelog で、12 月 14 日に複数のモデルを Copilot で廃止すると予告し、代替モデルを案内。",
+   "verification_status": "verified",
+   "category": "dev-tool",
+   "kind": "release",
+   "display": "GitHub Copilot のモデル廃止予告",
+   "official_urls": [
+    "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+    "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "Upcoming deprecation of selected GitHub Copilot models in December",
+     "evidence_urls": [
+      "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december"
+     ],
+     "evidence_published_at": "2026-11-13",
+     "result": "2026-12-14 に 6 モデルを廃止すること、各モデルの代替案、Haiku 4.5 は年額の個人契約で継続、管理者の設定を確認",
+     "retrieved_at": "2026-11-16T18:05:00+09:00"
+    },
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "GitHub Enterprise Server support in the GitHub Copilot app",
+     "evidence_urls": [
+      "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app"
+     ],
+     "evidence_published_at": "2026-11-13",
+     "result": "Copilot アプリ 1.2.0 以降で GHES アカウントを追加でき、一般提供になったこと、クラウドセッションは GHES 非対応であることを確認",
+     "retrieved_at": "2026-11-16T18:05:00+09:00"
+    }
+   ]
+  },
+  "gh-coding-agent-1": {
+   "selection_reason": "GitHub 急上昇のリポジトリ 3 件。エージェントに手順(スキル)・設計レビュー・デスクトップ操作を与える道具。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "GitHub 急上昇: エージェント拡張 3 件",
+   "official_urls": [
+    "https://github.com/anthropics/skills",
+    "https://github.com/google/elephant-goldfish-model",
+    "https://github.com/vercel-labs/agent-desktop"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "anthropics/skills, google/elephant-goldfish-model, vercel-labs/agent-desktop README",
+     "evidence_urls": [
+      "https://github.com/anthropics/skills",
+      "https://github.com/google/elephant-goldfish-model",
+      "https://github.com/vercel-labs/agent-desktop"
+     ],
+     "result": "スキルの例と教育目的の免責、設計を作る役と記憶のない査読役に分ける仕組み、アクセシビリティツリーでデスクトップを操作する CLI と私的内容への注意を README で確認",
+     "retrieved_at": "2026-11-16T18:05:00+09:00"
+    }
+   ]
+  },
+  "gh-coding-agent-2": {
+   "selection_reason": "GitHub 急上昇のリポジトリ 2 件。AI エージェントにブラウザを操作させる CLI と、株式の分析結果を毎日届ける LLM システム。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "GitHub 急上昇: ブラウザ操作と株式分析",
+   "official_urls": [
+    "https://github.com/vercel-labs/agent-browser",
+    "https://github.com/ZhuLinsen/daily_stock_analysis"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "vercel-labs/agent-browser, ZhuLinsen/daily_stock_analysis README",
+     "evidence_urls": [
+      "https://github.com/vercel-labs/agent-browser",
+      "https://github.com/ZhuLinsen/daily_stock_analysis"
+     ],
+     "result": "ブラウザをスナップショットと参照で操作する Rust 製 CLI、LLM の API キーと通知先の設定が要る株式分析システム、無料データ源は安定性が保証されない旨を README で確認",
+     "retrieved_at": "2026-11-16T18:05:00+09:00"
+    }
+   ]
+  },
+  "gh-coding-agent-3": {
+   "selection_reason": "GitHub 急上昇のリポジトリ 2 件。コーディングエージェントに最新の Web 標準の知識と開発手順を与えるスキル集。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "GitHub 急上昇: エージェント用スキル集 2 件",
+   "official_urls": [
+    "https://github.com/GoogleChrome/modern-web-guidance-src",
+    "https://github.com/addyosmani/agent-skills"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "GoogleChrome/modern-web-guidance-src, addyosmani/agent-skills README",
+     "evidence_urls": [
+      "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "https://github.com/addyosmani/agent-skills"
+     ],
+     "result": "最新の Web 標準をエージェントに渡す CLI とスキル、開発の各段階に対応するスキルとスラッシュコマンドを README で確認",
+     "retrieved_at": "2026-11-16T18:05:00+09:00"
     }
    ]
   }

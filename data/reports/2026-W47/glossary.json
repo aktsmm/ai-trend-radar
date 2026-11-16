@@ -22,5 +22,29 @@
     "explain": "アプリに自分のパスワードを教えず、必要な範囲だけ別のサービスの利用を許可する仕組み。許可はあとから取り消せるため、連携が安全になる。",
     "entity": "gh-milind-soni-openmausbot",
     "ref": "https://github.com/milind-soni/OpenMausBot"
+  },
+  {
+    "term": "スキル(エージェント)",
+    "kind": "仕組み",
+    "short": "AI に作業手順を教える指示と資料のまとまり",
+    "explain": "手順書や補助スクリプトをフォルダにまとめ、AI が必要なときに読み込んで使う仕組み。毎回長い指示を書かなくても、同じ作業を同じやり方で任せやすくなる。",
+    "entity": "gh-coding-agent-1",
+    "ref": "https://github.com/anthropics/skills"
+  },
+  {
+    "term": "アクセシビリティツリー",
+    "kind": "仕組み",
+    "short": "OS が持つ画面部品の構造情報",
+    "explain": "ボタンや入力欄など、画面の部品とその名前や役割を木の形で表した情報。読み上げソフトが使うもので、AI が画面を操作する手がかりにもなる。",
+    "entity": "gh-coding-agent-1",
+    "ref": "https://github.com/vercel-labs/agent-desktop"
+  },
+  {
+    "term": "モデルの廃止(deprecation)",
+    "kind": "基礎",
+    "short": "予告したうえで提供を終えること",
+    "explain": "サービスが古いモデルの提供を、日付を決めて終了すること。期日以降は選べなくなるため、利用者は代替のモデルへ設定や連携を移す必要がある。",
+    "entity": "copilot",
+    "ref": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december"
   }
 ]

@@ -144,5 +144,156 @@
     "sources": [
       {"id": "s1", "title": "milind-soni/OpenMausBot", "publisher": "GitHub", "url": "https://github.com/milind-soni/OpenMausBot"}
     ]
+  },
+  "claude-fable-5-2": {
+    "overview": {
+      "takeaway": "Anthropic が、5.1 より速く安い Claude Fable 5.2 を発表した。",
+      "stat": {"value": "最大 30% 速い", "label": "5.1 比の出力の速さ(発表)"},
+      "steps": ["モデルを選ぶ", "努力レベルを決める", "必要なら高速モード"],
+      "changes": ["価格が入力 8 ドル、出力 40 ドルに下がった", "高速モードで生成が最大 2.5 倍速い"],
+      "facts": [
+        {"k": "提供元", "v": "Anthropic"},
+        {"k": "入力価格", "v": "100 万トークン 8 ドル"},
+        {"k": "出力価格", "v": "100 万トークン 40 ドル"},
+        {"k": "提供先", "v": "Claude、AWS GovCloud ほか"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "難しい開発や研究にモデルを使う開発者、規制の厳しい組織",
+      "benefits": ["5.1 より速く、低価格と発表された", "高速モードで待ち時間を縮められる"],
+      "how_to": ["Claude アプリや API で選ぶ", "多くの作業は Opus 5.5 から始める", "米政府向けは AWS GovCloud で使う"],
+      "caveats": ["速度や性能の数字は Anthropic の発表", "AWS では安全監視のためデータ保持が必要"],
+      "terms": [
+        {"t": "Mythos", "d": "Fable と同じモデル。保護機能を緩めた、審査制の版"},
+        {"t": "高速モード", "d": "高い料金で、生成を最大 2.5 倍速くする選択肢"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "sources": [
+      {"id": "s1", "title": "Claude Fable 5.2 and Mythos 5.2", "publisher": "Anthropic", "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2", "date": "2026-11-09"},
+      {"id": "s2", "title": "Claude Fable 5.2 is now available on AWS GovCloud (US)", "publisher": "AWS", "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/claude-fable-5-2-aws-govcloud/"}
+    ]
+  },
+  "copilot": {
+    "overview": {
+      "takeaway": "GitHub が、12 月 14 日に Copilot の 6 モデルを廃止すると予告した。",
+      "stat": {"value": "12 月 14 日", "label": "6 モデルの廃止日"},
+      "steps": ["廃止対象を確認", "代替モデルを選ぶ", "管理者は設定を確認"],
+      "changes": ["Chat や補完など全機能で対象モデルが消える", "代替モデルが Enterprise と Business で既定有効になる"],
+      "facts": [
+        {"k": "提供元", "v": "GitHub"},
+        {"k": "廃止日", "v": "2026-12-14"},
+        {"k": "対象", "v": "6 モデル"},
+        {"k": "例外", "v": "Haiku 4.5 は年額の個人契約"}
+      ],
+      "refs": ["s1"]
+    },
+    "impact": {
+      "audience": "対象モデルを使う Copilot 利用者と、組織の管理者",
+      "benefits": ["代替モデルが明示され、移行先を探しやすい", "廃止後の削除作業は不要"],
+      "how_to": ["対象と代替の一覧を確認する", "12 月 14 日までに設定や連携を更新する", "既定を切った管理者はモデルポリシーで有効化する"],
+      "caveats": ["Kimi K3 の代替は未定", "Copilot アプリの GHES 対応は 1.2.0 以降で、クラウドセッションは非対応"],
+      "terms": [
+        {"t": "廃止(deprecation)", "d": "あるモデルを予告のうえ、提供終了にすること"},
+        {"t": "モデルポリシー", "d": "管理者がモデルごとの利用可否を決める設定"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "sources": [
+      {"id": "s1", "title": "Upcoming deprecation of selected GitHub Copilot models in December", "publisher": "GitHub", "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december", "date": "2026-11-13"},
+      {"id": "s2", "title": "GitHub Enterprise Server support in the GitHub Copilot app", "publisher": "GitHub", "url": "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app", "date": "2026-11-13"}
+    ]
+  },
+  "gh-coding-agent-1": {
+    "overview": {
+      "takeaway": "手順・設計レビュー・デスクトップ操作を、エージェントに足す 3 件。",
+      "stat": {"value": "6,220", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["スキルで手順を教える", "設計を査読させる", "デスクトップを操作させる"],
+      "changes": ["skills は作業手順の例集で、教育目的と明記", "agent-desktop は構造情報でアプリを操作する"],
+      "facts": [
+        {"k": "skills", "v": "Claude 用スキルの例集"},
+        {"k": "EGM", "v": "設計と査読を分ける"},
+        {"k": "desktop", "v": "デスクトップ操作 CLI"},
+        {"k": "数字", "v": "skills のスター増"}
+      ],
+      "refs": ["s1", "s2", "s3"]
+    },
+    "impact": {
+      "audience": "コーディングエージェントで作業を安定させたい開発者",
+      "benefits": ["既存のスキルを真似して自分用を作れる", "設計の見落としを査読役が洗い出す"],
+      "how_to": ["skills は Claude Code で /plugin marketplace add を使う", "EGM は各エージェントのプラグインとして入れる", "desktop は npm install -g agent-desktop で入れる"],
+      "caveats": ["スターは注目度で、品質や安全性ではない", "desktop のスナップショットは私的内容を含み得る"],
+      "terms": [
+        {"t": "スキル", "d": "AI に作業手順を教える、指示と資料の入った フォルダ"},
+        {"t": "アクセシビリティツリー", "d": "OS が持つ、画面部品の構造情報"}
+      ],
+      "refs": ["s1", "s2", "s3"]
+    },
+    "sources": [
+      {"id": "s1", "title": "anthropics/skills", "publisher": "GitHub", "url": "https://github.com/anthropics/skills"},
+      {"id": "s2", "title": "google/elephant-goldfish-model", "publisher": "GitHub", "url": "https://github.com/google/elephant-goldfish-model"},
+      {"id": "s3", "title": "vercel-labs/agent-desktop", "publisher": "GitHub", "url": "https://github.com/vercel-labs/agent-desktop"}
+    ]
+  },
+  "gh-coding-agent-2": {
+    "overview": {
+      "takeaway": "AI にブラウザ操作と株式分析を任せる 2 件。道具と完成品の違いがある。",
+      "stat": {"value": "4,601", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["ページを読み取る", "要素を操作する", "結果を確かめる"],
+      "changes": ["ページを要素の一覧で扱える", "株式の分析結果を毎日通知できる"],
+      "facts": [
+        {"k": "browser", "v": "Rust 製のブラウザ CLI"},
+        {"k": "stock", "v": "株式の分析と通知"},
+        {"k": "必要物", "v": "stock は API キー"},
+        {"k": "数字", "v": "agent-browser のスター増"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "impact": {
+      "audience": "ブラウザ作業や市場情報の確認を自動化したい開発者",
+      "benefits": ["agent-browser はすぐ試せる", "株式分析は無料データ源でも動かせる"],
+      "how_to": ["npm install -g agent-browser で入れる", "agent-browser install でブラウザを入れる", "株式分析は Fork して Secrets を設定する"],
+      "caveats": ["株式分析は投資判断の保証ではない", "無料データ源は安定性が保証されない"],
+      "terms": [
+        {"t": "スナップショット", "d": "ページを要素の一覧にした、その時点の写し"},
+        {"t": "Secrets", "d": "API キーなどを安全に預ける GitHub の設定"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "sources": [
+      {"id": "s1", "title": "vercel-labs/agent-browser", "publisher": "GitHub", "url": "https://github.com/vercel-labs/agent-browser"},
+      {"id": "s2", "title": "ZhuLinsen/daily_stock_analysis", "publisher": "GitHub", "url": "https://github.com/ZhuLinsen/daily_stock_analysis"}
+    ]
+  },
+  "gh-coding-agent-3": {
+    "overview": {
+      "takeaway": "エージェントに新しい作り方と開発の型を教えるスキル集 2 件。",
+      "stat": {"value": "4,363", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["スキルを入れる", "エージェントが参照", "最新の作り方で実装"],
+      "changes": ["最新の Web 標準を AI に渡せる", "開発の各段階をコマンドで揃えられる"],
+      "facts": [
+        {"k": "web", "v": "Web 標準のガイド"},
+        {"k": "skills", "v": "25 のスキル"},
+        {"k": "導入", "v": "npx で 1 コマンド"},
+        {"k": "数字", "v": "web 側のスター増"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "impact": {
+      "audience": "Claude Code や Codex で開発し、出力の質を揃えたい人",
+      "benefits": ["古い書き方を避けやすくなる", "経験者の手順を AI 経由で取り入れられる"],
+      "how_to": ["npx modern-web-guidance@latest install を実行", "npx skills add addyosmani/agent-skills を実行", "/spec や /review などのコマンドを試す"],
+      "caveats": ["最終確認は人が行う", "スターは注目度で、品質の保証ではない"],
+      "terms": [
+        {"t": "ポリフィル", "d": "古いブラウザで新機能を補う追加コード"},
+        {"t": "スラッシュコマンド", "d": "/ から始めて呼び出す、エージェントの操作"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "sources": [
+      {"id": "s1", "title": "GoogleChrome/modern-web-guidance-src", "publisher": "GitHub", "url": "https://github.com/GoogleChrome/modern-web-guidance-src"},
+      {"id": "s2", "title": "addyosmani/agent-skills", "publisher": "GitHub", "url": "https://github.com/addyosmani/agent-skills"}
+    ]
   }
 }

@@ -3,23 +3,57 @@
     "id": "agents-with-many-tools",
     "title": "複数のエージェントやモデルを束ねて使う",
     "confidence": "medium",
-    "summary": "Gemini 4 Hydrogen、T3 Code、OpenMausBot の 3 件で、1 つのモデルやツールに頼らず、複数を使い分ける仕組みが示された。",
+    "summary": "Gemini 4 Hydrogen、T3 Code、OpenMausBot、Claude Fable 5.2 の 4 件で、1 つのモデルやツールに頼らず、複数を使い分ける仕組みが示された。",
     "background": [
       "Google の Orchestrator はモデルを自動で切り替え、T3 Code は複数のエージェントを 1 画面で操作する。",
       "OpenMausBot は、ボットごとにモデルや連携を変えられる。",
       "用途ごとに道具を選びたい需要が背景にあるかもしれない(見立て)。"
     ],
-    "entities": ["gemini-4-hydrogen", "gh-pingdotgg-t3code", "gh-milind-soni-openmausbot"],
+    "entities": ["gemini-4-hydrogen", "gh-pingdotgg-t3code", "gh-milind-soni-openmausbot", "claude-fable-5-2"],
     "signals": [
       {"entity": "gemini-4-hydrogen", "note": "Orchestrator が Carbon や Hydrogen などのモデルを同じ作業で切り替える"},
       {"entity": "gh-pingdotgg-t3code", "note": "Claude Code や Codex など多くのエージェントを 1 つの画面で操作できる"},
-      {"entity": "gh-milind-soni-openmausbot", "note": "ボットごとに別のモデルやアプリ連携を持てる"}
+      {"entity": "gh-milind-soni-openmausbot", "note": "ボットごとに別のモデルやアプリ連携を持てる"},
+      {"entity": "claude-fable-5-2", "note": "Advisor(相談役)や Orchestrator(振り分け役)としても使える"}
     ],
     "refs": [
       "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
       "https://github.com/pingdotgg/t3code",
-      "https://github.com/milind-soni/OpenMausBot"
+      "https://github.com/milind-soni/OpenMausBot",
+      "https://www.anthropic.com/claude-fable-and-mythos-5-2"
     ]
+  },
+  {
+    "id": "agent-skills-guides",
+    "title": "エージェントに手順や知識を足す道具",
+    "confidence": "medium",
+    "summary": "anthropics/skills ほか 2 組のリポジトリが、エージェントに作業の手順や最新の知識を渡す仕組みとして GitHub で急上昇した。",
+    "background": [
+      "Claude 用スキルの例集と、Web 標準や開発手順のスキル集がそれぞれ注目された。",
+      "エージェントの出力を安定させたい需要が背景にあるかもしれない(見立て)。"
+    ],
+    "entities": ["gh-coding-agent-1", "gh-coding-agent-3"],
+    "signals": [
+      {"entity": "gh-coding-agent-1", "note": "anthropics/skills は、Claude に特定の作業を繰り返し正しくこなさせる「スキル」の例集"},
+      {"entity": "gh-coding-agent-3", "note": "agent-skills は、仕様作成から出荷まで開発の各段階に合わせたスキルとコマンドを提供する"}
+    ],
+    "refs": ["https://github.com/anthropics/skills", "https://github.com/addyosmani/agent-skills"]
+  },
+  {
+    "id": "model-turnover",
+    "title": "モデルの世代交代と使い分け",
+    "confidence": "low",
+    "summary": "Claude Fable 5.2 と Copilot のモデル廃止予告の 2 件で、新しい版への切り替えが具体的に示された。",
+    "background": [
+      "Anthropic は 5.1 より速く安い版を出し、GitHub は旧モデルの廃止と代替を案内した。",
+      "新しい版へ移る流れが続いているのかもしれない(見立て)。"
+    ],
+    "entities": ["claude-fable-5-2", "copilot"],
+    "signals": [
+      {"entity": "claude-fable-5-2", "note": "前の 5.1 より出力が最大 30% 速く、価格は入力 100 万トークン 8 ドル、出力 40 ドルと下がった"},
+      {"entity": "copilot", "note": "2026 年 12 月 14 日に Copilot の全機能で 6 つのモデルを廃止し、代替に Claude Fable 5.2 などを示した"}
+    ],
+    "refs": ["https://www.anthropic.com/claude-fable-and-mythos-5-2", "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december"]
   },
   {
     "id": "open-weights-reach-clouds",

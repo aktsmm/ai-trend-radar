@@ -104,5 +104,112 @@
       "Ubuntu の Wayland では、PC の操作機能は無効と書かれている"
     ],
     "audience": "複数のエージェントをチャット感覚で使い分けたい人"
+  },
+  "claude-fable-5-2": {
+    "summary": [
+      "Anthropic が Claude Fable 5.2 と Mythos 5.2 を発表した。2 つは同じ基盤モデルで、Fable は悪用を防ぐサイバーと生物の保護機能を備え、全ての利用者に提供される。",
+      "前の 5.1 より出力が最大 30% 速く、価格は入力 100 万トークン 8 ドル、出力 40 ドルと下がった。最大 2.5 倍速い高速モードもある。",
+      "AWS は、米政府向けの GovCloud (US) でも Fable 5.2 が使えるようになったと発表した。"
+    ],
+    "why_trending": "Anthropic の公式発表が Hacker News と OpenRouter に並び、AWS も提供開始を告知した。",
+    "what_changes": [
+      "コーディングや推論、画像の理解が向上したと説明されている",
+      "Advisor(相談役)や Orchestrator(振り分け役)としても使える"
+    ],
+    "benefits": [
+      "5.1 より速く、低い価格で使えると発表された",
+      "高速モードで、料金と引き換えに生成を最大 2.5 倍速くできる"
+    ],
+    "caveats": [
+      "速度や性能の数字は Anthropic の発表。自分の作業で確認が必要",
+      "多くの作業には Claude Opus 5.5 から始めるよう勧められている",
+      "AWS では安全監視のためのデータ保持が必要な対象モデル"
+    ],
+    "audience": "難しい開発や研究にモデルを使う開発者、AWS で規制の厳しい業務を扱う組織"
+  },
+  "copilot": {
+    "summary": [
+      "GitHub が、2026 年 12 月 14 日に Copilot の全機能で 6 つのモデルを廃止すると予告した。対象は Claude Fable 5、Claude Haiku 4.5、Gemini 3.8 Flash、Gemini 4 Argon、Grok 4.6、Kimi K3。",
+      "代替として Claude Fable 5.2、Claude Haiku 5.5、Gemini 4 Hydrogen、Gemini 4 Carbon、Grok 4.7 が示された。Kimi K3 の代替は未定。",
+      "同じ日、Copilot アプリが GitHub Enterprise Server に対応したことも一般提供として発表された。"
+    ],
+    "why_trending": "GitHub 公式の changelog で、廃止日と代替モデルが具体的に告知された。",
+    "what_changes": [
+      "12 月 14 日以降、対象のモデルは Copilot で選べなくなる",
+      "Enterprise と Business では、代替モデルが既定で有効になる"
+    ],
+    "benefits": [
+      "代替モデルが明示されており、移行先を探す手間が少ない",
+      "廃止後に自分で削除する作業は要らない"
+    ],
+    "caveats": [
+      "管理者が既定設定を切っていると、モデルポリシーで有効化が必要",
+      "Claude Haiku 4.5 は年額プランの個人契約では引き続き使える",
+      "Copilot アプリの GHES 対応は 1.2.0 以降で、クラウドセッションは非対応"
+    ],
+    "audience": "Copilot で上記のモデルを使っている開発者と、組織の管理者"
+  },
+  "gh-coding-agent-1": {
+    "summary": [
+      "エージェントに「手順」「設計レビュー」「デスクトップ操作」を足す 3 つのリポジトリ。いずれも Claude Code などのコーディングエージェント向け。",
+      "anthropics/skills は、Claude に特定の作業を繰り返し正しくこなさせる「スキル」の例集。google/elephant-goldfish-model は、設計を書く役と、前の会話を知らない査読役に分けて設計書を点検するプラグイン。",
+      "vercel-labs/agent-desktop は、画面の部品情報を読み取り、macOS・Windows・Linux のアプリを操作させる CLI。"
+    ],
+    "why_trending": "GitHub Trending で今週 anthropics/skills は 6,220、2 件目は 5,539、3 件目は 5,171 スター増(注目度の目安で、品質や安全性の保証ではない)。",
+    "what_changes": [
+      "指示書(スキル)を置くだけで、同じ作業を毎回同じやり方で任せやすくなる",
+      "設計の見落としを、記憶のない査読役が洗い出す"
+    ],
+    "benefits": [
+      "初心者でも、既存のスキルを真似して自分用を作れる",
+      "画面を見る代わりに構造情報で操作するため、操作対象を指定しやすい"
+    ],
+    "caveats": [
+      "anthropics/skills は教育目的の例で、本番利用前に自分の環境で試す必要がある",
+      "agent-desktop のスナップショットには私的な内容が入るため、公開ログに出さない"
+    ],
+    "audience": "コーディングエージェントを日常的に使い、作業を安定させたい開発者"
+  },
+  "gh-coding-agent-2": {
+    "summary": [
+      "AI にブラウザ操作と株式分析を任せる 2 つのリポジトリ。1 つ目は道具、2 つ目は完成したシステムという違いがある。",
+      "vercel-labs/agent-browser は、ページを要素の一覧(スナップショット)として読み、クリックなどを 1 コマンドずつ実行できる Rust 製の CLI。",
+      "ZhuLinsen/daily_stock_analysis は、複数市場の株価やニュースを集め、AI の「決断ダッシュボード」を毎日メールや Slack などに届ける。"
+    ],
+    "why_trending": "GitHub Trending で今週 agent-browser は 4,601、daily_stock_analysis は 4,526 スター増(注目度の目安で、品質や安全性の保証ではない)。",
+    "what_changes": [
+      "エージェントが、画面の画像ではなく文字の一覧でページを扱える",
+      "株式の調べものを、定時実行で自動化できる"
+    ],
+    "benefits": [
+      "agent-browser は npm や Homebrew で入れ、すぐ試せる",
+      "株式分析は無料のデータ源だけでも動かせる(安定性は保証されない)"
+    ],
+    "caveats": [
+      "株式分析は AI モデルの API キーと通知先の設定が必要。投資判断の保証ではない",
+      "ブラウザを操作させる際は、ログイン情報など渡す範囲に注意する"
+    ],
+    "audience": "ブラウザ作業の自動化や、市場情報の定期チェックに関心のある開発者"
+  },
+  "gh-coding-agent-3": {
+    "summary": [
+      "コーディングエージェントに、より良い作り方を教える 2 つのスキル集。古い書き方に頼りがちな AI を、新しい標準や開発の型に寄せる。",
+      "GoogleChrome/modern-web-guidance-src は、最新の Web 標準やブラウザ対応の知識をエージェントに渡す CLI とスキルの元リポジトリ。",
+      "addyosmani/agent-skills は、仕様作成から出荷まで、開発の各段階に合わせた 25 のスキルと /spec や /review などのコマンドを提供する。"
+    ],
+    "why_trending": "GitHub Trending で今週 modern-web-guidance-src は 4,363、agent-skills は 3,670 スター増(注目度の目安で、品質や安全性の保証ではない)。",
+    "what_changes": [
+      "AI が学習データ由来の古い書き方で書くのを、ガイドで抑えられる",
+      "仕様、実装、テスト、レビューの流れを、コマンドで揃えられる"
+    ],
+    "benefits": [
+      "npx で 1 コマンドから導入できる",
+      "初心者でも、経験者の作業手順を AI 経由で取り入れられる"
+    ],
+    "caveats": [
+      "どちらも AI の出力を良くする補助で、最終確認は人が行う",
+      "agent-skills は 1 つだけ入れると、共有の参考資料が使えない場合がある"
+    ],
+    "audience": "Claude Code や Codex などで開発し、出力の質を揃えたい人"
   }
 }

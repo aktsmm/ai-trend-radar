@@ -34,9 +34,36 @@ def findings():
             continue
         if led.get("ok") is False:
             out.append(f"{fid}: 最新の週で取得に失敗 ({led.get('error', '')[:80]})")
-        elif len(ledgers) == WEEKS and fid not in QUIET_OK and all(l.get(fid, {}).get("count", 0) == 0 for l in ledgers):
-            out.append(f"{fid}: 直近 {WEEKS} 週ずっと 0 件(ページの構造が変わった可能性)")
+            continue
+        msg = judge(fid, led, ledgers)
+        if msg:
+            out.append(msg)
     return out
+
+
+def judge(fid, led, ledgers):
+    """One source's verdict from its latest ledger entry (and the recent weeks' entries): a message, or None when it looks healthy."""
+    redirected = _redirect_finding(fid, led)
+    if redirected:
+        return redirected
+    if "links" in led:
+        # the collector records what it saw on the index page, so a quiet source can be told from a broken one:
+        # no article links at all = the markup changed; links present but nothing recent = just quiet
+        return f"{fid}: 一覧ページから記事リンクを 1 件も取れません(ページの構造が変わった可能性)" if led["links"] == 0 else None
+    if len(ledgers) == WEEKS and fid not in QUIET_OK and all(l.get(fid, {}).get("count", 0) == 0 for l in ledgers):
+        return f"{fid}: 直近 {WEEKS} 週ずっと 0 件(ページの構造が変わった可能性)"
+    return None
+
+
+def _redirect_finding(fid, led):
+    """The index URL we scrape ends up on a different page: the site moved or narrowed it (liquid.ai/blog -> /news/models, which listed model posts only)."""
+    url, final = led.get("url"), led.get("final_url")
+    if not url or not final or "links" not in led:
+        return None
+    norm = lambda u: u.split("#")[0].split("?")[0].rstrip("/").replace("://www.", "://")
+    if norm(url) != norm(final):
+        return f"{fid}: 一覧 URL が別のページへ転送されています({url} → {final})。記事の一部しか載らない一覧になっていないか確認してください"
+    return None
 
 
 def main():

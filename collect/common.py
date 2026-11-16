@@ -43,6 +43,16 @@ def get(url, headers=None, timeout=25, retries=1):
     raise last
 
 
+def final_url(url, timeout=20):
+    """Where a GET of `url` ends up after redirects (None when unreachable). Used to notice an index page that now redirects elsewhere."""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"}, method="HEAD")
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return r.geturl()
+    except Exception:
+        return None
+
+
 def get_json(url, headers=None, **kw):
     return json.loads(get(url, headers, **kw))
 

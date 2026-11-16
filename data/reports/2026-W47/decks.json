@@ -144,5 +144,96 @@
     "sources": [
       {"id": "s1", "title": "milind-soni/OpenMausBot", "publisher": "GitHub", "url": "https://github.com/milind-soni/OpenMausBot"}
     ]
+  },
+  "gh-coding-agent-1": {
+    "overview": {
+      "takeaway": "エージェントに手順・設計レビュー・画面操作を足す 3 つの道具が注目された。",
+      "stat": {"value": "6,220", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["道具を選ぶ", "エージェントに導入", "試して確認"],
+      "changes": ["skills は、作業手順をフォルダで渡す", "EGM は、設計を別視点で見直す", "agent-desktop は、アプリを操作する"],
+      "facts": [
+        {"k": "skills", "v": "Claude 向け手順の例"},
+        {"k": "EGM", "v": "設計とレビューの plugin"},
+        {"k": "desktop", "v": "画面操作の CLI"},
+        {"k": "ライセンス", "v": "Apache 2.0 ほか"}
+      ],
+      "refs": ["s1", "s2", "s3"]
+    },
+    "impact": {
+      "audience": "コーディングエージェントの能力を広げたい開発者",
+      "benefits": ["作業手順を渡して、結果を揃えやすくする", "設計の抜けを、承認の前に見つけやすくする"],
+      "how_to": ["skills は /plugin marketplace add で登録", "EGM は /egm:egm-review で設計書を見直す", "desktop は npm install -g agent-desktop"],
+      "caveats": ["skills は説明用の例で、自分の環境で確認する", "画面の内容に私的な情報が含まれうる"],
+      "terms": [
+        {"t": "スキル", "d": "エージェントに作業の手順を教える指示のフォルダ"},
+        {"t": "アクセシビリティツリー", "d": "OS が持つ、画面の部品の構造情報"}
+      ],
+      "refs": ["s1", "s2", "s3"]
+    },
+    "sources": [
+      {"id": "s1", "title": "anthropics/skills", "publisher": "GitHub", "url": "https://github.com/anthropics/skills"},
+      {"id": "s2", "title": "google/elephant-goldfish-model", "publisher": "GitHub", "url": "https://github.com/google/elephant-goldfish-model"},
+      {"id": "s3", "title": "vercel-labs/agent-desktop", "publisher": "GitHub", "url": "https://github.com/vercel-labs/agent-desktop"}
+    ]
+  },
+  "gh-coding-agent-2": {
+    "overview": {
+      "takeaway": "ブラウザを操作する CLI と、AI の株式分析システムの 2 件が注目された。",
+      "stat": {"value": "4,601", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["README を読む", "導入して試す", "権限と費用を確認"],
+      "changes": ["agent-browser は、ブラウザを 1 コマンドずつ操作する", "株式分析は、毎日の分析を通知する"],
+      "facts": [
+        {"k": "browser", "v": "Rust 製 CLI"},
+        {"k": "stock", "v": "Python 製の分析システム"},
+        {"k": "ライセンス", "v": "Apache 2.0 / MIT"},
+        {"k": "言語", "v": "stock の README は中国語中心"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "impact": {
+      "audience": "ブラウザ作業を自動化したい開発者、株式情報を自動で集めたい人",
+      "benefits": ["npx で、導入前にブラウザ操作を試せる", "無料のデータ源だけでも動かせると書かれている"],
+      "how_to": ["agent-browser は npm install -g で導入", "株式分析は Fork して Actions で実行"],
+      "caveats": ["株式分析は投資助言ではないと明記されている", "LLM の API キーが必要で、無料データは不安定な場合がある"],
+      "terms": [
+        {"t": "CLI", "d": "文字で操作するコマンドラインの道具"},
+        {"t": "GitHub Actions", "d": "GitHub 上で処理を自動実行する仕組み"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "sources": [
+      {"id": "s1", "title": "vercel-labs/agent-browser", "publisher": "GitHub", "url": "https://github.com/vercel-labs/agent-browser"},
+      {"id": "s2", "title": "ZhuLinsen/daily_stock_analysis", "publisher": "GitHub", "url": "https://github.com/ZhuLinsen/daily_stock_analysis"}
+    ]
+  },
+  "gh-coding-agent-3": {
+    "overview": {
+      "takeaway": "エージェントに Web の新しい作法や開発手順を教えるスキル集 2 件が注目された。",
+      "stat": {"value": "4,363", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["スキルを選ぶ", "npx で導入", "生成物を確認"],
+      "changes": ["Web 標準の新しい書き方を渡せる", "開発工程ごとの手順を共通化できる"],
+      "facts": [
+        {"k": "web", "v": "約 250 の Web 機能"},
+        {"k": "skills", "v": "25 スキル、9 コマンド"},
+        {"k": "導入", "v": "npx で導入"},
+        {"k": "対象", "v": "多くのコーディングエージェント"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "impact": {
+      "audience": "AI コーディング支援の品質を揃えたい開発者・チーム",
+      "benefits": ["古い書き方を避ける指針を、エージェントに渡せる", "仕様から公開までの手順を、チームで揃えられる"],
+      "how_to": ["npx modern-web-guidance@latest install", "npx skills add addyosmani/agent-skills"],
+      "caveats": ["手順を渡すだけで、生成物は自分でテストする", "1 つだけ入れると共有資料が使えない場合がある"],
+      "terms": [
+        {"t": "スキル", "d": "エージェントに作業の手順を教える指示のまとまり"},
+        {"t": "ポリフィル", "d": "古いブラウザ向けに新機能を補う追加コード"}
+      ],
+      "refs": ["s1", "s2"]
+    },
+    "sources": [
+      {"id": "s1", "title": "GoogleChrome/modern-web-guidance-src", "publisher": "GitHub", "url": "https://github.com/GoogleChrome/modern-web-guidance-src"},
+      {"id": "s2", "title": "addyosmani/agent-skills", "publisher": "GitHub", "url": "https://github.com/addyosmani/agent-skills"}
+    ]
   }
 }

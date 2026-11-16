@@ -9,7 +9,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 
-from .common import NOW, SINCE, get, item, strip_html
+from .common import NOW, SINCE, final_url, get, item, strip_html
 
 # (feed_id, vendor, source_type, url)
 FEEDS = [
@@ -40,10 +40,13 @@ AI_ONLY_FEEDS = {"meta-newsroom"}
 # (og / article:published_time / JSON-LD). Keeps launches like Liquid AI's LFM3 from depending on third-party mentions.
 # (blog_id, vendor, index_url, link_regex)
 BLOG_INDEXES = [
-    ("liquid-blog", "Liquid AI", "https://www.liquid.ai/blog", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
+    # /blog redirects to /news/models (model posts only), which hid e.g. LiquidCodec; /news lists every post, newest first
+    ("liquid-blog", "Liquid AI", "https://www.liquid.ai/news", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
     ("kimi-blog", "Moonshot AI", "https://www.kimi.com/blog", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
     ("minimax-news", "MiniMax", "https://www.minimax.io/news", r'href="(/news/[a-z0-9][^"#?/]*)"'),
-    ("allenai-blog", "Ai2", "https://allenai.org/blog", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
+    # /blog redirects to /research (research posts only); announcements are listed on /news, so both are read
+    ("allenai-blog", "Ai2", "https://allenai.org/research", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
+    ("allenai-news", "Ai2", "https://allenai.org/news", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
     ("cohere-blog", "Cohere", "https://cohere.com/blog", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
     ("together-blog", "Together AI", "https://www.together.ai/blog", r'href="(/blog/[a-z0-9][^"#?/]*)"'),
 ]
@@ -173,11 +176,17 @@ def fetch_feed(feed):
     out = []
     text = get(url, timeout=30, retries=1)
     entries = parse_anthropic_news(text) if fid == "anthropic-news" else parse_feed(text)
+    # what the ledger needs to tell a quiet feed (entries parsed, newest older than the window) from a broken one (nothing parsed)
+    dates = [p for _, _, p, _ in entries if p]
+    fetch_feed.last[fid] = {"links": len(entries), "newest": max(dates).strftime("%Y-%m-%d") if dates else None}
     for title, link, pub, summ in entries:
         if pub and pub >= SINCE and title and link:
             out.append(item("official", title, link, summ, 1, "announcement", None, pub.isoformat(),
                             vendor=vendor, source_type=stype, feed=fid))
     return out
+
+
+fetch_feed.last = {}
 
 
 def fetch_blog(blog):
@@ -186,7 +195,7 @@ def fetch_blog(blog):
     import urllib.parse as up
     bid, vendor, index, rx = blog
     page = get(index, timeout=30, retries=1)
-    links, out = [], []
+    links, out, newest = [], [], None
     for m in re.finditer(rx, page):
         u = up.urljoin(index, m.group(1))
         if u not in links and u.rstrip("/") != index.rstrip("/"):
@@ -197,11 +206,18 @@ def fetch_blog(blog):
         except Exception:
             continue
         pub = next((_dt(m.group(1)) for rx_ in PAGE_DATE_RES for m in [rx_.search(art)] if m and _dt(m.group(1))), None)
+        if pub and (newest is None or pub > newest):
+            newest = pub
         t = TITLE_RE.search(art)
         title = strip_html(_html.unescape((t.group(1) or t.group(2)) if t else "")).split(" | ")[0].strip()
         if pub and pub >= SINCE and title:
             out.append(item("official", title, u, "", 1, "announcement", None, pub.isoformat(), vendor=vendor, source_type="announcement", feed=bid))
+    # what the ledger needs to tell a quiet source from a broken one: links found on the page, the newest article date seen, and where the index really led
+    fetch_blog.last[bid] = {"links": len(links), "newest": newest.strftime("%Y-%m-%d") if newest else None, "final_url": final_url(index)}
     return out
+
+
+fetch_blog.last = {}
 
 
 def fetch_release(repo_vendor):
@@ -224,7 +240,10 @@ def collect_official():
         url = arg[3] if kind == "feed" else arg[2] if kind == "blog" else f"https://github.com/{arg[0]}/releases.atom"
         try:
             res = fetch_feed(arg) if kind == "feed" else fetch_blog(arg) if kind == "blog" else fetch_release(arg)
-            return fid, res, {"ok": True, "count": len(res), "url": url}
+            led = {"ok": True, "count": len(res), "url": url}
+            if kind in ("blog", "feed"):
+                led.update((fetch_blog if kind == "blog" else fetch_feed).last.get(fid, {}))
+            return fid, res, led
         except Exception as e:
             return fid, [], {"ok": False, "error": f"{type(e).__name__}: {e}"[:200], "url": url}
 

@@ -25,6 +25,7 @@
 | PR がマージされない | PR のコメント(原因の抜粋つき)、`auto-merge-digest` のログ | 下の「PR が止まったとき」 |
 | 誤情報・無関係な項目が載った | 該当キーワードの JSON | 下の「誤掲載の訂正」 |
 | 重大ニュースが載らない | `rejected_candidates.json` の却下理由、`.work/pages` に相当する取得結果 | 下の「取りこぼしの調べ方」 |
+| `[source-health]` が「0 件」「転送」を報告 | Issue 本文、`data/reports/<週>/report.json` の `official_ledger`(`links` / `newest` / `final_url`) | 台帳は、一覧から取れた記事リンク数(`links`)・最新記事の日付(`newest`)・一覧 URL の転送先(`final_url`)を持つ。`links` があるのに 0 件が続くだけなら「静かな収集元」で警告しない。`links` が 0(構造変化)か、一覧 URL が別ページへ転送されている(例: liquid.ai/blog が /news/models、allenai.org/blog が /research に転送され、一部の記事が載らなかった)ときだけ警告する。転送なら、全記事の一覧ページを `BLOG_INDEXES` に指定し直す(`collect/official.py`) |
 | 取得元が落ちている | `health.json`、Issue「[source-health]」 | 数日は放置してよい。恒久的ならフィードを `collect/official.py` から外す |
 
 ## PR が止まったとき

@@ -40,6 +40,54 @@ class RedirectAndQuietTest(unittest.TestCase):
         self.assertIsNone(S.judge("ml-explore/mlx", old, [{"ml-explore/mlx": old}] * 3))
 
 
+class SitemapFallbackTest(unittest.TestCase):
+    """Regression for the Liquid miss: the index (redirected to a model-only listing) did not list a new post, the sitemap did."""
+
+    INDEX = '<a href="/blog/model-post">m</a>'
+    SITEMAP = ("<urlset><url><loc>https://s.test/blog/model-post</loc><lastmod>%(new)s</lastmod></url>"
+               "<url><loc>https://s.test/blog/codec</loc><lastmod>%(new)s</lastmod></url>"
+               "<url><loc>https://s.test/blog/ancient</loc><lastmod>2020-01-01</lastmod></url>"
+               "<url><loc>https://s.test/about</loc><lastmod>%(new)s</lastmod></url>"
+               "<url><loc>https://s.test/blog/no-date</loc></url></urlset>")
+    ART = '<html><head><title>%s | S</title><meta property="article:published_time" content="%s"></head></html>'
+    RX = r'href="(/blog/[a-z0-9][^"#?/]*)"'
+
+    def setUp(self):
+        from datetime import datetime, timedelta, timezone
+        self.new = (datetime.now(timezone.utc) - timedelta(days=1)).strftime("%Y-%m-%dT00:00:00Z")
+        self.pages = {"https://s.test/blog": self.INDEX, "https://s.test/sitemap.xml": self.SITEMAP % {"new": self.new},
+                      "https://s.test/blog/model-post": self.ART % ("Model", self.new), "https://s.test/blog/codec": self.ART % ("Codec", self.new)}
+
+    def run_blog(self):
+        with mock.patch.object(O, "get", side_effect=lambda u, **k: self.pages[u]), mock.patch.object(O, "final_url", return_value="https://s.test/blog"):
+            return O.fetch_blog(("s-blog", "S", "https://s.test/blog", self.RX))
+
+    def test_post_missing_from_the_index_is_collected_from_the_sitemap(self):
+        items = self.run_blog()
+        self.assertEqual(sorted(i["url"] for i in items), ["https://s.test/blog/codec", "https://s.test/blog/model-post"])
+        self.assertEqual(O.fetch_blog.last["s-blog"]["sitemap_only"], 1)
+
+    def test_only_recent_article_paths_are_taken(self):
+        with mock.patch.object(O, "get", side_effect=lambda u, **k: self.pages[u]):
+            extra = O.sitemap_recent("https://s.test/blog", self.RX, ["https://s.test/blog/model-post"])
+        self.assertEqual(extra, ["https://s.test/blog/codec"])  # not the 2020 post, not /about, not the undated one
+
+    def test_no_sitemap_means_no_change(self):
+        def fake(u, **k):
+            if u.endswith("sitemap.xml"):
+                raise OSError("404")
+            return self.pages[u]
+        with mock.patch.object(O, "get", side_effect=fake), mock.patch.object(O, "final_url", return_value="https://s.test/blog"):
+            items = O.fetch_blog(("s-blog", "S", "https://s.test/blog", self.RX))
+        self.assertEqual([i["url"] for i in items], ["https://s.test/blog/model-post"])
+        self.assertEqual(O.fetch_blog.last["s-blog"]["sitemap_only"], 0)
+
+    def test_health_flags_an_incomplete_index_even_though_the_post_was_recovered(self):
+        led = {"ok": True, "count": 1, "url": "https://s.test/blog", "links": 5, "newest": "2026-11-12", "final_url": "https://s.test/blog", "sitemap_only": 2}
+        self.assertIn("サイトマップ", S.judge("s-blog", led, [{"s-blog": led}] * 3))
+        self.assertIsNone(S.judge("s-blog", {**led, "sitemap_only": 0}, [{"s-blog": led}] * 3))
+
+
 class BlogLedgerTest(unittest.TestCase):
     INDEX = '<a href="/blog/new-post">x</a><a href="/blog/old-post">y</a><a href="/blog/new-post">dup</a>'
     ART = '<html><head><title>Hello | Site</title><meta property="article:published_time" content="%s"></head></html>'

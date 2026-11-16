@@ -46,6 +46,9 @@ def judge(fid, led, ledgers):
     redirected = _redirect_finding(fid, led)
     if redirected:
         return redirected
+    if led.get("sitemap_only"):
+        # the collector still got these posts (it falls back to the sitemap), but the index page itself no longer lists them: fix the index URL
+        return f"{fid}: 一覧ページに載っていない最近の記事を {led['sitemap_only']} 件、サイトマップから補いました。一覧 URL が一部の記事しか載せていない可能性があります(`collect/official.py` の BLOG_INDEXES を確認)"
     if "links" in led:
         # the collector records what it saw on the index page, so a quiet source can be told from a broken one:
         # no article links at all = the markup changed; links present but nothing recent = just quiet

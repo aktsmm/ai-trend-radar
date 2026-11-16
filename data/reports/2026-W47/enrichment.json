@@ -269,31 +269,75 @@
  "url_checks": {
   "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/": {
    "status": 200,
-   "checked_at": "2026-11-15T22:39:26.405741+00:00"
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
+  },
+  "https://aws.amazon.com/about-aws/whats-new/2026/11/claude-fable-5-2-aws-govcloud/": {
+   "status": 200,
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
   },
   "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/": {
    "status": 200,
-   "checked_at": "2026-11-15T22:39:26.405741+00:00"
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
   },
   "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/": {
    "status": 200,
-   "checked_at": "2026-11-15T22:39:26.405741+00:00"
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
   },
   "https://deepmind.google/blog/introducing-gemini-4-hydrogen/": {
    "status": 200,
-   "checked_at": "2026-11-15T22:39:26.405741+00:00"
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
+  },
+  "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app": {
+   "status": 200,
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
+  },
+  "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december": {
+   "status": 200,
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
+  },
+  "https://github.com/GoogleChrome/modern-web-guidance-src": {
+   "status": 200,
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
+  },
+  "https://github.com/ZhuLinsen/daily_stock_analysis": {
+   "status": 200,
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
+  },
+  "https://github.com/addyosmani/agent-skills": {
+   "status": 200,
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
+  },
+  "https://github.com/anthropics/skills": {
+   "status": 200,
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
+  },
+  "https://github.com/google/elephant-goldfish-model": {
+   "status": 200,
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
   },
   "https://github.com/meta/astryx": {
    "status": 200,
-   "checked_at": "2026-11-15T22:39:26.405741+00:00"
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
   },
   "https://github.com/milind-soni/OpenMausBot": {
    "status": 200,
-   "checked_at": "2026-11-15T22:39:26.405741+00:00"
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
   },
   "https://github.com/pingdotgg/t3code": {
    "status": 200,
-   "checked_at": "2026-11-15T22:39:26.405741+00:00"
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
+  },
+  "https://github.com/vercel-labs/agent-browser": {
+   "status": 200,
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
+  },
+  "https://github.com/vercel-labs/agent-desktop": {
+   "status": 200,
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
+  },
+  "https://www.anthropic.com/claude-fable-and-mythos-5-2": {
+   "status": 200,
+   "checked_at": "2026-11-16T10:50:06.454285+00:00"
   }
  }
 }

@@ -39,5 +39,24 @@
       "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
       "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/"
     ]
+  },
+  {
+    "id": "agents-taught-procedures",
+    "title": "エージェントに手順や知識を渡す道具",
+    "confidence": "low",
+    "summary": "anthropics/skills などと modern-web-guidance、agent-skills の 2 つのカードで、エージェントに作業手順や最新の知識を渡す「スキル」集が並んだ。",
+    "background": [
+      "どちらも、エージェントの出力を手順やガイドで揃える道具として README に説明されている。",
+      "2 件だけの共通点で、生成物の品質を揃えたい需要が背景にあるかもしれない(見立て)。"
+    ],
+    "entities": ["gh-coding-agent-1", "gh-coding-agent-3"],
+    "signals": [
+      {"entity": "gh-coding-agent-1", "note": "anthropics/skills は、作業の手順書を Claude に渡す例を集めている"},
+      {"entity": "gh-coding-agent-3", "note": "agent-skills は、開発工程ごとの 25 のスキルと 9 つのコマンドを提供する"}
+    ],
+    "refs": [
+      "https://github.com/anthropics/skills",
+      "https://github.com/addyosmani/agent-skills"
+    ]
   }
 ]

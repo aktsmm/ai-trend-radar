@@ -80,5 +80,53 @@
       ],
       "official_url": "https://github.com/milind-soni/OpenMausBot"
     }
+  ],
+  "gh-coding-agent-1": [
+    {
+      "title": "エージェントの力を足す 3 つの道具",
+      "diagram_type": "infographic",
+      "icon": "plug",
+      "stat": {"value": "6,220", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["道具を選ぶ", "エージェントに導入", "試して確認"],
+      "points": [
+        {"h": "skills", "t": "anthropics/skills は、作業の手順書を Claude に渡す例の集まり"},
+        {"h": "EGM", "t": "google/elephant-goldfish-model は、設計を別視点で見直させる"},
+        {"h": "desktop", "t": "vercel-labs/agent-desktop は、アプリをエージェントが操作する CLI"},
+        {"h": "注意", "t": "スター数は注目度の目安(skills の数字)。操作を許す範囲は慎重に"}
+      ],
+      "official_url": "https://github.com/anthropics/skills"
+    }
+  ],
+  "gh-coding-agent-2": [
+    {
+      "title": "ブラウザ操作と株式分析の 2 件",
+      "diagram_type": "infographic",
+      "icon": "terminal",
+      "stat": {"value": "4,601", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["README を読む", "導入して試す", "権限と費用を確認"],
+      "points": [
+        {"h": "browser", "t": "vercel-labs/agent-browser は、エージェントがブラウザを操作する CLI"},
+        {"h": "stock", "t": "ZhuLinsen/daily_stock_analysis は、AI の株式分析を毎日通知する"},
+        {"h": "違い", "t": "前者は操作の道具、後者は分析から通知までの完成したシステム"},
+        {"h": "注意", "t": "スター数は注目度の目安(browser の数字)。投資助言ではない"}
+      ],
+      "official_url": "https://github.com/vercel-labs/agent-browser"
+    }
+  ],
+  "gh-coding-agent-3": [
+    {
+      "title": "エージェントに作法を教えるスキル集",
+      "diagram_type": "infographic",
+      "icon": "check",
+      "stat": {"value": "4,363", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["スキルを選ぶ", "npx で導入", "生成物を確認"],
+      "points": [
+        {"h": "web", "t": "modern-web-guidance-src は、新しい Web 標準の使い方を渡す"},
+        {"h": "skills集", "t": "addyosmani/agent-skills は、開発工程ごとの 25 のスキル集"},
+        {"h": "試し方", "t": "どちらも npx のコマンドで導入できる"},
+        {"h": "注意", "t": "スター数は注目度の目安(web の数字)。生成物は自分で確認する"}
+      ],
+      "official_url": "https://github.com/GoogleChrome/modern-web-guidance-src"
+    }
   ]
 }

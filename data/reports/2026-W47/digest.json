@@ -104,5 +104,70 @@
       "Ubuntu の Wayland では、PC の操作機能は無効と書かれている"
     ],
     "audience": "複数のエージェントをチャット感覚で使い分けたい人"
+  },
+  "gh-coding-agent-1": {
+    "summary": [
+      "エージェントに「やり方」を教える道具 3 件。anthropics/skills は、Claude が特定の作業を手順どおりにこなすための指示とスクリプトの例を集めている。",
+      "google/elephant-goldfish-model は、設計を書く役と、前の会話を知らない「金魚」の役の見直しで、仕様書の抜けを探すプラグイン。",
+      "vercel-labs/agent-desktop は、画面を撮らずに OS のアクセシビリティ情報で、デスクトップアプリをエージェントが操作する CLI。"
+    ],
+    "why_trending": "GitHub Trending で今週 6,220 / 5,539 / 5,171 スターを集めた(注目度の目安で、品質や安全性の保証ではない)。",
+    "what_changes": [
+      "skills は、作業ごとの手順書をフォルダで渡し、再現しやすくする",
+      "EGM は、設計の承認前に別視点のレビューを挟める",
+      "agent-desktop は、アプリの要素を参照番号で指定して操作する"
+    ],
+    "benefits": [
+      "skills は Claude Code に /plugin で登録して試せる",
+      "EGM は既存の設計書を /egm:egm-review で見直せる",
+      "agent-desktop は npm install -g で入れられる"
+    ],
+    "caveats": [
+      "skills は説明用の例で、重要な作業は自分の環境で確認する",
+      "agent-desktop の画面内容には私的な情報が含まれうる。ログに出さない",
+      "EGM のレビューは、テストや人の判断の代わりにならない"
+    ],
+    "audience": "コーディングエージェントの能力を広げたい開発者"
+  },
+  "gh-coding-agent-2": {
+    "summary": [
+      "vercel-labs/agent-browser は、エージェントがブラウザを 1 コマンドずつ操作できる Rust 製の CLI。ページを要素ごとの参照番号つきの文字で読み、クリックなどを行う。",
+      "ZhuLinsen/daily_stock_analysis は、AI で複数市場の株式を分析し、結果を毎日チャットやメールに送るシステム。README は中国語が中心。"
+    ],
+    "why_trending": "GitHub Trending で今週 4,601 / 4,526 スターを集めた(注目度の目安で、品質や安全性の保証ではない)。",
+    "what_changes": [
+      "agent-browser は、ブラウザ操作を短いシェルコマンドの繰り返しにする",
+      "株式分析は、GitHub Actions で平日に自動実行し通知できる"
+    ],
+    "benefits": [
+      "agent-browser は npx agent-browser open で、導入前に試せる",
+      "株式分析は無料のデータ源だけでも動かせると書かれている"
+    ],
+    "caveats": [
+      "agent-browser のログイン情報や操作の範囲は、セキュリティの文書で確認する",
+      "株式分析は学習・研究用で、投資助言ではないと明記されている",
+      "株式分析は LLM の API キーが必要で、無料データは安定性が保証されない"
+    ],
+    "audience": "ブラウザ作業を自動化したい開発者、株式の情報収集を自動化したい人"
+  },
+  "gh-coding-agent-3": {
+    "summary": [
+      "エージェントに作法を教える「スキル」集 2 件。GoogleChrome/modern-web-guidance-src は、古い書き方に流れがちなエージェントに、新しい Web 標準の使い方を渡す。",
+      "addyosmani/agent-skills は、仕様、計画、実装、テスト、レビュー、公開までの開発工程ごとの 25 のスキルと 9 つのコマンドを提供する。"
+    ],
+    "why_trending": "GitHub Trending で今週 4,363 / 3,670 スターを集めた(注目度の目安で、品質や安全性の保証ではない)。",
+    "what_changes": [
+      "modern-web-guidance は、約 250 の Web 機能のガイドを必要な分だけ渡す",
+      "agent-skills は、工程ごとの手順を各エージェントに共通で使わせる"
+    ],
+    "benefits": [
+      "npx modern-web-guidance@latest install で導入できる",
+      "npx skills add で、70 以上のエージェントに入れられると書かれている"
+    ],
+    "caveats": [
+      "どちらも手順や知識を渡すもので、生成物は自分でテスト・確認する",
+      "agent-skills は 1 つだけ入れると共有の補助資料が使えない場合がある"
+    ],
+    "audience": "AI コーディング支援の品質を揃えたい開発者・チーム"
   }
 }

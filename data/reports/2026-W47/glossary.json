@@ -22,5 +22,13 @@
     "explain": "アプリに自分のパスワードを教えず、必要な範囲だけ別のサービスの利用を許可する仕組み。許可はあとから取り消せるため、連携が安全になる。",
     "entity": "gh-milind-soni-openmausbot",
     "ref": "https://github.com/milind-soni/OpenMausBot"
+  },
+  {
+    "term": "アクセシビリティツリー",
+    "kind": "仕組み",
+    "short": "OS が持つ画面部品の構造情報",
+    "explain": "ボタンや入力欄など、画面の部品の名前と役割を OS が木の形で持つ情報。本来は読み上げソフト向けで、プログラムが画面を画像でなく文字で把握する手がかりにもなる。",
+    "entity": "gh-coding-agent-1",
+    "ref": "https://github.com/vercel-labs/agent-desktop"
   }
 ]

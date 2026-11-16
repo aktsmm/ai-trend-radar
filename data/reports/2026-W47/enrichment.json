@@ -123,6 +123,80 @@
      "retrieved_at": "2026-11-16T05:30:00+09:00"
     }
    ]
+  },
+  "gh-coding-agent-1": {
+   "selection_reason": "GitHub 急上昇の 3 件。コーディングエージェントに手順や設計レビュー、デスクトップ操作の力を足す道具をまとめて紹介。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "GitHub 急上昇: エージェント拡張 3 件",
+   "official_urls": [
+    "https://github.com/anthropics/skills",
+    "https://github.com/google/elephant-goldfish-model",
+    "https://github.com/vercel-labs/agent-desktop"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "anthropics/skills, google/elephant-goldfish-model, vercel-labs/agent-desktop README",
+     "evidence_urls": [
+      "https://github.com/anthropics/skills",
+      "https://github.com/google/elephant-goldfish-model",
+      "https://github.com/vercel-labs/agent-desktop"
+     ],
+     "result": "Agent Skills の例、設計と別視点レビューの EGM、アクセシビリティツリーで操作する CLI の説明と、各ライセンスや注意書きを README で確認",
+     "retrieved_at": "2026-11-16T17:57:00+09:00"
+    }
+   ]
+  },
+  "gh-coding-agent-2": {
+   "selection_reason": "GitHub 急上昇の 2 件。ブラウザ操作の CLI と、AI で株式を分析し毎日通知するシステム。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "GitHub 急上昇: ブラウザ操作と株式分析 2 件",
+   "official_urls": [
+    "https://github.com/vercel-labs/agent-browser",
+    "https://github.com/ZhuLinsen/daily_stock_analysis"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "vercel-labs/agent-browser, ZhuLinsen/daily_stock_analysis README",
+     "evidence_urls": [
+      "https://github.com/vercel-labs/agent-browser",
+      "https://github.com/ZhuLinsen/daily_stock_analysis"
+     ],
+     "result": "ブラウザ操作 CLI の使い方と Apache-2.0、株式分析システムの機能、設定、MIT、投資助言ではないという免責を README で確認",
+     "retrieved_at": "2026-11-16T17:57:00+09:00"
+    }
+   ]
+  },
+  "gh-coding-agent-3": {
+   "selection_reason": "GitHub 急上昇の 2 件。コーディングエージェントに最新の Web の作法や開発手順を教える「スキル」集。",
+   "verification_status": "partially_verified",
+   "category": "github-trending",
+   "kind": "repo",
+   "display": "GitHub 急上昇: エージェント用スキル集 2 件",
+   "official_urls": [
+    "https://github.com/GoogleChrome/modern-web-guidance-src",
+    "https://github.com/addyosmani/agent-skills"
+   ],
+   "checks": [
+    {
+     "mcp_name": "page-capture",
+     "tool": "fetch",
+     "query": "GoogleChrome/modern-web-guidance-src, addyosmani/agent-skills README",
+     "evidence_urls": [
+      "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "https://github.com/addyosmani/agent-skills"
+     ],
+     "result": "Web の新しい書き方を agent に渡す CLI と、開発工程ごとの 25 スキルの構成、導入コマンドを README で確認",
+     "retrieved_at": "2026-11-16T17:57:00+09:00"
+    }
+   ]
   }
  },
  "url_checks": {

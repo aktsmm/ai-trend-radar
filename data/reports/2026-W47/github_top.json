@@ -1,6 +1,6 @@
 {
  "week": "2026-W47",
- "generated_at": "2026-11-15T20:27:59Z",
+ "generated_at": "2026-11-16T08:53:55Z",
  "metric": "stars gained this week (github.com/trending, AI-filtered)",
  "pages_ok": 5,
  "pages_total": 5,
@@ -10,8 +10,8 @@
    "rank": 1,
    "repo": "meta/astryx",
    "url": "https://github.com/meta/astryx",
-   "stars_week": 13660,
-   "stars_total": 28750,
+   "stars_week": 13501,
+   "stars_total": 29179,
    "language": "TypeScript",
    "topics": [],
    "description": "An open source design system that's fully customizable and agent ready",
@@ -22,8 +22,8 @@
    "rank": 2,
    "repo": "pingdotgg/t3code",
    "url": "https://github.com/pingdotgg/t3code",
-   "stars_week": 9668,
-   "stars_total": 61401,
+   "stars_week": 9260,
+   "stars_total": 61992,
    "language": "TypeScript",
    "topics": [
     "agent-orchestration",
@@ -41,10 +41,36 @@
   },
   {
    "rank": 3,
+   "repo": "anthropics/skills",
+   "url": "https://github.com/anthropics/skills",
+   "stars_week": 6077,
+   "stars_total": 195568,
+   "language": "Python",
+   "topics": [
+    "agent-skills"
+   ],
+   "description": "Public repository for Agent Skills",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 4,
+   "repo": "GoogleChrome/modern-web-guidance-src",
+   "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+   "stars_week": 5692,
+   "stars_total": 7575,
+   "language": "TypeScript",
+   "topics": [],
+   "description": "Keep your coding agent up to date with the latest web best practices",
+   "one_liner": null,
+   "tag": "coding-agent"
+  },
+  {
+   "rank": 5,
    "repo": "milind-soni/OpenMausBot",
    "url": "https://github.com/milind-soni/OpenMausBot",
-   "stars_week": 6413,
-   "stars_total": 23264,
+   "stars_week": 5463,
+   "stars_total": 23758,
    "language": "TypeScript",
    "topics": [
     "ai-agents",
@@ -61,25 +87,11 @@
    "tag": "coding-agent"
   },
   {
-   "rank": 4,
-   "repo": "anthropics/skills",
-   "url": "https://github.com/anthropics/skills",
-   "stars_week": 6220,
-   "stars_total": 195279,
-   "language": "Python",
-   "topics": [
-    "agent-skills"
-   ],
-   "description": "Public repository for Agent Skills",
-   "one_liner": null,
-   "tag": "coding-agent"
-  },
-  {
-   "rank": 5,
+   "rank": 6,
    "repo": "google/elephant-goldfish-model",
    "url": "https://github.com/google/elephant-goldfish-model",
-   "stars_week": 5539,
-   "stars_total": 19664,
+   "stars_week": 5060,
+   "stars_total": 20012,
    "language": "Python",
    "topics": [
     "agent-skills",
@@ -96,11 +108,11 @@
    "tag": "coding-agent"
   },
   {
-   "rank": 6,
+   "rank": 7,
    "repo": "vercel-labs/agent-desktop",
    "url": "https://github.com/vercel-labs/agent-desktop",
-   "stars_week": 5171,
-   "stars_total": 24149,
+   "stars_week": 4719,
+   "stars_total": 24387,
    "language": "Rust",
    "topics": [
     "accessibility",
@@ -117,23 +129,11 @@
    "tag": "coding-agent"
   },
   {
-   "rank": 7,
-   "repo": "vercel-labs/agent-browser",
-   "url": "https://github.com/vercel-labs/agent-browser",
-   "stars_week": 4601,
-   "stars_total": 51552,
-   "language": "Rust",
-   "topics": [],
-   "description": "Browser automation CLI for AI agents",
-   "one_liner": null,
-   "tag": "coding-agent"
-  },
-  {
    "rank": 8,
    "repo": "ZhuLinsen/daily_stock_analysis",
    "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
-   "stars_week": 4526,
-   "stars_total": 72468,
+   "stars_week": 4548,
+   "stars_total": 72646,
    "language": "Python",
    "topics": [
     "a-stock",
@@ -150,13 +150,13 @@
   },
   {
    "rank": 9,
-   "repo": "GoogleChrome/modern-web-guidance-src",
-   "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
-   "stars_week": 4363,
-   "stars_total": 7002,
-   "language": "TypeScript",
+   "repo": "vercel-labs/agent-browser",
+   "url": "https://github.com/vercel-labs/agent-browser",
+   "stars_week": 4217,
+   "stars_total": 51785,
+   "language": "Rust",
    "topics": [],
-   "description": "Keep your coding agent up to date with the latest web best practices",
+   "description": "Browser automation CLI for AI agents",
    "one_liner": null,
    "tag": "coding-agent"
   },
@@ -164,8 +164,8 @@
    "rank": 10,
    "repo": "addyosmani/agent-skills",
    "url": "https://github.com/addyosmani/agent-skills",
-   "stars_week": 3670,
-   "stars_total": 117878,
+   "stars_week": 3889,
+   "stars_total": 118085,
    "language": "JavaScript",
    "topics": [
     "agent-skills",

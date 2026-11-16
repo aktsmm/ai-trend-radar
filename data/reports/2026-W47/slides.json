@@ -80,5 +80,87 @@
       ],
       "official_url": "https://github.com/milind-soni/OpenMausBot"
     }
+  ],
+  "claude-fable-5-2": [
+    {
+      "title": "Claude Fable 5.2、速く安く",
+      "diagram_type": "infographic",
+      "icon": "spark",
+      "stat": {"value": "最大 30% 速い", "label": "5.1 と比べた出力の速さ(発表の数字)"},
+      "steps": ["モデルを選ぶ", "努力レベルを決める", "必要なら高速モード"],
+      "points": [
+        {"h": "何が起きた", "t": "Anthropic が Fable 5.2 と Mythos 5.2 を発表した。同じ基盤モデル"},
+        {"h": "何が変わる", "t": "入力 8 ドル、出力 40 ドル(100 万トークン)と、5.1 より安くなった"},
+        {"h": "嬉しいこと", "t": "高速モードで生成が最大 2.5 倍速くなる。AWS GovCloud でも使える"},
+        {"h": "注意", "t": "数字は Anthropic の発表。多くの作業は Opus 5.5 から始める想定"}
+      ],
+      "official_url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "source_date": "2026-11-09"
+    }
+  ],
+  "copilot": [
+    {
+      "title": "Copilot、12/14 に 6 モデル廃止",
+      "diagram_type": "infographic",
+      "icon": "cycle",
+      "stat": {"value": "12 月 14 日", "label": "6 つのモデルが廃止される日"},
+      "steps": ["廃止対象を確認", "代替モデルを選ぶ", "管理者は設定を確認"],
+      "points": [
+        {"h": "何が起きた", "t": "GitHub が、Copilot の全機能で 6 モデルを廃止すると予告した"},
+        {"h": "何が変わる", "t": "Claude Fable 5 は Fable 5.2、Gemini 3.8 Flash は Gemini 4 Hydrogen が代替"},
+        {"h": "嬉しいこと", "t": "Enterprise と Business では、代替モデルが既定で有効になる"},
+        {"h": "注意", "t": "既定を切った組織は、モデルポリシーで有効化する。Kimi K3 の代替は未定"}
+      ],
+      "official_url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
+      "source_date": "2026-11-13"
+    }
+  ],
+  "gh-coding-agent-1": [
+    {
+      "title": "エージェントに手順と目を足す 3 件",
+      "diagram_type": "infographic",
+      "icon": "layers",
+      "stat": {"value": "6,220", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["スキルで手順を教える", "設計を査読させる", "デスクトップを操作させる"],
+      "points": [
+        {"h": "skills", "t": "Claude に作業の手順を教えるスキルの例集。教育目的で提供されている"},
+        {"h": "EGM", "t": "設計役と、前の会話を知らない査読役で、設計書の穴を探すプラグイン"},
+        {"h": "desktop", "t": "アプリの構造情報を読み、デスクトップを操作する CLI。私的内容に注意"},
+        {"h": "注意", "t": "スターは注目度の目安で、品質や安全性ではない。数字は anthropics/skills"}
+      ],
+      "official_url": "https://github.com/anthropics/skills"
+    }
+  ],
+  "gh-coding-agent-2": [
+    {
+      "title": "ブラウザ操作と株式分析の 2 件",
+      "diagram_type": "infographic",
+      "icon": "terminal",
+      "stat": {"value": "4,601", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["ページを読み取る", "要素を操作する", "結果を確かめる"],
+      "points": [
+        {"h": "browser", "t": "AI がページを要素の一覧で読み、1 コマンドずつ操作する Rust 製 CLI"},
+        {"h": "stock", "t": "複数市場の株価やニュースを集め、分析を毎日通知するシステム"},
+        {"h": "違い", "t": "前者は部品、後者は API キーと通知先を設定して使う完成品"},
+        {"h": "注意", "t": "スターは注目度の目安。数字は agent-browser。投資判断の保証ではない"}
+      ],
+      "official_url": "https://github.com/vercel-labs/agent-browser"
+    }
+  ],
+  "gh-coding-agent-3": [
+    {
+      "title": "エージェント用スキル集 2 件",
+      "diagram_type": "infographic",
+      "icon": "check",
+      "stat": {"value": "4,363", "label": "今週の増加スター(GitHub Trending)"},
+      "steps": ["スキルを入れる", "エージェントが参照", "最新の作り方で実装"],
+      "points": [
+        {"h": "web", "t": "最新の Web 標準とブラウザ対応の知識を、エージェントに渡す"},
+        {"h": "skills", "t": "仕様から出荷まで、開発の各段階に合わせたスキルとコマンド集"},
+        {"h": "試し方", "t": "どちらも npx から導入できる。README の手順に従う"},
+        {"h": "注意", "t": "スターは注目度の目安。数字は modern-web-guidance-src"}
+      ],
+      "official_url": "https://github.com/GoogleChrome/modern-web-guidance-src"
+    }
   ]
 }

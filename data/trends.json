@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-16T08:53:55.348531+00:00",
- "last_successful_report_at": "2026-11-16T08:53:55.348531+00:00",
+ "generated_at": "2026-11-16T09:01:35.056140+00:00",
+ "last_successful_report_at": "2026-11-16T09:01:35.056140+00:00",
  "window": {
   "from": "2026-11-09",
   "to": "2026-11-16",
@@ -18,78 +18,78 @@
    "ok": true,
    "count": 61,
    "group": "models",
-   "seconds": 0.9
+   "seconds": 2.6
   },
   "hf_spaces": {
    "ok": true,
    "count": 30,
    "group": "models",
-   "seconds": 0.1
+   "seconds": 0.2
   },
   "hf_papers": {
    "ok": true,
    "count": 40,
    "group": "research",
-   "seconds": 0.1
+   "seconds": 0.2
   },
   "github_new": {
    "ok": true,
    "count": 114,
    "group": "tools",
-   "seconds": 6.6
+   "seconds": 5.9
   },
   "github_trending": {
    "ok": true,
    "count": 11,
    "group": "tools",
-   "seconds": 1.5
+   "seconds": 1.3
   },
   "hackernews": {
    "ok": true,
-   "count": 120,
+   "count": 121,
    "group": "community",
-   "seconds": 3.8
+   "seconds": 57.8
   },
   "reddit_localllama": {
    "ok": true,
    "count": 100,
    "group": "local-llm",
-   "seconds": 2.8
+   "seconds": 3.3
   },
   "reddit_ollama": {
-   "ok": true,
-   "count": 50,
-   "group": "local-llm",
-   "seconds": 20.9
-  },
-  "reddit_ml": {
    "ok": false,
    "error": "HTTPError: HTTP Error 429: Too Many Requests",
-   "group": "research"
+   "group": "local-llm"
+  },
+  "reddit_ml": {
+   "ok": true,
+   "count": 50,
+   "group": "research",
+   "seconds": 67.5
   },
   "lobsters": {
    "ok": true,
    "count": 14,
    "group": "community",
-   "seconds": 0.3
+   "seconds": 0.5
   },
   "devto": {
    "ok": true,
-   "count": 122,
+   "count": 121,
    "group": "community",
-   "seconds": 5.7
+   "seconds": 0.9
   },
   "arxiv": {
    "ok": true,
    "count": 80,
    "group": "research",
-   "seconds": 0.3
+   "seconds": 0.2
   },
   "ollama": {
    "ok": true,
    "count": 60,
    "group": "local-llm",
-   "seconds": 0.2
+   "seconds": 0.4
   },
   "openrouter": {
    "ok": true,
@@ -101,13 +101,13 @@
    "ok": true,
    "count": 13,
    "group": "tools",
-   "seconds": 2.7
+   "seconds": 3.6
   },
   "bluesky": {
    "ok": true,
    "count": 171,
    "group": "community",
-   "seconds": 2.0
+   "seconds": 1.4
   },
   "official": {
    "ok": true,
@@ -123,16 +123,16 @@
    "ok": true,
    "count": 30,
    "group": "tools",
-   "seconds": 4.3
+   "seconds": 4.1
   },
   "x_watch": {
    "ok": true,
-   "count": 39,
+   "count": 54,
    "group": "community",
    "accounts": {
     "OpenAI": {
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
+     "ok": true,
+     "posts": 4
     },
     "AnthropicAI": {
      "ok": true,
@@ -163,16 +163,16 @@
      "posts": 5
     },
     "ggerganov": {
-     "ok": true,
-     "posts": 1
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "Alibaba_Qwen": {
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
+     "ok": true,
+     "posts": 11
     },
     "deepseek_ai": {
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
+     "ok": true,
+     "posts": 1
     },
     "MistralAI": {
      "ok": true,
@@ -187,7 +187,7 @@
   },
   "jp_reaction": {
    "ok": true,
-   "count": 105,
+   "count": 106,
    "group": "community-ja",
    "feeds": {
     "https://zenn.dev/topics/llm/feed": {
@@ -212,7 +212,7 @@
     },
     "https://b.hatena.ne.jp/search/tag?q=AI&mode=rss": {
      "ok": true,
-     "count": 36
+     "count": 37
     }
    }
   }
@@ -350,7 +350,8 @@
    "url": "https://www.liquid.ai/news",
    "links": 23,
    "newest": "2026-11-12",
-   "final_url": "https://www.liquid.ai/news"
+   "final_url": "https://www.liquid.ai/news",
+   "sitemap_only": 0
   },
   "kimi-blog": {
    "ok": true,
@@ -358,7 +359,8 @@
    "url": "https://www.kimi.com/blog",
    "links": 7,
    "newest": "2026-10-24",
-   "final_url": "https://www.kimi.com/blog/"
+   "final_url": "https://www.kimi.com/blog/",
+   "sitemap_only": 0
   },
   "minimax-news": {
    "ok": true,
@@ -366,7 +368,8 @@
    "url": "https://www.minimax.io/news",
    "links": 1,
    "newest": "2026-01-23",
-   "final_url": "https://www.minimax.io/news"
+   "final_url": "https://www.minimax.io/news",
+   "sitemap_only": 0
   },
   "allenai-blog": {
    "ok": true,
@@ -374,7 +377,8 @@
    "url": "https://allenai.org/research",
    "links": 9,
    "newest": "2026-11-13",
-   "final_url": "https://allenai.org/research"
+   "final_url": "https://allenai.org/research",
+   "sitemap_only": 0
   },
   "allenai-news": {
    "ok": true,
@@ -382,7 +386,8 @@
    "url": "https://allenai.org/news",
    "links": 9,
    "newest": "2026-11-06",
-   "final_url": "https://allenai.org/news"
+   "final_url": "https://allenai.org/news",
+   "sitemap_only": 0
   },
   "cohere-blog": {
    "ok": true,
@@ -390,7 +395,8 @@
    "url": "https://cohere.com/blog",
    "links": 31,
    "newest": "2026-11-13",
-   "final_url": "https://cohere.com/blog"
+   "final_url": "https://cohere.com/blog",
+   "sitemap_only": 0
   },
   "together-blog": {
    "ok": true,
@@ -398,7 +404,8 @@
    "url": "https://www.together.ai/blog",
    "links": 115,
    "newest": "2026-08-28",
-   "final_url": "https://www.together.ai/blog"
+   "final_url": "https://www.together.ai/blog",
+   "sitemap_only": 0
   },
   "ggml-org/llama.cpp": {
    "ok": true,
@@ -489,12 +496,12 @@
   },
   "watchlist": {
    "ok": true,
-   "count": 39,
+   "count": 54,
    "group": "community",
    "accounts": {
     "OpenAI": {
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
+     "ok": true,
+     "posts": 4
     },
     "AnthropicAI": {
      "ok": true,
@@ -525,16 +532,16 @@
      "posts": 5
     },
     "ggerganov": {
-     "ok": true,
-     "posts": 1
+     "ok": false,
+     "error": "HTTPError: HTTP Error 404: Not Found"
     },
     "Alibaba_Qwen": {
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
+     "ok": true,
+     "posts": 11
     },
     "deepseek_ai": {
-     "ok": false,
-     "error": "HTTPError: HTTP Error 404: Not Found"
+     "ok": true,
+     "posts": 1
     },
     "MistralAI": {
      "ok": true,
@@ -542,7 +549,7 @@
     }
    }
   },
-  "posts_used": 46
+  "posts_used": 63
  },
  "trends": [
   {
@@ -695,12 +702,11 @@
    "score_breakdown": {
     "github_new": 1.056,
     "hackernews": 0.397,
-    "reddit_localllama": 1.375,
+    "reddit_localllama": 1.382,
     "pypi": 0.326,
     "bluesky": 0.322,
     "official": 0.8,
-    "gh_releases": 0.9,
-    "x_aux": 0.208
+    "gh_releases": 0.9
    },
    "velocity": {
     "hn_this_week": 3,
@@ -734,17 +740,7 @@
    "related": [],
    "resolved_repo": null,
    "trend_label": "rising",
-   "x_posts": [
-    {
-     "url": "https://x.com/ggerganov/status/2121246103312212124",
-     "author": "ggerganov",
-     "likes": 4643,
-     "reposts": 800,
-     "views": 383233,
-     "text": "llama.cpp v1.0.0 is now available\n\nhttps://huggingface.co/blog/ggml-org/llama-cpp-v1",
-     "via": "watchlist"
-    }
-   ],
+   "x_posts": [],
    "display": "ggml llama.cpp",
    "verification": {
     "status": "unverified",
@@ -761,404 +757,6 @@
   },
   {
    "rank": 2,
-   "keyword": "Ollama",
-   "entity_id": "ollama",
-   "kind": "release",
-   "category": "local-runtime",
-   "tags": [
-    "local-llm",
-    "tools"
-   ],
-   "score": 65.1,
-   "vendor": "Ollama",
-   "primary": {
-    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.17-rc0",
-    "published_at": "2026-11-10T22:25:00+00:00",
-    "date_basis": "published",
-    "source_type": "release_note",
-    "title": "ollama v0.40.17",
-    "event_id": "6ad28930bc"
-   },
-   "events": [
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.17-rc0",
-     "published_at": "2026-11-10T22:25:00+00:00",
-     "source_type": "release_note",
-     "title": "ollama v0.40.17",
-     "vendor": "Ollama",
-     "date_basis": "published",
-     "feed": "ollama/ollama",
-     "event_id": "6ad28930bc"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16",
-     "published_at": "2026-11-09T23:45:36+00:00",
-     "source_type": "release_note",
-     "title": "ollama v0.40.16",
-     "vendor": "Ollama",
-     "date_basis": "published",
-     "feed": "ollama/ollama",
-     "event_id": "b61af6dcbd"
-    }
-   ],
-   "sources": [
-    {
-     "name": "reddit_ollama",
-     "title": "I fine-tuned a 2B model for Cybersecurity & CTF triage that runs completely offline on an 8GB laptop (Ollama + WebUI)",
-     "url": "https://www.reddit.com/r/ollama/comments/1xw84q1/i_finetuned_a_2b_model_for_cybersecurity_ctf/",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "devto",
-     "title": "Ask AI with Ollama, fully local",
-     "url": "https://dev.to/jslab/ask-ai-with-ollama-fully-local-2pp5",
-     "metric": 1.0,
-     "metric_name": "reactions"
-    },
-    {
-     "name": "devto",
-     "title": "Ollama vs LM Studio: Which Local AI App Should You Use on a Mac?",
-     "url": "https://dev.to/jamilxt/ollama-vs-lm-studio-which-local-ai-app-should-you-use-on-a-mac-1j9h",
-     "metric": 1.0,
-     "metric_name": "reactions"
-    },
-    {
-     "name": "pypi",
-     "title": "ollama",
-     "url": "https://pypi.org/project/ollama/",
-     "metric": 2923652.0,
-     "metric_name": "downloads_week"
-    },
-    {
-     "name": "bluesky",
-     "title": "A six-year-old NVIDIA RTX 3090, combined with Linux Mint, Ollama and Open WebUI, proved capable of running GPT-OSS 20B e",
-     "url": "https://bsky.app/profile/p4sc4lh.wsocial.eu/post/3n2f2msjmyc2m",
-     "metric": 7.0,
-     "metric_name": "likes+2*reposts"
-    },
-    {
-     "name": "bluesky",
-     "title": "🇫🇷 ? Ollama vLLM llama.cpp : comparez ces trois moteurs d’inférence locaux selon l’usage, le matériel et la…\n🇬🇧 ? Ollama",
-     "url": "https://bsky.app/profile/spanobserver.bsky.social/post/3mzxpfkelah2e",
-     "metric": 6.0,
-     "metric_name": "likes+2*reposts"
-    },
-    {
-     "name": "gh_releases",
-     "title": "ollama v0.40.17",
-     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.17-rc0",
-     "metric": 1.0,
-     "metric_name": "release"
-    },
-    {
-     "name": "gh_releases",
-     "title": "ollama v0.40.16",
-     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16",
-     "metric": 1.0,
-     "metric_name": "release"
-    }
-   ],
-   "official_urls": [
-    "https://github.com/ollama/ollama/releases/tag/v0.40.17-rc0",
-    "https://ollama.com/"
-   ],
-   "official_verified": true,
-   "summary": "ollama v0.40.17。6ソースで言及(代表: 「hitkeeen/blender-ai-mcp-addon」)",
-   "slides": [],
-   "score_breakdown": {
-    "github_new": 1.284,
-    "reddit_ollama": 1.05,
-    "devto": 0.083,
-    "pypi": 0.409,
-    "bluesky": 0.2,
-    "gh_releases": 0.75,
-    "x_aux": 0.5
-   },
-   "velocity": {
-    "hn_this_week": 0,
-    "hn_prev_week": 0,
-    "factor": 0.7
-   },
-   "why": {
-    "first_seen": "2026-11-09",
-    "peak_day": "2026-11-15",
-    "co_mentioned": [
-     "vLLM",
-     "Copilot",
-     "Claude Code"
-    ],
-    "evidence": [
-     {
-      "source": "github_new",
-      "title": "hitkeeen/blender-ai-mcp-addon",
-      "url": "https://github.com/hitkeeen/blender-ai-mcp-addon"
-     },
-     {
-      "source": "reddit_ollama",
-      "title": "I fine-tuned a 2B model for Cybersecurity & CTF triage that runs completely offline on an 8GB laptop (Ollama + WebUI)",
-      "url": "https://www.reddit.com/r/ollama/comments/1xw84q1/i_finetuned_a_2b_model_for_cybersecurity_ctf/"
-     },
-     {
-      "source": "reddit_ollama",
-      "title": "Is 95°C CPU temperature normal when running Ollama 14B locally on an i5-13450HX? (CachyOS + Hyprland)",
-      "url": "https://www.reddit.com/r/ollama/comments/1xssa89/is_95c_cpu_temperature_normal_when_running_ollama/"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": null,
-   "trend_label": "rising",
-   "x_posts": [
-    {
-     "url": "https://x.com/ollama/status/2121059953649819771",
-     "author": "ollama",
-     "likes": 341,
-     "reposts": 35,
-     "views": 24942,
-     "text": "Inkling 2 Small from Thinking Machines (@thinkymachines) is now on Ollama with zero data retention! \n\nThe 594B mixture-of-experts model with 1M context window demonstrates strong visual interpretation",
-     "via": "watchlist"
-    },
-    {
-     "url": "https://x.com/ollama/status/2120179893170487608",
-     "author": "ollama",
-     "likes": 282,
-     "reposts": 8,
-     "views": 36443,
-     "text": "Ripple 65-B Preview from @RicursiveAI is on Ollama. Built for agentic coding, with up to 1M tokens of context. Run it locally with full zero data retention.",
-     "via": "watchlist"
-    },
-    {
-     "url": "https://x.com/ollama/status/2119897229758788041",
-     "author": "ollama",
-     "likes": 230,
-     "reposts": 21,
-     "views": 20731,
-     "text": "Our new usage page makes it easy to monitor your daily and weekly usage, including:\n- Spend per day\n- Spend per API key\n- Input and output tokens per model\n- Cached input rate\n\nGo to https://ollama.co",
-     "via": "watchlist"
-    }
-   ],
-   "display": "Ollama",
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": [
-    {
-     "site": "zenn",
-     "title": "Ollama を使い終わっても GPU メモリが空かないとき ― 残る理由と、今すぐ空ける方法（Windows）",
-     "url": "https://zenn.dev/shacikku3/articles/ollama-free-gpu-memory-keep-alive",
-     "date": "2026-11-16"
-    }
-   ]
-  },
-  {
-   "rank": 3,
-   "keyword": "vLLM",
-   "entity_id": "vllm",
-   "kind": "release",
-   "category": "local-runtime",
-   "tags": [
-    "local-llm",
-    "tools"
-   ],
-   "score": 55.3,
-   "vendor": "vLLM",
-   "primary": {
-    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
-    "published_at": "2026-11-16T04:27:15+00:00",
-    "date_basis": "published",
-    "source_type": "release_note",
-    "title": "vllm v0.34.0",
-    "event_id": "386f48da45"
-   },
-   "events": [
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
-     "published_at": "2026-11-16T04:27:15+00:00",
-     "source_type": "release_note",
-     "title": "vllm v0.34.0",
-     "vendor": "vLLM",
-     "date_basis": "published",
-     "feed": "vllm-project/vllm",
-     "event_id": "386f48da45"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc4",
-     "published_at": "2026-11-14T10:15:55+00:00",
-     "source_type": "release_note",
-     "title": "vllm v0.34.0rc4",
-     "vendor": "vLLM",
-     "date_basis": "published",
-     "feed": "vllm-project/vllm",
-     "event_id": "f7190e045d"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc3",
-     "published_at": "2026-11-13T22:52:29+00:00",
-     "source_type": "release_note",
-     "title": "vllm v0.34.0rc3",
-     "vendor": "vLLM",
-     "date_basis": "published",
-     "feed": "vllm-project/vllm",
-     "event_id": "db8530ecfc"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc2",
-     "published_at": "2026-11-12T06:21:02+00:00",
-     "source_type": "release_note",
-     "title": "vllm v0.34.0rc2",
-     "vendor": "vLLM",
-     "date_basis": "published",
-     "feed": "vllm-project/vllm",
-     "event_id": "cf7a9bb64d"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc1",
-     "published_at": "2026-11-11T19:37:13+00:00",
-     "source_type": "release_note",
-     "title": "vllm v0.34.0rc1",
-     "vendor": "vLLM",
-     "date_basis": "published",
-     "feed": "vllm-project/vllm",
-     "event_id": "bbc5e0ebba"
-    }
-   ],
-   "sources": [
-    {
-     "name": "hackernews",
-     "title": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
-     "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
-     "metric": 145.0,
-     "metric_name": "points"
-    },
-    {
-     "name": "reddit_ollama",
-     "title": "Prefixwise (v0.10.0, MIT): Identify, fix, and prevent LLM prompt cache misses across vLLM, SGLang, LMCache, Claude, and ",
-     "url": "https://www.reddit.com/r/ollama/comments/1xrrebh/prefixwise_v0100_mit_identify_fix_and_prevent_llm/",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "devto",
-     "title": "Day 5: Local AI Runtimes — Deploying Ollama and vLLM for Bare-Metal Execution",
-     "url": "https://dev.to/suresh_kumar_de3920bedd1c/day-5-local-ai-runtimes-deploying-ollama-and-vllm-for-bare-metal-execution-pnf",
-     "metric": 0.0,
-     "metric_name": "reactions"
-    },
-    {
-     "name": "pypi",
-     "title": "vllm",
-     "url": "https://pypi.org/project/vllm/",
-     "metric": 582017.0,
-     "metric_name": "downloads_week"
-    },
-    {
-     "name": "bluesky",
-     "title": "🇫🇷 ? Ollama vLLM llama.cpp : comparez ces trois moteurs d’inférence locaux selon l’usage, le matériel et la…\n🇬🇧 ? Ollama",
-     "url": "https://bsky.app/profile/spanobserver.bsky.social/post/3mzxpfkelah2e",
-     "metric": 6.0,
-     "metric_name": "likes+2*reposts"
-    },
-    {
-     "name": "official",
-     "title": "When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA DGX Stations with vLLM",
-     "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/feed/",
-     "metric": 1.0,
-     "metric_name": "announcement"
-    },
-    {
-     "name": "gh_releases",
-     "title": "vllm v0.34.0",
-     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
-     "metric": 1.0,
-     "metric_name": "release"
-    },
-    {
-     "name": "gh_releases",
-     "title": "vllm v0.34.0rc4",
-     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc4",
-     "metric": 1.0,
-     "metric_name": "release"
-    }
-   ],
-   "official_urls": [
-    "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
-    "https://github.com/vllm-project/vllm"
-   ],
-   "official_verified": true,
-   "summary": "vllm v0.34.0 ― Running a frontier-scale model locally means keeping all its weights in GPU memory; the largest models no long。9ソースで言及(代表: 「When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA」)",
-   "slides": [],
-   "score_breakdown": {
-    "github_new": 0.751,
-    "hackernews": 0.6,
-    "reddit_localllama": 0.35,
-    "reddit_ollama": 0.532,
-    "devto": 0.0,
-    "pypi": 0.365,
-    "bluesky": 0.114,
-    "official": 0.8,
-    "gh_releases": 0.9
-   },
-   "velocity": {
-    "hn_this_week": 3,
-    "hn_prev_week": 3,
-    "factor": 0.6
-   },
-   "why": {
-    "first_seen": "2026-11-09",
-    "peak_day": "2026-11-10",
-    "co_mentioned": [
-     "llama.cpp",
-     "glm-5.3",
-     "SGLang",
-     "Ollama"
-    ],
-    "evidence": [
-     {
-      "source": "github_new",
-      "title": "huawei-csl/MACaQ",
-      "url": "https://github.com/huawei-csl/MACaQ"
-     },
-     {
-      "source": "reddit_ollama",
-      "title": "Prefixwise (v0.10.0, MIT): Identify, fix, and prevent LLM prompt cache misses across vLLM, SGLang, LMCache, Claude, and OpenAI (zero prompt ",
-      "url": "https://www.reddit.com/r/ollama/comments/1xrrebh/prefixwise_v0100_mit_identify_fix_and_prevent_llm/"
-     },
-     {
-      "source": "hackernews",
-      "title": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
-      "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": null,
-   "trend_label": "rising",
-   "x_posts": [],
-   "display": "vLLM",
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": []
-  },
-  {
-   "rank": 4,
    "keyword": "claude-fable-5.2",
    "entity_id": "claude-fable-5-2",
    "kind": "model",
@@ -1166,7 +764,7 @@
    "tags": [
     "models"
    ],
-   "score": 54.5,
+   "score": 56.0,
    "vendor": "Anthropic",
    "primary": {
     "url": "https://openrouter.ai/anthropic/claude-fable-5.2",
@@ -1320,18 +918,18 @@
     {
      "url": "https://x.com/claudeai/status/2119867114450268322",
      "author": "claudeai",
-     "likes": 96138,
+     "likes": 96137,
      "reposts": 9235,
-     "views": 19614626,
+     "views": 19616015,
      "text": "Introducing Claude Fable 5.2 and Claude Mythos 5.2, designed to tackle the most daunting technical challenges.\n\nThey’re capable collaborators on ambitious projects in many fields, and show improvement",
      "via": "link"
     },
     {
      "url": "https://x.com/AnthropicAI/status/2119867707546071125",
      "author": "AnthropicAI",
-     "likes": 15054,
+     "likes": 15055,
      "reposts": 940,
-     "views": 943440,
+     "views": 943464,
      "text": "Claude Fable 5.2 and Claude Mythos 5.2 are available now:",
      "via": "watchlist"
     }
@@ -1349,21 +947,21 @@
      "date": "2026-11-16"
     },
     {
-     "site": "zenn",
-     "title": "Claude Codeに作らせたPHP問題を403問実行して照合した。10問は書き出しの違いで漏れていた",
-     "url": "https://zenn.dev/mugen_web/articles/claude-code-php-questions-verify",
+     "site": "hatena",
+     "title": "「Qwen4-Max」が登場、一部テストでClaude Opus 5.5に勝利し小型オープンモデルも後日公開予定",
+     "url": "https://gigazine.net/news/20261116-qwen4-max/",
      "date": "2026-11-16"
     },
     {
      "site": "zenn",
-     "title": "Claude Codeに推測で埋めさせない：CLAUDE.mdに書く「未確認」の決まり5行",
-     "url": "https://zenn.dev/tsugu_sukima/articles/b571eb9691a4e0",
+     "title": "Claude Codeに作らせたPHP問題を403問実行して照合した。10問は書き出しの違いで漏れていた",
+     "url": "https://zenn.dev/mugen_web/articles/claude-code-php-questions-verify",
      "date": "2026-11-16"
     }
    ]
   },
   {
-   "rank": 5,
+   "rank": 3,
    "keyword": "Copilot",
    "entity_id": "copilot",
    "kind": "product",
@@ -1372,7 +970,7 @@
     "agents",
     "tools"
    ],
-   "score": 52.9,
+   "score": 54.3,
    "vendor": null,
    "primary": {
     "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
@@ -1560,7 +1158,195 @@
    "jp_reactions": []
   },
   {
-   "rank": 6,
+   "rank": 4,
+   "keyword": "Ollama",
+   "entity_id": "ollama",
+   "kind": "release",
+   "category": "local-runtime",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "score": 53.4,
+   "vendor": "Ollama",
+   "primary": {
+    "url": "https://github.com/ollama/ollama/releases/tag/v0.40.17-rc0",
+    "published_at": "2026-11-10T22:25:00+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "ollama v0.40.17",
+    "event_id": "6ad28930bc"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.17-rc0",
+     "published_at": "2026-11-10T22:25:00+00:00",
+     "source_type": "release_note",
+     "title": "ollama v0.40.17",
+     "vendor": "Ollama",
+     "date_basis": "published",
+     "feed": "ollama/ollama",
+     "event_id": "6ad28930bc"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16",
+     "published_at": "2026-11-09T23:45:36+00:00",
+     "source_type": "release_note",
+     "title": "ollama v0.40.16",
+     "vendor": "Ollama",
+     "date_basis": "published",
+     "feed": "ollama/ollama",
+     "event_id": "b61af6dcbd"
+    }
+   ],
+   "sources": [
+    {
+     "name": "devto",
+     "title": "Ask AI with Ollama, fully local",
+     "url": "https://dev.to/jslab/ask-ai-with-ollama-fully-local-2pp5",
+     "metric": 1.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "devto",
+     "title": "Ollama vs LM Studio: Which Local AI App Should You Use on a Mac?",
+     "url": "https://dev.to/jamilxt/ollama-vs-lm-studio-which-local-ai-app-should-you-use-on-a-mac-1j9h",
+     "metric": 1.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "pypi",
+     "title": "ollama",
+     "url": "https://pypi.org/project/ollama/",
+     "metric": 2923652.0,
+     "metric_name": "downloads_week"
+    },
+    {
+     "name": "bluesky",
+     "title": "A six-year-old NVIDIA RTX 3090, combined with Linux Mint, Ollama and Open WebUI, proved capable of running GPT-OSS 20B e",
+     "url": "https://bsky.app/profile/p4sc4lh.wsocial.eu/post/3n2f2msjmyc2m",
+     "metric": 7.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "bluesky",
+     "title": "🇫🇷 ? Ollama vLLM llama.cpp : comparez ces trois moteurs d’inférence locaux selon l’usage, le matériel et la…\n🇬🇧 ? Ollama",
+     "url": "https://bsky.app/profile/spanobserver.bsky.social/post/3mzxpfkelah2e",
+     "metric": 6.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "gh_releases",
+     "title": "ollama v0.40.17",
+     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.17-rc0",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "ollama v0.40.16",
+     "url": "https://github.com/ollama/ollama/releases/tag/v0.40.16",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/ollama/ollama/releases/tag/v0.40.17-rc0",
+    "https://ollama.com/"
+   ],
+   "official_verified": true,
+   "summary": "ollama v0.40.17。5ソースで言及(代表: 「hitkeeen/blender-ai-mcp-addon」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 1.284,
+    "devto": 0.083,
+    "pypi": 0.409,
+    "bluesky": 0.2,
+    "gh_releases": 0.75,
+    "x_aux": 0.5
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-11-09",
+    "peak_day": "2026-11-15",
+    "co_mentioned": [
+     "vLLM",
+     "Copilot"
+    ],
+    "evidence": [
+     {
+      "source": "github_new",
+      "title": "hitkeeen/blender-ai-mcp-addon",
+      "url": "https://github.com/hitkeeen/blender-ai-mcp-addon"
+     },
+     {
+      "source": "github_new",
+      "title": "baiblinocun1986/blender-ai-copilot-hub",
+      "url": "https://github.com/baiblinocun1986/blender-ai-copilot-hub"
+     },
+     {
+      "source": "github_new",
+      "title": "punit2911/Hirepanel",
+      "url": "https://github.com/punit2911/Hirepanel"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [
+    {
+     "url": "https://x.com/ollama/status/2121059953649819771",
+     "author": "ollama",
+     "likes": 341,
+     "reposts": 35,
+     "views": 24945,
+     "text": "Inkling 2 Small from Thinking Machines (@thinkymachines) is now on Ollama with zero data retention! \n\nThe 594B mixture-of-experts model with 1M context window demonstrates strong visual interpretation",
+     "via": "watchlist"
+    },
+    {
+     "url": "https://x.com/ollama/status/2120179893170487608",
+     "author": "ollama",
+     "likes": 282,
+     "reposts": 8,
+     "views": 36443,
+     "text": "Ripple 65-B Preview from @RicursiveAI is on Ollama. Built for agentic coding, with up to 1M tokens of context. Run it locally with full zero data retention.",
+     "via": "watchlist"
+    },
+    {
+     "url": "https://x.com/ollama/status/2119897229758788041",
+     "author": "ollama",
+     "likes": 230,
+     "reposts": 21,
+     "views": 20730,
+     "text": "Our new usage page makes it easy to monitor your daily and weekly usage, including:\n- Spend per day\n- Spend per API key\n- Input and output tokens per model\n- Cached input rate\n\nGo to https://ollama.co",
+     "via": "watchlist"
+    }
+   ],
+   "display": "Ollama",
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": [
+    {
+     "site": "zenn",
+     "title": "Ollama を使い終わっても GPU メモリが空かないとき ― 残る理由と、今すぐ空ける方法（Windows）",
+     "url": "https://zenn.dev/shacikku3/articles/ollama-free-gpu-memory-keep-alive",
+     "date": "2026-11-16"
+    }
+   ]
+  },
+  {
+   "rank": 5,
    "keyword": "gemini-4-hydrogen",
    "entity_id": "gemini-4-hydrogen",
    "kind": "model",
@@ -1569,7 +1355,7 @@
     "models",
     "tools"
    ],
-   "score": 51.9,
+   "score": 53.3,
    "vendor": "Google",
    "primary": {
     "url": "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
@@ -1768,7 +1554,7 @@
      "author": "GoogleAI",
      "likes": 2245,
      "reposts": 189,
-     "views": 127849,
+     "views": 127878,
      "text": "Today, we’re growing the Gemini 4 model series by introducing Gemini 4 Hydrogen.\n\nWhile Gemini 4 Carbon tackles your hardest problems, Hydrogen brings cutting-edge intelligence to everyone — with spee",
      "via": "watchlist"
     }
@@ -1938,6 +1724,198 @@
    }
   },
   {
+   "rank": 6,
+   "keyword": "vLLM",
+   "entity_id": "vllm",
+   "kind": "release",
+   "category": "local-runtime",
+   "tags": [
+    "local-llm",
+    "tools"
+   ],
+   "score": 52.2,
+   "vendor": "vLLM",
+   "primary": {
+    "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
+    "published_at": "2026-11-16T04:27:15+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "vllm v0.34.0",
+    "event_id": "386f48da45"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
+     "published_at": "2026-11-16T04:27:15+00:00",
+     "source_type": "release_note",
+     "title": "vllm v0.34.0",
+     "vendor": "vLLM",
+     "date_basis": "published",
+     "feed": "vllm-project/vllm",
+     "event_id": "386f48da45"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc4",
+     "published_at": "2026-11-14T10:15:55+00:00",
+     "source_type": "release_note",
+     "title": "vllm v0.34.0rc4",
+     "vendor": "vLLM",
+     "date_basis": "published",
+     "feed": "vllm-project/vllm",
+     "event_id": "f7190e045d"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc3",
+     "published_at": "2026-11-13T22:52:29+00:00",
+     "source_type": "release_note",
+     "title": "vllm v0.34.0rc3",
+     "vendor": "vLLM",
+     "date_basis": "published",
+     "feed": "vllm-project/vllm",
+     "event_id": "db8530ecfc"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc2",
+     "published_at": "2026-11-12T06:21:02+00:00",
+     "source_type": "release_note",
+     "title": "vllm v0.34.0rc2",
+     "vendor": "vLLM",
+     "date_basis": "published",
+     "feed": "vllm-project/vllm",
+     "event_id": "cf7a9bb64d"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc1",
+     "published_at": "2026-11-11T19:37:13+00:00",
+     "source_type": "release_note",
+     "title": "vllm v0.34.0rc1",
+     "vendor": "vLLM",
+     "date_basis": "published",
+     "feed": "vllm-project/vllm",
+     "event_id": "bbc5e0ebba"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hackernews",
+     "title": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
+     "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
+     "metric": 146.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "devto",
+     "title": "Day 5: Local AI Runtimes — Deploying Ollama and vLLM for Bare-Metal Execution",
+     "url": "https://dev.to/suresh_kumar_de3920bedd1c/day-5-local-ai-runtimes-deploying-ollama-and-vllm-for-bare-metal-execution-pnf",
+     "metric": 0.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "pypi",
+     "title": "vllm",
+     "url": "https://pypi.org/project/vllm/",
+     "metric": 582017.0,
+     "metric_name": "downloads_week"
+    },
+    {
+     "name": "bluesky",
+     "title": "🇫🇷 ? Ollama vLLM llama.cpp : comparez ces trois moteurs d’inférence locaux selon l’usage, le matériel et la…\n🇬🇧 ? Ollama",
+     "url": "https://bsky.app/profile/spanobserver.bsky.social/post/3mzxpfkelah2e",
+     "metric": 6.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "official",
+     "title": "When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA DGX Stations with vLLM",
+     "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/feed/",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    },
+    {
+     "name": "gh_releases",
+     "title": "vllm v0.34.0",
+     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "vllm v0.34.0rc4",
+     "url": "https://github.com/vllm-project/vllm/releases/tag/v0.34.0rc4",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/vllm-project/vllm/releases/tag/v0.34.0",
+    "https://github.com/vllm-project/vllm"
+   ],
+   "official_verified": true,
+   "summary": "vllm v0.34.0 ― Running a frontier-scale model locally means keeping all its weights in GPU memory; the largest models no long。8ソースで言及(代表: 「When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 0.751,
+    "hackernews": 0.601,
+    "reddit_localllama": 0.38,
+    "devto": 0.0,
+    "pypi": 0.365,
+    "bluesky": 0.114,
+    "official": 0.8,
+    "gh_releases": 0.9
+   },
+   "velocity": {
+    "hn_this_week": 3,
+    "hn_prev_week": 3,
+    "factor": 0.6
+   },
+   "why": {
+    "first_seen": "2026-11-10",
+    "peak_day": "2026-11-14",
+    "co_mentioned": [
+     "llama.cpp",
+     "glm-5.3",
+     "Ollama"
+    ],
+    "evidence": [
+     {
+      "source": "github_new",
+      "title": "huawei-csl/MACaQ",
+      "url": "https://github.com/huawei-csl/MACaQ"
+     },
+     {
+      "source": "hackernews",
+      "title": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
+      "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/"
+     },
+     {
+      "source": "reddit_localllama",
+      "title": "Llama.cpp performance improvement over time (Gemma4 models)",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xx607x/llamacpp_performance_improvement_over_time_gemma4/"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [],
+   "display": "vLLM",
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": []
+  },
+  {
    "rank": 7,
    "keyword": "Unsloth",
    "entity_id": "unsloth",
@@ -1947,7 +1925,7 @@
     "local-llm",
     "tools"
    ],
-   "score": 50.4,
+   "score": 50.2,
    "vendor": "Unsloth",
    "primary": {
     "url": "https://github.com/unslothai/unsloth/releases/tag/v0.1.917-beta",
@@ -1988,7 +1966,7 @@
      "name": "hf_models",
      "title": "unsloth/Qwen3.8-27B-GGUF",
      "url": "https://huggingface.co/unsloth/Qwen3.8-27B-GGUF",
-     "metric": 315.0,
+     "metric": 316.0,
      "metric_name": "trendingScore"
     },
     {
@@ -2020,13 +1998,6 @@
      "metric_name": "rank"
     },
     {
-     "name": "reddit_ollama",
-     "title": "Open-source method (MACaQ) beats Unsloth GGUFs!",
-     "url": "https://www.reddit.com/r/ollama/comments/1xtr36n/opensource_method_macaq_beats_unsloth_ggufs/",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
      "name": "pypi",
      "title": "unsloth",
      "url": "https://pypi.org/project/unsloth/",
@@ -2046,13 +2017,12 @@
     "https://unsloth.ai/"
    ],
    "official_verified": true,
-   "summary": "unsloth Dynamic v3.1 GGUFs + Performance Fixes。6ソースで言及(代表: 「New Qwen3.8-27B Unsloth Dynamic V3.1 GGUFs」)",
+   "summary": "unsloth Dynamic v3.1 GGUFs + Performance Fixes。5ソースで言及(代表: 「New Qwen3.8-27B Unsloth Dynamic V3.1 GGUFs」)",
    "slides": [],
    "score_breakdown": {
-    "hf_models": 0.845,
+    "hf_models": 0.846,
     "hackernews": 0.669,
     "reddit_localllama": 0.927,
-    "reddit_ollama": 0.112,
     "pypi": 0.329,
     "gh_releases": 0.6
    },
@@ -2103,208 +2073,6 @@
   },
   {
    "rank": 8,
-   "keyword": "Claude Code",
-   "entity_id": "claude-code",
-   "kind": "release",
-   "category": "dev-tool",
-   "tags": [
-    "agents",
-    "tools"
-   ],
-   "score": 47.5,
-   "vendor": "Anthropic",
-   "primary": {
-    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
-    "published_at": "2026-11-13T20:40:01+00:00",
-    "date_basis": "published",
-    "source_type": "release_note",
-    "title": "claude-code v2.1.325",
-    "event_id": "cb5342666e"
-   },
-   "events": [
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
-     "published_at": "2026-11-13T20:40:01+00:00",
-     "source_type": "release_note",
-     "title": "claude-code v2.1.325",
-     "vendor": "Anthropic",
-     "date_basis": "published",
-     "feed": "anthropics/claude-code",
-     "event_id": "cb5342666e"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
-     "published_at": "2026-11-12T22:12:13+00:00",
-     "source_type": "release_note",
-     "title": "claude-code v2.1.323",
-     "vendor": "Anthropic",
-     "date_basis": "published",
-     "feed": "anthropics/claude-code",
-     "event_id": "5dab9f817d"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322",
-     "published_at": "2026-11-10T02:29:43+00:00",
-     "source_type": "release_note",
-     "title": "claude-code v2.1.322",
-     "vendor": "Anthropic",
-     "date_basis": "published",
-     "feed": "anthropics/claude-code",
-     "event_id": "b88d94a93f"
-    },
-    {
-     "kind": "release",
-     "source": "gh_releases",
-     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
-     "published_at": "2026-11-09T19:22:30+00:00",
-     "source_type": "release_note",
-     "title": "claude-code v2.1.321",
-     "vendor": "Anthropic",
-     "date_basis": "published",
-     "feed": "anthropics/claude-code",
-     "event_id": "b9cab70f5b"
-    }
-   ],
-   "sources": [
-    {
-     "name": "hackernews",
-     "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
-     "url": "https://status.claude.com/incidents/nn11wk485zfn",
-     "metric": 493.0,
-     "metric_name": "points"
-    },
-    {
-     "name": "hackernews",
-     "title": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
-     "url": "https://www.youtube.com/watch?v=WPj3aQ-xxpI",
-     "metric": 425.0,
-     "metric_name": "points"
-    },
-    {
-     "name": "devto",
-     "title": "Take Claude Code Above Average: Let Antigravity Review It",
-     "url": "https://dev.to/gde/take-claude-code-above-average-let-antigravity-review-it-1f3g",
-     "metric": 29.0,
-     "metric_name": "reactions"
-    },
-    {
-     "name": "devto",
-     "title": "How an 8MB MCP Tool Response Crashes Claude Code — And How to Debug Prompt Cache Misses Across Agents",
-     "url": "https://dev.to/framy2/how-an-8mb-mcp-tool-response-crashes-claude-code-and-how-to-debug-prompt-cache-misses-across-3kob",
-     "metric": 3.0,
-     "metric_name": "reactions"
-    },
-    {
-     "name": "bluesky",
-     "title": "Nate Silver getting replaced by 14-year-olds using Claude code",
-     "url": "https://bsky.app/profile/kfile.bsky.social/post/3n2ebcgbquk2y",
-     "metric": 201.0,
-     "metric_name": "likes+2*reposts"
-    },
-    {
-     "name": "bluesky",
-     "title": "Boris Cherny is the creator of Claude Code, the wildly popular Anthropic coding agent that’s made the company a driving ",
-     "url": "https://bsky.app/profile/cnn.com/post/3n2eshzea3h2o",
-     "metric": 46.0,
-     "metric_name": "likes+2*reposts"
-    },
-    {
-     "name": "gh_releases",
-     "title": "claude-code v2.1.325",
-     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
-     "metric": 1.0,
-     "metric_name": "release"
-    },
-    {
-     "name": "gh_releases",
-     "title": "claude-code v2.1.323",
-     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
-     "metric": 1.0,
-     "metric_name": "release"
-    }
-   ],
-   "official_urls": [
-    "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
-    "https://www.anthropic.com/claude-code"
-   ],
-   "official_verified": true,
-   "summary": "claude-code v2.1.325。5ソースで言及(代表: 「Elevated errors on claude.ai, Claude Code, and platform.clau」)",
-   "slides": [],
-   "score_breakdown": {
-    "hackernews": 1.177,
-    "reddit_ollama": 0.556,
-    "devto": 0.392,
-    "bluesky": 0.377,
-    "gh_releases": 0.9
-   },
-   "velocity": {
-    "hn_this_week": 18,
-    "hn_prev_week": 20,
-    "factor": 0.6
-   },
-   "why": {
-    "first_seen": "2026-11-09",
-    "peak_day": "2026-11-13",
-    "co_mentioned": [
-     "OpenAI Codex",
-     "Ollama"
-    ],
-    "evidence": [
-     {
-      "source": "hackernews",
-      "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
-      "url": "https://status.claude.com/incidents/nn11wk485zfn"
-     },
-     {
-      "source": "hackernews",
-      "title": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
-      "url": "https://www.youtube.com/watch?v=WPj3aQ-xxpI"
-     },
-     {
-      "source": "reddit_ollama",
-      "title": "Advice for local development",
-      "url": "https://www.reddit.com/r/ollama/comments/1xw9rfq/advice_for_local_development/"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": null,
-   "trend_label": "rising",
-   "x_posts": [],
-   "display": "Claude Code",
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": [
-    {
-     "site": "zenn",
-     "title": "Claude Codeが書いたコードを読む代わりにやっていること",
-     "url": "https://zenn.dev/linkedge/articles/claude-code-instead-of-reading-code",
-     "date": "2026-11-16"
-    },
-    {
-     "site": "zenn",
-     "title": "Claude Codeに作らせたPHP問題を403問実行して照合した。10問は書き出しの違いで漏れていた",
-     "url": "https://zenn.dev/mugen_web/articles/claude-code-php-questions-verify",
-     "date": "2026-11-16"
-    },
-    {
-     "site": "zenn",
-     "title": "Claude Codeに推測で埋めさせない：CLAUDE.mdに書く「未確認」の決まり5行",
-     "url": "https://zenn.dev/tsugu_sukima/articles/b571eb9691a4e0",
-     "date": "2026-11-16"
-    }
-   ]
-  },
-  {
-   "rank": 9,
    "keyword": "Mythos 5.2",
    "entity_id": "mythos-5-2",
    "kind": "product",
@@ -2313,7 +2081,7 @@
     "agents",
     "tools"
    ],
-   "score": 47.1,
+   "score": 48.4,
    "vendor": null,
    "primary": {
     "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/bedrock-claude-mythos-5-2-govcloud/",
@@ -2409,18 +2177,18 @@
     {
      "url": "https://x.com/claudeai/status/2119867114450268322",
      "author": "claudeai",
-     "likes": 96138,
+     "likes": 96137,
      "reposts": 9235,
-     "views": 19614626,
+     "views": 19616015,
      "text": "Introducing Claude Fable 5.2 and Claude Mythos 5.2, designed to tackle the most daunting technical challenges.\n\nThey’re capable collaborators on ambitious projects in many fields, and show improvement",
      "via": "link"
     },
     {
      "url": "https://x.com/AnthropicAI/status/2119867707546071125",
      "author": "AnthropicAI",
-     "likes": 15054,
+     "likes": 15055,
      "reposts": 940,
-     "views": 943440,
+     "views": 943464,
      "text": "Claude Fable 5.2 and Claude Mythos 5.2 are available now:",
      "via": "watchlist"
     }
@@ -2440,7 +2208,7 @@
    ]
   },
   {
-   "rank": 10,
+   "rank": 9,
    "keyword": "DeepSeek-V4.1-Flash",
    "entity_id": "deepseek-v4-1-flash",
    "kind": "model",
@@ -2449,7 +2217,7 @@
     "models",
     "local-llm"
    ],
-   "score": 46.8,
+   "score": 48.0,
    "vendor": "DeepSeek",
    "primary": {
     "url": "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/",
@@ -2478,7 +2246,7 @@
      "name": "hf_models",
      "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-     "metric": 215.0,
+     "metric": 214.0,
      "metric_name": "trendingScore"
     },
     {
@@ -2552,7 +2320,7 @@
     }
    ],
    "score_breakdown": {
-    "hf_models": 0.802,
+    "hf_models": 0.801,
     "github_new": 0.233,
     "reddit_localllama": 0.85,
     "ollama": 0.26,
@@ -2734,7 +2502,7 @@
    }
   },
   {
-   "rank": 11,
+   "rank": 10,
    "keyword": "OpenAI Codex",
    "entity_id": "openai-codex",
    "kind": "product",
@@ -2743,7 +2511,7 @@
     "agents",
     "tools"
    ],
-   "score": 43.4,
+   "score": 44.5,
    "vendor": "OpenAI",
    "primary": {
     "url": "https://openai.com/business/customer-stories/gondola",
@@ -2905,7 +2673,7 @@
    ]
   },
   {
-   "rank": 12,
+   "rank": 11,
    "keyword": "glm-5.3",
    "entity_id": "glm-5-3",
    "kind": "model",
@@ -2914,7 +2682,7 @@
     "models",
     "local-llm"
    ],
-   "score": 41.8,
+   "score": 43.0,
    "vendor": "Zhipu",
    "primary": {
     "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/feed/",
@@ -2943,7 +2711,7 @@
      "name": "hackernews",
      "title": "Serving GLM-5.3 at 607.8 tok/s across two Nvidia DGX stations with vLLM",
      "url": "https://developer.nvidia.com/blog/when-one-gpu-isnt-enough-serving-glm-5-3-across-two-nvidia-dgx-stations-with-vllm/",
-     "metric": 145.0,
+     "metric": 146.0,
      "metric_name": "points"
     },
     {
@@ -2984,8 +2752,8 @@
    "summary": "When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA DGX Stations with vLLM ― Running a frontier-scale model locally means keeping all its weights in GPU memory; the largest models no long。5ソースで言及(代表: 「When One GPU Isn’t Enough: Serving GLM-5.3 Across Two NVIDIA」)",
    "slides": [],
    "score_breakdown": {
-    "hackernews": 0.6,
-    "reddit_localllama": 0.568,
+    "hackernews": 0.601,
+    "reddit_localllama": 0.578,
     "ollama": 0.295,
     "bluesky": 0.377,
     "official": 0.8
@@ -3031,7 +2799,7 @@
    "jp_reactions": []
   },
   {
-   "rank": 13,
+   "rank": 12,
    "keyword": "GitHub Copilot",
    "entity_id": "github-copilot",
    "kind": "product",
@@ -3040,7 +2808,7 @@
     "agents",
     "tools"
    ],
-   "score": 41.0,
+   "score": 42.1,
    "vendor": "Microsoft",
    "primary": {
     "url": "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december",
@@ -3193,116 +2961,17 @@
     "status": "unverified",
     "checks": []
    },
-   "jp_reactions": []
+   "jp_reactions": [
+    {
+     "site": "qiita",
+     "title": "AIコーディングエージェントをSlack・Jira・GitHubと連携する方法",
+     "url": "https://qiita.com/hervekom37/items/9100b26a79410786d89e",
+     "date": "2026-11-16"
+    }
+   ]
   },
   {
-   "rank": 14,
-   "keyword": "SGLang",
-   "entity_id": "sglang",
-   "kind": "product",
-   "category": "local-runtime",
-   "tags": [
-    "local-llm",
-    "tools"
-   ],
-   "score": 31.8,
-   "vendor": "SGLang",
-   "primary": {
-    "url": "https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/",
-    "published_at": "2026-11-12T22:03:34+00:00",
-    "date_basis": "published",
-    "source_type": "announcement",
-    "title": "Deploy frontier AI models on AWS Trainium with SGLang-Neuron",
-    "event_id": "46bd851635"
-   },
-   "events": [
-    {
-     "kind": "announcement",
-     "source": "official",
-     "url": "https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/",
-     "published_at": "2026-11-12T22:03:34+00:00",
-     "source_type": "announcement",
-     "title": "Deploy frontier AI models on AWS Trainium with SGLang-Neuron",
-     "vendor": "AWS",
-     "date_basis": "published",
-     "feed": "aws-ml-blog",
-     "event_id": "46bd851635"
-    }
-   ],
-   "sources": [
-    {
-     "name": "reddit_ollama",
-     "title": "Prefixwise (v0.10.0, MIT): Identify, fix, and prevent LLM prompt cache misses across vLLM, SGLang, LMCache, Claude, and ",
-     "url": "https://www.reddit.com/r/ollama/comments/1xrrebh/prefixwise_v0100_mit_identify_fix_and_prevent_llm/",
-     "metric": 0.0,
-     "metric_name": "rank"
-    },
-    {
-     "name": "pypi",
-     "title": "sglang",
-     "url": "https://pypi.org/project/sglang/",
-     "metric": 128958.0,
-     "metric_name": "downloads_week"
-    },
-    {
-     "name": "official",
-     "title": "Deploy frontier AI models on AWS Trainium with SGLang-Neuron",
-     "url": "https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/",
-     "metric": 1.0,
-     "metric_name": "announcement"
-    }
-   ],
-   "official_urls": [
-    "https://aws.amazon.com/blogs/machine-learning/deploy-frontier-ai-models-on-aws-trainium-with-sglang-neuron/",
-    "https://github.com/sgl-project/sglang"
-   ],
-   "official_verified": true,
-   "summary": "Deploy frontier AI models on AWS Trainium with SGLang-Neuron ― SGLang-Neuron is now publicly available through an AWS Deep Learning Container. With SGLang-Neuron, you can se。4ソースで言及(代表: 「Deploy frontier AI models on AWS Trainium with SGLang-Neuron」)",
-   "slides": [],
-   "score_breakdown": {
-    "github_new": 0.083,
-    "reddit_ollama": 0.532,
-    "pypi": 0.324,
-    "official": 0.8,
-    "x_aux": 0.134
-   },
-   "velocity": {
-    "hn_this_week": 0,
-    "hn_prev_week": 2,
-    "factor": 0.7
-   },
-   "why": {
-    "first_seen": "2026-11-09",
-    "peak_day": "2026-11-12",
-    "co_mentioned": [
-     "vLLM"
-    ],
-    "evidence": [
-     {
-      "source": "reddit_ollama",
-      "title": "Prefixwise (v0.10.0, MIT): Identify, fix, and prevent LLM prompt cache misses across vLLM, SGLang, LMCache, Claude, and OpenAI (zero prompt ",
-      "url": "https://www.reddit.com/r/ollama/comments/1xrrebh/prefixwise_v0100_mit_identify_fix_and_prevent_llm/"
-     },
-     {
-      "source": "github_new",
-      "title": "oren40/inferlab",
-      "url": "https://github.com/oren40/inferlab"
-     }
-    ]
-   },
-   "related": [],
-   "resolved_repo": null,
-   "trend_label": "rising",
-   "x_posts": [],
-   "display": "SGLang",
-   "verification": {
-    "status": "unverified",
-    "checks": []
-   },
-   "jp_reactions": []
-  },
-  {
-   "rank": 15,
+   "rank": 13,
    "keyword": "Inkling-2-Small",
    "entity_id": "inkling-2-small",
    "kind": "model",
@@ -3311,7 +2980,7 @@
     "models",
     "local-llm"
    ],
-   "score": 29.4,
+   "score": 41.3,
    "vendor": null,
    "primary": {
     "url": "https://openrouter.ai/thinkingmachines/inkling-2-small",
@@ -3390,14 +3059,15 @@
     "https://openrouter.ai/thinkingmachines/inkling-2-small"
    ],
    "official_verified": false,
-   "summary": "thinkingmachines/inkling-2-small ― 594B Mixture-of-Experts model (17B active) with image input and up to 1M tokens of context, built for agentic 。4ソースで言及(代表: 「thinkingmachines/Inkling-2-Small」)",
+   "summary": "thinkingmachines/inkling-2-small ― 594B Mixture-of-Experts model (17B active) with image input and up to 1M tokens of context, built for agentic 。5ソースで言及(代表: 「thinkingmachines/Inkling-2-Small」)",
    "slides": [],
    "score_breakdown": {
     "hf_models": 0.702,
     "reddit_localllama": 0.3,
+    "reddit_ml": 0.564,
     "ollama": 0.6,
     "openrouter": 0.225,
-    "x_aux": 0.33
+    "x_aux": 0.5
    },
    "velocity": {
     "hn_this_week": 0,
@@ -3425,16 +3095,25 @@
      "author": "NVIDIAAI",
      "likes": 1991,
      "reposts": 111,
-     "views": 162147,
+     "views": 162152,
      "text": "Congrats @thinkymachines team on Inkling 2 Small!\n\nA 594B model pretrained in just 68 hours with NVIDIA NVFP4 on GB300 NVL72 racks.\n\nRead how the team made low-precision training work at this scale. 👇",
      "via": "watchlist"
+    },
+    {
+     "url": "https://x.com/choang333/status/2121335484236386574",
+     "author": "choang333",
+     "likes": 868,
+     "reposts": 126,
+     "views": 105104,
+     "text": "Labs disagree on vision encoders for MLLMs! ⚔️\n\nGemma 4 12B scrapped the encoder.\nKimi K3 dropped encoder pretraining.\nInkling 2 Small revived the encoder Inkling killed.\n\nWe trained 200+ models in a ",
+     "via": "link"
     },
     {
      "url": "https://x.com/ollama/status/2121059953649819771",
      "author": "ollama",
      "likes": 341,
      "reposts": 35,
-     "views": 24942,
+     "views": 24945,
      "text": "Inkling 2 Small from Thinking Machines (@thinkymachines) is now on Ollama with zero data retention! \n\nThe 594B mixture-of-experts model with 1M context window demonstrates strong visual interpretation",
      "via": "watchlist"
     }
@@ -3447,6 +3126,361 @@
    "jp_reactions": []
   },
   {
+   "rank": 14,
+   "keyword": "Claude Code",
+   "entity_id": "claude-code",
+   "kind": "release",
+   "category": "dev-tool",
+   "tags": [
+    "agents",
+    "tools"
+   ],
+   "score": 39.9,
+   "vendor": "Anthropic",
+   "primary": {
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+    "published_at": "2026-11-13T20:40:01+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "claude-code v2.1.325",
+    "event_id": "cb5342666e"
+   },
+   "events": [
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+     "published_at": "2026-11-13T20:40:01+00:00",
+     "source_type": "release_note",
+     "title": "claude-code v2.1.325",
+     "vendor": "Anthropic",
+     "date_basis": "published",
+     "feed": "anthropics/claude-code",
+     "event_id": "cb5342666e"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+     "published_at": "2026-11-12T22:12:13+00:00",
+     "source_type": "release_note",
+     "title": "claude-code v2.1.323",
+     "vendor": "Anthropic",
+     "date_basis": "published",
+     "feed": "anthropics/claude-code",
+     "event_id": "5dab9f817d"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.322",
+     "published_at": "2026-11-10T02:29:43+00:00",
+     "source_type": "release_note",
+     "title": "claude-code v2.1.322",
+     "vendor": "Anthropic",
+     "date_basis": "published",
+     "feed": "anthropics/claude-code",
+     "event_id": "b88d94a93f"
+    },
+    {
+     "kind": "release",
+     "source": "gh_releases",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+     "published_at": "2026-11-09T19:22:30+00:00",
+     "source_type": "release_note",
+     "title": "claude-code v2.1.321",
+     "vendor": "Anthropic",
+     "date_basis": "published",
+     "feed": "anthropics/claude-code",
+     "event_id": "b9cab70f5b"
+    }
+   ],
+   "sources": [
+    {
+     "name": "hackernews",
+     "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+     "url": "https://status.claude.com/incidents/nn11wk485zfn",
+     "metric": 493.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "hackernews",
+     "title": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
+     "url": "https://www.youtube.com/watch?v=WPj3aQ-xxpI",
+     "metric": 425.0,
+     "metric_name": "points"
+    },
+    {
+     "name": "devto",
+     "title": "How an 8MB MCP Tool Response Crashes Claude Code — And How to Debug Prompt Cache Misses Across Agents",
+     "url": "https://dev.to/framy2/how-an-8mb-mcp-tool-response-crashes-claude-code-and-how-to-debug-prompt-cache-misses-across-3kob",
+     "metric": 3.0,
+     "metric_name": "reactions"
+    },
+    {
+     "name": "bluesky",
+     "title": "Nate Silver getting replaced by 14-year-olds using Claude code",
+     "url": "https://bsky.app/profile/kfile.bsky.social/post/3n2ebcgbquk2y",
+     "metric": 201.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "bluesky",
+     "title": "Boris Cherny is the creator of Claude Code, the wildly popular Anthropic coding agent that’s made the company a driving ",
+     "url": "https://bsky.app/profile/cnn.com/post/3n2eshzea3h2o",
+     "metric": 46.0,
+     "metric_name": "likes+2*reposts"
+    },
+    {
+     "name": "gh_releases",
+     "title": "claude-code v2.1.325",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+     "metric": 1.0,
+     "metric_name": "release"
+    },
+    {
+     "name": "gh_releases",
+     "title": "claude-code v2.1.323",
+     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+     "metric": 1.0,
+     "metric_name": "release"
+    }
+   ],
+   "official_urls": [
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.325",
+    "https://www.anthropic.com/claude-code"
+   ],
+   "official_verified": true,
+   "summary": "claude-code v2.1.325。4ソースで言及(代表: 「Elevated errors on claude.ai, Claude Code, and platform.clau」)",
+   "slides": [],
+   "score_breakdown": {
+    "hackernews": 1.177,
+    "devto": 0.166,
+    "bluesky": 0.377,
+    "gh_releases": 0.9
+   },
+   "velocity": {
+    "hn_this_week": 18,
+    "hn_prev_week": 20,
+    "factor": 0.6
+   },
+   "why": {
+    "first_seen": "2026-11-09",
+    "peak_day": "2026-11-13",
+    "co_mentioned": [
+     "OpenAI Codex"
+    ],
+    "evidence": [
+     {
+      "source": "hackernews",
+      "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+      "url": "https://status.claude.com/incidents/nn11wk485zfn"
+     },
+     {
+      "source": "hackernews",
+      "title": "Claude Code and Codex reverse engineered my 1994 Jeep's ECU over a $3 Arduino [video]",
+      "url": "https://www.youtube.com/watch?v=WPj3aQ-xxpI"
+     },
+     {
+      "source": "hackernews",
+      "title": "Anthropic upgrades Claude Code Projects to run parallel AI workers",
+      "url": "https://claude.com/resources/articles/projects-redesigned"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [],
+   "display": "Claude Code",
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": [
+    {
+     "site": "zenn",
+     "title": "Claude Codeが書いたコードを読む代わりにやっていること",
+     "url": "https://zenn.dev/linkedge/articles/claude-code-instead-of-reading-code",
+     "date": "2026-11-16"
+    },
+    {
+     "site": "hatena",
+     "title": "「Qwen4-Max」が登場、一部テストでClaude Opus 5.5に勝利し小型オープンモデルも後日公開予定",
+     "url": "https://gigazine.net/news/20261116-qwen4-max/",
+     "date": "2026-11-16"
+    },
+    {
+     "site": "zenn",
+     "title": "Claude Codeに作らせたPHP問題を403問実行して照合した。10問は書き出しの違いで漏れていた",
+     "url": "https://zenn.dev/mugen_web/articles/claude-code-php-questions-verify",
+     "date": "2026-11-16"
+    }
+   ]
+  },
+  {
+   "rank": 15,
+   "keyword": "GitHub-Copilot-app",
+   "entity_id": "github-copilot-app",
+   "kind": "product",
+   "category": "dev-tool",
+   "tags": [
+    "agents",
+    "tools"
+   ],
+   "score": 29.1,
+   "vendor": null,
+   "primary": {
+    "url": "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app",
+    "published_at": "2026-11-13T18:27:13+00:00",
+    "date_basis": "published",
+    "source_type": "release_note",
+    "title": "GitHub Enterprise Server support in the GitHub Copilot app",
+    "event_id": "7ac3d5c55e"
+   },
+   "events": [
+    {
+     "kind": "announcement",
+     "source": "official",
+     "url": "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app",
+     "published_at": "2026-11-13T18:27:13+00:00",
+     "source_type": "release_note",
+     "title": "GitHub Enterprise Server support in the GitHub Copilot app",
+     "vendor": "Microsoft",
+     "date_basis": "published",
+     "feed": "github-changelog",
+     "event_id": "7ac3d5c55e"
+    },
+    {
+     "kind": "repo",
+     "source": "github_new",
+     "url": "https://github.com/TurquoiseConsultant/GitHub-Copilot-app",
+     "published_at": "2026-11-14T19:25:20+00:00",
+     "source_type": "repo",
+     "title": "TurquoiseConsultant/GitHub-Copilot-app",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "fdce69ff6b"
+    },
+    {
+     "kind": "repo",
+     "source": "github_new",
+     "url": "https://github.com/toppatronweave/GitHub-Copilot-app",
+     "published_at": "2026-11-14T19:25:20+00:00",
+     "source_type": "repo",
+     "title": "toppatronweave/GitHub-Copilot-app",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "a460805d2b"
+    },
+    {
+     "kind": "repo",
+     "source": "github_new",
+     "url": "https://github.com/TarantulaCorrect/GitHub-Copilot-app",
+     "published_at": "2026-11-14T19:25:19+00:00",
+     "source_type": "repo",
+     "title": "TarantulaCorrect/GitHub-Copilot-app",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "a79262dec3"
+    },
+    {
+     "kind": "repo",
+     "source": "github_new",
+     "url": "https://github.com/Trapkrostride/GitHub-Copilot-app",
+     "published_at": "2026-11-14T19:25:19+00:00",
+     "source_type": "repo",
+     "title": "Trapkrostride/GitHub-Copilot-app",
+     "vendor": null,
+     "date_basis": "published",
+     "feed": null,
+     "event_id": "7365410b30"
+    }
+   ],
+   "sources": [
+    {
+     "name": "github_new",
+     "title": "trackersnailgrip/GitHub-Copilot-app",
+     "url": "https://github.com/trackersnailgrip/GitHub-Copilot-app",
+     "metric": 385.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "github_new",
+     "title": "trackboatwrightplan/GitHub-Copilot-app",
+     "url": "https://github.com/trackboatwrightplan/GitHub-Copilot-app",
+     "metric": 382.0,
+     "metric_name": "stars"
+    },
+    {
+     "name": "official",
+     "title": "GitHub Enterprise Server support in the GitHub Copilot app",
+     "url": "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app",
+     "metric": 1.0,
+     "metric_name": "announcement"
+    }
+   ],
+   "official_urls": [
+    "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app",
+    "https://github.com/trackersnailgrip/GitHub-Copilot-app",
+    "https://github.com/trackboatwrightplan/GitHub-Copilot-app"
+   ],
+   "official_verified": true,
+   "summary": "GitHub Enterprise Server support in the GitHub Copilot app ― You can now bring your work on GitHub Enterprise Server (GHES) into the GitHub Copilot app. Add your GHES acco。2ソースで言及(代表: 「GitHub Enterprise Server support in the GitHub Copilot app」)",
+   "slides": [],
+   "score_breakdown": {
+    "github_new": 1.244,
+    "official": 0.8
+   },
+   "velocity": {
+    "hn_this_week": 0,
+    "hn_prev_week": 0,
+    "factor": 0.7
+   },
+   "why": {
+    "first_seen": "2026-11-13",
+    "peak_day": "2026-11-14",
+    "co_mentioned": [],
+    "evidence": [
+     {
+      "source": "github_new",
+      "title": "trackersnailgrip/GitHub-Copilot-app",
+      "url": "https://github.com/trackersnailgrip/GitHub-Copilot-app"
+     },
+     {
+      "source": "github_new",
+      "title": "trackboatwrightplan/GitHub-Copilot-app",
+      "url": "https://github.com/trackboatwrightplan/GitHub-Copilot-app"
+     },
+     {
+      "source": "github_new",
+      "title": "toppatronweave/GitHub-Copilot-app",
+      "url": "https://github.com/toppatronweave/GitHub-Copilot-app"
+     }
+    ]
+   },
+   "related": [],
+   "resolved_repo": null,
+   "trend_label": "rising",
+   "x_posts": [],
+   "display": "GitHub-Copilot-app",
+   "verification": {
+    "status": "unverified",
+    "checks": []
+   },
+   "jp_reactions": [
+    {
+     "site": "qiita",
+     "title": "AIコーディングエージェントをSlack・Jira・GitHubと連携する方法",
+     "url": "https://qiita.com/hervekom37/items/9100b26a79410786d89e",
+     "date": "2026-11-16"
+    }
+   ]
+  },
+  {
    "rank": 16,
    "keyword": "Generative",
    "entity_id": "generative",
@@ -3456,7 +3490,7 @@
     "research",
     "tools"
    ],
-   "score": 21.8,
+   "score": 22.4,
    "vendor": null,
    "primary": {
     "url": "https://huggingface.co/papers/2611.15844",
@@ -3569,7 +3603,7 @@
    "tags": [
     "hardware"
    ],
-   "score": 14.9,
+   "score": 15.3,
    "vendor": "NVIDIA",
    "primary": {
     "url": "https://developer.nvidia.com/blog/run-native-dla-inference-in-python-on-nvidia-jetson-agx-orin-using-cudla/feed/",
@@ -3656,7 +3690,7 @@
    "tags": [
     "research"
    ],
-   "score": 9.9,
+   "score": 10.2,
    "vendor": null,
    "primary": {
     "url": "https://huggingface.co/papers/2611.18397",
@@ -4542,7 +4576,14 @@
     "status": "unverified",
     "checks": []
    },
-   "jp_reactions": []
+   "jp_reactions": [
+    {
+     "site": "qiita",
+     "title": "AIコーディングエージェントをSlack・Jira・GitHubと連携する方法",
+     "url": "https://qiita.com/hervekom37/items/9100b26a79410786d89e",
+     "date": "2026-11-16"
+    }
+   ]
   },
   {
    "rank": 23,
@@ -4643,7 +4684,14 @@
     "status": "unverified",
     "checks": []
    },
-   "jp_reactions": []
+   "jp_reactions": [
+    {
+     "site": "qiita",
+     "title": "AIコーディングエージェントをSlack・Jira・GitHubと連携する方法",
+     "url": "https://qiita.com/hervekom37/items/9100b26a79410786d89e",
+     "date": "2026-11-16"
+    }
+   ]
   },
   {
    "rank": 24,
@@ -4744,20 +4792,23 @@
     "status": "unverified",
     "checks": []
    },
-   "jp_reactions": []
+   "jp_reactions": [
+    {
+     "site": "qiita",
+     "title": "AIコーディングエージェントをSlack・Jira・GitHubと連携する方法",
+     "url": "https://qiita.com/hervekom37/items/9100b26a79410786d89e",
+     "date": "2026-11-16"
+    }
+   ]
   }
  ],
  "pending": [
-  {
-   "keyword": "Desktop",
-   "reason": "no primary source dated inside the window"
-  },
   {
    "keyword": "Qwen3.8",
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "Gemma4",
+   "keyword": "Desktop",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4769,7 +4820,7 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "Cache",
+   "keyword": "Gemma4",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4778,6 +4829,10 @@
   },
   {
    "keyword": "MiniMax-H3",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "sure",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4793,11 +4848,19 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "nemotron3",
+   "keyword": "Cache",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "kimi-k3",
    "reason": "no primary source dated inside the window"
   },
   {
    "keyword": "Ripple",
+   "reason": "no primary source dated inside the window"
+  },
+  {
+   "keyword": "nemotron3",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4809,15 +4872,7 @@
    "reason": "no primary source dated inside the window"
   },
   {
-   "keyword": "kimi-k3",
-   "reason": "no primary source dated inside the window"
-  },
-  {
    "keyword": "LFM3-Omni",
-   "reason": "no primary source dated inside the window"
-  },
-  {
-   "keyword": "beam",
    "reason": "no primary source dated inside the window"
   },
   {
@@ -4859,13 +4914,13 @@
   "OpenSearch",
   "SageMaker",
   "PostgreSQL",
+  "OpenShell",
   "DocumentDB",
   "DuckDB",
   "Route 53",
   "S3 Tables",
   "AlphaGenome",
   "AssemblyAI",
-  "CoRL",
   "ElastiCache",
   "FP64 Algorithms",
   "GameLift",
@@ -4887,7 +4942,6 @@
   "ChatGPT",
   "Cursor",
   "DeepSeek",
-  "Docker",
   "Flash",
   "GGUF",
   "GeForce",
@@ -4899,6 +4953,7 @@
   "MCP",
   "Mixture of Experts",
   "OpenAI",
+  "PyTorch",
   "Quantization",
   "RAG",
   "Reinforcement learning (RLVR)",
@@ -4909,13 +4964,44 @@
  ],
  "leads_unverified": [
   {
+   "author": "OpenAI",
+   "url": "https://x.com/OpenAI/status/2120216592395174382",
+   "text": "Now in beta: Businesses in ChatGPT.\n\nClaim your business, manage your information, and get insights on how people engage with you.\n\nEligible businesses can also",
+   "links": [
+    "https://openai.com/index/introducing-businesses-chatgpt/"
+   ],
+   "likes": 17819,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "deepseek_ai",
+   "url": "https://x.com/deepseek_ai/status/2121247896918253875",
+   "text": "🚀 The full DeepSeek App experience, now via API\n\nSearch, files, links, safety, and voice. The capabilities behind the DeepSeek App are now available through the",
+   "links": [
+    "https://cdn.deepseek.com/chat-demo",
+    "https://github.com/deepseek-ai/chat-demo"
+   ],
+   "likes": 12321,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
    "author": "AnthropicAI",
    "url": "https://x.com/AnthropicAI/status/2120841731302154708",
    "text": "Our initial public offering: https://ipo.anthropic.com\n\nLegal disclaimer: Anthropic has filed a registration statement (including a prospectus) with the SEC for",
    "links": [
     "https://ipo.anthropic.com"
    ],
-   "likes": 10431,
+   "likes": 10430,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "Alibaba_Qwen",
+   "url": "https://x.com/Alibaba_Qwen/status/2122148127520289151",
+   "text": "📢 Meet Qwen4-Max, your new AI teammate for work, creativity, and discovery!\n\nQwen4-Max is built on a new MoE architecture with native vision and a 1M-token cont",
+   "links": [
+    "https://qwen.ai/blog?id=qwen4-max"
+   ],
+   "likes": 10358,
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   },
   {
@@ -4925,7 +5011,37 @@
    "links": [
     "https://www.anthropic.com/news/roadshow-launch"
    ],
-   "likes": 4958,
+   "likes": 4959,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "OpenAI",
+   "url": "https://x.com/OpenAI/status/2119913172039868579",
+   "text": "We built Control Room, a central system to track model workloads across our research infrastructure and stop them quickly when safety or security concerns arise",
+   "links": [
+    "https://openai.com/index/control-room/"
+   ],
+   "likes": 4873,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "OpenAI",
+   "url": "https://x.com/OpenAI/status/2122123437141553630",
+   "text": "Physicist Nathaniel Craig shares how he worked with GPT-6 Astra to develop a candidate lattice definition of the Standard Model.\n\nIt’s the first post on our new",
+   "links": [
+    "https://openai.com/index/step-toward-defining-the-standard-model"
+   ],
+   "likes": 2665,
+   "status": "unverified: needs official site / release note / GitHub Release corroboration"
+  },
+  {
+   "author": "OpenAI",
+   "url": "https://x.com/OpenAI/status/2120202353907486826",
+   "text": "We're turning our lessons from defending OpenAI into practical tools for our customers. On Thursday, join us at Cyber at the Frontier, a live keynote, for our l",
+   "links": [
+    "https://openai.com/cyber-at-the-frontier/"
+   ],
+   "likes": 2285,
    "status": "unverified: needs official site / release note / GitHub Release corroboration"
   },
   {
@@ -5213,7 +5329,7 @@
    "summary": "状態空間モデル(SSM)は、Transformer の代わりになる方式で、一定のメモリと線形の計算で系列を扱える。ただし、一部の課題では Transformer に及ばない。"
   }
  ],
- "candidates_pool": 105,
+ "candidates_pool": 102,
  "themes": [
   {
    "id": "agents-with-many-tools",

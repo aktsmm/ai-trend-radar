@@ -1,6 +1,6 @@
 {
  "week": "2026-W47",
- "generated_at": "2026-11-16T08:53:55Z",
+ "generated_at": "2026-11-16T09:01:34Z",
  "metric": "stars gained this week (github.com/trending, AI-filtered)",
  "pages_ok": 5,
  "pages_total": 5,
@@ -11,7 +11,7 @@
    "repo": "meta/astryx",
    "url": "https://github.com/meta/astryx",
    "stars_week": 13501,
-   "stars_total": 29179,
+   "stars_total": 29184,
    "language": "TypeScript",
    "topics": [],
    "description": "An open source design system that's fully customizable and agent ready",
@@ -23,7 +23,7 @@
    "repo": "pingdotgg/t3code",
    "url": "https://github.com/pingdotgg/t3code",
    "stars_week": 9260,
-   "stars_total": 61992,
+   "stars_total": 62001,
    "language": "TypeScript",
    "topics": [
     "agent-orchestration",
@@ -44,7 +44,7 @@
    "repo": "anthropics/skills",
    "url": "https://github.com/anthropics/skills",
    "stars_week": 6077,
-   "stars_total": 195568,
+   "stars_total": 195574,
    "language": "Python",
    "topics": [
     "agent-skills"
@@ -58,7 +58,7 @@
    "repo": "GoogleChrome/modern-web-guidance-src",
    "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
    "stars_week": 5692,
-   "stars_total": 7575,
+   "stars_total": 7586,
    "language": "TypeScript",
    "topics": [],
    "description": "Keep your coding agent up to date with the latest web best practices",
@@ -70,7 +70,7 @@
    "repo": "milind-soni/OpenMausBot",
    "url": "https://github.com/milind-soni/OpenMausBot",
    "stars_week": 5463,
-   "stars_total": 23758,
+   "stars_total": 23766,
    "language": "TypeScript",
    "topics": [
     "ai-agents",
@@ -91,7 +91,7 @@
    "repo": "google/elephant-goldfish-model",
    "url": "https://github.com/google/elephant-goldfish-model",
    "stars_week": 5060,
-   "stars_total": 20012,
+   "stars_total": 20016,
    "language": "Python",
    "topics": [
     "agent-skills",
@@ -112,7 +112,7 @@
    "repo": "vercel-labs/agent-desktop",
    "url": "https://github.com/vercel-labs/agent-desktop",
    "stars_week": 4719,
-   "stars_total": 24387,
+   "stars_total": 24393,
    "language": "Rust",
    "topics": [
     "accessibility",
@@ -133,7 +133,7 @@
    "repo": "ZhuLinsen/daily_stock_analysis",
    "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
    "stars_week": 4548,
-   "stars_total": 72646,
+   "stars_total": 72647,
    "language": "Python",
    "topics": [
     "a-stock",
@@ -153,7 +153,7 @@
    "repo": "vercel-labs/agent-browser",
    "url": "https://github.com/vercel-labs/agent-browser",
    "stars_week": 4217,
-   "stars_total": 51785,
+   "stars_total": 51787,
    "language": "Rust",
    "topics": [],
    "description": "Browser automation CLI for AI agents",
@@ -165,7 +165,7 @@
    "repo": "addyosmani/agent-skills",
    "url": "https://github.com/addyosmani/agent-skills",
    "stars_week": 3889,
-   "stars_total": 118085,
+   "stars_total": 118087,
    "language": "JavaScript",
    "topics": [
     "agent-skills",

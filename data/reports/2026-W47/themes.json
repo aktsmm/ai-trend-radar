@@ -59,17 +59,19 @@
     "id": "open-weights-reach-clouds",
     "title": "大手クラウドがモデルを手軽に提供",
     "confidence": "low",
-    "summary": "Gemini 4 Hydrogen と DeepSeek-V4.1-Flash の 2 件で、大手のサービスから手軽にモデルを使える形での提供が発表された。",
+    "summary": "Gemini 4 Hydrogen、DeepSeek-V4.1-Flash、GPT-6.2 Astra / Sol の 3 件で、大手のサービスから手軽にモデルを使える形での提供が発表された。",
     "background": [
-      "Google は API、検索、アプリなど幅広い窓口で提供し、AWS は数クリックで導入できる形にした。",
-      "2 件だけの共通点で、導入の手間を減らしたい需要が背景にあるかもしれない(見立て)。"
+      "Google は API、検索、アプリなど幅広い窓口で提供し、AWS は数クリックの導入や Bedrock での一般提供にした。",
+      "導入の手間を減らしたい需要が背景にあるかもしれない(見立て)。"
     ],
-    "entities": ["gemini-4-hydrogen", "deepseek-v4-1-flash"],
+    "entities": ["gemini-4-hydrogen", "deepseek-v4-1-flash", "gpt-6-2-astra"],
     "signals": [
       {"entity": "gemini-4-hydrogen", "note": "Gemini API、Gemini アプリ、Google 検索などで提供される"},
-      {"entity": "deepseek-v4-1-flash", "note": "SageMaker JumpStart で数クリックで導入できると説明されている"}
+      {"entity": "deepseek-v4-1-flash", "note": "SageMaker JumpStart で数クリックで導入できると説明されている"},
+      {"entity": "gpt-6-2-astra", "note": "Amazon Bedrock で一般提供になり、コンソールや API から使える"}
     ],
     "refs": [
+      "https://aws.amazon.com/about-aws/whats-new/2026/11/openai-gpt-6-2-astra-sol-amazon-bedrock/",
       "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
       "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/"
     ]

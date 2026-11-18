@@ -1,4 +1,37 @@
 {
+  "gpt-6-2-astra": [
+    {
+      "title": "GPT-6.2 Astra と Sol が Bedrock に",
+      "diagram_type": "infographic",
+      "icon": "cloud",
+      "stat": {"value": "2 モデル", "label": "Astra と Sol を Bedrock で一般提供"},
+      "steps": ["Bedrock を開く", "Astra か Sol を選ぶ", "API で使う"],
+      "points": [
+        {"h": "何が起きた", "t": "AWS が OpenAI の GPT-6.2 Astra と Sol の一般提供を発表した"},
+        {"h": "何が変わる", "t": "難しい仕事は Astra、繰り返しの仕事は Sol と使い分けられる"},
+        {"h": "嬉しいこと", "t": "AWS の既存のアクセス管理や監査の仕組みで使える"},
+        {"h": "注意", "t": "AWS の発表。価格やリージョンは Bedrock の文書で確認する"}
+      ],
+      "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/openai-gpt-6-2-astra-sol-amazon-bedrock/",
+      "source_date": "2026-11-17"
+    }
+  ],
+  "claude-code": [
+    {
+      "title": "Claude Code v2.1.327、安全確認を強化",
+      "diagram_type": "infographic",
+      "icon": "terminal",
+      "stat": {"value": "v2.1.327", "label": "Claude Code の最新リリース"},
+      "steps": ["更新する", "/status で確認", "MCP を登録"],
+      "points": [
+        {"h": "何が起きた", "t": "Anthropic が Claude Code v2.1.327 を公開した"},
+        {"h": "何が変わる", "t": "リポジトリの変更や /export の上書き前に、確認が入る"},
+        {"h": "嬉しいこと", "t": "claude mcp add-json で、トークンを画面に出さず登録できる"},
+        {"h": "注意", "t": "不具合修正が中心。権限設定は自分で確認する"}
+      ],
+      "official_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327"
+    }
+  ],
   "gemini-4-hydrogen": [
     {
       "title": "Gemini 4 Hydrogen、速さ重視",

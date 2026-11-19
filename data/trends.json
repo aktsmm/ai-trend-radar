@@ -819,12 +819,45 @@
     }
    ],
    "official_urls": [
-    "https://github.com/anthropics/claude-code/releases/tag/v2.1.327",
-    "https://www.anthropic.com/claude-code"
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.327"
    ],
    "official_verified": true,
    "summary": "claude-code v2.1.327。7ソースで言及(代表: 「tradermonty/claude-trading-skills」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "Claude Code v2.1.327、安全確認を強化",
+     "diagram_type": "infographic",
+     "icon": "terminal",
+     "stat": {
+      "value": "v2.1.327",
+      "label": "Claude Code の最新リリース"
+     },
+     "steps": [
+      "更新する",
+      "/status で確認",
+      "MCP を登録"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "Anthropic が Claude Code v2.1.327 を公開した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "リポジトリの変更や /export の上書き前に、確認が入る"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "claude mcp add-json で、トークンを画面に出さず登録できる"
+      },
+      {
+       "h": "注意",
+       "t": "不具合修正が中心。権限設定は自分で確認する"
+      }
+     ],
+     "official_url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327"
+    }
+   ],
    "score_breakdown": {
     "github_new": 0.439,
     "github_trending": 1.293,
@@ -871,8 +904,21 @@
    "x_posts": [],
    "display": "Claude Code",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "claude-code v2.1.327 release notes",
+      "evidence_urls": [
+       "https://github.com/anthropics/claude-code/releases/tag/v2.1.327"
+      ],
+      "evidence_published_at": null,
+      "result": "/install-github-app の確認、claude mcp add-json の標準入力読み込み、/status の不具合一覧、/export の上書き確認などの変更を確認",
+      "retrieved_at": "2026-11-19T07:44:00+09:00"
+     }
+    ],
+    "selection_reason": "dev-tool 代表。Anthropic の公式リポジトリで Claude Code v2.1.327 のリリースノートが公開され、安全確認や設定まわりの修正が入った。"
    },
    "jp_reactions": [
     {
@@ -893,7 +939,109 @@
      "url": "https://zenn.dev/atsushi_apps/articles/claude-in-chrome-sns-posting-split",
      "date": "2026-11-18"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.327": {
+     "status": 200,
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "Anthropic が、ターミナル用の AI コーディングツール Claude Code の v2.1.327 を公開した。",
+     "/install-github-app がリポジトリを変更する前に確認を出すようになり、/export も既存ファイルの上書き前に確認する。",
+     "claude mcp add-json は標準入力から設定を読めるため、トークンをコマンドラインに書かずに済む。"
+    ],
+    "why_trending": "Claude Code は GitHub や Hacker News で継続して話題で、頻繁な更新が続いている。",
+    "what_changes": [
+     "/status に、壊れた設定ファイルや使えないサンドボックスなどの一覧が出る",
+     "MCP の追加や削除で、.mcp.json の他の設定を消してしまう不具合が直った"
+    ],
+    "benefits": [
+     "操作の前に確認が入り、意図しない変更を避けやすい",
+     "トークンを履歴に残さず MCP サーバーを登録できる"
+    ],
+    "caveats": [
+     "細かな不具合修正が中心のリリースで、大きな新機能ではない",
+     "更新後も、権限設定と実行内容は自分で確認する"
+    ],
+    "audience": "Claude Code を日常的に使う開発者、チームの管理者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "Claude Code v2.1.327 は、変更前の確認と設定まわりの不具合修正を中心とした更新。",
+     "stat": {
+      "value": "v2.1.327",
+      "label": "最新リリース"
+     },
+     "steps": [
+      "更新する",
+      "/status で確認",
+      "MCP を登録"
+     ],
+     "changes": [
+      "/install-github-app と /export に確認が入る",
+      "/status が壊れた設定の一覧を出す"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "Anthropic"
+      },
+      {
+       "k": "種類",
+       "v": "ターミナル用コーディングツール"
+      },
+      {
+       "k": "新機能",
+       "v": "mcp add-json の標準入力対応"
+      },
+      {
+       "k": "修正",
+       "v": ".mcp.json の消去不具合など"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "Claude Code を使う開発者、チームの管理者",
+     "benefits": [
+      "意図しないリポジトリ変更やファイル上書きを避けやすい",
+      "トークンをコマンドラインに残さず MCP を登録できる"
+     ],
+     "how_to": [
+      "Claude Code を最新版に更新する",
+      "/status で設定の問題を確認する"
+     ],
+     "caveats": [
+      "不具合修正が中心で、大きな新機能ではない",
+      "権限設定と実行内容は自分で確認する"
+     ],
+     "terms": [
+      {
+       "t": "MCP",
+       "d": "AI が外部のツールやデータにつながるための共通の決まり"
+      },
+      {
+       "t": "サンドボックス",
+       "d": "AI の実行範囲を囲って、影響を限定する仕組み"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "claude-code v2.1.327",
+      "publisher": "Anthropic(GitHub)",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.327"
+     }
+    ]
+   }
   },
   {
    "rank": 3,
@@ -1244,13 +1392,46 @@
     }
    ],
    "official_urls": [
-    "https://openai.com/index/introducing-gpt-6-2-astra-sol",
-    "https://openrouter.ai/openai/gpt-6.2-astra",
-    "https://openrouter.ai/openai/gpt-6.2-astra:batch"
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/openai-gpt-6-2-astra-sol-amazon-bedrock/"
    ],
    "official_verified": true,
    "summary": "Introducing GPT-6.2 Astra and Sol ― Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at l。3ソースで言及(代表: 「GPT‑6.2 Astra and Sol」)",
-   "slides": [],
+   "slides": [
+    {
+     "title": "GPT-6.2 Astra と Sol が Bedrock に",
+     "diagram_type": "infographic",
+     "icon": "cloud",
+     "stat": {
+      "value": "2 モデル",
+      "label": "Astra と Sol を Bedrock で一般提供"
+     },
+     "steps": [
+      "Bedrock を開く",
+      "Astra か Sol を選ぶ",
+      "API で使う"
+     ],
+     "points": [
+      {
+       "h": "何が起きた",
+       "t": "AWS が OpenAI の GPT-6.2 Astra と Sol の一般提供を発表した"
+      },
+      {
+       "h": "何が変わる",
+       "t": "難しい仕事は Astra、繰り返しの仕事は Sol と使い分けられる"
+      },
+      {
+       "h": "嬉しいこと",
+       "t": "AWS の既存のアクセス管理や監査の仕組みで使える"
+      },
+      {
+       "h": "注意",
+       "t": "AWS の発表。価格やリージョンは Bedrock の文書で確認する"
+      }
+     ],
+     "official_url": "https://aws.amazon.com/about-aws/whats-new/2026/11/openai-gpt-6-2-astra-sol-amazon-bedrock/",
+     "source_date": "2026-11-17"
+    }
+   ],
    "score_breakdown": {
     "hackernews": 1.077,
     "openrouter": 0.315,
@@ -1309,10 +1490,23 @@
      "via": "link"
     }
    ],
-   "display": "OpenAI gpt-6.2-astra",
+   "display": "OpenAI GPT-6.2 Astra / Sol",
    "verification": {
-    "status": "unverified",
-    "checks": []
+    "status": "partially_verified",
+    "checks": [
+     {
+      "mcp_name": "page-capture",
+      "tool": "fetch",
+      "query": "OpenAI GPT-6.2 Astra, and GPT-6.2 Sol are now generally available on Amazon Bedrock",
+      "evidence_urls": [
+       "https://aws.amazon.com/about-aws/whats-new/2026/11/openai-gpt-6-2-astra-sol-amazon-bedrock/"
+      ],
+      "evidence_published_at": "2026-11-17",
+      "result": "Astra は複雑な業務・研究・コーディングやエージェント向けで Ultrafast モード付き、Sol は繰り返しの業務向けと説明され、Bedrock で一般提供になったことを確認(AWS の発表で、OpenAI 自身のページは未確認)",
+      "retrieved_at": "2026-11-19T07:44:00+09:00"
+     }
+    ],
+    "selection_reason": "model 代表。OpenAI の GPT-6.2 Astra と Sol が Amazon Bedrock で一般提供になったと AWS が発表(OpenAI 自身のページは取得できず)。"
    },
    "jp_reactions": [
     {
@@ -1333,7 +1527,110 @@
      "url": "https://forest.watch.impress.co.jp/docs/news/2157295.html",
      "date": "2026-11-18"
     }
-   ]
+   ],
+   "url_checks": {
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/openai-gpt-6-2-astra-sol-amazon-bedrock/": {
+     "status": 200,
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
+    }
+   },
+   "digest": {
+    "summary": [
+     "AWS が、OpenAI の GPT-6.2 Astra と GPT-6.2 Sol を Amazon Bedrock で一般提供したと発表した。",
+     "Astra は複雑な業務や研究、高度なコーディングやエージェント向け。遅延に敏感な用途向けに Ultrafast モードもある。",
+     "Sol は、成果が明確で繰り返しの多いコーディングや業務の自動化向けで、速さとタスクあたりの費用を重視したモデルと説明されている。"
+    ],
+    "why_trending": "OpenAI の発表が Hacker News や OpenRouter でも話題になり、AWS でも使えるようになった。",
+    "what_changes": [
+     "AWS の Bedrock コンソールや API から、OpenAI の新モデルを選べる",
+     "用途に応じて Astra と Sol を使い分けられる"
+    ],
+    "benefits": [
+     "すでに AWS を使うチームは、既存のアクセス管理や監査の仕組みで使える",
+     "対話型の用途では Ultrafast モードで応答の速さを重視できる"
+    ],
+    "caveats": [
+     "これは AWS の発表で、OpenAI 自身のページは確認できていない",
+     "提供リージョンや価格は Bedrock の文書で確認が必要"
+    ],
+    "audience": "AWS 上でコーディング支援やエージェントを作る開発者、基盤担当者"
+   },
+   "deck": {
+    "overview": {
+     "takeaway": "OpenAI の GPT-6.2 Astra と Sol が、AWS の Amazon Bedrock で一般提供になった。",
+     "stat": {
+      "value": "2 モデル",
+      "label": "Astra と Sol"
+     },
+     "steps": [
+      "Bedrock を開く",
+      "Astra か Sol を選ぶ",
+      "API で使う"
+     ],
+     "changes": [
+      "難しい仕事は Astra、繰り返しの仕事は Sol",
+      "Astra には Ultrafast モードがある"
+     ],
+     "facts": [
+      {
+       "k": "提供元",
+       "v": "AWS(開発は OpenAI)"
+      },
+      {
+       "k": "Astra",
+       "v": "複雑な業務・研究・コーディング"
+      },
+      {
+       "k": "Sol",
+       "v": "繰り返しの業務・コーディング"
+      },
+      {
+       "k": "提供形態",
+       "v": "Bedrock で一般提供"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "impact": {
+     "audience": "AWS 上でコーディング支援やエージェントを作る開発者",
+     "benefits": [
+      "AWS の既存のアクセス管理や監査の仕組みで使える",
+      "速さ重視の用途に Ultrafast モードを選べる"
+     ],
+     "how_to": [
+      "Bedrock コンソールでモデルを選ぶ",
+      "または Bedrock の API から呼び出す"
+     ],
+     "caveats": [
+      "AWS の発表で、OpenAI 自身のページは未確認",
+      "リージョンと価格は Bedrock の文書で確認する"
+     ],
+     "terms": [
+      {
+       "t": "一般提供(GA)",
+       "d": "試験段階を終え、誰でも本番で使えること"
+      },
+      {
+       "t": "Amazon Bedrock",
+       "d": "複数社のモデルを API で使える AWS のサービス"
+      }
+     ],
+     "refs": [
+      "s1"
+     ]
+    },
+    "sources": [
+     {
+      "id": "s1",
+      "title": "OpenAI GPT-6.2 Astra and Sol now generally available on Amazon Bedrock",
+      "publisher": "AWS",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/openai-gpt-6-2-astra-sol-amazon-bedrock/",
+      "date": "2026-11-17"
+     }
+    ]
+   }
   },
   {
    "rank": 5,
@@ -1719,11 +2016,11 @@
    "url_checks": {
     "https://github.blog/changelog/2026-11-13-upcoming-deprecation-of-selected-github-copilot-models-in-december": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     },
     "https://github.blog/changelog/2026-11-13-github-enterprise-server-support-in-the-github-copilot-app": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     }
    },
    "jp_reactions": [],
@@ -2065,15 +2362,15 @@
    "url_checks": {
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen/": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     },
     "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     },
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade/": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     }
    },
    "jp_reactions": [
@@ -3909,7 +4206,7 @@
    "url_checks": {
     "https://github.com/meta/astryx": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     }
    },
    "jp_reactions": [],
@@ -4139,7 +4436,7 @@
    "url_checks": {
     "https://github.com/pingdotgg/t3code": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     }
    },
    "jp_reactions": [],
@@ -4369,7 +4666,7 @@
    "url_checks": {
     "https://github.com/milind-soni/OpenMausBot": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     }
    },
    "jp_reactions": [],
@@ -4640,15 +4937,15 @@
    "url_checks": {
     "https://github.com/anthropics/skills": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     },
     "https://github.com/google/elephant-goldfish-model": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     },
     "https://github.com/vercel-labs/agent-desktop": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     }
    },
    "jp_reactions": [
@@ -4934,11 +5231,11 @@
    "url_checks": {
     "https://github.com/vercel-labs/agent-browser": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     },
     "https://github.com/ZhuLinsen/daily_stock_analysis": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     }
    },
    "jp_reactions": [
@@ -5216,11 +5513,11 @@
    "url_checks": {
     "https://github.com/GoogleChrome/modern-web-guidance-src": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     },
     "https://github.com/addyosmani/agent-skills": {
      "status": 200,
-     "checked_at": "2026-11-16T10:50:06.454285+00:00"
+     "checked_at": "2026-11-19T02:24:58.990113+00:00"
     }
    },
    "jp_reactions": [
@@ -6060,14 +6357,15 @@
    "id": "open-weights-reach-clouds",
    "title": "大手クラウドがモデルを手軽に提供",
    "confidence": "low",
-   "summary": "Gemini 4 Hydrogen と DeepSeek-V4.1-Flash の 2 件で、大手のサービスから手軽にモデルを使える形での提供が発表された。",
+   "summary": "Gemini 4 Hydrogen、DeepSeek-V4.1-Flash、GPT-6.2 Astra / Sol の 3 件で、大手のサービスから手軽にモデルを使える形での提供が発表された。",
    "background": [
-    "Google は API、検索、アプリなど幅広い窓口で提供し、AWS は数クリックで導入できる形にした。",
-    "2 件だけの共通点で、導入の手間を減らしたい需要が背景にあるかもしれない(見立て)。"
+    "Google は API、検索、アプリなど幅広い窓口で提供し、AWS は数クリックの導入や Bedrock での一般提供にした。",
+    "導入の手間を減らしたい需要が背景にあるかもしれない(見立て)。"
    ],
    "entities": [
     "gemini-4-hydrogen",
-    "deepseek-v4-1-flash"
+    "deepseek-v4-1-flash",
+    "gpt-6-2-astra"
    ],
    "signals": [
     {
@@ -6077,9 +6375,14 @@
     {
      "entity": "deepseek-v4-1-flash",
      "note": "SageMaker JumpStart で数クリックで導入できると説明されている"
+    },
+    {
+     "entity": "gpt-6-2-astra",
+     "note": "Amazon Bedrock で一般提供になり、コンソールや API から使える"
     }
    ],
    "refs": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/11/openai-gpt-6-2-astra-sol-amazon-bedrock/",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen/",
     "https://aws.amazon.com/about-aws/whats-new/2026/01/deepseek-v4-pro-v4-flash-v4.1-flash-on-sagemaker-jumpstart/"
    ]
@@ -6087,6 +6390,10 @@
  ],
  "rejected_candidates": {
   "glm-5-3": "NVIDIA の技術解説で、開発元 Z.ai の発表ではないため、一次情報の本文を確認できなかった。",
+  "ollama": "リリース候補版(rc1)のページしか取得できず、公式発表の本文を確認できなかった。",
+  "openai-codex": "OpenAI の発表ページを取得できず、一次情報の本文を確認できなかった。",
+  "token": "一般的な単語で、AWS の個別事例ブログに過ぎず、製品として掲載する対象ではない。",
+  "protocol": "AI と関係のない AWS 動画配信サービスの更新で、対象外。",
   "llama-cpp": "ビルド番号のリリースページしか取得できず、公式発表の本文を確認できなかった。"
  }
 }

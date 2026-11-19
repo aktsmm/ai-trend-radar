@@ -3,7 +3,48 @@
  "selected_on": "2026-11-16",
  "selection_policy": "候補6件のうち、一次情報の本文を確認できた5件(model 2 / github-trending 3)を掲載。追記分は候補6件のうち5件(model 1 / dev-tool 1 / github-trending 3)を掲載し、llama.cpp はビルド番号のリリースページしか確認できず見送り。glm-5-3 は NVIDIA の利用手順の記事で、開発元の発表ではないため見送り。",
  "entities": {
-  "gemini-4-hydrogen": {
+ "gpt-6-2-astra": {
+  "selection_reason": "model 代表。OpenAI の GPT-6.2 Astra と Sol が Amazon Bedrock で一般提供になったと AWS が発表(OpenAI 自身のページは取得できず)。",
+  "verification_status": "partially_verified",
+  "official_urls": [
+   "https://aws.amazon.com/about-aws/whats-new/2026/11/openai-gpt-6-2-astra-sol-amazon-bedrock/"
+  ],
+  "display": "OpenAI GPT-6.2 Astra / Sol",
+  "checks": [
+   {
+    "mcp_name": "page-capture",
+    "tool": "fetch",
+    "query": "OpenAI GPT-6.2 Astra, and GPT-6.2 Sol are now generally available on Amazon Bedrock",
+    "evidence_urls": [
+     "https://aws.amazon.com/about-aws/whats-new/2026/11/openai-gpt-6-2-astra-sol-amazon-bedrock/"
+    ],
+    "evidence_published_at": "2026-11-17",
+    "result": "Astra は複雑な業務・研究・コーディングやエージェント向けで Ultrafast モード付き、Sol は繰り返しの業務向けと説明され、Bedrock で一般提供になったことを確認(AWS の発表で、OpenAI 自身のページは未確認)",
+    "retrieved_at": "2026-11-19T07:44:00+09:00"
+   }
+  ]
+ },
+ "claude-code": {
+  "selection_reason": "dev-tool 代表。Anthropic の公式リポジトリで Claude Code v2.1.327 のリリースノートが公開され、安全確認や設定まわりの修正が入った。",
+  "verification_status": "verified",
+  "official_urls": [
+   "https://github.com/anthropics/claude-code/releases/tag/v2.1.327"
+  ],
+  "checks": [
+   {
+    "mcp_name": "page-capture",
+    "tool": "fetch",
+    "query": "claude-code v2.1.327 release notes",
+    "evidence_urls": [
+     "https://github.com/anthropics/claude-code/releases/tag/v2.1.327"
+    ],
+    "evidence_published_at": null,
+    "result": "/install-github-app の確認、claude mcp add-json の標準入力読み込み、/status の不具合一覧、/export の上書き確認などの変更を確認",
+    "retrieved_at": "2026-11-19T07:44:00+09:00"
+   }
+  ]
+ },
+ "gemini-4-hydrogen": {
    "selection_reason": "model 代表。Google が公式ブログで、速さと効率を重視した Gemini 4 Hydrogen を発表し、Gemini API や Google 検索などで提供開始。",
    "verification_status": "verified",
    "official_urls": [

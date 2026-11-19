@@ -1,4 +1,46 @@
 {
+  "gpt-6-2-astra": {
+    "summary": [
+      "AWS が、OpenAI の GPT-6.2 Astra と GPT-6.2 Sol を Amazon Bedrock で一般提供したと発表した。",
+      "Astra は複雑な業務や研究、高度なコーディングやエージェント向け。遅延に敏感な用途向けに Ultrafast モードもある。",
+      "Sol は、成果が明確で繰り返しの多いコーディングや業務の自動化向けで、速さとタスクあたりの費用を重視したモデルと説明されている。"
+    ],
+    "why_trending": "OpenAI の発表が Hacker News や OpenRouter でも話題になり、AWS でも使えるようになった。",
+    "what_changes": [
+      "AWS の Bedrock コンソールや API から、OpenAI の新モデルを選べる",
+      "用途に応じて Astra と Sol を使い分けられる"
+    ],
+    "benefits": [
+      "すでに AWS を使うチームは、既存のアクセス管理や監査の仕組みで使える",
+      "対話型の用途では Ultrafast モードで応答の速さを重視できる"
+    ],
+    "caveats": [
+      "これは AWS の発表で、OpenAI 自身のページは確認できていない",
+      "提供リージョンや価格は Bedrock の文書で確認が必要"
+    ],
+    "audience": "AWS 上でコーディング支援やエージェントを作る開発者、基盤担当者"
+  },
+  "claude-code": {
+    "summary": [
+      "Anthropic が、ターミナル用の AI コーディングツール Claude Code の v2.1.327 を公開した。",
+      "/install-github-app がリポジトリを変更する前に確認を出すようになり、/export も既存ファイルの上書き前に確認する。",
+      "claude mcp add-json は標準入力から設定を読めるため、トークンをコマンドラインに書かずに済む。"
+    ],
+    "why_trending": "Claude Code は GitHub や Hacker News で継続して話題で、頻繁な更新が続いている。",
+    "what_changes": [
+      "/status に、壊れた設定ファイルや使えないサンドボックスなどの一覧が出る",
+      "MCP の追加や削除で、.mcp.json の他の設定を消してしまう不具合が直った"
+    ],
+    "benefits": [
+      "操作の前に確認が入り、意図しない変更を避けやすい",
+      "トークンを履歴に残さず MCP サーバーを登録できる"
+    ],
+    "caveats": [
+      "細かな不具合修正が中心のリリースで、大きな新機能ではない",
+      "更新後も、権限設定と実行内容は自分で確認する"
+    ],
+    "audience": "Claude Code を日常的に使う開発者、チームの管理者"
+  },
   "gemini-4-hydrogen": {
     "summary": [
       "Google が、速さと効率を重視した Gemini 4 Hydrogen を発表した。日常のコーディングや、エージェントによる作業向けのモデル。",
